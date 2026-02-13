@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>社内ガイドライン - API Security Reference Hub</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="page-header">
+    <h1>社内APIセキュリティガイドライン</h1>
+    <p class="subtitle">開発チーム向けのセキュリティチェックリスト、コードレビュー観点、ポリシーテンプレート。</p>
+  </div>
+
+  <!-- Pre-Development Checklist -->
+  <div class="section">
+    <h2><span class="section-icon">📋</span> 開発前チェックリスト</h2>
+    <p>新しいAPIエンドポイントを開発する前に確認すべき項目。</p>
+
+    <div class="accordion-item">
+      <button class="accordion-header">
+        <span>1. 設計レビュー</span>
+        <span class="accordion-arrow">▼</span>
+      </button>
+      <div class="accordion-body">
+        <ul class="checklist">
+          <li>API仕様書（OpenAPI）が作成されている</li>
+          <li>認証・認可の方式が決定されている</li>
+          <li>入力パラメータの型・制約が定義されている</li>
+          <li>レスポンスに含めるフィールドが明確に定義されている</li>
+          <li>エラーレスポンスの形式が統一されている</li>
+          <li>レート制限の要件が定められている</li>
+          <li>個人情報・機密データの取り扱いが確認されている</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-header">
+        <span>2. 認証・認可設計</span>
+        <span class="accordion-arrow">▼</span>
+      </button>
+      <div class="accordion-body">
+        <ul class="checklist">
+          <li>認証方式が決定されている（OAuth2.0, JWT, APIキー）</li>
+          <li>各エンドポイントに必要な権限（スコープ/ロール）が定義されている</li>
+          <li>リソースレベルの認可チェックが設計されている（BOLA対策）</li>
+          <li>管理者向け機能は明確に分離されている</li>
+          <li>トークンの有効期限・リフレッシュ方式が決定されている</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-header">
+        <span>3. データ保護</span>
+        <span class="accordion-arrow">▼</span>
+      </button>
+      <div class="accordion-body">
+        <ul class="checklist">
+          <li>通信はTLS 1.2以上を使用</li>
+          <li>保存データの暗号化方式が決定されている</li>
+          <li>個人情報のマスキング・匿名化方針が決定されている</li>
+          <li>ログに機密情報（トークン、パスワード）を含めない</li>
+          <li>APIレスポンスにデバッグ情報やスタックトレースを含めない</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Code Review Guidelines -->
+  <div class="section">
+    <h2><span class="section-icon">👀</span> コードレビュー観点</h2>
+    <p>APIのコードレビュー時に確認すべきセキュリティ観点。</p>
+
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="tab-auth-review">認証・認可</button>
+      <button class="tab-btn" data-tab="tab-input-review">入力検証</button>
+      <button class="tab-btn" data-tab="tab-output-review">出力制御</button>
+      <button class="tab-btn" data-tab="tab-general-review">その他</button>
+    </div>
+
+    <div id="tab-auth-review" class="tab-content active">
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>確認項目</th>
+              <th>重要度</th>
+              <th>解説</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>全エンドポイントで認証ミドルウェアが適用されている</td>
+              <td><span class="badge badge-danger">必須</span></td>
+              <td>公開APIを除き、認証チェックが漏れていないか</td>
+            </tr>
+            <tr>
+              <td>オブジェクトレベルの認可チェックがある</td>
+              <td><span class="badge badge-danger">必須</span></td>
+              <td>リクエストされたリソースが本人のものか確認</td>
+            </tr>
+            <tr>
+              <td>管理者機能にロール検証がある</td>
+              <td><span class="badge badge-danger">必須</span></td>
+              <td>一般ユーザーが管理APIを呼べないか</td>
+            </tr>
+            <tr>
+              <td>JWT検証時にアルゴリズムを指定している</td>
+              <td><span class="badge badge-danger">必須</span></td>
+              <td>alg: none 攻撃の防止</td>
+            </tr>
+            <tr>
+              <td>トークンの有効期限が適切に設定されている</td>
+              <td><span class="badge badge-warning">推奨</span></td>
+              <td>アクセストークン: 15分以内</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div id="tab-input-review" class="tab-content">
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>確認項目</th>
+              <th>重要度</th>
+              <th>解説</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>リクエストボディのスキーマバリデーションがある</td>
+              <td><span class="badge badge-danger">必須</span></td>
+              <td>型・長さ・形式の検証</td>
+            </tr>
+            <tr>
+              <td>SQLクエリがパラメータ化されている</td>
+              <td><span class="badge badge-danger">必須</span></td>
+              <td>文字列結合でクエリを組み立てていないか</td>
+            </tr>
+            <tr>
+              <td>パスパラメータの形式検証がある</td>
+              <td><span class="badge badge-danger">必須</span></td>
+              <td>UUID形式など、期待する形式かチェック</td>
+            </tr>
+            <tr>
+              <td>ページネーションパラメータに上限がある</td>
+              <td><span class="badge badge-warning">推奨</span></td>
+              <td>limit=999999のような過大リクエスト防止</td>
+            </tr>
+            <tr>
+              <td>ファイルアップロードの型・サイズ制限がある</td>
+              <td><span class="badge badge-warning">推奨</span></td>
+              <td>Content-Typeとファイルサイズの検証</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div id="tab-output-review" class="tab-content">
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>確認項目</th>
+              <th>重要度</th>
+              <th>解説</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>レスポンスに不要なフィールドが含まれていない</td>
+              <td><span class="badge badge-danger">必須</span></td>
+              <td>password_hash, 内部ID等の漏洩防止</td>
+            </tr>
+            <tr>
+              <td>エラーレスポンスにスタックトレースが含まれていない</td>
+              <td><span class="badge badge-danger">必須</span></td>
+              <td>本番環境で内部情報を露出させない</td>
+            </tr>
+            <tr>
+              <td>セキュリティヘッダーが設定されている</td>
+              <td><span class="badge badge-warning">推奨</span></td>
+              <td>X-Content-Type-Options, HSTS等</td>
+            </tr>
+            <tr>
+              <td>Content-Typeが正しく設定されている</td>
+              <td><span class="badge badge-warning">推奨</span></td>
+              <td>application/json を明示的に指定</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div id="tab-general-review" class="tab-content">
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>確認項目</th>
+              <th>重要度</th>
+              <th>解説</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>レート制限が適用されている</td>
+              <td><span class="badge badge-danger">必須</span></td>
+              <td>特に認証・決済系エンドポイント</td>
+            </tr>
+            <tr>
+              <td>適切なログが記録されている</td>
+              <td><span class="badge badge-warning">推奨</span></td>
+              <td>誰が何をいつ行ったか追跡可能</td>
+            </tr>
+            <tr>
+              <td>秘密情報がハードコードされていない</td>
+              <td><span class="badge badge-danger">必須</span></td>
+              <td>環境変数・シークレットマネージャーを使用</td>
+            </tr>
+            <tr>
+              <td>CORS設定が適切である</td>
+              <td><span class="badge badge-warning">推奨</span></td>
+              <td>ワイルドカード使用を避ける</td>
+            </tr>
+            <tr>
+              <td>依存パッケージに既知の脆弱性がない</td>
+              <td><span class="badge badge-warning">推奨</span></td>
+              <td>npm audit / Snyk の結果を確認</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- Security Policy Template -->
+  <div class="section">
+    <h2><span class="section-icon">📜</span> セキュリティポリシーテンプレート</h2>
+    <p>社内のAPI開発における基本ポリシーのテンプレートです。プロジェクトに合わせてカスタマイズしてください。</p>
+
+    <div class="card">
+      <h3>1. 認証ポリシー</h3>
+      <div class="code-block">
+        <div class="code-block-header">
+          <span class="lang">Policy</span>
+          <span>テンプレート</span>
+        </div>
+        <pre>■ 認証方式
+  - ユーザー向けAPI: OAuth 2.0 (Authorization Code + PKCE)
+  - サーバー間API: OAuth 2.0 (Client Credentials) または mTLS
+  - 外部連携API: APIキー + HMAC署名
+
+■ トークン管理
+  - アクセストークン有効期限: 15分
+  - リフレッシュトークン有効期限: 7日（ローテーション必須）
+  - トークン保存: HttpOnly + Secure + SameSite Cookie
+
+■ パスワードポリシー
+  - 最小12文字、大文字・小文字・数字・記号を各1つ以上
+  - bcrypt (cost factor 12以上) でハッシュ化
+  - パスワードリスト攻撃対策（Have I Been Pwned API連携）</pre>
+      </div>
+    </div>
+
+    <div class="card mt-2">
+      <h3>2. API設計ポリシー</h3>
+      <div class="code-block">
+        <div class="code-block-header">
+          <span class="lang">Policy</span>
+          <span>テンプレート</span>
+        </div>
+        <pre>■ バージョニング
+  - URLパスでバージョン管理: /api/v1/resources
+  - 旧バージョンは最低6ヶ月のサポート期間を設ける
+  - 廃止予定はDeprecationヘッダーで通知
+
+■ レート制限（デフォルト値）
+  - 一般API: 100リクエスト/15分
+  - 認証API: 5リクエスト/15分
+  - 公開API: 30リクエスト/分
+  - RateLimit-* ヘッダーを常に返却
+
+■ レスポンス
+  - Content-Type: application/json 固定
+  - エラーレスポンスは RFC 7807 (Problem Details) 形式
+  - 本番環境でスタックトレースを返さない
+  - ページネーション: デフォルト20件、最大100件</pre>
+      </div>
+    </div>
+
+    <div class="card mt-2">
+      <h3>3. ログ・監査ポリシー</h3>
+      <div class="code-block">
+        <div class="code-block-header">
+          <span class="lang">Policy</span>
+          <span>テンプレート</span>
+        </div>
+        <pre>■ 必須ログ項目
+  - タイムスタンプ (ISO 8601, UTC)
+  - リクエストID（トレーサビリティ用UUID）
+  - ユーザーID / APIクライアントID
+  - HTTPメソッド + エンドポイント
+  - ステータスコード
+  - ソースIP
+  - レスポンスタイム
+
+■ 禁止ログ項目（機密情報）
+  - パスワード / トークン / APIキー
+  - クレジットカード番号
+  - 個人を特定できる情報のフル表示（マスキング必須）
+
+■ 監視アラート
+  - 認証失敗: 5回/分 以上で通知
+  - 403エラー: 10回/分 以上で通知
+  - 500エラー: 1回で即時通知
+  - レート制限超過: パターン分析</pre>
+      </div>
+    </div>
+  </div>
+
+  <!-- Incident Response -->
+  <div class="section">
+    <h2><span class="section-icon">🚨</span> インシデント対応フロー</h2>
+
+    <div class="card-grid">
+      <div class="card">
+        <h3>Phase 1: 検知</h3>
+        <p>監視アラート、ユーザー報告、外部通報などによりインシデントを検知。初期トリアージで重要度を判定。</p>
+        <span class="card-tag tag-critical">0〜30分</span>
+      </div>
+      <div class="card">
+        <h3>Phase 2: 封じ込め</h3>
+        <p>被害拡大を防止。APIキーの無効化、該当エンドポイントの一時停止、影響範囲の特定。</p>
+        <span class="card-tag tag-high">30分〜2時間</span>
+      </div>
+      <div class="card">
+        <h3>Phase 3: 根絶・復旧</h3>
+        <p>脆弱性の修正、パッチ適用、サービス復旧。影響を受けたユーザーへの通知。</p>
+        <span class="card-tag tag-medium">2〜24時間</span>
+      </div>
+      <div class="card">
+        <h3>Phase 4: 事後分析</h3>
+        <p>ポストモーテム実施。根本原因分析、再発防止策の策定、ドキュメント化。</p>
+        <span class="card-tag tag-low">1〜5営業日</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Quick Reference -->
+  <div class="section">
+    <h2><span class="section-icon">⚡</span> クイックリファレンス: HTTPステータスコード</h2>
+    <p>API設計で使用するセキュリティ関連のHTTPステータスコード。</p>
+
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>コード</th>
+            <th>意味</th>
+            <th>使用場面</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>400</strong></td>
+            <td>Bad Request</td>
+            <td>入力バリデーションエラー</td>
+          </tr>
+          <tr>
+            <td><strong>401</strong></td>
+            <td>Unauthorized</td>
+            <td>認証が必要、またはトークンが無効</td>
+          </tr>
+          <tr>
+            <td><strong>403</strong></td>
+            <td>Forbidden</td>
+            <td>認証済みだが権限が不足</td>
+          </tr>
+          <tr>
+            <td><strong>404</strong></td>
+            <td>Not Found</td>
+            <td>リソース不存在（403の代わりにも使用可）</td>
+          </tr>
+          <tr>
+            <td><strong>405</strong></td>
+            <td>Method Not Allowed</td>
+            <td>許可されていないHTTPメソッド</td>
+          </tr>
+          <tr>
+            <td><strong>413</strong></td>
+            <td>Payload Too Large</td>
+            <td>リクエストボディのサイズ超過</td>
+          </tr>
+          <tr>
+            <td><strong>422</strong></td>
+            <td>Unprocessable Entity</td>
+            <td>構文は正しいがセマンティクスエラー</td>
+          </tr>
+          <tr>
+            <td><strong>429</strong></td>
+            <td>Too Many Requests</td>
+            <td>レート制限超過</td>
+          </tr>
+          <tr>
+            <td><strong>500</strong></td>
+            <td>Internal Server Error</td>
+            <td>サーバー内部エラー（詳細は隠す）</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+<script src="js/common.js"></script>
+</body>
+</html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>最新情報 - API Security Reference Hub</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="page-header">
+    <h1>APIセキュリティ最新情報</h1>
+    <p class="subtitle">最近のAPI脆弱性インシデント、CVE情報、業界トレンドを紹介します。</p>
+  </div>
+
+  <!-- Key Stats -->
+  <div class="section">
+    <div class="stats-row" style="justify-content:flex-start;">
+      <div class="stat-item">
+        <div class="stat-number">99%</div>
+        <div class="stat-label">APIセキュリティ問題を経験した組織 (2025)</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">1,025%</div>
+        <div class="stat-label">AI関連CVEの前年比増加率 (2024)</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">95%</div>
+        <div class="stat-label">認証済みセッションからの攻撃 (2025)</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Major Incidents -->
+  <div class="section">
+    <h2><span class="section-icon">🔥</span> 主要インシデント</h2>
+
+    <div class="news-item">
+      <div class="news-meta">
+        <span class="badge badge-danger">Critical</span>
+        <span>2025年1月29日</span>
+        <span>データ露出</span>
+      </div>
+      <h3>DeepSeek、100万件超のログをデータベース無認証公開 - チャット履歴・APIキー流出</h3>
+      <p>Wiz Researchが、DeepSeek社のClickHouseデータベースが2つのサブドメインで認証なしに公開されていたことを発見。100万件超のログエントリに、平文のチャット履歴、APIシークレットキー、バックエンドの運用メタデータが含まれていた。攻撃者はサーバーから直接パスワードやローカルファイルを窃取できる状態だった。責任ある開示の後、DeepSeekはデータベースを直ちに保護。なお、1月27日にはAPIとWebチャットインターフェースに対する大規模DDoS攻撃も発生していた。</p>
+      <p class="text-muted" style="font-size:0.8rem;">出典: <a href="https://www.wiz.io/blog/wiz-research-uncovers-exposed-deepseek-database-leak" target="_blank" rel="noopener">Wiz Blog</a></p>
+    </div>
+
+    <div class="news-item">
+      <div class="news-meta">
+        <span class="badge badge-danger">Critical</span>
+        <span>2024年5月10日</span>
+        <span>データ漏洩</span>
+      </div>
+      <h3>Dell パートナーポータルAPI悪用で4,900万件の顧客レコード窃取</h3>
+      <p>攻撃者がDellのパートナーポータルに偽のパートナーアカウントを登録し、48時間以内にアクセスを取得。ポータルのAPIには認可チェックもレート制限も存在しなかった。攻撃者は3週間にわたり毎分約5,000リクエストを送信し、氏名・住所・サービスタグ・注文情報を含む4,900万件のレコードを窃取。データはハッキングフォーラムで販売された。</p>
+      <p class="text-muted" style="font-size:0.8rem;">出典: <a href="https://www.bleepingcomputer.com/news/security/dell-api-abused-to-steal-49-million-customer-records-in-data-breach/" target="_blank" rel="noopener">BleepingComputer</a></p>
+    </div>
+
+    <div class="news-item">
+      <div class="news-meta">
+        <span class="badge badge-warning">High</span>
+        <span>2024年1月16日</span>
+        <span>データ漏洩</span>
+      </div>
+      <h3>Trello APIスクレイピングで1,500万ユーザーのデータ流出</h3>
+      <p>Trelloの未保護REST APIが、メールアドレスによる未認証クエリを許可していたことを攻撃者が悪用。過去の漏洩データベースからメールアドレスを送信することで、1,500万件超のユーザープロファイル（メール、フルネーム、ユーザー名、ボード情報）をスクレイピングし、ハッキングフォーラムで公開。Atlassianはその後エンドポイントを制限。</p>
+      <p class="text-muted" style="font-size:0.8rem;">出典: <a href="https://www.bleepingcomputer.com/news/security/email-addresses-of-15-million-trello-users-leaked-on-hacking-forum/" target="_blank" rel="noopener">BleepingComputer</a></p>
+    </div>
+
+    <div class="news-item">
+      <div class="news-meta">
+        <span class="badge badge-warning">High</span>
+        <span>2025年7月</span>
+        <span>APIキー漏洩</span>
+      </div>
+      <h3>DOGE職員がxAIのプライベートAPIキーをGitHubに公開 - 52以上の内部LLMへのアクセスが可能に</h3>
+      <p>米政府効率省(DOGE)の職員が、xAIのプライベートAPIキーを含むスクリプト（agent.py）を公開GitHubリポジトリにコミット。このキーにより、4日前に作成された「grok 4-0709」を含む52以上のLLMモデルへの無制限アクセスが可能だった。GitGuardianが検知したが、キーの即時無効化は行われなかった。同様の漏洩は2025年5月にも発生していた。</p>
+      <p class="text-muted" style="font-size:0.8rem;">出典: <a href="https://krebsonsecurity.com/2025/07/doge-denizen-marko-elez-leaked-api-key-for-xai/" target="_blank" rel="noopener">Krebs on Security</a></p>
+    </div>
+  </div>
+
+  <!-- CVE -->
+  <div class="section">
+    <h2><span class="section-icon">🛡</span> 注目CVE</h2>
+
+    <div class="news-item">
+      <div class="news-meta">
+        <span class="badge badge-danger">Active Exploitation</span>
+        <span>2025年3月（積極的な悪用を観測）</span>
+        <span>SSRF</span>
+      </div>
+      <h3>CVE-2024-27564 - ChatGPT SSRF脆弱性に10,000件超の攻撃試行</h3>
+      <p>ChatGPTの <code>pictureproxy.php</code> コンポーネントにおけるSSRF（Server-Side Request Forgery）脆弱性。未認証の攻撃者が細工したURLを注入し、サーバーに不正な内部リクエストを強制実行させることが可能。単一のIPアドレスから10,000件超の攻撃試行が記録され、標的の33%は米国組織（金融、政府、医療セクター）だった。認証不要で大規模に悪用可能な点が特に危険。</p>
+      <p class="text-muted" style="font-size:0.8rem;">出典: <a href="https://www.securityweek.com/chatgpt-vulnerability-exploited-against-us-government-organizations/" target="_blank" rel="noopener">SecurityWeek</a></p>
+    </div>
+
+    <div class="callout callout-warning">
+      <div class="callout-title">教訓: SSRFはAPIにとって深刻な脅威</div>
+      <p>CVE-2024-27564は、OWASPのAPI7（SSRF）に該当する典型的な例です。外部からのURL入力を受け取るAPIは、内部ネットワークへのアクセスを防ぐ厳格なバリデーションが必要です。<a href="owasp-top10.html">OWASP Top 10 → API7</a> を参照。</p>
+    </div>
+  </div>
+
+  <!-- Industry Reports -->
+  <div class="section">
+    <h2><span class="section-icon">📊</span> 業界レポート・トレンド</h2>
+
+    <div class="card-grid">
+      <div class="card">
+        <h3>AI関連CVEが前年比1,025%増加</h3>
+        <p>Wallarmの2025 API ThreatStatsレポートによると、2024年に439件のAI関連CVEが記録され、前年比1,025%の増加。CISAの既知悪用脆弱性カタログ（KEV）の50%以上がAPI関連に。アクセス制御の不備は全体で40%増加し、重大な認可不備は36%増加した。</p>
+        <span class="card-tag tag-high">Wallarm 2025</span>
+      </div>
+
+      <div class="card">
+        <h3>99%の組織がAPIセキュリティ問題を経験</h3>
+        <p>Salt SecurityのQ1 2025レポートによると、調査対象の99%の組織が過去12ヶ月間に少なくとも1件のAPIセキュリティ問題を経験。主要リスクはインジェクション攻撃とBOLA（認可の不備）で、全インシデントの3分の1以上を占めた。API攻撃の95%が認証済みセッションから発生。</p>
+        <span class="card-tag tag-critical">Salt Security Q1 2025</span>
+      </div>
+
+      <div class="card">
+        <h3>30,000のPostmanワークスペースがAPIキーを公開状態に</h3>
+        <p>セキュリティ研究者が、30,000のPostmanワークスペースがセキュリティ管理なしに公開されていることを発見。ライブのAPIキー・アクセストークン・機密ペイロードが含まれ、多くが本番環境への直接アクセスを提供。開発者コラボレーションツールにおける「シャドウAPI」資格情報のリスクを示す事例。</p>
+        <span class="card-tag tag-high">Wallarm 2025</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Trend Analysis -->
+  <div class="section">
+    <h2><span class="section-icon">📈</span> 2024-2025年のAPIセキュリティトレンド</h2>
+
+    <div class="card-grid">
+      <div class="card">
+        <h3>1. AI/LLM APIの脆弱性急増</h3>
+        <p>ChatGPT、DeepSeekなどAI系APIの脆弱性が急増。プロンプトインジェクション、SSRF、データ露出が主な脅威。AIの急速な普及に対してセキュリティ対策が追いついていない状況。</p>
+      </div>
+      <div class="card">
+        <h3>2. 認可の不備が最大の脅威</h3>
+        <p>BOLA（Broken Object Level Authorization）が依然として最も多い脆弱性。Dell、Trelloの事例に見るように、基本的な認可チェックの欠如が大規模データ漏洩につながる。</p>
+      </div>
+      <div class="card">
+        <h3>3. 認証済みセッションからの攻撃</h3>
+        <p>攻撃の95%が認証を突破した状態で発生。正規のアクセストークンを持つ攻撃者が、認可の不備を突いて横移動する手法が主流に。</p>
+      </div>
+      <div class="card">
+        <h3>4. 開発ツール経由のクレデンシャル漏洩</h3>
+        <p>GitHub、Postmanなどの開発ツールからのAPIキー漏洩が深刻な問題に。自動検出ツール（GitGuardian等）の導入と、シークレット管理の徹底が必要。</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Action Items -->
+  <div class="section">
+    <h2><span class="section-icon">✅</span> 今すぐ取るべきアクション</h2>
+
+    <div class="callout callout-success">
+      <div class="callout-title">これらのインシデントから学ぶ対策</div>
+    </div>
+
+    <ul class="checklist">
+      <li><strong>認可チェックの徹底</strong> - すべてのAPIエンドポイントでオブジェクトレベルの認可を実装（Dell/Trelloの教訓）</li>
+      <li><strong>レート制限の導入</strong> - エンドポイントごとに適切なレート制限を設定（Dellは制限なしで毎分5,000リクエストを許可）</li>
+      <li><strong>シークレットスキャンの自動化</strong> - GitHub、Postmanなどの公開リポジトリ/ワークスペースからのクレデンシャル漏洩を自動検出</li>
+      <li><strong>SSRF対策の実装</strong> - ユーザー入力URLの検証、プライベートIPアドレス範囲のブロック</li>
+      <li><strong>データベースの公開設定監査</strong> - 管理インターフェースが意図せず公開されていないか定期チェック（DeepSeekの教訓）</li>
+      <li><strong>AI/LLMエンドポイントのセキュリティ評価</strong> - プロンプトインジェクション、データ漏洩のリスク評価を実施</li>
+      <li><strong>依存関係の脆弱性チェック</strong> - npm audit / Snyk を CI/CD に組み込み、既知CVEを自動検出</li>
+    </ul>
+  </div>
+
+  <!-- References -->
+  <div class="section">
+    <h2><span class="section-icon">🔗</span> 参考リンク</h2>
+    <div class="card-grid card-grid-3">
+      <div class="card">
+        <h3>OWASP</h3>
+        <p><a href="https://owasp.org/API-Security/" target="_blank" rel="noopener">OWASP API Security Project</a></p>
+        <p><a href="https://owasp.org/www-project-api-security/" target="_blank" rel="noopener">API Security Top 10</a></p>
+      </div>
+      <div class="card">
+        <h3>レポート</h3>
+        <p><a href="https://www.wallarm.com/reports/2025-api-security-report" target="_blank" rel="noopener">Wallarm 2025 API ThreatStats</a></p>
+        <p><a href="https://salt.security/api-security-trends" target="_blank" rel="noopener">Salt Security Q1 2025</a></p>
+      </div>
+      <div class="card">
+        <h3>CVEデータベース</h3>
+        <p><a href="https://cve.mitre.org/" target="_blank" rel="noopener">MITRE CVE</a></p>
+        <p><a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog" target="_blank" rel="noopener">CISA KEV Catalog</a></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="callout callout-info">
+    <div class="callout-title">更新情報</div>
+    <p>このページの情報は2025年の公開データに基づいています。最新の脆弱性情報は上記の参考リンクから確認してください。</p>
+  </div>
+
+<script src="js/common.js"></script>
+</body>
+</html>

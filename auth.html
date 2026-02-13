@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>認証・認可 - API Security Reference Hub</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="page-header">
+    <h1>認証・認可ベストプラクティス</h1>
+    <p class="subtitle">OAuth 2.0、JWT、APIキー管理など、APIの認証・認可に関する実践的なガイド。</p>
+  </div>
+
+  <!-- OAuth 2.0 -->
+  <div class="section">
+    <h2><span class="section-icon">🔑</span> OAuth 2.0</h2>
+
+    <p>OAuth 2.0はAPIアクセスの認可フレームワークとして最も広く使われています。適切なグラントタイプの選択が重要です。</p>
+
+    <h3>グラントタイプの選択</h3>
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>グラントタイプ</th>
+            <th>ユースケース</th>
+            <th>セキュリティレベル</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Authorization Code + PKCE</td>
+            <td>SPAやモバイルアプリ（推奨）</td>
+            <td><span class="badge badge-success">最高</span></td>
+          </tr>
+          <tr>
+            <td>Authorization Code</td>
+            <td>サーバーサイドWebアプリ</td>
+            <td><span class="badge badge-success">高</span></td>
+          </tr>
+          <tr>
+            <td>Client Credentials</td>
+            <td>サーバー間通信（M2M）</td>
+            <td><span class="badge badge-info">中</span></td>
+          </tr>
+          <tr>
+            <td>Implicit（非推奨）</td>
+            <td>レガシーSPA</td>
+            <td><span class="badge badge-danger">低</span></td>
+          </tr>
+          <tr>
+            <td>Resource Owner Password（非推奨）</td>
+            <td>高信頼ファーストパーティのみ</td>
+            <td><span class="badge badge-danger">低</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout callout-warning">
+      <div class="callout-title">Implicit Grant は使用禁止</div>
+      <p>Implicit GrantはトークンがURLフラグメントに露出するため、現在は非推奨です。SPAでは Authorization Code + PKCE を使用してください。</p>
+    </div>
+
+    <h3>Authorization Code + PKCE フロー</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">JavaScript</span>
+        <span>PKCE チャレンジ生成</span>
+      </div>
+      <pre><span class="comment">// 1. code_verifier をランダム生成</span>
+<span class="keyword">function</span> <span class="function">generateCodeVerifier</span>() {
+  <span class="keyword">const</span> array = <span class="keyword">new</span> <span class="type">Uint8Array</span>(<span class="number">32</span>);
+  crypto.<span class="function">getRandomValues</span>(array);
+  <span class="keyword">return</span> <span class="function">btoa</span>(String.<span class="function">fromCharCode</span>(...array))
+    .<span class="function">replace</span>(<span class="string">/\+/g</span>, <span class="string">'-'</span>).<span class="function">replace</span>(<span class="string">/\//g</span>, <span class="string">'_'</span>).<span class="function">replace</span>(<span class="string">/=+$/</span>, <span class="string">''</span>);
+}
+
+<span class="comment">// 2. code_challenge を SHA-256 で生成</span>
+<span class="keyword">async function</span> <span class="function">generateCodeChallenge</span>(verifier) {
+  <span class="keyword">const</span> encoder = <span class="keyword">new</span> <span class="type">TextEncoder</span>();
+  <span class="keyword">const</span> data = encoder.<span class="function">encode</span>(verifier);
+  <span class="keyword">const</span> digest = <span class="keyword">await</span> crypto.subtle.<span class="function">digest</span>(<span class="string">'SHA-256'</span>, data);
+  <span class="keyword">return</span> <span class="function">btoa</span>(String.<span class="function">fromCharCode</span>(...<span class="keyword">new</span> <span class="type">Uint8Array</span>(digest)))
+    .<span class="function">replace</span>(<span class="string">/\+/g</span>, <span class="string">'-'</span>).<span class="function">replace</span>(<span class="string">/\//g</span>, <span class="string">'_'</span>).<span class="function">replace</span>(<span class="string">/=+$/</span>, <span class="string">''</span>);
+}
+
+<span class="comment">// 3. 認可リクエスト</span>
+<span class="keyword">const</span> verifier = <span class="function">generateCodeVerifier</span>();
+<span class="keyword">const</span> challenge = <span class="keyword">await</span> <span class="function">generateCodeChallenge</span>(verifier);
+
+<span class="keyword">const</span> authUrl = <span class="string">`https://auth.example.com/authorize?`</span> +
+  <span class="string">`response_type=code&amp;`</span> +
+  <span class="string">`client_id=${clientId}&amp;`</span> +
+  <span class="string">`redirect_uri=${redirectUri}&amp;`</span> +
+  <span class="string">`code_challenge=${challenge}&amp;`</span> +
+  <span class="string">`code_challenge_method=S256&amp;`</span> +
+  <span class="string">`scope=read write`</span>;</pre>
+    </div>
+  </div>
+
+  <!-- JWT -->
+  <div class="section">
+    <h2><span class="section-icon">🎫</span> JWT（JSON Web Token）</h2>
+
+    <p>JWTはステートレスな認証トークンとして広く使われますが、実装ミスがセキュリティホールに直結します。</p>
+
+    <h3>JWTのセキュリティ注意点</h3>
+    <div class="card-grid">
+      <div class="card">
+        <h3>✅ やるべきこと</h3>
+        <ul class="checklist">
+          <li>アルゴリズムを明示的に指定（HS256 / RS256）</li>
+          <li>有効期限（exp）を短く設定（15分以内）</li>
+          <li>issuer（iss）と audience（aud）を検証</li>
+          <li>秘密鍵は十分な長さ（256bit以上）で生成</li>
+          <li>リフレッシュトークンにはローテーションを実装</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>❌ やってはいけないこと</h3>
+        <ul class="checklist">
+          <li>JWTペイロードに機密情報を入れる（Base64は暗号化ではない）</li>
+          <li>alg: "none" を許可する</li>
+          <li>トークンをlocalStorageに保存（XSS脆弱）</li>
+          <li>トークンの失効管理をしない</li>
+          <li>RS256の公開鍵をHS256の秘密鍵として使用する</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3>安全なJWT実装</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">JavaScript (Node.js)</span>
+        <span>トークン発行と検証</span>
+      </div>
+      <pre><span class="keyword">const</span> jwt = <span class="function">require</span>(<span class="string">'jsonwebtoken'</span>);
+
+<span class="comment">// --- トークン発行 ---</span>
+<span class="keyword">function</span> <span class="function">issueTokens</span>(user) {
+  <span class="keyword">const</span> accessToken = jwt.<span class="function">sign</span>(
+    { <span class="variable">sub</span>: user.id, <span class="variable">role</span>: user.role },
+    process.env.JWT_SECRET,
+    {
+      <span class="variable">algorithm</span>: <span class="string">'HS256'</span>,
+      <span class="variable">expiresIn</span>: <span class="string">'15m'</span>,
+      <span class="variable">issuer</span>: <span class="string">'api.example.com'</span>,
+      <span class="variable">audience</span>: <span class="string">'app.example.com'</span>,
+    }
+  );
+
+  <span class="keyword">const</span> refreshToken = jwt.<span class="function">sign</span>(
+    { <span class="variable">sub</span>: user.id, <span class="variable">type</span>: <span class="string">'refresh'</span> },
+    process.env.REFRESH_SECRET,
+    { <span class="variable">algorithm</span>: <span class="string">'HS256'</span>, <span class="variable">expiresIn</span>: <span class="string">'7d'</span> }
+  );
+
+  <span class="keyword">return</span> { accessToken, refreshToken };
+}
+
+<span class="comment">// --- トークン検証 ---</span>
+<span class="keyword">function</span> <span class="function">verifyAccessToken</span>(token) {
+  <span class="keyword">return</span> jwt.<span class="function">verify</span>(token, process.env.JWT_SECRET, {
+    <span class="variable">algorithms</span>: [<span class="string">'HS256'</span>],   <span class="comment">// ← 必ず指定!</span>
+    <span class="variable">issuer</span>: <span class="string">'api.example.com'</span>,
+    <span class="variable">audience</span>: <span class="string">'app.example.com'</span>,
+  });
+}</pre>
+    </div>
+
+    <h3>トークン保存場所の比較</h3>
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>保存場所</th>
+            <th>XSS耐性</th>
+            <th>CSRF耐性</th>
+            <th>推奨度</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>HttpOnly Cookie</td>
+            <td><span class="text-success">◎</span></td>
+            <td><span class="text-warning">△（SameSite設定要）</span></td>
+            <td><span class="badge badge-success">推奨</span></td>
+          </tr>
+          <tr>
+            <td>メモリ（変数）</td>
+            <td><span class="text-success">◎</span></td>
+            <td><span class="text-success">◎</span></td>
+            <td><span class="badge badge-info">ページ遷移で消失</span></td>
+          </tr>
+          <tr>
+            <td>localStorage</td>
+            <td><span class="text-danger">✕（XSSで窃取可能）</span></td>
+            <td><span class="text-success">◎</span></td>
+            <td><span class="badge badge-danger">非推奨</span></td>
+          </tr>
+          <tr>
+            <td>sessionStorage</td>
+            <td><span class="text-danger">✕（XSSで窃取可能）</span></td>
+            <td><span class="text-success">◎</span></td>
+            <td><span class="badge badge-warning">限定的</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout callout-success">
+      <div class="callout-title">推奨: HttpOnly + Secure + SameSite Cookie</div>
+      <p>アクセストークンは HttpOnly、Secure、SameSite=Strict 属性を付けた Cookie に保存するのが最も安全です。これにより XSS 攻撃でのトークン窃取を防ぎます。</p>
+    </div>
+  </div>
+
+  <!-- API Key Management -->
+  <div class="section">
+    <h2><span class="section-icon">🗝</span> APIキー管理</h2>
+
+    <p>APIキーはシンプルな認証手段ですが、適切に管理しないと重大なリスクになります。</p>
+
+    <h3>APIキーのベストプラクティス</h3>
+    <div class="card-grid card-grid-3">
+      <div class="card">
+        <h3>生成と保存</h3>
+        <p>十分なエントロピーで生成（256bit以上）。ハッシュ化して保存し、プレーンテキストでDBに保持しない。</p>
+      </div>
+      <div class="card">
+        <h3>スコープ制限</h3>
+        <p>キーごとに最小限のスコープ（読み取り専用、特定リソースのみ等）を付与。ワイルドカード権限は避ける。</p>
+      </div>
+      <div class="card">
+        <h3>ローテーション</h3>
+        <p>定期的なキーローテーション（90日以内）。古いキーのグレースピリオド設定。漏洩時は即時無効化。</p>
+      </div>
+      <div class="card">
+        <h3>送信方法</h3>
+        <p>ヘッダー（X-API-Key or Authorization）で送信。URLクエリパラメータには含めない（ログに残る）。</p>
+      </div>
+      <div class="card">
+        <h3>環境変数管理</h3>
+        <p>キーはソースコードにハードコードせず、環境変数やシークレットマネージャーで管理。</p>
+      </div>
+      <div class="card">
+        <h3>監視とログ</h3>
+        <p>APIキーの使用状況を監視。異常なパターン（大量リクエスト、未知のIPからのアクセス）を検出。</p>
+      </div>
+    </div>
+
+    <h3>APIキー検証の実装例</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">JavaScript (Express)</span>
+        <span>ハッシュ化されたAPIキー検証</span>
+      </div>
+      <pre><span class="keyword">const</span> crypto = <span class="function">require</span>(<span class="string">'crypto'</span>);
+
+<span class="comment">// APIキーをSHA-256でハッシュ化して比較</span>
+<span class="keyword">async function</span> <span class="function">validateApiKey</span>(req, res, next) {
+  <span class="keyword">const</span> apiKey = req.headers[<span class="string">'x-api-key'</span>];
+  <span class="keyword">if</span> (!apiKey) {
+    <span class="keyword">return</span> res.<span class="function">status</span>(<span class="number">401</span>).<span class="function">json</span>({ <span class="variable">error</span>: <span class="string">'API key required'</span> });
+  }
+
+  <span class="comment">// ハッシュ化してDB照合（タイミング攻撃対策のため timingSafeEqual は不要 - ハッシュ比較のため）</span>
+  <span class="keyword">const</span> hashedKey = crypto
+    .<span class="function">createHash</span>(<span class="string">'sha256'</span>)
+    .<span class="function">update</span>(apiKey)
+    .<span class="function">digest</span>(<span class="string">'hex'</span>);
+
+  <span class="keyword">const</span> keyRecord = <span class="keyword">await</span> db.<span class="function">findApiKey</span>(hashedKey);
+
+  <span class="keyword">if</span> (!keyRecord || keyRecord.revokedAt) {
+    <span class="keyword">return</span> res.<span class="function">status</span>(<span class="number">403</span>).<span class="function">json</span>({ <span class="variable">error</span>: <span class="string">'Invalid API key'</span> });
+  }
+
+  <span class="comment">// 有効期限チェック</span>
+  <span class="keyword">if</span> (keyRecord.expiresAt &amp;&amp; <span class="keyword">new</span> <span class="type">Date</span>() &gt; keyRecord.expiresAt) {
+    <span class="keyword">return</span> res.<span class="function">status</span>(<span class="number">403</span>).<span class="function">json</span>({ <span class="variable">error</span>: <span class="string">'API key expired'</span> });
+  }
+
+  req.apiClient = keyRecord;
+  <span class="function">next</span>();
+}</pre>
+    </div>
+  </div>
+
+  <!-- Comparison -->
+  <div class="section">
+    <h2><span class="section-icon">⚖</span> 認証方式の比較</h2>
+
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>方式</th>
+            <th>ステートレス</th>
+            <th>適用場面</th>
+            <th>セキュリティ上の注意</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>OAuth 2.0 + PKCE</strong></td>
+            <td>○</td>
+            <td>ユーザー認可が必要なAPI</td>
+            <td>state/PKCE必須、トークン有効期限管理</td>
+          </tr>
+          <tr>
+            <td><strong>JWT Bearer</strong></td>
+            <td>○</td>
+            <td>マイクロサービス間通信</td>
+            <td>alg指定必須、ペイロードに機密情報を入れない</td>
+          </tr>
+          <tr>
+            <td><strong>APIキー</strong></td>
+            <td>○</td>
+            <td>サーバー間、外部連携</td>
+            <td>ローテーション・スコープ制限必須</td>
+          </tr>
+          <tr>
+            <td><strong>mTLS</strong></td>
+            <td>○</td>
+            <td>高セキュリティM2M通信</td>
+            <td>証明書管理の運用コスト高</td>
+          </tr>
+          <tr>
+            <td><strong>セッションCookie</strong></td>
+            <td>✕</td>
+            <td>従来型Webアプリ</td>
+            <td>CSRF対策必須、スケーラビリティに課題</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+<script src="js/common.js"></script>
+</body>
+</html>

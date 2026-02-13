@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>レート制限・入力検証 - API Security Reference Hub</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="page-header">
+    <h1>レート制限・入力検証・CORS</h1>
+    <p class="subtitle">APIを悪用から守るための防御的な実装パターンを解説します。</p>
+  </div>
+
+  <!-- Rate Limiting -->
+  <div class="section">
+    <h2><span class="section-icon">⏱</span> レート制限（Rate Limiting）</h2>
+
+    <p>レート制限は、APIの乱用・DoS攻撃・スクレイピングからシステムを保護するための基本的な防御策です。</p>
+
+    <h3>アルゴリズムの比較</h3>
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>アルゴリズム</th>
+            <th>特徴</th>
+            <th>メリット</th>
+            <th>デメリット</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Fixed Window</strong></td>
+            <td>固定時間枠でカウント</td>
+            <td>実装が簡単、メモリ効率が良い</td>
+            <td>ウィンドウ境界でバースト発生</td>
+          </tr>
+          <tr>
+            <td><strong>Sliding Window Log</strong></td>
+            <td>リクエスト時刻を記録</td>
+            <td>正確な制御</td>
+            <td>メモリ消費大</td>
+          </tr>
+          <tr>
+            <td><strong>Sliding Window Counter</strong></td>
+            <td>前後ウィンドウの加重平均</td>
+            <td>バランスが良い</td>
+            <td>やや複雑</td>
+          </tr>
+          <tr>
+            <td><strong>Token Bucket</strong></td>
+            <td>トークンを消費してアクセス</td>
+            <td>バーストを許容しつつ制限</td>
+            <td>パラメータ調整が必要</td>
+          </tr>
+          <tr>
+            <td><strong>Leaky Bucket</strong></td>
+            <td>一定速度でリクエスト処理</td>
+            <td>出力レートが安定</td>
+            <td>バースト対応が苦手</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Express.js でのレート制限実装</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">JavaScript (Express)</span>
+        <span>多層レート制限</span>
+      </div>
+      <pre><span class="keyword">const</span> rateLimit = <span class="function">require</span>(<span class="string">'express-rate-limit'</span>);
+<span class="keyword">const</span> RedisStore = <span class="function">require</span>(<span class="string">'rate-limit-redis'</span>);
+
+<span class="comment">// グローバル制限: 全APIに適用</span>
+<span class="keyword">const</span> globalLimiter = <span class="function">rateLimit</span>({
+  <span class="variable">windowMs</span>: <span class="number">15</span> * <span class="number">60</span> * <span class="number">1000</span>, <span class="comment">// 15分</span>
+  <span class="variable">max</span>: <span class="number">100</span>,
+  <span class="variable">standardHeaders</span>: <span class="keyword">true</span>,    <span class="comment">// RateLimit-* ヘッダー返却</span>
+  <span class="variable">legacyHeaders</span>: <span class="keyword">false</span>,
+  <span class="variable">message</span>: { <span class="variable">error</span>: <span class="string">'Too many requests, please try again later.'</span> },
+});
+
+<span class="comment">// 認証エンドポイント用: より厳しい制限</span>
+<span class="keyword">const</span> authLimiter = <span class="function">rateLimit</span>({
+  <span class="variable">windowMs</span>: <span class="number">15</span> * <span class="number">60</span> * <span class="number">1000</span>,
+  <span class="variable">max</span>: <span class="number">5</span>,  <span class="comment">// ログイン試行は15分で5回まで</span>
+  <span class="variable">skipSuccessfulRequests</span>: <span class="keyword">true</span>, <span class="comment">// 成功時はカウントしない</span>
+});
+
+<span class="comment">// 分散環境向け: Redis バックエンド</span>
+<span class="keyword">const</span> distributedLimiter = <span class="function">rateLimit</span>({
+  <span class="variable">store</span>: <span class="keyword">new</span> <span class="type">RedisStore</span>({ <span class="variable">sendCommand</span>: (...args) =&gt; redisClient.<span class="function">sendCommand</span>(args) }),
+  <span class="variable">windowMs</span>: <span class="number">60</span> * <span class="number">1000</span>,
+  <span class="variable">max</span>: <span class="number">30</span>,
+});
+
+app.<span class="function">use</span>(globalLimiter);
+app.<span class="function">use</span>(<span class="string">'/api/auth'</span>, authLimiter);</pre>
+    </div>
+
+    <h3>レスポンスヘッダー</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">HTTP Response Headers</span>
+        <span>RFC 6585 / draft-ietf-httpapi-ratelimit-headers</span>
+      </div>
+      <pre>RateLimit-Limit: 100
+RateLimit-Remaining: 42
+RateLimit-Reset: 1672531200
+Retry-After: 30</pre>
+    </div>
+
+    <div class="callout callout-info">
+      <div class="callout-title">レート制限のキー</div>
+      <p>IPアドレスだけでなく、APIキー・ユーザーID・エンドポイント単位など複合的なキーでレート制限を行うことで、正当なユーザーへの影響を最小限に抑えられます。</p>
+    </div>
+  </div>
+
+  <!-- Input Validation -->
+  <div class="section">
+    <h2><span class="section-icon">🔍</span> 入力検証（Input Validation）</h2>
+
+    <p>すべてのAPI入力は悪意あるデータを含む可能性があります。サーバーサイドで必ず検証してください。</p>
+
+    <h3>検証の原則</h3>
+    <div class="card-grid card-grid-3">
+      <div class="card">
+        <h3>Allowlist方式</h3>
+        <p>許可する値のリストを定義。Denylist（禁止リスト）より安全。新しい攻撃パターンにも対応可能。</p>
+      </div>
+      <div class="card">
+        <h3>型・長さ・範囲</h3>
+        <p>データ型、最大文字数、数値の上下限を厳密にチェック。バッファオーバーフロー対策の基本。</p>
+      </div>
+      <div class="card">
+        <h3>サニタイズ vs 拒否</h3>
+        <p>不正入力は「修正」よりも「拒否」が安全。サニタイズは予期しない変換を生む可能性がある。</p>
+      </div>
+    </div>
+
+    <h3>JSON Schema によるバリデーション</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">JavaScript (Express + Ajv)</span>
+        <span>スキーマバリデーション</span>
+      </div>
+      <pre><span class="keyword">const</span> Ajv = <span class="function">require</span>(<span class="string">'ajv'</span>);
+<span class="keyword">const</span> addFormats = <span class="function">require</span>(<span class="string">'ajv-formats'</span>);
+
+<span class="keyword">const</span> ajv = <span class="keyword">new</span> <span class="type">Ajv</span>({ <span class="variable">allErrors</span>: <span class="keyword">true</span>, <span class="variable">removeAdditional</span>: <span class="keyword">true</span> });
+<span class="function">addFormats</span>(ajv);
+
+<span class="comment">// ユーザー作成APIのスキーマ</span>
+<span class="keyword">const</span> createUserSchema = {
+  <span class="variable">type</span>: <span class="string">'object'</span>,
+  <span class="variable">required</span>: [<span class="string">'name'</span>, <span class="string">'email'</span>],
+  <span class="variable">additionalProperties</span>: <span class="keyword">false</span>,
+  <span class="variable">properties</span>: {
+    <span class="variable">name</span>: {
+      <span class="variable">type</span>: <span class="string">'string'</span>,
+      <span class="variable">minLength</span>: <span class="number">1</span>,
+      <span class="variable">maxLength</span>: <span class="number">100</span>,
+      <span class="variable">pattern</span>: <span class="string">'^[a-zA-Z0-9\\s\\-]+$'</span>, <span class="comment">// 許可文字を限定</span>
+    },
+    <span class="variable">email</span>: {
+      <span class="variable">type</span>: <span class="string">'string'</span>,
+      <span class="variable">format</span>: <span class="string">'email'</span>,
+      <span class="variable">maxLength</span>: <span class="number">254</span>,
+    },
+    <span class="variable">age</span>: {
+      <span class="variable">type</span>: <span class="string">'integer'</span>,
+      <span class="variable">minimum</span>: <span class="number">0</span>,
+      <span class="variable">maximum</span>: <span class="number">150</span>,
+    },
+  },
+};
+
+<span class="comment">// バリデーションミドルウェア</span>
+<span class="keyword">function</span> <span class="function">validateBody</span>(schema) {
+  <span class="keyword">const</span> validate = ajv.<span class="function">compile</span>(schema);
+  <span class="keyword">return</span> (req, res, next) =&gt; {
+    <span class="keyword">if</span> (!<span class="function">validate</span>(req.body)) {
+      <span class="keyword">return</span> res.<span class="function">status</span>(<span class="number">400</span>).<span class="function">json</span>({
+        <span class="variable">error</span>: <span class="string">'Validation failed'</span>,
+        <span class="variable">details</span>: validate.errors,
+      });
+    }
+    <span class="function">next</span>();
+  };
+}
+
+app.<span class="function">post</span>(<span class="string">'/api/users'</span>, <span class="function">validateBody</span>(createUserSchema), createUser);</pre>
+    </div>
+
+    <h3>よくある攻撃とバリデーション対策</h3>
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>攻撃</th>
+            <th>対策</th>
+            <th>例</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>SQLインジェクション</td>
+            <td>パラメータ化クエリ、ORM使用</td>
+            <td><code>db.query('SELECT * FROM users WHERE id = ?', [id])</code></td>
+          </tr>
+          <tr>
+            <td>NoSQLインジェクション</td>
+            <td>型チェック、$演算子のサニタイズ</td>
+            <td>入力が文字列であることを確認（Object拒否）</td>
+          </tr>
+          <tr>
+            <td>XSS（APIレスポンス経由）</td>
+            <td>Content-Type指定、エスケープ</td>
+            <td><code>Content-Type: application/json</code></td>
+          </tr>
+          <tr>
+            <td>パストラバーサル</td>
+            <td>入力からパスセパレータを除去</td>
+            <td><code>path.basename()</code>で正規化</td>
+          </tr>
+          <tr>
+            <td>XXE（XML External Entity）</td>
+            <td>外部エンティティ解決を無効化</td>
+            <td>XMLパーサー設定で無効化</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- CORS -->
+  <div class="section">
+    <h2><span class="section-icon">🌐</span> CORS（Cross-Origin Resource Sharing）</h2>
+
+    <p>CORSはブラウザのSame-Originポリシーを制御する仕組みです。設定ミスは重大なセキュリティリスクになります。</p>
+
+    <div class="callout callout-danger">
+      <div class="callout-title">危険な設定</div>
+      <p><code>Access-Control-Allow-Origin: *</code> と <code>Access-Control-Allow-Credentials: true</code> は同時に使えません。ワイルドカードの使用は公開APIのみに限定してください。</p>
+    </div>
+
+    <h3>安全なCORS設定</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">JavaScript (Express)</span>
+        <span>CORS設定</span>
+      </div>
+      <pre><span class="keyword">const</span> cors = <span class="function">require</span>(<span class="string">'cors'</span>);
+
+<span class="comment">// 許可するオリジンを明示的に指定</span>
+<span class="keyword">const</span> allowedOrigins = [
+  <span class="string">'https://app.example.com'</span>,
+  <span class="string">'https://admin.example.com'</span>,
+];
+
+app.<span class="function">use</span>(<span class="function">cors</span>({
+  <span class="function">origin</span>(origin, callback) {
+    <span class="comment">// サーバー間通信（originなし）は許可</span>
+    <span class="keyword">if</span> (!origin || allowedOrigins.<span class="function">includes</span>(origin)) {
+      <span class="function">callback</span>(<span class="keyword">null</span>, <span class="keyword">true</span>);
+    } <span class="keyword">else</span> {
+      <span class="function">callback</span>(<span class="keyword">new</span> <span class="type">Error</span>(<span class="string">'Not allowed by CORS'</span>));
+    }
+  },
+  <span class="variable">methods</span>: [<span class="string">'GET'</span>, <span class="string">'POST'</span>, <span class="string">'PUT'</span>, <span class="string">'DELETE'</span>],
+  <span class="variable">allowedHeaders</span>: [<span class="string">'Content-Type'</span>, <span class="string">'Authorization'</span>, <span class="string">'X-API-Key'</span>],
+  <span class="variable">credentials</span>: <span class="keyword">true</span>,
+  <span class="variable">maxAge</span>: <span class="number">86400</span>,  <span class="comment">// プリフライトキャッシュ: 24時間</span>
+}));</pre>
+    </div>
+
+    <h3>CORS チェックリスト</h3>
+    <ul class="checklist">
+      <li>Access-Control-Allow-Origin にワイルドカード(*) を使わない（認証が必要なAPI）</li>
+      <li>Access-Control-Allow-Methods は必要なメソッドのみ</li>
+      <li>Access-Control-Allow-Headers は必要なヘッダーのみ</li>
+      <li>Access-Control-Max-Age でプリフライトリクエストをキャッシュ</li>
+      <li>Access-Control-Expose-Headers で公開するレスポンスヘッダーを制限</li>
+      <li>リフレクション（リクエストのOriginをそのまま返す）は絶対にしない</li>
+    </ul>
+
+    <h3>CORS ヘッダー一覧</h3>
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>ヘッダー</th>
+            <th>用途</th>
+            <th>推奨値</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>Access-Control-Allow-Origin</code></td>
+            <td>許可するオリジン</td>
+            <td>明示的なドメイン指定</td>
+          </tr>
+          <tr>
+            <td><code>Access-Control-Allow-Methods</code></td>
+            <td>許可するHTTPメソッド</td>
+            <td>必要最小限</td>
+          </tr>
+          <tr>
+            <td><code>Access-Control-Allow-Headers</code></td>
+            <td>許可するリクエストヘッダー</td>
+            <td>必要最小限</td>
+          </tr>
+          <tr>
+            <td><code>Access-Control-Allow-Credentials</code></td>
+            <td>Cookie送信の許可</td>
+            <td>true（認証必要時のみ）</td>
+          </tr>
+          <tr>
+            <td><code>Access-Control-Max-Age</code></td>
+            <td>プリフライトキャッシュ秒数</td>
+            <td>86400（24時間）</td>
+          </tr>
+          <tr>
+            <td><code>Access-Control-Expose-Headers</code></td>
+            <td>JSから読めるレスポンスヘッダー</td>
+            <td>RateLimit-*等 必要なもののみ</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Additional Headers -->
+  <div class="section">
+    <h2><span class="section-icon">🔒</span> その他の推奨セキュリティヘッダー</h2>
+
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">HTTP Response Headers</span>
+        <span>推奨設定</span>
+      </div>
+      <pre><span class="comment"># コンテンツタイプの自動判別を無効化</span>
+X-Content-Type-Options: nosniff
+
+<span class="comment"># iframe埋め込みを禁止</span>
+X-Frame-Options: DENY
+
+<span class="comment"># HTTPS強制</span>
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+
+<span class="comment"># CSP: APIはJSONのみ返すためscript実行を全て禁止</span>
+Content-Security-Policy: default-src 'none'; frame-ancestors 'none'
+
+<span class="comment"># Referrer情報の制限</span>
+Referrer-Policy: no-referrer
+
+<span class="comment"># ブラウザの機能制限</span>
+Permissions-Policy: geolocation=(), camera=(), microphone=()</pre>
+    </div>
+  </div>
+
+<script src="js/common.js"></script>
+</body>
+</html>
