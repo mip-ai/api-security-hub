@@ -28,6 +28,18 @@
     </div>
   </div>
 
+  <!-- Latest News (auto-updated from RSS feeds) -->
+  <div class="section">
+    <h2><span class="section-icon">🔥</span> APIセキュリティ最新ニュース</h2>
+    <p id="news-updated" class="text-muted" style="font-size:0.8rem;"></p>
+    <div id="news-container">
+      <p class="text-muted">ニュースを読み込み中...</p>
+    </div>
+    <div style="margin-top:16px;">
+      <a href="news.html">すべてのニュース・トレンドを見る →</a>
+    </div>
+  </div>
+
   <!-- Section Navigation -->
   <div class="section">
     <h2><span class="section-icon">📚</span> コンテンツ</h2>
@@ -144,5 +156,50 @@
   </div>
 
 <script src="js/common.js"></script>
+<script>
+(function() {
+  const container = document.getElementById('news-container');
+  const updatedEl = document.getElementById('news-updated');
+  if (!container) return;
+
+  fetch('data/news.json')
+    .then(res => {
+      if (!res.ok) throw new Error('not found');
+      return res.json();
+    })
+    .then(data => {
+      if (!data.items || data.items.length === 0) {
+        container.innerHTML = '<p class="text-muted">現在取得できるニュースはありません。次回の自動更新をお待ちください。</p>';
+        return;
+      }
+
+      // Show last updated time in JST
+      if (data.lastUpdated) {
+        const d = new Date(data.lastUpdated);
+        const jst = d.toLocaleString('ja-JP', { timeZone: 'Asia/Tokyo' });
+        updatedEl.textContent = '最終更新: ' + jst;
+      }
+
+      // Display up to 5 items
+      const items = data.items.slice(0, 5);
+      container.innerHTML = items.map(item => {
+        const date = item.pubDate
+          ? new Date(item.pubDate).toLocaleDateString('ja-JP', { timeZone: 'Asia/Tokyo', month: 'short', day: 'numeric' })
+          : '';
+        return '<div class="news-item">' +
+          '<div class="news-meta">' +
+            '<span class="badge badge-info">' + (item.source || '') + '</span>' +
+            '<span>' + date + '</span>' +
+          '</div>' +
+          '<h3><a href="' + item.link + '" target="_blank" rel="noopener">' + item.title + '</a></h3>' +
+          '<p>' + (item.description || '') + '</p>' +
+        '</div>';
+      }).join('');
+    })
+    .catch(() => {
+      container.innerHTML = '<p class="text-muted">ニュースデータはまだ生成されていません。GitHub Actions による初回更新をお待ちください。</p>';
+    });
+})();
+</script>
 </body>
 </html>
