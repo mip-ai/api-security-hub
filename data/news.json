@@ -1,7 +1,14 @@
 {
-  "lastUpdated": "2026-02-13T17:30:16.487Z",
+  "lastUpdated": "2026-02-13T22:03:42.925Z",
   "itemCount": 20,
   "items": [
+    {
+      "title": "Louis Vuitton, Dior, and Tiffany fined $25 million over data breaches",
+      "link": "https://www.bleepingcomputer.com/news/security/louis-vuitton-dior-and-tiffany-fined-25-million-over-data-breaches/",
+      "pubDate": "2026-02-13T18:35:15.000Z",
+      "description": "South Korea has fined luxury fashion brands Louis Vuitton, Christian Dior Couture, and Tiffany $25 million for failing to implement adequate security measures, which facilitated unauthorized access and the exposure of data belonging to more than 5.5 million customers. [...]",
+      "source": "BleepingComputer"
+    },
     {
       "title": "CISA flags critical Microsoft SCCM flaw as exploited in attacks",
       "link": "https://www.bleepingcomputer.com/news/security/cisa-flags-microsoft-configmgr-rce-flaw-as-exploited-in-attacks/",
@@ -115,20 +122,6 @@
       "source": "The Hacker News"
     },
     {
-      "title": "Apple fixes zero-day flaw used in 'extremely sophisticated' attacks",
-      "link": "https://www.bleepingcomputer.com/news/security/apple-fixes-zero-day-flaw-used-in-extremely-sophisticated-attacks/",
-      "pubDate": "2026-02-12T01:06:05.000Z",
-      "description": "Apple has released security updates to fix a zero-day vulnerability that was exploited in an \"extremely sophisticated attack\" targeting specific individuals. [...]",
-      "source": "BleepingComputer"
-    },
-    {
-      "title": "Windows 11 Notepad flaw let files execute silently via Markdown links",
-      "link": "https://www.bleepingcomputer.com/news/microsoft/windows-11-notepad-flaw-let-files-execute-silently-via-markdown-links/",
-      "pubDate": "2026-02-11T23:15:41.000Z",
-      "description": "Microsoft has fixed a \"remote code execution\" vulnerability in Windows 11 Notepad that allowed attackers to execute local or remote programs by tricking users into clicking specially crafted Markdown links, without displaying any Windows security warnings. [...]",
-      "source": "BleepingComputer"
-    },
-    {
       "title": "First Malicious Outlook Add-In Found Stealing 4,000+ Microsoft Credentials",
       "link": "https://thehackernews.com/2026/02/first-malicious-outlook-add-in-found.html",
       "pubDate": "2026-02-11T17:45:00.000Z",
@@ -140,6 +133,13 @@
       "link": "https://thehackernews.com/2026/02/over-60-software-vendors-issue-security.html",
       "pubDate": "2026-02-11T13:28:00.000Z",
       "description": "It's Patch Tuesday, which means a number of software vendors have released patches for various security vulnerabilities impacting their products and services. Microsoft issued fixes for 59 flaws, including six actively exploited zero-days in various Windows components that could be abused to bypass ",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "Exposed Training Open the Door for Crypto-Mining in Fortune 500 Cloud Environments",
+      "link": "https://thehackernews.com/2026/02/exposed-training-open-door-for-crypto.html",
+      "pubDate": "2026-02-11T11:30:00.000Z",
+      "description": "Intentionally vulnerable training applications are widely used for security education, internal testing, and product demonstrations. Tools such as OWASP Juice Shop, DVWA, Hackazon, and bWAPP are designed to be insecure by default, making them useful for learning how common attack techniques work in ",
       "source": "The Hacker News"
     }
   ]
