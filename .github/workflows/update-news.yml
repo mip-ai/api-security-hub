@@ -35,6 +35,7 @@ jobs:
           if git diff --cached --quiet; then
             echo "No changes to commit"
           else
+            git pull --rebase origin master
             git commit -m "Update API security news [$(date -u '+%Y-%m-%d %H:%M UTC')]"
             git push
           fi
