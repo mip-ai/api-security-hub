@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-02-13T12:55:31.160Z",
+  "lastUpdated": "2026-02-13T17:30:16.487Z",
   "itemCount": 20,
   "items": [
     {
@@ -129,17 +129,17 @@
       "source": "BleepingComputer"
     },
     {
-      "title": "Microsoft Store Outlook add-in hijacked to steal 4,000 Microsoft accounts",
-      "link": "https://www.bleepingcomputer.com/news/security/microsoft-store-outlook-add-in-hijacked-to-steal-4-000-microsoft-accounts/",
-      "pubDate": "2026-02-11T21:53:58.000Z",
-      "description": "The AgreeTo add-in for Outlook has been hijacked and turned into a phishing kit that stole more than 4,000 Microsoft account credentials. [...]",
-      "source": "BleepingComputer"
-    },
-    {
       "title": "First Malicious Outlook Add-In Found Stealing 4,000+ Microsoft Credentials",
       "link": "https://thehackernews.com/2026/02/first-malicious-outlook-add-in-found.html",
       "pubDate": "2026-02-11T17:45:00.000Z",
       "description": "Cybersecurity researchers have discovered what they said is the first known malicious Microsoft Outlook add-in detected in the wild. In this unusual supply chain attack detailed by Koi Security, an unknown attacker claimed the domain associated with a now-abandoned legitimate add-in to serve a fake ",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "Over 60 Software Vendors Issue Security Fixes Across OS, Cloud, and Network Platforms",
+      "link": "https://thehackernews.com/2026/02/over-60-software-vendors-issue-security.html",
+      "pubDate": "2026-02-11T13:28:00.000Z",
+      "description": "It's Patch Tuesday, which means a number of software vendors have released patches for various security vulnerabilities impacting their products and services. Microsoft issued fixes for 59 flaws, including six actively exploited zero-days in various Windows components that could be abused to bypass ",
       "source": "The Hacker News"
     }
   ]
