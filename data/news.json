@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-02-14T09:56:37.398Z",
+  "lastUpdated": "2026-02-14T15:52:20.349Z",
   "itemCount": 20,
   "items": [
     {
@@ -80,13 +80,6 @@
       "source": "BleepingComputer"
     },
     {
-      "title": "Fake AI Chrome extensions with 300K users steal credentials, emails",
-      "link": "https://www.bleepingcomputer.com/news/security/fake-ai-chrome-extensions-with-300k-users-steal-credentials-emails/",
-      "pubDate": "2026-02-12T13:41:55.000Z",
-      "description": "A set of 30 malicious Chrome extensions that have been installed by more than 300,000 users are masquerading as AI assistants to steal credentials, email content, and browsing information. [...]",
-      "source": "BleepingComputer"
-    },
-    {
       "title": "ApolloMD Data Breach Impacts 626,000 Individuals",
       "link": "https://www.securityweek.com/apollomd-data-breach-impacts-626000-individuals/",
       "pubDate": "2026-02-12T12:23:33.000Z",
@@ -140,6 +133,13 @@
       "link": "https://thehackernews.com/2026/02/microsoft-patches-59-vulnerabilities.html",
       "pubDate": "2026-02-11T10:22:00.000Z",
       "description": "Microsoft on Tuesday released security updates to address a set of 59 flaws across its software, including six vulnerabilities that it said have been exploited in the wild. Of the 59 flaws, five are rated Critical, 52 are rated Important, and two are rated Moderate in severity. Twenty-five of the pa",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "SSHStalker Botnet Uses IRC C2 to Control Linux Systems via Legacy Kernel Exploits",
+      "link": "https://thehackernews.com/2026/02/sshstalker-botnet-uses-irc-c2-to.html",
+      "pubDate": "2026-02-11T09:56:00.000Z",
+      "description": "Cybersecurity researchers have disclosed details of a new botnet operation called SSHStalker that relies on the Internet Relay Chat (IRC) communication protocol for command-and-control (C2) purposes. \"The toolset blends stealth helpers with legacy-era Linux exploitation: Alongside log cleaners (utmp",
       "source": "The Hacker News"
     }
   ]
