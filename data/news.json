@@ -1,7 +1,14 @@
 {
-  "lastUpdated": "2026-02-14T15:52:20.349Z",
+  "lastUpdated": "2026-02-14T21:49:27.935Z",
   "itemCount": 20,
   "items": [
+    {
+      "title": "One threat actor responsible for 83% of recent Ivanti RCE attacks",
+      "link": "https://www.bleepingcomputer.com/news/security/one-threat-actor-responsible-for-83-percent-of-recent-ivanti-rce-attacks/",
+      "pubDate": "2026-02-14T16:02:34.000Z",
+      "description": "Threat intelligence observations show that a single threat actor is responsible for most of the active exploitation of two critical vulnerabilities in Ivanti Endpoint Manager Mobile (EPMM), tracked as CVE-2026-21962 and CVE-2026-24061. [...]",
+      "source": "BleepingComputer"
+    },
     {
       "title": "Louis Vuitton, Dior, and Tiffany fined $25 million over data breaches",
       "link": "https://www.bleepingcomputer.com/news/security/louis-vuitton-dior-and-tiffany-fined-25-million-over-data-breaches/",
@@ -70,13 +77,6 @@
       "link": "https://www.bleepingcomputer.com/news/security/wordpress-plugin-with-900k-installs-vulnerable-to-critical-rce-flaw/",
       "pubDate": "2026-02-12T17:09:41.000Z",
       "description": "A critical vulnerability in the WPvivid Backup & Migration plugin for WordPress, installed on more than 900,000 websites, can be exploited to achieve remote code execution by uploading arbitrary files without authentication. [...]",
-      "source": "BleepingComputer"
-    },
-    {
-      "title": "AMOS infostealer targets macOS through a popular AI app",
-      "link": "https://www.bleepingcomputer.com/news/security/amos-infostealer-targets-macos-through-a-popular-ai-app/",
-      "pubDate": "2026-02-12T14:25:38.000Z",
-      "description": "AMOS infostealer is targeting macOS users by abusing popular AI apps and extension marketplaces to harvest credentials. Flare examines how AMOS operates, spreads through AI-driven lures, and feeds the broader stealer-log cybercrime economy. [...]",
       "source": "BleepingComputer"
     },
     {
