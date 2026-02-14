@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-02-13T22:03:42.925Z",
+  "lastUpdated": "2026-02-14T05:35:20.224Z",
   "itemCount": 20,
   "items": [
     {
@@ -108,13 +108,6 @@
       "source": "The Hacker News"
     },
     {
-      "title": "Google says hackers are abusing Gemini AI for all attacks stages",
-      "link": "https://www.bleepingcomputer.com/news/security/google-says-hackers-are-abusing-gemini-ai-for-all-attacks-stages/",
-      "pubDate": "2026-02-12T07:00:00.000Z",
-      "description": "Google Threat Intelligence Group (GTIG) has published a new report warning about AI model extraction/distillation attacks, in which private-sector firms and researchers use legitimate API access to systematically probe models and replicate their logic and reasoning. [...]",
-      "source": "BleepingComputer"
-    },
-    {
       "title": "Apple Fixes Exploited Zero-Day Affecting iOS, macOS, and Other Devices",
       "link": "https://thehackernews.com/2026/02/apple-fixes-exploited-zero-day.html",
       "pubDate": "2026-02-12T05:39:00.000Z",
@@ -140,6 +133,13 @@
       "link": "https://thehackernews.com/2026/02/exposed-training-open-door-for-crypto.html",
       "pubDate": "2026-02-11T11:30:00.000Z",
       "description": "Intentionally vulnerable training applications are widely used for security education, internal testing, and product demonstrations. Tools such as OWASP Juice Shop, DVWA, Hackazon, and bWAPP are designed to be insecure by default, making them useful for learning how common attack techniques work in ",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "Microsoft Patches 59 Vulnerabilities Including Six Actively Exploited Zero-Days",
+      "link": "https://thehackernews.com/2026/02/microsoft-patches-59-vulnerabilities.html",
+      "pubDate": "2026-02-11T10:22:00.000Z",
+      "description": "Microsoft on Tuesday released security updates to address a set of 59 flaws across its software, including six vulnerabilities that it said have been exploited in the wild. Of the 59 flaws, five are rated Critical, 52 are rated Important, and two are rated Moderate in severity. Twenty-five of the pa",
       "source": "The Hacker News"
     }
   ]
