@@ -1,12 +1,19 @@
 {
-  "lastUpdated": "2026-02-15T15:51:12.697Z",
+  "lastUpdated": "2026-02-15T21:50:45.084Z",
   "itemCount": 20,
   "items": [
+    {
+      "title": "CTM360: Lumma Stealer and Ninja Browser malware campaign abusing Google Groups",
+      "link": "https://www.bleepingcomputer.com/news/security/ctm360-lumma-stealer-and-ninja-browser-malware-campaign-abusing-google-groups/",
+      "pubDate": "2026-02-15T16:30:41.000Z",
+      "description": "CTM360 reports 4,000+ malicious Google Groups and 3,500+ Google-hosted URLs used to spread the Lumma Stealer infostealing malware and a trojanized \"Ninja Browser.\" The report details how attackers abuse trusted Google services to steal credentials and maintain persistence across Windows and Linux sy",
+      "source": "BleepingComputer"
+    },
     {
       "title": "One threat actor responsible for 83% of recent Ivanti RCE attacks",
       "link": "https://www.bleepingcomputer.com/news/security/one-threat-actor-responsible-for-83-percent-of-recent-ivanti-rce-attacks/",
       "pubDate": "2026-02-14T16:02:34.000Z",
-      "description": "Threat intelligence observations show that a single threat actor is responsible for most of the active exploitation of two critical vulnerabilities in Ivanti Endpoint Manager Mobile (EPMM), tracked as CVE-2026-21962 and CVE-2026-24061. [...]",
+      "description": "Threat intelligence observations show that a single threat actor is responsible for most of the active exploitation of two critical vulnerabilities in Ivanti Endpoint Manager Mobile (EPMM), tracked as CVE-2026-1281 and CVE-2026-1340. [...]",
       "source": "BleepingComputer"
     },
     {
@@ -63,13 +70,6 @@
       "link": "https://www.bleepingcomputer.com/news/security/critical-beyondtrust-rce-flaw-now-exploited-in-attacks-patch-now/",
       "pubDate": "2026-02-12T21:34:12.000Z",
       "description": "A critical pre-authentication remote code execution vulnerability in BeyondTrust Remote Support and Privileged Remote Access appliances is now being exploited in attacks after a PoC was published online. [...]",
-      "source": "BleepingComputer"
-    },
-    {
-      "title": "Odido data breach exposes personal info of 6.2 million customers",
-      "link": "https://www.bleepingcomputer.com/news/security/odido-data-breach-exposes-personal-info-of-62-million-customers/",
-      "pubDate": "2026-02-12T18:18:14.000Z",
-      "description": "Dutch telecommunications provider Odido is warning that it suffered a cyberattack that reportedly exposed the personal data of 6.2 million customers. [...]",
       "source": "BleepingComputer"
     },
     {
