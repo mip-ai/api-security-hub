@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-02-15T09:58:14.768Z",
+  "lastUpdated": "2026-02-15T15:51:12.697Z",
   "itemCount": 20,
   "items": [
     {
@@ -73,13 +73,6 @@
       "source": "BleepingComputer"
     },
     {
-      "title": "WordPress plugin with 900k installs vulnerable to critical RCE flaw",
-      "link": "https://www.bleepingcomputer.com/news/security/wordpress-plugin-with-900k-installs-vulnerable-to-critical-rce-flaw/",
-      "pubDate": "2026-02-12T17:09:41.000Z",
-      "description": "A critical vulnerability in the WPvivid Backup & Migration plugin for WordPress, installed on more than 900,000 websites, can be exploited to achieve remote code execution by uploading arbitrary files without authentication. [...]",
-      "source": "BleepingComputer"
-    },
-    {
       "title": "ApolloMD Data Breach Impacts 626,000 Individuals",
       "link": "https://www.securityweek.com/apollomd-data-breach-impacts-626000-individuals/",
       "pubDate": "2026-02-12T12:23:33.000Z",
@@ -140,6 +133,13 @@
       "link": "https://thehackernews.com/2026/02/sshstalker-botnet-uses-irc-c2-to.html",
       "pubDate": "2026-02-11T09:56:00.000Z",
       "description": "Cybersecurity researchers have disclosed details of a new botnet operation called SSHStalker that relies on the Internet Relay Chat (IRC) communication protocol for command-and-control (C2) purposes. \"The toolset blends stealth helpers with legacy-era Linux exploitation: Alongside log cleaners (utmp",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "Fortinet Patches Critical SQLi Flaw Enabling Unauthenticated Code Execution",
+      "link": "https://thehackernews.com/2026/02/fortinet-patches-critical-sqli-flaw.html",
+      "pubDate": "2026-02-10T13:30:00.000Z",
+      "description": "Fortinet has released security updates to address a critical flaw impacting FortiClientEMS that could lead to the execution of arbitrary code on susceptible systems. The vulnerability, tracked as CVE-2026-21643, has a CVSS rating of 9.1 out of a maximum of 10.0. \"An improper neutralization of specia",
       "source": "The Hacker News"
     }
   ]
