@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-02-15T21:50:45.084Z",
+  "lastUpdated": "2026-02-16T06:44:54.102Z",
   "itemCount": 20,
   "items": [
     {
@@ -64,13 +64,6 @@
       "pubDate": "2026-02-13T06:49:26.000Z",
       "description": "Rewards for exploits are reportedly much smaller than in the contest’s glory days. The post China Revives Tianfu Cup Hacking Contest Under Increased Secrecy appeared first on SecurityWeek.",
       "source": "SecurityWeek"
-    },
-    {
-      "title": "Critical BeyondTrust RCE flaw now exploited in attacks, patch now",
-      "link": "https://www.bleepingcomputer.com/news/security/critical-beyondtrust-rce-flaw-now-exploited-in-attacks-patch-now/",
-      "pubDate": "2026-02-12T21:34:12.000Z",
-      "description": "A critical pre-authentication remote code execution vulnerability in BeyondTrust Remote Support and Privileged Remote Access appliances is now being exploited in attacks after a PoC was published online. [...]",
-      "source": "BleepingComputer"
     },
     {
       "title": "ApolloMD Data Breach Impacts 626,000 Individuals",
@@ -140,6 +133,13 @@
       "link": "https://thehackernews.com/2026/02/fortinet-patches-critical-sqli-flaw.html",
       "pubDate": "2026-02-10T13:30:00.000Z",
       "description": "Fortinet has released security updates to address a critical flaw impacting FortiClientEMS that could lead to the execution of arbitrary code on susceptible systems. The vulnerability, tracked as CVE-2026-21643, has a CVSS rating of 9.1 out of a maximum of 10.0. \"An improper neutralization of specia",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "ZAST.AI Raises $6M Pre-A to Scale \"Zero False Positive\" AI-Powered Code Security",
+      "link": "https://thehackernews.com/2026/02/zastai-raises-6m-pre-to-scale-zero.html",
+      "pubDate": "2026-02-10T11:40:00.000Z",
+      "description": "January 5, 2026, Seattle, USA — ZAST.AI announced the completion of a $6 million Pre-A funding round. This investment came from the well-known investment firm Hillhouse Capital, bringing ZAST.AI's total funding close to $10 million. This marks a recognition from leading capital markets of a new solu",
       "source": "The Hacker News"
     }
   ]
