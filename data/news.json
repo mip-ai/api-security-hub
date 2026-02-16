@@ -1,7 +1,28 @@
 {
-  "lastUpdated": "2026-02-16T06:44:54.102Z",
+  "lastUpdated": "2026-02-16T11:28:16.341Z",
   "itemCount": 20,
   "items": [
+    {
+      "title": "Google patches first Chrome zero-day exploited in attacks this year",
+      "link": "https://www.bleepingcomputer.com/news/security/google-patches-first-chrome-zero-day-exploited-in-attacks-this-year/",
+      "pubDate": "2026-02-16T08:19:19.000Z",
+      "description": "Google has released emergency updates to fix a high-severity Chrome vulnerability exploited in zero-day attacks, marking the first such security flaw patched since the start of the year. [...]",
+      "source": "BleepingComputer"
+    },
+    {
+      "title": "Google Patches First Actively Exploited Chrome Zero-Day of 2026",
+      "link": "https://www.securityweek.com/google-patches-first-actively-exploited-chrome-zero-day-of-2026/",
+      "pubDate": "2026-02-16T07:54:15.000Z",
+      "description": "A Chrome 145 update fixes CVE-2026-2441, a vulnerability that can likely be exploited for arbitrary code execution. The post Google Patches First Actively Exploited Chrome Zero-Day of 2026 appeared first on SecurityWeek.",
+      "source": "SecurityWeek"
+    },
+    {
+      "title": "New Chrome Zero-Day (CVE-2026-2441) Under Active Attack — Patch Released",
+      "link": "https://thehackernews.com/2026/02/new-chrome-zero-day-cve-2026-2441-under.html",
+      "pubDate": "2026-02-16T06:38:00.000Z",
+      "description": "Google on Friday released security updates for its Chrome browser to address a security flaw that it said has been exploited in the wild. The high-severity vulnerability, tracked as CVE-2026-2441 (CVSS score: 8.8), has been described as a use-after-free bug in CSS. Security researcher Shaheen Fazim ",
+      "source": "The Hacker News"
+    },
     {
       "title": "CTM360: Lumma Stealer and Ninja Browser malware campaign abusing Google Groups",
       "link": "https://www.bleepingcomputer.com/news/security/ctm360-lumma-stealer-and-ninja-browser-malware-campaign-abusing-google-groups/",
@@ -66,13 +87,6 @@
       "source": "SecurityWeek"
     },
     {
-      "title": "ApolloMD Data Breach Impacts 626,000 Individuals",
-      "link": "https://www.securityweek.com/apollomd-data-breach-impacts-626000-individuals/",
-      "pubDate": "2026-02-12T12:23:33.000Z",
-      "description": "The company says hackers stole the personal information of patients of affiliated physicians and practices. The post ApolloMD Data Breach Impacts 626,000 Individuals appeared first on SecurityWeek.",
-      "source": "SecurityWeek"
-    },
-    {
       "title": "ThreatsDay Bulletin: AI Prompt RCE, Claude 0-Click, RenEngine Loader, Auto 0-Days &amp; 25+ Stories",
       "link": "https://thehackernews.com/2026/02/threatsday-bulletin-ai-prompt-rce.html",
       "pubDate": "2026-02-12T11:51:00.000Z",
@@ -126,20 +140,6 @@
       "link": "https://thehackernews.com/2026/02/sshstalker-botnet-uses-irc-c2-to.html",
       "pubDate": "2026-02-11T09:56:00.000Z",
       "description": "Cybersecurity researchers have disclosed details of a new botnet operation called SSHStalker that relies on the Internet Relay Chat (IRC) communication protocol for command-and-control (C2) purposes. \"The toolset blends stealth helpers with legacy-era Linux exploitation: Alongside log cleaners (utmp",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "Fortinet Patches Critical SQLi Flaw Enabling Unauthenticated Code Execution",
-      "link": "https://thehackernews.com/2026/02/fortinet-patches-critical-sqli-flaw.html",
-      "pubDate": "2026-02-10T13:30:00.000Z",
-      "description": "Fortinet has released security updates to address a critical flaw impacting FortiClientEMS that could lead to the execution of arbitrary code on susceptible systems. The vulnerability, tracked as CVE-2026-21643, has a CVSS rating of 9.1 out of a maximum of 10.0. \"An improper neutralization of specia",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "ZAST.AI Raises $6M Pre-A to Scale \"Zero False Positive\" AI-Powered Code Security",
-      "link": "https://thehackernews.com/2026/02/zastai-raises-6m-pre-to-scale-zero.html",
-      "pubDate": "2026-02-10T11:40:00.000Z",
-      "description": "January 5, 2026, Seattle, USA — ZAST.AI announced the completion of a $6 million Pre-A funding round. This investment came from the well-known investment firm Hillhouse Capital, bringing ZAST.AI's total funding close to $10 million. This marks a recognition from leading capital markets of a new solu",
       "source": "The Hacker News"
     }
   ]
