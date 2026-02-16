@@ -1,7 +1,35 @@
 {
-  "lastUpdated": "2026-02-16T11:28:16.341Z",
+  "lastUpdated": "2026-02-16T17:25:13.346Z",
   "itemCount": 20,
   "items": [
+    {
+      "title": "Dior, Louis Vuitton, Tiffany Fined $25 Million in South Korea After Data Breaches",
+      "link": "https://www.securityweek.com/dior-louis-vuitton-tiffany-fined-25-million-in-south-korea-after-data-breaches/",
+      "pubDate": "2026-02-16T15:09:13.000Z",
+      "description": "Luxury brands were among the dozens of major companies whose Salesforce instances were targeted by Scattered LAPSUS$ Hunters. The post Dior, Louis Vuitton, Tiffany Fined $25 Million in South Korea After Data Breaches appeared first on SecurityWeek.",
+      "source": "SecurityWeek"
+    },
+    {
+      "title": "Weekly Recap: Outlook Add-Ins Hijack, 0-Day Patches, Wormable Botnet &amp; AI Malware",
+      "link": "https://thehackernews.com/2026/02/weekly-recap-outlook-add-ins-hijack-0.html",
+      "pubDate": "2026-02-16T12:55:00.000Z",
+      "description": "This week’s recap shows how small gaps are turning into big entry points. Not always through new exploits, often through tools, add-ons, cloud setups, or workflows that people already trust and rarely question. Another signal: attackers are mixing old and new methods. Legacy botnet tactics, modern c",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "CISA gives feds 3 days to patch actively exploited BeyondTrust flaw",
+      "link": "https://www.bleepingcomputer.com/news/security/cisa-orders-feds-to-patch-beyondtrust-flaw-within-three-days/",
+      "pubDate": "2026-02-16T12:33:11.000Z",
+      "description": "CISA ordered U.S. government agencies on Friday to secure their BeyondTrust Remote Support instances against an actively exploited vulnerability within three days. [...]",
+      "source": "BleepingComputer"
+    },
+    {
+      "title": "Safe and Inclusive E‑Society: How Lithuania Is Bracing for AI‑Driven Cyber Fraud",
+      "link": "https://thehackernews.com/2026/02/safe-and-inclusive-esociety-how.html",
+      "pubDate": "2026-02-16T11:55:00.000Z",
+      "description": "Presentation of the KTU Consortium Mission ‘A Safe and Inclusive Digital Society’ at the Innovation Agency event ‘Innovation Breakfast: How Mission-Oriented Science and Innovation Programmes Will Address Societal Challenges’. Technologies are evolving fast, reshaping economies, governance, and daily",
+      "source": "The Hacker News"
+    },
     {
       "title": "Google patches first Chrome zero-day exploited in attacks this year",
       "link": "https://www.bleepingcomputer.com/news/security/google-patches-first-chrome-zero-day-exploited-in-attacks-this-year/",
@@ -59,32 +87,11 @@
       "source": "SecurityWeek"
     },
     {
-      "title": "BeyondTrust Vulnerability Targeted by Hackers Within 24 Hours of PoC Release",
-      "link": "https://www.securityweek.com/beyondtrust-vulnerability-targeted-by-hackers-within-24-hours-of-poc-release/",
-      "pubDate": "2026-02-13T11:01:15.000Z",
-      "description": "Exploitation attempts target CVE-2026-1731, a critical unauthenticated remote code execution flaw in BeyondTrust Remote Support. The post BeyondTrust Vulnerability Targeted by Hackers Within 24 Hours of PoC Release appeared first on SecurityWeek.",
-      "source": "SecurityWeek"
-    },
-    {
-      "title": "CISA Warns of Exploited SolarWinds, Notepad++, Microsoft Vulnerabilities",
-      "link": "https://www.securityweek.com/cisa-warns-of-exploited-solarwinds-notepad-microsoft-vulnerabilities/",
-      "pubDate": "2026-02-13T10:36:04.000Z",
-      "description": "Disclosed at the end of January, the SolarWinds vulnerability was likely exploited as a zero-day since December 2025. The post CISA Warns of Exploited SolarWinds, Notepad++, Microsoft Vulnerabilities appeared first on SecurityWeek.",
-      "source": "SecurityWeek"
-    },
-    {
       "title": "Researchers Observe In-the-Wild Exploitation of BeyondTrust CVSS 9.9 Vulnerability",
       "link": "https://thehackernews.com/2026/02/researchers-observe-in-wild.html",
       "pubDate": "2026-02-13T08:34:00.000Z",
       "description": "Threat actors have started to exploit a recently disclosed critical security flaw impacting BeyondTrust Remote Support (RS) and Privileged Remote Access (PRA) products, according to watchTowr. \"Overnight we observed first in-the-wild exploitation of BeyondTrust across our global sensors,\" Ryan Dewhu",
       "source": "The Hacker News"
-    },
-    {
-      "title": "China Revives Tianfu Cup Hacking Contest Under Increased Secrecy",
-      "link": "https://www.securityweek.com/china-revives-tianfu-cup-hacking-contest-under-increased-secrecy/",
-      "pubDate": "2026-02-13T06:49:26.000Z",
-      "description": "Rewards for exploits are reportedly much smaller than in the contest’s glory days. The post China Revives Tianfu Cup Hacking Contest Under Increased Secrecy appeared first on SecurityWeek.",
-      "source": "SecurityWeek"
     },
     {
       "title": "ThreatsDay Bulletin: AI Prompt RCE, Claude 0-Click, RenEngine Loader, Auto 0-Days &amp; 25+ Stories",
@@ -133,13 +140,6 @@
       "link": "https://thehackernews.com/2026/02/microsoft-patches-59-vulnerabilities.html",
       "pubDate": "2026-02-11T10:22:00.000Z",
       "description": "Microsoft on Tuesday released security updates to address a set of 59 flaws across its software, including six vulnerabilities that it said have been exploited in the wild. Of the 59 flaws, five are rated Critical, 52 are rated Important, and two are rated Moderate in severity. Twenty-five of the pa",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "SSHStalker Botnet Uses IRC C2 to Control Linux Systems via Legacy Kernel Exploits",
-      "link": "https://thehackernews.com/2026/02/sshstalker-botnet-uses-irc-c2-to.html",
-      "pubDate": "2026-02-11T09:56:00.000Z",
-      "description": "Cybersecurity researchers have disclosed details of a new botnet operation called SSHStalker that relies on the Internet Relay Chat (IRC) communication protocol for command-and-control (C2) purposes. \"The toolset blends stealth helpers with legacy-era Linux exploitation: Alongside log cleaners (utmp",
       "source": "The Hacker News"
     }
   ]
