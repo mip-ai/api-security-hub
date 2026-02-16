@@ -1,7 +1,35 @@
 {
-  "lastUpdated": "2026-02-16T17:25:13.346Z",
+  "lastUpdated": "2026-02-16T21:55:50.460Z",
   "itemCount": 20,
   "items": [
+    {
+      "title": "Eurail says stolen traveler data now up for sale on dark web",
+      "link": "https://www.bleepingcomputer.com/news/security/eurail-says-stolen-traveler-data-now-up-for-sale-on-dark-web/",
+      "pubDate": "2026-02-16T19:19:09.000Z",
+      "description": "Eurail B.V., the operator that provides access to 250,000 kilometers of European railways, confirmed that data stolen in a breach earlier this year is being offered for sale on the dark web. [...]",
+      "source": "BleepingComputer"
+    },
+    {
+      "title": "Man arrested for demanding reward after accidental police data leak",
+      "link": "https://www.bleepingcomputer.com/news/security/man-arrested-for-demanding-reward-after-accidental-police-data-leak/",
+      "pubDate": "2026-02-16T19:13:39.000Z",
+      "description": "Dutch authorities arrested a 40-year-old man after he downloaded confidential documents that had been mistakenly shared by the police and refused to delete them unless he received \"something in return.\" [...]",
+      "source": "BleepingComputer"
+    },
+    {
+      "title": "Infostealer Steals OpenClaw AI Agent Configuration Files and Gateway Tokens",
+      "link": "https://thehackernews.com/2026/02/infostealer-steals-openclaw-ai-agent.html",
+      "pubDate": "2026-02-16T18:43:00.000Z",
+      "description": "Cybersecurity researchers disclosed they have detected a case of an information stealer infection successfully exfiltrating a victim's OpenClaw (formerly Clawdbot and Moltbot) configuration environment. \"This finding marks a significant milestone in the evolution of infostealer behavior: the transit",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "Infostealer malware found stealing OpenClaw secrets for first time",
+      "link": "https://www.bleepingcomputer.com/news/security/infostealer-malware-found-stealing-openclaw-secrets-for-first-time/",
+      "pubDate": "2026-02-16T17:32:26.000Z",
+      "description": "With the massive adoption of the OpenClaw agentic AI assistant, information-stealing malware has been spotted stealing files associated with the framework that contain API keys, authentication tokens, and other secrets. [...]",
+      "source": "BleepingComputer"
+    },
     {
       "title": "Dior, Louis Vuitton, Tiffany Fined $25 Million in South Korea After Data Breaches",
       "link": "https://www.securityweek.com/dior-louis-vuitton-tiffany-fined-25-million-in-south-korea-after-data-breaches/",
@@ -66,20 +94,6 @@
       "source": "BleepingComputer"
     },
     {
-      "title": "Louis Vuitton, Dior, and Tiffany fined $25 million over data breaches",
-      "link": "https://www.bleepingcomputer.com/news/security/louis-vuitton-dior-and-tiffany-fined-25-million-over-data-breaches/",
-      "pubDate": "2026-02-13T18:35:15.000Z",
-      "description": "South Korea has fined luxury fashion brands Louis Vuitton, Christian Dior Couture, and Tiffany $25 million for failing to implement adequate security measures, which facilitated unauthorized access and the exposure of data belonging to more than 5.5 million customers. [...]",
-      "source": "BleepingComputer"
-    },
-    {
-      "title": "CISA flags critical Microsoft SCCM flaw as exploited in attacks",
-      "link": "https://www.bleepingcomputer.com/news/security/cisa-flags-microsoft-configmgr-rce-flaw-as-exploited-in-attacks/",
-      "pubDate": "2026-02-13T12:35:09.000Z",
-      "description": "CISA ordered federal agencies on Thursday to secure their systems against a critical Microsoft Configuration Manager vulnerability patched in October 2024 and now exploited in attacks. [...]",
-      "source": "BleepingComputer"
-    },
-    {
       "title": "Dutch Carrier Odido Discloses Data Breach Impacting 6 Million",
       "link": "https://www.securityweek.com/dutch-carrier-odido-discloses-data-breach-impacting-6-million/",
       "pubDate": "2026-02-13T12:02:20.000Z",
@@ -126,20 +140,6 @@
       "link": "https://thehackernews.com/2026/02/over-60-software-vendors-issue-security.html",
       "pubDate": "2026-02-11T13:28:00.000Z",
       "description": "It's Patch Tuesday, which means a number of software vendors have released patches for various security vulnerabilities impacting their products and services. Microsoft issued fixes for 59 flaws, including six actively exploited zero-days in various Windows components that could be abused to bypass ",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "Exposed Training Open the Door for Crypto-Mining in Fortune 500 Cloud Environments",
-      "link": "https://thehackernews.com/2026/02/exposed-training-open-door-for-crypto.html",
-      "pubDate": "2026-02-11T11:30:00.000Z",
-      "description": "Intentionally vulnerable training applications are widely used for security education, internal testing, and product demonstrations. Tools such as OWASP Juice Shop, DVWA, Hackazon, and bWAPP are designed to be insecure by default, making them useful for learning how common attack techniques work in ",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "Microsoft Patches 59 Vulnerabilities Including Six Actively Exploited Zero-Days",
-      "link": "https://thehackernews.com/2026/02/microsoft-patches-59-vulnerabilities.html",
-      "pubDate": "2026-02-11T10:22:00.000Z",
-      "description": "Microsoft on Tuesday released security updates to address a set of 59 flaws across its software, including six vulnerabilities that it said have been exploited in the wild. Of the 59 flaws, five are rated Critical, 52 are rated Important, and two are rated Moderate in severity. Twenty-five of the pa",
       "source": "The Hacker News"
     }
   ]
