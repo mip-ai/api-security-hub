@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-02-17T06:12:23.739Z",
+  "lastUpdated": "2026-02-17T11:27:52.281Z",
   "itemCount": 20,
   "items": [
     {
@@ -94,13 +94,6 @@
       "source": "BleepingComputer"
     },
     {
-      "title": "Dutch Carrier Odido Discloses Data Breach Impacting 6 Million",
-      "link": "https://www.securityweek.com/dutch-carrier-odido-discloses-data-breach-impacting-6-million/",
-      "pubDate": "2026-02-13T12:02:20.000Z",
-      "description": "Hackers stole personal information such as names, addresses, and phone numbers from a customer contact system. The post Dutch Carrier Odido Discloses Data Breach Impacting 6 Million appeared first on SecurityWeek.",
-      "source": "SecurityWeek"
-    },
-    {
       "title": "Researchers Observe In-the-Wild Exploitation of BeyondTrust CVSS 9.9 Vulnerability",
       "link": "https://thehackernews.com/2026/02/researchers-observe-in-wild.html",
       "pubDate": "2026-02-13T08:34:00.000Z",
@@ -140,6 +133,13 @@
       "link": "https://thehackernews.com/2026/02/over-60-software-vendors-issue-security.html",
       "pubDate": "2026-02-11T13:28:00.000Z",
       "description": "It's Patch Tuesday, which means a number of software vendors have released patches for various security vulnerabilities impacting their products and services. Microsoft issued fixes for 59 flaws, including six actively exploited zero-days in various Windows components that could be abused to bypass ",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "Exposed Training Open the Door for Crypto-Mining in Fortune 500 Cloud Environments",
+      "link": "https://thehackernews.com/2026/02/exposed-training-open-door-for-crypto.html",
+      "pubDate": "2026-02-11T11:30:00.000Z",
+      "description": "Intentionally vulnerable training applications are widely used for security education, internal testing, and product demonstrations. Tools such as OWASP Juice Shop, DVWA, Hackazon, and bWAPP are designed to be insecure by default, making them useful for learning how common attack techniques work in ",
       "source": "The Hacker News"
     }
   ]
