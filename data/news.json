@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-02-17T21:59:30.533Z",
+  "lastUpdated": "2026-02-18T06:41:48.410Z",
   "itemCount": 20,
   "items": [
     {
@@ -115,13 +115,6 @@
       "source": "The Hacker News"
     },
     {
-      "title": "Google patches first Chrome zero-day exploited in attacks this year",
-      "link": "https://www.bleepingcomputer.com/news/security/google-patches-first-chrome-zero-day-exploited-in-attacks-this-year/",
-      "pubDate": "2026-02-16T08:19:19.000Z",
-      "description": "Google has released emergency updates to fix a high-severity Chrome vulnerability exploited in zero-day attacks, marking the first such security flaw patched since the start of the year. [...]",
-      "source": "BleepingComputer"
-    },
-    {
       "title": "New Chrome Zero-Day (CVE-2026-2441) Under Active Attack — Patch Released",
       "link": "https://thehackernews.com/2026/02/new-chrome-zero-day-cve-2026-2441-under.html",
       "pubDate": "2026-02-16T06:38:00.000Z",
@@ -140,6 +133,13 @@
       "link": "https://thehackernews.com/2026/02/threatsday-bulletin-ai-prompt-rce.html",
       "pubDate": "2026-02-12T11:51:00.000Z",
       "description": "Threat activity this week shows one consistent signal — attackers are leaning harder on what already works. Instead of flashy new exploits, many operations are built around quiet misuse of trusted tools, familiar workflows, and overlooked exposures that sit in plain sight. Another shift is how acces",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "83% of Ivanti EPMM Exploits Linked to Single IP on Bulletproof Hosting Infrastructure",
+      "link": "https://thehackernews.com/2026/02/83-of-ivanti-epmm-exploits-linked-to.html",
+      "pubDate": "2026-02-12T07:32:00.000Z",
+      "description": "A significant chunk of the exploitation attempts targeting a newly disclosed security flaw in Ivanti Endpoint Manager Mobile (EPMM) can be traced back to a single IP address on bulletproof hosting infrastructure offered by PROSPERO. Threat intelligence firm GreyNoise said it recorded 417 exploitatio",
       "source": "The Hacker News"
     }
   ]
