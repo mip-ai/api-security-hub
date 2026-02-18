@@ -1,7 +1,14 @@
 {
-  "lastUpdated": "2026-02-18T17:59:04.369Z",
+  "lastUpdated": "2026-02-18T22:02:41.082Z",
   "itemCount": 20,
   "items": [
+    {
+      "title": "Critical infra Honeywell CCTVs vulnerable to auth bypass flaw",
+      "link": "https://www.bleepingcomputer.com/news/security/critical-infra-honeywell-cctvs-vulnerable-to-auth-bypass-flaw/",
+      "pubDate": "2026-02-18T20:58:20.000Z",
+      "description": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) is warning of a critical vulnerability in multiple Honeywell CCTV products that allows unauthorized access to feeds or account hijacking. [...]",
+      "source": "BleepingComputer"
+    },
     {
       "title": "Grandstream GXP1600 VoIP Phones Exposed to Unauthenticated Remote Code Execution",
       "link": "https://thehackernews.com/2026/02/grandstream-gxp1600-voip-phones-exposed.html",
@@ -134,13 +141,6 @@
       "pubDate": "2026-02-17T14:40:49.000Z",
       "description": "Leaked API keys are nothing new, but the scale of the problem in front-end code has been largely a mystery - until now. Intruder's research team built a new secrets detection method and scanned 5 million applications specifically looking for secrets hidden in JavaScript bundles. Here's what we learn",
       "source": "BleepingComputer"
-    },
-    {
-      "title": "API Threats Grow in Scale as AI Expands the Blast Radius",
-      "link": "https://www.securityweek.com/api-threats-grow-in-scale-as-ai-expands-the-blast-radius/",
-      "pubDate": "2026-02-17T14:00:00.000Z",
-      "description": "New research shows attackers increasingly abusing APIs at machine speed as AI-driven systems widen exposure and amplify impact. The post API Threats Grow in Scale as AI Expands the Blast Radius appeared first on SecurityWeek.",
-      "source": "SecurityWeek"
     }
   ]
 }
