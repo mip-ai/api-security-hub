@@ -1,7 +1,14 @@
 {
-  "lastUpdated": "2026-02-19T18:01:48.219Z",
+  "lastUpdated": "2026-02-19T22:00:25.247Z",
   "itemCount": 20,
   "items": [
+    {
+      "title": "Microsoft Patches CVE-2026-26119 Privilege Escalation in Windows Admin Center",
+      "link": "https://thehackernews.com/2026/02/microsoft-patches-cve-2026-26119.html",
+      "pubDate": "2026-02-19T17:40:00.000Z",
+      "description": "Microsoft has disclosed a now-patched security flaw in Windows Admin Center that could allow an attacker to escalate their privileges. Windows Admin Center is a locally deployed, browser-based management tool set that lets users manage their Windows Clients, Servers, and Clusters without the need fo",
+      "source": "The Hacker News"
+    },
     {
       "title": "Flaw in Grandstream VoIP phones allows stealthy eavesdropping",
       "link": "https://www.bleepingcomputer.com/news/security/flaw-in-grandstream-voip-phones-allows-stealthy-eavesdropping/",
@@ -134,13 +141,6 @@
       "pubDate": "2026-02-18T10:32:00.000Z",
       "description": "A maximum severity security vulnerability in Dell RecoverPoint for Virtual Machines has been exploited as a zero-day by a suspected China-nexus threat cluster dubbed UNC6201 since mid-2024, according to a new report from Google Mandiant and Google Threat Intelligence Group (GTIG). The activity invol",
       "source": "The Hacker News"
-    },
-    {
-      "title": "CISA: Hackers Exploiting Vulnerability in Product of Taiwan Security Firm TeamT5",
-      "link": "https://www.securityweek.com/cisa-hackers-exploiting-vulnerability-in-product-of-taiwan-security-firm-teamt5/",
-      "pubDate": "2026-02-18T10:26:03.000Z",
-      "description": "The vulnerability added to CISA’s KEV catalog affects ThreatSonar Anti-Ransomware and it was patched in 2024. The post CISA: Hackers Exploiting Vulnerability in Product of Taiwan Security Firm TeamT5 appeared first on SecurityWeek.",
-      "source": "SecurityWeek"
     }
   ]
 }
