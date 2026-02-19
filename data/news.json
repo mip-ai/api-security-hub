@@ -1,7 +1,14 @@
 {
-  "lastUpdated": "2026-02-19T06:16:40.434Z",
+  "lastUpdated": "2026-02-19T11:26:19.224Z",
   "itemCount": 20,
   "items": [
+    {
+      "title": "OpenClaw Security Issues Continue as SecureClaw Open Source Tool Debuts",
+      "link": "https://www.securityweek.com/openclaw-security-issues-continue-as-secureclaw-open-source-tool-debuts/",
+      "pubDate": "2026-02-19T11:00:00.000Z",
+      "description": "OpenClaw faces security vulnerabilities and misconfiguration risks despite rapid patches and its transition to an OpenAI-backed foundation. The post OpenClaw Security Issues Continue as SecureClaw Open Source Tool Debuts appeared first on SecurityWeek.",
+      "source": "SecurityWeek"
+    },
     {
       "title": "Critical infra Honeywell CCTVs vulnerable to auth bypass flaw",
       "link": "https://www.bleepingcomputer.com/news/security/critical-infra-honeywell-cctvs-vulnerable-to-auth-bypass-flaw/",
@@ -134,13 +141,6 @@
       "pubDate": "2026-02-17T16:00:04.000Z",
       "description": "The latest funding round was led by Sorenson Capital and brings the total investment to $45 million. The post VulnCheck Raises $25 Million in Series B Funding to Scale Vulnerability Intelligence appeared first on SecurityWeek.",
       "source": "SecurityWeek"
-    },
-    {
-      "title": "What 5 Million Apps Revealed About Secrets in JavaScript",
-      "link": "https://www.bleepingcomputer.com/news/security/what-5-million-apps-revealed-about-secrets-in-javascript/",
-      "pubDate": "2026-02-17T14:40:49.000Z",
-      "description": "Leaked API keys are nothing new, but the scale of the problem in front-end code has been largely a mystery - until now. Intruder's research team built a new secrets detection method and scanned 5 million applications specifically looking for secrets hidden in JavaScript bundles. Here's what we learn",
-      "source": "BleepingComputer"
     }
   ]
 }
