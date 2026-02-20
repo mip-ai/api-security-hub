@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-02-20T06:09:27.665Z",
+  "lastUpdated": "2026-02-20T11:04:06.053Z",
   "itemCount": 20,
   "items": [
     {
@@ -101,31 +101,10 @@
       "source": "BleepingComputer"
     },
     {
-      "title": "Microsoft: Anti-phishing rules mistakenly blocked emails, Teams messages",
-      "link": "https://www.bleepingcomputer.com/news/microsoft/microsoft-anti-phishing-rules-mistakenly-blocked-emails-teams-messages/",
-      "pubDate": "2026-02-18T16:26:53.000Z",
-      "description": "Microsoft says an Exchange Online issue that mistakenly quarantined legitimate emails last week was triggered by faulty heuristic detection rules designed to block credential phishing campaigns. [...]",
-      "source": "BleepingComputer"
-    },
-    {
       "title": "Cogent Security Raises $42 Million for AI-Driven Vulnerability Management",
       "link": "https://www.securityweek.com/cogent-security-raises-42-million-for-ai-driven-vulnerability-management/",
       "pubDate": "2026-02-18T14:47:07.000Z",
       "description": "The Series A funding round, led by Bain Capital, brings the total raised by Cogent to $53 million. The post Cogent Security Raises $42 Million for AI-Driven Vulnerability Management appeared first on SecurityWeek.",
-      "source": "SecurityWeek"
-    },
-    {
-      "title": "Data breach at fintech firm Figure affects nearly 1 million accounts",
-      "link": "https://www.bleepingcomputer.com/news/security/data-breach-at-fintech-firm-figure-affects-nearly-1-million-accounts/",
-      "pubDate": "2026-02-18T14:01:08.000Z",
-      "description": "Hackers have stolen the personal and contact information of nearly 1 million accounts after breaching the systems of Figure Technology Solutions, a self-described blockchain-native financial technology company. [...]",
-      "source": "BleepingComputer"
-    },
-    {
-      "title": "Vulnerabilities in Popular PDF Platforms Allowed Account Takeover, Data Exfiltration",
-      "link": "https://www.securityweek.com/vulnerabilities-in-popular-pdf-platforms-allowed-account-takeover-data-exfiltration/",
-      "pubDate": "2026-02-18T13:16:19.000Z",
-      "description": "Novee researchers discovered 16 vulnerabilities in Foxit and Apryse PDF tools that could have been exploited via malicious documents or URLs. The post Vulnerabilities in Popular PDF Platforms Allowed Account Takeover, Data Exfiltration appeared first on SecurityWeek.",
       "source": "SecurityWeek"
     },
     {
@@ -140,6 +119,27 @@
       "link": "https://thehackernews.com/2026/02/dell-recoverpoint-for-vms-zero-day-cve.html",
       "pubDate": "2026-02-18T10:32:00.000Z",
       "description": "A maximum severity security vulnerability in Dell RecoverPoint for Virtual Machines has been exploited as a zero-day by a suspected China-nexus threat cluster dubbed UNC6201 since mid-2024, according to a new report from Google Mandiant and Google Threat Intelligence Group (GTIG). The activity invol",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "Notepad++ Fixes Hijacked Update Mechanism Used to Deliver Targeted Malware",
+      "link": "https://thehackernews.com/2026/02/notepad-fixes-hijacked-update-mechanism.html",
+      "pubDate": "2026-02-18T07:40:00.000Z",
+      "description": "Notepad++ has released a security fix to plug gaps that were exploited by an advanced threat actor from China to hijack the software update mechanism to selectively deliver malware to targets of interest. The version 8.9.2 update incorporates what maintainer Don Ho calls a \"double lock\" design that ",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "CISA Flags Four Security Flaws Under Active Exploitation in Latest KEV Update",
+      "link": "https://thehackernews.com/2026/02/cisa-flags-four-security-flaws-under.html",
+      "pubDate": "2026-02-18T06:52:00.000Z",
+      "description": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Tuesday added four security flaws to its Known Exploited Vulnerabilities (KEV) catalog, citing evidence of active exploitation in the wild. The list of vulnerabilities is as follows - CVE-2026-2441 (CVSS score: 8.8) - A use-after-fr",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "Webinar: How Modern SOC Teams Use AI and Context to Investigate Cloud Breaches Faster",
+      "link": "https://thehackernews.com/2026/02/cloud-forensics-webinar-learn-how-ai.html",
+      "pubDate": "2026-02-17T19:08:00.000Z",
+      "description": "Cloud attacks move fast — faster than most incident response teams. In data centers, investigations had time. Teams could collect disk images, review logs, and build timelines over days. In the cloud, infrastructure is short-lived. A compromised instance can disappear in minutes. Identities rotate. ",
       "source": "The Hacker News"
     }
   ]
