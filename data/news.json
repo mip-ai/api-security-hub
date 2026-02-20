@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-02-20T17:07:50.675Z",
+  "lastUpdated": "2026-02-20T21:51:45.909Z",
   "itemCount": 20,
   "items": [
     {
@@ -101,13 +101,6 @@
       "source": "BleepingComputer"
     },
     {
-      "title": "Hackers target Microsoft Entra accounts in device code vishing attacks",
-      "link": "https://www.bleepingcomputer.com/news/security/hackers-target-microsoft-entra-accounts-in-device-code-vishing-attacks/",
-      "pubDate": "2026-02-19T12:30:37.000Z",
-      "description": "Threat actors are targeting technology, manufacturing, and financial organizations in campaigns that combine device code phishing and voice phishing (vishing) to abuse the OAuth 2.0 Device Authorization flow and compromise Microsoft Entra accounts. [...]",
-      "source": "BleepingComputer"
-    },
-    {
       "title": "Ivanti Exploitation Surges as Zero-Day Attacks Traced Back to July 2025",
       "link": "https://www.securityweek.com/ivanti-exploitation-surges-as-zero-day-attacks-traced-back-to-july-2025/",
       "pubDate": "2026-02-19T11:56:29.000Z",
@@ -140,6 +133,13 @@
       "link": "https://thehackernews.com/2026/02/dell-recoverpoint-for-vms-zero-day-cve.html",
       "pubDate": "2026-02-18T10:32:00.000Z",
       "description": "A maximum severity security vulnerability in Dell RecoverPoint for Virtual Machines has been exploited as a zero-day by a suspected China-nexus threat cluster dubbed UNC6201 since mid-2024, according to a new report from Google Mandiant and Google Threat Intelligence Group (GTIG). The activity invol",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "Notepad++ Fixes Hijacked Update Mechanism Used to Deliver Targeted Malware",
+      "link": "https://thehackernews.com/2026/02/notepad-fixes-hijacked-update-mechanism.html",
+      "pubDate": "2026-02-18T07:40:00.000Z",
+      "description": "Notepad++ has released a security fix to plug gaps that were exploited by an advanced threat actor from China to hijack the software update mechanism to selectively deliver malware to targets of interest. The version 8.9.2 update incorporates what maintainer Don Ho calls a \"double lock\" design that ",
       "source": "The Hacker News"
     }
   ]
