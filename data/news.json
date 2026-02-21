@@ -1,7 +1,28 @@
 {
-  "lastUpdated": "2026-02-21T05:32:23.393Z",
+  "lastUpdated": "2026-02-21T09:55:14.903Z",
   "itemCount": 20,
   "items": [
+    {
+      "title": "Anthropic Launches Claude Code Security for AI-Powered Vulnerability Scanning",
+      "link": "https://thehackernews.com/2026/02/anthropic-launches-claude-code-security.html",
+      "pubDate": "2026-02-21T07:58:00.000Z",
+      "description": "Artificial intelligence (AI) company Anthropic has begun to roll out a new security feature for Claude Code that can scan a user's software codebase for vulnerabilities and suggest patches. The capability, called Claude Code Security, is currently available in a limited research preview to Enterpris",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "CISA Adds Two Actively Exploited Roundcube Flaws to KEV Catalog",
+      "link": "https://thehackernews.com/2026/02/cisa-adds-two-actively-exploited.html",
+      "pubDate": "2026-02-21T07:21:00.000Z",
+      "description": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Friday added two security flaws impacting Roundcube webmail software to its Known Exploited Vulnerabilities (KEV) catalog, citing evidence of active exploitation. The vulnerabilities in question are listed below - CVE-2025-49113 (CV",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "EC-Council Expands AI Certification Portfolio to Strengthen U.S. AI Workforce Readiness and Security",
+      "link": "https://thehackernews.com/2026/02/ec-council-expands-ai-certification.html",
+      "pubDate": "2026-02-21T04:30:00.000Z",
+      "description": "With $5.5 trillion in global AI risk exposure and 700,000 U.S. workers needing reskilling, four new AI certifications and Certified CISO v4 help close the gap between AI adoption and workforce readiness. EC-Council, creator of the world-renowned Certified Ethical Hacker (CEH) credential and a global",
+      "source": "The Hacker News"
+    },
     {
       "title": "CISA: BeyondTrust RCE flaw now exploited in ransomware attacks",
       "link": "https://www.bleepingcomputer.com/news/security/cisa-beyondtrust-rce-flaw-now-exploited-in-ransomware-attacks/",
@@ -119,27 +140,6 @@
       "link": "https://thehackernews.com/2026/02/grandstream-gxp1600-voip-phones-exposed.html",
       "pubDate": "2026-02-18T16:35:00.000Z",
       "description": "Cybersecurity researchers have disclosed a critical security flaw in the Grandstream GXP1600 series of VoIP phones that could allow an attacker to seize control of susceptible devices. The vulnerability, tracked as CVE-2026-2329, carries a CVSS score of 9.3 out of a maximum of 10.0. It has been desc",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "Critical Flaws Found in Four VS Code Extensions with Over 125 Million Installs",
-      "link": "https://thehackernews.com/2026/02/critical-flaws-found-in-four-vs-code.html",
-      "pubDate": "2026-02-18T13:16:00.000Z",
-      "description": "Cybersecurity researchers have disclosed multiple security vulnerabilities in four popular Microsoft Visual Studio Code (VS Code) extensions that, if successfully exploited, could allow threat actors to steal local files and execute code remotely. The extensions, which have been collectively install",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "Dell RecoverPoint for VMs Zero-Day CVE-2026-22769 Exploited Since Mid-2024",
-      "link": "https://thehackernews.com/2026/02/dell-recoverpoint-for-vms-zero-day-cve.html",
-      "pubDate": "2026-02-18T10:32:00.000Z",
-      "description": "A maximum severity security vulnerability in Dell RecoverPoint for Virtual Machines has been exploited as a zero-day by a suspected China-nexus threat cluster dubbed UNC6201 since mid-2024, according to a new report from Google Mandiant and Google Threat Intelligence Group (GTIG). The activity invol",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "Notepad++ Fixes Hijacked Update Mechanism Used to Deliver Targeted Malware",
-      "link": "https://thehackernews.com/2026/02/notepad-fixes-hijacked-update-mechanism.html",
-      "pubDate": "2026-02-18T07:40:00.000Z",
-      "description": "Notepad++ has released a security fix to plug gaps that were exploited by an advanced threat actor from China to hijack the software update mechanism to selectively deliver malware to targets of interest. The version 8.9.2 update incorporates what maintainer Don Ho calls a \"double lock\" design that ",
       "source": "The Hacker News"
     }
   ]
