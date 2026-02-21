@@ -1,7 +1,21 @@
 {
-  "lastUpdated": "2026-02-21T09:55:14.903Z",
+  "lastUpdated": "2026-02-21T15:50:20.161Z",
   "itemCount": 20,
   "items": [
+    {
+      "title": "Amazon: AI-assisted hacker breached 600 FortiGate firewalls in 5 weeks",
+      "link": "https://www.bleepingcomputer.com/news/security/amazon-ai-assisted-hacker-breached-600-fortigate-firewalls-in-5-weeks/",
+      "pubDate": "2026-02-21T13:50:58.000Z",
+      "description": "Amazon is warning that a Russian-speaking hacker used multiple generative AI services as part of a campaign that breached more than 600 FortiGate firewalls across 55 countries in five weeks. [...]",
+      "source": "BleepingComputer"
+    },
+    {
+      "title": "Critical Grandstream Phone Vulnerability Exposes Calls to Interception",
+      "link": "https://www.securityweek.com/critical-grandstream-phone-vulnerability-exposes-calls-to-interception/",
+      "pubDate": "2026-02-21T12:00:00.000Z",
+      "description": "The flaw tracked as CVE-2026-2329 can be exploited without authentication for remote code execution with root privileges. The post Critical Grandstream Phone Vulnerability Exposes Calls to Interception appeared first on SecurityWeek.",
+      "source": "SecurityWeek"
+    },
     {
       "title": "Anthropic Launches Claude Code Security for AI-Powered Vulnerability Scanning",
       "link": "https://thehackernews.com/2026/02/anthropic-launches-claude-code-security.html",
@@ -112,20 +126,6 @@
       "link": "https://www.securityweek.com/nearly-1-million-user-records-compromised-in-figure-data-breach/",
       "pubDate": "2026-02-19T13:19:08.000Z",
       "description": "The blockchain-based lender has confirmed a data breach after ShinyHunters leaked over 2GB of data allegedly stolen from the company. The post Nearly 1 Million User Records Compromised in Figure Data Breach appeared first on SecurityWeek.",
-      "source": "SecurityWeek"
-    },
-    {
-      "title": "Texas sues TP-Link over Chinese hacking risks, user deception",
-      "link": "https://www.bleepingcomputer.com/news/security/texas-sues-tp-link-over-chinese-hacking-risks-user-deception/",
-      "pubDate": "2026-02-19T12:36:51.000Z",
-      "description": "Texas sued networking giant TP-Link Systems, accusing the company of deceptively marketing its routers as secure while allowing Chinese state-backed hackers to exploit firmware vulnerabilities and access users' devices. [...]",
-      "source": "BleepingComputer"
-    },
-    {
-      "title": "Ivanti Exploitation Surges as Zero-Day Attacks Traced Back to July 2025",
-      "link": "https://www.securityweek.com/ivanti-exploitation-surges-as-zero-day-attacks-traced-back-to-july-2025/",
-      "pubDate": "2026-02-19T11:56:29.000Z",
-      "description": "Security researchers have seen the vulnerabilities being exploited to deliver shells, conduct reconnaissance, and download malware. The post Ivanti Exploitation Surges as Zero-Day Attacks Traced Back to July 2025 appeared first on SecurityWeek.",
       "source": "SecurityWeek"
     },
     {
