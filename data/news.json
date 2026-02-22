@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-02-22T09:56:14.525Z",
+  "lastUpdated": "2026-02-22T15:52:28.093Z",
   "itemCount": 20,
   "items": [
     {
@@ -108,13 +108,6 @@
       "source": "BleepingComputer"
     },
     {
-      "title": "How infostealers turn stolen credentials into real identities",
-      "link": "https://www.bleepingcomputer.com/news/security/how-infostealers-turn-stolen-credentials-into-real-identities/",
-      "pubDate": "2026-02-19T15:05:15.000Z",
-      "description": "Infostealer dumps increasingly tie stolen credentials to real identities, linking usernames, cookies, and behavior across personal and enterprise accounts. Specops explains how analyzing 90,000 dumps shows reuse fuels enterprise risk and how continuous AD scanning disrupts that cycle. [...]",
-      "source": "BleepingComputer"
-    },
-    {
       "title": "French Government Says 1.2 Million Bank Accounts Exposed in Breach",
       "link": "https://www.securityweek.com/french-government-says-1-2-million-bank-accounts-exposed-in-breach/",
       "pubDate": "2026-02-19T15:02:58.000Z",
@@ -140,6 +133,13 @@
       "link": "https://thehackernews.com/2026/02/grandstream-gxp1600-voip-phones-exposed.html",
       "pubDate": "2026-02-18T16:35:00.000Z",
       "description": "Cybersecurity researchers have disclosed a critical security flaw in the Grandstream GXP1600 series of VoIP phones that could allow an attacker to seize control of susceptible devices. The vulnerability, tracked as CVE-2026-2329, carries a CVSS score of 9.3 out of a maximum of 10.0. It has been desc",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "Critical Flaws Found in Four VS Code Extensions with Over 125 Million Installs",
+      "link": "https://thehackernews.com/2026/02/critical-flaws-found-in-four-vs-code.html",
+      "pubDate": "2026-02-18T13:16:00.000Z",
+      "description": "Cybersecurity researchers have disclosed multiple security vulnerabilities in four popular Microsoft Visual Studio Code (VS Code) extensions that, if successfully exploited, could allow threat actors to steal local files and execute code remotely. The extensions, which have been collectively install",
       "source": "The Hacker News"
     }
   ]
