@@ -1,7 +1,28 @@
 {
-  "lastUpdated": "2026-02-23T06:45:40.884Z",
+  "lastUpdated": "2026-02-23T11:27:30.954Z",
   "itemCount": 20,
   "items": [
+    {
+      "title": "Recent RoundCube Webmail Vulnerability Exploited in Attacks",
+      "link": "https://www.securityweek.com/recent-roundcube-webmail-vulnerability-exploited-in-attacks/",
+      "pubDate": "2026-02-23T10:47:45.000Z",
+      "description": "Patched in December 2025, the exploited flaw leads to XSS attacks via the animate tags in SVG documents. The post Recent RoundCube Webmail Vulnerability Exploited in Attacks appeared first on SecurityWeek.",
+      "source": "SecurityWeek"
+    },
+    {
+      "title": "Malicious npm Packages Harvest Crypto Keys, CI Secrets, and API Tokens",
+      "link": "https://thehackernews.com/2026/02/malicious-npm-packages-harvest-crypto.html",
+      "pubDate": "2026-02-23T10:20:00.000Z",
+      "description": "Cybersecurity researchers have disclosed what they say is an active \"Shai-Hulud-like\" supply chain worm campaign that has leveraged a cluster of at least 19 malicious npm packages to enable credential harvesting and cryptocurrency key theft. The campaign has been codenamed SANDWORM_MODE by supply ch",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "PayPal Data Breach Led to Fraudulent Transactions",
+      "link": "https://www.securityweek.com/paypal-data-breach-led-to-fraudulent-transactions/",
+      "pubDate": "2026-02-23T09:13:25.000Z",
+      "description": "PayPal blamed an application error for the exposure of customer personal information for nearly 6 months. The post PayPal Data Breach Led to Fraudulent Transactions appeared first on SecurityWeek.",
+      "source": "SecurityWeek"
+    },
     {
       "title": "Amazon: AI-assisted hacker breached 600 Fortinet firewalls in 5 weeks",
       "link": "https://www.bleepingcomputer.com/news/security/amazon-ai-assisted-hacker-breached-600-fortigate-firewalls-in-5-weeks/",
@@ -108,20 +129,6 @@
       "source": "BleepingComputer"
     },
     {
-      "title": "French Government Says 1.2 Million Bank Accounts Exposed in Breach",
-      "link": "https://www.securityweek.com/french-government-says-1-2-million-bank-accounts-exposed-in-breach/",
-      "pubDate": "2026-02-19T15:02:58.000Z",
-      "description": "The Ministry of Economy reported discovering unauthorized access to the national bank account registry FICOBA. The post French Government Says 1.2 Million Bank Accounts Exposed in Breach appeared first on SecurityWeek.",
-      "source": "SecurityWeek"
-    },
-    {
-      "title": "Nearly 1 Million User Records Compromised in Figure Data Breach",
-      "link": "https://www.securityweek.com/nearly-1-million-user-records-compromised-in-figure-data-breach/",
-      "pubDate": "2026-02-19T13:19:08.000Z",
-      "description": "The blockchain-based lender has confirmed a data breach after ShinyHunters leaked over 2GB of data allegedly stolen from the company. The post Nearly 1 Million User Records Compromised in Figure Data Breach appeared first on SecurityWeek.",
-      "source": "SecurityWeek"
-    },
-    {
       "title": "From Exposure to Exploitation: How AI Collapses Your Response Window",
       "link": "https://thehackernews.com/2026/02/from-exposure-to-exploitation-how-ai.html",
       "pubDate": "2026-02-19T11:55:00.000Z",
@@ -133,13 +140,6 @@
       "link": "https://thehackernews.com/2026/02/grandstream-gxp1600-voip-phones-exposed.html",
       "pubDate": "2026-02-18T16:35:00.000Z",
       "description": "Cybersecurity researchers have disclosed a critical security flaw in the Grandstream GXP1600 series of VoIP phones that could allow an attacker to seize control of susceptible devices. The vulnerability, tracked as CVE-2026-2329, carries a CVSS score of 9.3 out of a maximum of 10.0. It has been desc",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "Critical Flaws Found in Four VS Code Extensions with Over 125 Million Installs",
-      "link": "https://thehackernews.com/2026/02/critical-flaws-found-in-four-vs-code.html",
-      "pubDate": "2026-02-18T13:16:00.000Z",
-      "description": "Cybersecurity researchers have disclosed multiple security vulnerabilities in four popular Microsoft Visual Studio Code (VS Code) extensions that, if successfully exploited, could allow threat actors to steal local files and execute code remotely. The extensions, which have been collectively install",
       "source": "The Hacker News"
     }
   ]
