@@ -1,7 +1,21 @@
 {
-  "lastUpdated": "2026-02-23T18:14:18.355Z",
+  "lastUpdated": "2026-02-23T23:09:05.491Z",
   "itemCount": 20,
   "items": [
+    {
+      "title": "Android mental health apps with 14.7M installs filled with security flaws",
+      "link": "https://www.bleepingcomputer.com/news/security/android-mental-health-apps-with-147m-installs-filled-with-security-flaws/",
+      "pubDate": "2026-02-23T22:59:04.000Z",
+      "description": "Several mental health mobile apps with millions of downloads on Google Play contain security vulnerabilities that could expose users' sensitive medical information. [...]",
+      "source": "BleepingComputer"
+    },
+    {
+      "title": "APT28 Targeted European Entities Using Webhook-Based Macro Malware",
+      "link": "https://thehackernews.com/2026/02/apt28-targeted-european-entities-using.html",
+      "pubDate": "2026-02-23T19:41:00.000Z",
+      "description": "The Russia-linked state-sponsored threat actor tracked as APT28 has been attributed to a new campaign targeting specific entities in Western and Central Europe. The activity, per S2 Grupo's LAB52 threat intelligence team, was active between September 2025 and January 2026. It has been codenamed Oper",
+      "source": "The Hacker News"
+    },
     {
       "title": "Ad tech firm Optimizely confirms data breach after vishing attack",
       "link": "https://www.bleepingcomputer.com/news/security/ad-tech-firm-optimizely-confirms-data-breach-after-vishing-attack/",
@@ -126,20 +140,6 @@
       "link": "https://thehackernews.com/2026/02/beyondtrust-flaw-used-for-web-shells.html",
       "pubDate": "2026-02-20T15:45:00.000Z",
       "description": "Threat actors have been observed exploiting a recently disclosed critical security flaw impacting BeyondTrust Remote Support (RS) and Privileged Remote Access (PRA) products to conduct a wide range of malicious actions, including deploying VShell and The vulnerability, tracked as CVE-2026-1731 (CVSS",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "PayPal discloses data breach that exposed user info for 6 months",
-      "link": "https://www.bleepingcomputer.com/news/security/paypal-discloses-data-breach-exposing-users-personal-information/",
-      "pubDate": "2026-02-20T13:12:01.000Z",
-      "description": "PayPal is notifying customers of a data breach after a software error in a loan application exposed their sensitive personal information, including Social Security numbers, for nearly 6 months last year. [...]",
-      "source": "BleepingComputer"
-    },
-    {
-      "title": "Identity Cyber Scores: The New Metric Shaping Cyber Insurance in 2026",
-      "link": "https://thehackernews.com/2026/02/identity-cyber-scores-new-metric.html",
-      "pubDate": "2026-02-20T10:30:00.000Z",
-      "description": "With one in three cyber-attacks now involving compromised employee accounts, insurers and regulators are placing far greater emphasis on identity posture when assessing cyber risk. For many organizations, however, these assessments remain largely opaque. Elements such as password hygiene, privileged",
       "source": "The Hacker News"
     }
   ]
