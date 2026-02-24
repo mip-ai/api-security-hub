@@ -1,7 +1,42 @@
 {
-  "lastUpdated": "2026-02-24T11:27:41.681Z",
+  "lastUpdated": "2026-02-24T18:10:33.645Z",
   "itemCount": 20,
   "items": [
+    {
+      "title": "CarGurus data breach exposes information of 12.4 million accounts",
+      "link": "https://www.bleepingcomputer.com/news/security/cargurus-data-breach-exposes-information-of-124-million-accounts/",
+      "pubDate": "2026-02-24T18:08:20.000Z",
+      "description": "The ShinyHunters extortion group has published personal information in more than 12 million records allegedly stolen from CarGurus, a U.S.-based digital auto platform. [...]",
+      "source": "BleepingComputer"
+    },
+    {
+      "title": "Identity-First AI Security: Why CISOs Must Add Intent to the Equation",
+      "link": "https://www.bleepingcomputer.com/news/security/identity-first-ai-security-why-cisos-must-add-intent-to-the-equation/",
+      "pubDate": "2026-02-24T15:02:12.000Z",
+      "description": "AI agents now provision infrastructure and approve actions, but many inherit over-scoped privileges without proper governance. Token Security explains why CISOs must treat agents as identities and add intent-based controls so access is granted only when purpose and context align. [...]",
+      "source": "BleepingComputer"
+    },
+    {
+      "title": "VMware Aria Operations Vulnerability Could Allow Remote Code Execution",
+      "link": "https://www.securityweek.com/vmware-aria-operations-vulnerability-could-allow-remote-code-execution/",
+      "pubDate": "2026-02-24T14:30:00.000Z",
+      "description": "Broadcom has patched several vulnerabilities in VMware Aria Operations, including high-severity flaws. The post VMware Aria Operations Vulnerability Could Allow Remote Code Execution appeared first on SecurityWeek.",
+      "source": "SecurityWeek"
+    },
+    {
+      "title": "Taiwan Security Firm Confirms Flaw Flagged by CISA Likely Exploited by Chinese APTs",
+      "link": "https://www.securityweek.com/taiwan-security-firm-confirms-flaw-flagged-by-cisa-likely-exploited-by-chinese-apt/",
+      "pubDate": "2026-02-24T12:00:51.000Z",
+      "description": "The vulnerability in TeamT5 ThreatSonar Anti-Ransomware was recently added to CISA’s KEV catalog. The post Taiwan Security Firm Confirms Flaw Flagged by CISA Likely Exploited by Chinese APTs appeared first on SecurityWeek.",
+      "source": "SecurityWeek"
+    },
+    {
+      "title": "ShinyHunters extortion gang claims Odido breach affecting millions",
+      "link": "https://www.bleepingcomputer.com/news/security/shinyhunters-extortion-gang-claims-odido-breach-affecting-millions/",
+      "pubDate": "2026-02-24T11:40:20.000Z",
+      "description": "The ShinyHunters extortion gang has claimed responsibility for breaching Dutch telecommunications provider Odido and stealing millions of user records from its compromised systems. [...]",
+      "source": "BleepingComputer"
+    },
     {
       "title": "Android mental health apps with 14.7M installs filled with security flaws",
       "link": "https://www.bleepingcomputer.com/news/security/android-mental-health-apps-with-147m-installs-filled-with-security-flaws/",
@@ -59,46 +94,11 @@
       "source": "BleepingComputer"
     },
     {
-      "title": "Hundreds of FortiGate Firewalls Hacked in AI-Powered Attacks: AWS",
-      "link": "https://www.securityweek.com/hundreds-of-fortigate-firewalls-hacked-in-ai-powered-attacks-aws/",
-      "pubDate": "2026-02-23T11:34:35.000Z",
-      "description": "Threat actors relying on AI have been exploiting exposed ports and weak credentials to take over FortiGate devices. The post Hundreds of FortiGate Firewalls Hacked in AI-Powered Attacks: AWS appeared first on SecurityWeek.",
-      "source": "SecurityWeek"
-    },
-    {
-      "title": "Recent RoundCube Webmail Vulnerability Exploited in Attacks",
-      "link": "https://www.securityweek.com/recent-roundcube-webmail-vulnerability-exploited-in-attacks/",
-      "pubDate": "2026-02-23T10:47:45.000Z",
-      "description": "Patched in December 2025, the exploited flaw leads to XSS attacks via the animate tags in SVG documents. The post Recent RoundCube Webmail Vulnerability Exploited in Attacks appeared first on SecurityWeek.",
-      "source": "SecurityWeek"
-    },
-    {
       "title": "Malicious npm Packages Harvest Crypto Keys, CI Secrets, and API Tokens",
       "link": "https://thehackernews.com/2026/02/malicious-npm-packages-harvest-crypto.html",
       "pubDate": "2026-02-23T10:20:00.000Z",
       "description": "Cybersecurity researchers have disclosed what they say is an active \"Shai-Hulud-like\" supply chain worm campaign that has leveraged a cluster of at least 19 malicious npm packages to enable credential harvesting and cryptocurrency key theft. The campaign has been codenamed SANDWORM_MODE by supply ch",
       "source": "The Hacker News"
-    },
-    {
-      "title": "PayPal Data Breach Led to Fraudulent Transactions",
-      "link": "https://www.securityweek.com/paypal-data-breach-led-to-fraudulent-transactions/",
-      "pubDate": "2026-02-23T09:13:25.000Z",
-      "description": "PayPal blamed an application error for the exposure of customer personal information for nearly 6 months. The post PayPal Data Breach Led to Fraudulent Transactions appeared first on SecurityWeek.",
-      "source": "SecurityWeek"
-    },
-    {
-      "title": "Amazon: AI-assisted hacker breached 600 Fortinet firewalls in 5 weeks",
-      "link": "https://www.bleepingcomputer.com/news/security/amazon-ai-assisted-hacker-breached-600-fortigate-firewalls-in-5-weeks/",
-      "pubDate": "2026-02-21T13:50:58.000Z",
-      "description": "Amazon is warning that a Russian-speaking hacker used multiple generative AI services as part of a campaign that breached more than 600 FortiGate firewalls across 55 countries in five weeks. [...]",
-      "source": "BleepingComputer"
-    },
-    {
-      "title": "Critical Grandstream Phone Vulnerability Exposes Calls to Interception",
-      "link": "https://www.securityweek.com/critical-grandstream-phone-vulnerability-exposes-calls-to-interception/",
-      "pubDate": "2026-02-21T12:00:00.000Z",
-      "description": "The flaw tracked as CVE-2026-2329 can be exploited without authentication for remote code execution with root privileges. The post Critical Grandstream Phone Vulnerability Exposes Calls to Interception appeared first on SecurityWeek.",
-      "source": "SecurityWeek"
     },
     {
       "title": "Anthropic Launches Claude Code Security for AI-Powered Vulnerability Scanning",
@@ -122,24 +122,24 @@
       "source": "The Hacker News"
     },
     {
-      "title": "CISA: BeyondTrust RCE flaw now exploited in ransomware attacks",
-      "link": "https://www.bleepingcomputer.com/news/security/cisa-beyondtrust-rce-flaw-now-exploited-in-ransomware-attacks/",
-      "pubDate": "2026-02-20T17:02:25.000Z",
-      "description": "Hackers are actively exploiting the CVE-2026-1731 vulnerability in the BeyondTrust Remote Support product, the U.S. Cybersecurity and Infrastructure Security Agency (CISA) warns. [...]",
-      "source": "BleepingComputer"
-    },
-    {
-      "title": "Data breach at French bank registry impacts 1.2 million accounts",
-      "link": "https://www.bleepingcomputer.com/news/security/data-breach-at-french-bank-registry-impacts-12-million-accounts/",
-      "pubDate": "2026-02-20T16:20:40.000Z",
-      "description": "The French Ministry of Finance has published an announcement informing of a cybersecurity incident that has impacted 1.2 million accounts. [...]",
-      "source": "BleepingComputer"
-    },
-    {
       "title": "BeyondTrust Flaw Used for Web Shells, Backdoors, and Data Exfiltration",
       "link": "https://thehackernews.com/2026/02/beyondtrust-flaw-used-for-web-shells.html",
       "pubDate": "2026-02-20T15:45:00.000Z",
       "description": "Threat actors have been observed exploiting a recently disclosed critical security flaw impacting BeyondTrust Remote Support (RS) and Privileged Remote Access (PRA) products to conduct a wide range of malicious actions, including deploying VShell and The vulnerability, tracked as CVE-2026-1731 (CVSS",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "Identity Cyber Scores: The New Metric Shaping Cyber Insurance in 2026",
+      "link": "https://thehackernews.com/2026/02/identity-cyber-scores-new-metric.html",
+      "pubDate": "2026-02-20T10:30:00.000Z",
+      "description": "With one in three cyber-attacks now involving compromised employee accounts, insurers and regulators are placing far greater emphasis on identity posture when assessing cyber risk. For many organizations, however, these assessments remain largely opaque. Elements such as password hygiene, privileged",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "Microsoft Patches CVE-2026-26119 Privilege Escalation in Windows Admin Center",
+      "link": "https://thehackernews.com/2026/02/microsoft-patches-cve-2026-26119.html",
+      "pubDate": "2026-02-19T17:40:00.000Z",
+      "description": "Microsoft has disclosed a now-patched security flaw in Windows Admin Center that could allow an attacker to escalate their privileges. Windows Admin Center is a locally deployed, browser-based management tool set that lets users manage their Windows Clients, Servers, and Clusters without the need fo",
       "source": "The Hacker News"
     }
   ]
