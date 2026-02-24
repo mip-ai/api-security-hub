@@ -1,7 +1,21 @@
 {
-  "lastUpdated": "2026-02-24T18:10:33.645Z",
+  "lastUpdated": "2026-02-24T22:03:40.789Z",
   "itemCount": 20,
   "items": [
+    {
+      "title": "Wynn Resorts confirms employee data breach after extortion threat",
+      "link": "https://www.bleepingcomputer.com/news/security/wynn-resorts-confirms-employee-data-breach-after-extortion-threat/",
+      "pubDate": "2026-02-24T21:51:20.000Z",
+      "description": "Wynn Resorts has confirmed that a hacker stole employee data from its systems after the company was listed on the ShinyHunters extortion gang's data leak site. [...]",
+      "source": "BleepingComputer"
+    },
+    {
+      "title": "RoguePilot Flaw in GitHub Codespaces Enabled Copilot to Leak GITHUB_TOKEN",
+      "link": "https://thehackernews.com/2026/02/roguepilot-flaw-in-github-codespaces.html",
+      "pubDate": "2026-02-24T18:52:00.000Z",
+      "description": "A vulnerability in GitHub Codespaces could have been exploited by bad actors to seize control of repositories by injecting malicious Copilot instructions in a GitHub issue. The artificial intelligence (AI)-driven vulnerability has been codenamed RoguePilot by Orca Security. It has since been patched",
+      "source": "The Hacker News"
+    },
     {
       "title": "CarGurus data breach exposes information of 12.4 million accounts",
       "link": "https://www.bleepingcomputer.com/news/security/cargurus-data-breach-exposes-information-of-124-million-accounts/",
@@ -126,20 +140,6 @@
       "link": "https://thehackernews.com/2026/02/beyondtrust-flaw-used-for-web-shells.html",
       "pubDate": "2026-02-20T15:45:00.000Z",
       "description": "Threat actors have been observed exploiting a recently disclosed critical security flaw impacting BeyondTrust Remote Support (RS) and Privileged Remote Access (PRA) products to conduct a wide range of malicious actions, including deploying VShell and The vulnerability, tracked as CVE-2026-1731 (CVSS",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "Identity Cyber Scores: The New Metric Shaping Cyber Insurance in 2026",
-      "link": "https://thehackernews.com/2026/02/identity-cyber-scores-new-metric.html",
-      "pubDate": "2026-02-20T10:30:00.000Z",
-      "description": "With one in three cyber-attacks now involving compromised employee accounts, insurers and regulators are placing far greater emphasis on identity posture when assessing cyber risk. For many organizations, however, these assessments remain largely opaque. Elements such as password hygiene, privileged",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "Microsoft Patches CVE-2026-26119 Privilege Escalation in Windows Admin Center",
-      "link": "https://thehackernews.com/2026/02/microsoft-patches-cve-2026-26119.html",
-      "pubDate": "2026-02-19T17:40:00.000Z",
-      "description": "Microsoft has disclosed a now-patched security flaw in Windows Admin Center that could allow an attacker to escalate their privileges. Windows Admin Center is a locally deployed, browser-based management tool set that lets users manage their Windows Clients, Servers, and Clusters without the need fo",
       "source": "The Hacker News"
     }
   ]
