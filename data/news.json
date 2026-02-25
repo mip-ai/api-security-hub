@@ -1,20 +1,90 @@
 {
-  "lastUpdated": "2026-02-25T11:31:53.592Z",
+  "lastUpdated": "2026-02-25T18:16:31.520Z",
   "itemCount": 20,
   "items": [
+    {
+      "title": "Critical Cisco SD-WAN bug exploited in zero-day attacks since 2023",
+      "link": "https://www.bleepingcomputer.com/news/security/critical-cisco-sd-wan-bug-exploited-in-zero-day-attacks-since-2023/",
+      "pubDate": "2026-02-25T18:01:51.000Z",
+      "description": "Cisco is warning that a critical authentication bypass vulnerability in Cisco Catalyst SD-WAN, tracked as CVE-2026-20127, was actively exploited in zero-day attacks that allowed remote attackers to compromise controllers and add malicious rogue peers to targeted networks. [...]",
+      "source": "BleepingComputer"
+    },
+    {
+      "title": "Chinese cyberspies breached dozens of telecom firms, govt agencies",
+      "link": "https://www.bleepingcomputer.com/news/security/chinese-cyberspies-breached-dozens-of-telecom-firms-govt-agencies/",
+      "pubDate": "2026-02-25T17:00:15.000Z",
+      "description": "Google's Threat Intelligence Group (GTIG), Mandiant, and partners disrupted a global espionage campaign attributed to a suspected Chinese threat actor that used SaaS API calls to hide malicious traffic in attacks targeting telecom and government networks. [...]",
+      "source": "BleepingComputer"
+    },
+    {
+      "title": "Claude Code Flaws Allow Remote Code Execution and API Key Exfiltration",
+      "link": "https://thehackernews.com/2026/02/claude-code-flaws-allow-remote-code.html",
+      "pubDate": "2026-02-25T17:00:00.000Z",
+      "description": "Cybersecurity researchers have disclosed multiple security vulnerabilities in Anthropic's Claude Code, an artificial intelligence (AI)-powered coding assistant, that could result in remote code execution and theft of API credentials. \"The vulnerabilities exploit various configuration mechanisms, inc",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "The Blast Radius Problem: Stolen Credentials Are Weaponizing Agentic AI",
+      "link": "https://www.securityweek.com/the-blast-radius-problem-stolen-credentials-are-weaponizing-agentic-ai/",
+      "pubDate": "2026-02-25T16:16:40.000Z",
+      "description": "More than half (56%) of the 400,000 vulnerabilities IBM X-Force tracked in 2025 required no authentication before exploitation. The post The Blast Radius Problem: Stolen Credentials Are Weaponizing Agentic AI appeared first on SecurityWeek.",
+      "source": "SecurityWeek"
+    },
+    {
+      "title": "Marquis sues SonicWall over backup breach that led to ransomware attack",
+      "link": "https://www.bleepingcomputer.com/news/security/marquis-sues-sonicwall-over-backup-breach-that-led-to-ransomware-attack/",
+      "pubDate": "2026-02-25T15:54:44.000Z",
+      "description": "Marquis Software Solutions has filed a lawsuit against SonicWall, accusing the cybersecurity company of gross negligence and misrepresentation that allegedly led to a ransomware attack disrupting operations at 74 U.S. banks. [...]",
+      "source": "BleepingComputer"
+    },
+    {
+      "title": "SolarWinds Patches Four Critical Serv-U Vulnerabilities",
+      "link": "https://www.securityweek.com/solarwinds-patches-four-critical-serv-u-vulnerabilities/",
+      "pubDate": "2026-02-25T15:30:00.000Z",
+      "description": "The four security defects could be exploited for remote code execution but require administrative privileges. The post SolarWinds Patches Four Critical Serv-U Vulnerabilities appeared first on SecurityWeek.",
+      "source": "SecurityWeek"
+    },
+    {
+      "title": "The OpenClaw Hype: Analysis of Chatter from Open-Source Deep and Dark Web",
+      "link": "https://www.bleepingcomputer.com/news/security/the-openclaw-hype-analysis-of-chatter-from-open-source-deep-and-dark-web/",
+      "pubDate": "2026-02-25T15:01:11.000Z",
+      "description": "OpenClaw has sparked heavy Telegram and dark web chatter, but Flare's data shows more research hype than mass exploitation. Flare explains how its telemetry found real supply-chain risk in the skills marketplace, yet limited signs of large-scale criminal operationalization. [...]",
+      "source": "BleepingComputer"
+    },
+    {
+      "title": "Ex-US Defense Contractor Executive Jailed for Selling Exploits to Russia",
+      "link": "https://www.securityweek.com/ex-us-defense-contractor-executive-jailed-for-selling-exploits-to-russia/",
+      "pubDate": "2026-02-25T12:59:30.000Z",
+      "description": "Peter Williams was sentenced to 87 months in prison for selling cyber exploits to a Russian broker. The post Ex-US Defense Contractor Executive Jailed for Selling Exploits to Russia appeared first on SecurityWeek.",
+      "source": "SecurityWeek"
+    },
+    {
+      "title": "Zyxel warns of critical RCE flaw affecting over a dozen routers",
+      "link": "https://www.bleepingcomputer.com/news/security/zyxel-warns-of-critical-rce-flaw-affecting-over-a-dozen-routers/",
+      "pubDate": "2026-02-25T12:53:02.000Z",
+      "description": "Taiwan networking provider Zyxel has released security updates to address a critical vulnerability affecting over a dozen router models that can allow unauthenticated attackers to gain remote command execution on unpatched devices. [...]",
+      "source": "BleepingComputer"
+    },
+    {
+      "title": "Over 12 Million Users Impacted by CarGurus Data Breach",
+      "link": "https://www.securityweek.com/over-12-million-users-impacted-by-cargurus-data-breach/",
+      "pubDate": "2026-02-25T12:30:00.000Z",
+      "description": "Hackers claim to have stolen personally identifiable information and internal corporate data from the automotive firm. The post Over 12 Million Users Impacted by CarGurus Data Breach appeared first on SecurityWeek.",
+      "source": "SecurityWeek"
+    },
+    {
+      "title": "Wynn Resorts Confirms Data Breach After Hackers Remove It From Leak Site",
+      "link": "https://www.securityweek.com/wynn-resorts-confirms-data-breach-after-hackers-remove-it-from-leak-site/",
+      "pubDate": "2026-02-25T11:35:48.000Z",
+      "description": "The high-end casino and hotel operator has admitted that employee data was stolen by ShinyHunters. The post Wynn Resorts Confirms Data Breach After Hackers Remove It From Leak Site appeared first on SecurityWeek.",
+      "source": "SecurityWeek"
+    },
     {
       "title": "US sanctions Russian broker for buying stolen zero-day exploits",
       "link": "https://www.bleepingcomputer.com/news/security/us-sanctions-russian-exploit-broker-for-buying-stolen-zero-days/",
       "pubDate": "2026-02-25T10:31:13.000Z",
       "description": "The U.S. Treasury Department has sanctioned a Russian exploit broker who bought stolen hacking tools from a former executive of a U.S. defense contractor. [...]",
       "source": "BleepingComputer"
-    },
-    {
-      "title": "Claude&#8217;s New AI Vulnerability Scanner Sends Cybersecurity Shares Plunging",
-      "link": "https://www.securityweek.com/claudes-new-ai-vulnerability-scanner-sends-cybersecurity-shares-plunging/",
-      "pubDate": "2026-02-25T09:44:02.000Z",
-      "description": "The stocks of major cybersecurity companies have fallen sharply over fears that AI is disrupting the industry. The post Claude&#8217;s New AI Vulnerability Scanner Sends Cybersecurity Shares Plunging appeared first on SecurityWeek.",
-      "source": "SecurityWeek"
     },
     {
       "title": "Defense Contractor Employee Jailed for Selling 8 Zero-Days to Russian Broker",
@@ -71,76 +141,6 @@
       "pubDate": "2026-02-24T18:08:20.000Z",
       "description": "The ShinyHunters extortion group has published personal information in more than 12 million records allegedly stolen from CarGurus, a U.S.-based digital auto platform. [...]",
       "source": "BleepingComputer"
-    },
-    {
-      "title": "Identity-First AI Security: Why CISOs Must Add Intent to the Equation",
-      "link": "https://www.bleepingcomputer.com/news/security/identity-first-ai-security-why-cisos-must-add-intent-to-the-equation/",
-      "pubDate": "2026-02-24T15:02:12.000Z",
-      "description": "AI agents now provision infrastructure and approve actions, but many inherit over-scoped privileges without proper governance. Token Security explains why CISOs must treat agents as identities and add intent-based controls so access is granted only when purpose and context align. [...]",
-      "source": "BleepingComputer"
-    },
-    {
-      "title": "VMware Aria Operations Vulnerability Could Allow Remote Code Execution",
-      "link": "https://www.securityweek.com/vmware-aria-operations-vulnerability-could-allow-remote-code-execution/",
-      "pubDate": "2026-02-24T14:30:00.000Z",
-      "description": "Broadcom has patched several vulnerabilities in VMware Aria Operations, including high-severity flaws. The post VMware Aria Operations Vulnerability Could Allow Remote Code Execution appeared first on SecurityWeek.",
-      "source": "SecurityWeek"
-    },
-    {
-      "title": "Taiwan Security Firm Confirms Flaw Flagged by CISA Likely Exploited by Chinese APTs",
-      "link": "https://www.securityweek.com/taiwan-security-firm-confirms-flaw-flagged-by-cisa-likely-exploited-by-chinese-apt/",
-      "pubDate": "2026-02-24T12:00:51.000Z",
-      "description": "The vulnerability in TeamT5 ThreatSonar Anti-Ransomware was recently added to CISA’s KEV catalog. The post Taiwan Security Firm Confirms Flaw Flagged by CISA Likely Exploited by Chinese APTs appeared first on SecurityWeek.",
-      "source": "SecurityWeek"
-    },
-    {
-      "title": "ShinyHunters extortion gang claims Odido breach affecting millions",
-      "link": "https://www.bleepingcomputer.com/news/security/shinyhunters-extortion-gang-claims-odido-breach-affecting-millions/",
-      "pubDate": "2026-02-24T11:40:20.000Z",
-      "description": "The ShinyHunters extortion gang has claimed responsibility for breaching Dutch telecommunications provider Odido and stealing millions of user records from its compromised systems. [...]",
-      "source": "BleepingComputer"
-    },
-    {
-      "title": "Android mental health apps with 14.7M installs filled with security flaws",
-      "link": "https://www.bleepingcomputer.com/news/security/android-mental-health-apps-with-147m-installs-filled-with-security-flaws/",
-      "pubDate": "2026-02-23T22:59:04.000Z",
-      "description": "Several mental health mobile apps with millions of downloads on Google Play contain security vulnerabilities that could expose users' sensitive medical information. [...]",
-      "source": "BleepingComputer"
-    },
-    {
-      "title": "APT28 Targeted European Entities Using Webhook-Based Macro Malware",
-      "link": "https://thehackernews.com/2026/02/apt28-targeted-european-entities-using.html",
-      "pubDate": "2026-02-23T19:41:00.000Z",
-      "description": "The Russia-linked state-sponsored threat actor tracked as APT28 has been attributed to a new campaign targeting specific entities in Western and Central Europe. The activity, per S2 Grupo's LAB52 threat intelligence team, was active between September 2025 and January 2026. It has been codenamed Oper",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "Wormable XMRig Campaign Uses BYOVD Exploit and Time-Based Logic Bomb",
-      "link": "https://thehackernews.com/2026/02/wormable-xmrig-campaign-uses-byovd.html",
-      "pubDate": "2026-02-23T17:59:00.000Z",
-      "description": "Cybersecurity researchers have disclosed details of a new cryptojacking campaign that uses pirated software bundles as lures to deploy a bespoke XMRig miner program on compromised hosts. \"Analysis of the recovered dropper, persistence triggers, and mining payload reveals a sophisticated, multi-stage",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "How Exposed Endpoints Increase Risk Across LLM Infrastructure",
-      "link": "https://thehackernews.com/2026/02/how-exposed-endpoints-increase-risk.html",
-      "pubDate": "2026-02-23T11:58:00.000Z",
-      "description": "As more organizations run their own Large Language Models (LLMs), they are also deploying more internal services and Application Programming Interfaces (APIs) to support those models. Modern security risks are being introduced less from the models themselves and more from the infrastructure that ser",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "Malicious npm Packages Harvest Crypto Keys, CI Secrets, and API Tokens",
-      "link": "https://thehackernews.com/2026/02/malicious-npm-packages-harvest-crypto.html",
-      "pubDate": "2026-02-23T10:20:00.000Z",
-      "description": "Cybersecurity researchers have disclosed what they say is an active \"Shai-Hulud-like\" supply chain worm campaign that has leveraged a cluster of at least 19 malicious npm packages to enable credential harvesting and cryptocurrency key theft. The campaign has been codenamed SANDWORM_MODE by supply ch",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "Anthropic Launches Claude Code Security for AI-Powered Vulnerability Scanning",
-      "link": "https://thehackernews.com/2026/02/anthropic-launches-claude-code-security.html",
-      "pubDate": "2026-02-21T07:58:00.000Z",
-      "description": "Artificial intelligence (AI) company Anthropic has begun to roll out a new security feature for Claude Code that can scan a user's software codebase for vulnerabilities and suggest patches. The capability, called Claude Code Security, is currently available in a limited research preview to Enterpris",
-      "source": "The Hacker News"
     }
   ]
 }
