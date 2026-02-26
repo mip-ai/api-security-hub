@@ -1,7 +1,42 @@
 {
-  "lastUpdated": "2026-02-26T06:13:51.033Z",
+  "lastUpdated": "2026-02-26T11:27:45.293Z",
   "itemCount": 20,
   "items": [
+    {
+      "title": "US Sanctions Russian Exploit Broker Operation Zero",
+      "link": "https://www.securityweek.com/us-sanctions-russian-exploit-broker-operation-zero/",
+      "pubDate": "2026-02-26T10:33:53.000Z",
+      "description": "The broker acquired eight zero-day exploits from a US defense contractor executive jailed for his actions. The post US Sanctions Russian Exploit Broker Operation Zero appeared first on SecurityWeek.",
+      "source": "SecurityWeek"
+    },
+    {
+      "title": "Malicious StripeApi NuGet Package Mimicked Official Library and Stole API Tokens",
+      "link": "https://thehackernews.com/2026/02/malicious-stripeapi-nuget-package.html",
+      "pubDate": "2026-02-26T10:09:00.000Z",
+      "description": "Cybersecurity researchers have disclosed details of a new malicious package discovered on the NuGet Gallery, impersonating a library from financial services firm Stripe in an attempt to target the financial sector. The package, codenamed StripeApi.Net, attempts to masquerade as Stripe.net, a legitim",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "Trend Micro Patches Critical Apex One Vulnerabilities",
+      "link": "https://www.securityweek.com/trend-micro-patches-critical-apex-one-vulnerabilities/",
+      "pubDate": "2026-02-26T09:56:46.000Z",
+      "description": "TrendAI has fixed eight critical and high-severity issues in Windows and macOS endpoint security products. The post Trend Micro Patches Critical Apex One Vulnerabilities appeared first on SecurityWeek.",
+      "source": "SecurityWeek"
+    },
+    {
+      "title": "Cisco Patches Catalyst SD-WAN Zero-Day Exploited by Highly Sophisticated Hackers",
+      "link": "https://www.securityweek.com/cisco-patches-catalyst-sd-wan-zero-day-exploited-by-highly-sophisticated-hackers/",
+      "pubDate": "2026-02-26T09:18:43.000Z",
+      "description": "Already added to CISA’s KEV catalog, the flaw allows attackers to bypass authentication and gain administrative privileges. The post Cisco Patches Catalyst SD-WAN Zero-Day Exploited by Highly Sophisticated Hackers appeared first on SecurityWeek.",
+      "source": "SecurityWeek"
+    },
+    {
+      "title": "Cisco SD-WAN Zero-Day CVE-2026-20127 Exploited Since 2023 for Admin Access",
+      "link": "https://thehackernews.com/2026/02/cisco-sd-wan-zero-day-cve-2026-20127.html",
+      "pubDate": "2026-02-26T06:13:00.000Z",
+      "description": "A newly disclosed maximum-severity security flaw in Cisco Catalyst SD-WAN Controller (formerly vSmart) and Catalyst SD-WAN Manager (formerly vManage) has come under active exploitation in the wild as part of malicious activity that dates back to 2023. The vulnerability, tracked as CVE-2026-20127 (CV",
+      "source": "The Hacker News"
+    },
     {
       "title": "Critical Cisco SD-WAN bug exploited in zero-day attacks since 2023",
       "link": "https://www.bleepingcomputer.com/news/security/critical-cisco-sd-wan-bug-exploited-in-zero-day-attacks-since-2023/",
@@ -80,13 +115,6 @@
       "source": "SecurityWeek"
     },
     {
-      "title": "Wynn Resorts Confirms Data Breach After Hackers Remove It From Leak Site",
-      "link": "https://www.securityweek.com/wynn-resorts-confirms-data-breach-after-hackers-remove-it-from-leak-site/",
-      "pubDate": "2026-02-25T11:35:48.000Z",
-      "description": "The high-end casino and hotel operator has admitted that employee data was stolen by ShinyHunters. The post Wynn Resorts Confirms Data Breach After Hackers Remove It From Leak Site appeared first on SecurityWeek.",
-      "source": "SecurityWeek"
-    },
-    {
       "title": "US sanctions Russian broker for buying stolen zero-day exploits",
       "link": "https://www.bleepingcomputer.com/news/security/us-sanctions-russian-exploit-broker-for-buying-stolen-zero-days/",
       "pubDate": "2026-02-25T10:31:13.000Z",
@@ -112,34 +140,6 @@
       "link": "https://thehackernews.com/2026/02/solarwinds-patches-4-critical-serv-u.html",
       "pubDate": "2026-02-25T07:04:00.000Z",
       "description": "SolarWinds has released updates to address four critical security flaws in its Serv-U file transfer software that, if successfully exploited, could result in remote code execution. The vulnerabilities, all rated 9.1 on the CVSS scoring system, are listed below - CVE-2025-40538 - A broken access cont",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "CISA Confirms Active Exploitation of FileZen CVE-2026-25108 Vulnerability",
-      "link": "https://thehackernews.com/2026/02/cisa-confirms-active-exploitation-of.html",
-      "pubDate": "2026-02-25T05:23:00.000Z",
-      "description": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Tuesday added a recently disclosed vulnerability in FileZen to its Known Exploited Vulnerabilities (KEV) catalog, citing evidence of active exploitation. The vulnerability, tracked as CVE-2026-25108 (CVSS v4 score: 8.7), is a case o",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "Phishing campaign targets freight and logistics orgs in the US, Europe",
-      "link": "https://www.bleepingcomputer.com/news/security/phishing-campaign-targets-freight-and-logistics-orgs-in-the-us-europe/",
-      "pubDate": "2026-02-24T23:57:58.000Z",
-      "description": "A financially motivated threat group dubbed \"Diesel Vortex\" is stealing credentials from freight and logistics operators in the U.S. and Europe in phishing attacks using 52 domains. [...]",
-      "source": "BleepingComputer"
-    },
-    {
-      "title": "Wynn Resorts confirms employee data breach after extortion threat",
-      "link": "https://www.bleepingcomputer.com/news/security/wynn-resorts-confirms-employee-data-breach-after-extortion-threat/",
-      "pubDate": "2026-02-24T21:51:20.000Z",
-      "description": "Wynn Resorts has confirmed that a hacker stole employee data from its systems after the company was listed on the ShinyHunters extortion gang's data leak site. [...]",
-      "source": "BleepingComputer"
-    },
-    {
-      "title": "RoguePilot Flaw in GitHub Codespaces Enabled Copilot to Leak GITHUB_TOKEN",
-      "link": "https://thehackernews.com/2026/02/roguepilot-flaw-in-github-codespaces.html",
-      "pubDate": "2026-02-24T18:52:00.000Z",
-      "description": "A vulnerability in GitHub Codespaces could have been exploited by bad actors to seize control of repositories by injecting malicious Copilot instructions in a GitHub issue. The artificial intelligence (AI)-driven vulnerability has been codenamed RoguePilot by Orca Security. It has since been patched",
       "source": "The Hacker News"
     }
   ]
