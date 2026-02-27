@@ -1,7 +1,14 @@
 {
-  "lastUpdated": "2026-02-27T06:06:38.185Z",
+  "lastUpdated": "2026-02-27T11:05:32.812Z",
   "itemCount": 20,
   "items": [
+    {
+      "title": "Juniper Networks PTX Routers Affected by Critical Vulnerability",
+      "link": "https://www.securityweek.com/juniper-networks-ptx-routers-affected-by-critical-vulnerability/",
+      "pubDate": "2026-02-27T10:39:18.000Z",
+      "description": "An out-of-band security update for Junos OS Evolved patches the remote code execution vulnerability CVE-2026-21902. The post Juniper Networks PTX Routers Affected by Critical Vulnerability appeared first on SecurityWeek.",
+      "source": "SecurityWeek"
+    },
     {
       "title": "Previously harmless Google API keys now expose Gemini AI data",
       "link": "https://www.bleepingcomputer.com/news/security/previously-harmless-google-api-keys-now-expose-gemini-ai-data/",
@@ -99,13 +106,6 @@
       "pubDate": "2026-02-25T17:00:00.000Z",
       "description": "Cybersecurity researchers have disclosed multiple security vulnerabilities in Anthropic's Claude Code, an artificial intelligence (AI)-powered coding assistant, that could result in remote code execution and theft of API credentials. \"The vulnerabilities exploit various configuration mechanisms, inc",
       "source": "The Hacker News"
-    },
-    {
-      "title": "The Blast Radius Problem: Stolen Credentials Are Weaponizing Agentic AI",
-      "link": "https://www.securityweek.com/the-blast-radius-problem-stolen-credentials-are-weaponizing-agentic-ai/",
-      "pubDate": "2026-02-25T16:16:40.000Z",
-      "description": "More than half (56%) of the 400,000 vulnerabilities IBM X-Force tracked in 2025 required no authentication before exploitation. The post The Blast Radius Problem: Stolen Credentials Are Weaponizing Agentic AI appeared first on SecurityWeek.",
-      "source": "SecurityWeek"
     },
     {
       "title": "Marquis sues SonicWall over backup breach that led to ransomware attack",
