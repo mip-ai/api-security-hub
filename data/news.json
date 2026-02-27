@@ -1,7 +1,21 @@
 {
-  "lastUpdated": "2026-02-27T16:59:10.102Z",
+  "lastUpdated": "2026-02-27T21:54:30.467Z",
   "itemCount": 20,
   "items": [
+    {
+      "title": "APT37 hackers use new malware to breach air-gapped networks",
+      "link": "https://www.bleepingcomputer.com/news/security/apt37-hackers-use-new-malware-to-breach-air-gapped-networks/",
+      "pubDate": "2026-02-27T19:21:25.000Z",
+      "description": "North Korean hackers are deploying newly uncovered tools to move data between internet-connected and air-gapped systems, spread via removable drives, and conduct covert surveillance. [...]",
+      "source": "BleepingComputer"
+    },
+    {
+      "title": "900+ Sangoma FreePBX Instances Compromised in Ongoing Web Shell Attacks",
+      "link": "https://thehackernews.com/2026/02/900-sangoma-freepbx-instances.html",
+      "pubDate": "2026-02-27T17:59:00.000Z",
+      "description": "The Shadowserver Foundation has revealed that over 900 Sangoma FreePBX instances still remain infected with web shells as part of attacks that exploited a command injection vulnerability starting in December 2025. Of these, 401 instances are located in the U.S., followed by 51 in Brazil, 43 in Canad",
+      "source": "The Hacker News"
+    },
     {
       "title": "CISA warns that RESURGE malware can be dormant on Ivanti devices",
       "link": "https://www.bleepingcomputer.com/news/security/cisa-warns-that-resurge-malware-can-be-dormant-on-ivanti-devices/",
@@ -94,25 +108,11 @@
       "source": "The Hacker News"
     },
     {
-      "title": "Critical Cisco SD-WAN bug exploited in zero-day attacks since 2023",
-      "link": "https://www.bleepingcomputer.com/news/security/critical-cisco-sd-wan-bug-exploited-in-zero-day-attacks-since-2023/",
-      "pubDate": "2026-02-25T18:01:51.000Z",
-      "description": "Cisco is warning that a critical authentication bypass vulnerability in Cisco Catalyst SD-WAN, tracked as CVE-2026-20127, was actively exploited in zero-day attacks that allowed remote attackers to compromise controllers and add malicious rogue peers to targeted networks. [...]",
-      "source": "BleepingComputer"
-    },
-    {
       "title": "Google Disrupts UNC2814 GRIDTIDE Campaign After 53 Breaches Across 42 Countries",
       "link": "https://thehackernews.com/2026/02/google-disrupts-unc2814-gridtide.html",
       "pubDate": "2026-02-25T17:46:00.000Z",
       "description": "Google on Wednesday disclosed that it worked with industry partners to disrupt the infrastructure of a suspected China-nexus cyber espionage group tracked as UNC2814 that breached at least 53 organizations across 42 countries. \"This prolific, elusive actor has a long history of targeting internation",
       "source": "The Hacker News"
-    },
-    {
-      "title": "Chinese cyberspies breached dozens of telecom firms, govt agencies",
-      "link": "https://www.bleepingcomputer.com/news/security/chinese-cyberspies-breached-dozens-of-telecom-firms-govt-agencies/",
-      "pubDate": "2026-02-25T17:00:15.000Z",
-      "description": "Google's Threat Intelligence Group (GTIG), Mandiant, and partners disrupted a global espionage campaign attributed to a suspected Chinese threat actor that used SaaS API calls to hide malicious traffic in attacks targeting telecom and government networks. [...]",
-      "source": "BleepingComputer"
     },
     {
       "title": "Claude Code Flaws Allow Remote Code Execution and API Key Exfiltration",
