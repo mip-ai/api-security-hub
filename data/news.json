@@ -1,7 +1,49 @@
 {
-  "lastUpdated": "2026-02-27T11:05:32.812Z",
+  "lastUpdated": "2026-02-27T16:59:10.102Z",
   "itemCount": 20,
   "items": [
+    {
+      "title": "CISA warns that RESURGE malware can be dormant on Ivanti devices",
+      "link": "https://www.bleepingcomputer.com/news/security/cisa-warns-that-resurge-malware-can-be-dormant-on-ivanti-devices/",
+      "pubDate": "2026-02-27T15:57:04.000Z",
+      "description": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) has released new details about RESURGE, a malicious implant used in zero-day attacks exploiting CVE-2025-0282 to breach Ivanti Connect Secure devices. [...]",
+      "source": "BleepingComputer"
+    },
+    {
+      "title": "In Other News: ATT&#038;CK Advisory Council, Russian Cyberattacks Aid Missile Strikes, Predator Bypasses iOS Indicators",
+      "link": "https://www.securityweek.com/in-other-news-attck-advisory-council-russian-cyberattacks-aid-missile-strikes-predator-bypasses-ios-indicators/",
+      "pubDate": "2026-02-27T15:23:39.000Z",
+      "description": "Other noteworthy stories that might have slipped under the radar: cyber valuations surge, OpenAI disrupts malicious AI use, ShinyHunters claims Odido breach. The post In Other News: ATT&#038;CK Advisory Council, Russian Cyberattacks Aid Missile Strikes, Predator Bypasses iOS Indicators appeared firs",
+      "source": "SecurityWeek"
+    },
+    {
+      "title": "Third-Party Patching and the Business Footprint We All Share",
+      "link": "https://www.bleepingcomputer.com/news/security/third-party-patching-and-the-business-footprint-we-all-share/",
+      "pubDate": "2026-02-27T15:00:10.000Z",
+      "description": "Everyday tools like PDF readers, email clients, and archive utilities quietly define the real attack surface. Action1 explains how third-party software drift increases exploit risk and why consistent patching reduces exposure across endpoints. [...]",
+      "source": "BleepingComputer"
+    },
+    {
+      "title": "38 Million Allegedly Impacted by ManoMano Data Breach",
+      "link": "https://www.securityweek.com/38-million-allegedly-impacted-by-manomano-data-breach/",
+      "pubDate": "2026-02-27T13:41:27.000Z",
+      "description": "Hackers stole personal information such as names, email addresses, phone numbers, and other information. The post 38 Million Allegedly Impacted by ManoMano Data Breach appeared first on SecurityWeek.",
+      "source": "SecurityWeek"
+    },
+    {
+      "title": "900 Sangoma FreePBX Instances Infected With Web Shells",
+      "link": "https://www.securityweek.com/900-sangoma-freepbx-instances-infected-with-web-shells/",
+      "pubDate": "2026-02-27T13:24:25.000Z",
+      "description": "The attacks exploited a post-authentication command injection vulnerability in the endpoint manager’s interface. The post 900 Sangoma FreePBX Instances Infected With Web Shells appeared first on SecurityWeek.",
+      "source": "SecurityWeek"
+    },
+    {
+      "title": "ScarCruft Uses Zoho WorkDrive and USB Malware to Breach Air-Gapped Networks",
+      "link": "https://thehackernews.com/2026/02/scarcruft-uses-zoho-workdrive-and-usb.html",
+      "pubDate": "2026-02-27T12:43:00.000Z",
+      "description": "The North Korean threat actor known as ScarCruft has been attributed to a fresh set of tools, including a backdoor that uses Zoho WorkDrive for command-and-control (C2) communications to fetch more payloads and an implant that uses removable media to relay commands and breach air-gapped networks. Th",
+      "source": "The Hacker News"
+    },
     {
       "title": "Juniper Networks PTX Routers Affected by Critical Vulnerability",
       "link": "https://www.securityweek.com/juniper-networks-ptx-routers-affected-by-critical-vulnerability/",
@@ -38,39 +80,11 @@
       "source": "BleepingComputer"
     },
     {
-      "title": "Zyxel Patches Critical Vulnerability in Many Device Models",
-      "link": "https://www.securityweek.com/zyxel-patches-critical-vulnerability-in-many-device-models/",
-      "pubDate": "2026-02-26T12:09:29.000Z",
-      "description": "The issue impacts the UPnP function of multiple device models and could be exploited for remote code execution. The post Zyxel Patches Critical Vulnerability in Many Device Models appeared first on SecurityWeek.",
-      "source": "SecurityWeek"
-    },
-    {
-      "title": "US Sanctions Russian Exploit Broker Operation Zero",
-      "link": "https://www.securityweek.com/us-sanctions-russian-exploit-broker-operation-zero/",
-      "pubDate": "2026-02-26T10:33:53.000Z",
-      "description": "The broker acquired eight zero-day exploits from a US defense contractor executive jailed for his actions. The post US Sanctions Russian Exploit Broker Operation Zero appeared first on SecurityWeek.",
-      "source": "SecurityWeek"
-    },
-    {
       "title": "Malicious StripeApi NuGet Package Mimicked Official Library and Stole API Tokens",
       "link": "https://thehackernews.com/2026/02/malicious-stripeapi-nuget-package.html",
       "pubDate": "2026-02-26T10:09:00.000Z",
       "description": "Cybersecurity researchers have disclosed details of a new malicious package discovered on the NuGet Gallery, impersonating a library from financial services firm Stripe in an attempt to target the financial sector. The package, codenamed StripeApi.Net, attempts to masquerade as Stripe.net, a legitim",
       "source": "The Hacker News"
-    },
-    {
-      "title": "Trend Micro Patches Critical Apex One Vulnerabilities",
-      "link": "https://www.securityweek.com/trend-micro-patches-critical-apex-one-vulnerabilities/",
-      "pubDate": "2026-02-26T09:56:46.000Z",
-      "description": "TrendAI has fixed eight critical and high-severity issues in Windows and macOS endpoint security products. The post Trend Micro Patches Critical Apex One Vulnerabilities appeared first on SecurityWeek.",
-      "source": "SecurityWeek"
-    },
-    {
-      "title": "Cisco Patches Catalyst SD-WAN Zero-Day Exploited by Highly Sophisticated Hackers",
-      "link": "https://www.securityweek.com/cisco-patches-catalyst-sd-wan-zero-day-exploited-by-highly-sophisticated-hackers/",
-      "pubDate": "2026-02-26T09:18:43.000Z",
-      "description": "Already added to CISA’s KEV catalog, the flaw allows attackers to bypass authentication and gain administrative privileges. The post Cisco Patches Catalyst SD-WAN Zero-Day Exploited by Highly Sophisticated Hackers appeared first on SecurityWeek.",
-      "source": "SecurityWeek"
     },
     {
       "title": "Cisco SD-WAN Zero-Day CVE-2026-20127 Exploited Since 2023 for Admin Access",
@@ -108,27 +122,6 @@
       "source": "The Hacker News"
     },
     {
-      "title": "Marquis sues SonicWall over backup breach that led to ransomware attack",
-      "link": "https://www.bleepingcomputer.com/news/security/marquis-sues-sonicwall-over-backup-breach-that-led-to-ransomware-attack/",
-      "pubDate": "2026-02-25T15:54:44.000Z",
-      "description": "Marquis Software Solutions has filed a lawsuit against SonicWall, accusing the cybersecurity company of gross negligence and misrepresentation that allegedly led to a ransomware attack disrupting operations at 74 U.S. banks. [...]",
-      "source": "BleepingComputer"
-    },
-    {
-      "title": "The OpenClaw Hype: Analysis of Chatter from Open-Source Deep and Dark Web",
-      "link": "https://www.bleepingcomputer.com/news/security/the-openclaw-hype-analysis-of-chatter-from-open-source-deep-and-dark-web/",
-      "pubDate": "2026-02-25T15:01:11.000Z",
-      "description": "OpenClaw has sparked heavy Telegram and dark web chatter, but Flare's data shows more research hype than mass exploitation. Flare explains how its telemetry found real supply-chain risk in the skills marketplace, yet limited signs of large-scale criminal operationalization. [...]",
-      "source": "BleepingComputer"
-    },
-    {
-      "title": "Zyxel warns of critical RCE flaw affecting over a dozen routers",
-      "link": "https://www.bleepingcomputer.com/news/security/zyxel-warns-of-critical-rce-flaw-affecting-over-a-dozen-routers/",
-      "pubDate": "2026-02-25T12:53:02.000Z",
-      "description": "Taiwan networking provider Zyxel has released security updates to address a critical vulnerability affecting over a dozen router models that can allow unauthenticated attackers to gain remote command execution on unpatched devices. [...]",
-      "source": "BleepingComputer"
-    },
-    {
       "title": "Defense Contractor Employee Jailed for Selling 8 Zero-Days to Russian Broker",
       "link": "https://thehackernews.com/2026/02/defense-contractor-employee-jailed-for.html",
       "pubDate": "2026-02-25T08:49:00.000Z",
@@ -140,6 +133,13 @@
       "link": "https://thehackernews.com/2026/02/solarwinds-patches-4-critical-serv-u.html",
       "pubDate": "2026-02-25T07:04:00.000Z",
       "description": "SolarWinds has released updates to address four critical security flaws in its Serv-U file transfer software that, if successfully exploited, could result in remote code execution. The vulnerabilities, all rated 9.1 on the CVSS scoring system, are listed below - CVE-2025-40538 - A broken access cont",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "CISA Confirms Active Exploitation of FileZen CVE-2026-25108 Vulnerability",
+      "link": "https://thehackernews.com/2026/02/cisa-confirms-active-exploitation-of.html",
+      "pubDate": "2026-02-25T05:23:00.000Z",
+      "description": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Tuesday added a recently disclosed vulnerability in FileZen to its Known Exploited Vulnerabilities (KEV) catalog, citing evidence of active exploitation. The vulnerability, tracked as CVE-2026-25108 (CVSS v4 score: 8.7), is a case o",
       "source": "The Hacker News"
     }
   ]
