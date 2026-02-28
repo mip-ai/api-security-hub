@@ -1,7 +1,14 @@
 {
-  "lastUpdated": "2026-02-28T15:41:48.375Z",
+  "lastUpdated": "2026-02-28T21:39:17.836Z",
   "itemCount": 20,
   "items": [
+    {
+      "title": "ClawJacked Flaw Lets Malicious Sites Hijack Local OpenClaw AI Agents via WebSocket",
+      "link": "https://thehackernews.com/2026/02/clawjacked-flaw-lets-malicious-sites.html",
+      "pubDate": "2026-02-28T17:21:00.000Z",
+      "description": "OpenClaw has fixed a high-severity security issue that, if successfully exploited, could have allowed a malicious website to connect to a locally running artificial intelligence (AI) agent and take over control. \"Our vulnerability lives in the core system itself – no plugins, no marketplace, no user",
+      "source": "The Hacker News"
+    },
     {
       "title": "Canadian Tire Data Breach Impacts 38 Million Accounts",
       "link": "https://www.securityweek.com/canadian-tire-data-breach-impacts-38-million-accounts/",
@@ -133,13 +140,6 @@
       "link": "https://thehackernews.com/2026/02/claude-code-flaws-allow-remote-code.html",
       "pubDate": "2026-02-25T17:00:00.000Z",
       "description": "Cybersecurity researchers have disclosed multiple security vulnerabilities in Anthropic's Claude Code, an artificial intelligence (AI)-powered coding assistant, that could result in remote code execution and theft of API credentials. \"The vulnerabilities exploit various configuration mechanisms, inc",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "Defense Contractor Employee Jailed for Selling 8 Zero-Days to Russian Broker",
-      "link": "https://thehackernews.com/2026/02/defense-contractor-employee-jailed-for.html",
-      "pubDate": "2026-02-25T08:49:00.000Z",
-      "description": "A 39-year-old Australian national who was previously employed at U.S. defense contractor L3Harris has been sentenced to a little over seven years in prison for selling eight zero-day exploits to Russian exploit broker Operation Zero in exchange for millions of dollars. Peter Williams pleaded guilty ",
       "source": "The Hacker News"
     }
   ]
