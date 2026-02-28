@@ -1,7 +1,21 @@
 {
-  "lastUpdated": "2026-02-28T09:48:53.600Z",
+  "lastUpdated": "2026-02-28T15:41:48.375Z",
   "itemCount": 20,
   "items": [
+    {
+      "title": "Canadian Tire Data Breach Impacts 38 Million Accounts",
+      "link": "https://www.securityweek.com/canadian-tire-data-breach-impacts-38-million-accounts/",
+      "pubDate": "2026-02-28T11:50:00.000Z",
+      "description": "Names, addresses, email addresses, phone numbers, and encrypted passwords were compromised in the attack. The post Canadian Tire Data Breach Impacts 38 Million Accounts appeared first on SecurityWeek.",
+      "source": "SecurityWeek"
+    },
+    {
+      "title": "Thousands of Public Google Cloud API Keys Exposed with Gemini Access After API Enablement",
+      "link": "https://thehackernews.com/2026/02/thousands-of-public-google-cloud-api.html",
+      "pubDate": "2026-02-28T09:56:00.000Z",
+      "description": "New research has found that Google Cloud API keys, typically designated as project identifiers for billing purposes, could be abused to authenticate to sensitive Gemini endpoints and access private data. The findings come from Truffle Security, which discovered nearly 3,000 Google API keys (identifi",
+      "source": "The Hacker News"
+    },
     {
       "title": "APT37 hackers use new malware to breach air-gapped networks",
       "link": "https://www.bleepingcomputer.com/news/security/apt37-hackers-use-new-malware-to-breach-air-gapped-networks/",
@@ -126,20 +140,6 @@
       "link": "https://thehackernews.com/2026/02/defense-contractor-employee-jailed-for.html",
       "pubDate": "2026-02-25T08:49:00.000Z",
       "description": "A 39-year-old Australian national who was previously employed at U.S. defense contractor L3Harris has been sentenced to a little over seven years in prison for selling eight zero-day exploits to Russian exploit broker Operation Zero in exchange for millions of dollars. Peter Williams pleaded guilty ",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "SolarWinds Patches 4 Critical Serv-U 15.5 Flaws Allowing Root Code Execution",
-      "link": "https://thehackernews.com/2026/02/solarwinds-patches-4-critical-serv-u.html",
-      "pubDate": "2026-02-25T07:04:00.000Z",
-      "description": "SolarWinds has released updates to address four critical security flaws in its Serv-U file transfer software that, if successfully exploited, could result in remote code execution. The vulnerabilities, all rated 9.1 on the CVSS scoring system, are listed below - CVE-2025-40538 - A broken access cont",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "CISA Confirms Active Exploitation of FileZen CVE-2026-25108 Vulnerability",
-      "link": "https://thehackernews.com/2026/02/cisa-confirms-active-exploitation-of.html",
-      "pubDate": "2026-02-25T05:23:00.000Z",
-      "description": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Tuesday added a recently disclosed vulnerability in FileZen to its Known Exploited Vulnerabilities (KEV) catalog, citing evidence of active exploitation. The vulnerability, tracked as CVE-2026-25108 (CVSS v4 score: 8.7), is a case o",
       "source": "The Hacker News"
     }
   ]
