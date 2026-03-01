@@ -1,7 +1,14 @@
 {
-  "lastUpdated": "2026-03-01T09:53:33.502Z",
+  "lastUpdated": "2026-03-01T15:45:32.167Z",
   "itemCount": 20,
   "items": [
+    {
+      "title": "Hackers Weaponize Claude Code in Mexican Government Cyberattack",
+      "link": "https://www.securityweek.com/hackers-weaponize-claude-code-in-mexican-government-cyberattack/",
+      "pubDate": "2026-03-01T12:30:00.000Z",
+      "description": "The AI was abused to write exploits, create tools, and automatically exfiltrate over 150GB of data. The post Hackers Weaponize Claude Code in Mexican Government Cyberattack appeared first on SecurityWeek.",
+      "source": "SecurityWeek"
+    },
     {
       "title": "ClawJacked Flaw Lets Malicious Sites Hijack Local OpenClaw AI Agents via WebSocket",
       "link": "https://thehackernews.com/2026/02/clawjacked-flaw-lets-malicious-sites.html",
@@ -133,13 +140,6 @@
       "link": "https://thehackernews.com/2026/02/google-disrupts-unc2814-gridtide.html",
       "pubDate": "2026-02-25T17:46:00.000Z",
       "description": "Google on Wednesday disclosed that it worked with industry partners to disrupt the infrastructure of a suspected China-nexus cyber espionage group tracked as UNC2814 that breached at least 53 organizations across 42 countries. \"This prolific, elusive actor has a long history of targeting internation",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "Claude Code Flaws Allow Remote Code Execution and API Key Exfiltration",
-      "link": "https://thehackernews.com/2026/02/claude-code-flaws-allow-remote-code.html",
-      "pubDate": "2026-02-25T17:00:00.000Z",
-      "description": "Cybersecurity researchers have disclosed multiple security vulnerabilities in Anthropic's Claude Code, an artificial intelligence (AI)-powered coding assistant, that could result in remote code execution and theft of API credentials. \"The vulnerabilities exploit various configuration mechanisms, inc",
       "source": "The Hacker News"
     }
   ]
