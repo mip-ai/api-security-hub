@@ -1,7 +1,14 @@
 {
-  "lastUpdated": "2026-03-02T06:06:35.907Z",
+  "lastUpdated": "2026-03-02T11:10:22.910Z",
   "itemCount": 20,
   "items": [
+    {
+      "title": "APT28 Tied to CVE-2026-21513 MSHTML 0-Day Exploited Before Feb 2026 Patch Tuesday",
+      "link": "https://thehackernews.com/2026/03/apt28-tied-to-cve-2026-21513-mshtml-0.html",
+      "pubDate": "2026-03-02T10:36:00.000Z",
+      "description": "A recently disclosed security flaw patched by Microsoft may have been exploited by the Russia-linked state-sponsored threat actor known as APT28, according to new findings from Akamai. The vulnerability in question is CVE-2026-21513 (CVSS score: 8.8), a high-severity security feature bypass affectin",
+      "source": "The Hacker News"
+    },
     {
       "title": "ClawJacked attack let malicious websites hijack OpenClaw to steal data",
       "link": "https://www.bleepingcomputer.com/news/security/clawjacked-attack-let-malicious-websites-hijack-openclaw-to-steal-data/",
@@ -92,13 +99,6 @@
       "pubDate": "2026-02-27T12:43:00.000Z",
       "description": "The North Korean threat actor known as ScarCruft has been attributed to a fresh set of tools, including a backdoor that uses Zoho WorkDrive for command-and-control (C2) communications to fetch more payloads and an implant that uses removable media to relay commands and breach air-gapped networks. Th",
       "source": "The Hacker News"
-    },
-    {
-      "title": "Juniper Networks PTX Routers Affected by Critical Vulnerability",
-      "link": "https://www.securityweek.com/juniper-networks-ptx-routers-affected-by-critical-vulnerability/",
-      "pubDate": "2026-02-27T10:39:18.000Z",
-      "description": "An out-of-band security update for Junos OS Evolved patches the remote code execution vulnerability CVE-2026-21902. The post Juniper Networks PTX Routers Affected by Critical Vulnerability appeared first on SecurityWeek.",
-      "source": "SecurityWeek"
     },
     {
       "title": "Previously harmless Google API keys now expose Gemini AI data",
