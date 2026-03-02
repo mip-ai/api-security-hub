@@ -1,7 +1,14 @@
 {
-  "lastUpdated": "2026-03-02T17:32:25.675Z",
+  "lastUpdated": "2026-03-02T22:00:51.373Z",
   "itemCount": 20,
   "items": [
+    {
+      "title": "Fake Google Security site uses PWA app to steal credentials, MFA codes",
+      "link": "https://www.bleepingcomputer.com/news/security/fake-google-security-site-uses-pwa-app-to-steal-credentials-mfa-codes/",
+      "pubDate": "2026-03-02T20:23:41.000Z",
+      "description": "A phishing campaign is using a fake Google Account security page to deliver a web-based app capable of stealing one-time passcodes, harvesting cryptocurrency wallet addresses, and proxying attacker traffic through victims' browsers. [...]",
+      "source": "BleepingComputer"
+    },
     {
       "title": "New Chrome Vulnerability Let Malicious Extensions Escalate Privileges via Gemini Panel",
       "link": "https://thehackernews.com/2026/03/new-chrome-vulnerability-let-malicious.html",
@@ -120,13 +127,6 @@
       "pubDate": "2026-02-27T12:43:00.000Z",
       "description": "The North Korean threat actor known as ScarCruft has been attributed to a fresh set of tools, including a backdoor that uses Zoho WorkDrive for command-and-control (C2) communications to fetch more payloads and an implant that uses removable media to relay commands and breach air-gapped networks. Th",
       "source": "The Hacker News"
-    },
-    {
-      "title": "Previously harmless Google API keys now expose Gemini AI data",
-      "link": "https://www.bleepingcomputer.com/news/security/previously-harmless-google-api-keys-now-expose-gemini-ai-data/",
-      "pubDate": "2026-02-26T20:55:29.000Z",
-      "description": "Google API keys for services like Maps embedded in accessible client-side code could be used to authenticate to the Gemini AI assistant and access private data. [...]",
-      "source": "BleepingComputer"
     },
     {
       "title": "Malicious StripeApi NuGet Package Mimicked Official Library and Stole API Tokens",
