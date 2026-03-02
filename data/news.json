@@ -1,7 +1,49 @@
 {
-  "lastUpdated": "2026-03-02T11:10:22.910Z",
+  "lastUpdated": "2026-03-02T17:32:25.675Z",
   "itemCount": 20,
   "items": [
+    {
+      "title": "New Chrome Vulnerability Let Malicious Extensions Escalate Privileges via Gemini Panel",
+      "link": "https://thehackernews.com/2026/03/new-chrome-vulnerability-let-malicious.html",
+      "pubDate": "2026-03-02T17:08:00.000Z",
+      "description": "Cybersecurity researchers have disclosed details of a now-patched security flaw in Google Chrome that could have permitted attackers to escalate privileges and gain access to local files on the system. The vulnerability, tracked as CVE-2026-0628 (CVSS score: 8.8), has been described as a case of ins",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "Vulnerability Allowed Hijacking Chrome&#8217;s Gemini Live AI Assistant",
+      "link": "https://www.securityweek.com/vulnerability-allowed-hijacking-chromes-gemini-live-ai-assistant/",
+      "pubDate": "2026-03-02T15:26:45.000Z",
+      "description": "Malicious extensions could hijack the Gemini Live in Chrome feature to spy on users and steal their files. The post Vulnerability Allowed Hijacking Chrome&#8217;s Gemini Live AI Assistant appeared first on SecurityWeek.",
+      "source": "SecurityWeek"
+    },
+    {
+      "title": "How Deepfakes and Injection Attacks Are Breaking Identity Verification",
+      "link": "https://www.bleepingcomputer.com/news/security/how-deepfakes-and-injection-attacks-are-breaking-identity-verification/",
+      "pubDate": "2026-03-02T15:01:11.000Z",
+      "description": "Deepfakes and injection attacks are targeting identity verification moments, from onboarding to account recovery. Incode explains why enterprises must validate the full session—media, device integrity, and behavior—to stop synthetic and injected attacks in real time. [...]",
+      "source": "BleepingComputer"
+    },
+    {
+      "title": "OpenClaw Vulnerability Allowed Websites to Hijack AI Agents",
+      "link": "https://www.securityweek.com/openclaw-vulnerability-allowed-malicious-websites-to-hijack-ai-agents/",
+      "pubDate": "2026-03-02T14:26:03.000Z",
+      "description": "Malicious websites could open a WebSocket connection to localhost on the OpenClaw gateway port, brute force passwords, and take control of the agent. The post OpenClaw Vulnerability Allowed Websites to Hijack AI Agents appeared first on SecurityWeek.",
+      "source": "SecurityWeek"
+    },
+    {
+      "title": "Madison Square Garden Data Breach Confirmed Months After Hacker Attack",
+      "link": "https://www.securityweek.com/madison-square-garden-data-breach-confirmed-months-after-hacker-attack/",
+      "pubDate": "2026-03-02T13:53:26.000Z",
+      "description": "The company is one of the many victims of the 2025 Oracle E-Business Suite (EBS) hacking campaign. The post Madison Square Garden Data Breach Confirmed Months After Hacker Attack appeared first on SecurityWeek.",
+      "source": "SecurityWeek"
+    },
+    {
+      "title": "How to Protect Your SaaS from Bot Attacks with SafeLine WAF",
+      "link": "https://thehackernews.com/2026/03/how-to-protect-your-saas-from-bot.html",
+      "pubDate": "2026-03-02T11:55:00.000Z",
+      "description": "Most SaaS teams remember the day their user traffic started growing fast. Few notice the day bots started targeting them. On paper, everything looks great: more sign-ups, more sessions, more API calls. But in reality, something feels off: Sign-ups increase, but users aren’t activating. Server costs ",
+      "source": "The Hacker News"
+    },
     {
       "title": "APT28 Tied to CVE-2026-21513 MSHTML 0-Day Exploited Before Feb 2026 Patch Tuesday",
       "link": "https://thehackernews.com/2026/03/apt28-tied-to-cve-2026-21513-mshtml-0.html",
@@ -66,32 +108,11 @@
       "source": "BleepingComputer"
     },
     {
-      "title": "In Other News: ATT&#038;CK Advisory Council, Russian Cyberattacks Aid Missile Strikes, Predator Bypasses iOS Indicators",
-      "link": "https://www.securityweek.com/in-other-news-attck-advisory-council-russian-cyberattacks-aid-missile-strikes-predator-bypasses-ios-indicators/",
-      "pubDate": "2026-02-27T15:23:39.000Z",
-      "description": "Other noteworthy stories that might have slipped under the radar: cyber valuations surge, OpenAI disrupts malicious AI use, ShinyHunters claims Odido breach. The post In Other News: ATT&#038;CK Advisory Council, Russian Cyberattacks Aid Missile Strikes, Predator Bypasses iOS Indicators appeared firs",
-      "source": "SecurityWeek"
-    },
-    {
       "title": "Third-Party Patching and the Business Footprint We All Share",
       "link": "https://www.bleepingcomputer.com/news/security/third-party-patching-and-the-business-footprint-we-all-share/",
       "pubDate": "2026-02-27T15:00:10.000Z",
       "description": "Everyday tools like PDF readers, email clients, and archive utilities quietly define the real attack surface. Action1 explains how third-party software drift increases exploit risk and why consistent patching reduces exposure across endpoints. [...]",
       "source": "BleepingComputer"
-    },
-    {
-      "title": "38 Million Allegedly Impacted by ManoMano Data Breach",
-      "link": "https://www.securityweek.com/38-million-allegedly-impacted-by-manomano-data-breach/",
-      "pubDate": "2026-02-27T13:41:27.000Z",
-      "description": "Hackers stole personal information such as names, email addresses, phone numbers, and other information. The post 38 Million Allegedly Impacted by ManoMano Data Breach appeared first on SecurityWeek.",
-      "source": "SecurityWeek"
-    },
-    {
-      "title": "900 Sangoma FreePBX Instances Infected With Web Shells",
-      "link": "https://www.securityweek.com/900-sangoma-freepbx-instances-infected-with-web-shells/",
-      "pubDate": "2026-02-27T13:24:25.000Z",
-      "description": "The attacks exploited a post-authentication command injection vulnerability in the endpoint manager’s interface. The post 900 Sangoma FreePBX Instances Infected With Web Shells appeared first on SecurityWeek.",
-      "source": "SecurityWeek"
     },
     {
       "title": "ScarCruft Uses Zoho WorkDrive and USB Malware to Breach Air-Gapped Networks",
@@ -105,27 +126,6 @@
       "link": "https://www.bleepingcomputer.com/news/security/previously-harmless-google-api-keys-now-expose-gemini-ai-data/",
       "pubDate": "2026-02-26T20:55:29.000Z",
       "description": "Google API keys for services like Maps embedded in accessible client-side code could be used to authenticate to the Gemini AI assistant and access private data. [...]",
-      "source": "BleepingComputer"
-    },
-    {
-      "title": "European DYI chain ManoMano data breach impacts 38 million customers",
-      "link": "https://www.bleepingcomputer.com/news/security/european-dyi-chain-manomano-data-breach-impacts-38-million-customers/",
-      "pubDate": "2026-02-26T17:35:21.000Z",
-      "description": "DIY store chain ManoMano is notifying customers of a data breach personal data, which was caused by hackers compromising a third-party service provider. [...]",
-      "source": "BleepingComputer"
-    },
-    {
-      "title": "Critical Juniper Networks PTX flaw allows full router takeover",
-      "link": "https://www.bleepingcomputer.com/news/security/critical-juniper-networks-ptx-flaw-allows-full-router-takeover/",
-      "pubDate": "2026-02-26T16:42:12.000Z",
-      "description": "A critical vulnerability in the Junos OS Evolved network operating system running on PTX Series routers from Juniper Networks could allow an unauthenticated attacker to execute code remotely with root privileges. [...]",
-      "source": "BleepingComputer"
-    },
-    {
-      "title": "Olympique Marseille confirms 'attempted' cyberattack after data leak",
-      "link": "https://www.bleepingcomputer.com/news/security/olympique-marseille-football-club-confirms-cyberattack-after-data-leak/",
-      "pubDate": "2026-02-26T16:11:30.000Z",
-      "description": "French professional football club Olympique de Marseille has confirmed a cyberattack after a threat actor claimed on Monday that it breached the club's systems earlier this month. [...]",
       "source": "BleepingComputer"
     },
     {
