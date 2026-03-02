@@ -1,7 +1,14 @@
 {
-  "lastUpdated": "2026-03-01T21:42:51.638Z",
+  "lastUpdated": "2026-03-02T06:06:35.907Z",
   "itemCount": 20,
   "items": [
+    {
+      "title": "ClawJacked attack let malicious websites hijack OpenClaw to steal data",
+      "link": "https://www.bleepingcomputer.com/news/security/clawjacked-attack-let-malicious-websites-hijack-openclaw-to-steal-data/",
+      "pubDate": "2026-03-01T21:44:55.000Z",
+      "description": "Security researchers have disclosed a high-severity vulnerability dubbed \"ClawJacked\" in the popular AI agent OpenClaw that allowed a malicious website to silently bruteforce access to a locally running instance and take control over it. [...]",
+      "source": "BleepingComputer"
+    },
     {
       "title": "Hackers Weaponize Claude Code in Mexican Government Cyberattack",
       "link": "https://www.securityweek.com/hackers-weaponize-claude-code-in-mexican-government-cyberattack/",
@@ -133,13 +140,6 @@
       "link": "https://thehackernews.com/2026/02/cisco-sd-wan-zero-day-cve-2026-20127.html",
       "pubDate": "2026-02-26T06:13:00.000Z",
       "description": "A newly disclosed maximum-severity security flaw in Cisco Catalyst SD-WAN Controller (formerly vSmart) and Catalyst SD-WAN Manager (formerly vManage) has come under active exploitation in the wild as part of malicious activity that dates back to 2023. The vulnerability, tracked as CVE-2026-20127 (CV",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "Google Disrupts UNC2814 GRIDTIDE Campaign After 53 Breaches Across 42 Countries",
-      "link": "https://thehackernews.com/2026/02/google-disrupts-unc2814-gridtide.html",
-      "pubDate": "2026-02-25T17:46:00.000Z",
-      "description": "Google on Wednesday disclosed that it worked with industry partners to disrupt the infrastructure of a suspected China-nexus cyber espionage group tracked as UNC2814 that breached at least 53 organizations across 42 countries. \"This prolific, elusive actor has a long history of targeting internation",
       "source": "The Hacker News"
     }
   ]
