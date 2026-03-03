@@ -1,7 +1,14 @@
 {
-  "lastUpdated": "2026-03-02T22:00:51.373Z",
+  "lastUpdated": "2026-03-03T05:39:35.250Z",
   "itemCount": 20,
   "items": [
+    {
+      "title": "CyberStrikeAI tool adopted by hackers for AI-powered attacks",
+      "link": "https://www.bleepingcomputer.com/news/security/cyberstrikeai-tool-adopted-by-hackers-for-ai-powered-attacks/",
+      "pubDate": "2026-03-03T00:06:39.000Z",
+      "description": "Researchers warn that a newly identified open-source AI security testing platform called CyberStrikeAI was used by the same threat actor behind a recent campaign that breached hundreds of Fortinet FortiGate firewalls. [...]",
+      "source": "BleepingComputer"
+    },
     {
       "title": "Fake Google Security site uses PWA app to steal credentials, MFA codes",
       "link": "https://www.bleepingcomputer.com/news/security/fake-google-security-site-uses-pwa-app-to-steal-credentials-mfa-codes/",
@@ -112,13 +119,6 @@
       "link": "https://www.bleepingcomputer.com/news/security/cisa-warns-that-resurge-malware-can-be-dormant-on-ivanti-devices/",
       "pubDate": "2026-02-27T15:57:04.000Z",
       "description": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) has released new details about RESURGE, a malicious implant used in zero-day attacks exploiting CVE-2025-0282 to breach Ivanti Connect Secure devices. [...]",
-      "source": "BleepingComputer"
-    },
-    {
-      "title": "Third-Party Patching and the Business Footprint We All Share",
-      "link": "https://www.bleepingcomputer.com/news/security/third-party-patching-and-the-business-footprint-we-all-share/",
-      "pubDate": "2026-02-27T15:00:10.000Z",
-      "description": "Everyday tools like PDF readers, email clients, and archive utilities quietly define the real attack surface. Action1 explains how third-party software drift increases exploit risk and why consistent patching reduces exposure across endpoints. [...]",
       "source": "BleepingComputer"
     },
     {
