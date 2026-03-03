@@ -1,7 +1,49 @@
 {
-  "lastUpdated": "2026-03-03T05:39:35.250Z",
+  "lastUpdated": "2026-03-03T11:05:04.265Z",
   "itemCount": 20,
   "items": [
+    {
+      "title": "Star Citizen game dev discloses breach affecting user data",
+      "link": "https://www.bleepingcomputer.com/news/security/star-citizen-game-dev-discloses-breach-affecting-user-data/",
+      "pubDate": "2026-03-03T10:50:26.000Z",
+      "description": "Cloud Imperium Games (CIG), the game developer behind Star Citizen and Squadron 42, says attackers breached systems containing some users' personal information in January. [...]",
+      "source": "BleepingComputer"
+    },
+    {
+      "title": "Vulnerability in MS-Agent AI Framework Can Allow Full System Compromise",
+      "link": "https://www.securityweek.com/vulnerability-in-ms-agent-ai-framework-can-allow-full-system-compromise/",
+      "pubDate": "2026-03-03T10:43:20.000Z",
+      "description": "Improper input sanitization in the framework can be exploited through the Shell tool, allowing attackers to modify system files and steal data. The post Vulnerability in MS-Agent AI Framework Can Allow Full System Compromise appeared first on SecurityWeek.",
+      "source": "SecurityWeek"
+    },
+    {
+      "title": "UH Cancer Center data breach affects nearly 1.2 million people",
+      "link": "https://www.bleepingcomputer.com/news/security/university-of-hawaii-cancer-center-ransomware-attack-affects-nearly-12-million-people/",
+      "pubDate": "2026-03-03T09:48:51.000Z",
+      "description": "The University of Hawaii confirmed that a ransomware gang stole the data of nearly 1.2 million individuals in August 2025 after breaching its Cancer Center's Epidemiology Division. [...]",
+      "source": "BleepingComputer"
+    },
+    {
+      "title": "Microsoft Warns OAuth Redirect Abuse Delivers Malware to Government Targets",
+      "link": "https://thehackernews.com/2026/03/microsoft-warns-oauth-redirect-abuse.html",
+      "pubDate": "2026-03-03T09:20:00.000Z",
+      "description": "Microsoft on Monday warned of phishing campaigns that employ phishing emails and OAuth URL redirection mechanisms to bypass conventional phishing defenses implemented in email and browsers. The activity, the company said, targets government and public-sector organizations with the end goal of redire",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "Android gets patches for Qualcomm zero-day exploited in attacks",
+      "link": "https://www.bleepingcomputer.com/news/security/google-patches-android-zero-day-actively-exploited-in-attacks/",
+      "pubDate": "2026-03-03T08:19:53.000Z",
+      "description": "Google has released security updates to patch 129 Android security vulnerabilities, including an actively exploited zero-day flaw in a Qualcomm display component. [...]",
+      "source": "BleepingComputer"
+    },
+    {
+      "title": "Google Confirms CVE-2026-21385 in Qualcomm Android Component Exploited",
+      "link": "https://thehackernews.com/2026/03/google-confirms-cve-2026-21385-in.html",
+      "pubDate": "2026-03-03T07:08:00.000Z",
+      "description": "Google on Monday disclosed that a high-severity security flaw impacting an open-source Qualcomm component used in Android devices has been exploited in the wild. The vulnerability in question is CVE-2026-21385 (CVSS score: 7.8), a buffer over-read in the Graphics component. \"Memory corruption when a",
+      "source": "The Hacker News"
+    },
     {
       "title": "CyberStrikeAI tool adopted by hackers for AI-powered attacks",
       "link": "https://www.bleepingcomputer.com/news/security/cyberstrikeai-tool-adopted-by-hackers-for-ai-powered-attacks/",
@@ -73,25 +115,11 @@
       "source": "BleepingComputer"
     },
     {
-      "title": "Hackers Weaponize Claude Code in Mexican Government Cyberattack",
-      "link": "https://www.securityweek.com/hackers-weaponize-claude-code-in-mexican-government-cyberattack/",
-      "pubDate": "2026-03-01T12:30:00.000Z",
-      "description": "The AI was abused to write exploits, create tools, and automatically exfiltrate over 150GB of data. The post Hackers Weaponize Claude Code in Mexican Government Cyberattack appeared first on SecurityWeek.",
-      "source": "SecurityWeek"
-    },
-    {
       "title": "ClawJacked Flaw Lets Malicious Sites Hijack Local OpenClaw AI Agents via WebSocket",
       "link": "https://thehackernews.com/2026/02/clawjacked-flaw-lets-malicious-sites.html",
       "pubDate": "2026-02-28T17:21:00.000Z",
       "description": "OpenClaw has fixed a high-severity security issue that, if successfully exploited, could have allowed a malicious website to connect to a locally running artificial intelligence (AI) agent and take over control. \"Our vulnerability lives in the core system itself – no plugins, no marketplace, no user",
       "source": "The Hacker News"
-    },
-    {
-      "title": "Canadian Tire Data Breach Impacts 38 Million Accounts",
-      "link": "https://www.securityweek.com/canadian-tire-data-breach-impacts-38-million-accounts/",
-      "pubDate": "2026-02-28T11:50:00.000Z",
-      "description": "Names, addresses, email addresses, phone numbers, and encrypted passwords were compromised in the attack. The post Canadian Tire Data Breach Impacts 38 Million Accounts appeared first on SecurityWeek.",
-      "source": "SecurityWeek"
     },
     {
       "title": "Thousands of Public Google Cloud API Keys Exposed with Gemini Access After API Enablement",
@@ -101,13 +129,6 @@
       "source": "The Hacker News"
     },
     {
-      "title": "APT37 hackers use new malware to breach air-gapped networks",
-      "link": "https://www.bleepingcomputer.com/news/security/apt37-hackers-use-new-malware-to-breach-air-gapped-networks/",
-      "pubDate": "2026-02-27T19:21:25.000Z",
-      "description": "North Korean hackers are deploying newly uncovered tools to move data between internet-connected and air-gapped systems, spread via removable drives, and conduct covert surveillance. [...]",
-      "source": "BleepingComputer"
-    },
-    {
       "title": "900+ Sangoma FreePBX Instances Compromised in Ongoing Web Shell Attacks",
       "link": "https://thehackernews.com/2026/02/900-sangoma-freepbx-instances.html",
       "pubDate": "2026-02-27T17:59:00.000Z",
@@ -115,31 +136,10 @@
       "source": "The Hacker News"
     },
     {
-      "title": "CISA warns that RESURGE malware can be dormant on Ivanti devices",
-      "link": "https://www.bleepingcomputer.com/news/security/cisa-warns-that-resurge-malware-can-be-dormant-on-ivanti-devices/",
-      "pubDate": "2026-02-27T15:57:04.000Z",
-      "description": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) has released new details about RESURGE, a malicious implant used in zero-day attacks exploiting CVE-2025-0282 to breach Ivanti Connect Secure devices. [...]",
-      "source": "BleepingComputer"
-    },
-    {
       "title": "ScarCruft Uses Zoho WorkDrive and USB Malware to Breach Air-Gapped Networks",
       "link": "https://thehackernews.com/2026/02/scarcruft-uses-zoho-workdrive-and-usb.html",
       "pubDate": "2026-02-27T12:43:00.000Z",
       "description": "The North Korean threat actor known as ScarCruft has been attributed to a fresh set of tools, including a backdoor that uses Zoho WorkDrive for command-and-control (C2) communications to fetch more payloads and an implant that uses removable media to relay commands and breach air-gapped networks. Th",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "Malicious StripeApi NuGet Package Mimicked Official Library and Stole API Tokens",
-      "link": "https://thehackernews.com/2026/02/malicious-stripeapi-nuget-package.html",
-      "pubDate": "2026-02-26T10:09:00.000Z",
-      "description": "Cybersecurity researchers have disclosed details of a new malicious package discovered on the NuGet Gallery, impersonating a library from financial services firm Stripe in an attempt to target the financial sector. The package, codenamed StripeApi.Net, attempts to masquerade as Stripe.net, a legitim",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "Cisco SD-WAN Zero-Day CVE-2026-20127 Exploited Since 2023 for Admin Access",
-      "link": "https://thehackernews.com/2026/02/cisco-sd-wan-zero-day-cve-2026-20127.html",
-      "pubDate": "2026-02-26T06:13:00.000Z",
-      "description": "A newly disclosed maximum-severity security flaw in Cisco Catalyst SD-WAN Controller (formerly vSmart) and Catalyst SD-WAN Manager (formerly vManage) has come under active exploitation in the wild as part of malicious activity that dates back to 2023. The vulnerability, tracked as CVE-2026-20127 (CV",
       "source": "The Hacker News"
     }
   ]
