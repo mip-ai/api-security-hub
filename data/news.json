@@ -1,7 +1,21 @@
 {
-  "lastUpdated": "2026-03-03T17:30:35.318Z",
+  "lastUpdated": "2026-03-03T21:59:15.642Z",
   "itemCount": 20,
   "items": [
+    {
+      "title": "Microsoft: Hackers abuse OAuth error flows to spread malware",
+      "link": "https://www.bleepingcomputer.com/news/security/microsoft-hackers-abuse-oauth-error-flows-to-spread-malware/",
+      "pubDate": "2026-03-03T20:59:19.000Z",
+      "description": "Hackers are abusing the legitimate OAuth redirection mechanism to bypass phishing protections in email and browsers to take users to malicious pages. [...]",
+      "source": "BleepingComputer"
+    },
+    {
+      "title": "Iranian Strikes on Amazon Data Centers Highlight Industry’s Vulnerability to Physical Disasters",
+      "link": "https://www.securityweek.com/iranian-strikes-on-amazon-data-centers-highlight-industrys-vulnerability-to-physical-disasters/",
+      "pubDate": "2026-03-03T19:56:24.000Z",
+      "description": "Two AWS data centers in the United Arab Emirates were “directly struck” and another facility in Bahrain was also damaged after a drone landed nearby. The post Iranian Strikes on Amazon Data Centers Highlight Industry’s Vulnerability to Physical Disasters appeared first on SecurityWeek.",
+      "source": "SecurityWeek"
+    },
     {
       "title": "LexisNexis confirms data breach as hackers leak stolen files",
       "link": "https://www.bleepingcomputer.com/news/security/lexisnexis-confirms-data-breach-as-hackers-leak-stolen-files/",
@@ -115,13 +129,6 @@
       "source": "The Hacker News"
     },
     {
-      "title": "Vulnerability Allowed Hijacking Chrome&#8217;s Gemini Live AI Assistant",
-      "link": "https://www.securityweek.com/vulnerability-allowed-hijacking-chromes-gemini-live-ai-assistant/",
-      "pubDate": "2026-03-02T15:26:45.000Z",
-      "description": "Malicious extensions could hijack the Gemini Live in Chrome feature to spy on users and steal their files. The post Vulnerability Allowed Hijacking Chrome&#8217;s Gemini Live AI Assistant appeared first on SecurityWeek.",
-      "source": "SecurityWeek"
-    },
-    {
       "title": "How Deepfakes and Injection Attacks Are Breaking Identity Verification",
       "link": "https://www.bleepingcomputer.com/news/security/how-deepfakes-and-injection-attacks-are-breaking-identity-verification/",
       "pubDate": "2026-03-02T15:01:11.000Z",
@@ -133,13 +140,6 @@
       "link": "https://thehackernews.com/2026/03/how-to-protect-your-saas-from-bot.html",
       "pubDate": "2026-03-02T11:55:00.000Z",
       "description": "Most SaaS teams remember the day their user traffic started growing fast. Few notice the day bots started targeting them. On paper, everything looks great: more sign-ups, more sessions, more API calls. But in reality, something feels off: Sign-ups increase, but users aren’t activating. Server costs ",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "APT28 Tied to CVE-2026-21513 MSHTML 0-Day Exploited Before Feb 2026 Patch Tuesday",
-      "link": "https://thehackernews.com/2026/03/apt28-tied-to-cve-2026-21513-mshtml-0.html",
-      "pubDate": "2026-03-02T10:36:00.000Z",
-      "description": "A recently disclosed security flaw patched by Microsoft may have been exploited by the Russia-linked state-sponsored threat actor known as APT28, according to new findings from Akamai. The vulnerability in question is CVE-2026-21513 (CVSS score: 8.8), a high-severity security feature bypass affectin",
       "source": "The Hacker News"
     }
   ]
