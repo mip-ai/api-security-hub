@@ -1,7 +1,56 @@
 {
-  "lastUpdated": "2026-03-03T11:05:04.265Z",
+  "lastUpdated": "2026-03-03T17:30:35.318Z",
   "itemCount": 20,
   "items": [
+    {
+      "title": "LexisNexis confirms data breach as hackers leak stolen files",
+      "link": "https://www.bleepingcomputer.com/news/security/lexisnexis-confirms-data-breach-as-hackers-leak-stolen-files/",
+      "pubDate": "2026-03-03T15:40:48.000Z",
+      "description": "American data analytics company LexisNexis Legal & Professional has confirmed to BleepingComputer that hackers breached its servers and accessed some customer and business information. [...]",
+      "source": "BleepingComputer"
+    },
+    {
+      "title": "Honeywell, Researcher Clash Over Impact of Building Controller Vulnerability",
+      "link": "https://www.securityweek.com/honeywell-researcher-clash-over-impact-of-building-controller-vulnerability/",
+      "pubDate": "2026-03-03T15:28:47.000Z",
+      "description": "The researcher says he has identified thousands of internet-exposed IQ4 building management controllers. The post Honeywell, Researcher Clash Over Impact of Building Controller Vulnerability appeared first on SecurityWeek.",
+      "source": "SecurityWeek"
+    },
+    {
+      "title": "Compromised Site Management Panels are a Hot Item in Cybercrime Markets",
+      "link": "https://www.bleepingcomputer.com/news/security/compromised-site-management-panels-are-a-hot-item-in-cybercrime-markets/",
+      "pubDate": "2026-03-03T15:01:11.000Z",
+      "description": "Compromised cPanel credentials are being sold in bulk across underground channels as plug-and-play phishing and scam infrastructure. Flare explains how analyzing 200,000 underground posts reveals a commoditized market for hacked site management panels. [...]",
+      "source": "BleepingComputer"
+    },
+    {
+      "title": "New &#8216;AirSnitch&#8217; Attack Shows Wi-Fi Client Isolation Could Be a False Sense of Security",
+      "link": "https://www.securityweek.com/new-airsnitch-attack-shows-wi-fi-client-isolation-could-be-a-false-sense-of-security/",
+      "pubDate": "2026-03-03T13:49:53.000Z",
+      "description": "Researchers have uncovered a Wi-Fi vulnerability that allows nearby attackers to intercept sensitive data and execute machine-in-the-middle attacks against connected devices. The post New &#8216;AirSnitch&#8217; Attack Shows Wi-Fi Client Isolation Could Be a False Sense of Security appeared first on",
+      "source": "SecurityWeek"
+    },
+    {
+      "title": "1.2 Million Affected by University of Hawaii Cancer Center Data Breach",
+      "link": "https://www.securityweek.com/1-2-million-affected-by-university-of-hawaii-cancer-center-data-breach/",
+      "pubDate": "2026-03-03T13:34:16.000Z",
+      "description": "Hackers stole names, Social Security numbers, driver’s license information, voter registration records, and health-related information. The post 1.2 Million Affected by University of Hawaii Cancer Center Data Breach appeared first on SecurityWeek.",
+      "source": "SecurityWeek"
+    },
+    {
+      "title": "Android Update Patches Exploited Qualcomm Zero-Day",
+      "link": "https://www.securityweek.com/android-update-patches-exploited-qualcomm-zero-day/",
+      "pubDate": "2026-03-03T12:41:16.000Z",
+      "description": "An integer overflow or wraparound in the Qualcomm graphics component, the bug leads to memory corruption. The post Android Update Patches Exploited Qualcomm Zero-Day appeared first on SecurityWeek.",
+      "source": "SecurityWeek"
+    },
+    {
+      "title": "AI Agents: The Next Wave Identity Dark Matter - Powerful, Invisible, and Unmanaged",
+      "link": "https://thehackernews.com/2026/03/ai-agents-next-wave-identity-dark.html",
+      "pubDate": "2026-03-03T11:30:00.000Z",
+      "description": "The Rise of MCPs in the Enterprise The Model Context Protocol (MCP) is quickly becoming a practical way to push LLMs from “chat” into real work. By providing structured access to applications, APIs, and data, MCP enables prompt-driven AI agents that can retrieve information, take action, and automat",
+      "source": "The Hacker News"
+    },
     {
       "title": "Star Citizen game dev discloses breach affecting user data",
       "link": "https://www.bleepingcomputer.com/news/security/star-citizen-game-dev-discloses-breach-affecting-user-data/",
@@ -80,20 +129,6 @@
       "source": "BleepingComputer"
     },
     {
-      "title": "OpenClaw Vulnerability Allowed Websites to Hijack AI Agents",
-      "link": "https://www.securityweek.com/openclaw-vulnerability-allowed-malicious-websites-to-hijack-ai-agents/",
-      "pubDate": "2026-03-02T14:26:03.000Z",
-      "description": "Malicious websites could open a WebSocket connection to localhost on the OpenClaw gateway port, brute force passwords, and take control of the agent. The post OpenClaw Vulnerability Allowed Websites to Hijack AI Agents appeared first on SecurityWeek.",
-      "source": "SecurityWeek"
-    },
-    {
-      "title": "Madison Square Garden Data Breach Confirmed Months After Hacker Attack",
-      "link": "https://www.securityweek.com/madison-square-garden-data-breach-confirmed-months-after-hacker-attack/",
-      "pubDate": "2026-03-02T13:53:26.000Z",
-      "description": "The company is one of the many victims of the 2025 Oracle E-Business Suite (EBS) hacking campaign. The post Madison Square Garden Data Breach Confirmed Months After Hacker Attack appeared first on SecurityWeek.",
-      "source": "SecurityWeek"
-    },
-    {
       "title": "How to Protect Your SaaS from Bot Attacks with SafeLine WAF",
       "link": "https://thehackernews.com/2026/03/how-to-protect-your-saas-from-bot.html",
       "pubDate": "2026-03-02T11:55:00.000Z",
@@ -105,41 +140,6 @@
       "link": "https://thehackernews.com/2026/03/apt28-tied-to-cve-2026-21513-mshtml-0.html",
       "pubDate": "2026-03-02T10:36:00.000Z",
       "description": "A recently disclosed security flaw patched by Microsoft may have been exploited by the Russia-linked state-sponsored threat actor known as APT28, according to new findings from Akamai. The vulnerability in question is CVE-2026-21513 (CVSS score: 8.8), a high-severity security feature bypass affectin",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "ClawJacked attack let malicious websites hijack OpenClaw to steal data",
-      "link": "https://www.bleepingcomputer.com/news/security/clawjacked-attack-let-malicious-websites-hijack-openclaw-to-steal-data/",
-      "pubDate": "2026-03-01T21:44:55.000Z",
-      "description": "Security researchers have disclosed a high-severity vulnerability dubbed \"ClawJacked\" in the popular AI agent OpenClaw that allowed a malicious website to silently bruteforce access to a locally running instance and take control over it. [...]",
-      "source": "BleepingComputer"
-    },
-    {
-      "title": "ClawJacked Flaw Lets Malicious Sites Hijack Local OpenClaw AI Agents via WebSocket",
-      "link": "https://thehackernews.com/2026/02/clawjacked-flaw-lets-malicious-sites.html",
-      "pubDate": "2026-02-28T17:21:00.000Z",
-      "description": "OpenClaw has fixed a high-severity security issue that, if successfully exploited, could have allowed a malicious website to connect to a locally running artificial intelligence (AI) agent and take over control. \"Our vulnerability lives in the core system itself – no plugins, no marketplace, no user",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "Thousands of Public Google Cloud API Keys Exposed with Gemini Access After API Enablement",
-      "link": "https://thehackernews.com/2026/02/thousands-of-public-google-cloud-api.html",
-      "pubDate": "2026-02-28T09:56:00.000Z",
-      "description": "New research has found that Google Cloud API keys, typically designated as project identifiers for billing purposes, could be abused to authenticate to sensitive Gemini endpoints and access private data. The findings come from Truffle Security, which discovered nearly 3,000 Google API keys (identifi",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "900+ Sangoma FreePBX Instances Compromised in Ongoing Web Shell Attacks",
-      "link": "https://thehackernews.com/2026/02/900-sangoma-freepbx-instances.html",
-      "pubDate": "2026-02-27T17:59:00.000Z",
-      "description": "The Shadowserver Foundation has revealed that over 900 Sangoma FreePBX instances still remain infected with web shells as part of attacks that exploited a command injection vulnerability starting in December 2025. Of these, 401 instances are located in the U.S., followed by 51 in Brazil, 43 in Canad",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "ScarCruft Uses Zoho WorkDrive and USB Malware to Breach Air-Gapped Networks",
-      "link": "https://thehackernews.com/2026/02/scarcruft-uses-zoho-workdrive-and-usb.html",
-      "pubDate": "2026-02-27T12:43:00.000Z",
-      "description": "The North Korean threat actor known as ScarCruft has been attributed to a fresh set of tools, including a backdoor that uses Zoho WorkDrive for command-and-control (C2) communications to fetch more payloads and an implant that uses removable media to relay commands and breach air-gapped networks. Th",
       "source": "The Hacker News"
     }
   ]
