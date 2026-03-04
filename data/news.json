@@ -1,7 +1,28 @@
 {
-  "lastUpdated": "2026-03-04T17:11:20.026Z",
+  "lastUpdated": "2026-03-04T22:00:50.960Z",
   "itemCount": 20,
   "items": [
+    {
+      "title": "Mail2Shell zero-click attack lets hackers hijack FreeScout mail servers",
+      "link": "https://www.bleepingcomputer.com/news/security/mail2shell-zero-click-attack-lets-hackers-hijack-freescout-mail-servers/",
+      "pubDate": "2026-03-04T21:51:32.000Z",
+      "description": "A maximum severity vulnerability in the FreeScout helpdesk platform allows hackers to achieve remote code execution without any user interaction or authentication. [...]",
+      "source": "BleepingComputer"
+    },
+    {
+      "title": "Spyware-grade Coruna iOS exploit kit now used in crypto theft attacks",
+      "link": "https://www.bleepingcomputer.com/news/security/spyware-grade-coruna-ios-exploit-kit-now-used-in-crypto-theft-attacks/",
+      "pubDate": "2026-03-04T19:06:13.000Z",
+      "description": "A previously undocumented set of 23 iOS exploits named \"Coruna\" has been deployed by multiple threat actors in targeted espionage campaigns and financially motivated attacks. [...]",
+      "source": "BleepingComputer"
+    },
+    {
+      "title": "New LexisNexis Data Breach Confirmed After Hackers Leak Files",
+      "link": "https://www.securityweek.com/new-lexisnexis-data-breach-confirmed-after-hackers-leak-files/",
+      "pubDate": "2026-03-04T17:44:14.000Z",
+      "description": "The hackers claim to have stolen 2GB of files, including 400,000 personal information records. The post New LexisNexis Data Breach Confirmed After Hackers Leak Files appeared first on SecurityWeek.",
+      "source": "SecurityWeek"
+    },
     {
       "title": "How a Brute Force Attack Unmasked a Ransomware Infrastructure Network",
       "link": "https://www.bleepingcomputer.com/news/security/how-a-brute-force-attack-unmasked-a-ransomware-infrastructure-network/",
@@ -24,25 +45,11 @@
       "source": "SecurityWeek"
     },
     {
-      "title": "Critical FreeScout Vulnerability Leads to Full Server Compromise",
-      "link": "https://www.securityweek.com/critical-freescout-vulnerability-leads-to-full-server-compromise/",
-      "pubDate": "2026-03-04T09:16:39.000Z",
-      "description": "A patch bypass for an authenticated code execution bug, the flaw leads to zero-click remote code execution attacks. The post Critical FreeScout Vulnerability Leads to Full Server Compromise appeared first on SecurityWeek.",
-      "source": "SecurityWeek"
-    },
-    {
       "title": "APT41-Linked Silver Dragon Targets Governments Using Cobalt Strike and Google Drive C2",
       "link": "https://thehackernews.com/2026/03/apt41-linked-silver-dragon-targets.html",
       "pubDate": "2026-03-04T08:14:00.000Z",
       "description": "Cybersecurity researchers have disclosed details of an advanced persistent threat (APT) group dubbed Silver Dragon that has been linked to cyber attacks targeting entities in Europe and Southeast Asia since at least mid-2024. \"Silver Dragon gains its initial access by exploiting public-facing intern",
       "source": "The Hacker News"
-    },
-    {
-      "title": "VMware Aria Operations Vulnerability Exploited in the Wild",
-      "link": "https://www.securityweek.com/vmware-aria-operations-vulnerability-exploited-in-the-wild/",
-      "pubDate": "2026-03-04T07:24:45.000Z",
-      "description": "The recently patched CVE-2026-22719 can be exploited by an unauthenticated attacker for remote code execution. The post VMware Aria Operations Vulnerability Exploited in the Wild appeared first on SecurityWeek.",
-      "source": "SecurityWeek"
     },
     {
       "title": "CISA Adds Actively Exploited VMware Aria Operations Flaw CVE-2026-22719 to KEV Catalog",
@@ -73,39 +80,11 @@
       "source": "BleepingComputer"
     },
     {
-      "title": "LexisNexis confirms data breach as hackers leak stolen files",
-      "link": "https://www.bleepingcomputer.com/news/security/lexisnexis-confirms-data-breach-as-hackers-leak-stolen-files/",
-      "pubDate": "2026-03-03T15:40:48.000Z",
-      "description": "American data analytics company LexisNexis Legal & Professional has confirmed to BleepingComputer that hackers breached its servers and accessed some customer and business information. [...]",
-      "source": "BleepingComputer"
-    },
-    {
-      "title": "Compromised Site Management Panels are a Hot Item in Cybercrime Markets",
-      "link": "https://www.bleepingcomputer.com/news/security/compromised-site-management-panels-are-a-hot-item-in-cybercrime-markets/",
-      "pubDate": "2026-03-03T15:01:11.000Z",
-      "description": "Compromised cPanel credentials are being sold in bulk across underground channels as plug-and-play phishing and scam infrastructure. Flare explains how analyzing 200,000 underground posts reveals a commoditized market for hacked site management panels. [...]",
-      "source": "BleepingComputer"
-    },
-    {
       "title": "AI Agents: The Next Wave Identity Dark Matter - Powerful, Invisible, and Unmanaged",
       "link": "https://thehackernews.com/2026/03/ai-agents-next-wave-identity-dark.html",
       "pubDate": "2026-03-03T11:30:00.000Z",
       "description": "The Rise of MCPs in the Enterprise The Model Context Protocol (MCP) is quickly becoming a practical way to push LLMs from “chat” into real work. By providing structured access to applications, APIs, and data, MCP enables prompt-driven AI agents that can retrieve information, take action, and automat",
       "source": "The Hacker News"
-    },
-    {
-      "title": "Star Citizen game dev discloses breach affecting user data",
-      "link": "https://www.bleepingcomputer.com/news/security/star-citizen-game-dev-discloses-breach-affecting-user-data/",
-      "pubDate": "2026-03-03T10:50:26.000Z",
-      "description": "Cloud Imperium Games (CIG), the game developer behind Star Citizen and Squadron 42, says attackers breached systems containing some users' personal information in January. [...]",
-      "source": "BleepingComputer"
-    },
-    {
-      "title": "UH Cancer Center data breach affects nearly 1.2 million people",
-      "link": "https://www.bleepingcomputer.com/news/security/university-of-hawaii-cancer-center-ransomware-attack-affects-nearly-12-million-people/",
-      "pubDate": "2026-03-03T09:48:51.000Z",
-      "description": "The University of Hawaii confirmed that a ransomware gang stole the data of nearly 1.2 million individuals in August 2025 after breaching its Cancer Center's Epidemiology Division. [...]",
-      "source": "BleepingComputer"
     },
     {
       "title": "Microsoft Warns OAuth Redirect Abuse Delivers Malware to Government Targets",
@@ -115,13 +94,6 @@
       "source": "The Hacker News"
     },
     {
-      "title": "Android gets patches for Qualcomm zero-day exploited in attacks",
-      "link": "https://www.bleepingcomputer.com/news/security/google-patches-android-zero-day-actively-exploited-in-attacks/",
-      "pubDate": "2026-03-03T08:19:53.000Z",
-      "description": "Google has released security updates to patch 129 Android security vulnerabilities, including an actively exploited zero-day flaw in a Qualcomm display component. [...]",
-      "source": "BleepingComputer"
-    },
-    {
       "title": "Google Confirms CVE-2026-21385 in Qualcomm Android Component Exploited",
       "link": "https://thehackernews.com/2026/03/google-confirms-cve-2026-21385-in.html",
       "pubDate": "2026-03-03T07:08:00.000Z",
@@ -129,17 +101,45 @@
       "source": "The Hacker News"
     },
     {
-      "title": "CyberStrikeAI tool adopted by hackers for AI-powered attacks",
-      "link": "https://www.bleepingcomputer.com/news/security/cyberstrikeai-tool-adopted-by-hackers-for-ai-powered-attacks/",
-      "pubDate": "2026-03-03T00:06:39.000Z",
-      "description": "Researchers warn that a newly identified open-source AI security testing platform called CyberStrikeAI was used by the same threat actor behind a recent campaign that breached hundreds of Fortinet FortiGate firewalls. [...]",
-      "source": "BleepingComputer"
-    },
-    {
       "title": "New Chrome Vulnerability Let Malicious Extensions Escalate Privileges via Gemini Panel",
       "link": "https://thehackernews.com/2026/03/new-chrome-vulnerability-let-malicious.html",
       "pubDate": "2026-03-02T17:08:00.000Z",
       "description": "Cybersecurity researchers have disclosed details of a now-patched security flaw in Google Chrome that could have permitted attackers to escalate privileges and gain access to local files on the system. The vulnerability, tracked as CVE-2026-0628 (CVSS score: 8.8), has been described as a case of ins",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "How to Protect Your SaaS from Bot Attacks with SafeLine WAF",
+      "link": "https://thehackernews.com/2026/03/how-to-protect-your-saas-from-bot.html",
+      "pubDate": "2026-03-02T11:55:00.000Z",
+      "description": "Most SaaS teams remember the day their user traffic started growing fast. Few notice the day bots started targeting them. On paper, everything looks great: more sign-ups, more sessions, more API calls. But in reality, something feels off: Sign-ups increase, but users aren’t activating. Server costs ",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "APT28 Tied to CVE-2026-21513 MSHTML 0-Day Exploited Before Feb 2026 Patch Tuesday",
+      "link": "https://thehackernews.com/2026/03/apt28-tied-to-cve-2026-21513-mshtml-0.html",
+      "pubDate": "2026-03-02T10:36:00.000Z",
+      "description": "A recently disclosed security flaw patched by Microsoft may have been exploited by the Russia-linked state-sponsored threat actor known as APT28, according to new findings from Akamai. The vulnerability in question is CVE-2026-21513 (CVSS score: 8.8), a high-severity security feature bypass affectin",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "ClawJacked Flaw Lets Malicious Sites Hijack Local OpenClaw AI Agents via WebSocket",
+      "link": "https://thehackernews.com/2026/02/clawjacked-flaw-lets-malicious-sites.html",
+      "pubDate": "2026-02-28T17:21:00.000Z",
+      "description": "OpenClaw has fixed a high-severity security issue that, if successfully exploited, could have allowed a malicious website to connect to a locally running artificial intelligence (AI) agent and take over control. \"Our vulnerability lives in the core system itself – no plugins, no marketplace, no user",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "Thousands of Public Google Cloud API Keys Exposed with Gemini Access After API Enablement",
+      "link": "https://thehackernews.com/2026/02/thousands-of-public-google-cloud-api.html",
+      "pubDate": "2026-02-28T09:56:00.000Z",
+      "description": "New research has found that Google Cloud API keys, typically designated as project identifiers for billing purposes, could be abused to authenticate to sensitive Gemini endpoints and access private data. The findings come from Truffle Security, which discovered nearly 3,000 Google API keys (identifi",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "900+ Sangoma FreePBX Instances Compromised in Ongoing Web Shell Attacks",
+      "link": "https://thehackernews.com/2026/02/900-sangoma-freepbx-instances.html",
+      "pubDate": "2026-02-27T17:59:00.000Z",
+      "description": "The Shadowserver Foundation has revealed that over 900 Sangoma FreePBX instances still remain infected with web shells as part of attacks that exploited a command injection vulnerability starting in December 2025. Of these, 401 instances are located in the U.S., followed by 51 in Brazil, 43 in Canad",
       "source": "The Hacker News"
     }
   ]
