@@ -1,7 +1,21 @@
 {
-  "lastUpdated": "2026-03-03T21:59:15.642Z",
+  "lastUpdated": "2026-03-04T05:35:44.646Z",
   "itemCount": 20,
   "items": [
+    {
+      "title": "CISA flags VMware Aria Operations RCE flaw as exploited in attacks",
+      "link": "https://www.bleepingcomputer.com/news/security/cisa-flags-vmware-aria-operations-rce-flaw-as-exploited-in-attacks/",
+      "pubDate": "2026-03-03T23:40:37.000Z",
+      "description": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) has added a VMware Aria Operations vulnerability tracked as CVE-2026-22719 to its Known Exploited Vulnerabilities catalog, flagging the flaw as exploited in attacks. [...]",
+      "source": "BleepingComputer"
+    },
+    {
+      "title": "Paint maker giant AkzoNobel confirms cyberattack on U.S. site",
+      "link": "https://www.bleepingcomputer.com/news/security/paint-maker-giant-akzonobel-confirms-cyberattack-on-us-site/",
+      "pubDate": "2026-03-03T23:00:53.000Z",
+      "description": "The multinational Dutch paint company AkzoNobel has confirmed to BleepingComputer that hackers breached the network of one of its U.S. sites. [...]",
+      "source": "BleepingComputer"
+    },
     {
       "title": "Microsoft: Hackers abuse OAuth error flows to spread malware",
       "link": "https://www.bleepingcomputer.com/news/security/microsoft-hackers-abuse-oauth-error-flows-to-spread-malware/",
@@ -126,20 +140,6 @@
       "link": "https://thehackernews.com/2026/03/new-chrome-vulnerability-let-malicious.html",
       "pubDate": "2026-03-02T17:08:00.000Z",
       "description": "Cybersecurity researchers have disclosed details of a now-patched security flaw in Google Chrome that could have permitted attackers to escalate privileges and gain access to local files on the system. The vulnerability, tracked as CVE-2026-0628 (CVSS score: 8.8), has been described as a case of ins",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "How Deepfakes and Injection Attacks Are Breaking Identity Verification",
-      "link": "https://www.bleepingcomputer.com/news/security/how-deepfakes-and-injection-attacks-are-breaking-identity-verification/",
-      "pubDate": "2026-03-02T15:01:11.000Z",
-      "description": "Deepfakes and injection attacks are targeting identity verification moments, from onboarding to account recovery. Incode explains why enterprises must validate the full session—media, device integrity, and behavior—to stop synthetic and injected attacks in real time. [...]",
-      "source": "BleepingComputer"
-    },
-    {
-      "title": "How to Protect Your SaaS from Bot Attacks with SafeLine WAF",
-      "link": "https://thehackernews.com/2026/03/how-to-protect-your-saas-from-bot.html",
-      "pubDate": "2026-03-02T11:55:00.000Z",
-      "description": "Most SaaS teams remember the day their user traffic started growing fast. Few notice the day bots started targeting them. On paper, everything looks great: more sign-ups, more sessions, more API calls. But in reality, something feels off: Sign-ups increase, but users aren’t activating. Server costs ",
       "source": "The Hacker News"
     }
   ]
