@@ -1,7 +1,14 @@
 {
-  "lastUpdated": "2026-03-04T22:00:50.960Z",
+  "lastUpdated": "2026-03-05T05:38:06.107Z",
   "itemCount": 20,
   "items": [
+    {
+      "title": "Nation-State iOS Exploit Kit ‘Coruna’ Found Powering Global Attacks",
+      "link": "https://www.securityweek.com/nation-state-ios-exploit-kit-coruna-found-powering-global-attacks/",
+      "pubDate": "2026-03-05T04:04:17.000Z",
+      "description": "Google and iVerify analysis reveals a powerful exploit kit originally used by Russian state actors that is now appearing in broader criminal campaigns. The post Nation-State iOS Exploit Kit ‘Coruna’ Found Powering Global Attacks appeared first on SecurityWeek.",
+      "source": "SecurityWeek"
+    },
     {
       "title": "Mail2Shell zero-click attack lets hackers hijack FreeScout mail servers",
       "link": "https://www.bleepingcomputer.com/news/security/mail2shell-zero-click-attack-lets-hackers-hijack-freescout-mail-servers/",
@@ -133,13 +140,6 @@
       "link": "https://thehackernews.com/2026/02/thousands-of-public-google-cloud-api.html",
       "pubDate": "2026-02-28T09:56:00.000Z",
       "description": "New research has found that Google Cloud API keys, typically designated as project identifiers for billing purposes, could be abused to authenticate to sensitive Gemini endpoints and access private data. The findings come from Truffle Security, which discovered nearly 3,000 Google API keys (identifi",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "900+ Sangoma FreePBX Instances Compromised in Ongoing Web Shell Attacks",
-      "link": "https://thehackernews.com/2026/02/900-sangoma-freepbx-instances.html",
-      "pubDate": "2026-02-27T17:59:00.000Z",
-      "description": "The Shadowserver Foundation has revealed that over 900 Sangoma FreePBX instances still remain infected with web shells as part of attacks that exploited a command injection vulnerability starting in December 2025. Of these, 401 instances are located in the U.S., followed by 51 in Brazil, 43 in Canad",
       "source": "The Hacker News"
     }
   ]
