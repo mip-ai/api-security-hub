@@ -1,7 +1,42 @@
 {
-  "lastUpdated": "2026-03-05T05:38:06.107Z",
+  "lastUpdated": "2026-03-05T11:07:15.365Z",
   "itemCount": 20,
   "items": [
+    {
+      "title": "LeakBase Cybercrime Forum Shut Down, Suspects Arrested",
+      "link": "https://www.securityweek.com/leakbase-cybercrime-forum-shut-down-suspects-arrested/",
+      "pubDate": "2026-03-05T10:46:17.000Z",
+      "description": "The stolen credential marketplace had been active since 2021 and in late 2025 it counted 142,000 users. The post LeakBase Cybercrime Forum Shut Down, Suspects Arrested appeared first on SecurityWeek.",
+      "source": "SecurityWeek"
+    },
+    {
+      "title": "Cisco flags more SD-WAN flaws as actively exploited in attacks",
+      "link": "https://www.bleepingcomputer.com/news/security/cisco-flags-more-sd-wan-flaws-as-actively-exploited-in-attacks/",
+      "pubDate": "2026-03-05T10:32:19.000Z",
+      "description": "​Cisco has flagged two more Catalyst SD-WAN Manager security flaws as actively exploited in the wild, urging administrators to upgrade vulnerable devices. [...]",
+      "source": "BleepingComputer"
+    },
+    {
+      "title": "Phobos ransomware admin pleads guilty to wire fraud conspiracy",
+      "link": "https://www.bleepingcomputer.com/news/security/phobos-ransomware-admin-pleads-guilty-to-wire-fraud-conspiracy/",
+      "pubDate": "2026-03-05T08:34:42.000Z",
+      "description": "A Russian national pleaded guilty to a wire fraud conspiracy charge related to his role in administering the Phobos ransomware operation, which breached hundreds of victims worldwide. [...]",
+      "source": "BleepingComputer"
+    },
+    {
+      "title": "Europol-Led Operation Takes Down Tycoon 2FA Phishing-as-a-Service Linked to 64,000 Attacks",
+      "link": "https://thehackernews.com/2026/03/europol-led-operation-takes-down-tycoon.html",
+      "pubDate": "2026-03-05T06:51:00.000Z",
+      "description": "Tycoon 2FA, one of the prominent phishing-as-a-service (PhaaS) toolkits that allowed cybercriminals to stage adversary-in-the-middle (AitM) credential harvesting attacks at scale, was dismantled by a coalition of law enforcement agencies and security companies. The subscription-based phishing kit, w",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "FBI and Europol Seize LeakBase Forum Used to Trade Stolen Credentials",
+      "link": "https://thehackernews.com/2026/03/fbi-and-europol-seize-leakbase-forum.html",
+      "pubDate": "2026-03-05T06:34:00.000Z",
+      "description": "A joint law enforcement operation has dismantled LeakBase, one of the world's largest online forums for cybercriminals to buy and sell stolen data and cybercrime tools. The LeakBase forum, per the U.S. Department of Justice (DoJ), had over 142,000 members and more than 215,000 messages between membe",
+      "source": "The Hacker News"
+    },
     {
       "title": "Nation-State iOS Exploit Kit ‘Coruna’ Found Powering Global Attacks",
       "link": "https://www.securityweek.com/nation-state-ios-exploit-kit-coruna-found-powering-global-attacks/",
@@ -80,13 +115,6 @@
       "source": "BleepingComputer"
     },
     {
-      "title": "Microsoft: Hackers abuse OAuth error flows to spread malware",
-      "link": "https://www.bleepingcomputer.com/news/security/microsoft-hackers-abuse-oauth-error-flows-to-spread-malware/",
-      "pubDate": "2026-03-03T20:59:19.000Z",
-      "description": "Hackers are abusing the legitimate OAuth redirection mechanism to bypass phishing protections in email and browsers to take users to malicious pages. [...]",
-      "source": "BleepingComputer"
-    },
-    {
       "title": "AI Agents: The Next Wave Identity Dark Matter - Powerful, Invisible, and Unmanaged",
       "link": "https://thehackernews.com/2026/03/ai-agents-next-wave-identity-dark.html",
       "pubDate": "2026-03-03T11:30:00.000Z",
@@ -112,34 +140,6 @@
       "link": "https://thehackernews.com/2026/03/new-chrome-vulnerability-let-malicious.html",
       "pubDate": "2026-03-02T17:08:00.000Z",
       "description": "Cybersecurity researchers have disclosed details of a now-patched security flaw in Google Chrome that could have permitted attackers to escalate privileges and gain access to local files on the system. The vulnerability, tracked as CVE-2026-0628 (CVSS score: 8.8), has been described as a case of ins",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "How to Protect Your SaaS from Bot Attacks with SafeLine WAF",
-      "link": "https://thehackernews.com/2026/03/how-to-protect-your-saas-from-bot.html",
-      "pubDate": "2026-03-02T11:55:00.000Z",
-      "description": "Most SaaS teams remember the day their user traffic started growing fast. Few notice the day bots started targeting them. On paper, everything looks great: more sign-ups, more sessions, more API calls. But in reality, something feels off: Sign-ups increase, but users aren’t activating. Server costs ",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "APT28 Tied to CVE-2026-21513 MSHTML 0-Day Exploited Before Feb 2026 Patch Tuesday",
-      "link": "https://thehackernews.com/2026/03/apt28-tied-to-cve-2026-21513-mshtml-0.html",
-      "pubDate": "2026-03-02T10:36:00.000Z",
-      "description": "A recently disclosed security flaw patched by Microsoft may have been exploited by the Russia-linked state-sponsored threat actor known as APT28, according to new findings from Akamai. The vulnerability in question is CVE-2026-21513 (CVSS score: 8.8), a high-severity security feature bypass affectin",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "ClawJacked Flaw Lets Malicious Sites Hijack Local OpenClaw AI Agents via WebSocket",
-      "link": "https://thehackernews.com/2026/02/clawjacked-flaw-lets-malicious-sites.html",
-      "pubDate": "2026-02-28T17:21:00.000Z",
-      "description": "OpenClaw has fixed a high-severity security issue that, if successfully exploited, could have allowed a malicious website to connect to a locally running artificial intelligence (AI) agent and take over control. \"Our vulnerability lives in the core system itself – no plugins, no marketplace, no user",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "Thousands of Public Google Cloud API Keys Exposed with Gemini Access After API Enablement",
-      "link": "https://thehackernews.com/2026/02/thousands-of-public-google-cloud-api.html",
-      "pubDate": "2026-02-28T09:56:00.000Z",
-      "description": "New research has found that Google Cloud API keys, typically designated as project identifiers for billing purposes, could be abused to authenticate to sensitive Gemini endpoints and access private data. The findings come from Truffle Security, which discovered nearly 3,000 Google API keys (identifi",
       "source": "The Hacker News"
     }
   ]
