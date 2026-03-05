@@ -1,7 +1,63 @@
 {
-  "lastUpdated": "2026-03-05T11:07:15.365Z",
+  "lastUpdated": "2026-03-05T19:39:07.361Z",
   "itemCount": 20,
   "items": [
+    {
+      "title": "WordPress membership plugin bug exploited to create admin accounts",
+      "link": "https://www.bleepingcomputer.com/news/security/wordpress-membership-plugin-bug-exploited-to-create-admin-accounts/",
+      "pubDate": "2026-03-05T18:44:58.000Z",
+      "description": "Hackers are exploiting a critical vulnerability in the User Registration & Membership plugin, which is installed on more than 60,000 WordPress sites. [...]",
+      "source": "BleepingComputer"
+    },
+    {
+      "title": "Cisco Confirms Active Exploitation of Two Catalyst SD-WAN Manager Vulnerabilities",
+      "link": "https://thehackernews.com/2026/03/cisco-confirms-active-exploitation-of.html",
+      "pubDate": "2026-03-05T15:22:00.000Z",
+      "description": "Cisco has disclosed that two more vulnerabilities affecting Catalyst SD-WAN Manager (formerly SD-WAN vManage) have come under active exploitation in the wild. The vulnerabilities in question are listed below - CVE-2026-20122 (CVSS score: 7.1) - An arbitrary file overwrite vulnerability that could al",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "Google says 90 zero-days were exploited in attacks last year",
+      "link": "https://www.bleepingcomputer.com/news/security/google-says-90-zero-days-were-exploited-in-attacks-last-year/",
+      "pubDate": "2026-03-05T15:03:43.000Z",
+      "description": "Google Threat Intelligence Group (GTIG) tracked 90 zero-day vulnerabilities actively exploited throughout 2025, almost half of them in enterprise software and appliances. [...]",
+      "source": "BleepingComputer"
+    },
+    {
+      "title": "2026 Browser Data Reveals Major Enterprise Security Blind Spots",
+      "link": "https://www.bleepingcomputer.com/news/security/2026-browser-data-reveals-major-enterprise-security-blind-spots/",
+      "pubDate": "2026-03-05T15:01:11.000Z",
+      "description": "The browser is becoming the operating system for modern work, yet many enterprises still treat it as an extension of network or endpoint security. Keep Aware's 2026 State of Browser Security Report shows 41% of employees used AI web tools while browser-based phishing, extensions, and social engineer",
+      "source": "BleepingComputer"
+    },
+    {
+      "title": "Google: Half of 2025&#8217;s 90 Exploited Zero-Days Aimed at Enterprises",
+      "link": "https://www.securityweek.com/google-half-of-2025s-90-exploited-zero-days-aimed-at-enterprises/",
+      "pubDate": "2026-03-05T15:00:00.000Z",
+      "description": "Less than half of the total zero-days have been attributed to a threat actor, but spyware vendors and China are in the lead. The post Google: Half of 2025&#8217;s 90 Exploited Zero-Days Aimed at Enterprises appeared first on SecurityWeek.",
+      "source": "SecurityWeek"
+    },
+    {
+      "title": "Police dismantles online gambling ring exploiting Ukrainian women",
+      "link": "https://www.bleepingcomputer.com/news/security/police-dismantles-online-gambling-ring-exploiting-ukrainian-women/",
+      "pubDate": "2026-03-05T12:39:20.000Z",
+      "description": "Spanish and Ukrainian law enforcement authorities dismantled a criminal ring that exploited war-displaced Ukrainian women to run an online gambling scheme that laundered nearly €4.75 million in illicit proceeds. [...]",
+      "source": "BleepingComputer"
+    },
+    {
+      "title": "Cisco Warns of More Catalyst SD-WAN Flaws Exploited in the Wild",
+      "link": "https://www.securityweek.com/cisco-warns-of-more-catalyst-sd-wan-flaws-exploited-in-the-wild/",
+      "pubDate": "2026-03-05T12:15:06.000Z",
+      "description": "The networking giant has added the recently patched CVE-2026-20128 and CVE-2026-20122 to the list of exploited vulnerabilities. The post Cisco Warns of More Catalyst SD-WAN Flaws Exploited in the Wild appeared first on SecurityWeek.",
+      "source": "SecurityWeek"
+    },
+    {
+      "title": "Where Multi-Factor Authentication Stops and Credential Abuse Starts",
+      "link": "https://thehackernews.com/2026/03/where-multi-factor-authentication-stops.html",
+      "pubDate": "2026-03-05T11:00:00.000Z",
+      "description": "Organizations typically roll out multi-factor authentication (MFA) and assume stolen passwords are no longer enough to access systems. In Windows environments, that assumption is often wrong. Attackers still compromise networks every day using valid credentials. The issue is not MFA itself, but cove",
+      "source": "The Hacker News"
+    },
     {
       "title": "LeakBase Cybercrime Forum Shut Down, Suspects Arrested",
       "link": "https://www.securityweek.com/leakbase-cybercrime-forum-shut-down-suspects-arrested/",
@@ -13,7 +69,7 @@
       "title": "Cisco flags more SD-WAN flaws as actively exploited in attacks",
       "link": "https://www.bleepingcomputer.com/news/security/cisco-flags-more-sd-wan-flaws-as-actively-exploited-in-attacks/",
       "pubDate": "2026-03-05T10:32:19.000Z",
-      "description": "​Cisco has flagged two more Catalyst SD-WAN Manager security flaws as actively exploited in the wild, urging administrators to upgrade vulnerable devices. [...]",
+      "description": "​Cisco has flagged two Catalyst SD-WAN Manager security flaws as actively exploited in the wild, urging administrators to upgrade vulnerable devices. [...]",
       "source": "BleepingComputer"
     },
     {
@@ -66,25 +122,11 @@
       "source": "SecurityWeek"
     },
     {
-      "title": "How a Brute Force Attack Unmasked a Ransomware Infrastructure Network",
-      "link": "https://www.bleepingcomputer.com/news/security/how-a-brute-force-attack-unmasked-a-ransomware-infrastructure-network/",
-      "pubDate": "2026-03-04T15:02:12.000Z",
-      "description": "A routine RDP brute-force alert led to unusual credential hunting and a geo-distributed VPN-linked infrastructure. Huntress Labs explains how one compromised login unraveled a suspected ransomware-as-a-service ecosystem tied to initial access brokers. [...]",
-      "source": "BleepingComputer"
-    },
-    {
       "title": "Coruna iOS Exploit Kit Uses 23 Exploits Across Five Chains Targeting iOS 13–17.2.1",
       "link": "https://thehackernews.com/2026/03/coruna-ios-exploit-kit-uses-23-exploits.html",
       "pubDate": "2026-03-04T13:28:00.000Z",
       "description": "Google said it identified a \"new and powerful\" exploit kit dubbed Coruna (aka CryptoWaters) targeting Apple iPhone models running iOS versions between 13.0 and 17.2.1. The exploit kit featured five full iOS exploit chains and a total of 23 exploits, Google Threat Intelligence Group (GTIG) said. It's",
       "source": "The Hacker News"
-    },
-    {
-      "title": "How Pirated Software Turns Helpful Employees Into Malware Delivery Agents",
-      "link": "https://www.securityweek.com/how-pirated-software-turns-helpful-employees-into-malware-delivery-agents/",
-      "pubDate": "2026-03-04T12:48:16.000Z",
-      "description": "Employees seeking free versions of paid software may unknowingly install malware-laced “cracked” apps that can steal credentials, deploy cryptominers, or open the door to ransomware. The post How Pirated Software Turns Helpful Employees Into Malware Delivery Agents appeared first on SecurityWeek.",
-      "source": "SecurityWeek"
     },
     {
       "title": "APT41-Linked Silver Dragon Targets Governments Using Cobalt Strike and Google Drive C2",
@@ -98,48 +140,6 @@
       "link": "https://thehackernews.com/2026/03/cisa-adds-actively-exploited-vmware.html",
       "pubDate": "2026-03-04T04:35:00.000Z",
       "description": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Tuesday added a recently disclosed security flaw impacting Broadcom VMware Aria Operations to its Known Exploited Vulnerabilities (KEV) catalog, citing active exploitation in the wild. The high-severity vulnerability, CVE-2026-22719",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "CISA flags VMware Aria Operations RCE flaw as exploited in attacks",
-      "link": "https://www.bleepingcomputer.com/news/security/cisa-flags-vmware-aria-operations-rce-flaw-as-exploited-in-attacks/",
-      "pubDate": "2026-03-03T23:40:37.000Z",
-      "description": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) has added a VMware Aria Operations vulnerability tracked as CVE-2026-22719 to its Known Exploited Vulnerabilities catalog, flagging the flaw as exploited in attacks. [...]",
-      "source": "BleepingComputer"
-    },
-    {
-      "title": "Paint maker giant AkzoNobel confirms cyberattack on U.S. site",
-      "link": "https://www.bleepingcomputer.com/news/security/paint-maker-giant-akzonobel-confirms-cyberattack-on-us-site/",
-      "pubDate": "2026-03-03T23:00:53.000Z",
-      "description": "The multinational Dutch paint company AkzoNobel has confirmed to BleepingComputer that hackers breached the network of one of its U.S. sites. [...]",
-      "source": "BleepingComputer"
-    },
-    {
-      "title": "AI Agents: The Next Wave Identity Dark Matter - Powerful, Invisible, and Unmanaged",
-      "link": "https://thehackernews.com/2026/03/ai-agents-next-wave-identity-dark.html",
-      "pubDate": "2026-03-03T11:30:00.000Z",
-      "description": "The Rise of MCPs in the Enterprise The Model Context Protocol (MCP) is quickly becoming a practical way to push LLMs from “chat” into real work. By providing structured access to applications, APIs, and data, MCP enables prompt-driven AI agents that can retrieve information, take action, and automat",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "Microsoft Warns OAuth Redirect Abuse Delivers Malware to Government Targets",
-      "link": "https://thehackernews.com/2026/03/microsoft-warns-oauth-redirect-abuse.html",
-      "pubDate": "2026-03-03T09:20:00.000Z",
-      "description": "Microsoft on Monday warned of phishing campaigns that employ phishing emails and OAuth URL redirection mechanisms to bypass conventional phishing defenses implemented in email and browsers. The activity, the company said, targets government and public-sector organizations with the end goal of redire",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "Google Confirms CVE-2026-21385 in Qualcomm Android Component Exploited",
-      "link": "https://thehackernews.com/2026/03/google-confirms-cve-2026-21385-in.html",
-      "pubDate": "2026-03-03T07:08:00.000Z",
-      "description": "Google on Monday disclosed that a high-severity security flaw impacting an open-source Qualcomm component used in Android devices has been exploited in the wild. The vulnerability in question is CVE-2026-21385 (CVSS score: 7.8), a buffer over-read in the Graphics component. \"Memory corruption when a",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "New Chrome Vulnerability Let Malicious Extensions Escalate Privileges via Gemini Panel",
-      "link": "https://thehackernews.com/2026/03/new-chrome-vulnerability-let-malicious.html",
-      "pubDate": "2026-03-02T17:08:00.000Z",
-      "description": "Cybersecurity researchers have disclosed details of a now-patched security flaw in Google Chrome that could have permitted attackers to escalate privileges and gain access to local files on the system. The vulnerability, tracked as CVE-2026-0628 (CVSS score: 8.8), has been described as a case of ins",
       "source": "The Hacker News"
     }
   ]
