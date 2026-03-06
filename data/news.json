@@ -1,7 +1,21 @@
 {
-  "lastUpdated": "2026-03-06T05:36:51.771Z",
+  "lastUpdated": "2026-03-06T10:58:49.802Z",
   "itemCount": 20,
   "items": [
+    {
+      "title": "FBI investigates breach of surveillance and wiretap systems",
+      "link": "https://www.bleepingcomputer.com/news/security/fbi-investigates-breach-of-surveillance-and-wiretap-systems/",
+      "pubDate": "2026-03-06T08:44:53.000Z",
+      "description": "The U.S. Federal Bureau of Investigation (FBI) confirmed on Thursday that it's investigating a breach that affected systems used to manage surveillance and wiretap warrants. [...]",
+      "source": "BleepingComputer"
+    },
+    {
+      "title": "Hikvision and Rockwell Automation CVSS 9.8 Flaws Added to CISA KEV Catalog",
+      "link": "https://thehackernews.com/2026/03/hikvision-and-rockwell-automation-cvss.html",
+      "pubDate": "2026-03-06T06:30:00.000Z",
+      "description": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Thursday added two security flaws impacting Hikvision and Rockwell Automation products to its Known Exploited Vulnerabilities (KEV) catalog, citing evidence of active exploitation. The critical-severity vulnerabilities are listed be",
+      "source": "The Hacker News"
+    },
     {
       "title": "WordPress membership plugin bug exploited to create admin accounts",
       "link": "https://www.bleepingcomputer.com/news/security/wordpress-membership-plugin-bug-exploited-to-create-admin-accounts/",
@@ -126,20 +140,6 @@
       "link": "https://thehackernews.com/2026/03/apt41-linked-silver-dragon-targets.html",
       "pubDate": "2026-03-04T08:14:00.000Z",
       "description": "Cybersecurity researchers have disclosed details of an advanced persistent threat (APT) group dubbed Silver Dragon that has been linked to cyber attacks targeting entities in Europe and Southeast Asia since at least mid-2024. \"Silver Dragon gains its initial access by exploiting public-facing intern",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "CISA Adds Actively Exploited VMware Aria Operations Flaw CVE-2026-22719 to KEV Catalog",
-      "link": "https://thehackernews.com/2026/03/cisa-adds-actively-exploited-vmware.html",
-      "pubDate": "2026-03-04T04:35:00.000Z",
-      "description": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Tuesday added a recently disclosed security flaw impacting Broadcom VMware Aria Operations to its Known Exploited Vulnerabilities (KEV) catalog, citing active exploitation in the wild. The high-severity vulnerability, CVE-2026-22719",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "AI Agents: The Next Wave Identity Dark Matter - Powerful, Invisible, and Unmanaged",
-      "link": "https://thehackernews.com/2026/03/ai-agents-next-wave-identity-dark.html",
-      "pubDate": "2026-03-03T11:30:00.000Z",
-      "description": "The Rise of MCPs in the Enterprise The Model Context Protocol (MCP) is quickly becoming a practical way to push LLMs from “chat” into real work. By providing structured access to applications, APIs, and data, MCP enables prompt-driven AI agents that can retrieve information, take action, and automat",
       "source": "The Hacker News"
     }
   ]
