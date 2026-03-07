@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-03-07T09:53:06.143Z",
-  "itemCount": 20,
+  "lastUpdated": "2026-03-07T15:46:03.102Z",
+  "itemCount": 11,
   "items": [
     {
       "title": "Cognizant TriZetto breach exposes health data of 3.4 million patients",
@@ -52,25 +52,11 @@
       "source": "BleepingComputer"
     },
     {
-      "title": "Hikvision and Rockwell Automation CVSS 9.8 Flaws Added to CISA KEV Catalog",
-      "link": "https://thehackernews.com/2026/03/hikvision-and-rockwell-automation-cvss.html",
-      "pubDate": "2026-03-06T06:30:00.000Z",
-      "description": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Thursday added two security flaws impacting Hikvision and Rockwell Automation products to its Known Exploited Vulnerabilities (KEV) catalog, citing evidence of active exploitation. The critical-severity vulnerabilities are listed be",
-      "source": "The Hacker News"
-    },
-    {
       "title": "WordPress membership plugin bug exploited to create admin accounts",
       "link": "https://www.bleepingcomputer.com/news/security/wordpress-membership-plugin-bug-exploited-to-create-admin-accounts/",
       "pubDate": "2026-03-05T18:44:58.000Z",
       "description": "Hackers are exploiting a critical vulnerability in the User Registration & Membership plugin, which is installed on more than 60,000 WordPress sites. [...]",
       "source": "BleepingComputer"
-    },
-    {
-      "title": "Cisco Confirms Active Exploitation of Two Catalyst SD-WAN Manager Vulnerabilities",
-      "link": "https://thehackernews.com/2026/03/cisco-confirms-active-exploitation-of.html",
-      "pubDate": "2026-03-05T15:22:00.000Z",
-      "description": "Cisco has disclosed that two more vulnerabilities affecting Catalyst SD-WAN Manager (formerly SD-WAN vManage) have come under active exploitation in the wild. The vulnerabilities in question are listed below - CVE-2026-20122 (CVSS score: 7.1) - An arbitrary file overwrite vulnerability that could al",
-      "source": "The Hacker News"
     },
     {
       "title": "Google says 90 zero-days were exploited in attacks last year",
@@ -87,60 +73,11 @@
       "source": "BleepingComputer"
     },
     {
-      "title": "Google: Half of 2025&#8217;s 90 Exploited Zero-Days Aimed at Enterprises",
-      "link": "https://www.securityweek.com/google-half-of-2025s-90-exploited-zero-days-aimed-at-enterprises/",
-      "pubDate": "2026-03-05T15:00:00.000Z",
-      "description": "Less than half of the total zero-days have been attributed to a threat actor, but spyware vendors and China are in the lead. The post Google: Half of 2025&#8217;s 90 Exploited Zero-Days Aimed at Enterprises appeared first on SecurityWeek.",
-      "source": "SecurityWeek"
-    },
-    {
-      "title": "Police dismantles online gambling ring exploiting Ukrainian women",
-      "link": "https://www.bleepingcomputer.com/news/security/police-dismantles-online-gambling-ring-exploiting-ukrainian-women/",
-      "pubDate": "2026-03-05T12:39:20.000Z",
-      "description": "Spanish and Ukrainian law enforcement authorities dismantled a criminal ring that exploited war-displaced Ukrainian women to run an online gambling scheme that laundered nearly €4.75 million in illicit proceeds. [...]",
-      "source": "BleepingComputer"
-    },
-    {
-      "title": "Where Multi-Factor Authentication Stops and Credential Abuse Starts",
-      "link": "https://thehackernews.com/2026/03/where-multi-factor-authentication-stops.html",
-      "pubDate": "2026-03-05T11:00:00.000Z",
-      "description": "Organizations typically roll out multi-factor authentication (MFA) and assume stolen passwords are no longer enough to access systems. In Windows environments, that assumption is often wrong. Attackers still compromise networks every day using valid credentials. The issue is not MFA itself, but cove",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "Europol-Led Operation Takes Down Tycoon 2FA Phishing-as-a-Service Linked to 64,000 Attacks",
-      "link": "https://thehackernews.com/2026/03/europol-led-operation-takes-down-tycoon.html",
-      "pubDate": "2026-03-05T06:51:00.000Z",
-      "description": "Tycoon 2FA, one of the prominent phishing-as-a-service (PhaaS) toolkits that allowed cybercriminals to stage adversary-in-the-middle (AitM) credential harvesting attacks at scale, was dismantled by a coalition of law enforcement agencies and security companies. The subscription-based phishing kit, w",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "FBI and Europol Seize LeakBase Forum Used to Trade Stolen Credentials",
-      "link": "https://thehackernews.com/2026/03/fbi-and-europol-seize-leakbase-forum.html",
-      "pubDate": "2026-03-05T06:34:00.000Z",
-      "description": "A joint law enforcement operation has dismantled LeakBase, one of the world's largest online forums for cybercriminals to buy and sell stolen data and cybercrime tools. The LeakBase forum, per the U.S. Department of Justice (DoJ), had over 142,000 members and more than 215,000 messages between membe",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "Coruna iOS Exploit Kit Uses 23 Exploits Across Five Chains Targeting iOS 13–17.2.1",
-      "link": "https://thehackernews.com/2026/03/coruna-ios-exploit-kit-uses-23-exploits.html",
-      "pubDate": "2026-03-04T13:28:00.000Z",
-      "description": "Google said it identified a \"new and powerful\" exploit kit dubbed Coruna (aka CryptoWaters) targeting Apple iPhone models running iOS versions between 13.0 and 17.2.1. The exploit kit featured five full iOS exploit chains and a total of 23 exploits, Google Threat Intelligence Group (GTIG) said. It's",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "APT41-Linked Silver Dragon Targets Governments Using Cobalt Strike and Google Drive C2",
-      "link": "https://thehackernews.com/2026/03/apt41-linked-silver-dragon-targets.html",
-      "pubDate": "2026-03-04T08:14:00.000Z",
-      "description": "Cybersecurity researchers have disclosed details of an advanced persistent threat (APT) group dubbed Silver Dragon that has been linked to cyber attacks targeting entities in Europe and Southeast Asia since at least mid-2024. \"Silver Dragon gains its initial access by exploiting public-facing intern",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "CISA Adds Actively Exploited VMware Aria Operations Flaw CVE-2026-22719 to KEV Catalog",
-      "link": "https://thehackernews.com/2026/03/cisa-adds-actively-exploited-vmware.html",
-      "pubDate": "2026-03-04T04:35:00.000Z",
-      "description": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Tuesday added a recently disclosed security flaw impacting Broadcom VMware Aria Operations to its Known Exploited Vulnerabilities (KEV) catalog, citing active exploitation in the wild. The high-severity vulnerability, CVE-2026-22719",
-      "source": "The Hacker News"
+      "title": "How Cloudy translates complex security into human action",
+      "link": "https://blog.cloudflare.com/cloudy-upgrades-for-cloudflare-one/",
+      "pubDate": "2026-03-03T06:00:00.000Z",
+      "description": "Cloudy is our LLM-powered explanation layer built directly into Cloudflare One. Its explanations, now part of Phishnet and API CASB, can improve user decisions and SOC efficiency.",
+      "source": "Cloudflare Blog"
     }
   ]
 }
