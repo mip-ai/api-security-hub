@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-06T21:54:49.829Z",
+  "lastUpdated": "2026-03-07T05:25:52.534Z",
   "itemCount": 20,
   "items": [
     {
@@ -101,13 +101,6 @@
       "source": "BleepingComputer"
     },
     {
-      "title": "Cisco Warns of More Catalyst SD-WAN Flaws Exploited in the Wild",
-      "link": "https://www.securityweek.com/cisco-warns-of-more-catalyst-sd-wan-flaws-exploited-in-the-wild/",
-      "pubDate": "2026-03-05T12:15:06.000Z",
-      "description": "The networking giant has added the recently patched CVE-2026-20128 and CVE-2026-20122 to the list of exploited vulnerabilities. The post Cisco Warns of More Catalyst SD-WAN Flaws Exploited in the Wild appeared first on SecurityWeek.",
-      "source": "SecurityWeek"
-    },
-    {
       "title": "Where Multi-Factor Authentication Stops and Credential Abuse Starts",
       "link": "https://thehackernews.com/2026/03/where-multi-factor-authentication-stops.html",
       "pubDate": "2026-03-05T11:00:00.000Z",
@@ -140,6 +133,13 @@
       "link": "https://thehackernews.com/2026/03/apt41-linked-silver-dragon-targets.html",
       "pubDate": "2026-03-04T08:14:00.000Z",
       "description": "Cybersecurity researchers have disclosed details of an advanced persistent threat (APT) group dubbed Silver Dragon that has been linked to cyber attacks targeting entities in Europe and Southeast Asia since at least mid-2024. \"Silver Dragon gains its initial access by exploiting public-facing intern",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "CISA Adds Actively Exploited VMware Aria Operations Flaw CVE-2026-22719 to KEV Catalog",
+      "link": "https://thehackernews.com/2026/03/cisa-adds-actively-exploited-vmware.html",
+      "pubDate": "2026-03-04T04:35:00.000Z",
+      "description": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Tuesday added a recently disclosed security flaw impacting Broadcom VMware Aria Operations to its Known Exploited Vulnerabilities (KEV) catalog, citing active exploitation in the wild. The high-severity vulnerability, CVE-2026-22719",
       "source": "The Hacker News"
     }
   ]
