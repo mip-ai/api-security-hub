@@ -1,7 +1,14 @@
 {
-  "lastUpdated": "2026-03-08T09:53:51.436Z",
+  "lastUpdated": "2026-03-08T15:46:39.438Z",
   "itemCount": 20,
   "items": [
+    {
+      "title": "Recent Cisco Catalyst SD-WAN Vulnerability Now Widely Exploited",
+      "link": "https://www.securityweek.com/recent-cisco-catalyst-sd-wan-vulnerability-now-widely-exploited/",
+      "pubDate": "2026-03-08T12:15:00.000Z",
+      "description": "WatchTowr reports seeing exploitation attempts for CVE-2026-20127 from numerous unique IP addresses. The post Recent Cisco Catalyst SD-WAN Vulnerability Now Widely Exploited appeared first on SecurityWeek.",
+      "source": "SecurityWeek"
+    },
     {
       "title": "Termite ransomware breaches linked to ClickFix CastleRAT attacks",
       "link": "https://www.bleepingcomputer.com/news/security/termite-ransomware-breaches-linked-to-clickfix-castlerat-attacks/",
@@ -78,13 +85,6 @@
       "pubDate": "2026-03-05T15:22:00.000Z",
       "description": "Cisco has disclosed that two more vulnerabilities affecting Catalyst SD-WAN Manager (formerly SD-WAN vManage) have come under active exploitation in the wild. The vulnerabilities in question are listed below - CVE-2026-20122 (CVSS score: 7.1) - An arbitrary file overwrite vulnerability that could al",
       "source": "The Hacker News"
-    },
-    {
-      "title": "Google says 90 zero-days were exploited in attacks last year",
-      "link": "https://www.bleepingcomputer.com/news/security/google-says-90-zero-days-were-exploited-in-attacks-last-year/",
-      "pubDate": "2026-03-05T15:03:43.000Z",
-      "description": "Google Threat Intelligence Group (GTIG) tracked 90 zero-day vulnerabilities actively exploited throughout 2025, almost half of them in enterprise software and appliances. [...]",
-      "source": "BleepingComputer"
     },
     {
       "title": "Where Multi-Factor Authentication Stops and Credential Abuse Starts",
