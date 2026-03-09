@@ -1,7 +1,42 @@
 {
-  "lastUpdated": "2026-03-09T11:10:56.445Z",
+  "lastUpdated": "2026-03-09T17:37:00.930Z",
   "itemCount": 20,
   "items": [
+    {
+      "title": "ShinyHunters claims ongoing Salesforce Aura data theft attacks",
+      "link": "https://www.bleepingcomputer.com/news/security/shinyhunters-claims-ongoing-salesforce-aura-data-theft-attacks/",
+      "pubDate": "2026-03-09T17:12:22.000Z",
+      "description": "Salesforce is warning customers that hackers are targeting websites with misconfigured Experience Cloud platforms that give guest users access to more data than intended. However, the ShinyHunters extortion gang claims to be actively exploiting a new bug to steal data from instances. [...]",
+      "source": "BleepingComputer"
+    },
+    {
+      "title": "UNC4899 Breached Crypto Firm After Developer AirDropped Trojanized File to Work Device",
+      "link": "https://thehackernews.com/2026/03/unc4899-used-airdrop-file-transfer-and.html",
+      "pubDate": "2026-03-09T14:50:00.000Z",
+      "description": "The North Korean threat actor known as UNC4899 is suspected to be behind a sophisticated cloud compromise campaign targeting a cryptocurrency organization in 2025 to steal millions of dollars in cryptocurrency. The activity has been attributed with moderate confidence to the state-sponsored adversar",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "Why Password Audits Miss the Accounts Attackers Actually Want",
+      "link": "https://www.bleepingcomputer.com/news/security/why-password-audits-miss-the-accounts-attackers-actually-want/",
+      "pubDate": "2026-03-09T14:10:20.000Z",
+      "description": "Password audits often focus on complexity rules but miss the accounts attackers actually target. Specops Software explains how breached passwords, orphaned users, and service accounts can leave organizations exposed. [...]",
+      "source": "BleepingComputer"
+    },
+    {
+      "title": "Active defense: introducing a stateful vulnerability scanner for APIs",
+      "link": "https://blog.cloudflare.com/vulnerability-scanner/",
+      "pubDate": "2026-03-09T14:00:00.000Z",
+      "description": "Cloudflare’s new Web and API Vulnerability Scanner helps teams proactively find logic flaws. By using AI to build API call graphs, we identify vulnerabilities that standard defensive tools miss.",
+      "source": "Cloudflare Blog"
+    },
+    {
+      "title": "⚡ Weekly Recap: Qualcomm 0-Day, iOS Exploit Chains, AirSnitch Attack &amp; Vibe-Coded Malware",
+      "link": "https://thehackernews.com/2026/03/weekly-recap-qualcomm-0-day-ios-exploit.html",
+      "pubDate": "2026-03-09T13:46:00.000Z",
+      "description": "Another week in cybersecurity. Another week of \"you've got to be kidding me.\" Attackers were busy. Defenders were busy. And somewhere in the middle, a whole lot of people had a very bad Monday morning. That's kind of just how it goes now. The good news? There were some actual wins this week. Real on",
+      "source": "The Hacker News"
+    },
     {
       "title": "Chrome Extension Turns Malicious After Ownership Transfer, Enabling Code Injection and Data Theft",
       "link": "https://thehackernews.com/2026/03/chrome-extension-turns-malicious-after.html",
@@ -45,38 +80,10 @@
       "source": "BleepingComputer"
     },
     {
-      "title": "In Other News: FBI Hacked, US Security Pro Killed in Iran War, Hijacked Cameras Used in Khamenei Strike",
-      "link": "https://www.securityweek.com/in-other-news-fbi-hacked-us-security-pro-killed-in-iran-war-hijacked-cameras-used-in-khamenei-strike/",
-      "pubDate": "2026-03-06T15:35:00.000Z",
-      "description": "Other noteworthy stories that might have slipped under the radar: Avira antivirus vulnerabilities, Transport for London data breach affects 10 million, Gaming cheat exposes North Korean hacker. The post In Other News: FBI Hacked, US Security Pro Killed in Iran War, Hijacked Cameras Used in Khamenei ",
-      "source": "SecurityWeek"
-    },
-    {
       "title": "EC-Council Expands AI Certification Portfolio to Strengthen U.S. AI Workforce Readiness and Security",
       "link": "https://www.bleepingcomputer.com/news/security/ec-council-expands-ai-certification-portfolio-to-strengthen-us-ai-workforce-readiness-and-security/",
       "pubDate": "2026-03-06T15:00:10.000Z",
       "description": "EC-Council, creator of the world-renowned Certified Ethical Hacker (CEH) credential and a global leader in applied cybersecurity education, today launched its Enterprise AI Credential Suite, with four new role-based AI certifications debuting alongside Certified CISO v4, an overhauled executive cybe",
-      "source": "BleepingComputer"
-    },
-    {
-      "title": "CISA Adds iOS Flaws From Coruna Exploit Kit to KEV List",
-      "link": "https://www.securityweek.com/cisa-adds-ios-flaws-from-coruna-exploit-kit-to-kev/",
-      "pubDate": "2026-03-06T13:18:12.000Z",
-      "description": "The nation-state-grade iOS exploit kit targets 23 vulnerabilities affecting iOS 13 to 17.2.1. The post CISA Adds iOS Flaws From Coruna Exploit Kit to KEV List appeared first on SecurityWeek.",
-      "source": "SecurityWeek"
-    },
-    {
-      "title": "Rockwell Vulnerability Allowing Remote ICS Hacking Exploited in Attacks",
-      "link": "https://www.securityweek.com/rockwell-vulnerability-allowing-remote-ics-hacking-exploited-in-attacks/",
-      "pubDate": "2026-03-06T12:32:09.000Z",
-      "description": "The vulnerability was disclosed and mitigated in 2021 but its in-the-wild exploitation has only now come to light. The post Rockwell Vulnerability Allowing Remote ICS Hacking Exploited in Attacks appeared first on SecurityWeek.",
-      "source": "SecurityWeek"
-    },
-    {
-      "title": "FBI investigates breach of surveillance and wiretap systems",
-      "link": "https://www.bleepingcomputer.com/news/security/fbi-investigates-breach-of-surveillance-and-wiretap-systems/",
-      "pubDate": "2026-03-06T08:44:53.000Z",
-      "description": "The U.S. Federal Bureau of Investigation (FBI) confirmed on Thursday that it's investigating a breach that affected systems used to manage surveillance and wiretap warrants. [...]",
       "source": "BleepingComputer"
     },
     {
@@ -85,13 +92,6 @@
       "pubDate": "2026-03-06T06:30:00.000Z",
       "description": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Thursday added two security flaws impacting Hikvision and Rockwell Automation products to its Known Exploited Vulnerabilities (KEV) catalog, citing evidence of active exploitation. The critical-severity vulnerabilities are listed be",
       "source": "The Hacker News"
-    },
-    {
-      "title": "WordPress membership plugin bug exploited to create admin accounts",
-      "link": "https://www.bleepingcomputer.com/news/security/wordpress-membership-plugin-bug-exploited-to-create-admin-accounts/",
-      "pubDate": "2026-03-05T18:44:58.000Z",
-      "description": "Hackers are exploiting a critical vulnerability in the User Registration & Membership plugin, which is installed on more than 60,000 WordPress sites. [...]",
-      "source": "BleepingComputer"
     },
     {
       "title": "Cisco Confirms Active Exploitation of Two Catalyst SD-WAN Manager Vulnerabilities",
