@@ -1,7 +1,28 @@
 {
-  "lastUpdated": "2026-03-09T17:37:00.930Z",
+  "lastUpdated": "2026-03-09T21:58:11.585Z",
   "itemCount": 20,
   "items": [
+    {
+      "title": "Google: Cloud attacks exploit flaws more than weak credentials",
+      "link": "https://www.bleepingcomputer.com/news/security/google-cloud-attacks-exploit-flaws-more-than-weak-credentials/",
+      "pubDate": "2026-03-09T21:45:34.000Z",
+      "description": "Hackers are increasingly exploiting newly disclosed vulnerabilities in third-party software to gain initial access to cloud environments, with the window for attacks shrinking from weeks to just days. [...]",
+      "source": "BleepingComputer"
+    },
+    {
+      "title": "Ericsson US discloses data breach after service provider hack",
+      "link": "https://www.bleepingcomputer.com/news/security/ericsson-us-discloses-data-breach-after-service-provider-hack/",
+      "pubDate": "2026-03-09T19:07:50.000Z",
+      "description": "Ericsson Inc., the U.S. subsidiary of Swedish networking and telecommunications giant Ericsson, says attackers have stolen data belonging to an undisclosed number of employees and customers after hacking one of its service providers. [...]",
+      "source": "BleepingComputer"
+    },
+    {
+      "title": "Malicious npm Package Posing as OpenClaw Installer Deploys RAT, Steals macOS Credentials",
+      "link": "https://thehackernews.com/2026/03/malicious-npm-package-posing-as.html",
+      "pubDate": "2026-03-09T18:31:00.000Z",
+      "description": "Cybersecurity researchers have discovered a malicious npm package that masquerades as an OpenClaw installer to deploy a remote access trojan (RAT) and steal sensitive data from compromised hosts. The package, named \"@openclaw-ai/openclawai,\" was uploaded to the registry by a user named \"openclaw-ai\"",
+      "source": "The Hacker News"
+    },
     {
       "title": "ShinyHunters claims ongoing Salesforce Aura data theft attacks",
       "link": "https://www.bleepingcomputer.com/news/security/shinyhunters-claims-ongoing-salesforce-aura-data-theft-attacks/",
@@ -119,27 +140,6 @@
       "link": "https://thehackernews.com/2026/03/fbi-and-europol-seize-leakbase-forum.html",
       "pubDate": "2026-03-05T06:34:00.000Z",
       "description": "A joint law enforcement operation has dismantled LeakBase, one of the world's largest online forums for cybercriminals to buy and sell stolen data and cybercrime tools. The LeakBase forum, per the U.S. Department of Justice (DoJ), had over 142,000 members and more than 215,000 messages between membe",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "Coruna iOS Exploit Kit Uses 23 Exploits Across Five Chains Targeting iOS 13–17.2.1",
-      "link": "https://thehackernews.com/2026/03/coruna-ios-exploit-kit-uses-23-exploits.html",
-      "pubDate": "2026-03-04T13:28:00.000Z",
-      "description": "Google said it identified a \"new and powerful\" exploit kit dubbed Coruna (aka CryptoWaters) targeting Apple iPhone models running iOS versions between 13.0 and 17.2.1. The exploit kit featured five full iOS exploit chains and a total of 23 exploits, Google Threat Intelligence Group (GTIG) said. It's",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "APT41-Linked Silver Dragon Targets Governments Using Cobalt Strike and Google Drive C2",
-      "link": "https://thehackernews.com/2026/03/apt41-linked-silver-dragon-targets.html",
-      "pubDate": "2026-03-04T08:14:00.000Z",
-      "description": "Cybersecurity researchers have disclosed details of an advanced persistent threat (APT) group dubbed Silver Dragon that has been linked to cyber attacks targeting entities in Europe and Southeast Asia since at least mid-2024. \"Silver Dragon gains its initial access by exploiting public-facing intern",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "CISA Adds Actively Exploited VMware Aria Operations Flaw CVE-2026-22719 to KEV Catalog",
-      "link": "https://thehackernews.com/2026/03/cisa-adds-actively-exploited-vmware.html",
-      "pubDate": "2026-03-04T04:35:00.000Z",
-      "description": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Tuesday added a recently disclosed security flaw impacting Broadcom VMware Aria Operations to its Known Exploited Vulnerabilities (KEV) catalog, citing active exploitation in the wild. The high-severity vulnerability, CVE-2026-22719",
       "source": "The Hacker News"
     }
   ]
