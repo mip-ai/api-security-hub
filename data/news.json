@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-09T21:58:11.585Z",
+  "lastUpdated": "2026-03-10T05:37:25.993Z",
   "itemCount": 20,
   "items": [
     {
@@ -101,13 +101,6 @@
       "source": "BleepingComputer"
     },
     {
-      "title": "EC-Council Expands AI Certification Portfolio to Strengthen U.S. AI Workforce Readiness and Security",
-      "link": "https://www.bleepingcomputer.com/news/security/ec-council-expands-ai-certification-portfolio-to-strengthen-us-ai-workforce-readiness-and-security/",
-      "pubDate": "2026-03-06T15:00:10.000Z",
-      "description": "EC-Council, creator of the world-renowned Certified Ethical Hacker (CEH) credential and a global leader in applied cybersecurity education, today launched its Enterprise AI Credential Suite, with four new role-based AI certifications debuting alongside Certified CISO v4, an overhauled executive cybe",
-      "source": "BleepingComputer"
-    },
-    {
       "title": "Hikvision and Rockwell Automation CVSS 9.8 Flaws Added to CISA KEV Catalog",
       "link": "https://thehackernews.com/2026/03/hikvision-and-rockwell-automation-cvss.html",
       "pubDate": "2026-03-06T06:30:00.000Z",
@@ -140,6 +133,13 @@
       "link": "https://thehackernews.com/2026/03/fbi-and-europol-seize-leakbase-forum.html",
       "pubDate": "2026-03-05T06:34:00.000Z",
       "description": "A joint law enforcement operation has dismantled LeakBase, one of the world's largest online forums for cybercriminals to buy and sell stolen data and cybercrime tools. The LeakBase forum, per the U.S. Department of Justice (DoJ), had over 142,000 members and more than 215,000 messages between membe",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "Coruna iOS Exploit Kit Uses 23 Exploits Across Five Chains Targeting iOS 13–17.2.1",
+      "link": "https://thehackernews.com/2026/03/coruna-ios-exploit-kit-uses-23-exploits.html",
+      "pubDate": "2026-03-04T13:28:00.000Z",
+      "description": "Google said it identified a \"new and powerful\" exploit kit dubbed Coruna (aka CryptoWaters) targeting Apple iPhone models running iOS versions between 13.0 and 17.2.1. The exploit kit featured five full iOS exploit chains and a total of 23 exploits, Google Threat Intelligence Group (GTIG) said. It's",
       "source": "The Hacker News"
     }
   ]
