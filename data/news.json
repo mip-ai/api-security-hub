@@ -1,7 +1,70 @@
 {
-  "lastUpdated": "2026-03-10T11:07:35.779Z",
+  "lastUpdated": "2026-03-10T17:34:46.003Z",
   "itemCount": 20,
   "items": [
+    {
+      "title": "How to Stop AI Data Leaks: A Webinar Guide to Auditing Modern Agentic Workflows",
+      "link": "https://thehackernews.com/2026/03/how-to-stop-ai-data-leaks-webinar-guide.html",
+      "pubDate": "2026-03-10T16:21:00.000Z",
+      "description": "Artificial Intelligence (AI) is no longer just a tool we talk to; it is a tool that does things for us. These are called AI Agents. They can send emails, move data, and even manage software on their own. But there is a problem. While these agents make work faster, they also open a new \"back door\" fo",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "FortiGate Devices Exploited to Breach Networks and Steal Service Account Credentials",
+      "link": "https://thehackernews.com/2026/03/fortigate-devices-exploited-to-breach.html",
+      "pubDate": "2026-03-10T16:21:00.000Z",
+      "description": "Cybersecurity researchers are calling attention to a new campaign where threat actors are abusing FortiGate Next-Generation Firewall (NGFW) appliances as entry points to breach victim networks. The activity involves the exploitation of recently disclosed security vulnerabilities or weak credentials ",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "SAP Patches Critical FS-QUO, NetWeaver Vulnerabilities",
+      "link": "https://www.securityweek.com/sap-patches-critical-fs-quo-netweaver-vulnerabilities/",
+      "pubDate": "2026-03-10T14:31:36.000Z",
+      "description": "A code injection bug in FS-QUO and an insecure deserialization flaw in NetWeaver could lead to arbitrary code execution. The post SAP Patches Critical FS-QUO, NetWeaver Vulnerabilities appeared first on SecurityWeek.",
+      "source": "SecurityWeek"
+    },
+    {
+      "title": "Thousands Affected by Ericsson Data Breach",
+      "link": "https://www.securityweek.com/thousands-affected-by-ericsson-data-breach/",
+      "pubDate": "2026-03-10T14:23:34.000Z",
+      "description": "The telecommunications equipment and services giant has blamed the incident on a third-party vendor. The post Thousands Affected by Ericsson Data Breach appeared first on SecurityWeek.",
+      "source": "SecurityWeek"
+    },
+    {
+      "title": "OpenAI Rolls Out Codex Security Vulnerability Scanner",
+      "link": "https://www.securityweek.com/openai-rolls-out-codex-security-vulnerability-scanner/",
+      "pubDate": "2026-03-10T13:23:05.000Z",
+      "description": "Codex Security, formerly Aardvark⁠, has found hundreds of critical vulnerabilities in tested software in the past month. The post OpenAI Rolls Out Codex Security Vulnerability Scanner appeared first on SecurityWeek.",
+      "source": "SecurityWeek"
+    },
+    {
+      "title": "Kevin Mandia’s Armadin Launches With $190 Million in Funding",
+      "link": "https://www.securityweek.com/kevin-mandias-armadin-launches-with-189-9-million-in-funding/",
+      "pubDate": "2026-03-10T13:21:05.000Z",
+      "description": "Armadin uses AI-powered red teaming to find and exploit weaknesses in the same way that attackers attack them. The post Kevin Mandia’s Armadin Launches With $190 Million in Funding appeared first on SecurityWeek.",
+      "source": "SecurityWeek"
+    },
+    {
+      "title": "Recent Ivanti Endpoint Manager Flaw Exploited in Attacks",
+      "link": "https://www.securityweek.com/recent-ivanti-endpoint-manager-flaw-exploited-in-attacks/",
+      "pubDate": "2026-03-10T11:51:02.000Z",
+      "description": "CISA has added the high-severity authentication bypass vulnerability to its KEV list, along with SolarWinds and Workspace One bugs. The post Recent Ivanti Endpoint Manager Flaw Exploited in Attacks appeared first on SecurityWeek.",
+      "source": "SecurityWeek"
+    },
+    {
+      "title": "CISA: Recently patched Ivanti EPM flaw now actively exploited",
+      "link": "https://www.bleepingcomputer.com/news/security/cisa-recently-patched-ivanti-epm-flaw-now-actively-exploited/",
+      "pubDate": "2026-03-10T11:36:13.000Z",
+      "description": "CISA flagged a high-severity Ivanti Endpoint Manager (EPM) vulnerability as actively exploited in attacks and ordered U.S. federal agencies to patch systems within three weeks. [...]",
+      "source": "BleepingComputer"
+    },
+    {
+      "title": "The Zero-Day Scramble is Avoidable: A Guide to Attack Surface Reduction",
+      "link": "https://thehackernews.com/2026/03/the-zero-day-scramble-is-avoidable.html",
+      "pubDate": "2026-03-10T11:00:00.000Z",
+      "description": "You can't control when the next critical vulnerability drops. You can control how much of your environment is exposed when it does. The problem is that most teams have more internet-facing exposure than they realise. Intruder's Head of Security digs into why this happens and how teams can manage it ",
+      "source": "The Hacker News"
+    },
     {
       "title": "SIM Swaps Expose a Critical Flaw in Identity Security",
       "link": "https://www.securityweek.com/sim-swaps-expose-a-critical-flaw-in-identity-security/",
@@ -78,69 +141,6 @@
       "pubDate": "2026-03-09T14:10:20.000Z",
       "description": "Password audits often focus on complexity rules but miss the accounts attackers actually target. Specops Software explains how breached passwords, orphaned users, and service accounts can leave organizations exposed. [...]",
       "source": "BleepingComputer"
-    },
-    {
-      "title": "Active defense: introducing a stateful vulnerability scanner for APIs",
-      "link": "https://blog.cloudflare.com/vulnerability-scanner/",
-      "pubDate": "2026-03-09T14:00:00.000Z",
-      "description": "Cloudflare’s new Web and API Vulnerability Scanner helps teams proactively find logic flaws. By using AI to build API call graphs, we identify vulnerabilities that standard defensive tools miss.",
-      "source": "Cloudflare Blog"
-    },
-    {
-      "title": "⚡ Weekly Recap: Qualcomm 0-Day, iOS Exploit Chains, AirSnitch Attack &amp; Vibe-Coded Malware",
-      "link": "https://thehackernews.com/2026/03/weekly-recap-qualcomm-0-day-ios-exploit.html",
-      "pubDate": "2026-03-09T13:46:00.000Z",
-      "description": "Another week in cybersecurity. Another week of \"you've got to be kidding me.\" Attackers were busy. Defenders were busy. And somewhere in the middle, a whole lot of people had a very bad Monday morning. That's kind of just how it goes now. The good news? There were some actual wins this week. Real on",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "Chrome Extension Turns Malicious After Ownership Transfer, Enabling Code Injection and Data Theft",
-      "link": "https://thehackernews.com/2026/03/chrome-extension-turns-malicious-after.html",
-      "pubDate": "2026-03-09T10:28:00.000Z",
-      "description": "Two Google Chrome extensions have turned malicious after what appears to be a case of ownership transfer, offering attackers a way to push malware to downstream customers, inject arbitrary code, and harvest sensitive data. The extensions in question, both originally associated with a developer named",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "Web Server Exploits and Mimikatz Used in Attacks Targeting Asian Critical Infrastructure",
-      "link": "https://thehackernews.com/2026/03/web-server-exploits-and-mimikatz-used.html",
-      "pubDate": "2026-03-09T07:21:00.000Z",
-      "description": "High-value organizations located in South, Southeast, and East Asia have been targeted by a Chinese threat actor as part of a years-long campaign. The activity, which has targeted aviation, energy, government, law enforcement, pharmaceutical, technology, and telecommunications sectors, has been attr",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "Recent Cisco Catalyst SD-WAN Vulnerability Now Widely Exploited",
-      "link": "https://www.securityweek.com/recent-cisco-catalyst-sd-wan-vulnerability-now-widely-exploited/",
-      "pubDate": "2026-03-08T12:15:00.000Z",
-      "description": "WatchTowr reports seeing exploitation attempts for CVE-2026-20127 from numerous unique IP addresses. The post Recent Cisco Catalyst SD-WAN Vulnerability Now Widely Exploited appeared first on SecurityWeek.",
-      "source": "SecurityWeek"
-    },
-    {
-      "title": "Termite ransomware breaches linked to ClickFix CastleRAT attacks",
-      "link": "https://www.bleepingcomputer.com/news/security/termite-ransomware-breaches-linked-to-clickfix-castlerat-attacks/",
-      "pubDate": "2026-03-07T16:14:32.000Z",
-      "description": "Ransomware threat actors tracked as Velvet Tempest are using the ClickFix technique and legitimate Windows utilities to deploy the DonutLoader malware and the CastleRAT backdoor. [...]",
-      "source": "BleepingComputer"
-    },
-    {
-      "title": "Hikvision and Rockwell Automation CVSS 9.8 Flaws Added to CISA KEV Catalog",
-      "link": "https://thehackernews.com/2026/03/hikvision-and-rockwell-automation-cvss.html",
-      "pubDate": "2026-03-06T06:30:00.000Z",
-      "description": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Thursday added two security flaws impacting Hikvision and Rockwell Automation products to its Known Exploited Vulnerabilities (KEV) catalog, citing evidence of active exploitation. The critical-severity vulnerabilities are listed be",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "Cisco Confirms Active Exploitation of Two Catalyst SD-WAN Manager Vulnerabilities",
-      "link": "https://thehackernews.com/2026/03/cisco-confirms-active-exploitation-of.html",
-      "pubDate": "2026-03-05T15:22:00.000Z",
-      "description": "Cisco has disclosed that two more vulnerabilities affecting Catalyst SD-WAN Manager (formerly SD-WAN vManage) have come under active exploitation in the wild. The vulnerabilities in question are listed below - CVE-2026-20122 (CVSS score: 7.1) - An arbitrary file overwrite vulnerability that could al",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "Where Multi-Factor Authentication Stops and Credential Abuse Starts",
-      "link": "https://thehackernews.com/2026/03/where-multi-factor-authentication-stops.html",
-      "pubDate": "2026-03-05T11:00:00.000Z",
-      "description": "Organizations typically roll out multi-factor authentication (MFA) and assume stolen passwords are no longer enough to access systems. In Windows environments, that assumption is often wrong. Attackers still compromise networks every day using valid credentials. The issue is not MFA itself, but cove",
-      "source": "The Hacker News"
     }
   ]
 }
