@@ -1,7 +1,21 @@
 {
-  "lastUpdated": "2026-03-10T17:34:46.003Z",
+  "lastUpdated": "2026-03-10T21:53:30.390Z",
   "itemCount": 20,
   "items": [
+    {
+      "title": "New 'Zombie ZIP' technique lets malware slip past security tools",
+      "link": "https://www.bleepingcomputer.com/news/security/new-zombie-zip-technique-lets-malware-slip-past-security-tools/",
+      "pubDate": "2026-03-10T20:05:39.000Z",
+      "description": "A new technique dubbed \"Zombie ZIP\" helps conceal payloads in compressed files specially created to avoid detection from security solutions such as antivirus and endpoint detection and response (EDR) products. [...]",
+      "source": "BleepingComputer"
+    },
+    {
+      "title": "Microsoft Patches 83 Vulnerabilities",
+      "link": "https://www.securityweek.com/microsoft-patches-83-vulnerabilities/",
+      "pubDate": "2026-03-10T19:12:21.000Z",
+      "description": "Microsoft has fixed a critical vulnerability, but none of the flaws fixed this Patch Tuesday has been exploited in the wild. The post Microsoft Patches 83 Vulnerabilities appeared first on SecurityWeek.",
+      "source": "SecurityWeek"
+    },
     {
       "title": "How to Stop AI Data Leaks: A Webinar Guide to Auditing Modern Agentic Workflows",
       "link": "https://thehackernews.com/2026/03/how-to-stop-ai-data-leaks-webinar-guide.html",
@@ -45,13 +59,6 @@
       "source": "SecurityWeek"
     },
     {
-      "title": "Recent Ivanti Endpoint Manager Flaw Exploited in Attacks",
-      "link": "https://www.securityweek.com/recent-ivanti-endpoint-manager-flaw-exploited-in-attacks/",
-      "pubDate": "2026-03-10T11:51:02.000Z",
-      "description": "CISA has added the high-severity authentication bypass vulnerability to its KEV list, along with SolarWinds and Workspace One bugs. The post Recent Ivanti Endpoint Manager Flaw Exploited in Attacks appeared first on SecurityWeek.",
-      "source": "SecurityWeek"
-    },
-    {
       "title": "CISA: Recently patched Ivanti EPM flaw now actively exploited",
       "link": "https://www.bleepingcomputer.com/news/security/cisa-recently-patched-ivanti-epm-flaw-now-actively-exploited/",
       "pubDate": "2026-03-10T11:36:13.000Z",
@@ -64,13 +71,6 @@
       "pubDate": "2026-03-10T11:00:00.000Z",
       "description": "You can't control when the next critical vulnerability drops. You can control how much of your environment is exposed when it does. The problem is that most teams have more internet-facing exposure than they realise. Intruder's Head of Security digs into why this happens and how teams can manage it ",
       "source": "The Hacker News"
-    },
-    {
-      "title": "SIM Swaps Expose a Critical Flaw in Identity Security",
-      "link": "https://www.securityweek.com/sim-swaps-expose-a-critical-flaw-in-identity-security/",
-      "pubDate": "2026-03-10T11:00:00.000Z",
-      "description": "SIM swap attacks exploit misplaced trust in phone numbers and human processes to bypass authentication controls and seize high-value accounts. The post SIM Swaps Expose a Critical Flaw in Identity Security appeared first on SecurityWeek.",
-      "source": "SecurityWeek"
     },
     {
       "title": "Microsoft to enable Windows hotpatch security updates by default",
@@ -108,25 +108,11 @@
       "source": "BleepingComputer"
     },
     {
-      "title": "Ericsson US discloses data breach after service provider hack",
-      "link": "https://www.bleepingcomputer.com/news/security/ericsson-us-discloses-data-breach-after-service-provider-hack/",
-      "pubDate": "2026-03-09T19:07:50.000Z",
-      "description": "Ericsson Inc., the U.S. subsidiary of Swedish networking and telecommunications giant Ericsson, says attackers have stolen data belonging to over 15,000 employees and customers after hacking one of its service providers. [...]",
-      "source": "BleepingComputer"
-    },
-    {
       "title": "Malicious npm Package Posing as OpenClaw Installer Deploys RAT, Steals macOS Credentials",
       "link": "https://thehackernews.com/2026/03/malicious-npm-package-posing-as.html",
       "pubDate": "2026-03-09T18:31:00.000Z",
       "description": "Cybersecurity researchers have discovered a malicious npm package that masquerades as an OpenClaw installer to deploy a remote access trojan (RAT) and steal sensitive data from compromised hosts. The package, named \"@openclaw-ai/openclawai,\" was uploaded to the registry by a user named \"openclaw-ai\"",
       "source": "The Hacker News"
-    },
-    {
-      "title": "ShinyHunters claims ongoing Salesforce Aura data theft attacks",
-      "link": "https://www.bleepingcomputer.com/news/security/shinyhunters-claims-ongoing-salesforce-aura-data-theft-attacks/",
-      "pubDate": "2026-03-09T17:12:22.000Z",
-      "description": "Salesforce is warning customers that hackers are targeting websites with misconfigured Experience Cloud platforms that give guest users access to more data than intended. However, the ShinyHunters extortion gang claims to be actively exploiting a new bug to steal data from instances. [...]",
-      "source": "BleepingComputer"
     },
     {
       "title": "UNC4899 Breached Crypto Firm After Developer AirDropped Trojanized File to Work Device",
@@ -136,11 +122,25 @@
       "source": "The Hacker News"
     },
     {
-      "title": "Why Password Audits Miss the Accounts Attackers Actually Want",
-      "link": "https://www.bleepingcomputer.com/news/security/why-password-audits-miss-the-accounts-attackers-actually-want/",
-      "pubDate": "2026-03-09T14:10:20.000Z",
-      "description": "Password audits often focus on complexity rules but miss the accounts attackers actually target. Specops Software explains how breached passwords, orphaned users, and service accounts can leave organizations exposed. [...]",
-      "source": "BleepingComputer"
+      "title": "Active defense: introducing a stateful vulnerability scanner for APIs",
+      "link": "https://blog.cloudflare.com/vulnerability-scanner/",
+      "pubDate": "2026-03-09T14:00:00.000Z",
+      "description": "Cloudflare’s new Web and API Vulnerability Scanner helps teams proactively find logic flaws. By using AI to build API call graphs, we identify vulnerabilities that standard defensive tools miss.",
+      "source": "Cloudflare Blog"
+    },
+    {
+      "title": "⚡ Weekly Recap: Qualcomm 0-Day, iOS Exploit Chains, AirSnitch Attack &amp; Vibe-Coded Malware",
+      "link": "https://thehackernews.com/2026/03/weekly-recap-qualcomm-0-day-ios-exploit.html",
+      "pubDate": "2026-03-09T13:46:00.000Z",
+      "description": "Another week in cybersecurity. Another week of \"you've got to be kidding me.\" Attackers were busy. Defenders were busy. And somewhere in the middle, a whole lot of people had a very bad Monday morning. That's kind of just how it goes now. The good news? There were some actual wins this week. Real on",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "Chrome Extension Turns Malicious After Ownership Transfer, Enabling Code Injection and Data Theft",
+      "link": "https://thehackernews.com/2026/03/chrome-extension-turns-malicious-after.html",
+      "pubDate": "2026-03-09T10:28:00.000Z",
+      "description": "Two Google Chrome extensions have turned malicious after what appears to be a case of ownership transfer, offering attackers a way to push malware to downstream customers, inject arbitrary code, and harvest sensitive data. The extensions in question, both originally associated with a developer named",
+      "source": "The Hacker News"
     }
   ]
 }
