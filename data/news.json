@@ -1,7 +1,28 @@
 {
-  "lastUpdated": "2026-03-11T05:40:36.259Z",
+  "lastUpdated": "2026-03-11T11:06:50.910Z",
   "itemCount": 20,
   "items": [
+    {
+      "title": "&#8216;BlackSanta&#8217; Malware Activates EDR and AV Killer Before Detonating Payload",
+      "link": "https://www.securityweek.com/blacksanta-malware-activates-edr-and-av-killer-before-detonating-payload/",
+      "pubDate": "2026-03-11T09:42:41.000Z",
+      "description": "The malware disables antivirus and EDR protections at the kernel level, clearing the path for credential harvesting, system reconnaissance, and eventual data exfiltration. The post &#8216;BlackSanta&#8217; Malware Activates EDR and AV Killer Before Detonating Payload appeared first on SecurityWeek.",
+      "source": "SecurityWeek"
+    },
+    {
+      "title": "UNC6426 Exploits nx npm Supply-Chain Attack to Gain AWS Admin Access in 72 Hours",
+      "link": "https://thehackernews.com/2026/03/unc6426-exploits-nx-npm-supply-chain.html",
+      "pubDate": "2026-03-11T07:31:00.000Z",
+      "description": "A threat actor known as UNC6426 leveraged keys stolen following the supply chain compromise of the nx npm package last year to completely breach a victim's cloud environment within a span of 72 hours. The attack started with the theft of a developer's GitHub token, which the threat actor then used t",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "Five Malicious Rust Crates and AI Bot Exploit CI/CD Pipelines to Steal Developer Secrets",
+      "link": "https://thehackernews.com/2026/03/five-malicious-rust-crates-and-ai-bot.html",
+      "pubDate": "2026-03-11T05:12:00.000Z",
+      "description": "Cybersecurity researchers have discovered five malicious Rust crates that masquerade as time-related utilities to transmit .env file data to the threat actors. The Rust packages, published to crates.io, are listed below - chrono_anchor dnp3times time_calibrator time_calibrators time-sync The crates,",
+      "source": "The Hacker News"
+    },
     {
       "title": "New 'Zombie ZIP' technique lets malware slip past security tools",
       "link": "https://www.bleepingcomputer.com/news/security/new-zombie-zip-technique-lets-malware-slip-past-security-tools/",
@@ -42,20 +63,6 @@
       "link": "https://www.securityweek.com/thousands-affected-by-ericsson-data-breach/",
       "pubDate": "2026-03-10T14:23:34.000Z",
       "description": "The telecommunications equipment and services giant has blamed the incident on a third-party vendor. The post Thousands Affected by Ericsson Data Breach appeared first on SecurityWeek.",
-      "source": "SecurityWeek"
-    },
-    {
-      "title": "OpenAI Rolls Out Codex Security Vulnerability Scanner",
-      "link": "https://www.securityweek.com/openai-rolls-out-codex-security-vulnerability-scanner/",
-      "pubDate": "2026-03-10T13:23:05.000Z",
-      "description": "Codex Security, formerly Aardvark⁠, has found hundreds of critical vulnerabilities in tested software in the past month. The post OpenAI Rolls Out Codex Security Vulnerability Scanner appeared first on SecurityWeek.",
-      "source": "SecurityWeek"
-    },
-    {
-      "title": "Kevin Mandia’s Armadin Launches With $190 Million in Funding",
-      "link": "https://www.securityweek.com/kevin-mandias-armadin-launches-with-189-9-million-in-funding/",
-      "pubDate": "2026-03-10T13:21:05.000Z",
-      "description": "Armadin uses AI-powered red teaming to find and exploit weaknesses in the same way that attackers attack them. The post Kevin Mandia’s Armadin Launches With $190 Million in Funding appeared first on SecurityWeek.",
       "source": "SecurityWeek"
     },
     {
@@ -133,13 +140,6 @@
       "link": "https://thehackernews.com/2026/03/weekly-recap-qualcomm-0-day-ios-exploit.html",
       "pubDate": "2026-03-09T13:46:00.000Z",
       "description": "Another week in cybersecurity. Another week of \"you've got to be kidding me.\" Attackers were busy. Defenders were busy. And somewhere in the middle, a whole lot of people had a very bad Monday morning. That's kind of just how it goes now. The good news? There were some actual wins this week. Real on",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "Chrome Extension Turns Malicious After Ownership Transfer, Enabling Code Injection and Data Theft",
-      "link": "https://thehackernews.com/2026/03/chrome-extension-turns-malicious-after.html",
-      "pubDate": "2026-03-09T10:28:00.000Z",
-      "description": "Two Google Chrome extensions have turned malicious after what appears to be a case of ownership transfer, offering attackers a way to push malware to downstream customers, inject arbitrary code, and harvest sensitive data. The extensions in question, both originally associated with a developer named",
       "source": "The Hacker News"
     }
   ]
