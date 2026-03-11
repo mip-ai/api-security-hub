@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-10T21:53:30.390Z",
+  "lastUpdated": "2026-03-11T05:40:36.259Z",
   "itemCount": 20,
   "items": [
     {
@@ -17,17 +17,17 @@
       "source": "SecurityWeek"
     },
     {
-      "title": "How to Stop AI Data Leaks: A Webinar Guide to Auditing Modern Agentic Workflows",
-      "link": "https://thehackernews.com/2026/03/how-to-stop-ai-data-leaks-webinar-guide.html",
-      "pubDate": "2026-03-10T16:21:00.000Z",
-      "description": "Artificial Intelligence (AI) is no longer just a tool we talk to; it is a tool that does things for us. These are called AI Agents. They can send emails, move data, and even manage software on their own. But there is a problem. While these agents make work faster, they also open a new \"back door\" fo",
-      "source": "The Hacker News"
-    },
-    {
       "title": "FortiGate Devices Exploited to Breach Networks and Steal Service Account Credentials",
       "link": "https://thehackernews.com/2026/03/fortigate-devices-exploited-to-breach.html",
       "pubDate": "2026-03-10T16:21:00.000Z",
       "description": "Cybersecurity researchers are calling attention to a new campaign where threat actors are abusing FortiGate Next-Generation Firewall (NGFW) appliances as entry points to breach victim networks. The activity involves the exploitation of recently disclosed security vulnerabilities or weak credentials ",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "How to Stop AI Data Leaks: A Webinar Guide to Auditing Modern Agentic Workflows",
+      "link": "https://thehackernews.com/2026/03/how-to-stop-ai-data-leaks-webinar-guide.html",
+      "pubDate": "2026-03-10T16:21:00.000Z",
+      "description": "Artificial Intelligence (AI) is no longer just a tool we talk to; it is a tool that does things for us. These are called AI Agents. They can send emails, move data, and even manage software on their own. But there is a problem. While these agents make work faster, they also open a new \"back door\" fo",
       "source": "The Hacker News"
     },
     {
