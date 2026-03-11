@@ -1,7 +1,21 @@
 {
-  "lastUpdated": "2026-03-11T17:38:07.341Z",
+  "lastUpdated": "2026-03-11T21:58:11.946Z",
   "itemCount": 20,
   "items": [
+    {
+      "title": "SQLi flaw in Elementor Ally plugin impacts 250k+ WordPress sites",
+      "link": "https://www.bleepingcomputer.com/news/security/sqli-flaw-in-elementor-ally-plugin-impacts-250k-plus-wordpress-sites/",
+      "pubDate": "2026-03-11T19:38:14.000Z",
+      "description": "An SQL injection vulnerability in Ally, a WordPress plugin from Elementor for web accessibility and usability with more than 400,000 installations, could be exploited to steal sensitive data without authentication. [...]",
+      "source": "BleepingComputer"
+    },
+    {
+      "title": "CISA orders feds to patch n8n RCE flaw exploited in attacks",
+      "link": "https://www.bleepingcomputer.com/news/security/cisa-orders-feds-to-patch-n8n-rce-flaw-exploited-in-attacks/",
+      "pubDate": "2026-03-11T18:21:15.000Z",
+      "description": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) ordered government agencies on Wednesday to patch their systems against an actively exploited n8n vulnerability. [...]",
+      "source": "BleepingComputer"
+    },
     {
       "title": "Critical n8n Flaws Allow Remote Code Execution and Exposure of Stored Credentials",
       "link": "https://thehackernews.com/2026/03/critical-n8n-flaws-allow-remote-code.html",
@@ -80,25 +94,11 @@
       "source": "The Hacker News"
     },
     {
-      "title": "CISA: Recently patched Ivanti EPM flaw now actively exploited",
-      "link": "https://www.bleepingcomputer.com/news/security/cisa-recently-patched-ivanti-epm-flaw-now-actively-exploited/",
-      "pubDate": "2026-03-10T11:36:13.000Z",
-      "description": "CISA flagged a high-severity Ivanti Endpoint Manager (EPM) vulnerability as actively exploited in attacks and ordered U.S. federal agencies to patch systems within three weeks. [...]",
-      "source": "BleepingComputer"
-    },
-    {
       "title": "The Zero-Day Scramble is Avoidable: A Guide to Attack Surface Reduction",
       "link": "https://thehackernews.com/2026/03/the-zero-day-scramble-is-avoidable.html",
       "pubDate": "2026-03-10T11:00:00.000Z",
       "description": "You can't control when the next critical vulnerability drops. You can control how much of your environment is exposed when it does. The problem is that most teams have more internet-facing exposure than they realise. Intruder's Head of Security digs into why this happens and how teams can manage it ",
       "source": "The Hacker News"
-    },
-    {
-      "title": "Microsoft to enable Windows hotpatch security updates by default",
-      "link": "https://www.bleepingcomputer.com/news/microsoft/microsoft-to-enable-hotpatch-security-updates-by-default-in-may/",
-      "pubDate": "2026-03-10T10:35:33.000Z",
-      "description": "Microsoft will turn on hotpatch security updates by default for all eligible Windows devices managed through Microsoft Intune and the Microsoft Graph API, beginning with the May 2026 Windows security update. [...]",
-      "source": "BleepingComputer"
     },
     {
       "title": "Threat Actors Mass-Scan Salesforce Experience Cloud via Modified AuraInspector Tool",
