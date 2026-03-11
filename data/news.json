@@ -1,12 +1,47 @@
 {
-  "lastUpdated": "2026-03-11T11:06:50.910Z",
+  "lastUpdated": "2026-03-11T17:38:07.341Z",
   "itemCount": 20,
   "items": [
     {
-      "title": "&#8216;BlackSanta&#8217; Malware Activates EDR and AV Killer Before Detonating Payload",
-      "link": "https://www.securityweek.com/blacksanta-malware-activates-edr-and-av-killer-before-detonating-payload/",
-      "pubDate": "2026-03-11T09:42:41.000Z",
-      "description": "The malware disables antivirus and EDR protections at the kernel level, clearing the path for credential harvesting, system reconnaissance, and eventual data exfiltration. The post &#8216;BlackSanta&#8217; Malware Activates EDR and AV Killer Before Detonating Payload appeared first on SecurityWeek.",
+      "title": "Critical n8n Flaws Allow Remote Code Execution and Exposure of Stored Credentials",
+      "link": "https://thehackernews.com/2026/03/critical-n8n-flaws-allow-remote-code.html",
+      "pubDate": "2026-03-11T14:51:00.000Z",
+      "description": "Cybersecurity researchers have disclosed details of two now-patched security flaws in the n8n workflow automation platform, including two critical bugs that could result in arbitrary command execution. The vulnerabilities are listed below - CVE-2026-27577 (CVSS score: 9.4) - Expression sandbox escap",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "238,000 Impacted by Bell Ambulance Data Breach",
+      "link": "https://www.securityweek.com/238000-impacted-by-bell-ambulance-data-breach/",
+      "pubDate": "2026-03-11T13:34:17.000Z",
+      "description": "Hackers stole personal information such as names, Social Security numbers, and driver’s license numbers. The post 238,000 Impacted by Bell Ambulance Data Breach appeared first on SecurityWeek.",
+      "source": "SecurityWeek"
+    },
+    {
+      "title": "Dozens of Vendors Patch Security Flaws Across Enterprise Software and Network Devices",
+      "link": "https://thehackernews.com/2026/03/dozens-of-vendors-patch-security-flaws.html",
+      "pubDate": "2026-03-11T12:26:00.000Z",
+      "description": "SAP has released security updates to address two critical security flaws that could be exploited to achieve arbitrary code execution on affected systems. The vulnerabilities in question listed below - CVE-2019-17571 (CVSS score: 9.8) - A code injection vulnerability in SAP Quotation Management Insur",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "How to 10x Your Vulnerability Management Program in the Agentic Era",
+      "link": "https://www.securityweek.com/how-to-10x-your-vulnerability-management-program-in-the-agentic-era/",
+      "pubDate": "2026-03-11T12:00:00.000Z",
+      "description": "The evolution of vulnerability management in the agentic era is characterized by continuous telemetry, contextual prioritization and the ultimate goal of agentic remediation. The post How to 10x Your Vulnerability Management Program in the Agentic Era appeared first on SecurityWeek.",
+      "source": "SecurityWeek"
+    },
+    {
+      "title": "What Boards Must Demand in the Age of AI-Automated Exploitation",
+      "link": "https://thehackernews.com/2026/03/what-boards-must-demand-in-age-of-ai.html",
+      "pubDate": "2026-03-11T11:30:00.000Z",
+      "description": "“You knew, and you could have acted. Why didn’t you?” This is the question you do not want to be asked. And increasingly, it’s the question leaders are forced to answer after an incident. For years, many executive teams and boards have treated a large vulnerability backlog as an uncomfortable but to",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "Michelin Confirms Data Breach Linked to Oracle EBS Attack",
+      "link": "https://www.securityweek.com/michelin-confirms-data-breach-linked-to-oracle-ebs-attack/",
+      "pubDate": "2026-03-11T11:27:20.000Z",
+      "description": "The cybercriminals have leaked more than 300GB of files allegedly stolen from the tire giant. The post Michelin Confirms Data Breach Linked to Oracle EBS Attack appeared first on SecurityWeek.",
       "source": "SecurityWeek"
     },
     {
@@ -31,13 +66,6 @@
       "source": "BleepingComputer"
     },
     {
-      "title": "Microsoft Patches 83 Vulnerabilities",
-      "link": "https://www.securityweek.com/microsoft-patches-83-vulnerabilities/",
-      "pubDate": "2026-03-10T19:12:21.000Z",
-      "description": "Microsoft has fixed a critical vulnerability, but none of the flaws fixed this Patch Tuesday has been exploited in the wild. The post Microsoft Patches 83 Vulnerabilities appeared first on SecurityWeek.",
-      "source": "SecurityWeek"
-    },
-    {
       "title": "FortiGate Devices Exploited to Breach Networks and Steal Service Account Credentials",
       "link": "https://thehackernews.com/2026/03/fortigate-devices-exploited-to-breach.html",
       "pubDate": "2026-03-10T16:21:00.000Z",
@@ -50,20 +78,6 @@
       "pubDate": "2026-03-10T16:21:00.000Z",
       "description": "Artificial Intelligence (AI) is no longer just a tool we talk to; it is a tool that does things for us. These are called AI Agents. They can send emails, move data, and even manage software on their own. But there is a problem. While these agents make work faster, they also open a new \"back door\" fo",
       "source": "The Hacker News"
-    },
-    {
-      "title": "SAP Patches Critical FS-QUO, NetWeaver Vulnerabilities",
-      "link": "https://www.securityweek.com/sap-patches-critical-fs-quo-netweaver-vulnerabilities/",
-      "pubDate": "2026-03-10T14:31:36.000Z",
-      "description": "A code injection bug in FS-QUO and an insecure deserialization flaw in NetWeaver could lead to arbitrary code execution. The post SAP Patches Critical FS-QUO, NetWeaver Vulnerabilities appeared first on SecurityWeek.",
-      "source": "SecurityWeek"
-    },
-    {
-      "title": "Thousands Affected by Ericsson Data Breach",
-      "link": "https://www.securityweek.com/thousands-affected-by-ericsson-data-breach/",
-      "pubDate": "2026-03-10T14:23:34.000Z",
-      "description": "The telecommunications equipment and services giant has blamed the incident on a third-party vendor. The post Thousands Affected by Ericsson Data Breach appeared first on SecurityWeek.",
-      "source": "SecurityWeek"
     },
     {
       "title": "CISA: Recently patched Ivanti EPM flaw now actively exploited",
@@ -87,13 +101,6 @@
       "source": "BleepingComputer"
     },
     {
-      "title": "APT28 hackers deploy customized variant of Covenant open-source tool",
-      "link": "https://www.bleepingcomputer.com/news/security/apt28-hackers-deploy-customized-variant-of-covenant-open-source-tool/",
-      "pubDate": "2026-03-10T10:00:00.000Z",
-      "description": "The Russian state-sponsored APT28 threat group is using a custom variant of the open-source Covenant post-exploitation framework for long-term espionage operations. [...]",
-      "source": "BleepingComputer"
-    },
-    {
       "title": "Threat Actors Mass-Scan Salesforce Experience Cloud via Modified AuraInspector Tool",
       "link": "https://thehackernews.com/2026/03/threat-actors-mass-scan-salesforce.html",
       "pubDate": "2026-03-10T07:17:00.000Z",
@@ -106,13 +113,6 @@
       "pubDate": "2026-03-10T06:17:00.000Z",
       "description": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Monday added three security flaws to its Known Exploited Vulnerabilities (KEV) catalog, based on evidence of active exploitation. The vulnerability list is as follows - CVE-2021-22054 (CVSS score: 7.5) - A server-side request forger",
       "source": "The Hacker News"
-    },
-    {
-      "title": "Google: Cloud attacks exploit flaws more than weak credentials",
-      "link": "https://www.bleepingcomputer.com/news/security/google-cloud-attacks-exploit-flaws-more-than-weak-credentials/",
-      "pubDate": "2026-03-09T21:45:34.000Z",
-      "description": "Hackers are increasingly exploiting newly disclosed vulnerabilities in third-party software to gain initial access to cloud environments, with the window for attacks shrinking from weeks to just days. [...]",
-      "source": "BleepingComputer"
     },
     {
       "title": "Malicious npm Package Posing as OpenClaw Installer Deploys RAT, Steals macOS Credentials",
