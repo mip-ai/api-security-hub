@@ -1,7 +1,56 @@
 {
-  "lastUpdated": "2026-03-12T11:06:11.413Z",
+  "lastUpdated": "2026-03-12T17:38:07.518Z",
   "itemCount": 20,
   "items": [
+    {
+      "title": "Google paid $17.1 million for vulnerability reports in 2025",
+      "link": "https://www.bleepingcomputer.com/news/google/google-paid-171-million-for-vulnerability-reports-in-2025/",
+      "pubDate": "2026-03-12T15:22:35.000Z",
+      "description": "Google paid over $17 million to 747 security researchers who reported security bugs through its Vulnerability Reward Program (VRP) in 2025. [...]",
+      "source": "BleepingComputer"
+    },
+    {
+      "title": "Apple Updates Legacy iOS Versions to Patch Coruna Exploits",
+      "link": "https://www.securityweek.com/apple-updates-older-ios-versions-to-patch-coruna-exploits/",
+      "pubDate": "2026-03-12T14:40:34.000Z",
+      "description": "The company has released iOS and iPadOS versions 16.7.15 and 15.8.7 to patch the vulnerabilities. The post Apple Updates Legacy iOS Versions to Patch Coruna Exploits appeared first on SecurityWeek.",
+      "source": "SecurityWeek"
+    },
+    {
+      "title": "Telus Digital confirms breach after hacker claims 1 petabyte data theft",
+      "link": "https://www.bleepingcomputer.com/news/security/telus-digital-confirms-breach-after-hacker-claims-1-petabyte-data-theft/",
+      "pubDate": "2026-03-12T14:40:14.000Z",
+      "description": "Canadian business process outsourcing giant Telus Digital has confirmed it suffered a security incident after threat actors claimed to have stolen nearly 1 petabyte of data from the company in a multi-month breach. [...]",
+      "source": "BleepingComputer"
+    },
+    {
+      "title": "Apple patches older iPhones and iPads against Coruna exploits",
+      "link": "https://www.bleepingcomputer.com/news/apple/apple-patches-older-iphones-and-ipads-against-coruna-exploits/",
+      "pubDate": "2026-03-12T13:43:46.000Z",
+      "description": "​Apple has released security updates to patch older iPhones and iPads against a set of vulnerabilities targeted in cyberespionage and crypto-theft attacks using the Coruna exploit kit. [...]",
+      "source": "BleepingComputer"
+    },
+    {
+      "title": "ThreatsDay Bulletin: OAuth Trap, EDR Killer, Signal Phishing, Zombie ZIP, AI Platform Hack &amp; More",
+      "link": "https://thehackernews.com/2026/03/threatsday-bulletin-oauth-trap-edr.html",
+      "pubDate": "2026-03-12T13:14:00.000Z",
+      "description": "Another Thursday, another pile of weird security stuff that somehow happened in just seven days. Some of it is clever. Some of it is lazy. A few bits fall into that uncomfortable category of “yeah… this is probably going to show up in real incidents sooner than we’d like.” The pattern this week feel",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "Splunk, Zoom Patch Severe Vulnerabilities",
+      "link": "https://www.securityweek.com/splunk-zoom-patch-severe-vulnerabilities/",
+      "pubDate": "2026-03-12T12:06:15.000Z",
+      "description": "Critical- and high-severity flaws could be exploited to execute arbitrary shell commands or elevate privileges. The post Splunk, Zoom Patch Severe Vulnerabilities appeared first on SecurityWeek.",
+      "source": "SecurityWeek"
+    },
+    {
+      "title": "Attackers Don't Just Send Phishing Emails. They Weaponize Your SOC's Workload",
+      "link": "https://thehackernews.com/2026/03/attackers-dont-just-send-phishing.html",
+      "pubDate": "2026-03-12T11:30:00.000Z",
+      "description": "The most dangerous phishing campaigns aren’t just designed to fool employees. Many are designed to exhaust the analysts investigating them. When a phishing investigation takes 12 hours instead of five minutes, the outcome can shift from a contained incident to a breach. For years, the cybersecurity ",
+      "source": "The Hacker News"
+    },
     {
       "title": "Apple Issues Security Updates for Older iOS Devices Targeted by Coruna WebKit Exploit",
       "link": "https://thehackernews.com/2026/03/apple-issues-security-updates-for-older.html",
@@ -45,13 +94,6 @@
       "source": "The Hacker News"
     },
     {
-      "title": "238,000 Impacted by Bell Ambulance Data Breach",
-      "link": "https://www.securityweek.com/238000-impacted-by-bell-ambulance-data-breach/",
-      "pubDate": "2026-03-11T13:34:17.000Z",
-      "description": "Hackers stole personal information such as names, Social Security numbers, and driver’s license numbers. The post 238,000 Impacted by Bell Ambulance Data Breach appeared first on SecurityWeek.",
-      "source": "SecurityWeek"
-    },
-    {
       "title": "Dozens of Vendors Patch Security Flaws Across Enterprise Software and Network Devices",
       "link": "https://thehackernews.com/2026/03/dozens-of-vendors-patch-security-flaws.html",
       "pubDate": "2026-03-11T12:26:00.000Z",
@@ -80,13 +122,6 @@
       "source": "The Hacker News"
     },
     {
-      "title": "New 'Zombie ZIP' technique lets malware slip past security tools",
-      "link": "https://www.bleepingcomputer.com/news/security/new-zombie-zip-technique-lets-malware-slip-past-security-tools/",
-      "pubDate": "2026-03-10T20:05:39.000Z",
-      "description": "A new technique dubbed \"Zombie ZIP\" helps conceal payloads in compressed files specially created to avoid detection from security solutions such as antivirus and endpoint detection and response (EDR) products. [...]",
-      "source": "BleepingComputer"
-    },
-    {
       "title": "FortiGate Devices Exploited to Breach Networks and Steal Service Account Credentials",
       "link": "https://thehackernews.com/2026/03/fortigate-devices-exploited-to-breach.html",
       "pubDate": "2026-03-10T16:21:00.000Z",
@@ -106,41 +141,6 @@
       "pubDate": "2026-03-10T11:00:00.000Z",
       "description": "You can't control when the next critical vulnerability drops. You can control how much of your environment is exposed when it does. The problem is that most teams have more internet-facing exposure than they realise. Intruder's Head of Security digs into why this happens and how teams can manage it ",
       "source": "The Hacker News"
-    },
-    {
-      "title": "Threat Actors Mass-Scan Salesforce Experience Cloud via Modified AuraInspector Tool",
-      "link": "https://thehackernews.com/2026/03/threat-actors-mass-scan-salesforce.html",
-      "pubDate": "2026-03-10T07:17:00.000Z",
-      "description": "Salesforce has warned of an increase in threat actor activity that's aimed at exploiting misconfigurations in publicly accessible Experience Cloud sites by making use of a customized version of an open-source tool called AuraInspector. The activity, per the company, involves the exploitation of cust",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "CISA Flags SolarWinds, Ivanti, and Workspace One Vulnerabilities as Actively Exploited",
-      "link": "https://thehackernews.com/2026/03/cisa-flags-solarwinds-ivanti-and.html",
-      "pubDate": "2026-03-10T06:17:00.000Z",
-      "description": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Monday added three security flaws to its Known Exploited Vulnerabilities (KEV) catalog, based on evidence of active exploitation. The vulnerability list is as follows - CVE-2021-22054 (CVSS score: 7.5) - A server-side request forger",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "Malicious npm Package Posing as OpenClaw Installer Deploys RAT, Steals macOS Credentials",
-      "link": "https://thehackernews.com/2026/03/malicious-npm-package-posing-as.html",
-      "pubDate": "2026-03-09T18:31:00.000Z",
-      "description": "Cybersecurity researchers have discovered a malicious npm package that masquerades as an OpenClaw installer to deploy a remote access trojan (RAT) and steal sensitive data from compromised hosts. The package, named \"@openclaw-ai/openclawai,\" was uploaded to the registry by a user named \"openclaw-ai\"",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "UNC4899 Breached Crypto Firm After Developer AirDropped Trojanized File to Work Device",
-      "link": "https://thehackernews.com/2026/03/unc4899-used-airdrop-file-transfer-and.html",
-      "pubDate": "2026-03-09T14:50:00.000Z",
-      "description": "The North Korean threat actor known as UNC4899 is suspected to be behind a sophisticated cloud compromise campaign targeting a cryptocurrency organization in 2025 to steal millions of dollars in cryptocurrency. The activity has been attributed with moderate confidence to the state-sponsored adversar",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "Active defense: introducing a stateful vulnerability scanner for APIs",
-      "link": "https://blog.cloudflare.com/vulnerability-scanner/",
-      "pubDate": "2026-03-09T14:00:00.000Z",
-      "description": "Cloudflare’s new Web and API Vulnerability Scanner helps teams proactively find logic flaws. By using AI to build API call graphs, we identify vulnerabilities that standard defensive tools miss.",
-      "source": "Cloudflare Blog"
     }
   ]
 }
