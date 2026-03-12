@@ -1,7 +1,14 @@
 {
-  "lastUpdated": "2026-03-11T21:58:11.946Z",
+  "lastUpdated": "2026-03-12T06:05:57.397Z",
   "itemCount": 20,
   "items": [
+    {
+      "title": "CISA Flags Actively Exploited n8n RCE Bug as 24,700 Instances Remain Exposed",
+      "link": "https://thehackernews.com/2026/03/cisa-flags-actively-exploited-n8n-rce.html",
+      "pubDate": "2026-03-12T05:18:00.000Z",
+      "description": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Wednesday added a critical security flaw impacting n8n to its Known Exploited Vulnerabilities (KEV) catalog, based on evidence of active exploitation. The vulnerability, tracked as CVE-2025-68613 (CVSS score: 9.9), concerns a case o",
+      "source": "The Hacker News"
+    },
     {
       "title": "SQLi flaw in Elementor Ally plugin impacts 250k+ WordPress sites",
       "link": "https://www.bleepingcomputer.com/news/security/sqli-flaw-in-elementor-ally-plugin-impacts-250k-plus-wordpress-sites/",
@@ -134,13 +141,6 @@
       "pubDate": "2026-03-09T14:00:00.000Z",
       "description": "Cloudflare’s new Web and API Vulnerability Scanner helps teams proactively find logic flaws. By using AI to build API call graphs, we identify vulnerabilities that standard defensive tools miss.",
       "source": "Cloudflare Blog"
-    },
-    {
-      "title": "⚡ Weekly Recap: Qualcomm 0-Day, iOS Exploit Chains, AirSnitch Attack &amp; Vibe-Coded Malware",
-      "link": "https://thehackernews.com/2026/03/weekly-recap-qualcomm-0-day-ios-exploit.html",
-      "pubDate": "2026-03-09T13:46:00.000Z",
-      "description": "Another week in cybersecurity. Another week of \"you've got to be kidding me.\" Attackers were busy. Defenders were busy. And somewhere in the middle, a whole lot of people had a very bad Monday morning. That's kind of just how it goes now. The good news? There were some actual wins this week. Real on",
-      "source": "The Hacker News"
     }
   ]
 }
