@@ -1,7 +1,28 @@
 {
-  "lastUpdated": "2026-03-12T17:38:07.518Z",
+  "lastUpdated": "2026-03-12T21:58:13.157Z",
   "itemCount": 20,
   "items": [
+    {
+      "title": "Canadian retail giant Loblaw notifies customers of data breach",
+      "link": "https://www.bleepingcomputer.com/news/security/canadian-retail-giant-loblaw-notifies-customers-of-data-breach/",
+      "pubDate": "2026-03-12T21:32:21.000Z",
+      "description": "Still, out of an abundance of caution, Loblaw says it has automatically logged out all customers from their accounts. Account holders who need to access the company's digital services will have to log in again. [...]",
+      "source": "BleepingComputer"
+    },
+    {
+      "title": "England Hockey investigating ransomware data breach",
+      "link": "https://www.bleepingcomputer.com/news/security/england-hockey-investigating-ransomware-data-breach/",
+      "pubDate": "2026-03-12T20:37:16.000Z",
+      "description": "England Hockey, the governing body for field hockey in England, is investigating a potential data breach after the AiLock ransomware gang listed it as a victim on its data leak site. [...]",
+      "source": "BleepingComputer"
+    },
+    {
+      "title": "Rust-Based VENON Malware Targets 33 Brazilian Banks with Credential-Stealing Overlays",
+      "link": "https://thehackernews.com/2026/03/rust-based-venon-malware-targets-33.html",
+      "pubDate": "2026-03-12T17:31:00.000Z",
+      "description": "Cybersecurity researchers have disclosed details of a new banking malware targeting Brazilian users that's written in Rust, marking a significant departure from other known Delphi-based malware families associated with the Latin American cybercrime ecosystem. The malware, which is designed to infect",
+      "source": "The Hacker News"
+    },
     {
       "title": "Google paid $17.1 million for vulnerability reports in 2025",
       "link": "https://www.bleepingcomputer.com/news/google/google-paid-171-million-for-vulnerability-reports-in-2025/",
@@ -119,27 +140,6 @@
       "link": "https://thehackernews.com/2026/03/five-malicious-rust-crates-and-ai-bot.html",
       "pubDate": "2026-03-11T05:12:00.000Z",
       "description": "Cybersecurity researchers have discovered five malicious Rust crates that masquerade as time-related utilities to transmit .env file data to the threat actors. The Rust packages, published to crates.io, are listed below - chrono_anchor dnp3times time_calibrator time_calibrators time-sync The crates,",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "FortiGate Devices Exploited to Breach Networks and Steal Service Account Credentials",
-      "link": "https://thehackernews.com/2026/03/fortigate-devices-exploited-to-breach.html",
-      "pubDate": "2026-03-10T16:21:00.000Z",
-      "description": "Cybersecurity researchers are calling attention to a new campaign where threat actors are abusing FortiGate Next-Generation Firewall (NGFW) appliances as entry points to breach victim networks. The activity involves the exploitation of recently disclosed security vulnerabilities or weak credentials ",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "How to Stop AI Data Leaks: A Webinar Guide to Auditing Modern Agentic Workflows",
-      "link": "https://thehackernews.com/2026/03/how-to-stop-ai-data-leaks-webinar-guide.html",
-      "pubDate": "2026-03-10T16:21:00.000Z",
-      "description": "Artificial Intelligence (AI) is no longer just a tool we talk to; it is a tool that does things for us. These are called AI Agents. They can send emails, move data, and even manage software on their own. But there is a problem. While these agents make work faster, they also open a new \"back door\" fo",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "The Zero-Day Scramble is Avoidable: A Guide to Attack Surface Reduction",
-      "link": "https://thehackernews.com/2026/03/the-zero-day-scramble-is-avoidable.html",
-      "pubDate": "2026-03-10T11:00:00.000Z",
-      "description": "You can't control when the next critical vulnerability drops. You can control how much of your environment is exposed when it does. The problem is that most teams have more internet-facing exposure than they realise. Intruder's Head of Security digs into why this happens and how teams can manage it ",
       "source": "The Hacker News"
     }
   ]
