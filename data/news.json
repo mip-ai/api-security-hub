@@ -1,7 +1,21 @@
 {
-  "lastUpdated": "2026-03-12T06:05:57.397Z",
+  "lastUpdated": "2026-03-12T11:06:11.413Z",
   "itemCount": 20,
   "items": [
+    {
+      "title": "Apple Issues Security Updates for Older iOS Devices Targeted by Coruna WebKit Exploit",
+      "link": "https://thehackernews.com/2026/03/apple-issues-security-updates-for-older.html",
+      "pubDate": "2026-03-12T09:58:00.000Z",
+      "description": "Apple on Wednesday backported fixes for a security flaw in iOS, iPadOS, and macOS Sonoma to older versions after it was found to be used as part of the Coruna exploit kit. The vulnerability, tracked as CVE-2023-43010, relates to an unspecified vulnerability in WebKit that could result in memory corr",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "Critical N8n Vulnerabilities Allowed Server Takeover",
+      "link": "https://www.securityweek.com/critical-n8n-vulnerabilities-allowed-server-takeover/",
+      "pubDate": "2026-03-12T09:54:40.000Z",
+      "description": "The bugs allowed unauthenticated attackers to execute arbitrary code, steal credentials, and take over servers. The post Critical N8n Vulnerabilities Allowed Server Takeover appeared first on SecurityWeek.",
+      "source": "SecurityWeek"
+    },
     {
       "title": "CISA Flags Actively Exploited n8n RCE Bug as 24,700 Instances Remain Exposed",
       "link": "https://thehackernews.com/2026/03/cisa-flags-actively-exploited-n8n-rce.html",
@@ -45,25 +59,11 @@
       "source": "The Hacker News"
     },
     {
-      "title": "How to 10x Your Vulnerability Management Program in the Agentic Era",
-      "link": "https://www.securityweek.com/how-to-10x-your-vulnerability-management-program-in-the-agentic-era/",
-      "pubDate": "2026-03-11T12:00:00.000Z",
-      "description": "The evolution of vulnerability management in the agentic era is characterized by continuous telemetry, contextual prioritization and the ultimate goal of agentic remediation. The post How to 10x Your Vulnerability Management Program in the Agentic Era appeared first on SecurityWeek.",
-      "source": "SecurityWeek"
-    },
-    {
       "title": "What Boards Must Demand in the Age of AI-Automated Exploitation",
       "link": "https://thehackernews.com/2026/03/what-boards-must-demand-in-age-of-ai.html",
       "pubDate": "2026-03-11T11:30:00.000Z",
       "description": "“You knew, and you could have acted. Why didn’t you?” This is the question you do not want to be asked. And increasingly, it’s the question leaders are forced to answer after an incident. For years, many executive teams and boards have treated a large vulnerability backlog as an uncomfortable but to",
       "source": "The Hacker News"
-    },
-    {
-      "title": "Michelin Confirms Data Breach Linked to Oracle EBS Attack",
-      "link": "https://www.securityweek.com/michelin-confirms-data-breach-linked-to-oracle-ebs-attack/",
-      "pubDate": "2026-03-11T11:27:20.000Z",
-      "description": "The cybercriminals have leaked more than 300GB of files allegedly stolen from the tire giant. The post Michelin Confirms Data Breach Linked to Oracle EBS Attack appeared first on SecurityWeek.",
-      "source": "SecurityWeek"
     },
     {
       "title": "UNC6426 Exploits nx npm Supply-Chain Attack to Gain AWS Admin Access in 72 Hours",
