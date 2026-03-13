@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-13T17:04:48.561Z",
+  "lastUpdated": "2026-03-13T21:59:47.221Z",
   "itemCount": 20,
   "items": [
     {
@@ -24,7 +24,7 @@
       "source": "The Hacker News"
     },
     {
-      "title": "Fake enterprise VPN downloads used to steal company credentials",
+      "title": "Fake enterprise VPN sites used to steal company credentials",
       "link": "https://www.bleepingcomputer.com/news/security/fake-enterprise-vpn-downloads-used-to-steal-company-credentials/",
       "pubDate": "2026-03-13T13:23:28.000Z",
       "description": "A threat actor tracked as Storm-2561 is distributing fake enterprise VPN clients from Ivanti, Cisco, and Fortinet to steal VPN credentials from unsuspecting users. [...]",
@@ -136,11 +136,11 @@
       "source": "BleepingComputer"
     },
     {
-      "title": "Apple patches older iPhones and iPads against Coruna exploits",
-      "link": "https://www.bleepingcomputer.com/news/apple/apple-patches-older-iphones-and-ipads-against-coruna-exploits/",
-      "pubDate": "2026-03-12T13:43:46.000Z",
-      "description": "​Apple has released security updates to patch older iPhones and iPads against a set of vulnerabilities targeted in cyberespionage and crypto-theft attacks using the Coruna exploit kit. [...]",
-      "source": "BleepingComputer"
+      "title": "ThreatsDay Bulletin: OAuth Trap, EDR Killer, Signal Phishing, Zombie ZIP, AI Platform Hack &amp; More",
+      "link": "https://thehackernews.com/2026/03/threatsday-bulletin-oauth-trap-edr.html",
+      "pubDate": "2026-03-12T13:14:00.000Z",
+      "description": "Another Thursday, another pile of weird security stuff that somehow happened in just seven days. Some of it is clever. Some of it is lazy. A few bits fall into that uncomfortable category of “yeah… this is probably going to show up in real incidents sooner than we’d like.” The pattern this week feel",
+      "source": "The Hacker News"
     }
   ]
 }
