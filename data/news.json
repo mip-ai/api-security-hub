@@ -1,7 +1,14 @@
 {
-  "lastUpdated": "2026-03-12T21:58:13.157Z",
+  "lastUpdated": "2026-03-13T05:39:36.611Z",
   "itemCount": 20,
   "items": [
+    {
+      "title": "Veeam Patches 7 Critical Backup &amp; Replication Flaws Allowing Remote Code Execution",
+      "link": "https://thehackernews.com/2026/03/veeam-patches-7-critical-backup.html",
+      "pubDate": "2026-03-13T04:15:00.000Z",
+      "description": "Veeam has released security updates to address multiple critical vulnerabilities in its Backup & Replication software that, if successfully exploited, could result in remote code execution. The vulnerabilities are as follows - CVE-2026-21666 (CVSS score: 9.9) - A vulnerability that allows an authent",
+      "source": "The Hacker News"
+    },
     {
       "title": "Canadian retail giant Loblaw notifies customers of data breach",
       "link": "https://www.bleepingcomputer.com/news/security/canadian-retail-giant-loblaw-notifies-customers-of-data-breach/",
@@ -133,13 +140,6 @@
       "link": "https://thehackernews.com/2026/03/unc6426-exploits-nx-npm-supply-chain.html",
       "pubDate": "2026-03-11T07:31:00.000Z",
       "description": "A threat actor known as UNC6426 leveraged keys stolen following the supply chain compromise of the nx npm package last year to completely breach a victim's cloud environment within a span of 72 hours. The attack started with the theft of a developer's GitHub token, which the threat actor then used t",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "Five Malicious Rust Crates and AI Bot Exploit CI/CD Pipelines to Steal Developer Secrets",
-      "link": "https://thehackernews.com/2026/03/five-malicious-rust-crates-and-ai-bot.html",
-      "pubDate": "2026-03-11T05:12:00.000Z",
-      "description": "Cybersecurity researchers have discovered five malicious Rust crates that masquerade as time-related utilities to transmit .env file data to the threat actors. The Rust packages, published to crates.io, are listed below - chrono_anchor dnp3times time_calibrator time_calibrators time-sync The crates,",
       "source": "The Hacker News"
     }
   ]
