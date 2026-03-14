@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-13T21:59:47.221Z",
+  "lastUpdated": "2026-03-14T05:36:33.446Z",
   "itemCount": 20,
   "items": [
     {
@@ -129,17 +129,17 @@
       "source": "SecurityWeek"
     },
     {
-      "title": "Telus Digital confirms breach after hacker claims 1 petabyte data theft",
-      "link": "https://www.bleepingcomputer.com/news/security/telus-digital-confirms-breach-after-hacker-claims-1-petabyte-data-theft/",
-      "pubDate": "2026-03-12T14:40:14.000Z",
-      "description": "Canadian business process outsourcing giant Telus Digital has confirmed it suffered a security incident after threat actors claimed to have stolen nearly 1 petabyte of data from the company in a multi-month breach. [...]",
-      "source": "BleepingComputer"
-    },
-    {
       "title": "ThreatsDay Bulletin: OAuth Trap, EDR Killer, Signal Phishing, Zombie ZIP, AI Platform Hack &amp; More",
       "link": "https://thehackernews.com/2026/03/threatsday-bulletin-oauth-trap-edr.html",
       "pubDate": "2026-03-12T13:14:00.000Z",
       "description": "Another Thursday, another pile of weird security stuff that somehow happened in just seven days. Some of it is clever. Some of it is lazy. A few bits fall into that uncomfortable category of “yeah… this is probably going to show up in real incidents sooner than we’d like.” The pattern this week feel",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "Attackers Don't Just Send Phishing Emails. They Weaponize Your SOC's Workload",
+      "link": "https://thehackernews.com/2026/03/attackers-dont-just-send-phishing.html",
+      "pubDate": "2026-03-12T11:30:00.000Z",
+      "description": "The most dangerous phishing campaigns aren’t just designed to fool employees. Many are designed to exhaust the analysts investigating them. When a phishing investigation takes 12 hours instead of five minutes, the outcome can shift from a contained incident to a breach. For years, the cybersecurity ",
       "source": "The Hacker News"
     }
   ]
