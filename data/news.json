@@ -1,7 +1,14 @@
 {
-  "lastUpdated": "2026-03-14T09:58:15.491Z",
+  "lastUpdated": "2026-03-14T15:52:33.435Z",
   "itemCount": 20,
   "items": [
+    {
+      "title": "Critical HPE AOS-CX Vulnerability Allows Admin Password Resets",
+      "link": "https://www.securityweek.com/critical-hpe-aos-cx-vulnerability-allows-admin-password-resets/",
+      "pubDate": "2026-03-14T10:50:00.000Z",
+      "description": "The vulnerability can be exploited remotely, without authentication, to circumvent existing authentication controls. The post Critical HPE AOS-CX Vulnerability Allows Admin Password Resets appeared first on SecurityWeek.",
+      "source": "SecurityWeek"
+    },
     {
       "title": "Starbucks Data Breach Impacts Employees",
       "link": "https://www.securityweek.com/starbucks-data-breach-impacts-employees/",
@@ -115,20 +122,6 @@
       "source": "The Hacker News"
     },
     {
-      "title": "Google paid $17.1 million for vulnerability reports in 2025",
-      "link": "https://www.bleepingcomputer.com/news/google/google-paid-171-million-for-vulnerability-reports-in-2025/",
-      "pubDate": "2026-03-12T15:22:35.000Z",
-      "description": "Google paid over $17 million to 747 security researchers who reported security bugs through its Vulnerability Reward Program (VRP) in 2025. [...]",
-      "source": "BleepingComputer"
-    },
-    {
-      "title": "Apple Updates Legacy iOS Versions to Patch Coruna Exploits",
-      "link": "https://www.securityweek.com/apple-updates-older-ios-versions-to-patch-coruna-exploits/",
-      "pubDate": "2026-03-12T14:40:34.000Z",
-      "description": "The company has released iOS and iPadOS versions 16.7.15 and 15.8.7 to patch the vulnerabilities. The post Apple Updates Legacy iOS Versions to Patch Coruna Exploits appeared first on SecurityWeek.",
-      "source": "SecurityWeek"
-    },
-    {
       "title": "ThreatsDay Bulletin: OAuth Trap, EDR Killer, Signal Phishing, Zombie ZIP, AI Platform Hack &amp; More",
       "link": "https://thehackernews.com/2026/03/threatsday-bulletin-oauth-trap-edr.html",
       "pubDate": "2026-03-12T13:14:00.000Z",
@@ -140,6 +133,13 @@
       "link": "https://thehackernews.com/2026/03/attackers-dont-just-send-phishing.html",
       "pubDate": "2026-03-12T11:30:00.000Z",
       "description": "The most dangerous phishing campaigns aren’t just designed to fool employees. Many are designed to exhaust the analysts investigating them. When a phishing investigation takes 12 hours instead of five minutes, the outcome can shift from a contained incident to a breach. For years, the cybersecurity ",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "Apple Issues Security Updates for Older iOS Devices Targeted by Coruna WebKit Exploit",
+      "link": "https://thehackernews.com/2026/03/apple-issues-security-updates-for-older.html",
+      "pubDate": "2026-03-12T09:58:00.000Z",
+      "description": "Apple on Wednesday backported fixes for a security flaw in iOS, iPadOS, and macOS Sonoma to older versions after it was found to be used as part of the Coruna exploit kit. The vulnerability, tracked as CVE-2023-43010, relates to an unspecified vulnerability in WebKit that could result in memory corr",
       "source": "The Hacker News"
     }
   ]
