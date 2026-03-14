@@ -1,7 +1,14 @@
 {
-  "lastUpdated": "2026-03-14T15:52:33.435Z",
+  "lastUpdated": "2026-03-14T21:52:09.700Z",
   "itemCount": 20,
   "items": [
+    {
+      "title": "OpenClaw AI Agent Flaws Could Enable Prompt Injection and Data Exfiltration",
+      "link": "https://thehackernews.com/2026/03/openclaw-ai-agent-flaws-could-enable.html",
+      "pubDate": "2026-03-14T16:17:00.000Z",
+      "description": "China's National Computer Network Emergency Response Technical Team (CNCERT) has issued a warning about the security stemming from the use of OpenClaw (formerly Clawdbot and Moltbot), an open-source and self-hosted autonomous artificial intelligence (AI) agent. In a post shared on WeChat, CNCERT not",
+      "source": "The Hacker News"
+    },
     {
       "title": "Critical HPE AOS-CX Vulnerability Allows Admin Password Resets",
       "link": "https://www.securityweek.com/critical-hpe-aos-cx-vulnerability-allows-admin-password-resets/",
@@ -133,13 +140,6 @@
       "link": "https://thehackernews.com/2026/03/attackers-dont-just-send-phishing.html",
       "pubDate": "2026-03-12T11:30:00.000Z",
       "description": "The most dangerous phishing campaigns aren’t just designed to fool employees. Many are designed to exhaust the analysts investigating them. When a phishing investigation takes 12 hours instead of five minutes, the outcome can shift from a contained incident to a breach. For years, the cybersecurity ",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "Apple Issues Security Updates for Older iOS Devices Targeted by Coruna WebKit Exploit",
-      "link": "https://thehackernews.com/2026/03/apple-issues-security-updates-for-older.html",
-      "pubDate": "2026-03-12T09:58:00.000Z",
-      "description": "Apple on Wednesday backported fixes for a security flaw in iOS, iPadOS, and macOS Sonoma to older versions after it was found to be used as part of the Coruna exploit kit. The vulnerability, tracked as CVE-2023-43010, relates to an unspecified vulnerability in WebKit that could result in memory corr",
       "source": "The Hacker News"
     }
   ]
