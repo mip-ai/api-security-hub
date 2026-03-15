@@ -1,7 +1,14 @@
 {
-  "lastUpdated": "2026-03-15T09:59:51.567Z",
+  "lastUpdated": "2026-03-15T15:54:57.827Z",
   "itemCount": 20,
   "items": [
+    {
+      "title": "Loblaw Data Breach Impacts Customer Information",
+      "link": "https://www.securityweek.com/loblaw-data-breach-impacts-customer-information/",
+      "pubDate": "2026-03-15T10:00:00.000Z",
+      "description": "Personal information such as names, email addresses, and phone numbers was accessed by hackers. The post Loblaw Data Breach Impacts Customer Information appeared first on SecurityWeek.",
+      "source": "SecurityWeek"
+    },
     {
       "title": "OpenClaw AI Agent Flaws Could Enable Prompt Injection and Data Exfiltration",
       "link": "https://thehackernews.com/2026/03/openclaw-ai-agent-flaws-could-enable.html",
@@ -78,13 +85,6 @@
       "pubDate": "2026-03-13T08:16:55.000Z",
       "description": "Starbucks has disclosed a data breach affecting hundreds of employees after threat actors gained access to their Starbucks Partner Central accounts. [...]",
       "source": "BleepingComputer"
-    },
-    {
-      "title": "Chrome 146 Update Patches Two Exploited Zero-Days",
-      "link": "https://www.securityweek.com/chrome-146-update-patches-two-exploited-zero-days/",
-      "pubDate": "2026-03-13T07:47:19.000Z",
-      "description": "The flaws can be exploited to manipulate data and bypass security restrictions, potentially leading to code execution. The post Chrome 146 Update Patches Two Exploited Zero-Days appeared first on SecurityWeek.",
-      "source": "SecurityWeek"
     },
     {
       "title": "Google fixes two new Chrome zero-days exploited in attacks",
