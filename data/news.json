@@ -1,7 +1,34 @@
 {
-  "lastUpdated": "2026-03-16T16:05:38.820Z",
+  "lastUpdated": "2026-03-16T21:40:23.000Z",
   "itemCount": 20,
   "items": [
+    {
+      "title": "GlassWorm 攻撃は、盗まれた GitHub トークンを使用してマルウェアを Python リポジトリに強制プッシュします",
+      "titleOriginal": "GlassWorm Attack Uses Stolen GitHub Tokens to Force-Push Malware Into Python Repos",
+      "link": "https://thehackernews.com/2026/03/glassworm-attack-uses-stolen-github.html",
+      "pubDate": "2026-03-16T19:37:00.000Z",
+      "description": "GlassWorm マルウェア キャンペーンは、盗まれた GitHub トークンを利用して数百の Python リポジトリにマルウェアを注入する進行中の攻撃を促進するために使用されています。 「この攻撃は、Django アプリ、ML 研究コード、Streamlit ダッシュボード、PyPI パッケージを含む Python プロジェクトをターゲットにしています。",
+      "descriptionOriginal": "The GlassWorm malware campaign is being used to fuel an ongoing attack that leverages the stolen GitHub tokens to inject malware into hundreds of Python repositories. \"The attack targets Python projects — including Django apps, ML research code, Streamlit dashboards, and PyPI packages — by appending",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "CISA、Wing FTP Serverの欠陥が攻撃に積極的に悪用されているとして報告",
+      "titleOriginal": "CISA flags Wing FTP Server flaw as actively exploited in attacks",
+      "link": "https://www.bleepingcomputer.com/news/security/cisa-flags-wing-ftp-server-flaw-as-actively-exploited-in-attacks/",
+      "pubDate": "2026-03-16T18:00:22.000Z",
+      "description": "CISAは米国政府機関に対し、リモートコード実行攻撃に連鎖する可能性のある積極的に悪用される脆弱性からWing FTP Serverインスタンスを保護するよう警告した。 [...]",
+      "descriptionOriginal": "CISA warned U.S. government agencies to secure their Wing FTP Server instances against an actively exploited vulnerability that may be chained in remote code execution attacks. [...]",
+      "source": "BleepingComputer"
+    },
+    {
+      "title": "英国企業庁、セキュリティ上の欠陥でビジネスデータが暴露されたことを確認",
+      "titleOriginal": "UK’s Companies House confirms security flaw exposed business data",
+      "link": "https://www.bleepingcomputer.com/news/security/uks-companies-house-confirms-security-flaw-exposed-business-data/",
+      "pubDate": "2026-03-16T17:07:25.000Z",
+      "description": "英国のすべての企業の登記簿を管理する英国政府機関であるカンパニーズ・ハウスは、同社のWebFilingサービスが、2025年10月以来企業情報を漏洩させたセキュリティ上の欠陥を修正するため金曜日に閉鎖されていたが、オンラインに戻ったと発表した。 [...]",
+      "descriptionOriginal": "Companies House, a British government agency that operates the registry for all U.K. companies, says its WebFiling service is back online after it was closed on Friday to fix a security flaw that exposed companies' information since October 2025. [...]",
+      "source": "BleepingComputer"
+    },
     {
       "title": "⚡ 毎週の要約: Chrome ゼロデイ、ルーター ボットネット、AWS ブリーチ、不正 AI エージェント、および もっと",
       "titleOriginal": "⚡ Weekly Recap: Chrome 0-Days, Router Botnets, AWS Breach, Rogue AI Agents &amp; More",
@@ -111,15 +138,6 @@
       "source": "The Hacker News"
     },
     {
-      "title": "企業の認証情報を盗むために使用される偽のエンタープライズ VPN サイト",
-      "titleOriginal": "Fake enterprise VPN sites used to steal company credentials",
-      "link": "https://www.bleepingcomputer.com/news/security/fake-enterprise-vpn-downloads-used-to-steal-company-credentials/",
-      "pubDate": "2026-03-13T13:23:28.000Z",
-      "description": "Storm-2561 として追跡されている攻撃者は、Ivanti、Cisco、Fortinet の偽のエンタープライズ VPN クライアントを配布し、何も疑っていないユーザーから VPN 認証情報を盗んでいます。 [...]",
-      "descriptionOriginal": "A threat actor tracked as Storm-2561 is distributing fake enterprise VPN clients from Ivanti, Cisco, and Fortinet to steal VPN credentials from unsuspecting users. [...]",
-      "source": "BleepingComputer"
-    },
-    {
       "title": "Google、Skia と V8 に影響を与える、実際に悪用された 2 つの Chrome ゼロデイを修正",
       "titleOriginal": "Google Fixes Two Chrome Zero-Days Exploited in the Wild Affecting Skia and V8",
       "link": "https://thehackernews.com/2026/03/google-fixes-two-chrome-zero-days.html",
@@ -136,15 +154,6 @@
       "description": "サイバーセキュリティ研究者らは、Linux カーネルの AppArmor モジュール内に複数のセキュリティ脆弱性があることを明らかにしました。これらの脆弱性は、特権のないユーザーが悪用して、カーネル保護を回避し、root にエスカレーションし、コンテナ分離の保証を損なう可能性があります。 混乱する9人の副脆弱性",
       "descriptionOriginal": "Cybersecurity researchers have disclosed multiple security vulnerabilities within the Linux kernel's AppArmor module that could be exploited by unprivileged users to circumvent kernel protections, escalate to root, and undermine container isolation guarantees. The nine confused deputy vulnerabilitie",
       "source": "The Hacker News"
-    },
-    {
-      "title": "スターバックス、数百人の従業員に影響を与えるデータ侵害を明らかに",
-      "titleOriginal": "Starbucks discloses data breach affecting hundreds of employees",
-      "link": "https://www.bleepingcomputer.com/news/security/starbucks-discloses-data-breach-affecting-hundreds-of-employees/",
-      "pubDate": "2026-03-13T08:16:55.000Z",
-      "description": "スターバックスは、攻撃者がスターバックス パートナー セントラル アカウントにアクセスした後、数百人の従業員に影響を与えたデータ侵害を明らかにしました。 [...]",
-      "descriptionOriginal": "Starbucks has disclosed a data breach affecting hundreds of employees after threat actors gained access to their Starbucks Partner Central accounts. [...]",
-      "source": "BleepingComputer"
     },
     {
       "title": "当局が 163 か国の 369,000 個の IP を悪用する SocksEscort プロキシ ボットネットを妨害",
@@ -171,15 +180,6 @@
       "pubDate": "2026-03-12T17:31:00.000Z",
       "description": "サイバーセキュリティ研究者らは、ブラジルのユーザーをターゲットにした、Rust で書かれた新たなバンキング マルウェアの詳細を明らかにしました。これは、ラテンアメリカのサイバー犯罪エコシステムに関連する他の既知の Delphi ベースのマルウェア ファミリとは大きく異なります。 感染するように設計されたマルウェア",
       "descriptionOriginal": "Cybersecurity researchers have disclosed details of a new banking malware targeting Brazilian users that's written in Rust, marking a significant departure from other known Delphi-based malware families associated with the Latin American cybercrime ecosystem. The malware, which is designed to infect",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "ThreatsDay 速報: OAuth トラップ、EDR キラー、シグナル フィッシング、ゾンビ ZIP、AI プラットフォーム ハックとセキュリティ もっと",
-      "titleOriginal": "ThreatsDay Bulletin: OAuth Trap, EDR Killer, Signal Phishing, Zombie ZIP, AI Platform Hack &amp; More",
-      "link": "https://thehackernews.com/2026/03/threatsday-bulletin-oauth-trap-edr.html",
-      "pubDate": "2026-03-12T13:14:00.000Z",
-      "description": "また木曜日、どういうわけかわずか 7 日間で奇妙なセキュリティ関連の出来事がまた山積みになりました。 その一部は巧妙です。 怠惰なものもあります。 いくつかのビットは、「ああ…これはおそらく私たちが望むよりも早く実際の事件に現れるだろう」という不快なカテゴリーに分類されます。 今週の模様",
-      "descriptionOriginal": "Another Thursday, another pile of weird security stuff that somehow happened in just seven days. Some of it is clever. Some of it is lazy. A few bits fall into that uncomfortable category of “yeah… this is probably going to show up in real incidents sooner than we’d like.” The pattern this week feel",
       "source": "The Hacker News"
     }
   ]
