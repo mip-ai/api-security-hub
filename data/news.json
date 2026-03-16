@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-16T06:29:20.107Z",
+  "lastUpdated": "2026-03-16T10:07:01.448Z",
   "itemCount": 20,
   "items": [
     {
@@ -16,7 +16,7 @@
       "titleOriginal": "Loblaw Data Breach Impacts Customer Information",
       "link": "https://www.securityweek.com/loblaw-data-breach-impacts-customer-information/",
       "pubDate": "2026-03-15T10:00:00.000Z",
-      "description": "名前、電子メール アドレス、電話番号などの個人情報がハッカーによってアクセスされました。 Loblaw データ侵害による顧客情報への影響の投稿は、SecurityWeek に最初に掲載されました。",
+      "description": "名前、電子メール アドレス、電話番号などの個人情報がハッカーによってアクセスされました。 Loblaw データ漏洩による顧客情報への影響の投稿は、SecurityWeek に最初に掲載されました。",
       "descriptionOriginal": "Personal information such as names, email addresses, and phone numbers was accessed by hackers. The post Loblaw Data Breach Impacts Customer Information appeared first on SecurityWeek.",
       "source": "SecurityWeek"
     },
@@ -106,7 +106,7 @@
       "titleOriginal": "Nine CrackArmor Flaws in Linux AppArmor Enable Root Escalation, Bypass Container Isolation",
       "link": "https://thehackernews.com/2026/03/nine-crackarmor-flaws-in-linux-apparmor.html",
       "pubDate": "2026-03-13T08:18:00.000Z",
-      "description": "サイバーセキュリティ研究者らは、Linux カーネルの AppArmor モジュール内に複数のセキュリティ脆弱性があることを明らかにしました。これらの脆弱性は、特権のないユーザーが悪用して、カーネル保護を回避し、root にエスカレーションし、コンテナ分離の保証を損なう可能性があります。 9人の混乱した副脆弱性",
+      "description": "サイバーセキュリティ研究者らは、Linux カーネルの AppArmor モジュール内に複数のセキュリティ脆弱性があることを明らかにしました。これらの脆弱性は、特権のないユーザーが悪用して、カーネル保護を回避し、root にエスカレーションし、コンテナ分離の保証を損なう可能性があります。 混乱する9人の副脆弱性",
       "descriptionOriginal": "Cybersecurity researchers have disclosed multiple security vulnerabilities within the Linux kernel's AppArmor module that could be exploited by unprivileged users to circumvent kernel protections, escalate to root, and undermine container isolation guarantees. The nine confused deputy vulnerabilitie",
       "source": "The Hacker News"
     },
@@ -169,12 +169,12 @@
       "titleOriginal": "Rust-Based VENON Malware Targets 33 Brazilian Banks with Credential-Stealing Overlays",
       "link": "https://thehackernews.com/2026/03/rust-based-venon-malware-targets-33.html",
       "pubDate": "2026-03-12T17:31:00.000Z",
-      "description": "サイバーセキュリティ研究者らは、ブラジルのユーザーをターゲットにした、Rust で書かれた新しいバンキング マルウェアの詳細を明らかにしました。これは、ラテンアメリカのサイバー犯罪エコシステムに関連する他の既知の Delphi ベースのマルウェア ファミリとは大きく異なります。 感染するように設計されたマルウェア",
+      "description": "サイバーセキュリティ研究者らは、ブラジルのユーザーをターゲットにした、Rust で書かれた新たなバンキング マルウェアの詳細を明らかにしました。これは、ラテンアメリカのサイバー犯罪エコシステムに関連する他の既知の Delphi ベースのマルウェア ファミリとは大きく異なります。 感染するように設計されたマルウェア",
       "descriptionOriginal": "Cybersecurity researchers have disclosed details of a new banking malware targeting Brazilian users that's written in Rust, marking a significant departure from other known Delphi-based malware families associated with the Latin American cybercrime ecosystem. The malware, which is designed to infect",
       "source": "The Hacker News"
     },
     {
-      "title": "ThreatsDay 速報: OAuth トラップ、EDR キラー、シグナル フィッシング、ゾンビ ZIP、AI プラットフォーム ハックおよびセキュリティ もっと",
+      "title": "ThreatsDay 速報: OAuth トラップ、EDR キラー、シグナル フィッシング、ゾンビ ZIP、AI プラットフォーム ハックとセキュリティ もっと",
       "titleOriginal": "ThreatsDay Bulletin: OAuth Trap, EDR Killer, Signal Phishing, Zombie ZIP, AI Platform Hack &amp; More",
       "link": "https://thehackernews.com/2026/03/threatsday-bulletin-oauth-trap-edr.html",
       "pubDate": "2026-03-12T13:14:00.000Z",
