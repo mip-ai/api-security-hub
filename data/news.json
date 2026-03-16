@@ -1,7 +1,52 @@
 {
-  "lastUpdated": "2026-03-16T10:07:01.448Z",
+  "lastUpdated": "2026-03-16T16:05:38.820Z",
   "itemCount": 20,
   "items": [
+    {
+      "title": "⚡ 毎週の要約: Chrome ゼロデイ、ルーター ボットネット、AWS ブリーチ、不正 AI エージェント、および もっと",
+      "titleOriginal": "⚡ Weekly Recap: Chrome 0-Days, Router Botnets, AWS Breach, Rogue AI Agents &amp; More",
+      "link": "https://thehackernews.com/2026/03/weekly-recap-chrome-0-days-router.html",
+      "pubDate": "2026-03-16T14:17:00.000Z",
+      "description": "数週間の安全な生活が普通に感じられます。 次に、いくつかのタブを読むと、すぐに「ああ、すごい、今これをやっているんだ」という感覚が得られます。 今週はそのエネルギーがあります。 新鮮な混乱、より鮮明になっている古い問題、そして理論的だと感じられなくなる研究。 いくつかの点は現実の生活に少し近づきすぎていますが、",
+      "descriptionOriginal": "Some weeks in security feel normal. Then you read a few tabs and get that immediate “ah, great, we’re doing this now” feeling. This week has that energy. Fresh messes, old problems getting sharper, and research that stops feeling theoretical real fast. A few bits hit a little too close to real life,",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "新たな認証情報盗難キャンペーンで VPN ユーザーを標的とする攻撃者",
+      "titleOriginal": "Threat Actor Targeting VPN Users in New Credential Theft Campaign",
+      "link": "https://www.securityweek.com/threat-actor-targeting-vpn-users-in-new-credential-theft-campaign/",
+      "pubDate": "2026-03-16T12:28:58.000Z",
+      "description": "Storm-2561 は、SEO ポイズニングを通じて偽の VPN クライアントを配布し、トロイの木馬を展開し、ログイン情報を盗みます。 新しい資格情報盗難キャンペーンで VPN ユーザーを標的にする脅威アクターの記事は、SecurityWeek に最初に掲載されました。",
+      "descriptionOriginal": "Storm-2561 is distributing fake VPN clients through SEO poisoning, deploying trojans, and stealing login information. The post Threat Actor Targeting VPN Users in New Credential Theft Campaign appeared first on SecurityWeek.",
+      "source": "SecurityWeek"
+    },
+    {
+      "title": "セキュリティ検証がエージェント的になる理由",
+      "titleOriginal": "Why Security Validation Is Becoming Agentic",
+      "link": "https://thehackernews.com/2026/03/why-security-validation-is-becoming.html",
+      "pubDate": "2026-03-16T11:58:00.000Z",
+      "description": "かなり複雑な組織でセキュリティを実行している場合、検証スタックはおそらく次のようになります。片隅に BAS ツールが置かれています。 別の侵入テストの取り組み、または自動侵入テスト製品の可能性もあります。 どこかの攻撃対象領域管理プラットフォームに脆弱性スキャナーを供給する",
+      "descriptionOriginal": "If you run security at any reasonably complex organization, your validation stack probably looks something like this: a BAS tool in one corner. A pentest engagement, or maybe an automated pentesting product, in another. A vulnerability scanner feeding an attack surface management platform somewhere ",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "ForceMemo: GlassWorm の余波で Python リポジトリが侵害される",
+      "titleOriginal": "ForceMemo: Python Repositories Compromised in GlassWorm Aftermath",
+      "link": "https://www.securityweek.com/forcememo-python-repositories-compromised-in-glassworm-aftermath/",
+      "pubDate": "2026-03-16T11:51:36.000Z",
+      "description": "VS Code GlassWorm キャンペーンで盗まれた認証情報を使用して、数百の GitHub アカウントがアクセスされました。 ForceMemo: GlassWorm の余波で侵害された Python リポジトリの投稿は、SecurityWeek に最初に掲載されました。",
+      "descriptionOriginal": "Hundreds of GitHub accounts were accessed using credentials stolen in the VS Code GlassWorm campaign. The post ForceMemo: Python Repositories Compromised in GlassWorm Aftermath appeared first on SecurityWeek.",
+      "source": "SecurityWeek"
+    },
+    {
+      "title": "ClickFix キャンペーンが偽の AI ツール インストーラーを介して MacSync macOS Infostealer を拡散",
+      "titleOriginal": "ClickFix Campaigns Spread MacSync macOS Infostealer via Fake AI Tool Installers",
+      "link": "https://thehackernews.com/2026/03/clickfix-campaigns-spread-macsync-macos.html",
+      "pubDate": "2026-03-16T11:41:00.000Z",
+      "description": "3 つの異なる ClickFix キャンペーンが、MacSync と呼ばれる macOS 情報スティーラーの展開の配信ベクトルとして機能することが判明しました。 「従来のエクスプロイトベースの攻撃とは異なり、この手法はユーザーの操作 (通常はコマンドのコピーと実行という形) に完全に依存しています。",
+      "descriptionOriginal": "Three different ClickFix campaigns have been found to act as a delivery vector for the deployment of a macOS information stealer called MacSync. \"Unlike traditional exploit-based attacks, this method relies entirely on user interaction – usually in the form of copying and executing commands – making",
+      "source": "The Hacker News"
+    },
     {
       "title": "Android 17 は、マルウェアの悪用を防ぐために、アクセシビリティ非対応アプリをアクセシビリティ API からブロックします",
       "titleOriginal": "Android 17 Blocks Non-Accessibility Apps from Accessibility API to Prevent Malware Abuse",
@@ -75,24 +120,6 @@
       "source": "BleepingComputer"
     },
     {
-      "title": "イラン関連のハッカーによるストライカー攻撃で製造と出荷が混乱",
-      "titleOriginal": "Iran-Linked Hacker Attack on Stryker Disrupted Manufacturing and Shipping",
-      "link": "https://www.securityweek.com/iran-linked-hacker-attack-on-stryker-disrupted-manufacturing-and-shipping/",
-      "pubDate": "2026-03-13T10:38:47.000Z",
-      "description": "証拠は、攻撃者がマルウェアではなく既存のエンドポイント管理ソフトウェアを利用してデバイスをワイプしたことを示しています。 ストライカー社に対するイラン関連のハッカー攻撃による製造と配送の混乱に関する記事は、SecurityWeek に最初に掲載されました。",
-      "descriptionOriginal": "Evidence indicates that the attackers leveraged existing endpoint management software rather than malware to wipe devices. The post Iran-Linked Hacker Attack on Stryker Disrupted Manufacturing and Shipping appeared first on SecurityWeek.",
-      "source": "SecurityWeek"
-    },
-    {
-      "title": "Onyx Security が 4,000 万ドルの資金を調達して発足",
-      "titleOriginal": "Onyx Security Launches With $40 Million in Funding",
-      "link": "https://www.securityweek.com/onyx-security-launches-with-40-million-in-funding/",
-      "pubDate": "2026-03-13T09:25:51.000Z",
-      "description": "このスタートアップは、組織が自律型 AI エージェントを監視し、迅速に導入できるようにするためのコントロール ペインを構築しています。 Onyx Security が 4,000 万ドルの資金を調達して開始という記事は、SecurityWeek に最初に掲載されました。",
-      "descriptionOriginal": "The startup is building a control pane to help organizations oversee autonomous AI agents and rapidly adopt them. The post Onyx Security Launches With $40 Million in Funding appeared first on SecurityWeek.",
-      "source": "SecurityWeek"
-    },
-    {
       "title": "Google、Skia と V8 に影響を与える、実際に悪用された 2 つの Chrome ゼロデイを修正",
       "titleOriginal": "Google Fixes Two Chrome Zero-Days Exploited in the Wild Affecting Skia and V8",
       "link": "https://thehackernews.com/2026/03/google-fixes-two-chrome-zero-days.html",
@@ -120,15 +147,6 @@
       "source": "BleepingComputer"
     },
     {
-      "title": "Google、攻撃に悪用された2つの新しいChromeゼロデイを修正",
-      "titleOriginal": "Google fixes two new Chrome zero-days exploited in attacks",
-      "link": "https://www.bleepingcomputer.com/news/google/google-fixes-two-new-chrome-zero-days-exploited-in-attacks/",
-      "pubDate": "2026-03-13T06:56:58.000Z",
-      "description": "Googleは、ゼロデイ攻撃で悪用されたChromeの重大度の高い2つの脆弱性を修正するための緊急セキュリティアップデートをリリースした。 [...]",
-      "descriptionOriginal": "Google has released emergency security updates to patch two high-severity Chrome vulnerabilities exploited in zero-day attacks. [...]",
-      "source": "BleepingComputer"
-    },
-    {
       "title": "当局が 163 か国の 369,000 個の IP を悪用する SocksEscort プロキシ ボットネットを妨害",
       "titleOriginal": "Authorities Disrupt SocksEscort Proxy Botnet Exploiting 369,000 IPs Across 163 Countries",
       "link": "https://thehackernews.com/2026/03/authorities-disrupt-socksescort-proxy.html",
@@ -145,24 +163,6 @@
       "description": "Veeam は、悪用に成功するとリモートでコードが実行される可能性があるバックアップ & レプリケーション ソフトウェアの複数の重大な脆弱性に対処するセキュリティ アップデートをリリースしました。 脆弱性は以下のとおりです ・ CVE-2026-21666 (CVSS スコア: 9.9) ・ 認証が可能になる脆弱性",
       "descriptionOriginal": "Veeam has released security updates to address multiple critical vulnerabilities in its Backup & Replication software that, if successfully exploited, could result in remote code execution. The vulnerabilities are as follows - CVE-2026-21666 (CVSS score: 9.9) - A vulnerability that allows an authent",
       "source": "The Hacker News"
-    },
-    {
-      "title": "カナダの小売大手 Loblaw が顧客にデータ侵害を通知",
-      "titleOriginal": "Canadian retail giant Loblaw notifies customers of data breach",
-      "link": "https://www.bleepingcomputer.com/news/security/canadian-retail-giant-loblaw-notifies-customers-of-data-breach/",
-      "pubDate": "2026-03-12T21:32:21.000Z",
-      "description": "それでもロブロー氏は、十分な注意を払って、すべての顧客をアカウントから自動的にログアウトしたと述べている。 同社のデジタル サービスにアクセスする必要があるアカウント所有者は、再度ログインする必要があります。 [...]",
-      "descriptionOriginal": "Still, out of an abundance of caution, Loblaw says it has automatically logged out all customers from their accounts. Account holders who need to access the company's digital services will have to log in again. [...]",
-      "source": "BleepingComputer"
-    },
-    {
-      "title": "イングランドホッケー、ランサムウェアによるデータ侵害を調査",
-      "titleOriginal": "England Hockey investigating ransomware data breach",
-      "link": "https://www.bleepingcomputer.com/news/security/england-hockey-investigating-ransomware-data-breach/",
-      "pubDate": "2026-03-12T20:37:16.000Z",
-      "description": "イングランドのフィールドホッケーの統括団体であるイングランドホッケーは、ランサムウェア集団「AiLock」がデータ漏洩サイトに同社を被害者としてリストアップしたことを受け、データ漏洩の可能性を調査している。 [...]",
-      "descriptionOriginal": "England Hockey, the governing body for field hockey in England, is investigating a potential data breach after the AiLock ransomware gang listed it as a victim on its data leak site. [...]",
-      "source": "BleepingComputer"
     },
     {
       "title": "Rust ベースの VENON マルウェア、認証情報を盗むオーバーレイでブラジルの銀行 33 行を標的",
