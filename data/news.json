@@ -1,145 +1,185 @@
 {
-  "lastUpdated": "2026-03-16T05:15:02.405Z",
+  "lastUpdated": "2026-03-16T06:29:20.107Z",
   "itemCount": 20,
   "items": [
     {
-      "title": "Loblaw Data Breach Impacts Customer Information",
+      "title": "Android 17 は、マルウェアの悪用を防ぐために、アクセシビリティ非対応アプリをアクセシビリティ API からブロックします",
+      "titleOriginal": "Android 17 Blocks Non-Accessibility Apps from Accessibility API to Prevent Malware Abuse",
+      "link": "https://thehackernews.com/2026/03/android-17-blocks-non-accessibility.html",
+      "pubDate": "2026-03-16T05:43:00.000Z",
+      "description": "Google は、特定の種類のアプリがユーザー補助サービス API を使用できないようにする、Android 高度な保護モード (AAPM) の一部として新しいセキュリティ機能をテストしています。 この変更は Android 17 Beta 2 に組み込まれており、先週 Android Authority によって初めて報告されました。 AAPM は Google i によって導入されました",
+      "descriptionOriginal": "Google is testing a new security feature as part of Android Advanced Protection Mode (AAPM) that prevents certain kinds of apps from using the accessibility services API. The change, incorporated in Android 17 Beta 2, was first reported by Android Authority last week. AAPM was introduced by Google i",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "Loblaw データ漏洩は顧客情報に影響を与える",
+      "titleOriginal": "Loblaw Data Breach Impacts Customer Information",
       "link": "https://www.securityweek.com/loblaw-data-breach-impacts-customer-information/",
       "pubDate": "2026-03-15T10:00:00.000Z",
-      "description": "Personal information such as names, email addresses, and phone numbers was accessed by hackers. The post Loblaw Data Breach Impacts Customer Information appeared first on SecurityWeek.",
+      "description": "名前、電子メール アドレス、電話番号などの個人情報がハッカーによってアクセスされました。 Loblaw データ侵害による顧客情報への影響の投稿は、SecurityWeek に最初に掲載されました。",
+      "descriptionOriginal": "Personal information such as names, email addresses, and phone numbers was accessed by hackers. The post Loblaw Data Breach Impacts Customer Information appeared first on SecurityWeek.",
       "source": "SecurityWeek"
     },
     {
-      "title": "OpenClaw AI Agent Flaws Could Enable Prompt Injection and Data Exfiltration",
+      "title": "OpenClaw AI エージェントの欠陥により、迅速なインジェクションとデータ漏洩が可能になる可能性がある",
+      "titleOriginal": "OpenClaw AI Agent Flaws Could Enable Prompt Injection and Data Exfiltration",
       "link": "https://thehackernews.com/2026/03/openclaw-ai-agent-flaws-could-enable.html",
       "pubDate": "2026-03-14T16:17:00.000Z",
-      "description": "China's National Computer Network Emergency Response Technical Team (CNCERT) has issued a warning about the security stemming from the use of OpenClaw (formerly Clawdbot and Moltbot), an open-source and self-hosted autonomous artificial intelligence (AI) agent. In a post shared on WeChat, CNCERT not",
+      "description": "中国国家コンピュータネットワーク緊急対応技術チーム（CNCERT）は、オープンソースで自己ホスト型の自律型人工知能（AI）エージェントであるOpenClaw（旧称ClawdbotおよびMoltbot）の使用に起因するセキュリティについて警告を発した。 WeChatで共有された投稿では、CNCERTはそうではありません",
+      "descriptionOriginal": "China's National Computer Network Emergency Response Technical Team (CNCERT) has issued a warning about the security stemming from the use of OpenClaw (formerly Clawdbot and Moltbot), an open-source and self-hosted autonomous artificial intelligence (AI) agent. In a post shared on WeChat, CNCERT not",
       "source": "The Hacker News"
     },
     {
-      "title": "Critical HPE AOS-CX Vulnerability Allows Admin Password Resets",
+      "title": "HPE AOS-CXの重大な脆弱性により管理者パスワードがリセットされる",
+      "titleOriginal": "Critical HPE AOS-CX Vulnerability Allows Admin Password Resets",
       "link": "https://www.securityweek.com/critical-hpe-aos-cx-vulnerability-allows-admin-password-resets/",
       "pubDate": "2026-03-14T10:50:00.000Z",
-      "description": "The vulnerability can be exploited remotely, without authentication, to circumvent existing authentication controls. The post Critical HPE AOS-CX Vulnerability Allows Admin Password Resets appeared first on SecurityWeek.",
+      "description": "この脆弱性は、認証を行わずにリモートから悪用され、既存の認証制御を回避する可能性があります。 「HPE AOS-CX の重大な脆弱性により管理者パスワードのリセットが可能になる」という投稿は、SecurityWeek に最初に掲載されました。",
+      "descriptionOriginal": "The vulnerability can be exploited remotely, without authentication, to circumvent existing authentication controls. The post Critical HPE AOS-CX Vulnerability Allows Admin Password Resets appeared first on SecurityWeek.",
       "source": "SecurityWeek"
     },
     {
-      "title": "Starbucks Data Breach Impacts Employees",
+      "title": "スターバックスのデータ侵害は従業員に影響を与える",
+      "titleOriginal": "Starbucks Data Breach Impacts Employees",
       "link": "https://www.securityweek.com/starbucks-data-breach-impacts-employees/",
       "pubDate": "2026-03-13T15:21:13.000Z",
-      "description": "Starbucks said the incident involved phishing attacks targeting an employee portal, affecting hundreds. The post Starbucks Data Breach Impacts Employees appeared first on SecurityWeek.",
+      "description": "スターバックスは、この事件には従業員ポータルを標的としたフィッシング攻撃が含まれており、数百人が影響を受けたと述べた。 スターバックスのデータ侵害が従業員に影響を与えるという投稿は、SecurityWeek に最初に掲載されました。",
+      "descriptionOriginal": "Starbucks said the incident involved phishing attacks targeting an employee portal, affecting hundreds. The post Starbucks Data Breach Impacts Employees appeared first on SecurityWeek.",
       "source": "SecurityWeek"
     },
     {
-      "title": "In Other News: N8n Flaw Exploited, Slopoly Malware, Interpol Cybercrime Crackdown",
+      "title": "その他のニュース: N8n 脆弱性悪用、Slopoly マルウェア、インターポールのサイバー犯罪取り締まり",
+      "titleOriginal": "In Other News: N8n Flaw Exploited, Slopoly Malware, Interpol Cybercrime Crackdown",
       "link": "https://www.securityweek.com/in-other-news-n8n-flaw-exploited-slopoly-malware-interpol-cybercrime-crackdown/",
       "pubDate": "2026-03-13T14:27:12.000Z",
-      "description": "Other noteworthy stories that might have slipped under the radar: Telus Digital data breach, vulnerabilities in Linux AppArmor allow root privileges, US defense contractor behind Coruna exploits. The post In Other News: N8n Flaw Exploited, Slopoly Malware, Interpol Cybercrime Crackdown appeared firs",
+      "description": "レーダーに隠れていたかもしれないその他の注目すべき記事: Telus Digital のデータ侵害、Linux AppArmor の脆弱性により root 権限が許可される、Coruna エクスプロイトの背後にある米国の防衛請負業者。 その他のニュースの投稿: N8n 脆弱性悪用、Slopoly マルウェア、インターポールのサイバー犯罪取り締まりが初登場",
+      "descriptionOriginal": "Other noteworthy stories that might have slipped under the radar: Telus Digital data breach, vulnerabilities in Linux AppArmor allow root privileges, US defense contractor behind Coruna exploits. The post In Other News: N8n Flaw Exploited, Slopoly Malware, Interpol Cybercrime Crackdown appeared firs",
       "source": "SecurityWeek"
     },
     {
-      "title": "Storm-2561 Spreads Trojan VPN Clients via SEO Poisoning to Steal Credentials",
+      "title": "Storm-2561 は、SEO ポイズニングを介してトロイの木馬 VPN クライアントを拡散し、認証情報を盗みます",
+      "titleOriginal": "Storm-2561 Spreads Trojan VPN Clients via SEO Poisoning to Steal Credentials",
       "link": "https://thehackernews.com/2026/03/storm-2561-spreads-trojan-vpn-clients.html",
       "pubDate": "2026-03-13T13:38:00.000Z",
-      "description": "Microsoft has disclosed details of a credential theft campaign that employs fake virtual private network (VPN) clients distributed through search engine optimization (SEO) poisoning techniques. \"The campaign redirects users searching for legitimate enterprise software to malicious ZIP files on attac",
+      "description": "Microsoft は、検索エンジン最適化 (SEO) ポイズニング技術を通じて配布された偽の仮想プライベート ネットワーク (VPN) クライアントを使用した資格情報盗難キャンペーンの詳細を明らかにしました。 「このキャンペーンは、正規のエンタープライズ ソフトウェアを検索しているユーザーを、攻撃上の悪意のある ZIP ファイルにリダイレクトします。",
+      "descriptionOriginal": "Microsoft has disclosed details of a credential theft campaign that employs fake virtual private network (VPN) clients distributed through search engine optimization (SEO) poisoning techniques. \"The campaign redirects users searching for legitimate enterprise software to malicious ZIP files on attac",
       "source": "The Hacker News"
     },
     {
-      "title": "Fake enterprise VPN sites used to steal company credentials",
+      "title": "企業の認証情報を盗むために使用される偽のエンタープライズ VPN サイト",
+      "titleOriginal": "Fake enterprise VPN sites used to steal company credentials",
       "link": "https://www.bleepingcomputer.com/news/security/fake-enterprise-vpn-downloads-used-to-steal-company-credentials/",
       "pubDate": "2026-03-13T13:23:28.000Z",
-      "description": "A threat actor tracked as Storm-2561 is distributing fake enterprise VPN clients from Ivanti, Cisco, and Fortinet to steal VPN credentials from unsuspecting users. [...]",
+      "description": "Storm-2561 として追跡されている攻撃者は、Ivanti、Cisco、Fortinet の偽のエンタープライズ VPN クライアントを配布し、何も疑っていないユーザーから VPN 認証情報を盗んでいます。 [...]",
+      "descriptionOriginal": "A threat actor tracked as Storm-2561 is distributing fake enterprise VPN clients from Ivanti, Cisco, and Fortinet to steal VPN credentials from unsuspecting users. [...]",
       "source": "BleepingComputer"
     },
     {
-      "title": "Iran-Linked Hacker Attack on Stryker Disrupted Manufacturing and Shipping",
+      "title": "イラン関連のハッカーによるストライカー攻撃で製造と出荷が混乱",
+      "titleOriginal": "Iran-Linked Hacker Attack on Stryker Disrupted Manufacturing and Shipping",
       "link": "https://www.securityweek.com/iran-linked-hacker-attack-on-stryker-disrupted-manufacturing-and-shipping/",
       "pubDate": "2026-03-13T10:38:47.000Z",
-      "description": "Evidence indicates that the attackers leveraged existing endpoint management software rather than malware to wipe devices. The post Iran-Linked Hacker Attack on Stryker Disrupted Manufacturing and Shipping appeared first on SecurityWeek.",
+      "description": "証拠は、攻撃者がマルウェアではなく既存のエンドポイント管理ソフトウェアを利用してデバイスをワイプしたことを示しています。 ストライカー社に対するイラン関連のハッカー攻撃による製造と配送の混乱に関する記事は、SecurityWeek に最初に掲載されました。",
+      "descriptionOriginal": "Evidence indicates that the attackers leveraged existing endpoint management software rather than malware to wipe devices. The post Iran-Linked Hacker Attack on Stryker Disrupted Manufacturing and Shipping appeared first on SecurityWeek.",
       "source": "SecurityWeek"
     },
     {
-      "title": "Onyx Security Launches With $40 Million in Funding",
+      "title": "Onyx Security が 4,000 万ドルの資金を調達して発足",
+      "titleOriginal": "Onyx Security Launches With $40 Million in Funding",
       "link": "https://www.securityweek.com/onyx-security-launches-with-40-million-in-funding/",
       "pubDate": "2026-03-13T09:25:51.000Z",
-      "description": "The startup is building a control pane to help organizations oversee autonomous AI agents and rapidly adopt them. The post Onyx Security Launches With $40 Million in Funding appeared first on SecurityWeek.",
+      "description": "このスタートアップは、組織が自律型 AI エージェントを監視し、迅速に導入できるようにするためのコントロール ペインを構築しています。 Onyx Security が 4,000 万ドルの資金を調達して開始という記事は、SecurityWeek に最初に掲載されました。",
+      "descriptionOriginal": "The startup is building a control pane to help organizations oversee autonomous AI agents and rapidly adopt them. The post Onyx Security Launches With $40 Million in Funding appeared first on SecurityWeek.",
       "source": "SecurityWeek"
     },
     {
-      "title": "Google Fixes Two Chrome Zero-Days Exploited in the Wild Affecting Skia and V8",
+      "title": "Google、Skia と V8 に影響を与える、実際に悪用された 2 つの Chrome ゼロデイを修正",
+      "titleOriginal": "Google Fixes Two Chrome Zero-Days Exploited in the Wild Affecting Skia and V8",
       "link": "https://thehackernews.com/2026/03/google-fixes-two-chrome-zero-days.html",
       "pubDate": "2026-03-13T09:17:00.000Z",
-      "description": "Google on Thursday released security updates for its Chrome web browser to address two high-severity vulnerabilities that it said have been exploited in the wild. The list of vulnerabilities is as follows - CVE-2026-3909 (CVSS score: 8.8) - An out-of-bounds write vulnerability in the Skia 2D graphic",
+      "description": "Googleは木曜日、実際に悪用されているとされる2つの重大度の高い脆弱性に対処するため、Chrome Webブラウザのセキュリティアップデートをリリースした。 脆弱性のリストは次のとおりです - CVE-2026-3909 (CVSS スコア: 8.8) - Skia 2D グラフィックの境界外書き込みの脆弱性",
+      "descriptionOriginal": "Google on Thursday released security updates for its Chrome web browser to address two high-severity vulnerabilities that it said have been exploited in the wild. The list of vulnerabilities is as follows - CVE-2026-3909 (CVSS score: 8.8) - An out-of-bounds write vulnerability in the Skia 2D graphic",
       "source": "The Hacker News"
     },
     {
-      "title": "Nine CrackArmor Flaws in Linux AppArmor Enable Root Escalation, Bypass Container Isolation",
+      "title": "Linux AppArmor の 9 つの CrackArmor 欠陥によりルート エスカレーションが可能になり、コンテナ分離がバイパスされる",
+      "titleOriginal": "Nine CrackArmor Flaws in Linux AppArmor Enable Root Escalation, Bypass Container Isolation",
       "link": "https://thehackernews.com/2026/03/nine-crackarmor-flaws-in-linux-apparmor.html",
       "pubDate": "2026-03-13T08:18:00.000Z",
-      "description": "Cybersecurity researchers have disclosed multiple security vulnerabilities within the Linux kernel's AppArmor module that could be exploited by unprivileged users to circumvent kernel protections, escalate to root, and undermine container isolation guarantees. The nine confused deputy vulnerabilitie",
+      "description": "サイバーセキュリティ研究者らは、Linux カーネルの AppArmor モジュール内に複数のセキュリティ脆弱性があることを明らかにしました。これらの脆弱性は、特権のないユーザーが悪用して、カーネル保護を回避し、root にエスカレーションし、コンテナ分離の保証を損なう可能性があります。 9人の混乱した副脆弱性",
+      "descriptionOriginal": "Cybersecurity researchers have disclosed multiple security vulnerabilities within the Linux kernel's AppArmor module that could be exploited by unprivileged users to circumvent kernel protections, escalate to root, and undermine container isolation guarantees. The nine confused deputy vulnerabilitie",
       "source": "The Hacker News"
     },
     {
-      "title": "Starbucks discloses data breach affecting hundreds of employees",
+      "title": "スターバックス、数百人の従業員に影響を与えるデータ侵害を明らかに",
+      "titleOriginal": "Starbucks discloses data breach affecting hundreds of employees",
       "link": "https://www.bleepingcomputer.com/news/security/starbucks-discloses-data-breach-affecting-hundreds-of-employees/",
       "pubDate": "2026-03-13T08:16:55.000Z",
-      "description": "Starbucks has disclosed a data breach affecting hundreds of employees after threat actors gained access to their Starbucks Partner Central accounts. [...]",
+      "description": "スターバックスは、攻撃者がスターバックス パートナー セントラル アカウントにアクセスした後、数百人の従業員に影響を与えたデータ侵害を明らかにしました。 [...]",
+      "descriptionOriginal": "Starbucks has disclosed a data breach affecting hundreds of employees after threat actors gained access to their Starbucks Partner Central accounts. [...]",
       "source": "BleepingComputer"
     },
     {
-      "title": "Google fixes two new Chrome zero-days exploited in attacks",
+      "title": "Google、攻撃に悪用された2つの新しいChromeゼロデイを修正",
+      "titleOriginal": "Google fixes two new Chrome zero-days exploited in attacks",
       "link": "https://www.bleepingcomputer.com/news/google/google-fixes-two-new-chrome-zero-days-exploited-in-attacks/",
       "pubDate": "2026-03-13T06:56:58.000Z",
-      "description": "Google has released emergency security updates to patch two high-severity Chrome vulnerabilities exploited in zero-day attacks. [...]",
+      "description": "Googleは、ゼロデイ攻撃で悪用されたChromeの重大度の高い2つの脆弱性を修正するための緊急セキュリティアップデートをリリースした。 [...]",
+      "descriptionOriginal": "Google has released emergency security updates to patch two high-severity Chrome vulnerabilities exploited in zero-day attacks. [...]",
       "source": "BleepingComputer"
     },
     {
-      "title": "Authorities Disrupt SocksEscort Proxy Botnet Exploiting 369,000 IPs Across 163 Countries",
+      "title": "当局が 163 か国の 369,000 個の IP を悪用する SocksEscort プロキシ ボットネットを妨害",
+      "titleOriginal": "Authorities Disrupt SocksEscort Proxy Botnet Exploiting 369,000 IPs Across 163 Countries",
       "link": "https://thehackernews.com/2026/03/authorities-disrupt-socksescort-proxy.html",
       "pubDate": "2026-03-13T05:26:00.000Z",
-      "description": "A court-authorized international law enforcement operation has dismantled a criminal proxy service named SocksEscort that enslaved thousands of residential routers worldwide into a botnet for committing large-scale fraud. \"SocksEscort infected home and small business internet routers with malware,\" ",
+      "description": "裁判所の認可を受けた国際法執行活動により、大規模な詐欺を行うために世界中の数千台の家庭用ルーターをボットネットに陥れていた SocksEscort という刑事代理サービスが解体されました。 「SocksEscort は家庭用および小規模企業のインターネット ルーターをマルウェアに感染させました。」",
+      "descriptionOriginal": "A court-authorized international law enforcement operation has dismantled a criminal proxy service named SocksEscort that enslaved thousands of residential routers worldwide into a botnet for committing large-scale fraud. \"SocksEscort infected home and small business internet routers with malware,\" ",
       "source": "The Hacker News"
     },
     {
-      "title": "Veeam Patches 7 Critical Backup &amp; Replication Flaws Allowing Remote Code Execution",
+      "title": "Veeamは7つの重要なバックアップとパッチを適用します。 リモートでコードが実行されるレプリケーションの欠陥",
+      "titleOriginal": "Veeam Patches 7 Critical Backup &amp; Replication Flaws Allowing Remote Code Execution",
       "link": "https://thehackernews.com/2026/03/veeam-patches-7-critical-backup.html",
       "pubDate": "2026-03-13T04:15:00.000Z",
-      "description": "Veeam has released security updates to address multiple critical vulnerabilities in its Backup & Replication software that, if successfully exploited, could result in remote code execution. The vulnerabilities are as follows - CVE-2026-21666 (CVSS score: 9.9) - A vulnerability that allows an authent",
+      "description": "Veeam は、悪用に成功するとリモートでコードが実行される可能性があるバックアップ & レプリケーション ソフトウェアの複数の重大な脆弱性に対処するセキュリティ アップデートをリリースしました。 脆弱性は以下のとおりです ・ CVE-2026-21666 (CVSS スコア: 9.9) ・ 認証が可能になる脆弱性",
+      "descriptionOriginal": "Veeam has released security updates to address multiple critical vulnerabilities in its Backup & Replication software that, if successfully exploited, could result in remote code execution. The vulnerabilities are as follows - CVE-2026-21666 (CVSS score: 9.9) - A vulnerability that allows an authent",
       "source": "The Hacker News"
     },
     {
-      "title": "Canadian retail giant Loblaw notifies customers of data breach",
+      "title": "カナダの小売大手 Loblaw が顧客にデータ侵害を通知",
+      "titleOriginal": "Canadian retail giant Loblaw notifies customers of data breach",
       "link": "https://www.bleepingcomputer.com/news/security/canadian-retail-giant-loblaw-notifies-customers-of-data-breach/",
       "pubDate": "2026-03-12T21:32:21.000Z",
-      "description": "Still, out of an abundance of caution, Loblaw says it has automatically logged out all customers from their accounts. Account holders who need to access the company's digital services will have to log in again. [...]",
+      "description": "それでもロブロー氏は、十分な注意を払って、すべての顧客をアカウントから自動的にログアウトしたと述べている。 同社のデジタル サービスにアクセスする必要があるアカウント所有者は、再度ログインする必要があります。 [...]",
+      "descriptionOriginal": "Still, out of an abundance of caution, Loblaw says it has automatically logged out all customers from their accounts. Account holders who need to access the company's digital services will have to log in again. [...]",
       "source": "BleepingComputer"
     },
     {
-      "title": "England Hockey investigating ransomware data breach",
+      "title": "イングランドホッケー、ランサムウェアによるデータ侵害を調査",
+      "titleOriginal": "England Hockey investigating ransomware data breach",
       "link": "https://www.bleepingcomputer.com/news/security/england-hockey-investigating-ransomware-data-breach/",
       "pubDate": "2026-03-12T20:37:16.000Z",
-      "description": "England Hockey, the governing body for field hockey in England, is investigating a potential data breach after the AiLock ransomware gang listed it as a victim on its data leak site. [...]",
+      "description": "イングランドのフィールドホッケーの統括団体であるイングランドホッケーは、ランサムウェア集団「AiLock」がデータ漏洩サイトに同社を被害者としてリストアップしたことを受け、データ漏洩の可能性を調査している。 [...]",
+      "descriptionOriginal": "England Hockey, the governing body for field hockey in England, is investigating a potential data breach after the AiLock ransomware gang listed it as a victim on its data leak site. [...]",
       "source": "BleepingComputer"
     },
     {
-      "title": "Rust-Based VENON Malware Targets 33 Brazilian Banks with Credential-Stealing Overlays",
+      "title": "Rust ベースの VENON マルウェア、認証情報を盗むオーバーレイでブラジルの銀行 33 行を標的",
+      "titleOriginal": "Rust-Based VENON Malware Targets 33 Brazilian Banks with Credential-Stealing Overlays",
       "link": "https://thehackernews.com/2026/03/rust-based-venon-malware-targets-33.html",
       "pubDate": "2026-03-12T17:31:00.000Z",
-      "description": "Cybersecurity researchers have disclosed details of a new banking malware targeting Brazilian users that's written in Rust, marking a significant departure from other known Delphi-based malware families associated with the Latin American cybercrime ecosystem. The malware, which is designed to infect",
+      "description": "サイバーセキュリティ研究者らは、ブラジルのユーザーをターゲットにした、Rust で書かれた新しいバンキング マルウェアの詳細を明らかにしました。これは、ラテンアメリカのサイバー犯罪エコシステムに関連する他の既知の Delphi ベースのマルウェア ファミリとは大きく異なります。 感染するように設計されたマルウェア",
+      "descriptionOriginal": "Cybersecurity researchers have disclosed details of a new banking malware targeting Brazilian users that's written in Rust, marking a significant departure from other known Delphi-based malware families associated with the Latin American cybercrime ecosystem. The malware, which is designed to infect",
       "source": "The Hacker News"
     },
     {
-      "title": "ThreatsDay Bulletin: OAuth Trap, EDR Killer, Signal Phishing, Zombie ZIP, AI Platform Hack &amp; More",
+      "title": "ThreatsDay 速報: OAuth トラップ、EDR キラー、シグナル フィッシング、ゾンビ ZIP、AI プラットフォーム ハックおよびセキュリティ もっと",
+      "titleOriginal": "ThreatsDay Bulletin: OAuth Trap, EDR Killer, Signal Phishing, Zombie ZIP, AI Platform Hack &amp; More",
       "link": "https://thehackernews.com/2026/03/threatsday-bulletin-oauth-trap-edr.html",
       "pubDate": "2026-03-12T13:14:00.000Z",
-      "description": "Another Thursday, another pile of weird security stuff that somehow happened in just seven days. Some of it is clever. Some of it is lazy. A few bits fall into that uncomfortable category of “yeah… this is probably going to show up in real incidents sooner than we’d like.” The pattern this week feel",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "Attackers Don't Just Send Phishing Emails. They Weaponize Your SOC's Workload",
-      "link": "https://thehackernews.com/2026/03/attackers-dont-just-send-phishing.html",
-      "pubDate": "2026-03-12T11:30:00.000Z",
-      "description": "The most dangerous phishing campaigns aren’t just designed to fool employees. Many are designed to exhaust the analysts investigating them. When a phishing investigation takes 12 hours instead of five minutes, the outcome can shift from a contained incident to a breach. For years, the cybersecurity ",
+      "description": "また木曜日、どういうわけかわずか 7 日間で奇妙なセキュリティ関連の出来事がまた山積みになりました。 その一部は巧妙です。 怠惰なものもあります。 いくつかのビットは、「ああ…これはおそらく私たちが望むよりも早く実際の事件に現れるだろう」という不快なカテゴリーに分類されます。 今週の模様",
+      "descriptionOriginal": "Another Thursday, another pile of weird security stuff that somehow happened in just seven days. Some of it is clever. Some of it is lazy. A few bits fall into that uncomfortable category of “yeah… this is probably going to show up in real incidents sooner than we’d like.” The pattern this week feel",
       "source": "The Hacker News"
     }
   ]
