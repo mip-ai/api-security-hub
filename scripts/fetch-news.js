@@ -2,13 +2,14 @@
  * API Security News Fetcher
  *
  * Fetches security news from RSS feeds, filters for API-related content,
- * and outputs to data/news.json.
+ * translates to Japanese, and outputs to data/news.json.
  *
  * Runs via GitHub Actions cron at JST 6:00, 12:00, 18:00, 0:00.
  */
 
 const fs = require('fs');
 const path = require('path');
+const translate = require('google-translate-api-x');
 
 // --- RSS Feed Sources ---
 const FEEDS = [
@@ -150,6 +151,37 @@ async function fetchFeed(feed) {
   }
 }
 
+// --- Translate text to Japanese ---
+async function translateToJapanese(text) {
+  if (!text) return '';
+  try {
+    const result = await translate(text, { from: 'en', to: 'ja' });
+    return result.text;
+  } catch (err) {
+    console.error(`  [TRANSLATE ERR] ${err.message}`);
+    return text; // fallback to original
+  }
+}
+
+// --- Translate a single news item with delay to avoid rate limits ---
+async function translateItem(item, index) {
+  // Small delay between items to avoid rate limiting
+  if (index > 0) {
+    await new Promise((r) => setTimeout(r, 500));
+  }
+
+  const [titleJa, descJa] = await Promise.all([
+    translateToJapanese(item.title),
+    translateToJapanese(item.description),
+  ]);
+
+  return {
+    ...item,
+    titleJa,
+    descriptionJa: descJa,
+  };
+}
+
 // --- Main ---
 async function main() {
   console.log('=== API Security News Fetcher ===');
@@ -180,15 +212,27 @@ async function main() {
   // Limit to top 20
   const finalItems = recentItems.slice(0, 20);
 
+  // Translate to Japanese
+  console.log(`\nTranslating ${finalItems.length} items to Japanese...`);
+  const translatedItems = [];
+  for (let i = 0; i < finalItems.length; i++) {
+    const item = await translateItem(finalItems[i], i);
+    translatedItems.push(item);
+    console.log(`  [${i + 1}/${finalItems.length}] ${item.titleJa.slice(0, 50)}...`);
+  }
+  console.log('Translation complete.');
+
   // Build output JSON
   const output = {
     lastUpdated: new Date().toISOString(),
-    itemCount: finalItems.length,
-    items: finalItems.map((item) => ({
-      title: item.title,
+    itemCount: translatedItems.length,
+    items: translatedItems.map((item) => ({
+      title: item.titleJa,
+      titleOriginal: item.title,
       link: item.link,
       pubDate: item.pubDate,
-      description: item.description,
+      description: item.descriptionJa,
+      descriptionOriginal: item.description,
       source: item.source,
     })),
   };
@@ -197,7 +241,7 @@ async function main() {
   const outPath = path.join(__dirname, '..', 'data', 'news.json');
   fs.mkdirSync(path.dirname(outPath), { recursive: true });
   fs.writeFileSync(outPath, JSON.stringify(output, null, 2), 'utf-8');
-  console.log(`\nWritten ${finalItems.length} items to ${outPath}`);
+  console.log(`\nWritten ${translatedItems.length} items to ${outPath}`);
   console.log('Done.');
 }
 
