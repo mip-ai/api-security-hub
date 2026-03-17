@@ -1,11 +1,11 @@
 {
-  "lastUpdated": "2026-03-17T16:08:04.758Z",
+  "lastUpdated": "2026-03-17T21:39:03.231Z",
   "itemCount": 20,
   "items": [
     {
       "title": {
         "en": "UK Companies House Exposed Details of Millions of Firms",
-        "ja": "英国企業庁、数百万社の企業詳細を暴露",
+        "ja": "英国企業庁、数百万社の企業の詳細を暴露",
         "es": "La Cámara de Empresas del Reino Unido expuso detalles de millones de empresas",
         "pt": "Empresas do Reino Unido abrigam detalhes expostos de milhões de empresas",
         "fr": "La Companies House du Royaume-Uni a dévoilé les détails de millions d'entreprises"
@@ -26,7 +26,7 @@
     {
       "title": {
         "en": "Top 5 Things CISOs Need to Do Today to Secure AI Agents",
-        "ja": "AI エージェントを保護するために CISO が今日実行する必要がある 5 つのこと",
+        "ja": "AI エージェントを保護するために CISO が今日行う必要がある 5 つのこと",
         "es": "Las cinco cosas principales que los CISO deben hacer hoy para proteger a los agentes de IA",
         "pt": "As 5 principais coisas que os CISOs precisam fazer hoje para proteger os agentes de IA",
         "fr": "Top 5 des choses que les RSSI doivent faire aujourd'hui pour sécuriser les agents IA"
@@ -36,7 +36,7 @@
       "pubDate": "2026-03-17T14:02:12.000Z",
       "description": {
         "en": "AI agents are autonomous actors with real access to data and systems, not just copilots. Token Security explains why identity-based access control is critical to prevent misuse and data exposure. [...]",
-        "ja": "AI エージェントは、副操縦士だけでなく、データやシステムに実際にアクセスできる自律的なアクターです。 Token Security は、悪用やデータ漏えいを防ぐために ID ベースのアクセス制御が重要である理由を説明します。 [...]",
+        "ja": "AI エージェントは、副操縦士だけでなく、データやシステムに実際にアクセスできる自律的なアクターです。 Token Security は、悪用やデータ漏洩を防ぐために ID ベースのアクセス制御が重要である理由を説明します。 [...]",
         "es": "Los agentes de IA son actores autónomos con acceso real a datos y sistemas, no sólo copilotos. Token Security explica por qué el control de acceso basado en identidad es fundamental para evitar el uso indebido y la exposición de datos. [...]",
         "pt": "Os agentes de IA são atores autónomos com acesso real a dados e sistemas, e não apenas copilotos. A Token Security explica por que o controle de acesso baseado em identidade é fundamental para evitar o uso indevido e a exposição de dados. [...]",
         "fr": "Les agents d’IA sont des acteurs autonomes disposant d’un réel accès aux données et aux systèmes, et pas seulement des copilotes. Token Security explique pourquoi le contrôle d'accès basé sur l'identité est essentiel pour prévenir les abus et l'exposition des données. [...]"
@@ -69,9 +69,9 @@
       "title": {
         "en": "CISA Flags Year-Old Wing FTP Vulnerability as Exploited",
         "ja": "CISA、1年前からあるWing FTPの脆弱性が悪用されたと報告",
-        "es": "CISA señala como explotada una vulnerabilidad FTP de Wing de hace un año",
+        "es": "CISA señala como explotada una vulnerabilidad FTP de Wing de un año de antigüedad",
         "pt": "CISA sinaliza vulnerabilidade de FTP de um ano como explorada",
-        "fr": "La CISA signale qu'une vulnérabilité FTP de l'aile vieille d'un an est exploitée"
+        "fr": "La CISA signale qu'une vulnérabilité FTP de Wing vieille d'un an est exploitée"
       },
       "titleOriginal": "CISA Flags Year-Old Wing FTP Vulnerability as Exploited",
       "link": "https://www.securityweek.com/cisa-flags-year-old-wing-ftp-vulnerability-as-exploited/",
@@ -81,7 +81,7 @@
         "ja": "この欠陥は CVE-2025-47813 として追跡されており、アプリケーションの完全なローカル インストール パスの漏洩につながります。 CISA が 1 年前の Wing FTP 脆弱性が悪用されたと報告した記事は、SecurityWeek に最初に掲載されました。",
         "es": "Registrada como CVE-2025-47813, la falla conduce a la divulgación de la ruta de instalación local completa de la aplicación. La publicación CISA señala una vulnerabilidad FTP de ala de hace un año como explotada apareció por primera vez en SecurityWeek.",
         "pt": "Rastreada como CVE-2025-47813, a falha leva à divulgação do caminho completo de instalação local do aplicativo. A postagem CISA sinaliza vulnerabilidade de FTP de um ano como explorada apareceu pela primeira vez na SecurityWeek.",
-        "fr": "Traquée comme CVE-2025-47813, la faille conduit à la divulgation du chemin d'installation local complet de l'application. L'article CISA signale une vulnérabilité FTP de l'aile vieille d'un an comme exploitée apparaît en premier sur SecurityWeek."
+        "fr": "Traquée comme CVE-2025-47813, la faille conduit à la divulgation du chemin d'installation local complet de l'application. L'article CISA signale une vulnérabilité FTP de Wing vieille d'un an comme exploitée apparaît en premier sur SecurityWeek."
       },
       "descriptionOriginal": "Tracked as CVE-2025-47813, the flaw leads to the disclosure of the full local installation path of the application. The post CISA Flags Year-Old Wing FTP Vulnerability as Exploited appeared first on SecurityWeek.",
       "source": "SecurityWeek"
@@ -99,9 +99,9 @@
       "pubDate": "2026-03-17T10:30:00.000Z",
       "description": {
         "en": "Akamai warns that Layer 7 DDoS, API abuse and AI-powered attacks are merging into coordinated, multi-vector campaigns that are harder to detect and defend against. The post AI, APIs and DDoS Collide in New Era of Coordinated Cyberattacks appeared first on SecurityWeek.",
-        "ja": "Akamai は、レイヤー 7 DDoS、API 悪用、および AI を利用した攻撃が、調整された複数ベクトルのキャンペーンに統合され、検出および防御が困難になっていると警告しています。 「連携型サイバー攻撃の新時代における AI、API、DDoS の衝突」という記事が最初に SecurityWeek に掲載されました。",
-        "es": "Akamai advierte que los DDoS de capa 7, el abuso de API y los ataques impulsados ​​por IA se están fusionando en campañas coordinadas de múltiples vectores que son más difíciles de detectar y defenderse. La publicación AI, API y DDoS chocan en una nueva era de ciberataques coordinados apareció por primera vez en SecurityWeek.",
-        "pt": "A Akamai alerta que DDoS de camada 7, abuso de API e ataques alimentados por IA estão se fundindo em campanhas coordenadas e multivetoriais que são mais difíceis de detectar e de se defender. A postagem IA, APIs e DDoS colidem na nova era de ataques cibernéticos coordenados apareceu pela primeira vez na SecurityWeek.",
+        "ja": "Akamai は、レイヤー 7 DDoS、API 悪用、および AI を活用した攻撃が、調整された複数ベクトルのキャンペーンに統合されており、検出と防御がより困難になっていると警告しています。 「連携型サイバー攻撃の新時代における AI、API、DDoS の衝突」という記事が最初に SecurityWeek に掲載されました。",
+        "es": "Akamai advierte que los ataques DDoS de capa 7, el abuso de API y los ataques impulsados ​​por IA se están fusionando en campañas coordinadas y multivectoriales que son más difíciles de detectar y defenderse. La publicación AI, API y DDoS chocan en una nueva era de ciberataques coordinados apareció por primera vez en SecurityWeek.",
+        "pt": "A Akamai alerta que DDoS de Camada 7, abuso de API e ataques alimentados por IA estão se fundindo em campanhas coordenadas e multivetoriais que são mais difíceis de detectar e de se defender. A postagem IA, APIs e DDoS colidem na nova era de ataques cibernéticos coordenados apareceu pela primeira vez na SecurityWeek.",
         "fr": "Akamai prévient que les attaques DDoS de couche 7, les abus d'API et les attaques basées sur l'IA fusionnent en campagnes multivecteurs coordonnées contre lesquelles il est plus difficile de détecter et de se défendre. L'article L'IA, les API et les DDoS entrent en collision dans une nouvelle ère de cyberattaques coordonnées apparaît en premier sur SecurityWeek."
       },
       "descriptionOriginal": "Akamai warns that Layer 7 DDoS, API abuse and AI-powered attacks are merging into coordinated, multi-vector campaigns that are harder to detect and defend against. The post AI, APIs and DDoS Collide in New Era of Coordinated Cyberattacks appeared first on SecurityWeek.",
@@ -120,7 +120,7 @@
       "pubDate": "2026-03-17T05:23:00.000Z",
       "description": {
         "en": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Monday added a medium-severity security flaw impacting Wing FTP to its Known Exploited Vulnerabilities (KEV) catalog, citing evidence of active exploitation. The vulnerability, CVE-2025-47813 (CVSS score: 4.3), is an information dis",
-        "ja": "米国サイバーセキュリティ・インフラストラクチャセキュリティ庁（CISA）は月曜日、活発な悪用の証拠を引用し、Wing FTPに影響を与える中程度の重大度のセキュリティ欠陥を既知の悪用された脆弱性（KEV）カタログに追加した。 脆弱性 CVE-2025-47813 (CVSS スコア: 4.3) は、情報セキュリティです。",
+        "ja": "米国サイバーセキュリティ・インフラセキュリティ庁（CISA）は月曜日、活発な悪用の証拠を引用し、Wing FTPに影響を与える中程度の重大度のセキュリティ欠陥を既知の悪用された脆弱性（KEV）カタログに追加した。 脆弱性 CVE-2025-47813 (CVSS スコア: 4.3) は、情報セキュリティです。",
         "es": "La Agencia de Seguridad de Infraestructura y Ciberseguridad de EE. UU. (CISA) agregó el lunes una falla de seguridad de gravedad media que afecta a Wing FTP a su catálogo de vulnerabilidades explotadas conocidas (KEV), citando evidencia de explotación activa. La vulnerabilidad, CVE-2025-47813 (puntuación CVSS: 4,3), es una información dis",
         "pt": "A Agência de Segurança Cibernética e de Infraestrutura dos EUA (CISA) adicionou na segunda-feira uma falha de segurança de gravidade média que afeta o Wing FTP ao seu catálogo de Vulnerabilidades Exploradas Conhecidas (KEV), citando evidências de exploração ativa. A vulnerabilidade, CVE-2025-47813 (pontuação CVSS: 4,3), é uma falha de informação",
         "fr": "L'Agence américaine de cybersécurité et de sécurité des infrastructures (CISA) a ajouté lundi une faille de sécurité de gravité moyenne affectant Wing FTP à son catalogue de vulnérabilités exploitées connues (KEV), citant des preuves d'exploitation active. La vulnérabilité, CVE-2025-47813 (score CVSS : 4,3), est un message d'information."
@@ -248,7 +248,7 @@
         "en": "Three different ClickFix campaigns have been found to act as a delivery vector for the deployment of a macOS information stealer called MacSync. \"Unlike traditional exploit-based attacks, this method relies entirely on user interaction – usually in the form of copying and executing commands – making",
         "ja": "3 つの異なる ClickFix キャンペーンが、MacSync と呼ばれる macOS 情報スティーラーの展開の配信ベクトルとして機能することが判明しました。 「従来のエクスプロイトベースの攻撃とは異なり、この手法はユーザーの操作 (通常はコマンドのコピーと実行という形) に完全に依存しています。",
         "es": "Se ha descubierto que tres campañas diferentes de ClickFix actúan como vector de entrega para la implementación de un ladrón de información de macOS llamado MacSync. \"A diferencia de los ataques tradicionales basados ​​en exploits, este método se basa completamente en la interacción del usuario, generalmente en forma de copia y ejecución de comandos, lo que hace que",
-        "pt": "Descobriu-se que três campanhas ClickFix diferentes atuam como um vetor de entrega para a implantação de um ladrão de informações do macOS chamado MacSync. “Ao contrário dos ataques tradicionais baseados em exploits, este método depende inteiramente da interação do usuário – geralmente na forma de cópia e execução de comandos – fazendo com que",
+        "pt": "Descobriu-se que três campanhas ClickFix diferentes atuam como um vetor de entrega para a implantação de um ladrão de informações do macOS chamado MacSync. “Ao contrário dos ataques tradicionais baseados em exploração, este método depende inteiramente da interação do usuário – geralmente na forma de cópia e execução de comandos – fazendo com que",
         "fr": "Il a été constaté que trois campagnes ClickFix différentes servaient de vecteur de diffusion pour le déploiement d'un voleur d'informations macOS appelé MacSync. « Contrairement aux attaques traditionnelles basées sur des exploits, cette méthode repose entièrement sur l'interaction de l'utilisateur – généralement sous la forme de copie et d'exécution de commandes – ce qui rend"
       },
       "descriptionOriginal": "Three different ClickFix campaigns have been found to act as a delivery vector for the deployment of a macOS information stealer called MacSync. \"Unlike traditional exploit-based attacks, this method relies entirely on user interaction – usually in the form of copying and executing commands – making",
@@ -351,10 +351,10 @@
       "pubDate": "2026-03-13T08:18:00.000Z",
       "description": {
         "en": "Cybersecurity researchers have disclosed multiple security vulnerabilities within the Linux kernel's AppArmor module that could be exploited by unprivileged users to circumvent kernel protections, escalate to root, and undermine container isolation guarantees. The nine confused deputy vulnerabilitie",
-        "ja": "サイバーセキュリティ研究者らは、Linux カーネルの AppArmor モジュール内に複数のセキュリティ脆弱性があることを明らかにしました。これらの脆弱性は、特権のないユーザーが悪用して、カーネル保護を回避し、root にエスカレーションし、コンテナ分離の保証を損なう可能性があります。 混乱する9人の副脆弱性",
+        "ja": "サイバーセキュリティ研究者らは、Linux カーネルの AppArmor モジュール内に複数のセキュリティ脆弱性があることを明らかにしました。これらの脆弱性は、特権のないユーザーが悪用して、カーネル保護を回避し、root にエスカレーションし、コンテナ分離の保証を損なう可能性があります。 9人の混乱した副脆弱性",
         "es": "Los investigadores de ciberseguridad han revelado múltiples vulnerabilidades de seguridad dentro del módulo AppArmor del kernel de Linux que podrían ser explotadas por usuarios sin privilegios para eludir las protecciones del kernel, escalar a la raíz y socavar las garantías de aislamiento del contenedor. Los nueve diputados confundidos por la vulnerabilidad",
         "pt": "Pesquisadores de segurança cibernética divulgaram várias vulnerabilidades de segurança no módulo AppArmor do kernel Linux que poderiam ser exploradas por usuários sem privilégios para contornar as proteções do kernel, escalar para root e minar as garantias de isolamento de contêineres. As nove vulnerabilidades confusas dos deputados",
-        "fr": "Les chercheurs en cybersécurité ont révélé plusieurs vulnérabilités de sécurité au sein du module AppArmor du noyau Linux qui pourraient être exploitées par des utilisateurs non privilégiés pour contourner les protections du noyau, passer à la racine et saper les garanties d'isolation des conteneurs. Les neuf vulnérabilités adjointes confuses"
+        "fr": "Les chercheurs en cybersécurité ont révélé plusieurs vulnérabilités de sécurité dans le module AppArmor du noyau Linux qui pourraient être exploitées par des utilisateurs non privilégiés pour contourner les protections du noyau, passer à la racine et saper les garanties d'isolation des conteneurs. Les neuf vulnérabilités adjointes confuses"
       },
       "descriptionOriginal": "Cybersecurity researchers have disclosed multiple security vulnerabilities within the Linux kernel's AppArmor module that could be exploited by unprivileged users to circumvent kernel protections, escalate to root, and undermine container isolation guarantees. The nine confused deputy vulnerabilitie",
       "source": "The Hacker News"
@@ -386,7 +386,7 @@
         "ja": "Veeamは7つの重要なバックアップとパッチを適用します。 リモートでコードが実行されるレプリケーションの欠陥",
         "es": "Veeam parchea 7 copias de seguridad y actualizaciones críticas Defectos de replicación que permiten la ejecución remota de código",
         "pt": "Veeam corrige 7 atualizações críticas de backup e atualização Falhas de replicação que permitem execução remota de código",
-        "fr": "Veeam met à jour 7 les sauvegardes et les sauvegardes critiques Failles de réplication permettant l'exécution de code à distance"
+        "fr": "Veeam met à jour 7 les sauvegardes et sauvegardes critiques Failles de réplication permettant l'exécution de code à distance"
       },
       "titleOriginal": "Veeam Patches 7 Critical Backup &amp; Replication Flaws Allowing Remote Code Execution",
       "link": "https://thehackernews.com/2026/03/veeam-patches-7-critical-backup.html",
@@ -414,7 +414,7 @@
       "pubDate": "2026-03-12T17:31:00.000Z",
       "description": {
         "en": "Cybersecurity researchers have disclosed details of a new banking malware targeting Brazilian users that's written in Rust, marking a significant departure from other known Delphi-based malware families associated with the Latin American cybercrime ecosystem. The malware, which is designed to infect",
-        "ja": "サイバーセキュリティ研究者らは、ブラジルのユーザーをターゲットにした、Rust で書かれた新たなバンキング マルウェアの詳細を明らかにしました。これは、ラテンアメリカのサイバー犯罪エコシステムに関連する他の既知の Delphi ベースのマルウェア ファミリとは大きく異なります。 感染するように設計されたマルウェア",
+        "ja": "サイバーセキュリティ研究者らは、ブラジルのユーザーをターゲットにした、Rust で書かれた新しいバンキング マルウェアの詳細を明らかにしました。これは、ラテンアメリカのサイバー犯罪エコシステムに関連する他の既知の Delphi ベースのマルウェア ファミリとは大きく異なります。 感染するように設計されたマルウェア",
         "es": "Investigadores de ciberseguridad han revelado detalles de un nuevo malware bancario dirigido a usuarios brasileños que está escrito en Rust, lo que marca una desviación significativa de otras familias de malware conocidas basadas en Delphi asociadas con el ecosistema de cibercrimen latinoamericano. El malware, que está diseñado para infectar",
         "pt": "Pesquisadores de segurança cibernética divulgaram detalhes de um novo malware bancário direcionado a usuários brasileiros que está escrito em Rust, marcando um afastamento significativo de outras famílias conhecidas de malware baseadas em Delphi associadas ao ecossistema de crimes cibernéticos da América Latina. O malware, projetado para infectar",
         "fr": "Des chercheurs en cybersécurité ont divulgué les détails d'un nouveau malware bancaire ciblant les utilisateurs brésiliens et écrit en Rust, marquant une rupture significative avec d'autres familles de malwares connues basées sur Delphi associées à l'écosystème de la cybercriminalité latino-américaine. Le malware, conçu pour infecter"
