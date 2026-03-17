@@ -1,184 +1,424 @@
 {
-  "lastUpdated": "2026-03-16T21:40:23.000Z",
+  "lastUpdated": "2026-03-17T03:05:16.191Z",
   "itemCount": 20,
   "items": [
     {
-      "title": "GlassWorm 攻撃は、盗まれた GitHub トークンを使用してマルウェアを Python リポジトリに強制プッシュします",
+      "title": {
+        "en": "GlassWorm Attack Uses Stolen GitHub Tokens to Force-Push Malware Into Python Repos",
+        "ja": "GlassWorm 攻撃は、盗まれた GitHub トークンを使用してマルウェアを Python リポジトリに強制プッシュします",
+        "es": "El ataque GlassWorm utiliza tokens de GitHub robados para forzar el envío de malware a repositorios de Python",
+        "pt": "Ataque GlassWorm usa tokens GitHub roubados para forçar malware em repositórios Python",
+        "fr": "L'attaque GlassWorm utilise des jetons GitHub volés pour forcer l'insertion de logiciels malveillants dans les dépôts Python"
+      },
       "titleOriginal": "GlassWorm Attack Uses Stolen GitHub Tokens to Force-Push Malware Into Python Repos",
       "link": "https://thehackernews.com/2026/03/glassworm-attack-uses-stolen-github.html",
       "pubDate": "2026-03-16T19:37:00.000Z",
-      "description": "GlassWorm マルウェア キャンペーンは、盗まれた GitHub トークンを利用して数百の Python リポジトリにマルウェアを注入する進行中の攻撃を促進するために使用されています。 「この攻撃は、Django アプリ、ML 研究コード、Streamlit ダッシュボード、PyPI パッケージを含む Python プロジェクトをターゲットにしています。",
+      "description": {
+        "en": "The GlassWorm malware campaign is being used to fuel an ongoing attack that leverages the stolen GitHub tokens to inject malware into hundreds of Python repositories. \"The attack targets Python projects — including Django apps, ML research code, Streamlit dashboards, and PyPI packages — by appending",
+        "ja": "GlassWorm マルウェア キャンペーンは、盗まれた GitHub トークンを利用して数百の Python リポジトリにマルウェアを注入する進行中の攻撃を促進するために使用されています。 「この攻撃は、Django アプリ、ML 研究コード、Streamlit ダッシュボード、PyPI パッケージを含む Python プロジェクトをターゲットにしています。",
+        "es": "La campaña de malware GlassWorm se está utilizando para impulsar un ataque continuo que aprovecha los tokens de GitHub robados para inyectar malware en cientos de repositorios de Python. \"El ataque apunta a proyectos Python, incluidas aplicaciones Django, código de investigación de ML, paneles Streamlit y paquetes PyPI, agregando",
+        "pt": "A campanha de malware GlassWorm está sendo usada para alimentar um ataque contínuo que aproveita os tokens roubados do GitHub para injetar malware em centenas de repositórios Python. “O ataque tem como alvo projetos Python – incluindo aplicativos Django, código de pesquisa de ML, painéis Streamlit e pacotes PyPI – anexando",
+        "fr": "La campagne de malware GlassWorm est utilisée pour alimenter une attaque en cours qui exploite les jetons GitHub volés pour injecter des logiciels malveillants dans des centaines de référentiels Python. \"L'attaque cible les projets Python, notamment les applications Django, le code de recherche ML, les tableaux de bord Streamlit et les packages PyPI, en ajoutant"
+      },
       "descriptionOriginal": "The GlassWorm malware campaign is being used to fuel an ongoing attack that leverages the stolen GitHub tokens to inject malware into hundreds of Python repositories. \"The attack targets Python projects — including Django apps, ML research code, Streamlit dashboards, and PyPI packages — by appending",
       "source": "The Hacker News"
     },
     {
-      "title": "CISA、Wing FTP Serverの欠陥が攻撃に積極的に悪用されているとして報告",
+      "title": {
+        "en": "CISA flags Wing FTP Server flaw as actively exploited in attacks",
+        "ja": "CISA、Wing FTP Serverの欠陥が攻撃に積極的に悪用されているとして報告",
+        "es": "CISA señala que la falla del servidor Wing FTP se explota activamente en los ataques",
+        "pt": "CISA sinaliza falha do Wing FTP Server como explorada ativamente em ataques",
+        "fr": "La CISA signale une faille du serveur FTP Wing comme étant activement exploitée lors d'attaques"
+      },
       "titleOriginal": "CISA flags Wing FTP Server flaw as actively exploited in attacks",
       "link": "https://www.bleepingcomputer.com/news/security/cisa-flags-wing-ftp-server-flaw-as-actively-exploited-in-attacks/",
       "pubDate": "2026-03-16T18:00:22.000Z",
-      "description": "CISAは米国政府機関に対し、リモートコード実行攻撃に連鎖する可能性のある積極的に悪用される脆弱性からWing FTP Serverインスタンスを保護するよう警告した。 [...]",
+      "description": {
+        "en": "CISA warned U.S. government agencies to secure their Wing FTP Server instances against an actively exploited vulnerability that may be chained in remote code execution attacks. [...]",
+        "ja": "CISAは米国政府機関に対し、リモートコード実行攻撃に連鎖する可能性のある積極的に悪用される脆弱性からWing FTP Serverインスタンスを保護するよう警告した。 [...]",
+        "es": "CISA advirtió a las agencias gubernamentales de EE. UU. que protejan sus instancias del servidor Wing FTP contra una vulnerabilidad explotada activamente que puede encadenarse en ataques de ejecución remota de código. [...]",
+        "pt": "A CISA alertou as agências governamentais dos EUA para protegerem suas instâncias do Wing FTP Server contra uma vulnerabilidade explorada ativamente que pode estar encadeada em ataques de execução remota de código. [...]",
+        "fr": "La CISA a averti les agences gouvernementales américaines de sécuriser leurs instances de serveur Wing FTP contre une vulnérabilité activement exploitée qui pourrait être enchaînée dans des attaques d'exécution de code à distance. [...]"
+      },
       "descriptionOriginal": "CISA warned U.S. government agencies to secure their Wing FTP Server instances against an actively exploited vulnerability that may be chained in remote code execution attacks. [...]",
       "source": "BleepingComputer"
     },
     {
-      "title": "英国企業庁、セキュリティ上の欠陥でビジネスデータが暴露されたことを確認",
+      "title": {
+        "en": "UK’s Companies House confirms security flaw exposed business data",
+        "ja": "英国企業庁、セキュリティ上の欠陥でビジネスデータが暴露されたことを確認",
+        "es": "La Cámara de Empresas del Reino Unido confirma que una falla de seguridad expuso datos comerciales",
+        "pt": "Companies House do Reino Unido confirma dados comerciais expostos a falhas de segurança",
+        "fr": "La Companies House du Royaume-Uni confirme que les données commerciales exposées à une faille de sécurité"
+      },
       "titleOriginal": "UK’s Companies House confirms security flaw exposed business data",
       "link": "https://www.bleepingcomputer.com/news/security/uks-companies-house-confirms-security-flaw-exposed-business-data/",
       "pubDate": "2026-03-16T17:07:25.000Z",
-      "description": "英国のすべての企業の登記簿を管理する英国政府機関であるカンパニーズ・ハウスは、同社のWebFilingサービスが、2025年10月以来企業情報を漏洩させたセキュリティ上の欠陥を修正するため金曜日に閉鎖されていたが、オンラインに戻ったと発表した。 [...]",
+      "description": {
+        "en": "Companies House, a British government agency that operates the registry for all U.K. companies, says its WebFiling service is back online after it was closed on Friday to fix a security flaw that exposed companies' information since October 2025. [...]",
+        "ja": "英国のすべての企業の登記簿を管理する英国政府機関であるカンパニーズ・ハウスは、同社のWebFilingサービスが、2025年10月以来企業情報を漏洩させたセキュリティ上の欠陥を修正するため金曜日に閉鎖されていたが、オンラインに戻ったと発表した。 [...]",
+        "es": "Companies House, una agencia del gobierno británico que opera el registro para todas las empresas del Reino Unido, dice que su servicio WebFiling vuelve a estar en línea después de que fue cerrado el viernes para corregir una falla de seguridad que expuso la información de las empresas desde octubre de 2025. [...]",
+        "pt": "Companies House, uma agência governamental britânica que opera o registro de todas as empresas do Reino Unido, afirma que seu serviço WebFiling está online novamente depois de ter sido fechado na sexta-feira para corrigir uma falha de segurança que expôs as informações das empresas desde outubro de 2025. [...]",
+        "fr": "Companies House, une agence gouvernementale britannique qui gère le registre de toutes les entreprises britanniques, a déclaré que son service WebFiling était de nouveau en ligne après avoir été fermé vendredi pour corriger une faille de sécurité qui exposait les informations des entreprises depuis octobre 2025. [...]"
+      },
       "descriptionOriginal": "Companies House, a British government agency that operates the registry for all U.K. companies, says its WebFiling service is back online after it was closed on Friday to fix a security flaw that exposed companies' information since October 2025. [...]",
       "source": "BleepingComputer"
     },
     {
-      "title": "⚡ 毎週の要約: Chrome ゼロデイ、ルーター ボットネット、AWS ブリーチ、不正 AI エージェント、および もっと",
+      "title": {
+        "en": "⚡ Weekly Recap: Chrome 0-Days, Router Botnets, AWS Breach, Rogue AI Agents &amp; More",
+        "ja": "⚡ 毎週の要約: Chrome ゼロデイ、ルーター ボットネット、AWS ブリーチ、不正 AI エージェント、および もっと",
+        "es": "⚡ Resumen semanal: Chrome 0-Days, Botnets de enrutadores, Incumplimiento de AWS, Agentes de IA no autorizados y amenazas Más",
+        "pt": "⚡ Recapitulação semanal: Chrome 0-Days, botnets de roteador, violação da AWS, agentes de IA desonestos e amp; Mais",
+        "fr": "⚡ Récapitulatif hebdomadaire : Chrome 0-Days, botnets de routeurs, violations AWS, agents Rogue AI et amp; Plus"
+      },
       "titleOriginal": "⚡ Weekly Recap: Chrome 0-Days, Router Botnets, AWS Breach, Rogue AI Agents &amp; More",
       "link": "https://thehackernews.com/2026/03/weekly-recap-chrome-0-days-router.html",
       "pubDate": "2026-03-16T14:17:00.000Z",
-      "description": "数週間の安全な生活が普通に感じられます。 次に、いくつかのタブを読むと、すぐに「ああ、すごい、今これをやっているんだ」という感覚が得られます。 今週はそのエネルギーがあります。 新鮮な混乱、より鮮明になっている古い問題、そして理論的だと感じられなくなる研究。 いくつかの点は現実の生活に少し近づきすぎていますが、",
+      "description": {
+        "en": "Some weeks in security feel normal. Then you read a few tabs and get that immediate “ah, great, we’re doing this now” feeling. This week has that energy. Fresh messes, old problems getting sharper, and research that stops feeling theoretical real fast. A few bits hit a little too close to real life,",
+        "ja": "数週間の安全な生活が普通に感じられます。 次に、いくつかのタブを読むと、すぐに「ああ、すごい、今これをやっているんだ」という感覚が得られます。 今週はそのエネルギーがあります。 新鮮な混乱、より鮮明になっている古い問題、そして理論的だと感じられなくなる研究。 いくつかの点は現実の生活に少し近づきすぎていますが、",
+        "es": "Algunas semanas en seguridad parecen normales. Luego lees algunas pestañas y tienes esa sensación inmediata de \"ah, genial, estamos haciendo esto ahora\". Esta semana tiene esa energía. Nuevos líos, viejos problemas que se vuelven más agudos e investigaciones que dejan de parecer teóricas muy rápidamente. Algunas partes se acercan demasiado a la vida real,",
+        "pt": "Algumas semanas em segurança parecem normais. Então você lê algumas guias e tem aquela sensação imediata de “ah, ótimo, estamos fazendo isso agora”. Esta semana tem essa energia. Novas bagunças, velhos problemas ficando mais nítidos e pesquisas que deixam de parecer teóricas muito rapidamente. Algumas partes chegaram um pouco perto demais da vida real,",
+        "fr": "Quelques semaines en sécurité semblent normales. Ensuite, vous lisez quelques onglets et ressentez immédiatement le sentiment « ah, super, nous faisons ça maintenant ». Cette semaine a cette énergie. De nouveaux dégâts, d'anciens problèmes qui deviennent plus aigus et des recherches qui cessent très vite de paraître théoriques. Quelques passages sont un peu trop proches de la réalité,"
+      },
       "descriptionOriginal": "Some weeks in security feel normal. Then you read a few tabs and get that immediate “ah, great, we’re doing this now” feeling. This week has that energy. Fresh messes, old problems getting sharper, and research that stops feeling theoretical real fast. A few bits hit a little too close to real life,",
       "source": "The Hacker News"
     },
     {
-      "title": "新たな認証情報盗難キャンペーンで VPN ユーザーを標的とする攻撃者",
+      "title": {
+        "en": "Threat Actor Targeting VPN Users in New Credential Theft Campaign",
+        "ja": "新たな認証情報盗難キャンペーンで VPN ユーザーを標的とする攻撃者",
+        "es": "Actor de amenazas apunta a usuarios de VPN en una nueva campaña de robo de credenciales",
+        "pt": "Ator de ameaça visando usuários VPN em nova campanha de roubo de credenciais",
+        "fr": "Un acteur menaçant cible les utilisateurs de VPN dans le cadre d'une nouvelle campagne de vol d'informations d'identification"
+      },
       "titleOriginal": "Threat Actor Targeting VPN Users in New Credential Theft Campaign",
       "link": "https://www.securityweek.com/threat-actor-targeting-vpn-users-in-new-credential-theft-campaign/",
       "pubDate": "2026-03-16T12:28:58.000Z",
-      "description": "Storm-2561 は、SEO ポイズニングを通じて偽の VPN クライアントを配布し、トロイの木馬を展開し、ログイン情報を盗みます。 新しい資格情報盗難キャンペーンで VPN ユーザーを標的にする脅威アクターの記事は、SecurityWeek に最初に掲載されました。",
+      "description": {
+        "en": "Storm-2561 is distributing fake VPN clients through SEO poisoning, deploying trojans, and stealing login information. The post Threat Actor Targeting VPN Users in New Credential Theft Campaign appeared first on SecurityWeek.",
+        "ja": "Storm-2561 は、SEO ポイズニングを通じて偽の VPN クライアントを配布し、トロイの木馬を展開し、ログイン情報を盗みます。 新しい資格情報盗難キャンペーンで VPN ユーザーを標的にする脅威アクターの記事は、SecurityWeek に最初に掲載されました。",
+        "es": "Storm-2561 distribuye clientes VPN falsos mediante envenenamiento de SEO, implementando troyanos y robando información de inicio de sesión. La publicación Actor de amenazas dirigido a usuarios de VPN en una nueva campaña de robo de credenciales apareció por primera vez en SecurityWeek.",
+        "pt": "Storm-2561 está distribuindo clientes VPN falsos por meio de envenenamento de SEO, implantação de trojans e roubo de informações de login. A postagem Ator de ameaças visando usuários VPN em nova campanha de roubo de credenciais apareceu pela primeira vez na SecurityWeek.",
+        "fr": "Storm-2561 distribue de faux clients VPN via un empoisonnement SEO, le déploiement de chevaux de Troie et le vol d'informations de connexion. L'article Un acteur menaçant ciblant les utilisateurs de VPN dans le cadre d'une nouvelle campagne de vol d'informations d'identification apparaît en premier sur SecurityWeek."
+      },
       "descriptionOriginal": "Storm-2561 is distributing fake VPN clients through SEO poisoning, deploying trojans, and stealing login information. The post Threat Actor Targeting VPN Users in New Credential Theft Campaign appeared first on SecurityWeek.",
       "source": "SecurityWeek"
     },
     {
-      "title": "セキュリティ検証がエージェント的になる理由",
+      "title": {
+        "en": "Why Security Validation Is Becoming Agentic",
+        "ja": "セキュリティ検証がエージェント的になる理由",
+        "es": "Por qué la validación de seguridad se está volviendo agente",
+        "pt": "Por que a validação de segurança está se tornando agente",
+        "fr": "Pourquoi la validation de sécurité devient agentique"
+      },
       "titleOriginal": "Why Security Validation Is Becoming Agentic",
       "link": "https://thehackernews.com/2026/03/why-security-validation-is-becoming.html",
       "pubDate": "2026-03-16T11:58:00.000Z",
-      "description": "かなり複雑な組織でセキュリティを実行している場合、検証スタックはおそらく次のようになります。片隅に BAS ツールが置かれています。 別の侵入テストの取り組み、または自動侵入テスト製品の可能性もあります。 どこかの攻撃対象領域管理プラットフォームに脆弱性スキャナーを供給する",
+      "description": {
+        "en": "If you run security at any reasonably complex organization, your validation stack probably looks something like this: a BAS tool in one corner. A pentest engagement, or maybe an automated pentesting product, in another. A vulnerability scanner feeding an attack surface management platform somewhere ",
+        "ja": "かなり複雑な組織でセキュリティを実行している場合、検証スタックはおそらく次のようになります。片隅に BAS ツールが置かれています。 別の侵入テストの取り組み、または自動侵入テスト製品の可能性もあります。 どこかの攻撃対象領域管理プラットフォームに脆弱性スキャナーを供給する",
+        "es": "Si ejecuta la seguridad en cualquier organización razonablemente compleja, su pila de validación probablemente se vea así: una herramienta BAS en una esquina. Un compromiso de pentesting, o tal vez un producto de pentesting automatizado, en otro. Un escáner de vulnerabilidades que alimenta una plataforma de gestión de superficies de ataque en algún lugar",
+        "pt": "Se você administra segurança em qualquer organização razoavelmente complexa, sua pilha de validação provavelmente se parecerá com isto: uma ferramenta BAS em um canto. Um compromisso de pentest, ou talvez um produto de pentesting automatizado, em outro. Um scanner de vulnerabilidade alimentando uma plataforma de gerenciamento de superfície de ataque em algum lugar",
+        "fr": "Si vous gérez la sécurité dans une organisation raisonnablement complexe, votre pile de validation ressemble probablement à ceci : un outil BAS dans un coin. Un engagement pentest, ou peut-être un produit pentesting automatisé, dans un autre. Un scanner de vulnérabilités alimentant une plateforme de gestion de surface d'attaque quelque part"
+      },
       "descriptionOriginal": "If you run security at any reasonably complex organization, your validation stack probably looks something like this: a BAS tool in one corner. A pentest engagement, or maybe an automated pentesting product, in another. A vulnerability scanner feeding an attack surface management platform somewhere ",
       "source": "The Hacker News"
     },
     {
-      "title": "ForceMemo: GlassWorm の余波で Python リポジトリが侵害される",
+      "title": {
+        "en": "ForceMemo: Python Repositories Compromised in GlassWorm Aftermath",
+        "ja": "ForceMemo: GlassWorm の余波で Python リポジトリが侵害される",
+        "es": "ForceMemo: Repositorios de Python comprometidos tras las consecuencias de GlassWorm",
+        "pt": "ForceMemo: repositórios Python comprometidos no resultado do GlassWorm",
+        "fr": "ForceMemo : les référentiels Python compromis suite aux conséquences de GlassWorm"
+      },
       "titleOriginal": "ForceMemo: Python Repositories Compromised in GlassWorm Aftermath",
       "link": "https://www.securityweek.com/forcememo-python-repositories-compromised-in-glassworm-aftermath/",
       "pubDate": "2026-03-16T11:51:36.000Z",
-      "description": "VS Code GlassWorm キャンペーンで盗まれた認証情報を使用して、数百の GitHub アカウントがアクセスされました。 ForceMemo: GlassWorm の余波で侵害された Python リポジトリの投稿は、SecurityWeek に最初に掲載されました。",
+      "description": {
+        "en": "Hundreds of GitHub accounts were accessed using credentials stolen in the VS Code GlassWorm campaign. The post ForceMemo: Python Repositories Compromised in GlassWorm Aftermath appeared first on SecurityWeek.",
+        "ja": "VS Code GlassWorm キャンペーンで盗まれた認証情報を使用して、数百の GitHub アカウントがアクセスされました。 ForceMemo: GlassWorm の余波で侵害された Python リポジトリの投稿は、SecurityWeek に最初に掲載されました。",
+        "es": "Se accedió a cientos de cuentas de GitHub utilizando credenciales robadas en la campaña VS Code GlassWorm. La publicación ForceMemo: Repositorios de Python comprometidos en GlassWorm Aftermath apareció por primera vez en SecurityWeek.",
+        "pt": "Centenas de contas do GitHub foram acessadas usando credenciais roubadas na campanha VS Code GlassWorm. A postagem ForceMemo: Repositórios Python comprometidos no GlassWorm Aftermath apareceu pela primeira vez na SecurityWeek.",
+        "fr": "Des centaines de comptes GitHub ont été consultés à l'aide d'informations d'identification volées lors de la campagne VS Code GlassWorm. L'article ForceMemo : les référentiels Python compromis dans GlassWorm Aftermath apparaît en premier sur SecurityWeek."
+      },
       "descriptionOriginal": "Hundreds of GitHub accounts were accessed using credentials stolen in the VS Code GlassWorm campaign. The post ForceMemo: Python Repositories Compromised in GlassWorm Aftermath appeared first on SecurityWeek.",
       "source": "SecurityWeek"
     },
     {
-      "title": "ClickFix キャンペーンが偽の AI ツール インストーラーを介して MacSync macOS Infostealer を拡散",
+      "title": {
+        "en": "ClickFix Campaigns Spread MacSync macOS Infostealer via Fake AI Tool Installers",
+        "ja": "ClickFix キャンペーンが偽の AI ツール インストーラーを介して MacSync macOS Infostealer を拡散",
+        "es": "Las campañas de ClickFix difunden MacSync macOS Infostealer a través de instaladores falsos de herramientas de inteligencia artificial",
+        "pt": "Campanhas ClickFix espalham MacSync macOS Infostealer por meio de falsos instaladores de ferramentas de IA",
+        "fr": "Les campagnes ClickFix diffusent MacSync macOS Infostealer via de faux installateurs d'outils AI"
+      },
       "titleOriginal": "ClickFix Campaigns Spread MacSync macOS Infostealer via Fake AI Tool Installers",
       "link": "https://thehackernews.com/2026/03/clickfix-campaigns-spread-macsync-macos.html",
       "pubDate": "2026-03-16T11:41:00.000Z",
-      "description": "3 つの異なる ClickFix キャンペーンが、MacSync と呼ばれる macOS 情報スティーラーの展開の配信ベクトルとして機能することが判明しました。 「従来のエクスプロイトベースの攻撃とは異なり、この手法はユーザーの操作 (通常はコマンドのコピーと実行という形) に完全に依存しています。",
+      "description": {
+        "en": "Three different ClickFix campaigns have been found to act as a delivery vector for the deployment of a macOS information stealer called MacSync. \"Unlike traditional exploit-based attacks, this method relies entirely on user interaction – usually in the form of copying and executing commands – making",
+        "ja": "3 つの異なる ClickFix キャンペーンが、MacSync と呼ばれる macOS 情報スティーラーの展開の配信ベクトルとして機能することが判明しました。 「従来のエクスプロイトベースの攻撃とは異なり、この手法はユーザーの操作 (通常はコマンドのコピーと実行という形) に完全に依存しています。",
+        "es": "Se ha descubierto que tres campañas diferentes de ClickFix actúan como vector de entrega para la implementación de un ladrón de información de macOS llamado MacSync. \"A diferencia de los ataques tradicionales basados ​​en exploits, este método se basa completamente en la interacción del usuario, generalmente en forma de copia y ejecución de comandos, lo que hace que",
+        "pt": "Descobriu-se que três campanhas ClickFix diferentes atuam como um vetor de entrega para a implantação de um ladrão de informações do macOS chamado MacSync. “Ao contrário dos ataques tradicionais baseados em exploração, este método depende inteiramente da interação do usuário – geralmente na forma de cópia e execução de comandos – fazendo com que",
+        "fr": "Il a été constaté que trois campagnes ClickFix différentes servaient de vecteur de diffusion pour le déploiement d'un voleur d'informations macOS appelé MacSync. « Contrairement aux attaques traditionnelles basées sur des exploits, cette méthode repose entièrement sur l'interaction de l'utilisateur – généralement sous la forme de copie et d'exécution de commandes – ce qui rend"
+      },
       "descriptionOriginal": "Three different ClickFix campaigns have been found to act as a delivery vector for the deployment of a macOS information stealer called MacSync. \"Unlike traditional exploit-based attacks, this method relies entirely on user interaction – usually in the form of copying and executing commands – making",
       "source": "The Hacker News"
     },
     {
-      "title": "Android 17 は、マルウェアの悪用を防ぐために、アクセシビリティ非対応アプリをアクセシビリティ API からブロックします",
+      "title": {
+        "en": "Android 17 Blocks Non-Accessibility Apps from Accessibility API to Prevent Malware Abuse",
+        "ja": "Android 17 は、マルウェアの悪用を防ぐために、アクセシビリティ非対応アプリをアクセシビリティ API からブロックします",
+        "es": "Android 17 bloquea aplicaciones que no son de accesibilidad de la API de accesibilidad para evitar el abuso de malware",
+        "pt": "Android 17 bloqueia aplicativos não acessíveis da API de acessibilidade para evitar abuso de malware",
+        "fr": "Android 17 bloque les applications non accessibles de l'API d'accessibilité pour empêcher les abus de logiciels malveillants"
+      },
       "titleOriginal": "Android 17 Blocks Non-Accessibility Apps from Accessibility API to Prevent Malware Abuse",
       "link": "https://thehackernews.com/2026/03/android-17-blocks-non-accessibility.html",
       "pubDate": "2026-03-16T05:43:00.000Z",
-      "description": "Google は、特定の種類のアプリがユーザー補助サービス API を使用できないようにする、Android 高度な保護モード (AAPM) の一部として新しいセキュリティ機能をテストしています。 この変更は Android 17 Beta 2 に組み込まれており、先週 Android Authority によって初めて報告されました。 AAPM は Google i によって導入されました",
+      "description": {
+        "en": "Google is testing a new security feature as part of Android Advanced Protection Mode (AAPM) that prevents certain kinds of apps from using the accessibility services API. The change, incorporated in Android 17 Beta 2, was first reported by Android Authority last week. AAPM was introduced by Google i",
+        "ja": "Google は、特定の種類のアプリがユーザー補助サービス API を使用できないようにする、Android 高度な保護モード (AAPM) の一部として新しいセキュリティ機能をテストしています。 この変更は Android 17 Beta 2 に組み込まれており、先週 Android Authority によって初めて報告されました。 AAPM は Google i によって導入されました",
+        "es": "Google está probando una nueva función de seguridad como parte del Modo de protección avanzada de Android (AAPM) que evita que ciertos tipos de aplicaciones utilicen la API de servicios de accesibilidad. El cambio, incorporado en Android 17 Beta 2, fue informado por primera vez por Android Authority la semana pasada. AAPM fue introducido por Google i",
+        "pt": "O Google está testando um novo recurso de segurança como parte do Modo de Proteção Avançada do Android (AAPM) que impede que certos tipos de aplicativos usem a API de serviços de acessibilidade. A mudança, incorporada no Android 17 Beta 2, foi relatada pela primeira vez pela Android Authority na semana passada. AAPM foi introduzido pelo Google i",
+        "fr": "Google teste une nouvelle fonctionnalité de sécurité dans le cadre du mode de protection avancée Android (AAPM) qui empêche certains types d'applications d'utiliser l'API des services d'accessibilité. Le changement, incorporé dans Android 17 Beta 2, a été signalé pour la première fois par Android Authority la semaine dernière. AAPM a été introduit par Google i"
+      },
       "descriptionOriginal": "Google is testing a new security feature as part of Android Advanced Protection Mode (AAPM) that prevents certain kinds of apps from using the accessibility services API. The change, incorporated in Android 17 Beta 2, was first reported by Android Authority last week. AAPM was introduced by Google i",
       "source": "The Hacker News"
     },
     {
-      "title": "Loblaw データ漏洩は顧客情報に影響を与える",
+      "title": {
+        "en": "Loblaw Data Breach Impacts Customer Information",
+        "ja": "Loblaw データ漏洩は顧客情報に影響を与える",
+        "es": "La violación de datos de Loblaw afecta la información del cliente",
+        "pt": "Violação de dados Loblaw afeta informações do cliente",
+        "fr": "La violation de données de Loblaw a un impact sur les informations des clients"
+      },
       "titleOriginal": "Loblaw Data Breach Impacts Customer Information",
       "link": "https://www.securityweek.com/loblaw-data-breach-impacts-customer-information/",
       "pubDate": "2026-03-15T10:00:00.000Z",
-      "description": "名前、電子メール アドレス、電話番号などの個人情報がハッカーによってアクセスされました。 Loblaw データ漏洩による顧客情報への影響の投稿は、SecurityWeek に最初に掲載されました。",
+      "description": {
+        "en": "Personal information such as names, email addresses, and phone numbers was accessed by hackers. The post Loblaw Data Breach Impacts Customer Information appeared first on SecurityWeek.",
+        "ja": "名前、電子メール アドレス、電話番号などの個人情報がハッカーによってアクセスされました。 Loblaw データ侵害による顧客情報への影響の投稿は、SecurityWeek に最初に掲載されました。",
+        "es": "Los piratas informáticos accedieron a información personal como nombres, direcciones de correo electrónico y números de teléfono. La publicación La violación de datos de Loblaw afecta la información del cliente apareció por primera vez en SecurityWeek.",
+        "pt": "Informações pessoais como nomes, endereços de e-mail e números de telefone foram acessadas por hackers. A postagem Loblaw Data Breach impacta as informações do cliente apareceu pela primeira vez na SecurityWeek.",
+        "fr": "Des informations personnelles telles que des noms, des adresses e-mail et des numéros de téléphone ont été accédées par des pirates informatiques. L'article Loblaw Data Breach Impacts Customer Information apparaît en premier sur SecurityWeek."
+      },
       "descriptionOriginal": "Personal information such as names, email addresses, and phone numbers was accessed by hackers. The post Loblaw Data Breach Impacts Customer Information appeared first on SecurityWeek.",
       "source": "SecurityWeek"
     },
     {
-      "title": "OpenClaw AI エージェントの欠陥により、迅速なインジェクションとデータ漏洩が可能になる可能性がある",
+      "title": {
+        "en": "OpenClaw AI Agent Flaws Could Enable Prompt Injection and Data Exfiltration",
+        "ja": "OpenClaw AI エージェントの欠陥により、迅速なインジェクションとデータ漏洩が可能になる可能性がある",
+        "es": "Las fallas del agente OpenClaw AI podrían permitir una inyección rápida y una filtración de datos",
+        "pt": "Falhas do agente OpenClaw AI podem permitir injeção imediata e exfiltração de dados",
+        "fr": "Les failles de l'agent OpenClaw AI pourraient permettre une injection rapide et une exfiltration de données"
+      },
       "titleOriginal": "OpenClaw AI Agent Flaws Could Enable Prompt Injection and Data Exfiltration",
       "link": "https://thehackernews.com/2026/03/openclaw-ai-agent-flaws-could-enable.html",
       "pubDate": "2026-03-14T16:17:00.000Z",
-      "description": "中国国家コンピュータネットワーク緊急対応技術チーム（CNCERT）は、オープンソースで自己ホスト型の自律型人工知能（AI）エージェントであるOpenClaw（旧称ClawdbotおよびMoltbot）の使用に起因するセキュリティについて警告を発した。 WeChatで共有された投稿では、CNCERTはそうではありません",
+      "description": {
+        "en": "China's National Computer Network Emergency Response Technical Team (CNCERT) has issued a warning about the security stemming from the use of OpenClaw (formerly Clawdbot and Moltbot), an open-source and self-hosted autonomous artificial intelligence (AI) agent. In a post shared on WeChat, CNCERT not",
+        "ja": "中国国家コンピュータネットワーク緊急対応技術チーム（CNCERT）は、オープンソースで自己ホスト型の自律型人工知能（AI）エージェントであるOpenClaw（旧称ClawdbotおよびMoltbot）の使用に起因するセキュリティについて警告を発した。 WeChatで共有された投稿では、CNCERTはそうではありません",
+        "es": "El Equipo Técnico de Respuesta a Emergencias de la Red Informática Nacional de China (CNCERT) ha emitido una advertencia sobre la seguridad derivada del uso de OpenClaw (anteriormente Clawdbot y Moltbot), un agente autónomo de inteligencia artificial (IA) autónomo, de código abierto y autohospedado. En una publicación compartida en WeChat, CNCERT no",
+        "pt": "A Equipe Técnica de Resposta a Emergências da Rede Nacional de Computadores da China (CNCERT) emitiu um alerta sobre a segurança decorrente do uso do OpenClaw (anteriormente Clawdbot e Moltbot), um agente autônomo de inteligência artificial (IA) de código aberto e auto-hospedado. Em postagem compartilhada no WeChat, CNCERT não",
+        "fr": "L'équipe technique nationale chinoise d'intervention d'urgence du réseau informatique (CNCERT) a émis un avertissement concernant la sécurité découlant de l'utilisation d'OpenClaw (anciennement Clawdbot et Moltbot), un agent d'intelligence artificielle (IA) autonome open source et auto-hébergé. Dans un post partagé sur WeChat, le CNCERT ne"
+      },
       "descriptionOriginal": "China's National Computer Network Emergency Response Technical Team (CNCERT) has issued a warning about the security stemming from the use of OpenClaw (formerly Clawdbot and Moltbot), an open-source and self-hosted autonomous artificial intelligence (AI) agent. In a post shared on WeChat, CNCERT not",
       "source": "The Hacker News"
     },
     {
-      "title": "HPE AOS-CXの重大な脆弱性により管理者パスワードがリセットされる",
+      "title": {
+        "en": "Critical HPE AOS-CX Vulnerability Allows Admin Password Resets",
+        "ja": "HPE AOS-CXの重大な脆弱性により管理者パスワードがリセットされる",
+        "es": "Una vulnerabilidad crítica de HPE AOS-CX permite restablecer la contraseña de administrador",
+        "pt": "Vulnerabilidade crítica do HPE AOS-CX permite redefinições de senha de administrador",
+        "fr": "Une vulnérabilité critique HPE AOS-CX permet la réinitialisation du mot de passe administrateur"
+      },
       "titleOriginal": "Critical HPE AOS-CX Vulnerability Allows Admin Password Resets",
       "link": "https://www.securityweek.com/critical-hpe-aos-cx-vulnerability-allows-admin-password-resets/",
       "pubDate": "2026-03-14T10:50:00.000Z",
-      "description": "この脆弱性は、認証を行わずにリモートから悪用され、既存の認証制御を回避する可能性があります。 「HPE AOS-CX の重大な脆弱性により管理者パスワードのリセットが可能になる」という投稿は、SecurityWeek に最初に掲載されました。",
+      "description": {
+        "en": "The vulnerability can be exploited remotely, without authentication, to circumvent existing authentication controls. The post Critical HPE AOS-CX Vulnerability Allows Admin Password Resets appeared first on SecurityWeek.",
+        "ja": "この脆弱性は、認証を行わずにリモートから悪用され、既存の認証制御を回避する可能性があります。 「HPE AOS-CX の重大な脆弱性により管理者パスワードのリセットが可能になる」という投稿は、SecurityWeek に最初に掲載されました。",
+        "es": "The vulnerability can be exploited remotely, without authentication, to circumvent existing authentication controls. La publicación Vulnerabilidad crítica de HPE AOS-CX permite restablecer la contraseña de administrador apareció por primera vez en SecurityWeek.",
+        "pt": "A vulnerabilidade pode ser explorada remotamente, sem autenticação, para contornar os controles de autenticação existentes. A postagem Vulnerabilidade crítica do HPE AOS-CX permite redefinições de senha de administrador apareceu pela primeira vez na SecurityWeek.",
+        "fr": "La vulnérabilité peut être exploitée à distance, sans authentification, pour contourner les contrôles d'authentification existants. La vulnérabilité critique HPE AOS-CX permettant la réinitialisation du mot de passe administrateur apparaît en premier sur SecurityWeek."
+      },
       "descriptionOriginal": "The vulnerability can be exploited remotely, without authentication, to circumvent existing authentication controls. The post Critical HPE AOS-CX Vulnerability Allows Admin Password Resets appeared first on SecurityWeek.",
       "source": "SecurityWeek"
     },
     {
-      "title": "スターバックスのデータ侵害は従業員に影響を与える",
+      "title": {
+        "en": "Starbucks Data Breach Impacts Employees",
+        "ja": "スターバックスのデータ侵害は従業員に影響を与える",
+        "es": "La violación de datos de Starbucks impacta a las empleadas",
+        "pt": "A violação de dados da Starbucks afeta os funcionários",
+        "fr": "La violation de données chez Starbucks affecte les employés"
+      },
       "titleOriginal": "Starbucks Data Breach Impacts Employees",
       "link": "https://www.securityweek.com/starbucks-data-breach-impacts-employees/",
       "pubDate": "2026-03-13T15:21:13.000Z",
-      "description": "スターバックスは、この事件には従業員ポータルを標的としたフィッシング攻撃が含まれており、数百人が影響を受けたと述べた。 スターバックスのデータ侵害が従業員に影響を与えるという投稿は、SecurityWeek に最初に掲載されました。",
+      "description": {
+        "en": "Starbucks said the incident involved phishing attacks targeting an employee portal, affecting hundreds. The post Starbucks Data Breach Impacts Employees appeared first on SecurityWeek.",
+        "ja": "スターバックスは、この事件には従業員ポータルを標的としたフィッシング攻撃が含まれており、数百人が影響を受けたと述べた。 スターバックスのデータ侵害が従業員に影響を与えるという投稿は、SecurityWeek に最初に掲載されました。",
+        "es": "Starbucks dijo que el incidente involucró ataques de phishing dirigidos a un portal de empleados, que afectaron a cientos de personas. La publicación La violación de datos de Starbucks afecta a los empleados apareció por primera vez en SecurityWeek.",
+        "pt": "A Starbucks disse que o incidente envolveu ataques de phishing direcionados a um portal de funcionários, afetando centenas de pessoas. A postagem A violação de dados da Starbucks afeta os funcionários apareceu pela primeira vez na SecurityWeek.",
+        "fr": "Starbucks a déclaré que l'incident impliquait des attaques de phishing ciblant un portail d'employés, touchant des centaines de personnes. L'article Starbucks Data Breach Impacts Employees apparaît en premier sur SecurityWeek."
+      },
       "descriptionOriginal": "Starbucks said the incident involved phishing attacks targeting an employee portal, affecting hundreds. The post Starbucks Data Breach Impacts Employees appeared first on SecurityWeek.",
       "source": "SecurityWeek"
     },
     {
-      "title": "その他のニュース: N8n 脆弱性悪用、Slopoly マルウェア、インターポールのサイバー犯罪取り締まり",
+      "title": {
+        "en": "In Other News: N8n Flaw Exploited, Slopoly Malware, Interpol Cybercrime Crackdown",
+        "ja": "その他のニュース: N8n 欠陥悪用、Slopoly マルウェア、インターポールのサイバー犯罪取り締まり",
+        "es": "En otras noticias: Explotación de falla N8n, malware Slopoly, represión de la Interpol contra el cibercrimen",
+        "pt": "Em outras notícias: falha N8n explorada, malware desleixado, repressão ao crime cibernético da Interpol",
+        "fr": "Dans Autres actualités : faille N8n exploitée, logiciel malveillant Slopoly, répression de la cybercriminalité par Interpol"
+      },
       "titleOriginal": "In Other News: N8n Flaw Exploited, Slopoly Malware, Interpol Cybercrime Crackdown",
       "link": "https://www.securityweek.com/in-other-news-n8n-flaw-exploited-slopoly-malware-interpol-cybercrime-crackdown/",
       "pubDate": "2026-03-13T14:27:12.000Z",
-      "description": "レーダーに隠れていたかもしれないその他の注目すべき記事: Telus Digital のデータ侵害、Linux AppArmor の脆弱性により root 権限が許可される、Coruna エクスプロイトの背後にある米国の防衛請負業者。 その他のニュースの投稿: N8n 脆弱性悪用、Slopoly マルウェア、インターポールのサイバー犯罪取り締まりが初登場",
+      "description": {
+        "en": "Other noteworthy stories that might have slipped under the radar: Telus Digital data breach, vulnerabilities in Linux AppArmor allow root privileges, US defense contractor behind Coruna exploits. The post In Other News: N8n Flaw Exploited, Slopoly Malware, Interpol Cybercrime Crackdown appeared firs",
+        "ja": "レーダーに隠れていた可能性のあるその他の注目すべき記事: Telus Digital データ侵害、Linux AppArmor の脆弱性により root 権限が許可される、Coruna エクスプロイトの背後にある米国の防衛請負業者。 その他のニュースの投稿: N8n 脆弱性悪用、Slopoly マルウェア、インターポールのサイバー犯罪取り締まりが初登場",
+        "es": "Otras historias notables que podrían haber pasado desapercibidas: la violación de datos de Telus Digital, las vulnerabilidades en Linux AppArmor permiten privilegios de root, el contratista de defensa estadounidense detrás de los exploits de Coruña. La publicación En otras noticias: Explotación de fallas N8n, malware Slopoly y represión contra el cibercrimen de Interpol aparecieron por primera vez",
+        "pt": "Outras histórias dignas de nota que podem ter passado despercebidas: violação de dados da Telus Digital, vulnerabilidades no Linux AppArmor permitem privilégios de root, empreiteiro de defesa dos EUA por trás das explorações do Coruna. A postagem em outras notícias: falha N8n explorada, malware Slopoly, repressão ao crime cibernético da Interpol apareceu primeiro",
+        "fr": "Autres histoires remarquables qui auraient pu passer inaperçues : violation de données de Telus Digital, vulnérabilités dans Linux AppArmor autorisant les privilèges root, entrepreneur américain de la défense derrière les exploits de Coruna. Le post Dans Autres actualités : N8n Flaw Exploited, Slopoly Malware, Interpol Cybercrime Crackdown est apparu en premier"
+      },
       "descriptionOriginal": "Other noteworthy stories that might have slipped under the radar: Telus Digital data breach, vulnerabilities in Linux AppArmor allow root privileges, US defense contractor behind Coruna exploits. The post In Other News: N8n Flaw Exploited, Slopoly Malware, Interpol Cybercrime Crackdown appeared firs",
       "source": "SecurityWeek"
     },
     {
-      "title": "Storm-2561 は、SEO ポイズニングを介してトロイの木馬 VPN クライアントを拡散し、認証情報を盗みます",
+      "title": {
+        "en": "Storm-2561 Spreads Trojan VPN Clients via SEO Poisoning to Steal Credentials",
+        "ja": "Storm-2561 は、SEO ポイズニングを介してトロイの木馬 VPN クライアントを拡散し、認証情報を盗みます",
+        "es": "Storm-2561 propaga clientes VPN troyanos mediante envenenamiento de SEO para robar credenciales",
+        "pt": "Storm-2561 espalha clientes VPN Trojan por meio de envenenamento de SEO para roubar credenciais",
+        "fr": "Storm-2561 propage les clients VPN Trojan via un empoisonnement SEO pour voler des informations d'identification"
+      },
       "titleOriginal": "Storm-2561 Spreads Trojan VPN Clients via SEO Poisoning to Steal Credentials",
       "link": "https://thehackernews.com/2026/03/storm-2561-spreads-trojan-vpn-clients.html",
       "pubDate": "2026-03-13T13:38:00.000Z",
-      "description": "Microsoft は、検索エンジン最適化 (SEO) ポイズニング技術を通じて配布された偽の仮想プライベート ネットワーク (VPN) クライアントを使用した資格情報盗難キャンペーンの詳細を明らかにしました。 「このキャンペーンは、正規のエンタープライズ ソフトウェアを検索しているユーザーを、攻撃上の悪意のある ZIP ファイルにリダイレクトします。",
+      "description": {
+        "en": "Microsoft has disclosed details of a credential theft campaign that employs fake virtual private network (VPN) clients distributed through search engine optimization (SEO) poisoning techniques. \"The campaign redirects users searching for legitimate enterprise software to malicious ZIP files on attac",
+        "ja": "Microsoft は、検索エンジン最適化 (SEO) ポイズニング技術を通じて配布された偽の仮想プライベート ネットワーク (VPN) クライアントを使用した資格情報盗難キャンペーンの詳細を明らかにしました。 「このキャンペーンは、正規のエンタープライズ ソフトウェアを検索しているユーザーを、攻撃上の悪意のある ZIP ファイルにリダイレクトします。",
+        "es": "Microsoft ha revelado detalles de una campaña de robo de credenciales que emplea clientes falsos de redes privadas virtuales (VPN) distribuidos mediante técnicas de envenenamiento de optimización de motores de búsqueda (SEO). \"La campaña redirige a los usuarios que buscan software empresarial legítimo a archivos ZIP maliciosos en ataque",
+        "pt": "A Microsoft divulgou detalhes de uma campanha de roubo de credenciais que emprega clientes falsos de rede privada virtual (VPN) distribuídos por meio de técnicas de envenenamento de otimização de mecanismo de pesquisa (SEO). \"A campanha redireciona os usuários que procuram software empresarial legítimo para arquivos ZIP maliciosos no attac",
+        "fr": "Microsoft a divulgué les détails d'une campagne de vol d'informations d'identification qui utilise de faux clients de réseau privé virtuel (VPN) distribués via des techniques d'empoisonnement d'optimisation des moteurs de recherche (SEO). \"La campagne redirige les utilisateurs recherchant des logiciels d'entreprise légitimes vers des fichiers ZIP malveillants lors d'une attaque."
+      },
       "descriptionOriginal": "Microsoft has disclosed details of a credential theft campaign that employs fake virtual private network (VPN) clients distributed through search engine optimization (SEO) poisoning techniques. \"The campaign redirects users searching for legitimate enterprise software to malicious ZIP files on attac",
       "source": "The Hacker News"
     },
     {
-      "title": "Google、Skia と V8 に影響を与える、実際に悪用された 2 つの Chrome ゼロデイを修正",
+      "title": {
+        "en": "Google Fixes Two Chrome Zero-Days Exploited in the Wild Affecting Skia and V8",
+        "ja": "Google、Skia と V8 に影響を与える、実際に悪用された 2 つの Chrome ゼロデイを修正",
+        "es": "Google corrige dos Chrome Zero-Day explotados en estado salvaje que afectan a Skia y V8",
+        "pt": "Google corrige dois dias zero do Chrome explorados na natureza, afetando Skia e V8",
+        "fr": "Google corrige deux Chrome Zero-Days exploités dans la nature affectant Skia et V8"
+      },
       "titleOriginal": "Google Fixes Two Chrome Zero-Days Exploited in the Wild Affecting Skia and V8",
       "link": "https://thehackernews.com/2026/03/google-fixes-two-chrome-zero-days.html",
       "pubDate": "2026-03-13T09:17:00.000Z",
-      "description": "Googleは木曜日、実際に悪用されているとされる2つの重大度の高い脆弱性に対処するため、Chrome Webブラウザのセキュリティアップデートをリリースした。 脆弱性のリストは次のとおりです - CVE-2026-3909 (CVSS スコア: 8.8) - Skia 2D グラフィックの境界外書き込みの脆弱性",
+      "description": {
+        "en": "Google on Thursday released security updates for its Chrome web browser to address two high-severity vulnerabilities that it said have been exploited in the wild. The list of vulnerabilities is as follows - CVE-2026-3909 (CVSS score: 8.8) - An out-of-bounds write vulnerability in the Skia 2D graphic",
+        "ja": "Googleは木曜日、実際に悪用されているとされる2つの重大度の高い脆弱性に対処するため、Chrome Webブラウザのセキュリティアップデートをリリースした。 脆弱性のリストは次のとおりです - CVE-2026-3909 (CVSS スコア: 8.8) - Skia 2D グラフィックの境界外書き込みの脆弱性",
+        "es": "Google lanzó el jueves actualizaciones de seguridad para su navegador web Chrome para abordar dos vulnerabilidades de alta gravedad que, según dijo, han sido explotadas en la naturaleza. La lista de vulnerabilidades es la siguiente: CVE-2026-3909 (puntuación CVSS: 8,8): una vulnerabilidad de escritura fuera de límites en el gráfico Skia 2D.",
+        "pt": "O Google lançou na quinta-feira atualizações de segurança para seu navegador Chrome para solucionar duas vulnerabilidades de alta gravidade que, segundo ele, foram exploradas em estado selvagem. A lista de vulnerabilidades é a seguinte - CVE-2026-3909 (pontuação CVSS: 8,8) - Uma vulnerabilidade de gravação fora dos limites no gráfico Skia 2D",
+        "fr": "Google a publié jeudi des mises à jour de sécurité pour son navigateur Web Chrome afin de corriger deux vulnérabilités de haute gravité qui, selon lui, ont été exploitées de manière sauvage. La liste des vulnérabilités est la suivante - CVE-2026-3909 (score CVSS : 8,8) - Une vulnérabilité d'écriture hors limites dans le graphique Skia 2D"
+      },
       "descriptionOriginal": "Google on Thursday released security updates for its Chrome web browser to address two high-severity vulnerabilities that it said have been exploited in the wild. The list of vulnerabilities is as follows - CVE-2026-3909 (CVSS score: 8.8) - An out-of-bounds write vulnerability in the Skia 2D graphic",
       "source": "The Hacker News"
     },
     {
-      "title": "Linux AppArmor の 9 つの CrackArmor 欠陥によりルート エスカレーションが可能になり、コンテナ分離がバイパスされる",
+      "title": {
+        "en": "Nine CrackArmor Flaws in Linux AppArmor Enable Root Escalation, Bypass Container Isolation",
+        "ja": "Linux AppArmor の 9 つの CrackArmor 欠陥によりルート エスカレーションが可能になり、コンテナ分離がバイパスされる",
+        "es": "Nueve fallas de CrackArmor en Linux AppArmor permiten la escalada de raíz y evitan el aislamiento de contenedores",
+        "pt": "Nove falhas do CrackArmor no Linux AppArmor permitem escalonamento de raiz e ignoram o isolamento do contêiner",
+        "fr": "Neuf failles CrackArmor dans Linux AppArmor permettent l'escalade racine et contournent l'isolation des conteneurs"
+      },
       "titleOriginal": "Nine CrackArmor Flaws in Linux AppArmor Enable Root Escalation, Bypass Container Isolation",
       "link": "https://thehackernews.com/2026/03/nine-crackarmor-flaws-in-linux-apparmor.html",
       "pubDate": "2026-03-13T08:18:00.000Z",
-      "description": "サイバーセキュリティ研究者らは、Linux カーネルの AppArmor モジュール内に複数のセキュリティ脆弱性があることを明らかにしました。これらの脆弱性は、特権のないユーザーが悪用して、カーネル保護を回避し、root にエスカレーションし、コンテナ分離の保証を損なう可能性があります。 混乱する9人の副脆弱性",
+      "description": {
+        "en": "Cybersecurity researchers have disclosed multiple security vulnerabilities within the Linux kernel's AppArmor module that could be exploited by unprivileged users to circumvent kernel protections, escalate to root, and undermine container isolation guarantees. The nine confused deputy vulnerabilitie",
+        "ja": "サイバーセキュリティ研究者らは、Linux カーネルの AppArmor モジュール内に複数のセキュリティ脆弱性があることを明らかにしました。これらの脆弱性は、特権のないユーザーが悪用して、カーネル保護を回避し、root にエスカレーションし、コンテナ分離の保証を損なう可能性があります。 The nine confused deputy vulnerabilitie",
+        "es": "Los investigadores de ciberseguridad han revelado múltiples vulnerabilidades de seguridad dentro del módulo AppArmor del kernel de Linux que podrían ser explotadas por usuarios sin privilegios para eludir las protecciones del kernel, escalar a la raíz y socavar las garantías de aislamiento del contenedor. Los nueve diputados confundidos por la vulnerabilidad",
+        "pt": "Pesquisadores de segurança cibernética divulgaram várias vulnerabilidades de segurança no módulo AppArmor do kernel Linux que poderiam ser exploradas por usuários sem privilégios para contornar as proteções do kernel, escalar para root e minar as garantias de isolamento de contêineres. As nove vulnerabilidades confusas dos deputados",
+        "fr": "Les chercheurs en cybersécurité ont révélé plusieurs vulnérabilités de sécurité au sein du module AppArmor du noyau Linux qui pourraient être exploitées par des utilisateurs non privilégiés pour contourner les protections du noyau, passer à la racine et saper les garanties d'isolation des conteneurs. Les neuf vulnérabilités adjointes confuses"
+      },
       "descriptionOriginal": "Cybersecurity researchers have disclosed multiple security vulnerabilities within the Linux kernel's AppArmor module that could be exploited by unprivileged users to circumvent kernel protections, escalate to root, and undermine container isolation guarantees. The nine confused deputy vulnerabilitie",
       "source": "The Hacker News"
     },
     {
-      "title": "当局が 163 か国の 369,000 個の IP を悪用する SocksEscort プロキシ ボットネットを妨害",
+      "title": {
+        "en": "Authorities Disrupt SocksEscort Proxy Botnet Exploiting 369,000 IPs Across 163 Countries",
+        "ja": "当局が 163 か国の 369,000 個の IP を悪用する SocksEscort プロキシ ボットネットを妨害",
+        "es": "Las autoridades interrumpen la botnet proxy SocksEscort que explota 369.000 IP en 163 países",
+        "pt": "Autoridades interrompem o botnet SocksEscort Proxy que explora 369.000 IPs em 163 países",
+        "fr": "Les autorités perturbent le botnet proxy SocksEscort exploitant 369 000 adresses IP dans 163 pays"
+      },
       "titleOriginal": "Authorities Disrupt SocksEscort Proxy Botnet Exploiting 369,000 IPs Across 163 Countries",
       "link": "https://thehackernews.com/2026/03/authorities-disrupt-socksescort-proxy.html",
       "pubDate": "2026-03-13T05:26:00.000Z",
-      "description": "裁判所の認可を受けた国際法執行活動により、大規模な詐欺を行うために世界中の数千台の家庭用ルーターをボットネットに陥れていた SocksEscort という刑事代理サービスが解体されました。 「SocksEscort は家庭用および小規模企業のインターネット ルーターをマルウェアに感染させました。」",
+      "description": {
+        "en": "A court-authorized international law enforcement operation has dismantled a criminal proxy service named SocksEscort that enslaved thousands of residential routers worldwide into a botnet for committing large-scale fraud. \"SocksEscort infected home and small business internet routers with malware,\" ",
+        "ja": "裁判所の認可を受けた国際法執行活動により、大規模な詐欺を行うために世界中の数千台の家庭用ルーターをボットネットに陥れていた SocksEscort という刑事代理サービスが解体されました。 「SocksEscort は家庭用および小規模企業のインターネット ルーターをマルウェアに感染させました。」",
+        "es": "Una operación policial internacional autorizada por un tribunal ha desmantelado un servicio de proxy criminal llamado SocksEscort que esclavizó a miles de enrutadores residenciales en todo el mundo a una botnet para cometer fraude a gran escala. \"SocksEscort infectó los enrutadores de Internet domésticos y de pequeñas empresas con malware\".",
+        "pt": "Uma operação de aplicação da lei internacional autorizada pelo tribunal desmantelou um serviço de proxy criminoso chamado SocksEscort, que escravizou milhares de roteadores residenciais em todo o mundo em uma botnet para cometer fraudes em grande escala. “SocksEscort infectou roteadores de Internet domésticos e de pequenas empresas com malware,”",
+        "fr": "Une opération internationale d'application de la loi autorisée par le tribunal a démantelé un service proxy criminel nommé SocksEscort qui a réduit en esclavage des milliers de routeurs résidentiels du monde entier dans un botnet pour avoir commis une fraude à grande échelle. \"SocksEscort a infecté les routeurs Internet des particuliers et des petites entreprises avec des logiciels malveillants\","
+      },
       "descriptionOriginal": "A court-authorized international law enforcement operation has dismantled a criminal proxy service named SocksEscort that enslaved thousands of residential routers worldwide into a botnet for committing large-scale fraud. \"SocksEscort infected home and small business internet routers with malware,\" ",
       "source": "The Hacker News"
     },
     {
-      "title": "Veeamは7つの重要なバックアップとパッチを適用します。 リモートでコードが実行されるレプリケーションの欠陥",
+      "title": {
+        "en": "Veeam Patches 7 Critical Backup &amp; Replication Flaws Allowing Remote Code Execution",
+        "ja": "Veeamは7つの重要なバックアップとパッチを適用します。 リモートでコードが実行されるレプリケーションの欠陥",
+        "es": "Veeam parchea 7 copias de seguridad y actualizaciones críticas Defectos de replicación que permiten la ejecución remota de código",
+        "pt": "Veeam corrige 7 atualizações críticas de backup e atualização Falhas de replicação que permitem execução remota de código",
+        "fr": "Veeam met à jour 7 les sauvegardes et sauvegardes critiques Failles de réplication permettant l'exécution de code à distance"
+      },
       "titleOriginal": "Veeam Patches 7 Critical Backup &amp; Replication Flaws Allowing Remote Code Execution",
       "link": "https://thehackernews.com/2026/03/veeam-patches-7-critical-backup.html",
       "pubDate": "2026-03-13T04:15:00.000Z",
-      "description": "Veeam は、悪用に成功するとリモートでコードが実行される可能性があるバックアップ & レプリケーション ソフトウェアの複数の重大な脆弱性に対処するセキュリティ アップデートをリリースしました。 脆弱性は以下のとおりです ・ CVE-2026-21666 (CVSS スコア: 9.9) ・ 認証が可能になる脆弱性",
+      "description": {
+        "en": "Veeam has released security updates to address multiple critical vulnerabilities in its Backup & Replication software that, if successfully exploited, could result in remote code execution. The vulnerabilities are as follows - CVE-2026-21666 (CVSS score: 9.9) - A vulnerability that allows an authent",
+        "ja": "Veeam は、悪用に成功するとリモートでコードが実行される可能性があるバックアップ & レプリケーション ソフトウェアの複数の重大な脆弱性に対処するセキュリティ アップデートをリリースしました。 脆弱性は以下のとおりです ・ CVE-2026-21666 (CVSS スコア: 9.9) ・ 認証が可能になる脆弱性",
+        "es": "Veeam ha lanzado actualizaciones de seguridad para abordar múltiples vulnerabilidades críticas en su software Backup & Replication que, si se explotan con éxito, podrían resultar en la ejecución remota de código. Las vulnerabilidades son las siguientes: CVE-2026-21666 (puntuación CVSS: 9,9): una vulnerabilidad que permite a un usuario",
+        "pt": "A Veeam lançou atualizações de segurança para solucionar diversas vulnerabilidades críticas em seu software de Backup e Replicação que, se exploradas com sucesso, podem resultar na execução remota de código. As vulnerabilidades são as seguintes - CVE-2026-21666 (pontuação CVSS: 9,9) - Uma vulnerabilidade que permite uma autenticação",
+        "fr": "Veeam a publié des mises à jour de sécurité pour corriger plusieurs vulnérabilités critiques de son logiciel de sauvegarde et de réplication qui, si elles sont exploitées avec succès, pourraient entraîner l'exécution de code à distance. Les vulnérabilités sont les suivantes - CVE-2026-21666 (score CVSS : 9,9) - Une vulnérabilité qui permet"
+      },
       "descriptionOriginal": "Veeam has released security updates to address multiple critical vulnerabilities in its Backup & Replication software that, if successfully exploited, could result in remote code execution. The vulnerabilities are as follows - CVE-2026-21666 (CVSS score: 9.9) - A vulnerability that allows an authent",
       "source": "The Hacker News"
     },
     {
-      "title": "Rust ベースの VENON マルウェア、認証情報を盗むオーバーレイでブラジルの銀行 33 行を標的",
+      "title": {
+        "en": "Rust-Based VENON Malware Targets 33 Brazilian Banks with Credential-Stealing Overlays",
+        "ja": "Rust ベースの VENON マルウェア、認証情報を盗むオーバーレイでブラジルの銀行 33 行を標的",
+        "es": "El malware VENON basado en Rust se dirige a 33 bancos brasileños con superposiciones de robo de credenciales",
+        "pt": "Malware VENON baseado em ferrugem atinge 33 bancos brasileiros com sobreposições de roubo de credenciais",
+        "fr": "Le logiciel malveillant VENON basé sur Rust cible 33 banques brésiliennes avec des superpositions de vol d'informations d'identification"
+      },
       "titleOriginal": "Rust-Based VENON Malware Targets 33 Brazilian Banks with Credential-Stealing Overlays",
       "link": "https://thehackernews.com/2026/03/rust-based-venon-malware-targets-33.html",
       "pubDate": "2026-03-12T17:31:00.000Z",
-      "description": "サイバーセキュリティ研究者らは、ブラジルのユーザーをターゲットにした、Rust で書かれた新たなバンキング マルウェアの詳細を明らかにしました。これは、ラテンアメリカのサイバー犯罪エコシステムに関連する他の既知の Delphi ベースのマルウェア ファミリとは大きく異なります。 感染するように設計されたマルウェア",
+      "description": {
+        "en": "Cybersecurity researchers have disclosed details of a new banking malware targeting Brazilian users that's written in Rust, marking a significant departure from other known Delphi-based malware families associated with the Latin American cybercrime ecosystem. The malware, which is designed to infect",
+        "ja": "サイバーセキュリティ研究者らは、ブラジルのユーザーをターゲットにした、Rust で書かれた新たなバンキング マルウェアの詳細を明らかにしました。これは、ラテンアメリカのサイバー犯罪エコシステムに関連する他の既知の Delphi ベースのマルウェア ファミリとは大きく異なります。 感染するように設計されたマルウェア",
+        "es": "Investigadores de ciberseguridad han revelado detalles de un nuevo malware bancario dirigido a usuarios brasileños que está escrito en Rust, lo que marca una desviación significativa de otras familias de malware conocidas basadas en Delphi asociadas con el ecosistema de cibercrimen latinoamericano. El malware, que está diseñado para infectar",
+        "pt": "Pesquisadores de segurança cibernética divulgaram detalhes de um novo malware bancário direcionado a usuários brasileiros que está escrito em Rust, marcando um afastamento significativo de outras famílias conhecidas de malware baseadas em Delphi associadas ao ecossistema de crimes cibernéticos da América Latina. O malware, projetado para infectar",
+        "fr": "Des chercheurs en cybersécurité ont divulgué les détails d'un nouveau malware bancaire ciblant les utilisateurs brésiliens et écrit en Rust, marquant une rupture significative avec d'autres familles de malwares connues basées sur Delphi associées à l'écosystème de la cybercriminalité latino-américaine. Le malware, conçu pour infecter"
+      },
       "descriptionOriginal": "Cybersecurity researchers have disclosed details of a new banking malware targeting Brazilian users that's written in Rust, marking a significant departure from other known Delphi-based malware families associated with the Latin American cybercrime ecosystem. The malware, which is designed to infect",
       "source": "The Hacker News"
     }

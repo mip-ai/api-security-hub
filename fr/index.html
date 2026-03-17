@@ -158,7 +158,7 @@
 <script src="../js/common.js"></script>
 <script>
 (function() {
-  var langMatch = location.pathname.match(/\/(en|ja|es|zh|pt|fr)\//);
+  var langMatch = location.pathname.match(/\/(en|ja|es|pt|fr)\//);
   var lang = langMatch ? langMatch[1] : 'en';
 
   fetch('../data/news.json')
@@ -185,10 +185,14 @@
       var latestItems = items.slice(0, 5);
       var html = '';
       latestItems.forEach(function(item) {
-        var title = (item.title && (item.title[lang] || item.title.en)) || item.titleOriginal || '';
-        var description = (item.description && (item.description[lang] || item.description.en)) || item.descriptionOriginal || '';
-        var date = item.date || '';
-        var url = item.url || '#';
+        var title = (typeof item.title === 'object' && item.title !== null)
+          ? (item.title[lang] || item.title.en || item.titleOriginal || '')
+          : (item.titleOriginal || item.title || '');
+        var description = (typeof item.description === 'object' && item.description !== null)
+          ? (item.description[lang] || item.description.en || item.descriptionOriginal || '')
+          : (item.descriptionOriginal || item.description || '');
+        var date = item.pubDate ? new Date(item.pubDate).toLocaleDateString(lang, { year:'numeric', month:'short', day:'numeric' }) : '';
+        var url = item.link || '#';
         var source = item.source || '';
 
         html += '<div class="news-item" style="margin-bottom:12px;">';
