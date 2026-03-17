@@ -1,7 +1,28 @@
 {
-  "lastUpdated": "2026-03-17T04:53:13.764Z",
+  "lastUpdated": "2026-03-17T09:56:53.327Z",
   "itemCount": 20,
   "items": [
+    {
+      "title": {
+        "en": "CISA Flags Actively Exploited Wing FTP Vulnerability Leaking Server Paths",
+        "ja": "CISA、サーバーパス漏洩の Wing FTP 脆弱性が積極的に悪用されていると報告",
+        "es": "CISA señala rutas de servidor con fugas de vulnerabilidad Wing FTP activamente explotada",
+        "pt": "CISA sinaliza vulnerabilidade de FTP de Wing explorada ativamente, vazamento de caminhos de servidor",
+        "fr": "CISA signale une vulnérabilité FTP de Wing activement exploitée qui fuit les chemins de serveur"
+      },
+      "titleOriginal": "CISA Flags Actively Exploited Wing FTP Vulnerability Leaking Server Paths",
+      "link": "https://thehackernews.com/2026/03/cisa-flags-actively-exploited-wing-ftp.html",
+      "pubDate": "2026-03-17T05:23:00.000Z",
+      "description": {
+        "en": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Monday added a medium-severity security flaw impacting Wing FTP to its Known Exploited Vulnerabilities (KEV) catalog, citing evidence of active exploitation. The vulnerability, CVE-2025-47813 (CVSS score: 4.3), is an information dis",
+        "ja": "米国サイバーセキュリティ・インフラセキュリティ庁（CISA）は月曜日、活発な悪用の証拠を引用し、Wing FTPに影響を与える中程度の重大度のセキュリティ欠陥を既知の悪用された脆弱性（KEV）カタログに追加した。 脆弱性 CVE-2025-47813 (CVSS スコア: 4.3) は、情報セキュリティです。",
+        "es": "La Agencia de Seguridad de Infraestructura y Ciberseguridad de EE. UU. (CISA) agregó el lunes una falla de seguridad de gravedad media que afecta a Wing FTP a su catálogo de vulnerabilidades explotadas conocidas (KEV), citando evidencia de explotación activa. La vulnerabilidad, CVE-2025-47813 (puntuación CVSS: 4,3), es una información dis",
+        "pt": "A Agência de Segurança Cibernética e de Infraestrutura dos EUA (CISA) adicionou na segunda-feira uma falha de segurança de gravidade média que afeta o Wing FTP ao seu catálogo de Vulnerabilidades Exploradas Conhecidas (KEV), citando evidências de exploração ativa. A vulnerabilidade, CVE-2025-47813 (pontuação CVSS: 4,3), é uma falha de informação",
+        "fr": "L'Agence américaine de cybersécurité et de sécurité des infrastructures (CISA) a ajouté lundi une faille de sécurité de gravité moyenne affectant Wing FTP à son catalogue de vulnérabilités exploitées connues (KEV), citant des preuves d'exploitation active. La vulnérabilité, CVE-2025-47813 (score CVSS : 4,3), est un message d'information."
+      },
+      "descriptionOriginal": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Monday added a medium-severity security flaw impacting Wing FTP to its Known Exploited Vulnerabilities (KEV) catalog, citing evidence of active exploitation. The vulnerability, CVE-2025-47813 (CVSS score: 4.3), is an information dis",
+      "source": "The Hacker News"
+    },
     {
       "title": {
         "en": "GlassWorm Attack Uses Stolen GitHub Tokens to Force-Push Malware Into Python Repos",
@@ -399,27 +420,6 @@
         "fr": "Veeam a publié des mises à jour de sécurité pour corriger plusieurs vulnérabilités critiques de son logiciel de sauvegarde et de réplication qui, si elles sont exploitées avec succès, pourraient entraîner l'exécution de code à distance. Les vulnérabilités sont les suivantes - CVE-2026-21666 (score CVSS : 9,9) - Une vulnérabilité qui permet"
       },
       "descriptionOriginal": "Veeam has released security updates to address multiple critical vulnerabilities in its Backup & Replication software that, if successfully exploited, could result in remote code execution. The vulnerabilities are as follows - CVE-2026-21666 (CVSS score: 9.9) - A vulnerability that allows an authent",
-      "source": "The Hacker News"
-    },
-    {
-      "title": {
-        "en": "Rust-Based VENON Malware Targets 33 Brazilian Banks with Credential-Stealing Overlays",
-        "ja": "Rust ベースの VENON マルウェア、認証情報を盗むオーバーレイでブラジルの銀行 33 行を標的",
-        "es": "El malware VENON basado en Rust se dirige a 33 bancos brasileños con superposiciones de robo de credenciales",
-        "pt": "Malware VENON baseado em ferrugem atinge 33 bancos brasileiros com sobreposições de roubo de credenciais",
-        "fr": "Le logiciel malveillant VENON basé sur Rust cible 33 banques brésiliennes avec des superpositions de vol d'informations d'identification"
-      },
-      "titleOriginal": "Rust-Based VENON Malware Targets 33 Brazilian Banks with Credential-Stealing Overlays",
-      "link": "https://thehackernews.com/2026/03/rust-based-venon-malware-targets-33.html",
-      "pubDate": "2026-03-12T17:31:00.000Z",
-      "description": {
-        "en": "Cybersecurity researchers have disclosed details of a new banking malware targeting Brazilian users that's written in Rust, marking a significant departure from other known Delphi-based malware families associated with the Latin American cybercrime ecosystem. The malware, which is designed to infect",
-        "ja": "サイバーセキュリティ研究者らは、ブラジルのユーザーをターゲットにした、Rust で書かれた新しいバンキング マルウェアの詳細を明らかにしました。これは、ラテンアメリカのサイバー犯罪エコシステムに関連する他の既知の Delphi ベースのマルウェア ファミリとは大きく異なります。 感染するように設計されたマルウェア",
-        "es": "Investigadores de ciberseguridad han revelado detalles de un nuevo malware bancario dirigido a usuarios brasileños que está escrito en Rust, lo que marca una desviación significativa de otras familias de malware conocidas basadas en Delphi asociadas con el ecosistema de cibercrimen latinoamericano. El malware, que está diseñado para infectar",
-        "pt": "Pesquisadores de segurança cibernética divulgaram detalhes de um novo malware bancário direcionado a usuários brasileiros que está escrito em Rust, marcando um afastamento significativo de outras famílias conhecidas de malware baseadas em Delphi associadas ao ecossistema de crimes cibernéticos da América Latina. O malware, projetado para infectar",
-        "fr": "Des chercheurs en cybersécurité ont divulgué les détails d'un nouveau malware bancaire ciblant les utilisateurs brésiliens et écrit en Rust, marquant une rupture significative avec d'autres familles de malwares connues basées sur Delphi associées à l'écosystème de la cybercriminalité latino-américaine. Le malware, conçu pour infecter"
-      },
-      "descriptionOriginal": "Cybersecurity researchers have disclosed details of a new banking malware targeting Brazilian users that's written in Rust, marking a significant departure from other known Delphi-based malware families associated with the Latin American cybercrime ecosystem. The malware, which is designed to infect",
       "source": "The Hacker News"
     }
   ]
