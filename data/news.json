@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-17T03:05:16.191Z",
+  "lastUpdated": "2026-03-17T04:53:13.764Z",
   "itemCount": 20,
   "items": [
     {
@@ -79,7 +79,7 @@
       "description": {
         "en": "Some weeks in security feel normal. Then you read a few tabs and get that immediate “ah, great, we’re doing this now” feeling. This week has that energy. Fresh messes, old problems getting sharper, and research that stops feeling theoretical real fast. A few bits hit a little too close to real life,",
         "ja": "数週間の安全な生活が普通に感じられます。 次に、いくつかのタブを読むと、すぐに「ああ、すごい、今これをやっているんだ」という感覚が得られます。 今週はそのエネルギーがあります。 新鮮な混乱、より鮮明になっている古い問題、そして理論的だと感じられなくなる研究。 いくつかの点は現実の生活に少し近づきすぎていますが、",
-        "es": "Algunas semanas en seguridad parecen normales. Luego lees algunas pestañas y tienes esa sensación inmediata de \"ah, genial, estamos haciendo esto ahora\". Esta semana tiene esa energía. Nuevos líos, viejos problemas que se vuelven más agudos e investigaciones que dejan de parecer teóricas muy rápidamente. Algunas partes se acercan demasiado a la vida real,",
+        "es": "Algunas semanas en seguridad se sienten normales. Luego lees algunas pestañas y tienes esa sensación inmediata de \"ah, genial, estamos haciendo esto ahora\". Esta semana tiene esa energía. Nuevos líos, viejos problemas que se vuelven más agudos e investigaciones que dejan de parecer teóricas muy rápidamente. Algunas partes se acercan demasiado a la vida real,",
         "pt": "Algumas semanas em segurança parecem normais. Então você lê algumas guias e tem aquela sensação imediata de “ah, ótimo, estamos fazendo isso agora”. Esta semana tem essa energia. Novas bagunças, velhos problemas ficando mais nítidos e pesquisas que deixam de parecer teóricas muito rapidamente. Algumas partes chegaram um pouco perto demais da vida real,",
         "fr": "Quelques semaines en sécurité semblent normales. Ensuite, vous lisez quelques onglets et ressentez immédiatement le sentiment « ah, super, nous faisons ça maintenant ». Cette semaine a cette énergie. De nouveaux dégâts, d'anciens problèmes qui deviennent plus aigus et des recherches qui cessent très vite de paraître théoriques. Quelques passages sont un peu trop proches de la réalité,"
       },
@@ -247,7 +247,7 @@
       "description": {
         "en": "The vulnerability can be exploited remotely, without authentication, to circumvent existing authentication controls. The post Critical HPE AOS-CX Vulnerability Allows Admin Password Resets appeared first on SecurityWeek.",
         "ja": "この脆弱性は、認証を行わずにリモートから悪用され、既存の認証制御を回避する可能性があります。 「HPE AOS-CX の重大な脆弱性により管理者パスワードのリセットが可能になる」という投稿は、SecurityWeek に最初に掲載されました。",
-        "es": "The vulnerability can be exploited remotely, without authentication, to circumvent existing authentication controls. La publicación Vulnerabilidad crítica de HPE AOS-CX permite restablecer la contraseña de administrador apareció por primera vez en SecurityWeek.",
+        "es": "La vulnerabilidad se puede explotar de forma remota, sin autenticación, para eludir los controles de autenticación existentes. La publicación Vulnerabilidad crítica de HPE AOS-CX permite restablecer la contraseña de administrador apareció por primera vez en SecurityWeek.",
         "pt": "A vulnerabilidade pode ser explorada remotamente, sem autenticação, para contornar os controles de autenticação existentes. A postagem Vulnerabilidade crítica do HPE AOS-CX permite redefinições de senha de administrador apareceu pela primeira vez na SecurityWeek.",
         "fr": "La vulnérabilité peut être exploitée à distance, sans authentification, pour contourner les contrôles d'authentification existants. La vulnérabilité critique HPE AOS-CX permettant la réinitialisation du mot de passe administrateur apparaît en premier sur SecurityWeek."
       },
@@ -278,7 +278,7 @@
     {
       "title": {
         "en": "In Other News: N8n Flaw Exploited, Slopoly Malware, Interpol Cybercrime Crackdown",
-        "ja": "その他のニュース: N8n 欠陥悪用、Slopoly マルウェア、インターポールのサイバー犯罪取り締まり",
+        "ja": "その他のニュース: N8n 脆弱性悪用、Slopoly マルウェア、インターポールのサイバー犯罪取り締まり",
         "es": "En otras noticias: Explotación de falla N8n, malware Slopoly, represión de la Interpol contra el cibercrimen",
         "pt": "Em outras notícias: falha N8n explorada, malware desleixado, repressão ao crime cibernético da Interpol",
         "fr": "Dans Autres actualités : faille N8n exploitée, logiciel malveillant Slopoly, répression de la cybercriminalité par Interpol"
@@ -288,7 +288,7 @@
       "pubDate": "2026-03-13T14:27:12.000Z",
       "description": {
         "en": "Other noteworthy stories that might have slipped under the radar: Telus Digital data breach, vulnerabilities in Linux AppArmor allow root privileges, US defense contractor behind Coruna exploits. The post In Other News: N8n Flaw Exploited, Slopoly Malware, Interpol Cybercrime Crackdown appeared firs",
-        "ja": "レーダーに隠れていた可能性のあるその他の注目すべき記事: Telus Digital データ侵害、Linux AppArmor の脆弱性により root 権限が許可される、Coruna エクスプロイトの背後にある米国の防衛請負業者。 その他のニュースの投稿: N8n 脆弱性悪用、Slopoly マルウェア、インターポールのサイバー犯罪取り締まりが初登場",
+        "ja": "レーダーに隠れていたかもしれないその他の注目すべき記事: Telus Digital のデータ侵害、Linux AppArmor の脆弱性により root 権限が許可される、Coruna エクスプロイトの背後にある米国の防衛請負業者。 その他のニュースの投稿: N8n 脆弱性悪用、Slopoly マルウェア、インターポールのサイバー犯罪取り締まりが初登場",
         "es": "Otras historias notables que podrían haber pasado desapercibidas: la violación de datos de Telus Digital, las vulnerabilidades en Linux AppArmor permiten privilegios de root, el contratista de defensa estadounidense detrás de los exploits de Coruña. La publicación En otras noticias: Explotación de fallas N8n, malware Slopoly y represión contra el cibercrimen de Interpol aparecieron por primera vez",
         "pt": "Outras histórias dignas de nota que podem ter passado despercebidas: violação de dados da Telus Digital, vulnerabilidades no Linux AppArmor permitem privilégios de root, empreiteiro de defesa dos EUA por trás das explorações do Coruna. A postagem em outras notícias: falha N8n explorada, malware Slopoly, repressão ao crime cibernético da Interpol apareceu primeiro",
         "fr": "Autres histoires remarquables qui auraient pu passer inaperçues : violation de données de Telus Digital, vulnérabilités dans Linux AppArmor autorisant les privilèges root, entrepreneur américain de la défense derrière les exploits de Coruna. Le post Dans Autres actualités : N8n Flaw Exploited, Slopoly Malware, Interpol Cybercrime Crackdown est apparu en premier"
@@ -351,10 +351,10 @@
       "pubDate": "2026-03-13T08:18:00.000Z",
       "description": {
         "en": "Cybersecurity researchers have disclosed multiple security vulnerabilities within the Linux kernel's AppArmor module that could be exploited by unprivileged users to circumvent kernel protections, escalate to root, and undermine container isolation guarantees. The nine confused deputy vulnerabilitie",
-        "ja": "サイバーセキュリティ研究者らは、Linux カーネルの AppArmor モジュール内に複数のセキュリティ脆弱性があることを明らかにしました。これらの脆弱性は、特権のないユーザーが悪用して、カーネル保護を回避し、root にエスカレーションし、コンテナ分離の保証を損なう可能性があります。 The nine confused deputy vulnerabilitie",
+        "ja": "サイバーセキュリティ研究者らは、Linux カーネルの AppArmor モジュール内に複数のセキュリティ脆弱性があることを明らかにしました。これらの脆弱性は、特権のないユーザーが悪用して、カーネル保護を回避し、root にエスカレーションし、コンテナ分離の保証を損なう可能性があります。 9人の混乱した副脆弱性",
         "es": "Los investigadores de ciberseguridad han revelado múltiples vulnerabilidades de seguridad dentro del módulo AppArmor del kernel de Linux que podrían ser explotadas por usuarios sin privilegios para eludir las protecciones del kernel, escalar a la raíz y socavar las garantías de aislamiento del contenedor. Los nueve diputados confundidos por la vulnerabilidad",
         "pt": "Pesquisadores de segurança cibernética divulgaram várias vulnerabilidades de segurança no módulo AppArmor do kernel Linux que poderiam ser exploradas por usuários sem privilégios para contornar as proteções do kernel, escalar para root e minar as garantias de isolamento de contêineres. As nove vulnerabilidades confusas dos deputados",
-        "fr": "Les chercheurs en cybersécurité ont révélé plusieurs vulnérabilités de sécurité au sein du module AppArmor du noyau Linux qui pourraient être exploitées par des utilisateurs non privilégiés pour contourner les protections du noyau, passer à la racine et saper les garanties d'isolation des conteneurs. Les neuf vulnérabilités adjointes confuses"
+        "fr": "Les chercheurs en cybersécurité ont révélé plusieurs vulnérabilités de sécurité dans le module AppArmor du noyau Linux qui pourraient être exploitées par des utilisateurs non privilégiés pour contourner les protections du noyau, passer à la racine et saper les garanties d'isolation des conteneurs. Les neuf vulnérabilités adjointes confuses"
       },
       "descriptionOriginal": "Cybersecurity researchers have disclosed multiple security vulnerabilities within the Linux kernel's AppArmor module that could be exploited by unprivileged users to circumvent kernel protections, escalate to root, and undermine container isolation guarantees. The nine confused deputy vulnerabilitie",
       "source": "The Hacker News"
@@ -414,7 +414,7 @@
       "pubDate": "2026-03-12T17:31:00.000Z",
       "description": {
         "en": "Cybersecurity researchers have disclosed details of a new banking malware targeting Brazilian users that's written in Rust, marking a significant departure from other known Delphi-based malware families associated with the Latin American cybercrime ecosystem. The malware, which is designed to infect",
-        "ja": "サイバーセキュリティ研究者らは、ブラジルのユーザーをターゲットにした、Rust で書かれた新たなバンキング マルウェアの詳細を明らかにしました。これは、ラテンアメリカのサイバー犯罪エコシステムに関連する他の既知の Delphi ベースのマルウェア ファミリとは大きく異なります。 感染するように設計されたマルウェア",
+        "ja": "サイバーセキュリティ研究者らは、ブラジルのユーザーをターゲットにした、Rust で書かれた新しいバンキング マルウェアの詳細を明らかにしました。これは、ラテンアメリカのサイバー犯罪エコシステムに関連する他の既知の Delphi ベースのマルウェア ファミリとは大きく異なります。 感染するように設計されたマルウェア",
         "es": "Investigadores de ciberseguridad han revelado detalles de un nuevo malware bancario dirigido a usuarios brasileños que está escrito en Rust, lo que marca una desviación significativa de otras familias de malware conocidas basadas en Delphi asociadas con el ecosistema de cibercrimen latinoamericano. El malware, que está diseñado para infectar",
         "pt": "Pesquisadores de segurança cibernética divulgaram detalhes de um novo malware bancário direcionado a usuários brasileiros que está escrito em Rust, marcando um afastamento significativo de outras famílias conhecidas de malware baseadas em Delphi associadas ao ecossistema de crimes cibernéticos da América Latina. O malware, projetado para infectar",
         "fr": "Des chercheurs en cybersécurité ont divulgué les détails d'un nouveau malware bancaire ciblant les utilisateurs brésiliens et écrit en Rust, marquant une rupture significative avec d'autres familles de malwares connues basées sur Delphi associées à l'écosystème de la cybercriminalité latino-américaine. Le malware, conçu pour infecter"
