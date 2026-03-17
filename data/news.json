@@ -1,7 +1,112 @@
 {
-  "lastUpdated": "2026-03-17T09:56:53.327Z",
+  "lastUpdated": "2026-03-17T16:08:04.758Z",
   "itemCount": 20,
   "items": [
+    {
+      "title": {
+        "en": "UK Companies House Exposed Details of Millions of Firms",
+        "ja": "英国企業庁、数百万社の企業詳細を暴露",
+        "es": "La Cámara de Empresas del Reino Unido expuso detalles de millones de empresas",
+        "pt": "Empresas do Reino Unido abrigam detalhes expostos de milhões de empresas",
+        "fr": "La Companies House du Royaume-Uni a dévoilé les détails de millions d'entreprises"
+      },
+      "titleOriginal": "UK Companies House Exposed Details of Millions of Firms",
+      "link": "https://www.securityweek.com/uk-companies-house-exposed-details-of-millions-of-firms/",
+      "pubDate": "2026-03-17T15:40:25.000Z",
+      "description": {
+        "en": "The government agency confirmed the vulnerability could have been exploited to obtain company details and alter records. The post UK Companies House Exposed Details of Millions of Firms appeared first on SecurityWeek.",
+        "ja": "政府機関は、この脆弱性が悪用されて企業の詳細情報が取得され、記録が改ざんされた可能性があることを認めた。 英国企業院が数百万社の企業の詳細を暴露という記事は、SecurityWeek に最初に掲載されました。",
+        "es": "La agencia gubernamental confirmó que la vulnerabilidad podría haber sido aprovechada para obtener detalles de la empresa y alterar registros. La publicación La Cámara de Empresas del Reino Unido expuso detalles de millones de empresas apareció por primera vez en SecurityWeek.",
+        "pt": "A agência governamental confirmou que a vulnerabilidade poderia ter sido explorada para obter detalhes da empresa e alterar registros. A postagem Detalhes expostos de milhões de empresas pela UK Companies House apareceu pela primeira vez na SecurityWeek.",
+        "fr": "L'agence gouvernementale a confirmé que la vulnérabilité aurait pu être exploitée pour obtenir des détails sur l'entreprise et modifier les dossiers. L'article UK Companies House a exposé les détails de millions d'entreprises est apparu en premier sur SecurityWeek."
+      },
+      "descriptionOriginal": "The government agency confirmed the vulnerability could have been exploited to obtain company details and alter records. The post UK Companies House Exposed Details of Millions of Firms appeared first on SecurityWeek.",
+      "source": "SecurityWeek"
+    },
+    {
+      "title": {
+        "en": "Top 5 Things CISOs Need to Do Today to Secure AI Agents",
+        "ja": "AI エージェントを保護するために CISO が今日実行する必要がある 5 つのこと",
+        "es": "Las cinco cosas principales que los CISO deben hacer hoy para proteger a los agentes de IA",
+        "pt": "As 5 principais coisas que os CISOs precisam fazer hoje para proteger os agentes de IA",
+        "fr": "Top 5 des choses que les RSSI doivent faire aujourd'hui pour sécuriser les agents IA"
+      },
+      "titleOriginal": "Top 5 Things CISOs Need to Do Today to Secure AI Agents",
+      "link": "https://www.bleepingcomputer.com/news/security/top-5-things-cisos-need-to-do-today-to-secure-ai-agents/",
+      "pubDate": "2026-03-17T14:02:12.000Z",
+      "description": {
+        "en": "AI agents are autonomous actors with real access to data and systems, not just copilots. Token Security explains why identity-based access control is critical to prevent misuse and data exposure. [...]",
+        "ja": "AI エージェントは、副操縦士だけでなく、データやシステムに実際にアクセスできる自律的なアクターです。 Token Security は、悪用やデータ漏えいを防ぐために ID ベースのアクセス制御が重要である理由を説明します。 [...]",
+        "es": "Los agentes de IA son actores autónomos con acceso real a datos y sistemas, no sólo copilotos. Token Security explica por qué el control de acceso basado en identidad es fundamental para evitar el uso indebido y la exposición de datos. [...]",
+        "pt": "Os agentes de IA são atores autónomos com acesso real a dados e sistemas, e não apenas copilotos. A Token Security explica por que o controle de acesso baseado em identidade é fundamental para evitar o uso indevido e a exposição de dados. [...]",
+        "fr": "Les agents d’IA sont des acteurs autonomes disposant d’un réel accès aux données et aux systèmes, et pas seulement des copilotes. Token Security explique pourquoi le contrôle d'accès basé sur l'identité est essentiel pour prévenir les abus et l'exposition des données. [...]"
+      },
+      "descriptionOriginal": "AI agents are autonomous actors with real access to data and systems, not just copilots. Token Security explains why identity-based access control is critical to prevent misuse and data exposure. [...]",
+      "source": "BleepingComputer"
+    },
+    {
+      "title": {
+        "en": "174 Vulnerabilities Targeted by RondoDox Botnet",
+        "ja": "RondoDox ボットネットの標的となる 174 件の脆弱性",
+        "es": "174 vulnerabilidades atacadas por la botnet RondoDox",
+        "pt": "174 vulnerabilidades visadas pelo botnet RondoDox",
+        "fr": "174 vulnérabilités ciblées par le botnet RondoDox"
+      },
+      "titleOriginal": "174 Vulnerabilities Targeted by RondoDox Botnet",
+      "link": "https://www.securityweek.com/rondodox-botnet-targeted-174-vulnerabilities/",
+      "pubDate": "2026-03-17T12:37:45.000Z",
+      "description": {
+        "en": "The botnet has increased its activity, peaking at 15,000 exploitation attempts per day, and taking a more targeted approach. The post 174 Vulnerabilities Targeted by RondoDox Botnet appeared first on SecurityWeek.",
+        "ja": "このボットネットは活動を増やしており、ピーク時には 1 日あたり 15,000 件の悪用試行が行われ、よりターゲットを絞ったアプローチを採用しています。 RondoDox ボットネットの標的となる 174 件の脆弱性の投稿は、SecurityWeek に初めて掲載されました。",
+        "es": "La botnet ha aumentado su actividad, alcanzando un máximo de 15.000 intentos de explotación por día y adoptando un enfoque más específico. La publicación 174 vulnerabilidades atacadas por RondoDox Botnet apareció por primera vez en SecurityWeek.",
+        "pt": "A botnet aumentou a sua atividade, atingindo um pico de 15.000 tentativas de exploração por dia, e adotando uma abordagem mais direcionada. A postagem 174 vulnerabilidades visadas pelo RondoDox Botnet apareceu pela primeira vez na SecurityWeek.",
+        "fr": "Le botnet a augmenté son activité, culminant à 15 000 tentatives d'exploitation par jour, et adoptant une approche plus ciblée. L'article 174 vulnérabilités ciblées par le botnet RondoDox apparaît en premier sur SecurityWeek."
+      },
+      "descriptionOriginal": "The botnet has increased its activity, peaking at 15,000 exploitation attempts per day, and taking a more targeted approach. The post 174 Vulnerabilities Targeted by RondoDox Botnet appeared first on SecurityWeek.",
+      "source": "SecurityWeek"
+    },
+    {
+      "title": {
+        "en": "CISA Flags Year-Old Wing FTP Vulnerability as Exploited",
+        "ja": "CISA、1年前からあるWing FTPの脆弱性が悪用されたと報告",
+        "es": "CISA señala como explotada una vulnerabilidad FTP de Wing de hace un año",
+        "pt": "CISA sinaliza vulnerabilidade de FTP de um ano como explorada",
+        "fr": "La CISA signale qu'une vulnérabilité FTP de l'aile vieille d'un an est exploitée"
+      },
+      "titleOriginal": "CISA Flags Year-Old Wing FTP Vulnerability as Exploited",
+      "link": "https://www.securityweek.com/cisa-flags-year-old-wing-ftp-vulnerability-as-exploited/",
+      "pubDate": "2026-03-17T10:55:55.000Z",
+      "description": {
+        "en": "Tracked as CVE-2025-47813, the flaw leads to the disclosure of the full local installation path of the application. The post CISA Flags Year-Old Wing FTP Vulnerability as Exploited appeared first on SecurityWeek.",
+        "ja": "この欠陥は CVE-2025-47813 として追跡されており、アプリケーションの完全なローカル インストール パスの漏洩につながります。 CISA が 1 年前の Wing FTP 脆弱性が悪用されたと報告した記事は、SecurityWeek に最初に掲載されました。",
+        "es": "Registrada como CVE-2025-47813, la falla conduce a la divulgación de la ruta de instalación local completa de la aplicación. La publicación CISA señala una vulnerabilidad FTP de ala de hace un año como explotada apareció por primera vez en SecurityWeek.",
+        "pt": "Rastreada como CVE-2025-47813, a falha leva à divulgação do caminho completo de instalação local do aplicativo. A postagem CISA sinaliza vulnerabilidade de FTP de um ano como explorada apareceu pela primeira vez na SecurityWeek.",
+        "fr": "Traquée comme CVE-2025-47813, la faille conduit à la divulgation du chemin d'installation local complet de l'application. L'article CISA signale une vulnérabilité FTP de l'aile vieille d'un an comme exploitée apparaît en premier sur SecurityWeek."
+      },
+      "descriptionOriginal": "Tracked as CVE-2025-47813, the flaw leads to the disclosure of the full local installation path of the application. The post CISA Flags Year-Old Wing FTP Vulnerability as Exploited appeared first on SecurityWeek.",
+      "source": "SecurityWeek"
+    },
+    {
+      "title": {
+        "en": "AI, APIs and DDoS Collide in New Era of Coordinated Cyberattacks",
+        "ja": "AI、API、DDoS が連携した新時代のサイバー攻撃で衝突",
+        "es": "IA, API y DDoS chocan en una nueva era de ciberataques coordinados",
+        "pt": "IA, APIs e DDoS colidem na nova era de ataques cibernéticos coordenados",
+        "fr": "L'IA, les API et les DDoS entrent en collision dans une nouvelle ère de cyberattaques coordonnées"
+      },
+      "titleOriginal": "AI, APIs and DDoS Collide in New Era of Coordinated Cyberattacks",
+      "link": "https://www.securityweek.com/ai-apis-and-ddos-collide-in-new-era-of-coordinated-cyberattacks/",
+      "pubDate": "2026-03-17T10:30:00.000Z",
+      "description": {
+        "en": "Akamai warns that Layer 7 DDoS, API abuse and AI-powered attacks are merging into coordinated, multi-vector campaigns that are harder to detect and defend against. The post AI, APIs and DDoS Collide in New Era of Coordinated Cyberattacks appeared first on SecurityWeek.",
+        "ja": "Akamai は、レイヤー 7 DDoS、API 悪用、および AI を利用した攻撃が、調整された複数ベクトルのキャンペーンに統合され、検出および防御が困難になっていると警告しています。 「連携型サイバー攻撃の新時代における AI、API、DDoS の衝突」という記事が最初に SecurityWeek に掲載されました。",
+        "es": "Akamai advierte que los DDoS de capa 7, el abuso de API y los ataques impulsados ​​por IA se están fusionando en campañas coordinadas de múltiples vectores que son más difíciles de detectar y defenderse. La publicación AI, API y DDoS chocan en una nueva era de ciberataques coordinados apareció por primera vez en SecurityWeek.",
+        "pt": "A Akamai alerta que DDoS de camada 7, abuso de API e ataques alimentados por IA estão se fundindo em campanhas coordenadas e multivetoriais que são mais difíceis de detectar e de se defender. A postagem IA, APIs e DDoS colidem na nova era de ataques cibernéticos coordenados apareceu pela primeira vez na SecurityWeek.",
+        "fr": "Akamai prévient que les attaques DDoS de couche 7, les abus d'API et les attaques basées sur l'IA fusionnent en campagnes multivecteurs coordonnées contre lesquelles il est plus difficile de détecter et de se défendre. L'article L'IA, les API et les DDoS entrent en collision dans une nouvelle ère de cyberattaques coordonnées apparaît en premier sur SecurityWeek."
+      },
+      "descriptionOriginal": "Akamai warns that Layer 7 DDoS, API abuse and AI-powered attacks are merging into coordinated, multi-vector campaigns that are harder to detect and defend against. The post AI, APIs and DDoS Collide in New Era of Coordinated Cyberattacks appeared first on SecurityWeek.",
+      "source": "SecurityWeek"
+    },
     {
       "title": {
         "en": "CISA Flags Actively Exploited Wing FTP Vulnerability Leaking Server Paths",
@@ -15,7 +120,7 @@
       "pubDate": "2026-03-17T05:23:00.000Z",
       "description": {
         "en": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Monday added a medium-severity security flaw impacting Wing FTP to its Known Exploited Vulnerabilities (KEV) catalog, citing evidence of active exploitation. The vulnerability, CVE-2025-47813 (CVSS score: 4.3), is an information dis",
-        "ja": "米国サイバーセキュリティ・インフラセキュリティ庁（CISA）は月曜日、活発な悪用の証拠を引用し、Wing FTPに影響を与える中程度の重大度のセキュリティ欠陥を既知の悪用された脆弱性（KEV）カタログに追加した。 脆弱性 CVE-2025-47813 (CVSS スコア: 4.3) は、情報セキュリティです。",
+        "ja": "米国サイバーセキュリティ・インフラストラクチャセキュリティ庁（CISA）は月曜日、活発な悪用の証拠を引用し、Wing FTPに影響を与える中程度の重大度のセキュリティ欠陥を既知の悪用された脆弱性（KEV）カタログに追加した。 脆弱性 CVE-2025-47813 (CVSS スコア: 4.3) は、情報セキュリティです。",
         "es": "La Agencia de Seguridad de Infraestructura y Ciberseguridad de EE. UU. (CISA) agregó el lunes una falla de seguridad de gravedad media que afecta a Wing FTP a su catálogo de vulnerabilidades explotadas conocidas (KEV), citando evidencia de explotación activa. La vulnerabilidad, CVE-2025-47813 (puntuación CVSS: 4,3), es una información dis",
         "pt": "A Agência de Segurança Cibernética e de Infraestrutura dos EUA (CISA) adicionou na segunda-feira uma falha de segurança de gravidade média que afeta o Wing FTP ao seu catálogo de Vulnerabilidades Exploradas Conhecidas (KEV), citando evidências de exploração ativa. A vulnerabilidade, CVE-2025-47813 (pontuação CVSS: 4,3), é uma falha de informação",
         "fr": "L'Agence américaine de cybersécurité et de sécurité des infrastructures (CISA) a ajouté lundi une faille de sécurité de gravité moyenne affectant Wing FTP à son catalogue de vulnérabilités exploitées connues (KEV), citant des preuves d'exploitation active. La vulnérabilité, CVE-2025-47813 (score CVSS : 4,3), est un message d'information."
@@ -109,27 +214,6 @@
     },
     {
       "title": {
-        "en": "Threat Actor Targeting VPN Users in New Credential Theft Campaign",
-        "ja": "新たな認証情報盗難キャンペーンで VPN ユーザーを標的とする攻撃者",
-        "es": "Actor de amenazas apunta a usuarios de VPN en una nueva campaña de robo de credenciales",
-        "pt": "Ator de ameaça visando usuários VPN em nova campanha de roubo de credenciais",
-        "fr": "Un acteur menaçant cible les utilisateurs de VPN dans le cadre d'une nouvelle campagne de vol d'informations d'identification"
-      },
-      "titleOriginal": "Threat Actor Targeting VPN Users in New Credential Theft Campaign",
-      "link": "https://www.securityweek.com/threat-actor-targeting-vpn-users-in-new-credential-theft-campaign/",
-      "pubDate": "2026-03-16T12:28:58.000Z",
-      "description": {
-        "en": "Storm-2561 is distributing fake VPN clients through SEO poisoning, deploying trojans, and stealing login information. The post Threat Actor Targeting VPN Users in New Credential Theft Campaign appeared first on SecurityWeek.",
-        "ja": "Storm-2561 は、SEO ポイズニングを通じて偽の VPN クライアントを配布し、トロイの木馬を展開し、ログイン情報を盗みます。 新しい資格情報盗難キャンペーンで VPN ユーザーを標的にする脅威アクターの記事は、SecurityWeek に最初に掲載されました。",
-        "es": "Storm-2561 distribuye clientes VPN falsos mediante envenenamiento de SEO, implementando troyanos y robando información de inicio de sesión. La publicación Actor de amenazas dirigido a usuarios de VPN en una nueva campaña de robo de credenciales apareció por primera vez en SecurityWeek.",
-        "pt": "Storm-2561 está distribuindo clientes VPN falsos por meio de envenenamento de SEO, implantação de trojans e roubo de informações de login. A postagem Ator de ameaças visando usuários VPN em nova campanha de roubo de credenciais apareceu pela primeira vez na SecurityWeek.",
-        "fr": "Storm-2561 distribue de faux clients VPN via un empoisonnement SEO, le déploiement de chevaux de Troie et le vol d'informations de connexion. L'article Un acteur menaçant ciblant les utilisateurs de VPN dans le cadre d'une nouvelle campagne de vol d'informations d'identification apparaît en premier sur SecurityWeek."
-      },
-      "descriptionOriginal": "Storm-2561 is distributing fake VPN clients through SEO poisoning, deploying trojans, and stealing login information. The post Threat Actor Targeting VPN Users in New Credential Theft Campaign appeared first on SecurityWeek.",
-      "source": "SecurityWeek"
-    },
-    {
-      "title": {
         "en": "Why Security Validation Is Becoming Agentic",
         "ja": "セキュリティ検証がエージェント的になる理由",
         "es": "Por qué la validación de seguridad se está volviendo agente",
@@ -151,27 +235,6 @@
     },
     {
       "title": {
-        "en": "ForceMemo: Python Repositories Compromised in GlassWorm Aftermath",
-        "ja": "ForceMemo: GlassWorm の余波で Python リポジトリが侵害される",
-        "es": "ForceMemo: Repositorios de Python comprometidos tras las consecuencias de GlassWorm",
-        "pt": "ForceMemo: repositórios Python comprometidos no resultado do GlassWorm",
-        "fr": "ForceMemo : les référentiels Python compromis suite aux conséquences de GlassWorm"
-      },
-      "titleOriginal": "ForceMemo: Python Repositories Compromised in GlassWorm Aftermath",
-      "link": "https://www.securityweek.com/forcememo-python-repositories-compromised-in-glassworm-aftermath/",
-      "pubDate": "2026-03-16T11:51:36.000Z",
-      "description": {
-        "en": "Hundreds of GitHub accounts were accessed using credentials stolen in the VS Code GlassWorm campaign. The post ForceMemo: Python Repositories Compromised in GlassWorm Aftermath appeared first on SecurityWeek.",
-        "ja": "VS Code GlassWorm キャンペーンで盗まれた認証情報を使用して、数百の GitHub アカウントがアクセスされました。 ForceMemo: GlassWorm の余波で侵害された Python リポジトリの投稿は、SecurityWeek に最初に掲載されました。",
-        "es": "Se accedió a cientos de cuentas de GitHub utilizando credenciales robadas en la campaña VS Code GlassWorm. La publicación ForceMemo: Repositorios de Python comprometidos en GlassWorm Aftermath apareció por primera vez en SecurityWeek.",
-        "pt": "Centenas de contas do GitHub foram acessadas usando credenciais roubadas na campanha VS Code GlassWorm. A postagem ForceMemo: Repositórios Python comprometidos no GlassWorm Aftermath apareceu pela primeira vez na SecurityWeek.",
-        "fr": "Des centaines de comptes GitHub ont été consultés à l'aide d'informations d'identification volées lors de la campagne VS Code GlassWorm. L'article ForceMemo : les référentiels Python compromis dans GlassWorm Aftermath apparaît en premier sur SecurityWeek."
-      },
-      "descriptionOriginal": "Hundreds of GitHub accounts were accessed using credentials stolen in the VS Code GlassWorm campaign. The post ForceMemo: Python Repositories Compromised in GlassWorm Aftermath appeared first on SecurityWeek.",
-      "source": "SecurityWeek"
-    },
-    {
-      "title": {
         "en": "ClickFix Campaigns Spread MacSync macOS Infostealer via Fake AI Tool Installers",
         "ja": "ClickFix キャンペーンが偽の AI ツール インストーラーを介して MacSync macOS Infostealer を拡散",
         "es": "Las campañas de ClickFix difunden MacSync macOS Infostealer a través de instaladores falsos de herramientas de inteligencia artificial",
@@ -185,7 +248,7 @@
         "en": "Three different ClickFix campaigns have been found to act as a delivery vector for the deployment of a macOS information stealer called MacSync. \"Unlike traditional exploit-based attacks, this method relies entirely on user interaction – usually in the form of copying and executing commands – making",
         "ja": "3 つの異なる ClickFix キャンペーンが、MacSync と呼ばれる macOS 情報スティーラーの展開の配信ベクトルとして機能することが判明しました。 「従来のエクスプロイトベースの攻撃とは異なり、この手法はユーザーの操作 (通常はコマンドのコピーと実行という形) に完全に依存しています。",
         "es": "Se ha descubierto que tres campañas diferentes de ClickFix actúan como vector de entrega para la implementación de un ladrón de información de macOS llamado MacSync. \"A diferencia de los ataques tradicionales basados ​​en exploits, este método se basa completamente en la interacción del usuario, generalmente en forma de copia y ejecución de comandos, lo que hace que",
-        "pt": "Descobriu-se que três campanhas ClickFix diferentes atuam como um vetor de entrega para a implantação de um ladrão de informações do macOS chamado MacSync. “Ao contrário dos ataques tradicionais baseados em exploração, este método depende inteiramente da interação do usuário – geralmente na forma de cópia e execução de comandos – fazendo com que",
+        "pt": "Descobriu-se que três campanhas ClickFix diferentes atuam como um vetor de entrega para a implantação de um ladrão de informações do macOS chamado MacSync. “Ao contrário dos ataques tradicionais baseados em exploits, este método depende inteiramente da interação do usuário – geralmente na forma de cópia e execução de comandos – fazendo com que",
         "fr": "Il a été constaté que trois campagnes ClickFix différentes servaient de vecteur de diffusion pour le déploiement d'un voleur d'informations macOS appelé MacSync. « Contrairement aux attaques traditionnelles basées sur des exploits, cette méthode repose entièrement sur l'interaction de l'utilisateur – généralement sous la forme de copie et d'exécution de commandes – ce qui rend"
       },
       "descriptionOriginal": "Three different ClickFix campaigns have been found to act as a delivery vector for the deployment of a macOS information stealer called MacSync. \"Unlike traditional exploit-based attacks, this method relies entirely on user interaction – usually in the form of copying and executing commands – making",
@@ -214,27 +277,6 @@
     },
     {
       "title": {
-        "en": "Loblaw Data Breach Impacts Customer Information",
-        "ja": "Loblaw データ漏洩は顧客情報に影響を与える",
-        "es": "La violación de datos de Loblaw afecta la información del cliente",
-        "pt": "Violação de dados Loblaw afeta informações do cliente",
-        "fr": "La violation de données de Loblaw a un impact sur les informations des clients"
-      },
-      "titleOriginal": "Loblaw Data Breach Impacts Customer Information",
-      "link": "https://www.securityweek.com/loblaw-data-breach-impacts-customer-information/",
-      "pubDate": "2026-03-15T10:00:00.000Z",
-      "description": {
-        "en": "Personal information such as names, email addresses, and phone numbers was accessed by hackers. The post Loblaw Data Breach Impacts Customer Information appeared first on SecurityWeek.",
-        "ja": "名前、電子メール アドレス、電話番号などの個人情報がハッカーによってアクセスされました。 Loblaw データ侵害による顧客情報への影響の投稿は、SecurityWeek に最初に掲載されました。",
-        "es": "Los piratas informáticos accedieron a información personal como nombres, direcciones de correo electrónico y números de teléfono. La publicación La violación de datos de Loblaw afecta la información del cliente apareció por primera vez en SecurityWeek.",
-        "pt": "Informações pessoais como nomes, endereços de e-mail e números de telefone foram acessadas por hackers. A postagem Loblaw Data Breach impacta as informações do cliente apareceu pela primeira vez na SecurityWeek.",
-        "fr": "Des informations personnelles telles que des noms, des adresses e-mail et des numéros de téléphone ont été accédées par des pirates informatiques. L'article Loblaw Data Breach Impacts Customer Information apparaît en premier sur SecurityWeek."
-      },
-      "descriptionOriginal": "Personal information such as names, email addresses, and phone numbers was accessed by hackers. The post Loblaw Data Breach Impacts Customer Information appeared first on SecurityWeek.",
-      "source": "SecurityWeek"
-    },
-    {
-      "title": {
         "en": "OpenClaw AI Agent Flaws Could Enable Prompt Injection and Data Exfiltration",
         "ja": "OpenClaw AI エージェントの欠陥により、迅速なインジェクションとデータ漏洩が可能になる可能性がある",
         "es": "Las fallas del agente OpenClaw AI podrían permitir una inyección rápida y una filtración de datos",
@@ -253,69 +295,6 @@
       },
       "descriptionOriginal": "China's National Computer Network Emergency Response Technical Team (CNCERT) has issued a warning about the security stemming from the use of OpenClaw (formerly Clawdbot and Moltbot), an open-source and self-hosted autonomous artificial intelligence (AI) agent. In a post shared on WeChat, CNCERT not",
       "source": "The Hacker News"
-    },
-    {
-      "title": {
-        "en": "Critical HPE AOS-CX Vulnerability Allows Admin Password Resets",
-        "ja": "HPE AOS-CXの重大な脆弱性により管理者パスワードがリセットされる",
-        "es": "Una vulnerabilidad crítica de HPE AOS-CX permite restablecer la contraseña de administrador",
-        "pt": "Vulnerabilidade crítica do HPE AOS-CX permite redefinições de senha de administrador",
-        "fr": "Une vulnérabilité critique HPE AOS-CX permet la réinitialisation du mot de passe administrateur"
-      },
-      "titleOriginal": "Critical HPE AOS-CX Vulnerability Allows Admin Password Resets",
-      "link": "https://www.securityweek.com/critical-hpe-aos-cx-vulnerability-allows-admin-password-resets/",
-      "pubDate": "2026-03-14T10:50:00.000Z",
-      "description": {
-        "en": "The vulnerability can be exploited remotely, without authentication, to circumvent existing authentication controls. The post Critical HPE AOS-CX Vulnerability Allows Admin Password Resets appeared first on SecurityWeek.",
-        "ja": "この脆弱性は、認証を行わずにリモートから悪用され、既存の認証制御を回避する可能性があります。 「HPE AOS-CX の重大な脆弱性により管理者パスワードのリセットが可能になる」という投稿は、SecurityWeek に最初に掲載されました。",
-        "es": "La vulnerabilidad se puede explotar de forma remota, sin autenticación, para eludir los controles de autenticación existentes. La publicación Vulnerabilidad crítica de HPE AOS-CX permite restablecer la contraseña de administrador apareció por primera vez en SecurityWeek.",
-        "pt": "A vulnerabilidade pode ser explorada remotamente, sem autenticação, para contornar os controles de autenticação existentes. A postagem Vulnerabilidade crítica do HPE AOS-CX permite redefinições de senha de administrador apareceu pela primeira vez na SecurityWeek.",
-        "fr": "La vulnérabilité peut être exploitée à distance, sans authentification, pour contourner les contrôles d'authentification existants. La vulnérabilité critique HPE AOS-CX permettant la réinitialisation du mot de passe administrateur apparaît en premier sur SecurityWeek."
-      },
-      "descriptionOriginal": "The vulnerability can be exploited remotely, without authentication, to circumvent existing authentication controls. The post Critical HPE AOS-CX Vulnerability Allows Admin Password Resets appeared first on SecurityWeek.",
-      "source": "SecurityWeek"
-    },
-    {
-      "title": {
-        "en": "Starbucks Data Breach Impacts Employees",
-        "ja": "スターバックスのデータ侵害は従業員に影響を与える",
-        "es": "La violación de datos de Starbucks impacta a las empleadas",
-        "pt": "A violação de dados da Starbucks afeta os funcionários",
-        "fr": "La violation de données chez Starbucks affecte les employés"
-      },
-      "titleOriginal": "Starbucks Data Breach Impacts Employees",
-      "link": "https://www.securityweek.com/starbucks-data-breach-impacts-employees/",
-      "pubDate": "2026-03-13T15:21:13.000Z",
-      "description": {
-        "en": "Starbucks said the incident involved phishing attacks targeting an employee portal, affecting hundreds. The post Starbucks Data Breach Impacts Employees appeared first on SecurityWeek.",
-        "ja": "スターバックスは、この事件には従業員ポータルを標的としたフィッシング攻撃が含まれており、数百人が影響を受けたと述べた。 スターバックスのデータ侵害が従業員に影響を与えるという投稿は、SecurityWeek に最初に掲載されました。",
-        "es": "Starbucks dijo que el incidente involucró ataques de phishing dirigidos a un portal de empleados, que afectaron a cientos de personas. La publicación La violación de datos de Starbucks afecta a los empleados apareció por primera vez en SecurityWeek.",
-        "pt": "A Starbucks disse que o incidente envolveu ataques de phishing direcionados a um portal de funcionários, afetando centenas de pessoas. A postagem A violação de dados da Starbucks afeta os funcionários apareceu pela primeira vez na SecurityWeek.",
-        "fr": "Starbucks a déclaré que l'incident impliquait des attaques de phishing ciblant un portail d'employés, touchant des centaines de personnes. L'article Starbucks Data Breach Impacts Employees apparaît en premier sur SecurityWeek."
-      },
-      "descriptionOriginal": "Starbucks said the incident involved phishing attacks targeting an employee portal, affecting hundreds. The post Starbucks Data Breach Impacts Employees appeared first on SecurityWeek.",
-      "source": "SecurityWeek"
-    },
-    {
-      "title": {
-        "en": "In Other News: N8n Flaw Exploited, Slopoly Malware, Interpol Cybercrime Crackdown",
-        "ja": "その他のニュース: N8n 脆弱性悪用、Slopoly マルウェア、インターポールのサイバー犯罪取り締まり",
-        "es": "En otras noticias: Explotación de falla N8n, malware Slopoly, represión de la Interpol contra el cibercrimen",
-        "pt": "Em outras notícias: falha N8n explorada, malware desleixado, repressão ao crime cibernético da Interpol",
-        "fr": "Dans Autres actualités : faille N8n exploitée, logiciel malveillant Slopoly, répression de la cybercriminalité par Interpol"
-      },
-      "titleOriginal": "In Other News: N8n Flaw Exploited, Slopoly Malware, Interpol Cybercrime Crackdown",
-      "link": "https://www.securityweek.com/in-other-news-n8n-flaw-exploited-slopoly-malware-interpol-cybercrime-crackdown/",
-      "pubDate": "2026-03-13T14:27:12.000Z",
-      "description": {
-        "en": "Other noteworthy stories that might have slipped under the radar: Telus Digital data breach, vulnerabilities in Linux AppArmor allow root privileges, US defense contractor behind Coruna exploits. The post In Other News: N8n Flaw Exploited, Slopoly Malware, Interpol Cybercrime Crackdown appeared firs",
-        "ja": "レーダーに隠れていたかもしれないその他の注目すべき記事: Telus Digital のデータ侵害、Linux AppArmor の脆弱性により root 権限が許可される、Coruna エクスプロイトの背後にある米国の防衛請負業者。 その他のニュースの投稿: N8n 脆弱性悪用、Slopoly マルウェア、インターポールのサイバー犯罪取り締まりが初登場",
-        "es": "Otras historias notables que podrían haber pasado desapercibidas: la violación de datos de Telus Digital, las vulnerabilidades en Linux AppArmor permiten privilegios de root, el contratista de defensa estadounidense detrás de los exploits de Coruña. La publicación En otras noticias: Explotación de fallas N8n, malware Slopoly y represión contra el cibercrimen de Interpol aparecieron por primera vez",
-        "pt": "Outras histórias dignas de nota que podem ter passado despercebidas: violação de dados da Telus Digital, vulnerabilidades no Linux AppArmor permitem privilégios de root, empreiteiro de defesa dos EUA por trás das explorações do Coruna. A postagem em outras notícias: falha N8n explorada, malware Slopoly, repressão ao crime cibernético da Interpol apareceu primeiro",
-        "fr": "Autres histoires remarquables qui auraient pu passer inaperçues : violation de données de Telus Digital, vulnérabilités dans Linux AppArmor autorisant les privilèges root, entrepreneur américain de la défense derrière les exploits de Coruna. Le post Dans Autres actualités : N8n Flaw Exploited, Slopoly Malware, Interpol Cybercrime Crackdown est apparu en premier"
-      },
-      "descriptionOriginal": "Other noteworthy stories that might have slipped under the radar: Telus Digital data breach, vulnerabilities in Linux AppArmor allow root privileges, US defense contractor behind Coruna exploits. The post In Other News: N8n Flaw Exploited, Slopoly Malware, Interpol Cybercrime Crackdown appeared firs",
-      "source": "SecurityWeek"
     },
     {
       "title": {
@@ -372,10 +351,10 @@
       "pubDate": "2026-03-13T08:18:00.000Z",
       "description": {
         "en": "Cybersecurity researchers have disclosed multiple security vulnerabilities within the Linux kernel's AppArmor module that could be exploited by unprivileged users to circumvent kernel protections, escalate to root, and undermine container isolation guarantees. The nine confused deputy vulnerabilitie",
-        "ja": "サイバーセキュリティ研究者らは、Linux カーネルの AppArmor モジュール内に複数のセキュリティ脆弱性があることを明らかにしました。これらの脆弱性は、特権のないユーザーが悪用して、カーネル保護を回避し、root にエスカレーションし、コンテナ分離の保証を損なう可能性があります。 9人の混乱した副脆弱性",
+        "ja": "サイバーセキュリティ研究者らは、Linux カーネルの AppArmor モジュール内に複数のセキュリティ脆弱性があることを明らかにしました。これらの脆弱性は、特権のないユーザーが悪用して、カーネル保護を回避し、root にエスカレーションし、コンテナ分離の保証を損なう可能性があります。 混乱する9人の副脆弱性",
         "es": "Los investigadores de ciberseguridad han revelado múltiples vulnerabilidades de seguridad dentro del módulo AppArmor del kernel de Linux que podrían ser explotadas por usuarios sin privilegios para eludir las protecciones del kernel, escalar a la raíz y socavar las garantías de aislamiento del contenedor. Los nueve diputados confundidos por la vulnerabilidad",
         "pt": "Pesquisadores de segurança cibernética divulgaram várias vulnerabilidades de segurança no módulo AppArmor do kernel Linux que poderiam ser exploradas por usuários sem privilégios para contornar as proteções do kernel, escalar para root e minar as garantias de isolamento de contêineres. As nove vulnerabilidades confusas dos deputados",
-        "fr": "Les chercheurs en cybersécurité ont révélé plusieurs vulnérabilités de sécurité dans le module AppArmor du noyau Linux qui pourraient être exploitées par des utilisateurs non privilégiés pour contourner les protections du noyau, passer à la racine et saper les garanties d'isolation des conteneurs. Les neuf vulnérabilités adjointes confuses"
+        "fr": "Les chercheurs en cybersécurité ont révélé plusieurs vulnérabilités de sécurité au sein du module AppArmor du noyau Linux qui pourraient être exploitées par des utilisateurs non privilégiés pour contourner les protections du noyau, passer à la racine et saper les garanties d'isolation des conteneurs. Les neuf vulnérabilités adjointes confuses"
       },
       "descriptionOriginal": "Cybersecurity researchers have disclosed multiple security vulnerabilities within the Linux kernel's AppArmor module that could be exploited by unprivileged users to circumvent kernel protections, escalate to root, and undermine container isolation guarantees. The nine confused deputy vulnerabilitie",
       "source": "The Hacker News"
@@ -407,7 +386,7 @@
         "ja": "Veeamは7つの重要なバックアップとパッチを適用します。 リモートでコードが実行されるレプリケーションの欠陥",
         "es": "Veeam parchea 7 copias de seguridad y actualizaciones críticas Defectos de replicación que permiten la ejecución remota de código",
         "pt": "Veeam corrige 7 atualizações críticas de backup e atualização Falhas de replicação que permitem execução remota de código",
-        "fr": "Veeam met à jour 7 les sauvegardes et sauvegardes critiques Failles de réplication permettant l'exécution de code à distance"
+        "fr": "Veeam met à jour 7 les sauvegardes et les sauvegardes critiques Failles de réplication permettant l'exécution de code à distance"
       },
       "titleOriginal": "Veeam Patches 7 Critical Backup &amp; Replication Flaws Allowing Remote Code Execution",
       "link": "https://thehackernews.com/2026/03/veeam-patches-7-critical-backup.html",
@@ -420,6 +399,27 @@
         "fr": "Veeam a publié des mises à jour de sécurité pour corriger plusieurs vulnérabilités critiques de son logiciel de sauvegarde et de réplication qui, si elles sont exploitées avec succès, pourraient entraîner l'exécution de code à distance. Les vulnérabilités sont les suivantes - CVE-2026-21666 (score CVSS : 9,9) - Une vulnérabilité qui permet"
       },
       "descriptionOriginal": "Veeam has released security updates to address multiple critical vulnerabilities in its Backup & Replication software that, if successfully exploited, could result in remote code execution. The vulnerabilities are as follows - CVE-2026-21666 (CVSS score: 9.9) - A vulnerability that allows an authent",
+      "source": "The Hacker News"
+    },
+    {
+      "title": {
+        "en": "Rust-Based VENON Malware Targets 33 Brazilian Banks with Credential-Stealing Overlays",
+        "ja": "Rust ベースの VENON マルウェア、認証情報を盗むオーバーレイでブラジルの銀行 33 行を標的",
+        "es": "El malware VENON basado en Rust se dirige a 33 bancos brasileños con superposiciones de robo de credenciales",
+        "pt": "Malware VENON baseado em ferrugem atinge 33 bancos brasileiros com sobreposições de roubo de credenciais",
+        "fr": "Le logiciel malveillant VENON basé sur Rust cible 33 banques brésiliennes avec des superpositions de vol d'informations d'identification"
+      },
+      "titleOriginal": "Rust-Based VENON Malware Targets 33 Brazilian Banks with Credential-Stealing Overlays",
+      "link": "https://thehackernews.com/2026/03/rust-based-venon-malware-targets-33.html",
+      "pubDate": "2026-03-12T17:31:00.000Z",
+      "description": {
+        "en": "Cybersecurity researchers have disclosed details of a new banking malware targeting Brazilian users that's written in Rust, marking a significant departure from other known Delphi-based malware families associated with the Latin American cybercrime ecosystem. The malware, which is designed to infect",
+        "ja": "サイバーセキュリティ研究者らは、ブラジルのユーザーをターゲットにした、Rust で書かれた新たなバンキング マルウェアの詳細を明らかにしました。これは、ラテンアメリカのサイバー犯罪エコシステムに関連する他の既知の Delphi ベースのマルウェア ファミリとは大きく異なります。 感染するように設計されたマルウェア",
+        "es": "Investigadores de ciberseguridad han revelado detalles de un nuevo malware bancario dirigido a usuarios brasileños que está escrito en Rust, lo que marca una desviación significativa de otras familias de malware conocidas basadas en Delphi asociadas con el ecosistema de cibercrimen latinoamericano. El malware, que está diseñado para infectar",
+        "pt": "Pesquisadores de segurança cibernética divulgaram detalhes de um novo malware bancário direcionado a usuários brasileiros que está escrito em Rust, marcando um afastamento significativo de outras famílias conhecidas de malware baseadas em Delphi associadas ao ecossistema de crimes cibernéticos da América Latina. O malware, projetado para infectar",
+        "fr": "Des chercheurs en cybersécurité ont divulgué les détails d'un nouveau malware bancaire ciblant les utilisateurs brésiliens et écrit en Rust, marquant une rupture significative avec d'autres familles de malwares connues basées sur Delphi associées à l'écosystème de la cybercriminalité latino-américaine. Le malware, conçu pour infecter"
+      },
+      "descriptionOriginal": "Cybersecurity researchers have disclosed details of a new banking malware targeting Brazilian users that's written in Rust, marking a significant departure from other known Delphi-based malware families associated with the Latin American cybercrime ecosystem. The malware, which is designed to infect",
       "source": "The Hacker News"
     }
   ]
