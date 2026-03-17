@@ -1,0 +1,257 @@
+<!DOCTYPE html><html lang="ja"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="tools_page_title">セキュリティツール - API Security Reference Hub</title>
+  <link rel="stylesheet" href="../css/style.css">
+
+    <link rel="alternate" hreflang="en" href="/api-security-hub/en/tools.html">
+    <link rel="alternate" hreflang="ja" href="/api-security-hub/ja/tools.html">
+    <link rel="alternate" hreflang="es" href="/api-security-hub/es/tools.html">
+    <link rel="alternate" hreflang="pt" href="/api-security-hub/pt/tools.html">
+    <link rel="alternate" hreflang="fr" href="/api-security-hub/fr/tools.html">
+    <link rel="alternate" hreflang="x-default" href="/api-security-hub/en/tools.html">
+</head>
+<body>
+
+  <div class="page-header">
+    <h1 data-i18n="tools_heading">APIセキュリティツール</h1>
+    <p class="subtitle" data-i18n="tools_subtitle">APIの脆弱性診断・テスト・監視に役立つツールを紹介します。</p>
+  </div>
+
+  <!-- DAST Tools -->
+  <div class="section">
+    <h2 data-i18n-html="tools_dast_heading"><span class="section-icon">🔎</span> 動的テスト（DAST）ツール</h2>
+    <p data-i18n="tools_dast_description">実行中のAPIに対してリクエストを送り、脆弱性を検出するツールです。</p>
+    <div class="card-grid">
+      <div class="tool-card">
+        <h3 data-i18n-html="tools_burp_title">Burp Suite <span class="tool-badge">商用 / 無料版あり</span></h3>
+        <p data-i18n="tools_burp_description">Webアプリケーション・APIセキュリティテストの業界標準ツール。プロキシベースのインターセプトとスキャン機能。</p>
+        <ul>
+          <li data-i18n="tools_burp_feature1">HTTPリクエスト/レスポンスのインターセプト・改変</li>
+          <li data-i18n="tools_burp_feature2">自動スキャン（SQL Injection, XSS, etc.）</li>
+          <li data-i18n="tools_burp_feature3">Intruder: パラメータのファジング</li>
+          <li data-i18n="tools_burp_feature4">Repeater: リクエストの手動再送・検証</li>
+          <li data-i18n="tools_burp_feature5">豊富な拡張機能（BApp Store）</li>
+        </ul>
+        <div class="callout callout-info mt-2">
+          <div class="callout-title" data-i18n="tools_burp_tip_title">API テスト Tips</div>
+          <p data-i18n="tools_burp_tip_desc">OpenAPI/Swagger定義をインポートして、全エンドポイントを自動的にクロール・テスト可能。</p>
+        </div>
+      </div>
+      <div class="tool-card">
+        <h3 data-i18n-html="tools_zap_title">OWASP ZAP <span class="tool-badge">無料 / OSS</span></h3>
+        <p data-i18n="tools_zap_description">OWASPが開発するオープンソースのセキュリティテストツール。CI/CDパイプラインへの統合が容易。</p>
+        <ul>
+          <li data-i18n="tools_zap_feature1">自動スキャン / パッシブスキャン</li>
+          <li data-i18n="tools_zap_feature2">API定義（OpenAPI, GraphQL）のインポート</li>
+          <li data-i18n="tools_zap_feature3">CI/CD統合（GitHub Actions, Jenkins）</li>
+          <li data-i18n="tools_zap_feature4">Docker対応でヘッドレス実行可能</li>
+          <li data-i18n="tools_zap_feature5">スクリプティングによるカスタムテスト</li>
+        </ul>
+        <div class="code-block mt-2">
+          <div class="code-block-header"><span class="lang">Bash</span><span data-i18n="tools_zap_code_label">ZAP Docker でのAPIスキャン</span></div>
+          <pre>docker run -t ghcr.io/zaproxy/zaproxy:stable zap-api-scan.py \
+  -t https://api.example.com/openapi.json \
+  -f openapi \
+  -r report.html</pre>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- API Testing Tools -->
+  <div class="section">
+    <h2 data-i18n-html="tools_apitest_heading"><span class="section-icon">🧪</span> APIテスト・開発ツール</h2>
+    <div class="card-grid">
+      <div class="tool-card">
+        <h3 data-i18n-html="tools_postman_title">Postman <span class="tool-badge">無料 / 商用</span></h3>
+        <p data-i18n="tools_postman_description">API開発・テストの定番ツール。セキュリティテストにも活用可能。</p>
+        <ul>
+          <li data-i18n="tools_postman_feature1">コレクション機能でテストケースを整理</li>
+          <li data-i18n="tools_postman_feature2">環境変数でステージング/本番を切り替え</li>
+          <li data-i18n="tools_postman_feature3">Pre-request Script でトークン自動取得</li>
+          <li data-i18n="tools_postman_feature4">Test タブでレスポンス検証を自動化</li>
+          <li data-i18n="tools_postman_feature5">Newman（CLI）でCI/CDから実行</li>
+        </ul>
+        <div class="code-block mt-2">
+          <div class="code-block-header"><span class="lang">JavaScript</span><span data-i18n="tools_postman_code_label">Postman テストスクリプト例</span></div>
+          <pre><span class="comment" data-i18n="tools_postman_comment1">// ステータスコード検証</span>
+pm.test(<span class="string">"Status is 200"</span>, () =&gt; {
+  pm.response.to.have.status(<span class="number">200</span>);
+});
+
+<span class="comment" data-i18n="tools_postman_comment2">// セキュリティヘッダー検証</span>
+pm.test(<span class="string">"Security headers present"</span>, () =&gt; {
+  pm.response.to.have.header(<span class="string">"X-Content-Type-Options"</span>);
+  pm.response.to.have.header(<span class="string">"Strict-Transport-Security"</span>);
+});
+
+<span class="comment" data-i18n="tools_postman_comment3">// 機密情報の非露出チェック</span>
+pm.test(<span class="string">"No sensitive data exposed"</span>, () =&gt; {
+  <span class="keyword">const</span> body = pm.response.json();
+  pm.expect(body).to.not.have.property(<span class="string">"password"</span>);
+  pm.expect(body).to.not.have.property(<span class="string">"password_hash"</span>);
+  pm.expect(body).to.not.have.property(<span class="string">"secret"</span>);
+});</pre>
+        </div>
+      </div>
+      <div class="tool-card">
+        <h3 data-i18n-html="tools_curl_title">curl + jq <span class="tool-badge">無料 / CLI</span></h3>
+        <p data-i18n="tools_curl_description">コマンドラインからの素早いAPIテスト。スクリプト化も容易。</p>
+        <ul>
+          <li data-i18n="tools_curl_feature1">あらゆる環境で利用可能</li>
+          <li data-i18n="tools_curl_feature2">シェルスクリプトで自動化</li>
+          <li data-i18n="tools_curl_feature3">jqでJSONレスポンスを解析</li>
+          <li data-i18n="tools_curl_feature4">HTTPヘッダーの詳細確認</li>
+        </ul>
+        <div class="code-block mt-2">
+          <div class="code-block-header"><span class="lang">Bash</span><span data-i18n="tools_curl_code_label">セキュリティヘッダーチェック</span></div>
+          <pre><span class="comment" data-i18n="tools_curl_comment1"># レスポンスヘッダーの確認</span>
+curl -s -D - -o /dev/null https://api.example.com/health
+
+<span class="comment" data-i18n="tools_curl_comment2"># 認証なしでのアクセス試行</span>
+curl -s -w "%{http_code}" https://api.example.com/api/users
+
+<span class="comment" data-i18n="tools_curl_comment3"># BOLA テスト（他ユーザーのリソースへのアクセス）</span>
+curl -s -H "Authorization: Bearer $TOKEN" \
+  https://api.example.com/api/users/OTHER_USER_ID</pre>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SAST & SCA -->
+  <div class="section">
+    <h2 data-i18n-html="tools_sast_heading"><span class="section-icon">📊</span> 静的解析（SAST）&amp; 依存関係チェック（SCA）</h2>
+    <div class="card-grid card-grid-3">
+      <div class="tool-card">
+        <h3 data-i18n-html="tools_semgrep_title">Semgrep <span class="tool-badge">無料 / OSS</span></h3>
+        <p data-i18n="tools_semgrep_description">パターンベースの静的解析ツール。カスタムルール作成が容易。</p>
+        <ul>
+          <li data-i18n="tools_semgrep_feature1">多言語対応（JS, Python, Go, Java等）</li>
+          <li data-i18n="tools_semgrep_feature2">セキュリティルールセット内蔵</li>
+          <li data-i18n="tools_semgrep_feature3">CI/CD統合が簡単</li>
+          <li data-i18n="tools_semgrep_feature4">カスタムルールをYAMLで定義</li>
+        </ul>
+      </div>
+      <div class="tool-card">
+        <h3 data-i18n-html="tools_snyk_title">Snyk <span class="tool-badge">無料枠あり</span></h3>
+        <p data-i18n="tools_snyk_description">依存関係の脆弱性スキャンとコード解析。</p>
+        <ul>
+          <li data-i18n="tools_snyk_feature1">npm, pip, Maven等の依存関係スキャン</li>
+          <li data-i18n="tools_snyk_feature2">既知のCVEを自動検出</li>
+          <li data-i18n="tools_snyk_feature3">修正PRの自動生成</li>
+          <li data-i18n="tools_snyk_feature4">コンテナイメージのスキャン</li>
+        </ul>
+      </div>
+      <div class="tool-card">
+        <h3 data-i18n-html="tools_npm_audit_title">npm audit / Trivy <span class="tool-badge">無料</span></h3>
+        <p data-i18n="tools_npm_audit_description">パッケージマネージャー・コンテナの脆弱性チェック。</p>
+        <ul>
+          <li data-i18n-html="tools_npm_audit_feature1"><code>npm audit</code>: Node.jsパッケージ</li>
+          <li data-i18n-html="tools_npm_audit_feature2"><code>pip audit</code>: Pythonパッケージ</li>
+          <li data-i18n="tools_npm_audit_feature3">Trivy: コンテナ・IaC・ファイルシステム</li>
+          <li data-i18n="tools_npm_audit_feature4">CI/CDでのゲーティングに最適</li>
+        </ul>
+      </div>
+    </div>
+    <div class="code-block mt-2">
+      <div class="code-block-header"><span class="lang">Bash</span><span data-i18n="tools_sast_code_label">依存関係の脆弱性チェック</span></div>
+      <pre><span class="comment" data-i18n="tools_sast_comment1"># Node.js の依存関係チェック</span>
+npm audit --production
+
+<span class="comment" data-i18n="tools_sast_comment2"># Semgrep でセキュリティスキャン</span>
+semgrep --config=p/security-audit ./src
+
+<span class="comment" data-i18n="tools_sast_comment3"># Trivy でコンテナスキャン</span>
+trivy image --severity HIGH,CRITICAL myapp:latest</pre>
+    </div>
+  </div>
+
+  <!-- API Spec & Documentation -->
+  <div class="section">
+    <h2 data-i18n-html="tools_spec_heading"><span class="section-icon">📝</span> API仕様・ドキュメント管理</h2>
+    <div class="card-grid">
+      <div class="tool-card">
+        <h3 data-i18n-html="tools_swagger_title">Swagger / OpenAPI <span class="tool-badge">標準仕様</span></h3>
+        <p data-i18n="tools_swagger_description">APIの仕様を機械可読な形式で定義。セキュリティテストの入力としても活用。</p>
+        <ul>
+          <li data-i18n="tools_swagger_feature1">エンドポイント・パラメータ・レスポンスを網羅的に定義</li>
+          <li data-i18n="tools_swagger_feature2">セキュリティスキーム（OAuth, APIKey等）の明記</li>
+          <li data-i18n="tools_swagger_feature3">ZAP/Burp へのインポートでテスト自動化</li>
+          <li data-i18n="tools_swagger_feature4">Swagger UIで対話的なドキュメント生成</li>
+        </ul>
+      </div>
+      <div class="tool-card">
+        <h3 data-i18n-html="tools_spectral_title">Spectral <span class="tool-badge">無料 / OSS</span></h3>
+        <p data-i18n="tools_spectral_description">OpenAPI仕様のリンターツール。セキュリティベストプラクティスの準拠をチェック。</p>
+        <ul>
+          <li data-i18n="tools_spectral_feature1">セキュリティスキーム定義の有無をチェック</li>
+          <li data-i18n="tools_spectral_feature2">認証なしエンドポイントの検出</li>
+          <li data-i18n="tools_spectral_feature3">カスタムルールで社内ポリシーを強制</li>
+          <li data-i18n="tools_spectral_feature4">CI/CDでAPI仕様の品質ゲート</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Monitoring -->
+  <div class="section">
+    <h2 data-i18n-html="tools_monitoring_heading"><span class="section-icon">📡</span> 監視・ログツール</h2>
+    <div class="card-grid card-grid-3">
+      <div class="tool-card">
+        <h3 data-i18n="tools_gateway_title">API Gateway</h3>
+        <p data-i18n="tools_gateway_description">Kong, AWS API Gateway, Apigee など。</p>
+        <ul>
+          <li data-i18n="tools_gateway_feature1">認証・認可の一元管理</li>
+          <li data-i18n="tools_gateway_feature2">レート制限の適用</li>
+          <li data-i18n="tools_gateway_feature3">リクエストログの集約</li>
+          <li data-i18n="tools_gateway_feature4">異常検知アラート</li>
+        </ul>
+      </div>
+      <div class="tool-card">
+        <h3 data-i18n="tools_waf_title">WAF</h3>
+        <p data-i18n="tools_waf_description">AWS WAF, Cloudflare, ModSecurity など。</p>
+        <ul>
+          <li data-i18n="tools_waf_feature1">SQLi/XSS等の攻撃パターンブロック</li>
+          <li data-i18n="tools_waf_feature2">GeoIPベースのアクセス制御</li>
+          <li data-i18n="tools_waf_feature3">Bot対策</li>
+          <li data-i18n="tools_waf_feature4">カスタムルール定義</li>
+        </ul>
+      </div>
+      <div class="tool-card">
+        <h3 data-i18n="tools_siem_title">SIEM / ログ分析</h3>
+        <p data-i18n="tools_siem_description">ELK Stack, Splunk, Datadog など。</p>
+        <ul>
+          <li data-i18n="tools_siem_feature1">APIログの集約・可視化</li>
+          <li data-i18n="tools_siem_feature2">異常パターンの検出</li>
+          <li data-i18n="tools_siem_feature3">インシデントレスポンス支援</li>
+          <li data-i18n="tools_siem_feature4">コンプライアンス監査</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tool Selection Guide -->
+  <div class="section">
+    <h2 data-i18n-html="tools_guide_heading"><span class="section-icon">🗺</span> ツール選定ガイド</h2>
+    <div class="table-wrapper">
+      <table>
+        <thead><tr><th data-i18n="tools_guide_th_purpose">目的</th><th data-i18n="tools_guide_th_recommended">推奨ツール</th><th data-i18n="tools_guide_th_timing">タイミング</th></tr></thead>
+        <tbody>
+          <tr><td data-i18n="tools_guide_row1_purpose">API仕様のセキュリティチェック</td><td>Spectral</td><td data-i18n="tools_guide_row1_timing">設計・仕様策定時</td></tr>
+          <tr><td data-i18n="tools_guide_row2_purpose">コードのセキュリティ解析</td><td>Semgrep</td><td data-i18n="tools_guide_row2_timing">開発時 / PR</td></tr>
+          <tr><td data-i18n="tools_guide_row3_purpose">依存関係の脆弱性チェック</td><td>Snyk / npm audit</td><td data-i18n="tools_guide_row3_timing">ビルド時 / 定期</td></tr>
+          <tr><td data-i18n="tools_guide_row4_purpose">手動セキュリティテスト</td><td>Burp Suite / Postman</td><td data-i18n="tools_guide_row4_timing">テスト・QAフェーズ</td></tr>
+          <tr><td data-i18n="tools_guide_row5_purpose">自動スキャン（CI/CD）</td><td>OWASP ZAP</td><td data-i18n="tools_guide_row5_timing">デプロイ前</td></tr>
+          <tr><td data-i18n="tools_guide_row6_purpose">本番環境の保護</td><td>WAF + API Gateway</td><td data-i18n="tools_guide_row6_timing">運用時</td></tr>
+          <tr><td data-i18n="tools_guide_row7_purpose">ログ監視・異常検知</td><td>SIEM (ELK / Datadog)</td><td data-i18n="tools_guide_row7_timing">運用時 / 常時</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+<script src="../js/common.js"></script>
+
+
+</body></html>

@@ -1,0 +1,88 @@
+{
+  "news_page_title": "最新情報 - API Security Reference Hub",
+  "news_heading": "APIセキュリティ最新情報",
+  "news_subtitle": "最近のAPI脆弱性インシデント、CVE情報、業界トレンドを紹介します。",
+
+  "news_stat1_label": "APIセキュリティ問題を経験した組織 (2025)",
+  "news_stat2_label": "AI関連CVEの前年比増加率 (2024)",
+  "news_stat3_label": "認証済みセッションからの攻撃 (2025)",
+
+  "news_incidents_heading": "<span class=\"section-icon\">\uD83D\uDD25</span> 主要インシデント",
+
+  "news_incident1_date": "2025年1月29日",
+  "news_incident1_category": "データ露出",
+  "news_incident1_title": "DeepSeek、100万件超のログをデータベース無認証公開 - チャット履歴・APIキー流出",
+  "news_incident1_desc": "Wiz Researchが、DeepSeek社のClickHouseデータベースが2つのサブドメインで認証なしに公開されていたことを発見。100万件超のログエントリに、平文のチャット履歴、APIシークレットキー、バックエンドの運用メタデータが含まれていた。攻撃者はサーバーから直接パスワードやローカルファイルを窃取できる状態だった。責任ある開示の後、DeepSeekはデータベースを直ちに保護。なお、1月27日にはAPIとWebチャットインターフェースに対する大規模DDoS攻撃も発生していた。",
+  "news_incident1_source": "出典: <a href=\"https://www.wiz.io/blog/wiz-research-uncovers-exposed-deepseek-database-leak\" target=\"_blank\" rel=\"noopener\">Wiz Blog</a>",
+
+  "news_incident2_date": "2024年5月10日",
+  "news_incident2_category": "データ漏洩",
+  "news_incident2_title": "Dell パートナーポータルAPI悪用で4,900万件の顧客レコード窃取",
+  "news_incident2_desc": "攻撃者がDellのパートナーポータルに偽のパートナーアカウントを登録し、48時間以内にアクセスを取得。ポータルのAPIには認可チェックもレート制限も存在しなかった。攻撃者は3週間にわたり毎分約5,000リクエストを送信し、氏名・住所・サービスタグ・注文情報を含む4,900万件のレコードを窃取。データはハッキングフォーラムで販売された。",
+  "news_incident2_source": "出典: <a href=\"https://www.bleepingcomputer.com/news/security/dell-api-abused-to-steal-49-million-customer-records-in-data-breach/\" target=\"_blank\" rel=\"noopener\">BleepingComputer</a>",
+
+  "news_incident3_date": "2024年1月16日",
+  "news_incident3_category": "データ漏洩",
+  "news_incident3_title": "Trello APIスクレイピングで1,500万ユーザーのデータ流出",
+  "news_incident3_desc": "Trelloの未保護REST APIが、メールアドレスによる未認証クエリを許可していたことを攻撃者が悪用。過去の漏洩データベースからメールアドレスを送信することで、1,500万件超のユーザープロファイル（メール、フルネーム、ユーザー名、ボード情報）をスクレイピングし、ハッキングフォーラムで公開。Atlassianはその後エンドポイントを制限。",
+  "news_incident3_source": "出典: <a href=\"https://www.bleepingcomputer.com/news/security/email-addresses-of-15-million-trello-users-leaked-on-hacking-forum/\" target=\"_blank\" rel=\"noopener\">BleepingComputer</a>",
+
+  "news_incident4_date": "2025年7月",
+  "news_incident4_category": "APIキー漏洩",
+  "news_incident4_title": "DOGE職員がxAIのプライベートAPIキーをGitHubに公開 - 52以上の内部LLMへのアクセスが可能に",
+  "news_incident4_desc": "米政府効率省(DOGE)の職員が、xAIのプライベートAPIキーを含むスクリプト（agent.py）を公開GitHubリポジトリにコミット。このキーにより、4日前に作成された「grok 4-0709」を含む52以上のLLMモデルへの無制限アクセスが可能だった。GitGuardianが検知したが、キーの即時無効化は行われなかった。同様の漏洩は2025年5月にも発生していた。",
+  "news_incident4_source": "出典: <a href=\"https://krebsonsecurity.com/2025/07/doge-denizen-marko-elez-leaked-api-key-for-xai/\" target=\"_blank\" rel=\"noopener\">Krebs on Security</a>",
+
+  "news_cve_heading": "<span class=\"section-icon\">\uD83D\uDEE1</span> 注目CVE",
+
+  "news_cve1_date": "2025年3月（積極的な悪用を観測）",
+  "news_cve1_title": "CVE-2024-27564 - ChatGPT SSRF脆弱性に10,000件超の攻撃試行",
+  "news_cve1_desc": "ChatGPTの <code>pictureproxy.php</code> コンポーネントにおけるSSRF（Server-Side Request Forgery）脆弱性。未認証の攻撃者が細工したURLを注入し、サーバーに不正な内部リクエストを強制実行させることが可能。単一のIPアドレスから10,000件超の攻撃試行が記録され、標的の33%は米国組織（金融、政府、医療セクター）だった。認証不要で大規模に悪用可能な点が特に危険。",
+  "news_cve1_source": "出典: <a href=\"https://www.securityweek.com/chatgpt-vulnerability-exploited-against-us-government-organizations/\" target=\"_blank\" rel=\"noopener\">SecurityWeek</a>",
+
+  "news_cve_callout_title": "教訓: SSRFはAPIにとって深刻な脅威",
+  "news_cve_callout_desc": "CVE-2024-27564は、OWASPのAPI7（SSRF）に該当する典型的な例です。外部からのURL入力を受け取るAPIは、内部ネットワークへのアクセスを防ぐ厳格なバリデーションが必要です。<a href=\"owasp-top10.html\">OWASP Top 10 → API7</a> を参照。",
+
+  "news_reports_heading": "<span class=\"section-icon\">\uD83D\uDCCA</span> 業界レポート・トレンド",
+
+  "news_report1_title": "AI関連CVEが前年比1,025%増加",
+  "news_report1_desc": "Wallarmの2025 API ThreatStatsレポートによると、2024年に439件のAI関連CVEが記録され、前年比1,025%の増加。CISAの既知悪用脆弱性カタログ（KEV）の50%以上がAPI関連に。アクセス制御の不備は全体で40%増加し、重大な認可不備は36%増加した。",
+
+  "news_report2_title": "99%の組織がAPIセキュリティ問題を経験",
+  "news_report2_desc": "Salt SecurityのQ1 2025レポートによると、調査対象の99%の組織が過去12ヶ月間に少なくとも1件のAPIセキュリティ問題を経験。主要リスクはインジェクション攻撃とBOLA（認可の不備）で、全インシデントの3分の1以上を占めた。API攻撃の95%が認証済みセッションから発生。",
+
+  "news_report3_title": "30,000のPostmanワークスペースがAPIキーを公開状態に",
+  "news_report3_desc": "セキュリティ研究者が、30,000のPostmanワークスペースがセキュリティ管理なしに公開されていることを発見。ライブのAPIキー・アクセストークン・機密ペイロードが含まれ、多くが本番環境への直接アクセスを提供。開発者コラボレーションツールにおける「シャドウAPI」資格情報のリスクを示す事例。",
+
+  "news_trends_heading": "<span class=\"section-icon\">\uD83D\uDCC8</span> 2024-2025年のAPIセキュリティトレンド",
+
+  "news_trend1_title": "1. AI/LLM APIの脆弱性急増",
+  "news_trend1_desc": "ChatGPT、DeepSeekなどAI系APIの脆弱性が急増。プロンプトインジェクション、SSRF、データ露出が主な脅威。AIの急速な普及に対してセキュリティ対策が追いついていない状況。",
+
+  "news_trend2_title": "2. 認可の不備が最大の脅威",
+  "news_trend2_desc": "BOLA（Broken Object Level Authorization）が依然として最も多い脆弱性。Dell、Trelloの事例に見るように、基本的な認可チェックの欠如が大規模データ漏洩につながる。",
+
+  "news_trend3_title": "3. 認証済みセッションからの攻撃",
+  "news_trend3_desc": "攻撃の95%が認証を突破した状態で発生。正規のアクセストークンを持つ攻撃者が、認可の不備を突いて横移動する手法が主流に。",
+
+  "news_trend4_title": "4. 開発ツール経由のクレデンシャル漏洩",
+  "news_trend4_desc": "GitHub、Postmanなどの開発ツールからのAPIキー漏洩が深刻な問題に。自動検出ツール（GitGuardian等）の導入と、シークレット管理の徹底が必要。",
+
+  "news_actions_heading": "<span class=\"section-icon\">✅</span> 今すぐ取るべきアクション",
+  "news_actions_callout_title": "これらのインシデントから学ぶ対策",
+
+  "news_action1": "<strong>認可チェックの徹底</strong> - すべてのAPIエンドポイントでオブジェクトレベルの認可を実装（Dell/Trelloの教訓）",
+  "news_action2": "<strong>レート制限の導入</strong> - エンドポイントごとに適切なレート制限を設定（Dellは制限なしで毎分5,000リクエストを許可）",
+  "news_action3": "<strong>シークレットスキャンの自動化</strong> - GitHub、Postmanなどの公開リポジトリ/ワークスペースからのクレデンシャル漏洩を自動検出",
+  "news_action4": "<strong>SSRF対策の実装</strong> - ユーザー入力URLの検証、プライベートIPアドレス範囲のブロック",
+  "news_action5": "<strong>データベースの公開設定監査</strong> - 管理インターフェースが意図せず公開されていないか定期チェック（DeepSeekの教訓）",
+  "news_action6": "<strong>AI/LLMエンドポイントのセキュリティ評価</strong> - プロンプトインジェクション、データ漏洩のリスク評価を実施",
+  "news_action7": "<strong>依存関係の脆弱性チェック</strong> - npm audit / Snyk を CI/CD に組み込み、既知CVEを自動検出",
+
+  "news_references_heading": "<span class=\"section-icon\">\uD83D\uDD17</span> 参考リンク",
+  "news_ref_reports_title": "レポート",
+  "news_ref_cvedb_title": "CVEデータベース",
+
+  "news_update_title": "更新情報",
+  "news_update_desc": "このページの情報は2025年の公開データに基づいています。最新の脆弱性情報は上記の参考リンクから確認してください。"
+}

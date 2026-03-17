@@ -1,0 +1,12 @@
+{
+  "nav_home": "トップページ",
+  "nav_owasp": "OWASP Top 10",
+  "nav_auth": "認証・認可",
+  "nav_rate_limiting": "レート制限・入力検証",
+  "nav_tools": "セキュリティツール",
+  "nav_guidelines": "社内ガイドライン",
+  "nav_news": "最新情報",
+  "footer_desc": "API Security Reference Hub — 社内向けセキュリティ情報ポータル",
+  "footer_ref": "参考: ",
+  "lang_label": "言語"
+}

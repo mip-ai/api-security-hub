@@ -1,8 +1,8 @@
 /**
- * API Security News Fetcher
+ * API Security News Fetcher (Multilingual)
  *
  * Fetches security news from RSS feeds, filters for API-related content,
- * translates to Japanese, and outputs to data/news.json.
+ * translates to multiple languages, and outputs to data/news.json.
  *
  * Runs via GitHub Actions cron at JST 6:00, 12:00, 18:00, 0:00.
  */
@@ -33,6 +33,14 @@ const FEEDS = [
     url: 'https://blog.cloudflare.com/tag/security/rss',
     source: 'Cloudflare Blog',
   },
+];
+
+// --- Target languages for translation ---
+const TARGET_LANGS = [
+  { code: 'ja', googleCode: 'ja' },
+  { code: 'es', googleCode: 'es' },
+  { code: 'pt', googleCode: 'pt' },
+  { code: 'fr', googleCode: 'fr' },
 ];
 
 // --- API Security Keywords (case-insensitive matching) ---
@@ -151,40 +159,50 @@ async function fetchFeed(feed) {
   }
 }
 
-// --- Translate text to Japanese ---
-async function translateToJapanese(text) {
+// --- Translate text to a target language ---
+async function translateText(text, targetLangCode) {
   if (!text) return '';
   try {
-    const result = await translate(text, { from: 'en', to: 'ja' });
+    const result = await translate(text, { from: 'en', to: targetLangCode });
     return result.text;
   } catch (err) {
-    console.error(`  [TRANSLATE ERR] ${err.message}`);
+    console.error(`  [TRANSLATE ERR] ${targetLangCode}: ${err.message}`);
     return text; // fallback to original
   }
 }
 
-// --- Translate a single news item with delay to avoid rate limits ---
+// --- Translate a single news item to all target languages ---
 async function translateItem(item, index) {
   // Small delay between items to avoid rate limiting
   if (index > 0) {
-    await new Promise((r) => setTimeout(r, 500));
+    await new Promise((r) => setTimeout(r, 300));
   }
 
-  const [titleJa, descJa] = await Promise.all([
-    translateToJapanese(item.title),
-    translateToJapanese(item.description),
-  ]);
+  const titleTranslations = { en: item.title };
+  const descTranslations = { en: item.description };
+
+  for (const lang of TARGET_LANGS) {
+    const [translatedTitle, translatedDesc] = await Promise.all([
+      translateText(item.title, lang.googleCode),
+      translateText(item.description, lang.googleCode),
+    ]);
+    titleTranslations[lang.code] = translatedTitle;
+    descTranslations[lang.code] = translatedDesc;
+
+    // Small delay between languages
+    await new Promise((r) => setTimeout(r, 200));
+  }
 
   return {
     ...item,
-    titleJa,
-    descriptionJa: descJa,
+    titleTranslations,
+    descTranslations,
   };
 }
 
 // --- Main ---
 async function main() {
-  console.log('=== API Security News Fetcher ===');
+  console.log('=== API Security News Fetcher (Multilingual) ===');
   console.log(`Time: ${new Date().toISOString()}\n`);
 
   // Fetch all feeds in parallel
@@ -212,26 +230,27 @@ async function main() {
   // Limit to top 20
   const finalItems = recentItems.slice(0, 20);
 
-  // Translate to Japanese
-  console.log(`\nTranslating ${finalItems.length} items to Japanese...`);
+  // Translate to all target languages
+  const langList = TARGET_LANGS.map((l) => l.code).join(', ');
+  console.log(`\nTranslating ${finalItems.length} items to: ${langList}...`);
   const translatedItems = [];
   for (let i = 0; i < finalItems.length; i++) {
     const item = await translateItem(finalItems[i], i);
     translatedItems.push(item);
-    console.log(`  [${i + 1}/${finalItems.length}] ${item.titleJa.slice(0, 50)}...`);
+    console.log(`  [${i + 1}/${finalItems.length}] ${item.title.slice(0, 50)}...`);
   }
   console.log('Translation complete.');
 
-  // Build output JSON
+  // Build output JSON (multilingual format)
   const output = {
     lastUpdated: new Date().toISOString(),
     itemCount: translatedItems.length,
     items: translatedItems.map((item) => ({
-      title: item.titleJa,
+      title: item.titleTranslations,
       titleOriginal: item.title,
       link: item.link,
       pubDate: item.pubDate,
-      description: item.descriptionJa,
+      description: item.descTranslations,
       descriptionOriginal: item.description,
       source: item.source,
     })),

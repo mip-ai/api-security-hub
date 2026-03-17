@@ -1,0 +1,12 @@
+{
+  "nav_home": "Lar",
+  "nav_owasp": "Top 10 da OWASP",
+  "nav_auth": "Autenticação e autorização",
+  "nav_rate_limiting": "Limitação e validação de taxa",
+  "nav_tools": "Ferramentas de segurança",
+  "nav_guidelines": "Diretrizes Internas",
+  "nav_news": "Últimas Notícias",
+  "footer_desc": "API Security Reference Hub — Portal de informações de segurança para equipes de desenvolvimento",
+  "footer_ref": "Referência:",
+  "lang_label": "Linguagem"
+}

@@ -1,0 +1,337 @@
+<!DOCTYPE html><html lang="es"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="auth_page_title">Autenticación y autorización: Centro de referencia de seguridad de API</title>
+  <link rel="stylesheet" href="../css/style.css">
+
+    <link rel="alternate" hreflang="en" href="/api-security-hub/en/auth.html">
+    <link rel="alternate" hreflang="ja" href="/api-security-hub/ja/auth.html">
+    <link rel="alternate" hreflang="es" href="/api-security-hub/es/auth.html">
+    <link rel="alternate" hreflang="pt" href="/api-security-hub/pt/auth.html">
+    <link rel="alternate" hreflang="fr" href="/api-security-hub/fr/auth.html">
+    <link rel="alternate" hreflang="x-default" href="/api-security-hub/en/auth.html">
+</head>
+<body>
+
+  <div class="page-header">
+    <h1 data-i18n="auth_heading">Mejores prácticas de autenticación y autorización</h1>
+    <p class="subtitle" data-i18n="auth_subtitle">Una guía práctica para la autenticación y autorización de API, que incluye OAuth 2.0, JWT y administración de claves de API.</p>
+  </div>
+
+  <!-- OAuth 2.0 -->
+  <div class="section">
+    <h2 data-i18n-html="auth_oauth2_heading"><span class="section-icon">🔑</span> OAuth 2.0</h2>
+    <p data-i18n="auth_oauth2_description">OAuth 2.0 es el marco de autorización más utilizado para el acceso a API. Seleccionar el tipo de subvención adecuado es fundamental.</p>
+    <h3 data-i18n="auth_oauth2_grant_type_heading">Elegir un tipo de subvención</h3>
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th data-i18n="auth_oauth2_th_grant_type">Tipo de subvención</th>
+            <th data-i18n="auth_oauth2_th_use_case">Caso de uso</th>
+            <th data-i18n="auth_oauth2_th_security_level">Nivel de seguridad</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Authorization Code + PKCE</td>
+            <td data-i18n="auth_oauth2_pkce_use_case">SPA y aplicaciones móviles (recomendado)</td>
+            <td><span class="badge badge-success" data-i18n="auth_oauth2_pkce_security">más alto</span></td>
+          </tr>
+          <tr>
+            <td>Authorization Code</td>
+            <td data-i18n="auth_oauth2_authcode_use_case">Aplicaciones web del lado del servidor</td>
+            <td><span class="badge badge-success" data-i18n="auth_oauth2_authcode_security">Alta</span></td>
+          </tr>
+          <tr>
+            <td>Client Credentials</td>
+            <td data-i18n="auth_oauth2_client_creds_use_case">Comunicación de servidor a servidor (M2M)</td>
+            <td><span class="badge badge-info" data-i18n="auth_oauth2_client_creds_security">Medio</span></td>
+          </tr>
+          <tr>
+            <td data-i18n="auth_oauth2_implicit_label">Implícito (en desuso)</td>
+            <td data-i18n="auth_oauth2_implicit_use_case">SPA heredados</td>
+            <td><span class="badge badge-danger" data-i18n="auth_oauth2_implicit_security">Bajo</span></td>
+          </tr>
+          <tr>
+            <td data-i18n="auth_oauth2_ropc_label">Contraseña del propietario del recurso (en desuso)</td>
+            <td data-i18n="auth_oauth2_ropc_use_case">Solo de primera mano altamente confiable</td>
+            <td><span class="badge badge-danger" data-i18n="auth_oauth2_ropc_security">Bajo</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout callout-warning">
+      <div class="callout-title" data-i18n="auth_oauth2_implicit_warning_title">No utilice concesión implícita</div>
+      <p data-i18n="auth_oauth2_implicit_warning_desc">La concesión implícita ahora está en desuso porque el token está expuesto en el fragmento de URL. Utilice el Código de autorización + PKCE para SPA.</p>
+    </div>
+    <h3 data-i18n="auth_oauth2_pkce_flow_heading">Código de autorización + Flujo PKCE</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">JavaScript</span>
+        <span data-i18n="auth_oauth2_pkce_code_label">Generación de Retos PKCE</span>
+      </div>
+      <pre><span class="comment" data-i18n="auth_oauth2_pkce_comment1">// 1. Generar aleatoriamente code_verifier</span>
+<span class="keyword">function</span> <span class="function">generateCodeVerifier</span>() {
+  <span class="keyword">const</span> array = <span class="keyword">new</span> <span class="type">Uint8Array</span>(<span class="number">32</span>);
+  crypto.<span class="function">getRandomValues</span>(array);
+  <span class="keyword">return</span> <span class="function">btoa</span>(String.<span class="function">fromCharCode</span>(...array))
+    .<span class="function">replace</span>(<span class="string">/\+/g</span>, <span class="string">'-'</span>).<span class="function">replace</span>(<span class="string">/\//g</span>, <span class="string">'_'</span>).<span class="function">replace</span>(<span class="string">/=+$/</span>, <span class="string">''</span>);
+}
+
+<span class="comment" data-i18n="auth_oauth2_pkce_comment2">// 2. Generar code_challenge con SHA-256</span>
+<span class="keyword">async function</span> <span class="function">generateCodeChallenge</span>(verifier) {
+  <span class="keyword">const</span> encoder = <span class="keyword">new</span> <span class="type">TextEncoder</span>();
+  <span class="keyword">const</span> data = encoder.<span class="function">encode</span>(verifier);
+  <span class="keyword">const</span> digest = <span class="keyword">await</span> crypto.subtle.<span class="function">digest</span>(<span class="string">'SHA-256'</span>, data);
+  <span class="keyword">return</span> <span class="function">btoa</span>(String.<span class="function">fromCharCode</span>(...<span class="keyword">new</span> <span class="type">Uint8Array</span>(digest)))
+    .<span class="function">replace</span>(<span class="string">/\+/g</span>, <span class="string">'-'</span>).<span class="function">replace</span>(<span class="string">/\//g</span>, <span class="string">'_'</span>).<span class="function">replace</span>(<span class="string">/=+$/</span>, <span class="string">''</span>);
+}
+
+<span class="comment" data-i18n="auth_oauth2_pkce_comment3">// 3. Solicitud de autorización</span>
+<span class="keyword">const</span> verifier = <span class="function">generateCodeVerifier</span>();
+<span class="keyword">const</span> challenge = <span class="keyword">await</span> <span class="function">generateCodeChallenge</span>(verifier);
+
+<span class="keyword">const</span> authUrl = <span class="string">`https://auth.example.com/authorize?`</span> +
+  <span class="string">`response_type=code&amp;`</span> +
+  <span class="string">`client_id=${clientId}&amp;`</span> +
+  <span class="string">`redirect_uri=${redirectUri}&amp;`</span> +
+  <span class="string">`code_challenge=${challenge}&amp;`</span> +
+  <span class="string">`code_challenge_method=S256&amp;`</span> +
+  <span class="string">`scope=read write`</span>;</pre>
+    </div>
+  </div>
+
+  <!-- JWT -->
+  <div class="section">
+    <h2 data-i18n-html="auth_jwt_heading"><span class="section-icon">🎫</span> JWT (token web JSON)</h2>
+    <p data-i18n="auth_jwt_description">JWT se utiliza ampliamente como token de autenticación sin estado, pero los errores de implementación conducen directamente a vulnerabilidades de seguridad.</p>
+    <h3 data-i18n="auth_jwt_security_heading">Consideraciones de seguridad de JWT</h3>
+    <div class="card-grid">
+      <div class="card">
+        <h3 data-i18n="auth_jwt_do_title">✅ Hacer</h3>
+        <ul class="checklist">
+          <li data-i18n="auth_jwt_do_1">Especifique explícitamente el algoritmo (HS256 / RS256)</li>
+          <li data-i18n="auth_jwt_do_2">Establezca un tiempo de vencimiento (exp) corto (15 minutos o menos)</li>
+          <li data-i18n="auth_jwt_do_3">Validar emisor (iss) y audiencia (aud)</li>
+          <li data-i18n="auth_jwt_do_4">Generar claves secretas con longitud suficiente (256 bits o más)</li>
+          <li data-i18n="auth_jwt_do_5">Implementar rotación para tokens de actualización</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3 data-i18n="auth_jwt_dont_title">❌ No lo hagas</h3>
+        <ul class="checklist">
+          <li data-i18n="auth_jwt_dont_1">Almacene información confidencial en la carga útil JWT (Base64 no es cifrado)</li>
+          <li data-i18n="auth_jwt_dont_2">Permitir alg: "ninguna"</li>
+          <li data-i18n="auth_jwt_dont_3">Almacenar tokens en localStorage (vulnerable a XSS)</li>
+          <li data-i18n="auth_jwt_dont_4">Descuidar la gestión de revocación de tokens</li>
+          <li data-i18n="auth_jwt_dont_5">Utilice una clave pública RS256 como clave secreta HS256</li>
+        </ul>
+      </div>
+    </div>
+    <h3 data-i18n="auth_jwt_impl_heading">Implementación segura de JWT</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">JavaScript (Node.js)</span>
+        <span data-i18n="auth_jwt_code_label">Emisión y verificación de tokens</span>
+      </div>
+      <pre><span class="keyword">const</span> jwt = <span class="function">require</span>(<span class="string">'jsonwebtoken'</span>);
+
+<span class="comment" data-i18n="auth_jwt_comment_issue">// --- Emisión de tokens ---</span>
+<span class="keyword">function</span> <span class="function">issueTokens</span>(user) {
+  <span class="keyword">const</span> accessToken = jwt.<span class="function">sign</span>(
+    { <span class="variable">sub</span>: user.id, <span class="variable">role</span>: user.role },
+    process.env.JWT_SECRET,
+    {
+      <span class="variable">algorithm</span>: <span class="string">'HS256'</span>,
+      <span class="variable">expiresIn</span>: <span class="string">'15m'</span>,
+      <span class="variable">issuer</span>: <span class="string">'api.example.com'</span>,
+      <span class="variable">audience</span>: <span class="string">'app.example.com'</span>,
+    }
+  );
+
+  <span class="keyword">const</span> refreshToken = jwt.<span class="function">sign</span>(
+    { <span class="variable">sub</span>: user.id, <span class="variable">type</span>: <span class="string">'refresh'</span> },
+    process.env.REFRESH_SECRET,
+    { <span class="variable">algorithm</span>: <span class="string">'HS256'</span>, <span class="variable">expiresIn</span>: <span class="string">'7d'</span> }
+  );
+
+  <span class="keyword">return</span> { accessToken, refreshToken };
+}
+
+<span class="comment" data-i18n="auth_jwt_comment_verify">// --- Verificación de token ---</span>
+<span class="keyword">function</span> <span class="function">verifyAccessToken</span>(token) {
+  <span class="keyword">return</span> jwt.<span class="function">verify</span>(token, process.env.JWT_SECRET, {
+    <span class="variable">algorithms</span>: [<span class="string">'HS256'</span>],   <span class="comment" data-i18n="auth_jwt_comment_alg">// ← ¡Especifica siempre!</span>
+    <span class="variable">issuer</span>: <span class="string">'api.example.com'</span>,
+    <span class="variable">audience</span>: <span class="string">'app.example.com'</span>,
+  });
+}</pre>
+    </div>
+    <h3 data-i18n="auth_jwt_storage_heading">Comparación de ubicaciones de almacenamiento de tokens</h3>
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th data-i18n="auth_jwt_th_storage">Ubicación de almacenamiento</th>
+            <th data-i18n="auth_jwt_th_xss">Resistencia XSS</th>
+            <th data-i18n="auth_jwt_th_csrf">Resistencia CSRF</th>
+            <th data-i18n="auth_jwt_th_recommendation">Recomendación</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>HttpOnly Cookie</td>
+            <td><span class="text-success">◎</span></td>
+            <td data-i18n-html="auth_jwt_httponly_csrf"><span class="text-warning">△ (requiere configuración SameSite)</span></td>
+            <td><span class="badge badge-success" data-i18n="auth_jwt_httponly_rec">Recomendada</span></td>
+          </tr>
+          <tr>
+            <td data-i18n="auth_jwt_memory_label">Memoria (variable)</td>
+            <td><span class="text-success">◎</span></td>
+            <td><span class="text-success">◎</span></td>
+            <td><span class="badge badge-info" data-i18n="auth_jwt_memory_rec">Perdido en la navegación de la página</span></td>
+          </tr>
+          <tr>
+            <td>localStorage</td>
+            <td data-i18n-html="auth_jwt_localstorage_xss"><span class="text-danger">✕ (se puede robar mediante XSS)</span></td>
+            <td><span class="text-success">◎</span></td>
+            <td><span class="badge badge-danger" data-i18n="auth_jwt_localstorage_rec">No recomendado</span></td>
+          </tr>
+          <tr>
+            <td>sessionStorage</td>
+            <td data-i18n-html="auth_jwt_sessionstorage_xss"><span class="text-danger">✕ (se puede robar mediante XSS)</span></td>
+            <td><span class="text-success">◎</span></td>
+            <td><span class="badge badge-warning" data-i18n="auth_jwt_sessionstorage_rec">Uso limitado</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout callout-success">
+      <div class="callout-title" data-i18n="auth_jwt_cookie_callout_title">Recomendada: Cookie HttpOnly + Secure + SameSite</div>
+      <p data-i18n="auth_jwt_cookie_callout_desc">Almacenar el token de acceso en una cookie con los atributos HttpOnly, Secure y SameSite=Strict es el método más seguro. Esto evita el robo de tokens mediante ataques XSS.</p>
+    </div>
+  </div>
+
+  <!-- API Key Management -->
+  <div class="section">
+    <h2 data-i18n-html="auth_apikey_heading"><span class="section-icon">🗝</span> Gestión de claves API</h2>
+    <p data-i18n="auth_apikey_description">Las claves API son un mecanismo de autenticación simple, pero una gestión inadecuada puede generar riesgos graves.</p>
+    <h3 data-i18n="auth_apikey_best_practices_heading">Mejores prácticas clave de API</h3>
+    <div class="card-grid card-grid-3">
+      <div class="card">
+        <h3 data-i18n="auth_apikey_generation_title">Generación y Almacenamiento</h3>
+        <p data-i18n="auth_apikey_generation_desc">Generar con suficiente entropía (256 bits o más). Almacenar hash; nunca mantenga texto sin formato en la base de datos.</p>
+      </div>
+      <div class="card">
+        <h3 data-i18n="auth_apikey_scope_title">Restricción de alcance</h3>
+        <p data-i18n="auth_apikey_scope_desc">Asigne alcances mínimos por clave (solo lectura, solo recursos específicos, etc.). Evite los permisos comodín.</p>
+      </div>
+      <div class="card">
+        <h3 data-i18n="auth_apikey_rotation_title">Rotación</h3>
+        <p data-i18n="auth_apikey_rotation_desc">Rote las claves periódicamente (dentro de los 90 días). Establezca un período de gracia para las llaves antiguas. Revocar inmediatamente en caso de fuga.</p>
+      </div>
+      <div class="card">
+        <h3 data-i18n="auth_apikey_transmission_title">Método de transmisión</h3>
+        <p data-i18n="auth_apikey_transmission_desc">Enviar mediante encabezado (X-API-Key o Autorización). No incluir en los parámetros de consulta de URL (aparecen en los registros).</p>
+      </div>
+      <div class="card">
+        <h3 data-i18n="auth_apikey_envvar_title">Gestión de variables de entorno</h3>
+        <p data-i18n="auth_apikey_envvar_desc">No codifique claves en el código fuente. Gestionarlos con variables de entorno o un administrador secreto.</p>
+      </div>
+      <div class="card">
+        <h3 data-i18n="auth_apikey_monitoring_title">Monitoreo y registro</h3>
+        <p data-i18n="auth_apikey_monitoring_desc">Supervisar el uso de la clave API. Detectar patrones anómalos (solicitudes masivas, accesos desde IP desconocidas).</p>
+      </div>
+    </div>
+    <h3 data-i18n="auth_apikey_validation_heading">Ejemplo de implementación de validación de clave API</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">JavaScript (Express)</span>
+        <span data-i18n="auth_apikey_code_label">Validación de clave API hash</span>
+      </div>
+      <pre><span class="keyword">const</span> crypto = <span class="function">require</span>(<span class="string">'crypto'</span>);
+
+<span class="comment" data-i18n="auth_apikey_comment1">// Hash de la clave API con SHA-256 y comparar</span>
+<span class="keyword">async function</span> <span class="function">validateApiKey</span>(req, res, next) {
+  <span class="keyword">const</span> apiKey = req.headers[<span class="string">'x-api-key'</span>];
+  <span class="keyword">if</span> (!apiKey) {
+    <span class="keyword">return</span> res.<span class="function">status</span>(<span class="number">401</span>).<span class="function">json</span>({ <span class="variable">error</span>: <span class="string">'API key required'</span> });
+  }
+
+  <span class="comment" data-i18n="auth_apikey_comment2">// Hash y búsqueda en la base de datos (timingSafeEqual no es necesario ya que comparamos hashes)</span>
+  <span class="keyword">const</span> hashedKey = crypto
+    .<span class="function">createHash</span>(<span class="string">'sha256'</span>)
+    .<span class="function">update</span>(apiKey)
+    .<span class="function">digest</span>(<span class="string">'hex'</span>);
+
+  <span class="keyword">const</span> keyRecord = <span class="keyword">await</span> db.<span class="function">findApiKey</span>(hashedKey);
+
+  <span class="keyword">if</span> (!keyRecord || keyRecord.revokedAt) {
+    <span class="keyword">return</span> res.<span class="function">status</span>(<span class="number">403</span>).<span class="function">json</span>({ <span class="variable">error</span>: <span class="string">'Invalid API key'</span> });
+  }
+
+  <span class="comment" data-i18n="auth_apikey_comment3">// Comprobar vencimiento</span>
+  <span class="keyword">if</span> (keyRecord.expiresAt &amp;&amp; <span class="keyword">new</span> <span class="type">Date</span>() &gt; keyRecord.expiresAt) {
+    <span class="keyword">return</span> res.<span class="function">status</span>(<span class="number">403</span>).<span class="function">json</span>({ <span class="variable">error</span>: <span class="string">'API key expired'</span> });
+  }
+
+  req.apiClient = keyRecord;
+  <span class="function">next</span>();
+}</pre>
+    </div>
+  </div>
+
+  <!-- Comparison -->
+  <div class="section">
+    <h2 data-i18n-html="auth_comparison_heading"><span class="section-icon">⚖</span> Comparación de métodos de autenticación</h2>
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th data-i18n="auth_comparison_th_method">Método</th>
+            <th data-i18n="auth_comparison_th_stateless">Apátrida</th>
+            <th data-i18n="auth_comparison_th_use_case">Caso de uso</th>
+            <th data-i18n="auth_comparison_th_security_notes">Consideraciones de seguridad</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>OAuth 2.0 + PKCE</strong></td>
+            <td>○</td>
+            <td data-i18n="auth_comparison_oauth_use_case">API que requieren autorización del usuario</td>
+            <td data-i18n="auth_comparison_oauth_notes">estado/PKCE requerido, gestión de vencimiento de token</td>
+          </tr>
+          <tr>
+            <td><strong>JWT Bearer</strong></td>
+            <td>○</td>
+            <td data-i18n="auth_comparison_jwt_use_case">Comunicación entre microservicios</td>
+            <td data-i18n="auth_comparison_jwt_notes">Se requiere especificación del algoritmo, no hay datos confidenciales en la carga útil</td>
+          </tr>
+          <tr>
+            <td data-i18n-html="auth_comparison_apikey_label"><strong>Clave API</strong></td>
+            <td>○</td>
+            <td data-i18n="auth_comparison_apikey_use_case">Integraciones externas de servidor a servidor</td>
+            <td data-i18n="auth_comparison_apikey_notes">Se requiere restricción de rotación y alcance</td>
+          </tr>
+          <tr>
+            <td><strong>mTLS</strong></td>
+            <td>○</td>
+            <td data-i18n="auth_comparison_mtls_use_case">Comunicación M2M de alta seguridad</td>
+            <td data-i18n="auth_comparison_mtls_notes">Alto costo operativo para la gestión de certificados.</td>
+          </tr>
+          <tr>
+            <td data-i18n-html="auth_comparison_session_label"><strong>Cookie de sesión</strong></td>
+            <td>✕</td>
+            <td data-i18n="auth_comparison_session_use_case">Aplicaciones web tradicionales</td>
+            <td data-i18n="auth_comparison_session_notes">Se requiere protección CSRF, desafíos de escalabilidad</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+<script src="../js/common.js"></script>
+
+
+</body></html>

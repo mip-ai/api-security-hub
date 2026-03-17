@@ -1,0 +1,217 @@
+<!DOCTYPE html><html lang="es"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="index_page_title">Centro de referencia de seguridad de API</title>
+  <link rel="stylesheet" href="../css/style.css">
+
+    <link rel="alternate" hreflang="en" href="/api-security-hub/en/index.html">
+    <link rel="alternate" hreflang="ja" href="/api-security-hub/ja/index.html">
+    <link rel="alternate" hreflang="es" href="/api-security-hub/es/index.html">
+    <link rel="alternate" hreflang="pt" href="/api-security-hub/pt/index.html">
+    <link rel="alternate" hreflang="fr" href="/api-security-hub/fr/index.html">
+    <link rel="alternate" hreflang="x-default" href="/api-security-hub/en/index.html">
+</head>
+<body>
+
+  <!-- Hero -->
+  <div class="hero">
+    <h1 data-i18n="index_hero_title">Centro de referencia de seguridad de API</h1>
+    <p data-i18n-html="index_hero_description">Consolidando el conocimiento de seguridad de API en un solo lugar.<br>Un sitio de referencia práctico para equipos de desarrollo.</p>
+    <div class="stats-row">
+      <div class="stat-item">
+        <div class="stat-number">10</div>
+        <div class="stat-label" data-i18n="index_stat_owasp">Las 10 principales vulnerabilidades de OWASP</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">6</div>
+        <div class="stat-label" data-i18n="index_stat_sections">Secciones</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">50+</div>
+        <div class="stat-label" data-i18n="index_stat_checks">Verificar artículos</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Latest News -->
+  <div class="section">
+    <h2 data-i18n-html="index_news_heading"><span class="section-icon">🔥</span> Últimas noticias sobre seguridad de API</h2>
+    <p id="news-updated" class="text-muted" style="font-size:0.8rem;"><span data-i18n="index_news_last_updated">Última actualización:</span><span id="news-updated-date"></span></p>
+    <div id="news-container">
+      <p class="text-muted" data-i18n="index_news_loading">Cargando noticias...</p>
+    </div>
+    <div style="margin-top:16px;">
+      <a href="news.html" data-i18n="index_news_view_all">Ver todas las noticias y tendencias →</a>
+    </div>
+  </div>
+
+  <!-- Section Navigation -->
+  <div class="section">
+    <h2 data-i18n-html="index_content_heading"><span class="section-icon">📚</span> Contenidos</h2>
+    <p data-i18n="index_content_description">Haga clic en cada sección para ver los detalles.</p>
+    <div class="highlight-cards">
+      <a href="owasp-top10.html" class="card-link">
+        <div class="highlight-card">
+          <div class="hl-icon">🔟</div>
+          <h3 data-i18n="index_card_owasp_title">Las 10 mejores API de OWASP</h3>
+          <p data-i18n="index_card_owasp_desc">Las 10 vulnerabilidades más críticas con ejemplos de códigos de mitigación</p>
+        </div>
+      </a>
+      <a href="auth.html" class="card-link">
+        <div class="highlight-card">
+          <div class="hl-icon">🔐</div>
+          <h3 data-i18n="index_card_auth_title">Autenticación y autorización</h3>
+          <p data-i18n="index_card_auth_desc">OAuth 2.0 / JWT / Gestión de claves API</p>
+        </div>
+      </a>
+      <a href="rate-limiting.html" class="card-link">
+        <div class="highlight-card">
+          <div class="hl-icon">⚡</div>
+          <h3 data-i18n="index_card_rate_title">Limitación de velocidad y validación de entrada</h3>
+          <p data-i18n="index_card_rate_desc">Limitación de velocidad / Validación / CORS</p>
+        </div>
+      </a>
+      <a href="tools.html" class="card-link">
+        <div class="highlight-card">
+          <div class="hl-icon">🛠</div>
+          <h3 data-i18n="index_card_tools_title">Herramientas de seguridad</h3>
+          <p data-i18n="index_card_tools_desc">Burp Suite / ZAP / Cartero y más</p>
+        </div>
+      </a>
+      <a href="guidelines.html" class="card-link">
+        <div class="highlight-card">
+          <div class="hl-icon">📋</div>
+          <h3 data-i18n="index_card_guidelines_title">Directrices internas</h3>
+          <p data-i18n="index_card_guidelines_desc">Listas de verificación / Criterios de revisión</p>
+        </div>
+      </a>
+      <a href="news.html" class="card-link">
+        <div class="highlight-card">
+          <div class="hl-icon">📰</div>
+          <h3 data-i18n="index_card_news_title">Información más reciente</h3>
+          <p data-i18n="index_card_news_desc">Noticias sobre vulnerabilidades / CVE / Tendencias</p>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!-- Quick Reference -->
+  <div class="section">
+    <h2 data-i18n-html="index_quickref_heading"><span class="section-icon">⚡</span> Referencia rápida</h2>
+    <p data-i18n="index_quickref_description">Principios fundamentales de seguridad API</p>
+    <div class="card-grid">
+      <div class="card">
+        <h3 data-i18n-html="index_quickref_least_privilege_title">🔒 Principio de privilegio mínimo</h3>
+        <p data-i18n="index_quickref_least_privilege_desc">Otorgue solo los permisos mínimos necesarios para el acceso a la API. Implementar control de acceso basado en roles (RBAC).</p>
+      </div>
+      <div class="card">
+        <h3 data-i18n-html="index_quickref_defense_depth_title">🛡 Defensa en profundidad</h3>
+        <p data-i18n="index_quickref_defense_depth_desc">Combine autenticación, autorización, validación de entradas, limitación de velocidad y monitoreo de registros para eliminar puntos únicos de falla.</p>
+      </div>
+      <div class="card">
+        <h3 data-i18n-html="index_quickref_zero_trust_title">📝 Confianza Cero</h3>
+        <p data-i18n="index_quickref_zero_trust_desc">Verifique cada solicitud. No confíes en el acceso ni siquiera desde redes internas.</p>
+      </div>
+      <div class="card">
+        <h3 data-i18n-html="index_quickref_observability_title">🔍 Observabilidad</h3>
+        <p data-i18n="index_quickref_observability_desc">Registre todos los accesos a la API y garantice la detección de anomalías y los seguimientos de auditoría.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- OWASP Top 3 -->
+  <div class="section">
+    <h2 data-i18n-html="index_top3_heading"><span class="section-icon">🚨</span> Las 3 principales vulnerabilidades a tener en cuenta</h2>
+    <p data-i18n-html="index_top3_description">Tres de los elementos de mayor gravedad del Top 10 de seguridad de API de OWASP. <a href="owasp-top10.html">Ver todos los elementos →</a></p>
+    <div class="card-grid">
+      <div class="card">
+        <h3 data-i18n="index_top3_api1_title">API1: Autorización a nivel de objeto roto (BOLA)</h3>
+        <p data-i18n="index_top3_api1_desc">Una vulnerabilidad que permite el acceso no autorizado a los recursos de otros usuarios. El problema más frecuente e impactante.</p>
+        <span class="card-tag tag-critical">Critical</span>
+      </div>
+      <div class="card">
+        <h3 data-i18n="index_top3_api2_title">API2: autenticación rota</h3>
+        <p data-i18n="index_top3_api2_desc">Una vulnerabilidad causada por mecanismos de autenticación defectuosos que permite a los atacantes apoderarse de las identidades de otros usuarios.</p>
+        <span class="card-tag tag-critical">Critical</span>
+      </div>
+      <div class="card">
+        <h3 data-i18n="index_top3_api3_title">API3: autorización de nivel de propiedad de objeto roto</h3>
+        <p data-i18n="index_top3_api3_desc">Una vulnerabilidad en la que el control de acceso a propiedades confidenciales dentro de los objetos devueltos por las API es insuficiente.</p>
+        <span class="card-tag tag-high">High</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Getting Started -->
+  <div class="section">
+    <h2 data-i18n-html="index_getting_started_heading"><span class="section-icon">🚀</span> Primeros pasos</h2>
+    <div class="callout callout-info">
+      <div class="callout-title" data-i18n="index_howto_title">Cómo utilizar este sitio</div>
+      <p data-i18n="index_howto_desc">Navega a cada sección usando la barra lateral (menú de hamburguesas en el móvil). Para los recién llegados, recomendamos leer en este orden: OWASP Top 10 → Autenticación y autorización → Limitación de velocidad.</p>
+    </div>
+    <div class="callout callout-warning">
+      <div class="callout-title" data-i18n="index_disclaimer_title">Descargo de responsabilidad</div>
+      <p data-i18n="index_disclaimer_desc">La información contenida en este sitio se proporciona con fines de concientización sobre seguridad y defensa. Está prohibido su uso con fines de ataque. El contenido se basa en información a partir de 2025.</p>
+    </div>
+  </div>
+
+<script src="../js/common.js"></script>
+<script>
+(function() {
+  var langMatch = location.pathname.match(/\/(en|ja|es|zh|pt|fr)\//);
+  var lang = langMatch ? langMatch[1] : 'en';
+
+  fetch('../data/news.json')
+    .then(function(res) { return res.json(); })
+    .then(function(data) {
+      var container = document.getElementById('news-container');
+      var updatedDateEl = document.getElementById('news-updated-date');
+
+      if (data.lastUpdated && updatedDateEl) {
+        var date = new Date(data.lastUpdated);
+        updatedDateEl.textContent = date.toLocaleDateString(lang, {
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric'
+        });
+      }
+
+      var items = data.items;
+      if (!items || items.length === 0) {
+        container.innerHTML = '<p class="text-muted">No news available.</p>';
+        return;
+      }
+
+      var latestItems = items.slice(0, 5);
+      var html = '';
+      latestItems.forEach(function(item) {
+        var title = (item.title && (item.title[lang] || item.title.en)) || item.titleOriginal || '';
+        var description = (item.description && (item.description[lang] || item.description.en)) || item.descriptionOriginal || '';
+        var date = item.date || '';
+        var url = item.url || '#';
+        var source = item.source || '';
+
+        html += '<div class="news-item" style="margin-bottom:12px;">';
+        html += '<div style="font-size:0.8rem;" class="text-muted">' + date;
+        if (source) {
+          html += ' | ' + source;
+        }
+        html += '</div>';
+        html += '<a href="' + url + '" target="_blank" rel="noopener noreferrer">' + title + '</a>';
+        if (description) {
+          html += '<p style="margin:4px 0 0;font-size:0.9rem;">' + description + '</p>';
+        }
+        html += '</div>';
+      });
+
+      container.innerHTML = html;
+    })
+    .catch(function() {
+      var container = document.getElementById('news-container');
+      container.innerHTML = '<p class="text-muted">Failed to load news.</p>';
+    });
+})();
+</script>
+
+
+</body></html>

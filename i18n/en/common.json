@@ -1,0 +1,12 @@
+{
+  "nav_home": "Home",
+  "nav_owasp": "OWASP Top 10",
+  "nav_auth": "Auth & Authorization",
+  "nav_rate_limiting": "Rate Limiting & Validation",
+  "nav_tools": "Security Tools",
+  "nav_guidelines": "Internal Guidelines",
+  "nav_news": "Latest News",
+  "footer_desc": "API Security Reference Hub — Security information portal for development teams",
+  "footer_ref": "Reference: ",
+  "lang_label": "Language"
+}

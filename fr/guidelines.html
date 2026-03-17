@@ -1,0 +1,277 @@
+<!DOCTYPE html><html lang="fr"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="guide_page_title">Directives internes - Hub de référence sur la sécurité des API</title>
+  <link rel="stylesheet" href="../css/style.css">
+
+    <link rel="alternate" hreflang="en" href="/api-security-hub/en/guidelines.html">
+    <link rel="alternate" hreflang="ja" href="/api-security-hub/ja/guidelines.html">
+    <link rel="alternate" hreflang="es" href="/api-security-hub/es/guidelines.html">
+    <link rel="alternate" hreflang="pt" href="/api-security-hub/pt/guidelines.html">
+    <link rel="alternate" hreflang="fr" href="/api-security-hub/fr/guidelines.html">
+    <link rel="alternate" hreflang="x-default" href="/api-security-hub/en/guidelines.html">
+</head>
+<body>
+
+  <div class="page-header">
+    <h1 data-i18n="guide_heading">Consignes de sécurité internes des API</h1>
+    <p class="subtitle" data-i18n="guide_subtitle">Listes de contrôle de sécurité, perspectives de révision du code et modèles de politiques pour les équipes de développement.</p>
+  </div>
+
+  <!-- Pre-Development Checklist -->
+  <div class="section">
+    <h2 data-i18n-html="guide_checklist_heading"><span class="section-icon">📋</span> Liste de contrôle de pré-développement</h2>
+    <p data-i18n="guide_checklist_description">Éléments à vérifier avant de développer un nouveau point de terminaison d'API.</p>
+
+    <div class="accordion-item">
+      <button class="accordion-header">
+        <span data-i18n="guide_checklist_design_header">1. Revue de conception</span>
+        <span class="accordion-arrow">▼</span>
+      </button>
+      <div class="accordion-body">
+        <ul class="checklist">
+          <li data-i18n="guide_checklist_design_1">La spécification API (OpenAPI) a été créée</li>
+          <li data-i18n="guide_checklist_design_2">Les méthodes d'authentification et d'autorisation ont été déterminées</li>
+          <li data-i18n="guide_checklist_design_3">Les types de paramètres d'entrée et les contraintes ont été définis</li>
+          <li data-i18n="guide_checklist_design_4">Les champs à inclure dans les réponses ont été clairement définis</li>
+          <li data-i18n="guide_checklist_design_5">Le format de réponse aux erreurs est standardisé</li>
+          <li data-i18n="guide_checklist_design_6">Des exigences de limitation des tarifs ont été établies</li>
+          <li data-i18n="guide_checklist_design_7">Le traitement des données personnelles et sensibles a été confirmé</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-header">
+        <span data-i18n="guide_checklist_auth_header">2. Conception d'authentification et d'autorisation</span>
+        <span class="accordion-arrow">▼</span>
+      </button>
+      <div class="accordion-body">
+        <ul class="checklist">
+          <li data-i18n="guide_checklist_auth_1">La méthode d'authentification a été déterminée (OAuth 2.0, JWT, API Key)</li>
+          <li data-i18n="guide_checklist_auth_2">Les autorisations requises (portées/rôles) ont été définies pour chaque point de terminaison</li>
+          <li data-i18n="guide_checklist_auth_3">Des contrôles d'autorisation au niveau des ressources ont été conçus (contre-mesure BOLA)</li>
+          <li data-i18n="guide_checklist_auth_4">Les fonctions d'administration sont clairement séparées</li>
+          <li data-i18n="guide_checklist_auth_5">Les méthodes d'expiration et d'actualisation des jetons ont été déterminées</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-header">
+        <span data-i18n="guide_checklist_data_header">3. Protection des données</span>
+        <span class="accordion-arrow">▼</span>
+      </button>
+      <div class="accordion-body">
+        <ul class="checklist">
+          <li data-i18n="guide_checklist_data_1">La communication utilise TLS 1.2 ou supérieur</li>
+          <li data-i18n="guide_checklist_data_2">La méthode de cryptage des données stockées a été déterminée</li>
+          <li data-i18n="guide_checklist_data_3">Des politiques de masquage et d'anonymisation des informations personnelles ont été déterminées</li>
+          <li data-i18n="guide_checklist_data_4">Les informations sensibles (jetons, mots de passe) ne sont pas incluses dans les journaux</li>
+          <li data-i18n="guide_checklist_data_5">Les informations de débogage et les traces de pile ne sont pas incluses dans les réponses de l'API</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Code Review Guidelines -->
+  <div class="section">
+    <h2 data-i18n-html="guide_review_heading"><span class="section-icon">👀</span> Perspectives de la révision du code</h2>
+    <p data-i18n="guide_review_description">Perspectives de sécurité à vérifier lors des revues de code API.</p>
+
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="tab-auth-review" data-i18n="guide_review_tab_auth">Authentification et autorisation</button>
+      <button class="tab-btn" data-tab="tab-input-review" data-i18n="guide_review_tab_input">Validation des entrées</button>
+      <button class="tab-btn" data-tab="tab-output-review" data-i18n="guide_review_tab_output">Contrôle de sortie</button>
+      <button class="tab-btn" data-tab="tab-general-review" data-i18n="guide_review_tab_general">Autre</button>
+    </div>
+
+    <div id="tab-auth-review" class="tab-content active">
+      <div class="table-wrapper">
+        <table>
+          <thead><tr><th data-i18n="guide_review_th_item">Vérifier l'article</th><th data-i18n="guide_review_th_importance">Importance</th><th data-i18n="guide_review_th_explanation">Explication</th></tr></thead>
+          <tbody>
+            <tr><td data-i18n="guide_review_auth_item_1">Le middleware d'authentification est appliqué à tous les points de terminaison</td><td><span class="badge badge-danger" data-i18n="guide_review_badge_required">Requis</span></td><td data-i18n="guide_review_auth_exp_1">Assurez-vous qu'aucun contrôle d'authentification ne manque, à l'exception des API publiques</td></tr>
+            <tr><td data-i18n="guide_review_auth_item_2">Des contrôles d'autorisation au niveau de l'objet existent</td><td><span class="badge badge-danger" data-i18n="guide_review_badge_required">Requis</span></td><td data-i18n="guide_review_auth_exp_2">Vérifier que les ressources demandées appartiennent à l'utilisateur demandeur</td></tr>
+            <tr><td data-i18n="guide_review_auth_item_3">Les fonctions d'administration ont une vérification de rôle</td><td><span class="badge badge-danger" data-i18n="guide_review_badge_required">Requis</span></td><td data-i18n="guide_review_auth_exp_3">Assurez-vous que les utilisateurs réguliers ne peuvent pas appeler les API d'administration</td></tr>
+            <tr><td data-i18n="guide_review_auth_item_4">L'algorithme est spécifié lors de la vérification JWT</td><td><span class="badge badge-danger" data-i18n="guide_review_badge_required">Requis</span></td><td data-i18n="guide_review_auth_exp_4">Prévention de l'alg&nbsp;: aucune attaque</td></tr>
+            <tr><td data-i18n="guide_review_auth_item_5">L'expiration du jeton est correctement configurée</td><td><span class="badge badge-warning" data-i18n="guide_review_badge_recommended">Recommandée</span></td><td data-i18n="guide_review_auth_exp_5">Jeton d'accès&nbsp;: dans les 15&nbsp;minutes</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div id="tab-input-review" class="tab-content">
+      <div class="table-wrapper">
+        <table>
+          <thead><tr><th data-i18n="guide_review_th_item">Vérifier l'article</th><th data-i18n="guide_review_th_importance">Importance</th><th data-i18n="guide_review_th_explanation">Explication</th></tr></thead>
+          <tbody>
+            <tr><td data-i18n="guide_review_input_item_1">Le corps de la requête a une validation de schéma</td><td><span class="badge badge-danger" data-i18n="guide_review_badge_required">Requis</span></td><td data-i18n="guide_review_input_exp_1">Validation du type, de la longueur et du format</td></tr>
+            <tr><td data-i18n="guide_review_input_item_2">Les requêtes SQL sont paramétrées</td><td><span class="badge badge-danger" data-i18n="guide_review_badge_required">Requis</span></td><td data-i18n="guide_review_input_exp_2">Assurez-vous que les requêtes ne sont pas créées avec une concaténation de chaînes</td></tr>
+            <tr><td data-i18n="guide_review_input_item_3">La validation du format des paramètres de chemin existe</td><td><span class="badge badge-danger" data-i18n="guide_review_badge_required">Requis</span></td><td data-i18n="guide_review_input_exp_3">Vérifiez le format attendu tel que l'UUID</td></tr>
+            <tr><td data-i18n="guide_review_input_item_4">Les paramètres de pagination ont des limites supérieures</td><td><span class="badge badge-warning" data-i18n="guide_review_badge_recommended">Recommandée</span></td><td data-i18n="guide_review_input_exp_4">Empêcher les requêtes excessives telles que limit=999999</td></tr>
+            <tr><td data-i18n="guide_review_input_item_5">Les téléchargements de fichiers sont soumis à des restrictions de type et de taille</td><td><span class="badge badge-warning" data-i18n="guide_review_badge_recommended">Recommandée</span></td><td data-i18n="guide_review_input_exp_5">Validation du type de contenu et de la taille du fichier</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div id="tab-output-review" class="tab-content">
+      <div class="table-wrapper">
+        <table>
+          <thead><tr><th data-i18n="guide_review_th_item">Vérifier l'article</th><th data-i18n="guide_review_th_importance">Importance</th><th data-i18n="guide_review_th_explanation">Explication</th></tr></thead>
+          <tbody>
+            <tr><td data-i18n="guide_review_output_item_1">Les réponses ne contiennent pas de champs inutiles</td><td><span class="badge badge-danger" data-i18n="guide_review_badge_required">Requis</span></td><td data-i18n="guide_review_output_exp_1">Empêcher les fuites de password_hash, d'identifiants internes, etc.</td></tr>
+            <tr><td data-i18n="guide_review_output_item_2">Les réponses d'erreur ne contiennent pas de traces de pile</td><td><span class="badge badge-danger" data-i18n="guide_review_badge_required">Requis</span></td><td data-i18n="guide_review_output_exp_2">Ne pas exposer les informations internes en production</td></tr>
+            <tr><td data-i18n="guide_review_output_item_3">Les en-têtes de sécurité sont configurés</td><td><span class="badge badge-warning" data-i18n="guide_review_badge_recommended">Recommandée</span></td><td data-i18n="guide_review_output_exp_3">Options de type de contenu X, HSTS, etc.</td></tr>
+            <tr><td data-i18n="guide_review_output_item_4">Content-Type est correctement défini</td><td><span class="badge badge-warning" data-i18n="guide_review_badge_recommended">Recommandée</span></td><td data-i18n="guide_review_output_exp_4">Spécifier explicitement application/json</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div id="tab-general-review" class="tab-content">
+      <div class="table-wrapper">
+        <table>
+          <thead><tr><th data-i18n="guide_review_th_item">Vérifier l'article</th><th data-i18n="guide_review_th_importance">Importance</th><th data-i18n="guide_review_th_explanation">Explication</th></tr></thead>
+          <tbody>
+            <tr><td data-i18n="guide_review_general_item_1">Une limitation de débit est appliquée</td><td><span class="badge badge-danger" data-i18n="guide_review_badge_required">Requis</span></td><td data-i18n="guide_review_general_exp_1">Surtout pour les points de terminaison d’authentification et de paiement</td></tr>
+            <tr><td data-i18n="guide_review_general_item_2">Les journaux appropriés sont en cours d'enregistrement</td><td><span class="badge badge-warning" data-i18n="guide_review_badge_recommended">Recommandée</span></td><td data-i18n="guide_review_general_exp_2">Traçable&nbsp;: qui a fait quoi et quand</td></tr>
+            <tr><td data-i18n="guide_review_general_item_3">Les secrets ne sont pas codés en dur</td><td><span class="badge badge-danger" data-i18n="guide_review_badge_required">Requis</span></td><td data-i18n="guide_review_general_exp_3">Utiliser des variables d'environnement ou des gestionnaires de secrets</td></tr>
+            <tr><td data-i18n="guide_review_general_item_4">Les paramètres CORS sont appropriés</td><td><span class="badge badge-warning" data-i18n="guide_review_badge_recommended">Recommandée</span></td><td data-i18n="guide_review_general_exp_4">Évitez d'utiliser des caractères génériques</td></tr>
+            <tr><td data-i18n="guide_review_general_item_5">Les dépendances n'ont aucune vulnérabilité connue</td><td><span class="badge badge-warning" data-i18n="guide_review_badge_recommended">Recommandée</span></td><td data-i18n="guide_review_general_exp_5">Vérifier les résultats de l'audit npm / Snyk</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- Security Policy Template -->
+  <div class="section">
+    <h2 data-i18n-html="guide_policy_heading"><span class="section-icon">📜</span> Modèles de politique de sécurité</h2>
+    <p data-i18n="guide_policy_description">Modèles de politiques de base dans le développement d’API internes. Personnalisez-le pour l'adapter à votre projet.</p>
+
+    <div class="card">
+      <h3 data-i18n="guide_policy_auth_title">1. Politique d'authentification</h3>
+      <div class="code-block">
+        <div class="code-block-header"><span class="lang">Policy</span><span data-i18n="guide_policy_label_template">Modèle</span></div>
+        <pre data-i18n-html="guide_policy_auth">■ Méthodes d'authentification 
+- API destinées aux utilisateurs&nbsp;: OAuth 2.0 (code d'autorisation + PKCE) 
+- API de serveur à serveur&nbsp;: OAuth 2.0 (Client Credentials) ou mTLS 
+- API d'intégration externes : Clé API + signature HMAC 
+
+■ Gestion des jetons 
+- Expiration du jeton d'accès&nbsp;: 15&nbsp;minutes 
+- Expiration du jeton d'actualisation&nbsp;: 7 jours (rotation requise) 
+- Stockage des jetons&nbsp;: HttpOnly + Secure + SameSite Cookie 
+
+■ Politique de mot de passe 
+- Minimum 12 caractères, au moins une majuscule, une minuscule, un chiffre et un symbole 
+- Hash avec bcrypt (facteur de coût 12 ou plus) 
+- Protection contre les attaques par liste de mots de passe (intégration de l'API Have I Been Pwned)</pre>
+      </div>
+    </div>
+
+    <div class="card mt-2">
+      <h3 data-i18n="guide_policy_design_title">2. Politique de conception d'API</h3>
+      <div class="code-block">
+        <div class="code-block-header"><span class="lang">Policy</span><span data-i18n="guide_policy_label_template">Modèle</span></div>
+        <pre data-i18n-html="guide_policy_design">■ Gestion des versions 
+- Gestion des versions via chemin URL : /api/v1/resources 
+- Période de support minimum de 6 mois pour les anciennes versions 
+- Notifier la dépréciation via l'en-tête Deprecation 
+
+■ Limitation de débit (valeurs par défaut) 
+- API générales : 100 requêtes/15 min 
+- API d'authentification&nbsp;: 5 requêtes/15 min 
+- API publiques&nbsp;: 30 requêtes/min 
+- Renvoie toujours les en-têtes RateLimit-* 
+
+■ Réponses 
+- Type de contenu&nbsp;: application/json (fixé) 
+- Réponses aux erreurs au format RFC 7807 (Détails du problème) 
+- Ne restituez jamais les traces de pile en production 
+- Pagination : 20 éléments par défaut, maximum 100 éléments</pre>
+      </div>
+    </div>
+
+    <div class="card mt-2">
+      <h3 data-i18n="guide_policy_logging_title">3. Politique de journalisation et d'audit</h3>
+      <div class="code-block">
+        <div class="code-block-header"><span class="lang">Policy</span><span data-i18n="guide_policy_label_template">Modèle</span></div>
+        <pre data-i18n-html="guide_policy_logging">■ Champs de journal obligatoires 
+- Horodatage (ISO 8601, UTC) 
+- ID de demande (UUID pour la traçabilité) 
+- ID utilisateur / ID client API 
+- Méthode HTTP + point de terminaison 
+- Code d'état 
+- IP source 
+- Temps de réponse 
+
+■ Champs de journal interdits (données sensibles) 
+- Mots de passe / jetons / clés API 
+- Numéros de carte de crédit 
+- Affichage PII complet (masquage requis) 
+
+■ Surveillance des alertes 
+- Échecs d'authentification&nbsp;: alerte à 5+/min 
+- Erreurs 403 : Alerte à 10+/min 
+- 500 erreurs : Alerte immédiate sur 1 occurrence 
+- Limite de débit dépassée&nbsp;: analyse de modèle</pre>
+      </div>
+    </div>
+  </div>
+
+  <!-- Incident Response -->
+  <div class="section">
+    <h2 data-i18n-html="guide_incident_heading"><span class="section-icon">🚨</span> Flux de réponse aux incidents</h2>
+    <div class="card-grid">
+      <div class="card">
+        <h3 data-i18n="guide_incident_phase1_title">Phase 1&nbsp;: Détection</h3>
+        <p data-i18n="guide_incident_phase1_desc">Détectez les incidents grâce à des alertes de surveillance, des rapports utilisateur ou des notifications externes. Déterminez la gravité grâce au tri initial.</p>
+        <span class="card-tag tag-critical" data-i18n="guide_incident_phase1_time">0-30 minutes</span>
+      </div>
+      <div class="card">
+        <h3 data-i18n="guide_incident_phase2_title">Phase 2 : Confinement</h3>
+        <p data-i18n="guide_incident_phase2_desc">Empêcher l’escalade des dégâts. Invalidez les clés API, suspendez temporairement les points de terminaison concernés et identifiez l'étendue de l'impact.</p>
+        <span class="card-tag tag-high" data-i18n="guide_incident_phase2_time">30 minutes - 2 heures</span>
+      </div>
+      <div class="card">
+        <h3 data-i18n="guide_incident_phase3_title">Phase 3&nbsp;: Éradication et rétablissement</h3>
+        <p data-i18n="guide_incident_phase3_desc">Corrigez les vulnérabilités, appliquez des correctifs et restaurez les services. Avertissez les utilisateurs concernés.</p>
+        <span class="card-tag tag-medium" data-i18n="guide_incident_phase3_time">2-24 heures</span>
+      </div>
+      <div class="card">
+        <h3 data-i18n="guide_incident_phase4_title">Phase 4&nbsp;: Analyse post-incident</h3>
+        <p data-i18n="guide_incident_phase4_desc">Effectuer une autopsie. Effectuer une analyse des causes profondes, élaborer des mesures de prévention des récidives et documenter les résultats.</p>
+        <span class="card-tag tag-low" data-i18n="guide_incident_phase4_time">1 à 5 jours ouvrables</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Quick Reference -->
+  <div class="section">
+    <h2 data-i18n-html="guide_status_heading"><span class="section-icon">⚡</span> Référence rapide&nbsp;: codes d'état HTTP</h2>
+    <p data-i18n="guide_status_description">Codes d'état HTTP liés à la sécurité utilisés dans la conception de l'API.</p>
+    <div class="table-wrapper">
+      <table>
+        <thead><tr><th data-i18n="guide_status_th_code">Code</th><th data-i18n="guide_status_th_meaning">Signification</th><th data-i18n="guide_status_th_usage">Cas d'utilisation</th></tr></thead>
+        <tbody>
+          <tr><td><strong>400</strong></td><td>Bad Request</td><td data-i18n="guide_status_400_usage">Erreur de validation d'entrée</td></tr>
+          <tr><td><strong>401</strong></td><td>Unauthorized</td><td data-i18n="guide_status_401_usage">Authentification requise ou le jeton n'est pas valide</td></tr>
+          <tr><td><strong>403</strong></td><td>Forbidden</td><td data-i18n="guide_status_403_usage">Authentifié mais autorisations insuffisantes</td></tr>
+          <tr><td><strong>404</strong></td><td>Not Found</td><td data-i18n="guide_status_404_usage">La ressource n'existe pas (peut également être utilisée à la place de 403)</td></tr>
+          <tr><td><strong>405</strong></td><td>Method Not Allowed</td><td data-i18n="guide_status_405_usage">Méthode HTTP non autorisée</td></tr>
+          <tr><td><strong>413</strong></td><td>Payload Too Large</td><td data-i18n="guide_status_413_usage">Taille du corps demandée dépassée</td></tr>
+          <tr><td><strong>422</strong></td><td>Unprocessable Entity</td><td data-i18n="guide_status_422_usage">La syntaxe est correcte mais une erreur de sémantique</td></tr>
+          <tr><td><strong>429</strong></td><td>Too Many Requests</td><td data-i18n="guide_status_429_usage">Limite de débit dépassée</td></tr>
+          <tr><td><strong>500</strong></td><td>Internal Server Error</td><td data-i18n="guide_status_500_usage">Erreur de serveur interne (masquer les détails)</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+<script src="../js/common.js"></script>
+
+
+</body></html>

@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="owasp_page_title">OWASP API Security Top 10 - API Security Reference Hub</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="page-header">
+    <h1 data-i18n="owasp_main_heading">OWASP API Security Top 10 (2023)</h1>
+    <p class="subtitle" data-i18n="owasp_subtitle">Explains the 10 most critical security risks specific to APIs and how to mitigate them.</p>
+  </div>
+
+  <!-- Overview -->
+  <div class="section">
+    <div class="callout callout-info">
+      <div class="callout-title" data-i18n="owasp_overview_title">What is the OWASP API Security Top 10?</div>
+      <p data-i18n="owasp_overview_desc">A ranking of API-specific security risks published by OWASP (Open Worldwide Application Security Project). The 2023 edition provides the latest list reflecting threats that have increased with the widespread adoption of APIs.</p>
+    </div>
+  </div>
+
+  <!-- API1: BOLA -->
+  <div class="section">
+    <h2 data-i18n-html="owasp_api1_heading"><span class="section-icon">1&#xFE0F;&#x20E3;</span> API1:2023 - Broken Object Level Authorization (BOLA)</h2>
+    <span class="badge badge-danger">Critical</span>
+    <h3 data-i18n="owasp_api1_overview_heading">Overview</h3>
+    <p data-i18n="owasp_api1_overview_desc">A vulnerability that allows unauthorized access to other users' data by manipulating object IDs. It is known as the most frequently occurring and easiest to exploit vulnerability.</p>
+    <div class="callout callout-danger">
+      <div class="callout-title" data-i18n="owasp_api1_risk_title">Risk</div>
+      <p data-i18n="owasp_api1_risk_desc">Attackers can access other users' personal information, payment details, order history, and more simply by changing the ID in the URL or request parameters.</p>
+    </div>
+    <h3 data-i18n="owasp_api1_vulnerable_heading">Vulnerable Code Example</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">JavaScript (Express)</span>
+        <span>&#x274C; Bad</span>
+      </div>
+      <pre><span class="comment" data-i18n="owasp_api1_bad_comment1">// Receives ID and returns data directly - no authorization check</span>
+app.<span class="function">get</span>(<span class="string">'/api/users/:id/orders'</span>, <span class="keyword">async</span> (req, res) =&gt; {
+  <span class="keyword">const</span> orders = <span class="keyword">await</span> Order.<span class="function">find</span>({ userId: req.params.id });
+  res.<span class="function">json</span>(orders);
+});</pre>
+    </div>
+    <h3 data-i18n="owasp_api1_secure_heading">Secure Code Example</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">JavaScript (Express)</span>
+        <span>&#x2705; Good</span>
+      </div>
+      <pre><span class="comment" data-i18n="owasp_api1_good_comment1">// Verify against authenticated user's ID for authorization check</span>
+app.<span class="function">get</span>(<span class="string">'/api/users/:id/orders'</span>, authenticate, <span class="keyword">async</span> (req, res) =&gt; {
+  <span class="keyword">if</span> (req.user.id !== req.params.id &amp;&amp; !req.user.isAdmin) {
+    <span class="keyword">return</span> res.<span class="function">status</span>(<span class="number">403</span>).<span class="function">json</span>({ <span class="variable">error</span>: <span class="string">'Forbidden'</span> });
+  }
+  <span class="keyword">const</span> orders = <span class="keyword">await</span> Order.<span class="function">find</span>({ userId: req.params.id });
+  res.<span class="function">json</span>(orders);
+});</pre>
+    </div>
+    <h3 data-i18n="owasp_api1_checklist_heading">Mitigation Checklist</h3>
+    <ul class="checklist">
+      <li data-i18n="owasp_api1_check1">Implement object-level authorization checks on all endpoints</li>
+      <li data-i18n="owasp_api1_check2">Use UUIDs instead of predictable sequential IDs</li>
+      <li data-i18n="owasp_api1_check3">Centralize authorization logic in middleware</li>
+      <li data-i18n="owasp_api1_check4">Detect authorization bypasses with automated tests</li>
+    </ul>
+  </div>
+
+  <!-- API2 -->
+  <div class="section">
+    <h2 data-i18n-html="owasp_api2_heading"><span class="section-icon">2&#xFE0F;&#x20E3;</span> API2:2023 - Broken Authentication</h2>
+    <span class="badge badge-danger">Critical</span>
+    <h3 data-i18n="owasp_api2_overview_heading">Overview</h3>
+    <p data-i18n="owasp_api2_overview_desc">A vulnerability that allows attackers to take over legitimate user accounts due to flawed authentication mechanism implementations.</p>
+    <div class="callout callout-danger">
+      <div class="callout-title" data-i18n="owasp_api2_problems_title">Common Issues</div>
+      <p data-i18n="owasp_api2_problems_desc">Weak password policies, improper token management, lack of brute-force protection, inadequate session management, and more.</p>
+    </div>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">JavaScript</span>
+        <span data-i18n="owasp_api2_code_label">&#x2705; Mitigation Example: JWT Verification</span>
+      </div>
+      <pre><span class="keyword">const</span> jwt = <span class="function">require</span>(<span class="string">'jsonwebtoken'</span>);
+
+<span class="keyword">function</span> <span class="function">authenticate</span>(req, res, next) {
+  <span class="keyword">const</span> token = req.headers.authorization?.<span class="function">split</span>(<span class="string">' '</span>)[<span class="number">1</span>];
+  <span class="keyword">if</span> (!token) <span class="keyword">return</span> res.<span class="function">status</span>(<span class="number">401</span>).<span class="function">json</span>({ <span class="variable">error</span>: <span class="string">'Token required'</span> });
+
+  <span class="keyword">try</span> {
+    <span class="comment" data-i18n="owasp_api2_comment1">// Explicitly specify algorithm (prevents alg: none attack)</span>
+    <span class="keyword">const</span> decoded = jwt.<span class="function">verify</span>(token, process.env.JWT_SECRET, {
+      <span class="variable">algorithms</span>: [<span class="string">'HS256'</span>],
+      <span class="variable">issuer</span>: <span class="string">'your-app'</span>,
+    });
+    req.user = decoded;
+    <span class="function">next</span>();
+  } <span class="keyword">catch</span> (err) {
+    res.<span class="function">status</span>(<span class="number">401</span>).<span class="function">json</span>({ <span class="variable">error</span>: <span class="string">'Invalid token'</span> });
+  }
+}</pre>
+    </div>
+    <ul class="checklist">
+      <li data-i18n="owasp_api2_check1">Explicitly specify the algorithm when verifying JWT signatures</li>
+      <li data-i18n="owasp_api2_check2">Set short token expiration times (access tokens: within 15 minutes)</li>
+      <li data-i18n="owasp_api2_check3">Implement refresh token rotation</li>
+      <li data-i18n="owasp_api2_check4">Enforce login attempt rate limiting</li>
+    </ul>
+  </div>
+
+  <!-- API3 -->
+  <div class="section">
+    <h2 data-i18n-html="owasp_api3_heading"><span class="section-icon">3&#xFE0F;&#x20E3;</span> API3:2023 - Broken Object Property Level Authorization</h2>
+    <span class="badge badge-warning">High</span>
+    <h3 data-i18n="owasp_api3_overview_heading">Overview</h3>
+    <p data-i18n="owasp_api3_overview_desc">A vulnerability where access control over the properties (fields) of objects included in API responses is insufficient. This item combines Excessive Data Exposure and Mass Assignment.</p>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">JavaScript</span>
+        <span data-i18n="owasp_api3_code_label">&#x2705; Response Filtering</span>
+      </div>
+      <pre><span class="comment" data-i18n="owasp_api3_comment1">// Return only public fields from the user object</span>
+<span class="keyword">function</span> <span class="function">sanitizeUser</span>(user, requesterId) {
+  <span class="keyword">const</span> publicFields = { id: user.id, name: user.name, avatar: user.avatar };
+
+  <span class="comment" data-i18n="owasp_api3_comment2">// Only the owner can see additional fields</span>
+  <span class="keyword">if</span> (requesterId === user.id) {
+    publicFields.email = user.email;
+    publicFields.phone = user.phone;
+  }
+
+  <span class="keyword">return</span> publicFields;
+  <span class="comment" data-i18n="owasp_api3_comment3">// &#x274C; return user; would leak password_hash etc.</span>
+}</pre>
+    </div>
+    <ul class="checklist">
+      <li data-i18n="owasp_api3_check1">Explicitly specify fields to include in API responses (allowlist approach)</li>
+      <li data-i18n="owasp_api3_check2">Restrict accepted request body fields using a schema</li>
+      <li data-i18n="owasp_api3_check3">Dynamically filter response fields based on roles</li>
+    </ul>
+  </div>
+
+  <!-- API4 -->
+  <div class="section">
+    <h2 data-i18n-html="owasp_api4_heading"><span class="section-icon">4&#xFE0F;&#x20E3;</span> API4:2023 - Unrestricted Resource Consumption</h2>
+    <span class="badge badge-warning">High</span>
+    <h3 data-i18n="owasp_api4_overview_heading">Overview</h3>
+    <p data-i18n="owasp_api4_overview_desc">A vulnerability where there are no limits on API request size, frequency, or resource consumption, leading to DoS attacks or cost surges.</p>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">JavaScript (Express)</span>
+        <span data-i18n="owasp_api4_code_label">&#x2705; Implementing Resource Limits</span>
+      </div>
+      <pre><span class="keyword">const</span> rateLimit = <span class="function">require</span>(<span class="string">'express-rate-limit'</span>);
+
+<span class="comment" data-i18n="owasp_api4_comment1">// Global rate limiting</span>
+app.<span class="function">use</span>(<span class="function">rateLimit</span>({
+  <span class="variable">windowMs</span>: <span class="number">15</span> * <span class="number">60</span> * <span class="number">1000</span>, <span class="comment" data-i18n="owasp_api4_comment2">// 15 minutes</span>
+  <span class="variable">max</span>: <span class="number">100</span>,                   <span class="comment" data-i18n="owasp_api4_comment3">// Maximum 100 requests</span>
+  <span class="variable">standardHeaders</span>: <span class="keyword">true</span>,
+}));
+
+<span class="comment" data-i18n="owasp_api4_comment4">// Payload size limit</span>
+app.<span class="function">use</span>(express.<span class="function">json</span>({ <span class="variable">limit</span>: <span class="string">'10kb'</span> }));
+
+<span class="comment" data-i18n="owasp_api4_comment5">// Pagination upper limit</span>
+app.<span class="function">get</span>(<span class="string">'/api/items'</span>, (req, res) =&gt; {
+  <span class="keyword">const</span> limit = Math.<span class="function">min</span>(<span class="function">parseInt</span>(req.query.limit) || <span class="number">20</span>, <span class="number">100</span>);
+  <span class="comment">// ...</span>
+});</pre>
+    </div>
+  </div>
+
+  <!-- API5 -->
+  <div class="section">
+    <h2 data-i18n-html="owasp_api5_heading"><span class="section-icon">5&#xFE0F;&#x20E3;</span> API5:2023 - Broken Function Level Authorization</h2>
+    <span class="badge badge-warning">High</span>
+    <h3 data-i18n="owasp_api5_overview_heading">Overview</h3>
+    <p data-i18n="owasp_api5_overview_desc">A vulnerability where proper access control is not implemented for admin functions and endpoints, allowing regular users to perform administrative operations.</p>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">JavaScript</span>
+        <span data-i18n="owasp_api5_code_label">&#x2705; Role-Based Access Control</span>
+      </div>
+      <pre><span class="keyword">function</span> <span class="function">authorize</span>(...roles) {
+  <span class="keyword">return</span> (req, res, next) =&gt; {
+    <span class="keyword">if</span> (!roles.<span class="function">includes</span>(req.user.role)) {
+      <span class="keyword">return</span> res.<span class="function">status</span>(<span class="number">403</span>).<span class="function">json</span>({ <span class="variable">error</span>: <span class="string">'Insufficient permissions'</span> });
+    }
+    <span class="function">next</span>();
+  };
+}
+
+<span class="comment" data-i18n="owasp_api5_comment1">// Admin only access</span>
+app.<span class="function">delete</span>(<span class="string">'/api/admin/users/:id'</span>, authenticate, <span class="function">authorize</span>(<span class="string">'admin'</span>), deleteUser);
+
+<span class="comment" data-i18n="owasp_api5_comment2">// Admin and moderator</span>
+app.<span class="function">put</span>(<span class="string">'/api/posts/:id/moderate'</span>, authenticate, <span class="function">authorize</span>(<span class="string">'admin'</span>, <span class="string">'moderator'</span>), moderatePost);</pre>
+    </div>
+  </div>
+
+  <!-- API6 -->
+  <div class="section">
+    <h2 data-i18n-html="owasp_api6_heading"><span class="section-icon">6&#xFE0F;&#x20E3;</span> API6:2023 - Unrestricted Access to Sensitive Business Flows</h2>
+    <span class="badge badge-info">Medium</span>
+    <h3 data-i18n="owasp_api6_overview_heading">Overview</h3>
+    <p data-i18n="owasp_api6_overview_desc">A vulnerability where critical business logic flows are not protected against automated attacks. Examples: ticket scalping, mass coupon harvesting, spam posting, etc.</p>
+    <h3 data-i18n="owasp_api6_mitigation_heading">Mitigations</h3>
+    <ul class="checklist">
+      <li data-i18n="owasp_api6_check1">Implement CAPTCHA / reCAPTCHA</li>
+      <li data-i18n="owasp_api6_check2">Device fingerprinting</li>
+      <li data-i18n="owasp_api6_check3">Business-level rate limiting on operations</li>
+      <li data-i18n="owasp_api6_check4">Human interaction detection</li>
+    </ul>
+  </div>
+
+  <!-- API7 -->
+  <div class="section">
+    <h2 data-i18n-html="owasp_api7_heading"><span class="section-icon">7&#xFE0F;&#x20E3;</span> API7:2023 - Server Side Request Forgery (SSRF)</h2>
+    <span class="badge badge-warning">High</span>
+    <h3 data-i18n="owasp_api7_overview_heading">Overview</h3>
+    <p data-i18n="owasp_api7_overview_desc">A vulnerability where the server fetches a user-supplied URL without validation, enabling unauthorized access to internal networks.</p>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">JavaScript</span>
+        <span data-i18n="owasp_api7_code_label">&#x2705; SSRF Mitigation</span>
+      </div>
+      <pre><span class="keyword">const</span> { URL } = <span class="function">require</span>(<span class="string">'url'</span>);
+
+<span class="keyword">function</span> <span class="function">isAllowedUrl</span>(input) {
+  <span class="keyword">try</span> {
+    <span class="keyword">const</span> url = <span class="keyword">new</span> <span class="type">URL</span>(input);
+    <span class="comment" data-i18n="owasp_api7_comment1">// Restrict protocols</span>
+    <span class="keyword">if</span> (!['https:', 'http:'].<span class="function">includes</span>(url.protocol)) <span class="keyword">return false</span>;
+    <span class="comment" data-i18n="owasp_api7_comment2">// Block private IP ranges</span>
+    <span class="keyword">const</span> blocked = [<span class="string">'127.0.0.1'</span>, <span class="string">'localhost'</span>, <span class="string">'0.0.0.0'</span>, <span class="string">'169.254.169.254'</span>];
+    <span class="keyword">if</span> (blocked.<span class="function">includes</span>(url.hostname)) <span class="keyword">return false</span>;
+    <span class="comment" data-i18n="owasp_api7_comment3">// Check internal network ranges (10.x, 172.16-31.x, 192.168.x)</span>
+    <span class="keyword">if</span> (/^(10\.|172\.(1[6-9]|2\d|3[01])\.|192\.168\.)/.test(url.hostname)) <span class="keyword">return false</span>;
+    <span class="keyword">return true</span>;
+  } <span class="keyword">catch</span> {
+    <span class="keyword">return false</span>;
+  }
+}</pre>
+    </div>
+  </div>
+
+  <!-- API8 -->
+  <div class="section">
+    <h2 data-i18n-html="owasp_api8_heading"><span class="section-icon">8&#xFE0F;&#x20E3;</span> API8:2023 - Security Misconfiguration</h2>
+    <span class="badge badge-info">Medium</span>
+    <h3 data-i18n="owasp_api8_overview_heading">Overview</h3>
+    <p data-i18n="owasp_api8_overview_desc">Improper security settings on API servers or frameworks. Includes allowing unnecessary HTTP methods, overly permissive CORS policies, exposure of debug information, and more.</p>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">JavaScript (Express)</span>
+        <span data-i18n="owasp_api8_code_label">&#x2705; Security Header Configuration</span>
+      </div>
+      <pre><span class="keyword">const</span> helmet = <span class="function">require</span>(<span class="string">'helmet'</span>);
+<span class="keyword">const</span> cors = <span class="function">require</span>(<span class="string">'cors'</span>);
+
+app.<span class="function">use</span>(<span class="function">helmet</span>());
+app.<span class="function">use</span>(<span class="function">cors</span>({
+  <span class="variable">origin</span>: [<span class="string">'https://app.example.com'</span>], <span class="comment" data-i18n="owasp_api8_comment1">// Do not use wildcards</span>
+  <span class="variable">methods</span>: [<span class="string">'GET'</span>, <span class="string">'POST'</span>, <span class="string">'PUT'</span>, <span class="string">'DELETE'</span>],
+  <span class="variable">credentials</span>: <span class="keyword">true</span>,
+}));
+
+<span class="comment" data-i18n="owasp_api8_comment2">// Error handler: do not return stack traces in production</span>
+app.<span class="function">use</span>((err, req, res, next) =&gt; {
+  res.<span class="function">status</span>(<span class="number">500</span>).<span class="function">json</span>({
+    <span class="variable">error</span>: process.env.NODE_ENV === <span class="string">'production'</span>
+      ? <span class="string">'Internal Server Error'</span>
+      : err.message,
+  });
+});</pre>
+    </div>
+  </div>
+
+  <!-- API9 -->
+  <div class="section">
+    <h2 data-i18n-html="owasp_api9_heading"><span class="section-icon">9&#xFE0F;&#x20E3;</span> API9:2023 - Improper Inventory Management</h2>
+    <span class="badge badge-info">Medium</span>
+    <h3 data-i18n="owasp_api9_overview_heading">Overview</h3>
+    <p data-i18n="owasp_api9_overview_desc">A state where old API endpoint versions are left exposed without security patches applied. Also known as shadow APIs or zombie APIs.</p>
+    <h3 data-i18n="owasp_api9_mitigation_heading">Mitigations</h3>
+    <ul class="checklist">
+      <li data-i18n="owasp_api9_check1">Document and manage all API endpoints (OpenAPI/Swagger)</li>
+      <li data-i18n="owasp_api9_check2">Set clear deprecation schedules for deprecated APIs</li>
+      <li data-i18n="owasp_api9_check3">Block unregistered endpoints at the API gateway</li>
+      <li data-i18n="owasp_api9_check4">Conduct regular API inventory audits</li>
+    </ul>
+  </div>
+
+  <!-- API10 -->
+  <div class="section">
+    <h2 data-i18n-html="owasp_api10_heading"><span class="section-icon">&#x1F51F;</span> API10:2023 - Unsafe Consumption of APIs</h2>
+    <span class="badge badge-info">Medium</span>
+    <h3 data-i18n="owasp_api10_overview_heading">Overview</h3>
+    <p data-i18n="owasp_api10_overview_desc">A vulnerability where responses from third-party APIs are trusted without validation. If an external API is compromised, the impact propagates to your own system.</p>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">JavaScript</span>
+        <span data-i18n="owasp_api10_code_label">&#x2705; External API Response Validation</span>
+      </div>
+      <pre><span class="keyword">const</span> Ajv = <span class="function">require</span>(<span class="string">'ajv'</span>);
+<span class="keyword">const</span> ajv = <span class="keyword">new</span> <span class="type">Ajv</span>();
+
+<span class="comment" data-i18n="owasp_api10_comment1">// Validate external API responses with a schema</span>
+<span class="keyword">const</span> externalSchema = {
+  <span class="variable">type</span>: <span class="string">'object'</span>,
+  <span class="variable">required</span>: [<span class="string">'id'</span>, <span class="string">'status'</span>],
+  <span class="variable">properties</span>: {
+    <span class="variable">id</span>: { <span class="variable">type</span>: <span class="string">'string'</span>, <span class="variable">maxLength</span>: <span class="number">50</span> },
+    <span class="variable">status</span>: { <span class="variable">type</span>: <span class="string">'string'</span>, <span class="variable">enum</span>: [<span class="string">'active'</span>, <span class="string">'inactive'</span>] },
+  },
+  <span class="variable">additionalProperties</span>: <span class="keyword">false</span>,
+};
+
+<span class="keyword">const</span> validate = ajv.<span class="function">compile</span>(externalSchema);
+
+<span class="keyword">async function</span> <span class="function">fetchExternalData</span>() {
+  <span class="keyword">const</span> res = <span class="keyword">await</span> <span class="function">fetch</span>(<span class="string">'https://api.external.com/data'</span>);
+  <span class="keyword">const</span> data = <span class="keyword">await</span> res.<span class="function">json</span>();
+
+  <span class="keyword">if</span> (!<span class="function">validate</span>(data)) {
+    <span class="keyword">throw new</span> <span class="type">Error</span>(<span class="string">'External API response validation failed'</span>);
+  }
+  <span class="keyword">return</span> data;
+}</pre>
+    </div>
+  </div>
+
+  <!-- Summary Table -->
+  <div class="section">
+    <h2 data-i18n-html="owasp_summary_heading"><span class="section-icon">&#x1F4CA;</span> Summary Table</h2>
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th data-i18n="owasp_table_header_id">ID</th>
+            <th data-i18n="owasp_table_header_vulnerability">Vulnerability</th>
+            <th data-i18n="owasp_table_header_severity">Severity</th>
+            <th data-i18n="owasp_table_header_mitigation">Key Mitigation</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>API1</td><td>Broken Object Level Authorization</td><td><span class="badge badge-danger">Critical</span></td><td data-i18n="owasp_table_api1_mitigation">Object-level authorization checks</td></tr>
+          <tr><td>API2</td><td>Broken Authentication</td><td><span class="badge badge-danger">Critical</span></td><td data-i18n="owasp_table_api2_mitigation">Proper token management and brute-force protection</td></tr>
+          <tr><td>API3</td><td>Broken Object Property Level Authorization</td><td><span class="badge badge-warning">High</span></td><td data-i18n="owasp_table_api3_mitigation">Explicit response field filtering</td></tr>
+          <tr><td>API4</td><td>Unrestricted Resource Consumption</td><td><span class="badge badge-warning">High</span></td><td data-i18n="owasp_table_api4_mitigation">Rate limiting and payload size restrictions</td></tr>
+          <tr><td>API5</td><td>Broken Function Level Authorization</td><td><span class="badge badge-warning">High</span></td><td data-i18n="owasp_table_api5_mitigation">Role-based access control</td></tr>
+          <tr><td>API6</td><td>Unrestricted Access to Sensitive Business Flows</td><td><span class="badge badge-info">Medium</span></td><td data-i18n="owasp_table_api6_mitigation">CAPTCHA and business-level rate limiting</td></tr>
+          <tr><td>API7</td><td>Server Side Request Forgery</td><td><span class="badge badge-warning">High</span></td><td data-i18n="owasp_table_api7_mitigation">URL validation and private IP blocking</td></tr>
+          <tr><td>API8</td><td>Security Misconfiguration</td><td><span class="badge badge-info">Medium</span></td><td data-i18n="owasp_table_api8_mitigation">Security headers and CORS configuration</td></tr>
+          <tr><td>API9</td><td>Improper Inventory Management</td><td><span class="badge badge-info">Medium</span></td><td data-i18n="owasp_table_api9_mitigation">API inventory management and deprecation policies</td></tr>
+          <tr><td>API10</td><td>Unsafe Consumption of APIs</td><td><span class="badge badge-info">Medium</span></td><td data-i18n="owasp_table_api10_mitigation">Schema validation of external API responses</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+<script src="js/common.js"></script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+{
+  "nav_home": "Maison",
+  "nav_owasp": "Top 10 de l'OWASP",
+  "nav_auth": "Authentification et autorisation",
+  "nav_rate_limiting": "Limitation et validation du débit",
+  "nav_tools": "Outils de sécurité",
+  "nav_guidelines": "Directives internes",
+  "nav_news": "Dernières nouvelles",
+  "footer_desc": "API Security Reference Hub — Portail d'informations sur la sécurité pour les équipes de développement",
+  "footer_ref": "Référence:",
+  "lang_label": "Langue"
+}

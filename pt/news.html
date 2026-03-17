@@ -1,0 +1,201 @@
+<!DOCTYPE html><html lang="pt"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="news_page_title">Últimas Notícias - Hub de referência de segurança de API</title>
+  <link rel="stylesheet" href="../css/style.css">
+
+    <link rel="alternate" hreflang="en" href="/api-security-hub/en/news.html">
+    <link rel="alternate" hreflang="ja" href="/api-security-hub/ja/news.html">
+    <link rel="alternate" hreflang="es" href="/api-security-hub/es/news.html">
+    <link rel="alternate" hreflang="pt" href="/api-security-hub/pt/news.html">
+    <link rel="alternate" hreflang="fr" href="/api-security-hub/fr/news.html">
+    <link rel="alternate" hreflang="x-default" href="/api-security-hub/en/news.html">
+</head>
+<body>
+
+  <div class="page-header">
+    <h1 data-i18n="news_heading">Últimas notícias sobre segurança de API</h1>
+    <p class="subtitle" data-i18n="news_subtitle">Cobrindo incidentes recentes de vulnerabilidade de API, informações de CVE e tendências do setor.</p>
+  </div>
+
+  <!-- Key Stats -->
+  <div class="section">
+    <div class="stats-row" style="justify-content:flex-start;">
+      <div class="stat-item">
+        <div class="stat-number">99%</div>
+        <div class="stat-label" data-i18n="news_stat1_label">Organizações que enfrentaram problemas de segurança de API (2025)</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">1,025%</div>
+        <div class="stat-label" data-i18n="news_stat2_label">Aumento ano a ano em CVEs relacionados à IA (2024)</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">95%</div>
+        <div class="stat-label" data-i18n="news_stat3_label">Ataques originados de sessões autenticadas (2025)</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Major Incidents -->
+  <div class="section">
+    <h2 data-i18n-html="news_incidents_heading"><span class="section-icon">🔥</span> Incidentes Graves</h2>
+
+    <div class="news-item">
+      <div class="news-meta">
+        <span class="badge badge-danger">Critical</span>
+        <span data-i18n="news_incident1_date">29 de janeiro de 2025</span>
+        <span data-i18n="news_incident1_category">Exposição de dados</span>
+      </div>
+      <h3 data-i18n="news_incident1_title">DeepSeek expõe mais de 1 milhão de registros por meio de banco de dados não autenticado - histórico de bate-papo e chaves de API vazadas</h3>
+      <p data-i18n="news_incident1_desc">A Wiz Research descobriu que o banco de dados ClickHouse da DeepSeek era acessível publicamente sem autenticação em dois subdomínios. Mais de 1 milhão de entradas de log continham histórico de bate-papo em texto simples, chaves secretas de API e metadados operacionais de back-end. Os invasores podem roubar senhas e arquivos locais diretamente do servidor. Após a divulgação responsável, a DeepSeek protegeu imediatamente o banco de dados. Um ataque DDoS em grande escala contra a API e a interface de chat na web também ocorreu em 27 de janeiro.</p>
+      <p class="text-muted" style="font-size:0.8rem;" data-i18n-html="news_incident1_source">Fonte: <a href="https://www.wiz.io/blog/wiz-research-uncovers-exposed-deepseek-database-leak" target="_blank" rel="noopener">Wiz Blog</a></p>
+    </div>
+
+    <div class="news-item">
+      <div class="news-meta">
+        <span class="badge badge-danger">Critical</span>
+        <span data-i18n="news_incident2_date">10 de maio de 2024</span>
+        <span data-i18n="news_incident2_category">Violação de dados</span>
+      </div>
+      <h3 data-i18n="news_incident2_title">49 milhões de registros de clientes roubados por meio de abuso de API do Dell Partner Portal</h3>
+      <p data-i18n="news_incident2_desc">Um invasor registrou uma conta de parceiro falsa no portal de parceiros da Dell e obteve acesso em 48 horas. A API do portal não tinha verificações de autorização ou limitação de taxa. Durante três semanas, o invasor enviou aproximadamente 5.000 solicitações por minuto, roubando 49 milhões de registros contendo nomes, endereços, etiquetas de serviço e informações de pedidos. Os dados foram vendidos em um fórum de hackers.</p>
+      <p class="text-muted" style="font-size:0.8rem;" data-i18n-html="news_incident2_source">Fonte: <a href="https://www.bleepingcomputer.com/news/security/dell-api-abused-to-steal-49-million-customer-records-in-data-breach/" target="_blank" rel="noopener">BleepingComputer</a></p>
+    </div>
+
+    <div class="news-item">
+      <div class="news-meta">
+        <span class="badge badge-warning">High</span>
+        <span data-i18n="news_incident3_date">16 de janeiro de 2024</span>
+        <span data-i18n="news_incident3_category">Violação de dados</span>
+      </div>
+      <h3 data-i18n="news_incident3_title">Dados de 15 milhões de usuários do Trello vazados por meio de API Scraping</h3>
+      <p data-i18n="news_incident3_desc">Um invasor explorou a API REST desprotegida do Trello, que permitia consultas não autenticadas por endereço de e-mail. Ao enviar endereços de e-mail de bancos de dados previamente violados, o invasor raspou mais de 15 milhões de perfis de usuários (e-mails, nomes completos, nomes de usuário, informações do fórum) e os publicou em um fórum de hackers. Posteriormente, a Atlassian restringiu o endpoint.</p>
+      <p class="text-muted" style="font-size:0.8rem;" data-i18n-html="news_incident3_source">Fonte: <a href="https://www.bleepingcomputer.com/news/security/email-addresses-of-15-million-trello-users-leaked-on-hacking-forum/" target="_blank" rel="noopener">BleepingComputer</a></p>
+    </div>
+
+    <div class="news-item">
+      <div class="news-meta">
+        <span class="badge badge-warning">High</span>
+        <span data-i18n="news_incident4_date">Julho de 2025</span>
+        <span data-i18n="news_incident4_category">Vazamento de chave de API</span>
+      </div>
+      <h3 data-i18n="news_incident4_title">Funcionário do DOGE publica chave de API privada xAI no GitHub - acesso a mais de 52 LLMs internos expostos</h3>
+      <p data-i18n="news_incident4_desc">Um funcionário do Departamento de Eficiência Governamental (DOGE) dos EUA enviou um script (agent.py) contendo a chave de API privada do xAI para um repositório público do GitHub. A chave fornecia acesso irrestrito a mais de 52 modelos LLM, incluindo “grok 4-0709”, que havia sido criado apenas quatro dias antes. O GitGuardian detectou o vazamento, mas a chave não foi revogada imediatamente. Um vazamento semelhante também ocorreu em maio de 2025.</p>
+      <p class="text-muted" style="font-size:0.8rem;" data-i18n-html="news_incident4_source">Fonte: <a href="https://krebsonsecurity.com/2025/07/doge-denizen-marko-elez-leaked-api-key-for-xai/" target="_blank" rel="noopener">Krebs sobre segurança</a></p>
+    </div>
+  </div>
+
+  <!-- CVE -->
+  <div class="section">
+    <h2 data-i18n-html="news_cve_heading"><span class="section-icon">🛡</span> CVEs notáveis</h2>
+
+    <div class="news-item">
+      <div class="news-meta">
+        <span class="badge badge-danger">Active Exploitation</span>
+        <span data-i18n="news_cve1_date">Março de 2025 (exploração ativa observada)</span>
+        <span>SSRF</span>
+      </div>
+      <h3 data-i18n="news_cve1_title">CVE-2024-27564 - Mais de 10.000 tentativas de ataque na vulnerabilidade SSRF do ChatGPT</h3>
+      <p data-i18n-html="news_cve1_desc">Uma vulnerabilidade de Server-Side Request Forgery (SSRF) no componente <code>pictureproxy.php</code> do ChatGPT. Um invasor não autenticado pode injetar URLs criados para forçar o servidor a executar solicitações internas não autorizadas. Mais de 10.000 tentativas de ataque foram registradas a partir de um único endereço IP, com 33% dos alvos sendo organizações dos EUA (setores financeiro, governamental e de saúde). A vulnerabilidade é particularmente perigosa porque pode ser explorada em grande escala sem autenticação.</p>
+      <p class="text-muted" style="font-size:0.8rem;" data-i18n-html="news_cve1_source">Fonte: <a href="https://www.securityweek.com/chatgpt-vulnerability-exploited-against-us-government-organizations/" target="_blank" rel="noopener">SecurityWeek</a></p>
+    </div>
+
+    <div class="callout callout-warning">
+      <div class="callout-title" data-i18n="news_cve_callout_title">Lição aprendida: SSRF é uma ameaça séria às APIs</div>
+      <p data-i18n-html="news_cve_callout_desc">CVE-2024-27564 é um exemplo clássico de OWASP API7 (SSRF). APIs que aceitam entrada de URL de fontes externas exigem validação rigorosa para impedir o acesso a redes internas. Veja <a href="owasp-top10.html">OWASP Top 10 → API7</a>.</p>
+    </div>
+  </div>
+
+  <!-- Industry Reports -->
+  <div class="section">
+    <h2 data-i18n-html="news_reports_heading"><span class="section-icon">📊</span> Relatórios e tendências do setor</h2>
+    <div class="card-grid">
+      <div class="card">
+        <h3 data-i18n="news_report1_title">CVEs relacionados à IA aumentam 1.025% ano após ano</h3>
+        <p data-i18n="news_report1_desc">De acordo com o relatório API ThreatStats de 2025 da Wallarm, 439 CVEs relacionados à IA foram registrados em 2024, um aumento de 1.025% ano após ano. Mais de 50% das entradas do catálogo de vulnerabilidades exploradas conhecidas (KEV) da CISA estão relacionadas à API. As falhas de controle de acesso aumentaram 40% no geral e as falhas críticas de autorização aumentaram 36%.</p>
+        <span class="card-tag tag-high">Wallarm 2025</span>
+      </div>
+      <div class="card">
+        <h3 data-i18n="news_report2_title">99% das organizações enfrentaram problemas de segurança de API</h3>
+        <p data-i18n="news_report2_desc">De acordo com o relatório do primeiro trimestre de 2025 da Salt Security, 99% das organizações pesquisadas enfrentaram pelo menos um problema de segurança de API nos últimos 12 meses. Os principais riscos foram ataques de injeção e BOLA (autorização em nível de objeto quebrado), responsáveis ​​por mais de um terço de todos os incidentes. 95% dos ataques à API originaram-se de sessões autenticadas.</p>
+        <span class="card-tag tag-critical">Salt Security Q1 2025</span>
+      </div>
+      <div class="card">
+        <h3 data-i18n="news_report3_title">30.000 espaços de trabalho do Postman encontrados expondo chaves de API</h3>
+        <p data-i18n="news_report3_desc">Pesquisadores de segurança descobriram 30.000 espaços de trabalho do Postman expostos publicamente sem controles de segurança. Eles continham chaves de API ativas, tokens de acesso e cargas confidenciais, muitos deles fornecendo acesso direto a ambientes de produção. Este caso destaca o risco de credenciais de “API sombra” em ferramentas de colaboração de desenvolvedores.</p>
+        <span class="card-tag tag-high">Wallarm 2025</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Trend Analysis -->
+  <div class="section">
+    <h2 data-i18n-html="news_trends_heading"><span class="section-icon">📈</span> Tendências de segurança de API para 2024-2025</h2>
+    <div class="card-grid">
+      <div class="card">
+        <h3 data-i18n="news_trend1_title">1. Rápido aumento nas vulnerabilidades da API AI/LLM</h3>
+        <p data-i18n="news_trend1_desc">Vulnerabilidades em APIs baseadas em IA, como ChatGPT e DeepSeek, estão aumentando. Injeção imediata, SSRF e exposição de dados são as principais ameaças. As medidas de segurança não acompanham a rápida adoção da IA.</p>
+      </div>
+      <div class="card">
+        <h3 data-i18n="news_trend2_title">2. Autorização quebrada continua sendo a principal ameaça</h3>
+        <p data-i18n="news_trend2_desc">BOLA (Broken Object Level Authorization) continua a ser a vulnerabilidade mais prevalente. Como visto nos casos Dell e Trello, a falta de verificações básicas de autorização leva a violações de dados em grande escala.</p>
+      </div>
+      <div class="card">
+        <h3 data-i18n="news_trend3_title">3. Ataques de sessões autenticadas</h3>
+        <p data-i18n="news_trend3_desc">95% dos ataques ocorrem após a autenticação ter sido aprovada. Os invasores com tokens de acesso legítimos exploram falhas de autorização para se moverem lateralmente, tornando esta a técnica de ataque dominante.</p>
+      </div>
+      <div class="card">
+        <h3 data-i18n="news_trend4_title">4. Vazamentos de credenciais por meio de ferramentas de desenvolvedor</h3>
+        <p data-i18n="news_trend4_desc">Vazamentos de chaves de API de ferramentas de desenvolvedor como GitHub e Postman se tornaram um problema crítico. A adoção de ferramentas de detecção automatizadas (por exemplo, GitGuardian) e práticas rigorosas de gerenciamento de segredos são essenciais.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Action Items -->
+  <div class="section">
+    <h2 data-i18n-html="news_actions_heading"><span class="section-icon">✅</span> Ações a serem tomadas agora</h2>
+    <div class="callout callout-success">
+      <div class="callout-title" data-i18n="news_actions_callout_title">Contramedidas aprendidas com esses incidentes</div>
+    </div>
+    <ul class="checklist">
+      <li data-i18n-html="news_action1"><strong>Aplicar verificações de autorização</strong> - Implementar autorização em nível de objeto em todos os endpoints da API (lição da Dell/Trello)</li>
+      <li data-i18n-html="news_action2"><strong>Implementar limitação de taxa</strong> - Defina limites de taxa apropriados por endpoint (a Dell não tinha limites, permitindo 5.000 solicitações por minuto)</li>
+      <li data-i18n-html="news_action3"><strong>Automatize a verificação de segredos</strong> - Detecte automaticamente vazamentos de credenciais de repositórios/espaços de trabalho públicos no GitHub, Postman, etc.</li>
+      <li data-i18n-html="news_action4"><strong>Implementar contramedidas SSRF</strong> - Valide URLs fornecidos pelo usuário e bloqueie intervalos de endereços IP privados</li>
+      <li data-i18n-html="news_action5"><strong>Auditar configurações de exposição do banco de dados</strong> - Verifique regularmente se as interfaces de gerenciamento não são expostas acidentalmente (lição do DeepSeek)</li>
+      <li data-i18n-html="news_action6"><strong>Avaliação de segurança para endpoints de IA/LLM</strong> - Realize avaliações de risco para injeção imediata e vazamento de dados</li>
+      <li data-i18n-html="news_action7"><strong>Verificações de vulnerabilidade de dependência</strong> - Integre auditoria npm/Snyk em CI/CD para detectar automaticamente CVEs conhecidos</li>
+    </ul>
+  </div>
+
+  <!-- References -->
+  <div class="section">
+    <h2 data-i18n-html="news_references_heading"><span class="section-icon">🔗</span> Links de referência</h2>
+    <div class="card-grid card-grid-3">
+      <div class="card">
+        <h3>OWASP</h3>
+        <p><a href="https://owasp.org/API-Security/" target="_blank" rel="noopener">OWASP API Security Project</a></p>
+        <p><a href="https://owasp.org/www-project-api-security/" target="_blank" rel="noopener">API Security Top 10</a></p>
+      </div>
+      <div class="card">
+        <h3 data-i18n="news_ref_reports_title">Relatórios</h3>
+        <p><a href="https://www.wallarm.com/reports/2025-api-security-report" target="_blank" rel="noopener">Wallarm 2025 API ThreatStats</a></p>
+        <p><a href="https://salt.security/api-security-trends" target="_blank" rel="noopener">Salt Security Q1 2025</a></p>
+      </div>
+      <div class="card">
+        <h3 data-i18n="news_ref_cvedb_title">Bancos de dados CVE</h3>
+        <p><a href="https://cve.mitre.org/" target="_blank" rel="noopener">MITRE CVE</a></p>
+        <p><a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog" target="_blank" rel="noopener">CISA KEV Catalog</a></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="callout callout-info">
+    <div class="callout-title" data-i18n="news_update_title">Atualizar informações</div>
+    <p data-i18n="news_update_desc">As informações nesta página são baseadas em dados disponíveis publicamente de 2025. Verifique os links de referência acima para obter as informações mais recentes sobre vulnerabilidades.</p>
+  </div>
+
+<script src="../js/common.js"></script>
+
+
+</body></html>

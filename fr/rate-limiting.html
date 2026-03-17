@@ -1,0 +1,246 @@
+<!DOCTYPE html><html lang="fr"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="rate_page_title">Limitation de débit, validation des entrées et CORS - Hub de référence sur la sécurité des API</title>
+  <link rel="stylesheet" href="../css/style.css">
+
+    <link rel="alternate" hreflang="en" href="/api-security-hub/en/rate-limiting.html">
+    <link rel="alternate" hreflang="ja" href="/api-security-hub/ja/rate-limiting.html">
+    <link rel="alternate" hreflang="es" href="/api-security-hub/es/rate-limiting.html">
+    <link rel="alternate" hreflang="pt" href="/api-security-hub/pt/rate-limiting.html">
+    <link rel="alternate" hreflang="fr" href="/api-security-hub/fr/rate-limiting.html">
+    <link rel="alternate" hreflang="x-default" href="/api-security-hub/en/rate-limiting.html">
+</head>
+<body>
+
+  <div class="page-header">
+    <h1 data-i18n="rate_main_heading">Limitation de débit, validation d'entrée et CORS</h1>
+    <p class="subtitle" data-i18n="rate_subtitle">Explique les modèles de mise en œuvre défensifs pour protéger votre API contre les abus.</p>
+  </div>
+
+  <!-- Rate Limiting -->
+  <div class="section">
+    <h2 data-i18n-html="rate_rl_heading"><span class="section-icon">⏱</span> Limitation du débit</h2>
+    <p data-i18n="rate_rl_desc">La limitation de débit est un mécanisme de défense fondamental pour protéger votre système contre les abus d'API, les attaques DoS et le scraping.</p>
+    <h3 data-i18n="rate_rl_algo_heading">Comparaison d'algorithmes</h3>
+    <div class="table-wrapper">
+      <table>
+        <thead><tr><th data-i18n="rate_rl_table_algorithm">Algorithme</th><th data-i18n="rate_rl_table_characteristics">Caractéristiques</th><th data-i18n="rate_rl_table_pros">Avantages</th><th data-i18n="rate_rl_table_cons">Inconvénients</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Fixed Window</strong></td><td data-i18n="rate_rl_fixed_char">Compte dans une fenêtre de temps fixe</td><td data-i18n="rate_rl_fixed_pros">Simple à mettre en œuvre, efficace en mémoire</td><td data-i18n="rate_rl_fixed_cons">Les rafales se produisent aux limites des fenêtres</td></tr>
+          <tr><td><strong>Sliding Window Log</strong></td><td data-i18n="rate_rl_slidelog_char">Horodatage des demandes d'enregistrement</td><td data-i18n="rate_rl_slidelog_pros">Contrôle précis</td><td data-i18n="rate_rl_slidelog_cons">Consommation de mémoire élevée</td></tr>
+          <tr><td><strong>Sliding Window Counter</strong></td><td data-i18n="rate_rl_slidecnt_char">Moyenne pondérée des fenêtres précédentes et actuelles</td><td data-i18n="rate_rl_slidecnt_pros">Bon équilibre</td><td data-i18n="rate_rl_slidecnt_cons">Un peu complexe</td></tr>
+          <tr><td><strong>Token Bucket</strong></td><td data-i18n="rate_rl_token_char">Consomme des jetons pour l'accès</td><td data-i18n="rate_rl_token_pros">Permet des rafales tout en respectant les limites</td><td data-i18n="rate_rl_token_cons">Nécessite un réglage des paramètres</td></tr>
+          <tr><td><strong>Leaky Bucket</strong></td><td data-i18n="rate_rl_leaky_char">Traite les demandes à un rythme constant</td><td data-i18n="rate_rl_leaky_pros">Taux de sortie stable</td><td data-i18n="rate_rl_leaky_cons">Mauvaise gestion des rafales</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <h3 data-i18n="rate_rl_express_heading">Implémentation de la limitation de débit dans Express.js</h3>
+    <div class="code-block">
+      <div class="code-block-header"><span class="lang">JavaScript (Express)</span><span data-i18n="rate_rl_express_label">Limitation de débit multicouche</span></div>
+      <pre><span class="keyword">const</span> rateLimit = <span class="function">require</span>(<span class="string">'express-rate-limit'</span>);
+<span class="keyword">const</span> RedisStore = <span class="function">require</span>(<span class="string">'rate-limit-redis'</span>);
+
+<span class="comment" data-i18n="rate_rl_comment_global">// Limite globale&nbsp;: appliquée à toutes les API</span>
+<span class="keyword">const</span> globalLimiter = <span class="function">rateLimit</span>({
+  <span class="variable">windowMs</span>: <span class="number">15</span> * <span class="number">60</span> * <span class="number">1000</span>, <span class="comment" data-i18n="rate_rl_comment_15min">// 15 minutes</span>
+  <span class="variable">max</span>: <span class="number">100</span>,
+  <span class="variable">standardHeaders</span>: <span class="keyword">true</span>,    <span class="comment" data-i18n="rate_rl_comment_headers">// Renvoie les en-têtes RateLimit-*</span>
+  <span class="variable">legacyHeaders</span>: <span class="keyword">false</span>,
+  <span class="variable">message</span>: { <span class="variable">error</span>: <span class="string">'Too many requests, please try again later.'</span> },
+});
+
+<span class="comment" data-i18n="rate_rl_comment_auth">// Pour les points de terminaison d'authentification&nbsp;: limites plus strictes</span>
+<span class="keyword">const</span> authLimiter = <span class="function">rateLimit</span>({
+  <span class="variable">windowMs</span>: <span class="number">15</span> * <span class="number">60</span> * <span class="number">1000</span>,
+  <span class="variable">max</span>: <span class="number">5</span>,  <span class="comment" data-i18n="rate_rl_comment_login">// Tentatives de connexion limitées à 5 toutes les 15 minutes</span>
+  <span class="variable">skipSuccessfulRequests</span>: <span class="keyword">true</span>, <span class="comment" data-i18n="rate_rl_comment_skip">// Les requêtes réussies ne sont pas comptées</span>
+});
+
+<span class="comment" data-i18n="rate_rl_comment_distributed">// Pour les environnements distribués&nbsp;: backend Redis</span>
+<span class="keyword">const</span> distributedLimiter = <span class="function">rateLimit</span>({
+  <span class="variable">store</span>: <span class="keyword">new</span> <span class="type">RedisStore</span>({ <span class="variable">sendCommand</span>: (...args) =&gt; redisClient.<span class="function">sendCommand</span>(args) }),
+  <span class="variable">windowMs</span>: <span class="number">60</span> * <span class="number">1000</span>,
+  <span class="variable">max</span>: <span class="number">30</span>,
+});
+
+app.<span class="function">use</span>(globalLimiter);
+app.<span class="function">use</span>(<span class="string">'/api/auth'</span>, authLimiter);</pre>
+    </div>
+    <h3 data-i18n="rate_rl_response_heading">En-têtes de réponse</h3>
+    <div class="code-block">
+      <div class="code-block-header"><span class="lang">HTTP Response Headers</span><span>RFC 6585 / draft-ietf-httpapi-ratelimit-headers</span></div>
+      <pre>RateLimit-Limit: 100
+RateLimit-Remaining: 42
+RateLimit-Reset: 1672531200
+Retry-After: 30</pre>
+    </div>
+    <div class="callout callout-info">
+      <div class="callout-title" data-i18n="rate_rl_key_title">Touches de limitation de débit</div>
+      <p data-i18n="rate_rl_key_desc">En appliquant des limites de débit à l'aide de clés composites telles qu'une clé API, un ID utilisateur ou un point de terminaison en plus de l'adresse IP, vous pouvez minimiser l'impact sur les utilisateurs légitimes.</p>
+    </div>
+  </div>
+
+  <!-- Input Validation -->
+  <div class="section">
+    <h2 data-i18n-html="rate_iv_heading"><span class="section-icon">🔍</span> Validation des entrées</h2>
+    <p data-i18n="rate_iv_desc">Toutes les entrées de l'API peuvent contenir des données malveillantes. Validez toujours côté serveur.</p>
+    <h3 data-i18n="rate_iv_principles_heading">Principes de validation</h3>
+    <div class="card-grid card-grid-3">
+      <div class="card"><h3 data-i18n="rate_iv_allowlist_title">Approche de liste verte</h3><p data-i18n="rate_iv_allowlist_desc">Définissez une liste de valeurs autorisées. Plus sûr qu'une liste de refus (liste de blocage). Peut gérer de nouveaux modèles d’attaque.</p></div>
+      <div class="card"><h3 data-i18n="rate_iv_type_title">Type, longueur et portée</h3><p data-i18n="rate_iv_type_desc">Vérifiez strictement les types de données, le nombre maximum de caractères et les limites numériques supérieures/inférieures. Une défense fondamentale contre les débordements de tampon.</p></div>
+      <div class="card"><h3 data-i18n="rate_iv_sanitize_title">Désinfecter ou rejeter</h3><p data-i18n="rate_iv_sanitize_desc">Rejeter une entrée invalide est plus sûr que de la « corriger ». La désinfection peut produire des transformations inattendues.</p></div>
+    </div>
+    <h3 data-i18n="rate_iv_jsonschema_heading">Validation avec le schéma JSON</h3>
+    <div class="code-block">
+      <div class="code-block-header"><span class="lang">JavaScript (Express + Ajv)</span><span data-i18n="rate_iv_jsonschema_label">Validation du schéma</span></div>
+      <pre><span class="keyword">const</span> Ajv = <span class="function">require</span>(<span class="string">'ajv'</span>);
+<span class="keyword">const</span> addFormats = <span class="function">require</span>(<span class="string">'ajv-formats'</span>);
+
+<span class="keyword">const</span> ajv = <span class="keyword">new</span> <span class="type">Ajv</span>({ <span class="variable">allErrors</span>: <span class="keyword">true</span>, <span class="variable">removeAdditional</span>: <span class="keyword">true</span> });
+<span class="function">addFormats</span>(ajv);
+
+<span class="comment" data-i18n="rate_iv_comment_schema">// Schéma pour l'API de création d'utilisateurs</span>
+<span class="keyword">const</span> createUserSchema = {
+  <span class="variable">type</span>: <span class="string">'object'</span>,
+  <span class="variable">required</span>: [<span class="string">'name'</span>, <span class="string">'email'</span>],
+  <span class="variable">additionalProperties</span>: <span class="keyword">false</span>,
+  <span class="variable">properties</span>: {
+    <span class="variable">name</span>: {
+      <span class="variable">type</span>: <span class="string">'string'</span>,
+      <span class="variable">minLength</span>: <span class="number">1</span>,
+      <span class="variable">maxLength</span>: <span class="number">100</span>,
+      <span class="variable">pattern</span>: <span class="string">'^[a-zA-Z0-9\\s\\-]+$'</span>, <span class="comment" data-i18n="rate_iv_comment_allowed_chars">// Restreindre aux caractères autorisés</span>
+    },
+    <span class="variable">email</span>: {
+      <span class="variable">type</span>: <span class="string">'string'</span>,
+      <span class="variable">format</span>: <span class="string">'email'</span>,
+      <span class="variable">maxLength</span>: <span class="number">254</span>,
+    },
+    <span class="variable">age</span>: {
+      <span class="variable">type</span>: <span class="string">'integer'</span>,
+      <span class="variable">minimum</span>: <span class="number">0</span>,
+      <span class="variable">maximum</span>: <span class="number">150</span>,
+    },
+  },
+};
+
+<span class="comment" data-i18n="rate_iv_comment_middleware">// Middleware de validation</span>
+<span class="keyword">function</span> <span class="function">validateBody</span>(schema) {
+  <span class="keyword">const</span> validate = ajv.<span class="function">compile</span>(schema);
+  <span class="keyword">return</span> (req, res, next) =&gt; {
+    <span class="keyword">if</span> (!<span class="function">validate</span>(req.body)) {
+      <span class="keyword">return</span> res.<span class="function">status</span>(<span class="number">400</span>).<span class="function">json</span>({
+        <span class="variable">error</span>: <span class="string">'Validation failed'</span>,
+        <span class="variable">details</span>: validate.errors,
+      });
+    }
+    <span class="function">next</span>();
+  };
+}
+
+app.<span class="function">post</span>(<span class="string">'/api/users'</span>, <span class="function">validateBody</span>(createUserSchema), createUser);</pre>
+    </div>
+    <h3 data-i18n="rate_iv_attacks_heading">Attaques courantes et contre-mesures de validation</h3>
+    <div class="table-wrapper">
+      <table>
+        <thead><tr><th data-i18n="rate_iv_table_attack">Attaque</th><th data-i18n="rate_iv_table_countermeasure">Contre-mesure</th><th data-i18n="rate_iv_table_example">Exemple</th></tr></thead>
+        <tbody>
+          <tr><td data-i18n="rate_iv_attack_sql">Injection SQL</td><td data-i18n="rate_iv_counter_sql">Requêtes paramétrées, utilisez un ORM</td><td><code>db.query('SELECT * FROM users WHERE id = ?', [id])</code></td></tr>
+          <tr><td data-i18n="rate_iv_attack_nosql">Injection NoSQL</td><td data-i18n="rate_iv_counter_nosql">Vérification de type, nettoyage des opérateurs $</td><td data-i18n="rate_iv_example_nosql">Assurez-vous que l'entrée est une chaîne (rejeter les objets)</td></tr>
+          <tr><td data-i18n="rate_iv_attack_xss">XSS (via la réponse API)</td><td data-i18n="rate_iv_counter_xss">Spécifiez le type de contenu, échappez la sortie</td><td><code>Content-Type: application/json</code></td></tr>
+          <tr><td data-i18n="rate_iv_attack_path">Traversée du chemin</td><td data-i18n="rate_iv_counter_path">Supprimer les séparateurs de chemin de l'entrée</td><td data-i18n-html="rate_iv_example_path">Normaliser avec <code>path.basename()</code></td></tr>
+          <tr><td data-i18n="rate_iv_attack_xxe">XXE (Entité externe XML)</td><td data-i18n="rate_iv_counter_xxe">Désactiver la résolution des entités externes</td><td data-i18n="rate_iv_example_xxe">Désactiver dans les paramètres de l'analyseur XML</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- CORS -->
+  <div class="section">
+    <h2 data-i18n-html="rate_cors_heading"><span class="section-icon">🌐</span> CORS (Partage de ressources inter-origines)</h2>
+    <p data-i18n="rate_cors_desc">CORS est un mécanisme qui contrôle la politique de même origine du navigateur. Une mauvaise configuration peut entraîner de graves risques de sécurité.</p>
+    <div class="callout callout-danger">
+      <div class="callout-title" data-i18n="rate_cors_danger_title">Configuration dangereuse</div>
+      <p data-i18n-html="rate_cors_danger_desc"><code>Access-Control-Allow-Origin&nbsp;: *</code> et <code>Access-Control-Allow-Credentials&nbsp;: true</code> ne peuvent pas être utilisés ensemble. Restreindre l’utilisation des caractères génériques aux API publiques uniquement.</p>
+    </div>
+    <h3 data-i18n="rate_cors_safe_heading">Configuration CORS sécurisée</h3>
+    <div class="code-block">
+      <div class="code-block-header"><span class="lang">JavaScript (Express)</span><span data-i18n="rate_cors_code_label">Configuration CORS</span></div>
+      <pre><span class="keyword">const</span> cors = <span class="function">require</span>(<span class="string">'cors'</span>);
+
+<span class="comment" data-i18n="rate_cors_comment_origins">// Spécifie explicitement les origines autorisées</span>
+<span class="keyword">const</span> allowedOrigins = [
+  <span class="string">'https://app.example.com'</span>,
+  <span class="string">'https://admin.example.com'</span>,
+];
+
+app.<span class="function">use</span>(<span class="function">cors</span>({
+  <span class="function">origin</span>(origin, callback) {
+    <span class="comment" data-i18n="rate_cors_comment_server">// Autoriser la communication de serveur à serveur (pas d'origine)</span>
+    <span class="keyword">if</span> (!origin || allowedOrigins.<span class="function">includes</span>(origin)) {
+      <span class="function">callback</span>(<span class="keyword">null</span>, <span class="keyword">true</span>);
+    } <span class="keyword">else</span> {
+      <span class="function">callback</span>(<span class="keyword">new</span> <span class="type">Error</span>(<span class="string">'Not allowed by CORS'</span>));
+    }
+  },
+  <span class="variable">methods</span>: [<span class="string">'GET'</span>, <span class="string">'POST'</span>, <span class="string">'PUT'</span>, <span class="string">'DELETE'</span>],
+  <span class="variable">allowedHeaders</span>: [<span class="string">'Content-Type'</span>, <span class="string">'Authorization'</span>, <span class="string">'X-API-Key'</span>],
+  <span class="variable">credentials</span>: <span class="keyword">true</span>,
+  <span class="variable">maxAge</span>: <span class="number">86400</span>,  <span class="comment" data-i18n="rate_cors_comment_preflight">// Cache de contrôle en amont&nbsp;: 24&nbsp;heures</span>
+}));</pre>
+    </div>
+    <h3 data-i18n="rate_cors_checklist_heading">Liste de contrôle CORS</h3>
+    <ul class="checklist">
+      <li data-i18n="rate_cors_check1">N'utilisez pas de caractère générique (*) pour Access-Control-Allow-Origin (pour les API nécessitant une authentification)</li>
+      <li data-i18n="rate_cors_check2">Access-Control-Allow-Methods doit inclure uniquement les méthodes requises</li>
+      <li data-i18n="rate_cors_check3">Access-Control-Allow-Headers doit inclure uniquement les en-têtes requis</li>
+      <li data-i18n="rate_cors_check4">Mettre en cache les requêtes de contrôle en amont avec Access-Control-Max-Age</li>
+      <li data-i18n="rate_cors_check5">Restreindre les en-têtes de réponse exposés avec Access-Control-Expose-Headers</li>
+      <li data-i18n="rate_cors_check6">Ne reflète jamais l’origine de la demande directement dans la réponse</li>
+    </ul>
+    <h3 data-i18n="rate_cors_headers_heading">Référence des en-têtes CORS</h3>
+    <div class="table-wrapper">
+      <table>
+        <thead><tr><th data-i18n="rate_cors_table_header">En-tête</th><th data-i18n="rate_cors_table_purpose">But</th><th data-i18n="rate_cors_table_recommended">Valeur recommandée</th></tr></thead>
+        <tbody>
+          <tr><td><code>Access-Control-Allow-Origin</code></td><td data-i18n="rate_cors_acao_purpose">Origines autorisées</td><td data-i18n="rate_cors_acao_value">Spécification de domaine explicite</td></tr>
+          <tr><td><code>Access-Control-Allow-Methods</code></td><td data-i18n="rate_cors_acam_purpose">Méthodes HTTP autorisées</td><td data-i18n="rate_cors_acam_value">Minimum requis seulement</td></tr>
+          <tr><td><code>Access-Control-Allow-Headers</code></td><td data-i18n="rate_cors_acah_purpose">En-têtes de requête autorisés</td><td data-i18n="rate_cors_acah_value">Minimum requis seulement</td></tr>
+          <tr><td><code>Access-Control-Allow-Credentials</code></td><td data-i18n="rate_cors_acac_purpose">Autoriser la transmission de cookies</td><td data-i18n="rate_cors_acac_value">vrai (uniquement lorsque l'authentification est requise)</td></tr>
+          <tr><td><code>Access-Control-Max-Age</code></td><td data-i18n="rate_cors_acma_purpose">Durée du cache de contrôle en amont en secondes</td><td data-i18n="rate_cors_acma_value">86400 (24 heures)</td></tr>
+          <tr><td><code>Access-Control-Expose-Headers</code></td><td data-i18n="rate_cors_aceh_purpose">En-têtes de réponse lisibles par JavaScript</td><td data-i18n="rate_cors_aceh_value">Uniquement les en-têtes nécessaires tels que RateLimit-*</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Additional Headers -->
+  <div class="section">
+    <h2 data-i18n-html="rate_headers_heading"><span class="section-icon">🔒</span> Autres en-têtes de sécurité recommandés</h2>
+    <div class="code-block">
+      <div class="code-block-header"><span class="lang">HTTP Response Headers</span><span data-i18n="rate_headers_label">Paramètres recommandés</span></div>
+      <pre><span class="comment" data-i18n="rate_headers_comment_nosniff">#&nbsp;Désactiver la détection automatique du type de contenu</span>
+X-Content-Type-Options: nosniff
+
+<span class="comment" data-i18n="rate_headers_comment_frame"># Empêcher l'intégration d'iframe</span>
+X-Frame-Options: DENY
+
+<span class="comment" data-i18n="rate_headers_comment_hsts"># Appliquer HTTPS</span>
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+
+<span class="comment" data-i18n="rate_headers_comment_csp"># CSP&nbsp;: Puisque les API ne renvoient que du JSON, bloquez toute exécution de script</span>
+Content-Security-Policy: default-src 'none'; frame-ancestors 'none'
+
+<span class="comment" data-i18n="rate_headers_comment_referrer"># Restreindre les informations sur le référent</span>
+Referrer-Policy: no-referrer
+
+<span class="comment" data-i18n="rate_headers_comment_permissions"># Restreindre les fonctionnalités du navigateur</span>
+Permissions-Policy: geolocation=(), camera=(), microphone=()</pre>
+    </div>
+  </div>
+
+<script src="../js/common.js"></script>
+
+
+</body></html>

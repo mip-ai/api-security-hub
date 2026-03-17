@@ -1,0 +1,257 @@
+<!DOCTYPE html><html lang="fr"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="tools_page_title">Outils de sécurité - Hub de référence sur la sécurité des API</title>
+  <link rel="stylesheet" href="../css/style.css">
+
+    <link rel="alternate" hreflang="en" href="/api-security-hub/en/tools.html">
+    <link rel="alternate" hreflang="ja" href="/api-security-hub/ja/tools.html">
+    <link rel="alternate" hreflang="es" href="/api-security-hub/es/tools.html">
+    <link rel="alternate" hreflang="pt" href="/api-security-hub/pt/tools.html">
+    <link rel="alternate" hreflang="fr" href="/api-security-hub/fr/tools.html">
+    <link rel="alternate" hreflang="x-default" href="/api-security-hub/en/tools.html">
+</head>
+<body>
+
+  <div class="page-header">
+    <h1 data-i18n="tools_heading">Outils de sécurité des API</h1>
+    <p class="subtitle" data-i18n="tools_subtitle">Présentation d'outils utiles pour l'évaluation, les tests et la surveillance des vulnérabilités des API.</p>
+  </div>
+
+  <!-- DAST Tools -->
+  <div class="section">
+    <h2 data-i18n-html="tools_dast_heading"><span class="section-icon">🔎</span> Outils de tests dynamiques de sécurité des applications (DAST)</h2>
+    <p data-i18n="tools_dast_description">Outils qui envoient des requêtes aux API en cours d'exécution pour détecter les vulnérabilités.</p>
+    <div class="card-grid">
+      <div class="tool-card">
+        <h3 data-i18n-html="tools_burp_title">Burp Suite <span class="tool-badge">Édition commerciale/gratuite disponible</span></h3>
+        <p data-i18n="tools_burp_description">L'outil standard de l'industrie pour les tests de sécurité des applications Web et des API. Capacités d’interception et d’analyse basées sur un proxy.</p>
+        <ul>
+          <li data-i18n="tools_burp_feature1">Intercepter et modifier les requêtes/réponses HTTP</li>
+          <li data-i18n="tools_burp_feature2">Analyse automatisée (Injection SQL, XSS, etc.)</li>
+          <li data-i18n="tools_burp_feature3">Intrus&nbsp;:&nbsp;fuzzing des paramètres</li>
+          <li data-i18n="tools_burp_feature4">Répéteur&nbsp;:&nbsp;relecture et vérification manuelle des demandes</li>
+          <li data-i18n="tools_burp_feature5">Écosystème d'extension riche (BApp Store)</li>
+        </ul>
+        <div class="callout callout-info mt-2">
+          <div class="callout-title" data-i18n="tools_burp_tip_title">Conseils pour les tests d'API</div>
+          <p data-i18n="tools_burp_tip_desc">Importez une définition OpenAPI/Swagger pour explorer et tester automatiquement tous les points de terminaison.</p>
+        </div>
+      </div>
+      <div class="tool-card">
+        <h3 data-i18n-html="tools_zap_title">OWASP ZAP <span class="tool-badge">Gratuit / OSS</span></h3>
+        <p data-i18n="tools_zap_description">Un outil de test de sécurité open source développé par OWASP. Facile à intégrer dans les pipelines CI/CD.</p>
+        <ul>
+          <li data-i18n="tools_zap_feature1">Analyse active / Analyse passive</li>
+          <li data-i18n="tools_zap_feature2">Importer des définitions d'API (OpenAPI, GraphQL)</li>
+          <li data-i18n="tools_zap_feature3">Intégration CI/CD (GitHub Actions, Jenkins)</li>
+          <li data-i18n="tools_zap_feature4">Exécution sans tête avec prise en charge de Docker</li>
+          <li data-i18n="tools_zap_feature5">Tests personnalisés via des scripts</li>
+        </ul>
+        <div class="code-block mt-2">
+          <div class="code-block-header"><span class="lang">Bash</span><span data-i18n="tools_zap_code_label">Analyse API avec ZAP Docker</span></div>
+          <pre>docker run -t ghcr.io/zaproxy/zaproxy:stable zap-api-scan.py \
+  -t https://api.example.com/openapi.json \
+  -f openapi \
+  -r report.html</pre>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- API Testing Tools -->
+  <div class="section">
+    <h2 data-i18n-html="tools_apitest_heading"><span class="section-icon">🧪</span> Outils de test et de développement d'API</h2>
+    <div class="card-grid">
+      <div class="tool-card">
+        <h3 data-i18n-html="tools_postman_title">Facteur <span class="tool-badge">Gratuit / Commercial</span></h3>
+        <p data-i18n="tools_postman_description">L'outil incontournable pour le développement et les tests d'API. Également utile pour les tests de sécurité.</p>
+        <ul>
+          <li data-i18n="tools_postman_feature1">Organisez des cas de test avec la fonctionnalité Collections</li>
+          <li data-i18n="tools_postman_feature2">Basculer entre la préparation et la production avec des variables d'environnement</li>
+          <li data-i18n="tools_postman_feature3">Acquérir automatiquement des jetons avec des scripts de pré-demande</li>
+          <li data-i18n="tools_postman_feature4">Automatisez la validation des réponses dans l'onglet Tests</li>
+          <li data-i18n="tools_postman_feature5">Exécuter à partir de CI/CD avec Newman (CLI)</li>
+        </ul>
+        <div class="code-block mt-2">
+          <div class="code-block-header"><span class="lang">JavaScript</span><span data-i18n="tools_postman_code_label">Exemple de script de test Postman</span></div>
+          <pre><span class="comment" data-i18n="tools_postman_comment1">// Validation du code d'état</span>
+pm.test(<span class="string">"Status is 200"</span>, () =&gt; {
+  pm.response.to.have.status(<span class="number">200</span>);
+});
+
+<span class="comment" data-i18n="tools_postman_comment2">// Validation de l'en-tête de sécurité</span>
+pm.test(<span class="string">"Security headers present"</span>, () =&gt; {
+  pm.response.to.have.header(<span class="string">"X-Content-Type-Options"</span>);
+  pm.response.to.have.header(<span class="string">"Strict-Transport-Security"</span>);
+});
+
+<span class="comment" data-i18n="tools_postman_comment3">// Vérification de l'exposition des données sensibles</span>
+pm.test(<span class="string">"No sensitive data exposed"</span>, () =&gt; {
+  <span class="keyword">const</span> body = pm.response.json();
+  pm.expect(body).to.not.have.property(<span class="string">"password"</span>);
+  pm.expect(body).to.not.have.property(<span class="string">"password_hash"</span>);
+  pm.expect(body).to.not.have.property(<span class="string">"secret"</span>);
+});</pre>
+        </div>
+      </div>
+      <div class="tool-card">
+        <h3 data-i18n-html="tools_curl_title">curl + jq <span class="tool-badge">Gratuit / CLI</span></h3>
+        <p data-i18n="tools_curl_description">Test rapide de l'API depuis la ligne de commande. Facile à scripter et à automatiser.</p>
+        <ul>
+          <li data-i18n="tools_curl_feature1">Disponible dans n’importe quel environnement</li>
+          <li data-i18n="tools_curl_feature2">Automatisez avec des scripts shell</li>
+          <li data-i18n="tools_curl_feature3">Analyser les réponses JSON avec jq</li>
+          <li data-i18n="tools_curl_feature4">Inspection détaillée des en-têtes HTTP</li>
+        </ul>
+        <div class="code-block mt-2">
+          <div class="code-block-header"><span class="lang">Bash</span><span data-i18n="tools_curl_code_label">Vérification de l'en-tête de sécurité</span></div>
+          <pre><span class="comment" data-i18n="tools_curl_comment1"># Vérifiez les en-têtes de réponse</span>
+curl -s -D - -o /dev/null https://api.example.com/health
+
+<span class="comment" data-i18n="tools_curl_comment2"># Tentative d'accès sans authentification</span>
+curl -s -w "%{http_code}" https://api.example.com/api/users
+
+<span class="comment" data-i18n="tools_curl_comment3"># Test BOLA (accès à la ressource d'un autre utilisateur)</span>
+curl -s -H "Authorization: Bearer $TOKEN" \
+  https://api.example.com/api/users/OTHER_USER_ID</pre>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SAST & SCA -->
+  <div class="section">
+    <h2 data-i18n-html="tools_sast_heading"><span class="section-icon">📊</span> Analyse statique (SAST) et analyse de la composition logicielle (SCA)</h2>
+    <div class="card-grid card-grid-3">
+      <div class="tool-card">
+        <h3 data-i18n-html="tools_semgrep_title">Semgrep <span class="tool-badge">Gratuit / OSS</span></h3>
+        <p data-i18n="tools_semgrep_description">Un outil d'analyse statique basé sur des modèles. Facile à créer des règles personnalisées.</p>
+        <ul>
+          <li data-i18n="tools_semgrep_feature1">Prise en charge multilingue (JS, Python, Go, Java, etc.)</li>
+          <li data-i18n="tools_semgrep_feature2">Ensembles de règles de sécurité intégrés</li>
+          <li data-i18n="tools_semgrep_feature3">Intégration CI/CD facile</li>
+          <li data-i18n="tools_semgrep_feature4">Définir des règles personnalisées dans YAML</li>
+        </ul>
+      </div>
+      <div class="tool-card">
+        <h3 data-i18n-html="tools_snyk_title">Snyk <span class="tool-badge">Niveau gratuit disponible</span></h3>
+        <p data-i18n="tools_snyk_description">Analyse des vulnérabilités des dépendances et analyse du code.</p>
+        <ul>
+          <li data-i18n="tools_snyk_feature1">Analyse des dépendances pour npm, pip, Maven, etc.</li>
+          <li data-i18n="tools_snyk_feature2">Détection automatique des CVE connus</li>
+          <li data-i18n="tools_snyk_feature3">Générer automatiquement des PR de correctifs</li>
+          <li data-i18n="tools_snyk_feature4">Analyse d'images de conteneurs</li>
+        </ul>
+      </div>
+      <div class="tool-card">
+        <h3 data-i18n-html="tools_npm_audit_title">audit npm / Trivy <span class="tool-badge">Gratuit</span></h3>
+        <p data-i18n="tools_npm_audit_description">Vérification des vulnérabilités pour les gestionnaires de packages et les conteneurs.</p>
+        <ul>
+          <li data-i18n-html="tools_npm_audit_feature1"><code>audit npm</code>&nbsp;: packages Node.js</li>
+          <li data-i18n-html="tools_npm_audit_feature2"><code>audit pip</code>&nbsp;: packages Python</li>
+          <li data-i18n="tools_npm_audit_feature3">Trivy&nbsp;: Conteneurs, IaC et systèmes de fichiers</li>
+          <li data-i18n="tools_npm_audit_feature4">Idéal pour le gate CI/CD</li>
+        </ul>
+      </div>
+    </div>
+    <div class="code-block mt-2">
+      <div class="code-block-header"><span class="lang">Bash</span><span data-i18n="tools_sast_code_label">Vérification de la vulnérabilité des dépendances</span></div>
+      <pre><span class="comment" data-i18n="tools_sast_comment1"># Vérifier les dépendances de Node.js</span>
+npm audit --production
+
+<span class="comment" data-i18n="tools_sast_comment2"># Analyse de sécurité avec Semgrep</span>
+semgrep --config=p/security-audit ./src
+
+<span class="comment" data-i18n="tools_sast_comment3"># Analyse de conteneurs avec Trivy</span>
+trivy image --severity HIGH,CRITICAL myapp:latest</pre>
+    </div>
+  </div>
+
+  <!-- API Spec & Documentation -->
+  <div class="section">
+    <h2 data-i18n-html="tools_spec_heading"><span class="section-icon">📝</span> Gestion des spécifications et de la documentation des API</h2>
+    <div class="card-grid">
+      <div class="tool-card">
+        <h3 data-i18n-html="tools_swagger_title">Swagger / OpenAPI <span class="tool-badge">Spécification standard</span></h3>
+        <p data-i18n="tools_swagger_description">Définissez les spécifications de l'API dans un format lisible par machine. Également utilisé comme entrée pour les tests de sécurité.</p>
+        <ul>
+          <li data-i18n="tools_swagger_feature1">Définition complète des points finaux, des paramètres et des réponses</li>
+          <li data-i18n="tools_swagger_feature2">Schémas de sécurité explicites (OAuth, clé API, etc.)</li>
+          <li data-i18n="tools_swagger_feature3">Importer dans ZAP/Burp pour automatiser les tests</li>
+          <li data-i18n="tools_swagger_feature4">Génération de documentation interactive avec l'interface utilisateur Swagger</li>
+        </ul>
+      </div>
+      <div class="tool-card">
+        <h3 data-i18n-html="tools_spectral_title">Spectral <span class="tool-badge">Gratuit / OSS</span></h3>
+        <p data-i18n="tools_spectral_description">Un outil linter pour les spécifications OpenAPI. Vérifie le respect des bonnes pratiques de sécurité.</p>
+        <ul>
+          <li data-i18n="tools_spectral_feature1">Vérifier la présence de définitions de schéma de sécurité</li>
+          <li data-i18n="tools_spectral_feature2">Détecter les points de terminaison non authentifiés</li>
+          <li data-i18n="tools_spectral_feature3">Appliquer des politiques internes avec des règles personnalisées</li>
+          <li data-i18n="tools_spectral_feature4">Porte de qualité pour les spécifications API dans CI/CD</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Monitoring -->
+  <div class="section">
+    <h2 data-i18n-html="tools_monitoring_heading"><span class="section-icon">📡</span> Outils de surveillance et de journalisation</h2>
+    <div class="card-grid card-grid-3">
+      <div class="tool-card">
+        <h3 data-i18n="tools_gateway_title">Passerelle API</h3>
+        <p data-i18n="tools_gateway_description">Kong, AWS API Gateway, Apigee et autres.</p>
+        <ul>
+          <li data-i18n="tools_gateway_feature1">Authentification et autorisation centralisées</li>
+          <li data-i18n="tools_gateway_feature2">Application de la limitation du débit</li>
+          <li data-i18n="tools_gateway_feature3">Demander l'agrégation des journaux</li>
+          <li data-i18n="tools_gateway_feature4">Alertes de détection d'anomalies</li>
+        </ul>
+      </div>
+      <div class="tool-card">
+        <h3 data-i18n="tools_waf_title">WAF</h3>
+        <p data-i18n="tools_waf_description">AWS WAF, Cloudflare, ModSecurity et autres.</p>
+        <ul>
+          <li data-i18n="tools_waf_feature1">Bloquer les modèles d'attaque tels que SQLi/XSS</li>
+          <li data-i18n="tools_waf_feature2">Contrôle d'accès basé sur GeoIP</li>
+          <li data-i18n="tools_waf_feature3">Atténuation des robots</li>
+          <li data-i18n="tools_waf_feature4">Définitions de règles personnalisées</li>
+        </ul>
+      </div>
+      <div class="tool-card">
+        <h3 data-i18n="tools_siem_title">SIEM / Analyse des journaux</h3>
+        <p data-i18n="tools_siem_description">ELK Stack, Splunk, Datadog et autres.</p>
+        <ul>
+          <li data-i18n="tools_siem_feature1">Agrégation et visualisation des journaux API</li>
+          <li data-i18n="tools_siem_feature2">Détection de modèles anormaux</li>
+          <li data-i18n="tools_siem_feature3">Prise en charge de la réponse aux incidents</li>
+          <li data-i18n="tools_siem_feature4">Audit de conformité</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tool Selection Guide -->
+  <div class="section">
+    <h2 data-i18n-html="tools_guide_heading"><span class="section-icon">🗺</span> Guide de sélection des outils</h2>
+    <div class="table-wrapper">
+      <table>
+        <thead><tr><th data-i18n="tools_guide_th_purpose">But</th><th data-i18n="tools_guide_th_recommended">Outil recommandé</th><th data-i18n="tools_guide_th_timing">Timing</th></tr></thead>
+        <tbody>
+          <tr><td data-i18n="tools_guide_row1_purpose">Vérification de sécurité des spécifications de l'API</td><td>Spectral</td><td data-i18n="tools_guide_row1_timing">Phase de conception/spécification</td></tr>
+          <tr><td data-i18n="tools_guide_row2_purpose">Analyse de la sécurité du code</td><td>Semgrep</td><td data-i18n="tools_guide_row2_timing">Développement / RP</td></tr>
+          <tr><td data-i18n="tools_guide_row3_purpose">Vérification de la vulnérabilité des dépendances</td><td>Snyk / npm audit</td><td data-i18n="tools_guide_row3_timing">Temps de construction / Périodique</td></tr>
+          <tr><td data-i18n="tools_guide_row4_purpose">Tests de sécurité manuels</td><td>Burp Suite / Postman</td><td data-i18n="tools_guide_row4_timing">Phase de tests / assurance qualité</td></tr>
+          <tr><td data-i18n="tools_guide_row5_purpose">Numérisation automatisée (CI/CD)</td><td>OWASP ZAP</td><td data-i18n="tools_guide_row5_timing">Pré-déploiement</td></tr>
+          <tr><td data-i18n="tools_guide_row6_purpose">Protection de l'environnement de production</td><td>WAF + API Gateway</td><td data-i18n="tools_guide_row6_timing">En fonctionnement</td></tr>
+          <tr><td data-i18n="tools_guide_row7_purpose">Surveillance des journaux et détection des anomalies</td><td>SIEM (ELK / Datadog)</td><td data-i18n="tools_guide_row7_timing">En fonctionnement / Continu</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+<script src="../js/common.js"></script>
+
+
+</body></html>
