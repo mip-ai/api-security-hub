@@ -1,7 +1,112 @@
 {
-  "lastUpdated": "2026-03-18T16:09:09.207Z",
+  "lastUpdated": "2026-03-18T21:35:29.114Z",
   "itemCount": 20,
   "items": [
+    {
+      "title": {
+        "en": "CISA orders feds to patch Zimbra XSS flaw exploited in attacks",
+        "ja": "CISA、攻撃に悪用されたZimbra XSSの欠陥にパッチを適用するよう連邦政府に命令",
+        "es": "CISA ordena a los federales reparar la falla Zimbra XSS explotada en ataques",
+        "pt": "CISA ordena que federais corrijam falha do Zimbra XSS explorada em ataques",
+        "fr": "La CISA ordonne au gouvernement fédéral de corriger la faille Zimbra XSS exploitée lors d'attaques"
+      },
+      "titleOriginal": "CISA orders feds to patch Zimbra XSS flaw exploited in attacks",
+      "link": "https://www.bleepingcomputer.com/news/security/cisa-orders-feds-to-patch-zimbra-xss-flaw-exploited-in-attacks/",
+      "pubDate": "2026-03-18T19:57:13.000Z",
+      "description": {
+        "en": "CISA has ordered U.S. government agencies to secure their servers against an actively exploited vulnerability in the Zimbra Collaboration Suite (ZCS). [...]",
+        "ja": "CISA は、米国政府機関に対し、Zimbra Collaboration Suite (ZCS) で積極的に悪用されている脆弱性からサーバーを保護するよう命令しました。 [...]",
+        "es": "CISA ha ordenado a las agencias gubernamentales de EE. UU. que protejan sus servidores contra una vulnerabilidad explotada activamente en Zimbra Collaboration Suite (ZCS). [...]",
+        "pt": "A CISA ordenou que as agências governamentais dos EUA protegessem seus servidores contra uma vulnerabilidade explorada ativamente no Zimbra Collaboration Suite (ZCS). [...]",
+        "fr": "La CISA a ordonné aux agences gouvernementales américaines de sécuriser leurs serveurs contre une vulnérabilité activement exploitée dans la Zimbra Collaboration Suite (ZCS). [...]"
+      },
+      "descriptionOriginal": "CISA has ordered U.S. government agencies to secure their servers against an actively exploited vulnerability in the Zimbra Collaboration Suite (ZCS). [...]",
+      "source": "BleepingComputer"
+    },
+    {
+      "title": {
+        "en": "The Collapse of Predictive Security in the Age of Machine-Speed Attacks",
+        "ja": "マシンスピード攻撃の時代における予測型セキュリティの崩壊",
+        "es": "El colapso de la seguridad predictiva en la era de los ataques a velocidad de las máquinas",
+        "pt": "O colapso da segurança preditiva na era dos ataques à velocidade das máquinas",
+        "fr": "L’effondrement de la sécurité prédictive à l’ère des attaques à la vitesse des machines"
+      },
+      "titleOriginal": "The Collapse of Predictive Security in the Age of Machine-Speed Attacks",
+      "link": "https://www.securityweek.com/the-collapse-of-predictive-security-in-the-age-of-machine-speed-attacks/",
+      "pubDate": "2026-03-18T19:37:25.000Z",
+      "description": {
+        "en": "With exploitation of vulnerabilities taking just days, preemptive security must be the new model for defenders. The post The Collapse of Predictive Security in the Age of Machine-Speed Attacks appeared first on SecurityWeek.",
+        "ja": "脆弱性の悪用にはわずか数日しかかからないため、先制セキュリティは防御者にとっての新しいモデルでなければなりません。 この記事「マシンスピード攻撃の時代における予測型セキュリティの崩壊」は、SecurityWeek に最初に掲載されました。",
+        "es": "Dado que la explotación de vulnerabilidades lleva solo unos días, la seguridad preventiva debe ser el nuevo modelo para los defensores. La publicación El colapso de la seguridad predictiva en la era de los ataques a velocidad de las máquinas apareció por primera vez en SecurityWeek.",
+        "pt": "Com a exploração de vulnerabilidades demorando apenas alguns dias, a segurança preventiva deve ser o novo modelo para os defensores. A postagem O colapso da segurança preditiva na era dos ataques à velocidade das máquinas apareceu pela primeira vez na SecurityWeek.",
+        "fr": "Alors que l’exploitation des vulnérabilités ne prend que quelques jours, la sécurité préventive doit être le nouveau modèle pour les défenseurs. L'article L'effondrement de la sécurité prédictive à l'ère des attaques à la vitesse des machines est apparu en premier sur SecurityWeek."
+      },
+      "descriptionOriginal": "With exploitation of vulnerabilities taking just days, preemptive security must be the new model for defenders. The post The Collapse of Predictive Security in the Age of Machine-Speed Attacks appeared first on SecurityWeek.",
+      "source": "SecurityWeek"
+    },
+    {
+      "title": {
+        "en": "ConnectWise patches new flaw allowing ScreenConnect hijacking",
+        "ja": "ConnectWiseがScreenConnectハイジャックを可能にする新たな欠陥を修正",
+        "es": "ConnectWise corrige una nueva falla que permite el secuestro de ScreenConnect",
+        "pt": "ConnectWise corrige nova falha que permite o sequestro do ScreenConnect",
+        "fr": "ConnectWise corrige une nouvelle faille permettant le détournement de ScreenConnect"
+      },
+      "titleOriginal": "ConnectWise patches new flaw allowing ScreenConnect hijacking",
+      "link": "https://www.bleepingcomputer.com/news/security/connectwise-patches-new-flaw-allowing-screenconnect-hijacking/",
+      "pubDate": "2026-03-18T18:10:35.000Z",
+      "description": {
+        "en": "ConnectWise is warning ScreenConnect customers of a cryptographic signature verification vulnerability that could lead to unauthorized access and privilege escalation. [...]",
+        "ja": "ConnectWise は、ScreenConnect の顧客に対し、不正アクセスや権限昇格につながる可能性のある暗号化署名検証の脆弱性について警告しています。 [...]",
+        "es": "ConnectWise advierte a los clientes de ScreenConnect sobre una vulnerabilidad de verificación de firma criptográfica que podría provocar acceso no autorizado y escalada de privilegios. [...]",
+        "pt": "ConnectWise está alertando os clientes do ScreenConnect sobre uma vulnerabilidade de verificação de assinatura criptográfica que pode levar a acesso não autorizado e escalonamento de privilégios. [...]",
+        "fr": "ConnectWise avertit les clients ScreenConnect d'une vulnérabilité de vérification de signature cryptographique qui pourrait conduire à un accès non autorisé et à une élévation de privilèges. [...]"
+      },
+      "descriptionOriginal": "ConnectWise is warning ScreenConnect customers of a cryptographic signature verification vulnerability that could lead to unauthorized access and privilege escalation. [...]",
+      "source": "BleepingComputer"
+    },
+    {
+      "title": {
+        "en": "Ransomware gang exploits Cisco flaw in zero-day attacks since January",
+        "ja": "ランサムウェア集団が 1 月以降、シスコの欠陥をゼロデイ攻撃で悪用",
+        "es": "Una banda de ransomware explota la falla de Cisco en ataques de día cero desde enero",
+        "pt": "Gangue de ransomware explora falha da Cisco em ataques de dia zero desde janeiro",
+        "fr": "Un gang de ransomwares exploite une faille de Cisco dans des attaques zero-day depuis janvier"
+      },
+      "titleOriginal": "Ransomware gang exploits Cisco flaw in zero-day attacks since January",
+      "link": "https://www.bleepingcomputer.com/news/security/interlock-ransomware-exploited-secure-fmc-flaw-in-zero-day-attacks-since-january/",
+      "pubDate": "2026-03-18T16:53:42.000Z",
+      "description": {
+        "en": "The Interlock ransomware gang has been exploiting a maximum severity remote code execution (RCE) vulnerability in Cisco's Secure Firewall Management Center (FMC) software in zero-day attacks since late January. [...]",
+        "ja": "Interlock ランサムウェア集団は、1 月下旬以来、シスコの Secure Firewall Management Center (FMC) ソフトウェアにある最大重大度のリモート コード実行 (RCE) の脆弱性をゼロデイ攻撃で悪用しています。 [...]",
+        "es": "La pandilla de ransomware Interlock ha estado explotando una vulnerabilidad de ejecución remota de código (RCE) de máxima gravedad en el software Secure Firewall Management Center (FMC) de Cisco en ataques de día cero desde finales de enero. [...]",
+        "pt": "A gangue de ransomware Interlock tem explorado uma vulnerabilidade de execução remota de código (RCE) de gravidade máxima no software Secure Firewall Management Center (FMC) da Cisco em ataques de dia zero desde o final de janeiro. [...]",
+        "fr": "Le groupe de ransomwares Interlock exploite depuis fin janvier une vulnérabilité d'exécution de code à distance (RCE) de gravité maximale dans le logiciel Secure Firewall Management Center (FMC) de Cisco dans le cadre d'attaques zero-day. [...]"
+      },
+      "descriptionOriginal": "The Interlock ransomware gang has been exploiting a maximum severity remote code execution (RCE) vulnerability in Cisco's Secure Firewall Management Center (FMC) software in zero-day attacks since late January. [...]",
+      "source": "BleepingComputer"
+    },
+    {
+      "title": {
+        "en": "Interlock Ransomware Exploits Cisco FMC Zero-Day CVE-2026-20131 for Root Access",
+        "ja": "Interlock ランサムウェアが Cisco FMC Zero-Day CVE-2026-20131 を悪用してルート アクセスを実現",
+        "es": "Interlock Ransomware explota Cisco FMC Zero-Day CVE-2026-20131 para acceso raíz",
+        "pt": "Interlock Ransomware explora Cisco FMC Zero-Day CVE-2026-20131 para acesso root",
+        "fr": "Interlock Ransomware exploite Cisco FMC Zero-Day CVE-2026-20131 pour l'accès root"
+      },
+      "titleOriginal": "Interlock Ransomware Exploits Cisco FMC Zero-Day CVE-2026-20131 for Root Access",
+      "link": "https://thehackernews.com/2026/03/interlock-ransomware-exploits-cisco-fmc.html",
+      "pubDate": "2026-03-18T16:00:00.000Z",
+      "description": {
+        "en": "Amazon Threat Intelligence is warning of an active Interlock ransomware campaign that's exploiting a recently disclosed critical security flaw in Cisco Secure Firewall Management Center (FMC) Software. The vulnerability in question is CVE-2026-20131 (CVSS score: 10.0), a case of insecure deserializa",
+        "ja": "Amazon Threat Intelligence は、最近明らかになった Cisco Secure Firewall Management Center (FMC) ソフトウェアの重大なセキュリティ欠陥を悪用するアクティブな Interlock ランサムウェア キャンペーンについて警告しています。 問題の脆弱性は CVE-2026-20131 (CVSS スコア: 10.0) で、安全でないデシリアライザのケースです。",
+        "es": "Amazon Threat Intelligence advierte sobre una campaña activa de ransomware Interlock que explota una falla de seguridad crítica recientemente revelada en el software Cisco Secure Firewall Management Center (FMC). La vulnerabilidad en cuestión es CVE-2026-20131 (puntaje CVSS: 10.0), un caso de deserializa insegura",
+        "pt": "O Amazon Threat Intelligence está alertando sobre uma campanha ativa de ransomware Interlock que está explorando uma falha crítica de segurança divulgada recentemente no software Cisco Secure Firewall Management Center (FMC). A vulnerabilidade em questão é CVE-2026-20131 (pontuação CVSS: 10.0), um caso de desserialização insegura",
+        "fr": "Amazon Threat Intelligence met en garde contre une campagne active de ransomware Interlock qui exploite une faille de sécurité critique récemment révélée dans le logiciel Cisco Secure Firewall Management Center (FMC). La vulnérabilité en question est CVE-2026-20131 (score CVSS : 10,0), un cas de désérialisation non sécurisée"
+      },
+      "descriptionOriginal": "Amazon Threat Intelligence is warning of an active Interlock ransomware campaign that's exploiting a recently disclosed critical security flaw in Cisco Secure Firewall Management Center (FMC) Software. The vulnerability in question is CVE-2026-20131 (CVSS score: 10.0), a case of insecure deserializa",
+      "source": "The Hacker News"
+    },
     {
       "title": {
         "en": "&#8216;DarkSword&#8217; iOS Exploit Kit Used by State-Sponsored Hackers, Spyware Vendors",
@@ -57,7 +162,7 @@
       "pubDate": "2026-03-18T14:02:08.000Z",
       "description": {
         "en": "A new exploit kit for iOS devices and delivery framework dubbed \"Darksword\" has been used to steal a wide range of personal information, including data from cryptocurrency wallet app. [...]",
-        "ja": "iOS デバイス用の新しいエクスプロイト キットと「Darksword」と呼ばれる配信フレームワークが、暗号通貨ウォレット アプリからのデータを含む幅広い個人情報を盗むために使用されました。 [...]",
+        "ja": "iOS デバイス用の新しいエクスプロイト キットと「Darksword」と呼ばれる配信フレームワークが、仮想通貨ウォレット アプリからのデータを含む幅広い個人情報を盗むために使用されました。 [...]",
         "es": "Se ha utilizado un nuevo kit de explotación para dispositivos iOS y un marco de entrega denominado \"Darksword\" para robar una amplia gama de información personal, incluidos datos de la aplicación de billetera de criptomonedas. [...]",
         "pt": "Um novo kit de exploração para dispositivos iOS e estrutura de entrega apelidado de “Darksword” foi usado para roubar uma ampla gama de informações pessoais, incluindo dados do aplicativo de carteira de criptomoeda. [...]",
         "fr": "Un nouveau kit d'exploitation pour les appareils iOS et le cadre de livraison baptisé « Darksword » a été utilisé pour voler un large éventail d'informations personnelles, y compris les données de l'application de portefeuille de crypto-monnaie. [...]"
@@ -151,29 +256,8 @@
     },
     {
       "title": {
-        "en": "Researcher Discovers 4th WhatsApp View Once Bypass; Meta Won’t Patch",
-        "ja": "研究者は、一度バイパスした 4 番目の WhatsApp ビューを発見しました。 メタはパッチを適用しない",
-        "es": "Investigador descubre la cuarta vista de WhatsApp una vez omitida; Meta no parcheará",
-        "pt": "Pesquisador descobre 4ª visualização do WhatsApp uma vez ignorada; Meta não será corrigido",
-        "fr": "Un chercheur découvre la 4ème vue WhatsApp une fois contournée ; La méta ne sera pas corrigée"
-      },
-      "titleOriginal": "Researcher Discovers 4th WhatsApp View Once Bypass; Meta Won’t Patch",
-      "link": "https://www.securityweek.com/researcher-discovers-4th-whatsapp-view-once-bypass-meta-wont-patch/",
-      "pubDate": "2026-03-18T10:43:23.000Z",
-      "description": {
-        "en": "Meta does not plan on fixing the vulnerability because it involves the use of a modified client application. The post Researcher Discovers 4th WhatsApp View Once Bypass; Meta Won’t Patch appeared first on SecurityWeek.",
-        "ja": "Meta では、変更されたクライアント アプリケーションの使用が含まれるため、この脆弱性を修正する予定はありません。 投稿 研究者が 4 番目の WhatsApp ビューを一度バイパスしていることを発見。 Meta Won't Patch は SecurityWeek で最初に登場しました。",
-        "es": "Meta no planea solucionar la vulnerabilidad porque implica el uso de una aplicación cliente modificada. El puesto Investigador descubre la cuarta vista de WhatsApp una vez omitida; Meta Won't Patch apareció por primera vez en SecurityWeek.",
-        "pt": "A Meta não planeja corrigir a vulnerabilidade porque envolve o uso de um aplicativo cliente modificado. O post Pesquisador descobre 4ª visualização do WhatsApp uma vez ignorada; Meta Won’t Patch apareceu pela primeira vez na SecurityWeek.",
-        "fr": "Meta ne prévoit pas de corriger la vulnérabilité car cela implique l'utilisation d'une application client modifiée. Le post Un chercheur découvre la 4ème vue WhatsApp une fois contournée ; Meta Won’t Patch est apparu en premier sur SecurityWeek."
-      },
-      "descriptionOriginal": "Meta does not plan on fixing the vulnerability because it involves the use of a modified client application. The post Researcher Discovers 4th WhatsApp View Once Bypass; Meta Won’t Patch appeared first on SecurityWeek.",
-      "source": "SecurityWeek"
-    },
-    {
-      "title": {
         "en": "Ubuntu CVE-2026-3888 Bug Lets Attackers Gain Root via systemd Cleanup Timing Exploit",
-        "ja": "Ubuntu CVE-2026-3888 のバグにより、攻撃者は systemd クリーンアップ タイミングを悪用してルートを取得できます",
+        "ja": "Ubuntu CVE-2026-3888 のバグにより、攻撃者が systemd クリーンアップ タイミングを悪用してルートを取得できる",
         "es": "El error CVE-2026-3888 de Ubuntu permite a los atacantes obtener raíz a través del exploit de sincronización de limpieza systemd",
         "pt": "Bug CVE-2026-3888 do Ubuntu permite que invasores ganhem root por meio da exploração de tempo de limpeza do systemd",
         "fr": "Le bug Ubuntu CVE-2026-3888 permet aux attaquants d'obtenir la racine via l'exploit de synchronisation de nettoyage systemd"
@@ -185,7 +269,7 @@
         "en": "A high-severity security flaw affecting default installations of Ubuntu Desktop versions 24.04 and later could be exploited to escalate privileges to the root level. Tracked as CVE-2026-3888 (CVSS score: 7.8), the issue could allow an attacker to seize control of a susceptible system. \"This flaw (CV",
         "ja": "Ubuntu Desktop バージョン 24.04 以降のデフォルトのインストールに影響を与える重大度の高いセキュリティ上の欠陥が悪用され、権限がルート レベルに昇格される可能性があります。 CVE-2026-3888 (CVSS スコア: 7.8) として追跡されているこの問題により、攻撃者が影響を受けやすいシステムの制御を奪われる可能性があります。 「この欠陥（CV",
         "es": "Una falla de seguridad de alta gravedad que afecta las instalaciones predeterminadas de las versiones 24.04 y posteriores de Ubuntu Desktop podría aprovecharse para escalar privilegios al nivel raíz. Registrado como CVE-2026-3888 (puntuación CVSS: 7,8), el problema podría permitir a un atacante tomar el control de un sistema susceptible. \"Este defecto (CV",
-        "pt": "Uma falha de segurança de alta gravidade que afeta as instalações padrão do Ubuntu Desktop versões 24.04 e posteriores pode ser explorada para escalar privilégios para o nível raiz. Rastreado como CVE-2026-3888 (pontuação CVSS: 7,8), o problema pode permitir que um invasor assuma o controle de um sistema suscetível. \"Esta falha (CV",
+        "pt": "Uma falha de segurança de alta gravidade que afeta as instalações padrão do Ubuntu Desktop versões 24.04 e posteriores pode ser explorada para escalar privilégios para o nível raiz. Rastreado como CVE-2026-3888 (pontuação CVSS: 7,8), o problema pode permitir que um invasor assuma o controle de um sistema suscetível. \"Essa falha (CV",
         "fr": "Une faille de sécurité de haute gravité affectant les installations par défaut d'Ubuntu Desktop versions 24.04 et ultérieures pourrait être exploitée pour élever les privilèges au niveau racine. Suivi comme CVE-2026-3888 (score CVSS : 7,8), le problème pourrait permettre à un attaquant de prendre le contrôle d'un système sensible. \"Cette faille (CV"
       },
       "descriptionOriginal": "A high-severity security flaw affecting default installations of Ubuntu Desktop versions 24.04 and later could be exploited to escalate privileges to the root level. Tracked as CVE-2026-3888 (CVSS score: 7.8), the issue could allow an attacker to seize control of a susceptible system. \"This flaw (CV",
@@ -206,7 +290,7 @@
         "en": "Apple on Tuesday released its first round of Background Security Improvements to address a security flaw in WebKit that affects iOS, iPadOS, and macOS. The vulnerability, tracked as CVE-2026-20643 (CVSS score: N/A), has been described as a cross-origin issue in WebKit's Navigation API that could be ",
         "ja": "Appleは火曜日、iOS、iPadOS、macOSに影響を与えるWebKitのセキュリティ欠陥に対処するため、バックグラウンドセキュリティ改善の第一弾をリリースした。 この脆弱性は CVE-2026-20643 (CVSS スコア: N/A) として追跡され、WebKit のナビゲーション API のクロスオリジンの問題として説明されています。",
         "es": "Apple lanzó el martes su primera ronda de mejoras de seguridad en segundo plano para abordar una falla de seguridad en WebKit que afecta a iOS, iPadOS y macOS. La vulnerabilidad, rastreada como CVE-2026-20643 (puntuación CVSS: N/A), se ha descrito como un problema de origen cruzado en la API de navegación de WebKit que podría ser",
-        "pt": "A Apple lançou na terça-feira sua primeira rodada de melhorias de segurança em segundo plano para solucionar uma falha de segurança no WebKit que afeta iOS, iPadOS e macOS. A vulnerabilidade, rastreada como CVE-2026-20643 (pontuação CVSS: N/A), foi descrita como um problema de origem cruzada na API de navegação do WebKit que pode ser",
+        "pt": "A Apple lançou na terça-feira sua primeira rodada de melhorias de segurança em segundo plano para solucionar uma falha de segurança no WebKit que afeta iOS, iPadOS e macOS. A vulnerabilidade, rastreada como CVE-2026-20643 (pontuação CVSS: N/A), foi descrita como um problema de origem cruzada na API de navegação do WebKit que poderia ser",
         "fr": "Apple a publié mardi sa première série d'améliorations de la sécurité en arrière-plan pour corriger une faille de sécurité dans WebKit qui affecte iOS, iPadOS et macOS. La vulnérabilité, suivie comme CVE-2026-20643 (score CVSS : N/A), a été décrite comme un problème d'origine croisée dans l'API de navigation de WebKit qui pourrait être"
       },
       "descriptionOriginal": "Apple on Tuesday released its first round of Background Security Improvements to address a security flaw in WebKit that affects iOS, iPadOS, and macOS. The vulnerability, tracked as CVE-2026-20643 (CVSS score: N/A), has been described as a cross-origin issue in WebKit's Navigation API that could be ",
@@ -236,7 +320,7 @@
     {
       "title": {
         "en": "Top 5 Things CISOs Need to Do Today to Secure AI Agents",
-        "ja": "AI エージェントを保護するために CISO が今日実行する必要がある 5 つのこと",
+        "ja": "AI エージェントを保護するために CISO が今日行う必要がある 5 つのこと",
         "es": "Las cinco cosas principales que los CISO deben hacer hoy para proteger a los agentes de IA",
         "pt": "As 5 principais coisas que os CISOs precisam fazer hoje para proteger os agentes de IA",
         "fr": "Top 5 des choses que les RSSI doivent faire aujourd'hui pour sécuriser les agents IA"
@@ -246,7 +330,7 @@
       "pubDate": "2026-03-17T14:02:12.000Z",
       "description": {
         "en": "AI agents are autonomous actors with real access to data and systems, not just copilots. Token Security explains why identity-based access control is critical to prevent misuse and data exposure. [...]",
-        "ja": "AI エージェントは、副操縦士だけでなく、データやシステムに実際にアクセスできる自律的なアクターです。 Token Security は、悪用やデータ漏えいを防ぐために ID ベースのアクセス制御が重要である理由を説明します。 [...]",
+        "ja": "AI エージェントは、副操縦士だけでなく、データやシステムに実際にアクセスできる自律的なアクターです。 Token Security は、悪用やデータ漏洩を防ぐために ID ベースのアクセス制御が重要である理由を説明します。 [...]",
         "es": "Los agentes de IA son actores autónomos con acceso real a datos y sistemas, no sólo copilotos. Token Security explica por qué el control de acceso basado en identidad es fundamental para evitar el uso indebido y la exposición de datos. [...]",
         "pt": "Os agentes de IA são atores autónomos com acesso real a dados e sistemas, e não apenas copilotos. A Token Security explica por que o controle de acesso baseado em identidade é fundamental para evitar o uso indevido e a exposição de dados. [...]",
         "fr": "Les agents d’IA sont des acteurs autonomes disposant d’un réel accès aux données et aux systèmes, et pas seulement des copilotes. Token Security explique pourquoi le contrôle d'accès basé sur l'identité est essentiel pour prévenir les abus et l'exposition des données. [...]"
@@ -267,7 +351,7 @@
       "pubDate": "2026-03-17T05:23:00.000Z",
       "description": {
         "en": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Monday added a medium-severity security flaw impacting Wing FTP to its Known Exploited Vulnerabilities (KEV) catalog, citing evidence of active exploitation. The vulnerability, CVE-2025-47813 (CVSS score: 4.3), is an information dis",
-        "ja": "米国サイバーセキュリティ・インフラストラクチャセキュリティ庁（CISA）は月曜日、活発な悪用の証拠を引用し、Wing FTPに影響を与える中程度の重大度のセキュリティ欠陥を既知の悪用された脆弱性（KEV）カタログに追加した。 脆弱性 CVE-2025-47813 (CVSS スコア: 4.3) は、情報セキュリティです。",
+        "ja": "米国サイバーセキュリティ・インフラセキュリティ庁（CISA）は月曜日、活発な悪用の証拠を引用し、Wing FTPに影響を与える中程度の重大度のセキュリティ欠陥を既知の悪用された脆弱性（KEV）カタログに追加した。 脆弱性 CVE-2025-47813 (CVSS スコア: 4.3) は、情報セキュリティです。",
         "es": "La Agencia de Seguridad de Infraestructura y Ciberseguridad de EE. UU. (CISA) agregó el lunes una falla de seguridad de gravedad media que afecta a Wing FTP a su catálogo de vulnerabilidades explotadas conocidas (KEV), citando evidencia de explotación activa. La vulnerabilidad, CVE-2025-47813 (puntuación CVSS: 4,3), es una información dis",
         "pt": "A Agência de Segurança Cibernética e de Infraestrutura dos EUA (CISA) adicionou na segunda-feira uma falha de segurança de gravidade média que afeta o Wing FTP ao seu catálogo de Vulnerabilidades Exploradas Conhecidas (KEV), citando evidências de exploração ativa. A vulnerabilidade, CVE-2025-47813 (pontuação CVSS: 4,3), é uma falha de informação",
         "fr": "L'Agence américaine de cybersécurité et de sécurité des infrastructures (CISA) a ajouté lundi une faille de sécurité de gravité moyenne affectant Wing FTP à son catalogue de vulnérabilités exploitées connues (KEV), citant des preuves d'exploitation active. La vulnérabilité, CVE-2025-47813 (score CVSS : 4,3), est un message d'information."
@@ -309,7 +393,7 @@
       "pubDate": "2026-03-16T14:17:00.000Z",
       "description": {
         "en": "Some weeks in security feel normal. Then you read a few tabs and get that immediate “ah, great, we’re doing this now” feeling. This week has that energy. Fresh messes, old problems getting sharper, and research that stops feeling theoretical real fast. A few bits hit a little too close to real life,",
-        "ja": "数週間の安全な生活が普通に感じられます。 次に、いくつかのタブを読むと、すぐに「ああ、すごい、今これをやっているんだ」という感覚が得られます。 今週はそのエネルギーがあります。 新鮮な混乱、より鮮明になっている古い問題、そして理論的だと感じられなくなる研究。 いくつかのビットは現実の生活に少し近づきすぎますが、",
+        "ja": "数週間の安全な生活が普通に感じられます。 次に、いくつかのタブを読むと、すぐに「ああ、すごい、今これをやっているんだ」という感覚が得られます。 今週はそのエネルギーがあります。 新鮮な混乱、より鮮明になっている古い問題、そして理論的だと感じられなくなる研究。 いくつかの点は現実の生活に少し近づきすぎていますが、",
         "es": "Algunas semanas en seguridad se sienten normales. Luego lees algunas pestañas y tienes esa sensación inmediata de \"ah, genial, estamos haciendo esto ahora\". Esta semana tiene esa energía. Nuevos líos, viejos problemas que se vuelven más agudos e investigaciones que dejan de parecer teóricas muy rápidamente. Algunas partes se acercan demasiado a la vida real,",
         "pt": "Algumas semanas em segurança parecem normais. Então você lê algumas guias e tem aquela sensação imediata de “ah, ótimo, estamos fazendo isso agora”. Esta semana tem essa energia. Novas bagunças, velhos problemas ficando mais nítidos e pesquisas que deixam de parecer teóricas muito rapidamente. Algumas partes chegaram um pouco perto demais da vida real,",
         "fr": "Quelques semaines en sécurité semblent normales. Ensuite, vous lisez quelques onglets et ressentez immédiatement le sentiment « ah, super, nous faisons ça maintenant ». Cette semaine a cette énergie. De nouveaux dégâts, d'anciens problèmes qui deviennent plus aigus et des recherches qui cessent très vite de paraître théoriques. Quelques passages sont un peu trop proches de la réalité,"
@@ -336,90 +420,6 @@
         "fr": "Si vous gérez la sécurité dans une organisation raisonnablement complexe, votre pile de validation ressemble probablement à ceci : un outil BAS dans un coin. Un engagement pentest, ou peut-être un produit pentesting automatisé, dans un autre. Un scanner de vulnérabilités alimentant une plateforme de gestion de surface d'attaque quelque part"
       },
       "descriptionOriginal": "If you run security at any reasonably complex organization, your validation stack probably looks something like this: a BAS tool in one corner. A pentest engagement, or maybe an automated pentesting product, in another. A vulnerability scanner feeding an attack surface management platform somewhere ",
-      "source": "The Hacker News"
-    },
-    {
-      "title": {
-        "en": "ClickFix Campaigns Spread MacSync macOS Infostealer via Fake AI Tool Installers",
-        "ja": "ClickFix キャンペーンが偽の AI ツール インストーラーを介して MacSync macOS Infostealer を拡散",
-        "es": "Las campañas de ClickFix difunden MacSync macOS Infostealer a través de instaladores falsos de herramientas de inteligencia artificial",
-        "pt": "Campanhas ClickFix espalham MacSync macOS Infostealer por meio de falsos instaladores de ferramentas de IA",
-        "fr": "Les campagnes ClickFix diffusent MacSync macOS Infostealer via de faux installateurs d'outils AI"
-      },
-      "titleOriginal": "ClickFix Campaigns Spread MacSync macOS Infostealer via Fake AI Tool Installers",
-      "link": "https://thehackernews.com/2026/03/clickfix-campaigns-spread-macsync-macos.html",
-      "pubDate": "2026-03-16T11:41:00.000Z",
-      "description": {
-        "en": "Three different ClickFix campaigns have been found to act as a delivery vector for the deployment of a macOS information stealer called MacSync. \"Unlike traditional exploit-based attacks, this method relies entirely on user interaction – usually in the form of copying and executing commands – making",
-        "ja": "3 つの異なる ClickFix キャンペーンが、MacSync と呼ばれる macOS 情報スティーラーの展開の配信ベクトルとして機能することが判明しました。 「従来のエクスプロイトベースの攻撃とは異なり、この手法はユーザーの操作 (通常はコマンドのコピーと実行という形) に完全に依存しています。",
-        "es": "Se ha descubierto que tres campañas diferentes de ClickFix actúan como vector de entrega para la implementación de un ladrón de información de macOS llamado MacSync. \"A diferencia de los ataques tradicionales basados ​​en exploits, este método se basa completamente en la interacción del usuario, generalmente en forma de copia y ejecución de comandos, lo que hace que",
-        "pt": "Descobriu-se que três campanhas ClickFix diferentes atuam como um vetor de entrega para a implantação de um ladrão de informações do macOS chamado MacSync. “Ao contrário dos ataques tradicionais baseados em exploits, este método depende inteiramente da interação do usuário – geralmente na forma de cópia e execução de comandos – fazendo com que",
-        "fr": "Il a été constaté que trois campagnes ClickFix différentes servaient de vecteur de diffusion pour le déploiement d'un voleur d'informations macOS appelé MacSync. « Contrairement aux attaques traditionnelles basées sur des exploits, cette méthode repose entièrement sur l'interaction de l'utilisateur – généralement sous la forme de copie et d'exécution de commandes – ce qui rend"
-      },
-      "descriptionOriginal": "Three different ClickFix campaigns have been found to act as a delivery vector for the deployment of a macOS information stealer called MacSync. \"Unlike traditional exploit-based attacks, this method relies entirely on user interaction – usually in the form of copying and executing commands – making",
-      "source": "The Hacker News"
-    },
-    {
-      "title": {
-        "en": "Android 17 Blocks Non-Accessibility Apps from Accessibility API to Prevent Malware Abuse",
-        "ja": "Android 17 は、マルウェアの悪用を防ぐために、アクセシビリティ非対応アプリをアクセシビリティ API からブロックします",
-        "es": "Android 17 bloquea aplicaciones que no son de accesibilidad de la API de accesibilidad para evitar el abuso de malware",
-        "pt": "Android 17 bloqueia aplicativos não acessíveis da API de acessibilidade para evitar abuso de malware",
-        "fr": "Android 17 bloque les applications non accessibles de l'API d'accessibilité pour empêcher les abus de logiciels malveillants"
-      },
-      "titleOriginal": "Android 17 Blocks Non-Accessibility Apps from Accessibility API to Prevent Malware Abuse",
-      "link": "https://thehackernews.com/2026/03/android-17-blocks-non-accessibility.html",
-      "pubDate": "2026-03-16T05:43:00.000Z",
-      "description": {
-        "en": "Google is testing a new security feature as part of Android Advanced Protection Mode (AAPM) that prevents certain kinds of apps from using the accessibility services API. The change, incorporated in Android 17 Beta 2, was first reported by Android Authority last week. AAPM was introduced by Google i",
-        "ja": "Google は、特定の種類のアプリがユーザー補助サービス API を使用できないようにする、Android 高度な保護モード (AAPM) の一部として新しいセキュリティ機能をテストしています。 この変更は Android 17 Beta 2 に組み込まれており、先週 Android Authority によって初めて報告されました。 AAPM は Google i によって導入されました",
-        "es": "Google está probando una nueva función de seguridad como parte del Modo de protección avanzada de Android (AAPM) que evita que ciertos tipos de aplicaciones utilicen la API de servicios de accesibilidad. El cambio, incorporado en Android 17 Beta 2, fue informado por primera vez por Android Authority la semana pasada. AAPM fue introducido por Google i",
-        "pt": "O Google está testando um novo recurso de segurança como parte do Modo de Proteção Avançada do Android (AAPM) que impede que certos tipos de aplicativos usem a API de serviços de acessibilidade. A mudança, incorporada no Android 17 Beta 2, foi relatada pela primeira vez pela Android Authority na semana passada. AAPM foi introduzido pelo Google i",
-        "fr": "Google teste une nouvelle fonctionnalité de sécurité dans le cadre du mode de protection avancée Android (AAPM) qui empêche certains types d'applications d'utiliser l'API des services d'accessibilité. Le changement, incorporé dans Android 17 Beta 2, a été signalé pour la première fois par Android Authority la semaine dernière. AAPM a été introduit par Google i"
-      },
-      "descriptionOriginal": "Google is testing a new security feature as part of Android Advanced Protection Mode (AAPM) that prevents certain kinds of apps from using the accessibility services API. The change, incorporated in Android 17 Beta 2, was first reported by Android Authority last week. AAPM was introduced by Google i",
-      "source": "The Hacker News"
-    },
-    {
-      "title": {
-        "en": "OpenClaw AI Agent Flaws Could Enable Prompt Injection and Data Exfiltration",
-        "ja": "OpenClaw AI エージェントの欠陥により、迅速なインジェクションとデータ漏洩が可能になる可能性がある",
-        "es": "Las fallas del agente OpenClaw AI podrían permitir una inyección rápida y una filtración de datos",
-        "pt": "Falhas do agente OpenClaw AI podem permitir injeção imediata e exfiltração de dados",
-        "fr": "Les failles de l'agent OpenClaw AI pourraient permettre une injection rapide et une exfiltration de données"
-      },
-      "titleOriginal": "OpenClaw AI Agent Flaws Could Enable Prompt Injection and Data Exfiltration",
-      "link": "https://thehackernews.com/2026/03/openclaw-ai-agent-flaws-could-enable.html",
-      "pubDate": "2026-03-14T16:17:00.000Z",
-      "description": {
-        "en": "China's National Computer Network Emergency Response Technical Team (CNCERT) has issued a warning about the security stemming from the use of OpenClaw (formerly Clawdbot and Moltbot), an open-source and self-hosted autonomous artificial intelligence (AI) agent. In a post shared on WeChat, CNCERT not",
-        "ja": "中国国家コンピュータネットワーク緊急対応技術チーム（CNCERT）は、オープンソースで自己ホスト型の自律型人工知能（AI）エージェントであるOpenClaw（旧称ClawdbotおよびMoltbot）の使用に起因するセキュリティについて警告を発した。 WeChatで共有された投稿では、CNCERTはそうではありません",
-        "es": "El Equipo Técnico de Respuesta a Emergencias de la Red Informática Nacional de China (CNCERT) ha emitido una advertencia sobre la seguridad derivada del uso de OpenClaw (anteriormente Clawdbot y Moltbot), un agente autónomo de inteligencia artificial (IA) autónomo, de código abierto y autohospedado. En una publicación compartida en WeChat, CNCERT no",
-        "pt": "A Equipe Técnica de Resposta a Emergências da Rede Nacional de Computadores da China (CNCERT) emitiu um alerta sobre a segurança decorrente do uso do OpenClaw (anteriormente Clawdbot e Moltbot), um agente autônomo de inteligência artificial (IA) de código aberto e auto-hospedado. Em postagem compartilhada no WeChat, CNCERT não",
-        "fr": "L'équipe technique nationale chinoise d'intervention d'urgence du réseau informatique (CNCERT) a émis un avertissement concernant la sécurité découlant de l'utilisation d'OpenClaw (anciennement Clawdbot et Moltbot), un agent d'intelligence artificielle (IA) autonome open source et auto-hébergé. Dans un post partagé sur WeChat, le CNCERT ne"
-      },
-      "descriptionOriginal": "China's National Computer Network Emergency Response Technical Team (CNCERT) has issued a warning about the security stemming from the use of OpenClaw (formerly Clawdbot and Moltbot), an open-source and self-hosted autonomous artificial intelligence (AI) agent. In a post shared on WeChat, CNCERT not",
-      "source": "The Hacker News"
-    },
-    {
-      "title": {
-        "en": "Storm-2561 Spreads Trojan VPN Clients via SEO Poisoning to Steal Credentials",
-        "ja": "Storm-2561 は、SEO ポイズニングを介してトロイの木馬 VPN クライアントを拡散し、認証情報を盗みます",
-        "es": "Storm-2561 propaga clientes VPN troyanos mediante envenenamiento de SEO para robar credenciales",
-        "pt": "Storm-2561 espalha clientes VPN Trojan por meio de envenenamento de SEO para roubar credenciais",
-        "fr": "Storm-2561 propage les clients VPN Trojan via un empoisonnement SEO pour voler des informations d'identification"
-      },
-      "titleOriginal": "Storm-2561 Spreads Trojan VPN Clients via SEO Poisoning to Steal Credentials",
-      "link": "https://thehackernews.com/2026/03/storm-2561-spreads-trojan-vpn-clients.html",
-      "pubDate": "2026-03-13T13:38:00.000Z",
-      "description": {
-        "en": "Microsoft has disclosed details of a credential theft campaign that employs fake virtual private network (VPN) clients distributed through search engine optimization (SEO) poisoning techniques. \"The campaign redirects users searching for legitimate enterprise software to malicious ZIP files on attac",
-        "ja": "Microsoft は、検索エンジン最適化 (SEO) ポイズニング技術を通じて配布された偽の仮想プライベート ネットワーク (VPN) クライアントを使用した資格情報盗難キャンペーンの詳細を明らかにしました。 「このキャンペーンは、正規のエンタープライズ ソフトウェアを検索しているユーザーを、攻撃上の悪意のある ZIP ファイルにリダイレクトします。",
-        "es": "Microsoft ha revelado detalles de una campaña de robo de credenciales que emplea clientes falsos de redes privadas virtuales (VPN) distribuidos mediante técnicas de envenenamiento de optimización de motores de búsqueda (SEO). \"La campaña redirige a los usuarios que buscan software empresarial legítimo a archivos ZIP maliciosos en ataque",
-        "pt": "A Microsoft divulgou detalhes de uma campanha de roubo de credenciais que emprega clientes falsos de rede privada virtual (VPN) distribuídos por meio de técnicas de envenenamento de otimização de mecanismo de pesquisa (SEO). \"A campanha redireciona os usuários que procuram software empresarial legítimo para arquivos ZIP maliciosos no attac",
-        "fr": "Microsoft a divulgué les détails d'une campagne de vol d'informations d'identification qui utilise de faux clients de réseau privé virtuel (VPN) distribués via des techniques d'empoisonnement d'optimisation des moteurs de recherche (SEO). \"La campagne redirige les utilisateurs recherchant des logiciels d'entreprise légitimes vers des fichiers ZIP malveillants lors d'une attaque."
-      },
-      "descriptionOriginal": "Microsoft has disclosed details of a credential theft campaign that employs fake virtual private network (VPN) clients distributed through search engine optimization (SEO) poisoning techniques. \"The campaign redirects users searching for legitimate enterprise software to malicious ZIP files on attac",
       "source": "The Hacker News"
     }
   ]
