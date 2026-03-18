@@ -1,7 +1,70 @@
 {
-  "lastUpdated": "2026-03-18T04:57:10.271Z",
+  "lastUpdated": "2026-03-18T09:56:59.712Z",
   "itemCount": 20,
   "items": [
+    {
+      "title": {
+        "en": "Ubuntu CVE-2026-3888 Bug Lets Attackers Gain Root via systemd Cleanup Timing Exploit",
+        "ja": "Ubuntu CVE-2026-3888 のバグにより、攻撃者が systemd クリーンアップ タイミングを悪用してルートを取得できる",
+        "es": "El error CVE-2026-3888 de Ubuntu permite a los atacantes obtener raíz a través del exploit de sincronización de limpieza systemd",
+        "pt": "Bug CVE-2026-3888 do Ubuntu permite que invasores ganhem root por meio da exploração de tempo de limpeza do systemd",
+        "fr": "Le bug Ubuntu CVE-2026-3888 permet aux attaquants d'obtenir la racine via l'exploit de synchronisation de nettoyage systemd"
+      },
+      "titleOriginal": "Ubuntu CVE-2026-3888 Bug Lets Attackers Gain Root via systemd Cleanup Timing Exploit",
+      "link": "https://thehackernews.com/2026/03/ubuntu-cve-2026-3888-bug-lets-attackers.html",
+      "pubDate": "2026-03-18T08:08:00.000Z",
+      "description": {
+        "en": "A high-severity security flaw affecting default installations of Ubuntu Desktop versions 24.04 and later could be exploited to escalate privileges to the root level. Tracked as CVE-2026-3888 (CVSS score: 7.8), the issue could allow an attacker to seize control of a susceptible system. \"This flaw (CV",
+        "ja": "Ubuntu Desktop バージョン 24.04 以降のデフォルトのインストールに影響を与える重大度の高いセキュリティ上の欠陥が悪用され、権限がルート レベルに昇格される可能性があります。 CVE-2026-3888 (CVSS スコア: 7.8) として追跡されているこの問題により、攻撃者が影響を受けやすいシステムの制御を奪われる可能性があります。 「この欠陥（CV",
+        "es": "Una falla de seguridad de alta gravedad que afecta las instalaciones predeterminadas de las versiones 24.04 y posteriores de Ubuntu Desktop podría aprovecharse para escalar privilegios al nivel raíz. Registrado como CVE-2026-3888 (puntuación CVSS: 7,8), el problema podría permitir a un atacante tomar el control de un sistema susceptible. \"Este defecto (CV",
+        "pt": "Uma falha de segurança de alta gravidade que afeta as instalações padrão do Ubuntu Desktop versões 24.04 e posteriores pode ser explorada para escalar privilégios para o nível raiz. Rastreado como CVE-2026-3888 (pontuação CVSS: 7,8), o problema pode permitir que um invasor assuma o controle de um sistema suscetível. \"Essa falha (CV",
+        "fr": "Une faille de sécurité de haute gravité affectant les installations par défaut d'Ubuntu Desktop versions 24.04 et ultérieures pourrait être exploitée pour élever les privilèges au niveau racine. Suivi comme CVE-2026-3888 (score CVSS : 7,8), le problème pourrait permettre à un attaquant de prendre le contrôle d'un système sensible. \"Cette faille (CV"
+      },
+      "descriptionOriginal": "A high-severity security flaw affecting default installations of Ubuntu Desktop versions 24.04 and later could be exploited to escalate privileges to the root level. Tracked as CVE-2026-3888 (CVSS score: 7.8), the issue could allow an attacker to seize control of a susceptible system. \"This flaw (CV",
+      "source": "The Hacker News"
+    },
+    {
+      "title": {
+        "en": "Apple Fixes WebKit Vulnerability Enabling Same-Origin Policy Bypass on iOS and macOS",
+        "ja": "Apple、iOS および macOS で同一オリジン ポリシーのバイパスを可能にする WebKit の脆弱性を修正",
+        "es": "Apple corrige la vulnerabilidad de WebKit permitiendo omitir la política del mismo origen en iOS y macOS",
+        "pt": "Apple corrige vulnerabilidade do WebKit, permitindo ignorar políticas de mesma origem no iOS e macOS",
+        "fr": "Apple corrige la vulnérabilité de WebKit permettant le contournement de la politique de même origine sur iOS et macOS"
+      },
+      "titleOriginal": "Apple Fixes WebKit Vulnerability Enabling Same-Origin Policy Bypass on iOS and macOS",
+      "link": "https://thehackernews.com/2026/03/apple-fixes-webkit-vulnerability.html",
+      "pubDate": "2026-03-18T06:31:00.000Z",
+      "description": {
+        "en": "Apple on Tuesday released its first round of Background Security Improvements to address a security flaw in WebKit that affects iOS, iPadOS, and macOS. The vulnerability, tracked as CVE-2026-20643 (CVSS score: N/A), has been described as a cross-origin issue in WebKit's Navigation API that could be ",
+        "ja": "Appleは火曜日、iOS、iPadOS、macOSに影響を与えるWebKitのセキュリティ欠陥に対処するため、バックグラウンドセキュリティ改善の第一弾をリリースした。 この脆弱性は CVE-2026-20643 (CVSS スコア: N/A) として追跡され、WebKit のナビゲーション API のクロスオリジンの問題として説明されています。",
+        "es": "Apple lanzó el martes su primera ronda de mejoras de seguridad en segundo plano para abordar una falla de seguridad en WebKit que afecta a iOS, iPadOS y macOS. La vulnerabilidad, rastreada como CVE-2026-20643 (puntuación CVSS: N/A), se ha descrito como un problema de origen cruzado en la API de navegación de WebKit que podría ser",
+        "pt": "A Apple lançou na terça-feira sua primeira rodada de melhorias de segurança em segundo plano para solucionar uma falha de segurança no WebKit que afeta iOS, iPadOS e macOS. A vulnerabilidade, rastreada como CVE-2026-20643 (pontuação CVSS: N/A), foi descrita como um problema de origem cruzada na API de navegação do WebKit que poderia ser",
+        "fr": "Apple a publié mardi sa première série d'améliorations de la sécurité en arrière-plan pour corriger une faille de sécurité dans WebKit qui affecte iOS, iPadOS et macOS. La vulnérabilité, suivie comme CVE-2026-20643 (score CVSS : N/A), a été décrite comme un problème d'origine croisée dans l'API de navigation de WebKit qui pourrait être"
+      },
+      "descriptionOriginal": "Apple on Tuesday released its first round of Background Security Improvements to address a security flaw in WebKit that affects iOS, iPadOS, and macOS. The vulnerability, tracked as CVE-2026-20643 (CVSS score: N/A), has been described as a cross-origin issue in WebKit's Navigation API that could be ",
+      "source": "The Hacker News"
+    },
+    {
+      "title": {
+        "en": "Critical Unpatched Telnetd Flaw (CVE-2026-32746) Enables Unauthenticated Root RCE via Port 23",
+        "ja": "パッチが適用されていない Telnetd の重大な欠陥 (CVE-2026-32746) により、ポート 23 経由で未認証のルート RCE が有効になる",
+        "es": "Fallo crítico de Telnetd sin parches (CVE-2026-32746) permite RCE raíz no autenticado a través del puerto 23",
+        "pt": "Falha crítica de Telnetd não corrigida (CVE-2026-32746) permite RCE raiz não autenticado via porta 23",
+        "fr": "Une faille Telnetd critique non corrigée (CVE-2026-32746) permet un RCE racine non authentifié via le port 23"
+      },
+      "titleOriginal": "Critical Unpatched Telnetd Flaw (CVE-2026-32746) Enables Unauthenticated Root RCE via Port 23",
+      "link": "https://thehackernews.com/2026/03/critical-telnetd-flaw-cve-2026-32746.html",
+      "pubDate": "2026-03-18T05:06:00.000Z",
+      "description": {
+        "en": "Cybersecurity researchers have disclosed a critical security flaw impacting the GNU InetUtils telnet daemon (telnetd) that could be exploited by an unauthenticated remote attacker to execute arbitrary code with elevated privileges. The vulnerability, tracked as CVE-2026-32746, carries a CVSS score o",
+        "ja": "サイバーセキュリティ研究者は、GNU InetUtils Telnet デーモン (telnetd) に影響を与える重大なセキュリティ上の欠陥を明らかにしました。この欠陥は、認証されていないリモート攻撃者によって悪用され、昇格された特権で任意のコードを実行する可能性があります。 この脆弱性は CVE-2026-32746 として追跡されており、CVSS スコアは次のとおりです。",
+        "es": "Investigadores de ciberseguridad han revelado una falla de seguridad crítica que afecta al demonio telnet GNU InetUtils (telnetd) y que podría ser explotada por un atacante remoto no autenticado para ejecutar código arbitrario con privilegios elevados. La vulnerabilidad, rastreada como CVE-2026-32746, lleva una puntuación CVSS o",
+        "pt": "Pesquisadores de segurança cibernética revelaram uma falha crítica de segurança que afeta o daemon telnet GNU InetUtils (telnetd) que poderia ser explorado por um invasor remoto não autenticado para executar código arbitrário com privilégios elevados. A vulnerabilidade, rastreada como CVE-2026-32746, carrega uma pontuação CVSS de",
+        "fr": "Des chercheurs en cybersécurité ont révélé une faille de sécurité critique affectant le démon telnet GNU InetUtils (telnetd) qui pourrait être exploitée par un attaquant distant non authentifié pour exécuter du code arbitraire avec des privilèges élevés. La vulnérabilité, suivie comme CVE-2026-32746, porte un score CVSS o"
+      },
+      "descriptionOriginal": "Cybersecurity researchers have disclosed a critical security flaw impacting the GNU InetUtils telnet daemon (telnetd) that could be exploited by an unauthenticated remote attacker to execute arbitrary code with elevated privileges. The vulnerability, tracked as CVE-2026-32746, carries a CVSS score o",
+      "source": "The Hacker News"
+    },
     {
       "title": {
         "en": "Apple pushes first Background Security Improvements update to fix WebKit flaw",
@@ -26,7 +89,7 @@
     {
       "title": {
         "en": "UK Companies House Exposed Details of Millions of Firms",
-        "ja": "英国企業庁、数百万社の企業詳細を暴露",
+        "ja": "英国企業庁、数百万社の企業の詳細を暴露",
         "es": "La Cámara de Empresas del Reino Unido expuso detalles de millones de empresas",
         "pt": "Empresas do Reino Unido abrigam detalhes expostos de milhões de empresas",
         "fr": "La Companies House du Royaume-Uni a dévoilé les détails de millions d'entreprises"
@@ -47,7 +110,7 @@
     {
       "title": {
         "en": "Top 5 Things CISOs Need to Do Today to Secure AI Agents",
-        "ja": "AI エージェントを保護するために CISO が今日実行する必要がある 5 つのこと",
+        "ja": "AI エージェントを保護するために CISO が今日行う必要がある 5 つのこと",
         "es": "Las cinco cosas principales que los CISO deben hacer hoy para proteger a los agentes de IA",
         "pt": "As 5 principais coisas que os CISOs precisam fazer hoje para proteger os agentes de IA",
         "fr": "Top 5 des choses que les RSSI doivent faire aujourd'hui pour sécuriser les agents IA"
@@ -57,7 +120,7 @@
       "pubDate": "2026-03-17T14:02:12.000Z",
       "description": {
         "en": "AI agents are autonomous actors with real access to data and systems, not just copilots. Token Security explains why identity-based access control is critical to prevent misuse and data exposure. [...]",
-        "ja": "AI エージェントは、副操縦士だけでなく、データやシステムに実際にアクセスできる自律的なアクターです。 Token Security は、悪用やデータ漏えいを防ぐために ID ベースのアクセス制御が重要である理由を説明します。 [...]",
+        "ja": "AI エージェントは、副操縦士だけでなく、データやシステムに実際にアクセスできる自律的なアクターです。 Token Security は、悪用やデータ漏洩を防ぐために ID ベースのアクセス制御が重要である理由を説明します。 [...]",
         "es": "Los agentes de IA son actores autónomos con acceso real a datos y sistemas, no sólo copilotos. Token Security explica por qué el control de acceso basado en identidad es fundamental para evitar el uso indebido y la exposición de datos. [...]",
         "pt": "Os agentes de IA são atores autónomos com acesso real a dados e sistemas, e não apenas copilotos. A Token Security explica por que o controle de acesso baseado em identidade é fundamental para evitar o uso indevido e a exposição de dados. [...]",
         "fr": "Les agents d’IA sont des acteurs autonomes disposant d’un réel accès aux données et aux systèmes, et pas seulement des copilotes. Token Security explique pourquoi le contrôle d'accès basé sur l'identité est essentiel pour prévenir les abus et l'exposition des données. [...]"
@@ -90,9 +153,9 @@
       "title": {
         "en": "CISA Flags Year-Old Wing FTP Vulnerability as Exploited",
         "ja": "CISA、1年前からあるWing FTPの脆弱性が悪用されたと報告",
-        "es": "CISA señala como explotada una vulnerabilidad FTP de Wing de hace un año",
+        "es": "CISA señala como explotada una vulnerabilidad FTP de Wing de un año de antigüedad",
         "pt": "CISA sinaliza vulnerabilidade de FTP de um ano como explorada",
-        "fr": "La CISA signale qu'une vulnérabilité FTP de l'aile vieille d'un an est exploitée"
+        "fr": "La CISA signale qu'une vulnérabilité FTP de Wing vieille d'un an est exploitée"
       },
       "titleOriginal": "CISA Flags Year-Old Wing FTP Vulnerability as Exploited",
       "link": "https://www.securityweek.com/cisa-flags-year-old-wing-ftp-vulnerability-as-exploited/",
@@ -102,7 +165,7 @@
         "ja": "この欠陥は CVE-2025-47813 として追跡されており、アプリケーションの完全なローカル インストール パスの漏洩につながります。 CISA が 1 年前の Wing FTP 脆弱性が悪用されたと報告した記事は、SecurityWeek に最初に掲載されました。",
         "es": "Registrada como CVE-2025-47813, la falla conduce a la divulgación de la ruta de instalación local completa de la aplicación. La publicación CISA señala una vulnerabilidad FTP de ala de hace un año como explotada apareció por primera vez en SecurityWeek.",
         "pt": "Rastreada como CVE-2025-47813, a falha leva à divulgação do caminho completo de instalação local do aplicativo. A postagem CISA sinaliza vulnerabilidade de FTP de um ano como explorada apareceu pela primeira vez na SecurityWeek.",
-        "fr": "Traquée comme CVE-2025-47813, la faille conduit à la divulgation du chemin d'installation local complet de l'application. L'article CISA signale une vulnérabilité FTP de l'aile vieille d'un an comme exploitée apparaît en premier sur SecurityWeek."
+        "fr": "Traquée comme CVE-2025-47813, la faille conduit à la divulgation du chemin d'installation local complet de l'application. L'article CISA signale une vulnérabilité FTP de Wing vieille d'un an comme exploitée apparaît en premier sur SecurityWeek."
       },
       "descriptionOriginal": "Tracked as CVE-2025-47813, the flaw leads to the disclosure of the full local installation path of the application. The post CISA Flags Year-Old Wing FTP Vulnerability as Exploited appeared first on SecurityWeek.",
       "source": "SecurityWeek"
@@ -120,9 +183,9 @@
       "pubDate": "2026-03-17T10:30:00.000Z",
       "description": {
         "en": "Akamai warns that Layer 7 DDoS, API abuse and AI-powered attacks are merging into coordinated, multi-vector campaigns that are harder to detect and defend against. The post AI, APIs and DDoS Collide in New Era of Coordinated Cyberattacks appeared first on SecurityWeek.",
-        "ja": "Akamai は、レイヤー 7 DDoS、API 悪用、および AI を利用した攻撃が、調整された複数ベクトルのキャンペーンに統合され、検出および防御が困難になっていると警告しています。 「連携型サイバー攻撃の新時代における AI、API、DDoS の衝突」という記事が最初に SecurityWeek に掲載されました。",
-        "es": "Akamai advierte que los DDoS de capa 7, el abuso de API y los ataques impulsados ​​por IA se están fusionando en campañas coordinadas de múltiples vectores que son más difíciles de detectar y defenderse. La publicación AI, API y DDoS chocan en una nueva era de ciberataques coordinados apareció por primera vez en SecurityWeek.",
-        "pt": "A Akamai alerta que DDoS de camada 7, abuso de API e ataques alimentados por IA estão se fundindo em campanhas coordenadas e multivetoriais que são mais difíceis de detectar e de se defender. A postagem IA, APIs e DDoS colidem na nova era de ataques cibernéticos coordenados apareceu pela primeira vez na SecurityWeek.",
+        "ja": "Akamai は、レイヤー 7 DDoS、API 悪用、および AI を活用した攻撃が、調整された複数ベクトルのキャンペーンに統合されており、検出と防御がより困難になっていると警告しています。 「連携型サイバー攻撃の新時代における AI、API、DDoS の衝突」という記事が最初に SecurityWeek に掲載されました。",
+        "es": "Akamai advierte que los ataques DDoS de capa 7, el abuso de API y los ataques impulsados ​​por IA se están fusionando en campañas coordinadas y multivectoriales que son más difíciles de detectar y defenderse. La publicación AI, API y DDoS chocan en una nueva era de ciberataques coordinados apareció por primera vez en SecurityWeek.",
+        "pt": "A Akamai alerta que DDoS de Camada 7, abuso de API e ataques alimentados por IA estão se fundindo em campanhas coordenadas e multivetoriais que são mais difíceis de detectar e de se defender. A postagem IA, APIs e DDoS colidem na nova era de ataques cibernéticos coordenados apareceu pela primeira vez na SecurityWeek.",
         "fr": "Akamai prévient que les attaques DDoS de couche 7, les abus d'API et les attaques basées sur l'IA fusionnent en campagnes multivecteurs coordonnées contre lesquelles il est plus difficile de détecter et de se défendre. L'article L'IA, les API et les DDoS entrent en collision dans une nouvelle ère de cyberattaques coordonnées apparaît en premier sur SecurityWeek."
       },
       "descriptionOriginal": "Akamai warns that Layer 7 DDoS, API abuse and AI-powered attacks are merging into coordinated, multi-vector campaigns that are harder to detect and defend against. The post AI, APIs and DDoS Collide in New Era of Coordinated Cyberattacks appeared first on SecurityWeek.",
@@ -141,7 +204,7 @@
       "pubDate": "2026-03-17T05:23:00.000Z",
       "description": {
         "en": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Monday added a medium-severity security flaw impacting Wing FTP to its Known Exploited Vulnerabilities (KEV) catalog, citing evidence of active exploitation. The vulnerability, CVE-2025-47813 (CVSS score: 4.3), is an information dis",
-        "ja": "米国サイバーセキュリティ・インフラストラクチャセキュリティ庁（CISA）は月曜日、活発な悪用の証拠を引用し、Wing FTPに影響を与える中程度の重大度のセキュリティ欠陥を既知の悪用された脆弱性（KEV）カタログに追加した。 脆弱性 CVE-2025-47813 (CVSS スコア: 4.3) は、情報セキュリティです。",
+        "ja": "米国サイバーセキュリティ・インフラセキュリティ庁（CISA）は月曜日、活発な悪用の証拠を引用し、Wing FTPに影響を与える中程度の重大度のセキュリティ欠陥を既知の悪用された脆弱性（KEV）カタログに追加した。 脆弱性 CVE-2025-47813 (CVSS スコア: 4.3) は、情報セキュリティです。",
         "es": "La Agencia de Seguridad de Infraestructura y Ciberseguridad de EE. UU. (CISA) agregó el lunes una falla de seguridad de gravedad media que afecta a Wing FTP a su catálogo de vulnerabilidades explotadas conocidas (KEV), citando evidencia de explotación activa. La vulnerabilidad, CVE-2025-47813 (puntuación CVSS: 4,3), es una información dis",
         "pt": "A Agência de Segurança Cibernética e de Infraestrutura dos EUA (CISA) adicionou na segunda-feira uma falha de segurança de gravidade média que afeta o Wing FTP ao seu catálogo de Vulnerabilidades Exploradas Conhecidas (KEV), citando evidências de exploração ativa. A vulnerabilidade, CVE-2025-47813 (pontuação CVSS: 4,3), é uma falha de informação",
         "fr": "L'Agence américaine de cybersécurité et de sécurité des infrastructures (CISA) a ajouté lundi une faille de sécurité de gravité moyenne affectant Wing FTP à son catalogue de vulnérabilités exploitées connues (KEV), citant des preuves d'exploitation active. La vulnérabilité, CVE-2025-47813 (score CVSS : 4,3), est un message d'information."
@@ -269,7 +332,7 @@
         "en": "Three different ClickFix campaigns have been found to act as a delivery vector for the deployment of a macOS information stealer called MacSync. \"Unlike traditional exploit-based attacks, this method relies entirely on user interaction – usually in the form of copying and executing commands – making",
         "ja": "3 つの異なる ClickFix キャンペーンが、MacSync と呼ばれる macOS 情報スティーラーの展開の配信ベクトルとして機能することが判明しました。 「従来のエクスプロイトベースの攻撃とは異なり、この手法はユーザーの操作 (通常はコマンドのコピーと実行という形) に完全に依存しています。",
         "es": "Se ha descubierto que tres campañas diferentes de ClickFix actúan como vector de entrega para la implementación de un ladrón de información de macOS llamado MacSync. \"A diferencia de los ataques tradicionales basados ​​en exploits, este método se basa completamente en la interacción del usuario, generalmente en forma de copia y ejecución de comandos, lo que hace que",
-        "pt": "Descobriu-se que três campanhas ClickFix diferentes atuam como um vetor de entrega para a implantação de um ladrão de informações do macOS chamado MacSync. “Ao contrário dos ataques tradicionais baseados em exploits, este método depende inteiramente da interação do usuário – geralmente na forma de cópia e execução de comandos – fazendo com que",
+        "pt": "Descobriu-se que três campanhas ClickFix diferentes atuam como um vetor de entrega para a implantação de um ladrão de informações do macOS chamado MacSync. “Ao contrário dos ataques tradicionais baseados em exploração, este método depende inteiramente da interação do usuário – geralmente na forma de cópia e execução de comandos – fazendo com que",
         "fr": "Il a été constaté que trois campagnes ClickFix différentes servaient de vecteur de diffusion pour le déploiement d'un voleur d'informations macOS appelé MacSync. « Contrairement aux attaques traditionnelles basées sur des exploits, cette méthode repose entièrement sur l'interaction de l'utilisateur – généralement sous la forme de copie et d'exécution de commandes – ce qui rend"
       },
       "descriptionOriginal": "Three different ClickFix campaigns have been found to act as a delivery vector for the deployment of a macOS information stealer called MacSync. \"Unlike traditional exploit-based attacks, this method relies entirely on user interaction – usually in the form of copying and executing commands – making",
@@ -357,69 +420,6 @@
         "fr": "Google a publié jeudi des mises à jour de sécurité pour son navigateur Web Chrome afin de corriger deux vulnérabilités de haute gravité qui, selon lui, ont été exploitées de manière sauvage. La liste des vulnérabilités est la suivante - CVE-2026-3909 (score CVSS : 8,8) - Une vulnérabilité d'écriture hors limites dans le graphique Skia 2D"
       },
       "descriptionOriginal": "Google on Thursday released security updates for its Chrome web browser to address two high-severity vulnerabilities that it said have been exploited in the wild. The list of vulnerabilities is as follows - CVE-2026-3909 (CVSS score: 8.8) - An out-of-bounds write vulnerability in the Skia 2D graphic",
-      "source": "The Hacker News"
-    },
-    {
-      "title": {
-        "en": "Nine CrackArmor Flaws in Linux AppArmor Enable Root Escalation, Bypass Container Isolation",
-        "ja": "Linux AppArmor の 9 つの CrackArmor 欠陥によりルート エスカレーションが可能になり、コンテナ分離がバイパスされる",
-        "es": "Nueve fallas de CrackArmor en Linux AppArmor permiten la escalada de raíz y evitan el aislamiento de contenedores",
-        "pt": "Nove falhas do CrackArmor no Linux AppArmor permitem escalonamento de raiz e ignoram o isolamento do contêiner",
-        "fr": "Neuf failles CrackArmor dans Linux AppArmor permettent l'escalade racine et contournent l'isolation des conteneurs"
-      },
-      "titleOriginal": "Nine CrackArmor Flaws in Linux AppArmor Enable Root Escalation, Bypass Container Isolation",
-      "link": "https://thehackernews.com/2026/03/nine-crackarmor-flaws-in-linux-apparmor.html",
-      "pubDate": "2026-03-13T08:18:00.000Z",
-      "description": {
-        "en": "Cybersecurity researchers have disclosed multiple security vulnerabilities within the Linux kernel's AppArmor module that could be exploited by unprivileged users to circumvent kernel protections, escalate to root, and undermine container isolation guarantees. The nine confused deputy vulnerabilitie",
-        "ja": "サイバーセキュリティ研究者らは、Linux カーネルの AppArmor モジュール内に複数のセキュリティ脆弱性があることを明らかにしました。これらの脆弱性は、特権のないユーザーが悪用して、カーネル保護を回避し、root にエスカレーションし、コンテナ分離の保証を損なう可能性があります。 混乱する9人の副脆弱性",
-        "es": "Los investigadores de ciberseguridad han revelado múltiples vulnerabilidades de seguridad dentro del módulo AppArmor del kernel de Linux que podrían ser explotadas por usuarios sin privilegios para eludir las protecciones del kernel, escalar a la raíz y socavar las garantías de aislamiento del contenedor. Los nueve diputados confundidos por la vulnerabilidad",
-        "pt": "Pesquisadores de segurança cibernética divulgaram várias vulnerabilidades de segurança no módulo AppArmor do kernel Linux que poderiam ser exploradas por usuários sem privilégios para contornar as proteções do kernel, escalar para root e minar as garantias de isolamento de contêineres. As nove vulnerabilidades confusas dos deputados",
-        "fr": "Les chercheurs en cybersécurité ont révélé plusieurs vulnérabilités de sécurité au sein du module AppArmor du noyau Linux qui pourraient être exploitées par des utilisateurs non privilégiés pour contourner les protections du noyau, passer à la racine et saper les garanties d'isolation des conteneurs. Les neuf vulnérabilités adjointes confuses"
-      },
-      "descriptionOriginal": "Cybersecurity researchers have disclosed multiple security vulnerabilities within the Linux kernel's AppArmor module that could be exploited by unprivileged users to circumvent kernel protections, escalate to root, and undermine container isolation guarantees. The nine confused deputy vulnerabilitie",
-      "source": "The Hacker News"
-    },
-    {
-      "title": {
-        "en": "Authorities Disrupt SocksEscort Proxy Botnet Exploiting 369,000 IPs Across 163 Countries",
-        "ja": "当局が 163 か国の 369,000 個の IP を悪用する SocksEscort プロキシ ボットネットを妨害",
-        "es": "Las autoridades interrumpen la botnet proxy SocksEscort que explota 369.000 IP en 163 países",
-        "pt": "Autoridades interrompem o botnet SocksEscort Proxy que explora 369.000 IPs em 163 países",
-        "fr": "Les autorités perturbent le botnet proxy SocksEscort exploitant 369 000 adresses IP dans 163 pays"
-      },
-      "titleOriginal": "Authorities Disrupt SocksEscort Proxy Botnet Exploiting 369,000 IPs Across 163 Countries",
-      "link": "https://thehackernews.com/2026/03/authorities-disrupt-socksescort-proxy.html",
-      "pubDate": "2026-03-13T05:26:00.000Z",
-      "description": {
-        "en": "A court-authorized international law enforcement operation has dismantled a criminal proxy service named SocksEscort that enslaved thousands of residential routers worldwide into a botnet for committing large-scale fraud. \"SocksEscort infected home and small business internet routers with malware,\" ",
-        "ja": "裁判所の認可を受けた国際法執行活動により、大規模な詐欺を行うために世界中の数千台の家庭用ルーターをボットネットに陥れていた SocksEscort という刑事代理サービスが解体されました。 「SocksEscort は家庭用および小規模企業のインターネット ルーターをマルウェアに感染させました。」",
-        "es": "Una operación policial internacional autorizada por un tribunal ha desmantelado un servicio de proxy criminal llamado SocksEscort que esclavizó a miles de enrutadores residenciales en todo el mundo a una botnet para cometer fraude a gran escala. \"SocksEscort infectó los enrutadores de Internet domésticos y de pequeñas empresas con malware\".",
-        "pt": "Uma operação de aplicação da lei internacional autorizada pelo tribunal desmantelou um serviço de proxy criminoso chamado SocksEscort, que escravizou milhares de roteadores residenciais em todo o mundo em uma botnet para cometer fraudes em grande escala. “SocksEscort infectou roteadores de Internet domésticos e de pequenas empresas com malware,”",
-        "fr": "Une opération internationale d'application de la loi autorisée par le tribunal a démantelé un service proxy criminel nommé SocksEscort qui a réduit en esclavage des milliers de routeurs résidentiels du monde entier dans un botnet pour avoir commis une fraude à grande échelle. \"SocksEscort a infecté les routeurs Internet des particuliers et des petites entreprises avec des logiciels malveillants\","
-      },
-      "descriptionOriginal": "A court-authorized international law enforcement operation has dismantled a criminal proxy service named SocksEscort that enslaved thousands of residential routers worldwide into a botnet for committing large-scale fraud. \"SocksEscort infected home and small business internet routers with malware,\" ",
-      "source": "The Hacker News"
-    },
-    {
-      "title": {
-        "en": "Veeam Patches 7 Critical Backup &amp; Replication Flaws Allowing Remote Code Execution",
-        "ja": "Veeamは7つの重要なバックアップとパッチを適用します。 リモートでコードが実行されるレプリケーションの欠陥",
-        "es": "Veeam parchea 7 copias de seguridad y actualizaciones críticas Defectos de replicación que permiten la ejecución remota de código",
-        "pt": "Veeam corrige 7 atualizações críticas de backup e atualização Falhas de replicação que permitem execução remota de código",
-        "fr": "Veeam met à jour 7 les sauvegardes et les sauvegardes critiques Failles de réplication permettant l'exécution de code à distance"
-      },
-      "titleOriginal": "Veeam Patches 7 Critical Backup &amp; Replication Flaws Allowing Remote Code Execution",
-      "link": "https://thehackernews.com/2026/03/veeam-patches-7-critical-backup.html",
-      "pubDate": "2026-03-13T04:15:00.000Z",
-      "description": {
-        "en": "Veeam has released security updates to address multiple critical vulnerabilities in its Backup & Replication software that, if successfully exploited, could result in remote code execution. The vulnerabilities are as follows - CVE-2026-21666 (CVSS score: 9.9) - A vulnerability that allows an authent",
-        "ja": "Veeam は、悪用に成功するとリモートでコードが実行される可能性があるバックアップ & レプリケーション ソフトウェアの複数の重大な脆弱性に対処するセキュリティ アップデートをリリースしました。 脆弱性は以下のとおりです ・ CVE-2026-21666 (CVSS スコア: 9.9) ・ 認証が可能になる脆弱性",
-        "es": "Veeam ha lanzado actualizaciones de seguridad para abordar múltiples vulnerabilidades críticas en su software Backup & Replication que, si se explotan con éxito, podrían resultar en la ejecución remota de código. Las vulnerabilidades son las siguientes: CVE-2026-21666 (puntuación CVSS: 9,9): una vulnerabilidad que permite a un usuario",
-        "pt": "A Veeam lançou atualizações de segurança para solucionar diversas vulnerabilidades críticas em seu software de Backup e Replicação que, se exploradas com sucesso, podem resultar na execução remota de código. As vulnerabilidades são as seguintes - CVE-2026-21666 (pontuação CVSS: 9,9) - Uma vulnerabilidade que permite uma autenticação",
-        "fr": "Veeam a publié des mises à jour de sécurité pour corriger plusieurs vulnérabilités critiques de son logiciel de sauvegarde et de réplication qui, si elles sont exploitées avec succès, pourraient entraîner l'exécution de code à distance. Les vulnérabilités sont les suivantes - CVE-2026-21666 (score CVSS : 9,9) - Une vulnérabilité qui permet"
-      },
-      "descriptionOriginal": "Veeam has released security updates to address multiple critical vulnerabilities in its Backup & Replication software that, if successfully exploited, could result in remote code execution. The vulnerabilities are as follows - CVE-2026-21666 (CVSS score: 9.9) - A vulnerability that allows an authent",
       "source": "The Hacker News"
     }
   ]
