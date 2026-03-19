@@ -88,7 +88,7 @@ const TIER2_KEYWORDS = [
   'security flaw',
 ];
 
-const SEVEN_DAYS_MS = 7 * 24 * 60 * 60 * 1000;
+const FOURTEEN_DAYS_MS = 14 * 24 * 60 * 60 * 1000;
 
 // --- Simple XML tag extractor ---
 function extractTag(xml, tag) {
@@ -137,12 +137,25 @@ function parseRSS(xml, source) {
 }
 
 // --- Check if an item is API-security related ---
-// Tier 1 hit alone = include. Tier 2 hit = include only if Tier 1 also hits.
+// Tier 1 hit = include (API-specific term found).
+// Tier 2 only = include if 2+ Tier 2 keywords match (strong security signal).
 function isApiRelated(item) {
   const text = `${item.title} ${item.description}`.toLowerCase();
   const hasTier1 = TIER1_KEYWORDS.some((kw) => text.includes(kw));
-  if (hasTier1) return true;
-  // Tier 2 alone is not enough — skip
+  const tier2Hits = TIER2_KEYWORDS.filter((kw) => text.includes(kw));
+
+  if (hasTier1 && tier2Hits.length > 0) {
+    console.log(`    [T1+T2] ${item.title.slice(0, 60)}`);
+    return true;
+  }
+  if (hasTier1) {
+    console.log(`    [T1] ${item.title.slice(0, 60)}`);
+    return true;
+  }
+  if (tier2Hits.length >= 2) {
+    console.log(`    [T2x${tier2Hits.length}] ${item.title.slice(0, 60)}`);
+    return true;
+  }
   return false;
 }
 
@@ -229,14 +242,14 @@ async function main() {
   const apiItems = allItems.filter(isApiRelated);
   console.log(`API-related items: ${apiItems.length}`);
 
-  // Filter: last 7 days only
+  // Filter: last 14 days only
   const now = Date.now();
   const recentItems = apiItems.filter((item) => {
     if (!item.pubDate) return false;
     const itemTime = new Date(item.pubDate).getTime();
-    return now - itemTime <= SEVEN_DAYS_MS;
+    return now - itemTime <= FOURTEEN_DAYS_MS;
   });
-  console.log(`Within last 7 days: ${recentItems.length}`);
+  console.log(`Within last 14 days: ${recentItems.length}`);
 
   // Sort by date (newest first)
   recentItems.sort((a, b) => new Date(b.pubDate) - new Date(a.pubDate));
