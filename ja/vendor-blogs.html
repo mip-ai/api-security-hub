@@ -31,13 +31,13 @@
     .blog-title a:hover { color:var(--accent,#00d4aa); text-decoration:underline; }
     .blog-desc { font-size:0.9rem; color:var(--text-secondary,#a0a0a0); line-height:1.6; }
     #blog-count { font-size:0.85rem; color:var(--text-muted,#6c757d); margin-bottom:16px; }
-    .original-link {
+    .translate-link {
       display:inline-block; font-size:0.65rem; font-weight:700;
       padding:1px 5px; border-radius:3px; margin-left:6px; vertical-align:middle;
-      background:var(--border-color,#2a2a2a); color:var(--text-secondary,#a0a0a0);
+      background:var(--accent-dim,rgba(0,212,170,0.15)); color:var(--accent,#00d4aa);
       text-decoration:none; letter-spacing:0.5px;
     }
-    .original-link:hover { background:var(--border-hover,#3a3a3a); color:var(--text-primary,#e0e0e0); }
+    .translate-link:hover { background:var(--accent,#00d4aa); color:#fff; }
   </style>
 
     <link rel="alternate" hreflang="en" href="/api-security-hub/en/vendor-blogs.html">
@@ -112,14 +112,13 @@
 
   // i18n labels
   var labels = {
-    en: { showing: 'Showing {count} posts', no_posts: 'No blog posts available.', load_fail: 'Failed to load blog posts.', original: 'Original (English)' },
-    ja: { showing: '{count}件表示中', no_posts: 'ブログ記事がありません。', load_fail: 'ブログ記事の読み込みに失敗しました。', original: '原文（英語）' },
-    es: { showing: 'Mostrando {count} publicaciones', no_posts: 'No hay publicaciones disponibles.', load_fail: 'Error al cargar las publicaciones.', original: 'Original (inglés)' },
-    pt: { showing: 'Mostrando {count} publicações', no_posts: 'Nenhuma publicação disponível.', load_fail: 'Falha ao carregar publicações.', original: 'Original (inglês)' },
-    fr: { showing: 'Affichage de {count} articles', no_posts: 'Aucun article disponible.', load_fail: 'Échec du chargement des articles.', original: 'Original (anglais)' }
+    en: { showing: 'Showing {count} posts', no_posts: 'No blog posts available.', load_fail: 'Failed to load blog posts.' },
+    ja: { showing: '{count}件表示中', no_posts: 'ブログ記事がありません。', load_fail: 'ブログ記事の読み込みに失敗しました。' },
+    es: { showing: 'Mostrando {count} publicaciones', no_posts: 'No hay publicaciones disponibles.', load_fail: 'Error al cargar las publicaciones.' },
+    pt: { showing: 'Mostrando {count} publicações', no_posts: 'Nenhuma publicação disponível.', load_fail: 'Falha ao carregar publicações.' },
+    fr: { showing: 'Affichage de {count} articles', no_posts: 'Aucun article disponible.', load_fail: 'Échec du chargement des articles.' }
   };
   var l = labels[lang] || labels.en;
-  var originalLinkLabel = l.original;
 
   function renderItems(items) {
     var container = document.getElementById('blog-container');
@@ -144,10 +143,10 @@
       var date = item.pubDate
         ? new Date(item.pubDate).toLocaleDateString(lang, { year:'numeric', month:'short', day:'numeric' })
         : '';
-      var originalUrl = item.link || '#';
-      var url = (lang !== 'en' && originalUrl !== '#')
-        ? 'https://translate.google.com/translate?sl=en&tl=' + lang + '&u=' + encodeURIComponent(originalUrl)
-        : originalUrl;
+      var url = item.link || '#';
+      var translateUrl = (lang !== 'en' && url !== '#')
+        ? 'https://translate.google.com/translate?sl=en&tl=' + lang + '&u=' + encodeURIComponent(url)
+        : '';
       var source = item.source || '';
       var vendor = item.vendor || '';
 
@@ -157,8 +156,8 @@
       html += date;
       html += '</div>';
       html += '<div class="blog-title"><a href="' + url + '" target="_blank" rel="noopener noreferrer">' + title + '</a>';
-      if (lang !== 'en') {
-        html += ' <a href="' + originalUrl + '" target="_blank" rel="noopener noreferrer" class="original-link" title="' + originalLinkLabel + '">EN</a>';
+      if (translateUrl) {
+        html += ' <a href="' + translateUrl + '" target="_blank" rel="noopener noreferrer" class="translate-link" title="Google Translate">翻訳</a>';
       }
       html += '</div>';
       if (description) {
