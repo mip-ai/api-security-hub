@@ -10,5 +10,6 @@
   "vb_about_salt": "Pionnier des plateformes de sécurité API. Spécialisé dans la découverte d'API, la protection en temps réel et la gouvernance de posture grâce à l'analyse comportementale alimentée par IA/ML.",
   "vb_about_wallarm": "Fournit une sécurité API de bout en bout, incluant la prévention des menaces API, la gestion de la surface d'attaque API et la détection des vulnérabilités en temps réel.",
   "vb_about_cequence": "Spécialisé dans la Protection API Unifiée (UAP) — combinant découverte d'API, conformité et défense contre les bots/fraudes sur une seule plateforme.",
-  "vb_about_imperva": "Fournisseur complet de sécurité des applications et des données. Propose la sécurité API dans le cadre d'un portefeuille plus large de WAF, protection DDoS et sécurité des données."
+  "vb_about_imperva": "Fournisseur complet de sécurité des applications et des données. Propose la sécurité API dans le cadre d'un portefeuille plus large de WAF, protection DDoS et sécurité des données.",
+  "vb_translate_tip": "Les articles sont en anglais. Utilisez la fonction de traduction de votre navigateur (clic droit → Traduire) pour lire dans votre langue."
 }

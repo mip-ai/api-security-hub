@@ -31,13 +31,12 @@
     .blog-title a:hover { color:var(--accent,#00d4aa); text-decoration:underline; }
     .blog-desc { font-size:0.9rem; color:var(--text-secondary,#a0a0a0); line-height:1.6; }
     #blog-count { font-size:0.85rem; color:var(--text-muted,#6c757d); margin-bottom:16px; }
-    .translate-link {
-      display:inline-block; font-size:0.65rem; font-weight:700;
+    .lang-badge {
+      display:inline-block; font-size:0.6rem; font-weight:700;
       padding:1px 5px; border-radius:3px; margin-left:6px; vertical-align:middle;
-      background:var(--accent-dim,rgba(0,212,170,0.15)); color:var(--accent,#00d4aa);
-      text-decoration:none; letter-spacing:0.5px;
+      background:var(--border-color,#2a2a2a); color:var(--text-secondary,#a0a0a0);
+      letter-spacing:0.5px; cursor:default;
     }
-    .translate-link:hover { background:var(--accent,#00d4aa); color:#fff; }
   </style>
 
     <link rel="alternate" hreflang="en" href="/api-security-hub/en/vendor-blogs.html">
@@ -59,6 +58,8 @@
     <p id="vb-updated" class="text-muted" style="font-size:0.8rem;">
       <span data-i18n="vb_last_updated">Última atualização: </span><span id="vb-updated-date"></span>
     </p>
+
+    <div id="translate-tip" style="display:none;font-size:0.85rem;color:var(--text-secondary,#a0a0a0);background:var(--bg-card,#1a1a1a);border:1px solid var(--border-color,#2a2a2a);border-radius:8px;padding:10px 14px;margin-bottom:16px;" data-i18n="vb_translate_tip">Os artigos estão em inglês. Use o recurso de tradução do seu navegador (clique direito → Traduzir) para ler no seu idioma.</div>
 
     <!-- Vendor Filter Buttons -->
     <div class="vendor-filters" id="vendor-filters">
@@ -110,6 +111,12 @@
   var allItems = [];
   var currentVendor = 'all';
 
+  // Show translation tip for non-English pages
+  if (lang !== 'en') {
+    var tip = document.getElementById('translate-tip');
+    if (tip) tip.style.display = 'block';
+  }
+
   // i18n labels
   var labels = {
     en: { showing: 'Showing {count} posts', no_posts: 'No blog posts available.', load_fail: 'Failed to load blog posts.' },
@@ -144,9 +151,6 @@
         ? new Date(item.pubDate).toLocaleDateString(lang, { year:'numeric', month:'short', day:'numeric' })
         : '';
       var url = item.link || '#';
-      var translateUrl = (lang !== 'en' && url !== '#')
-        ? 'https://translate.google.com/translate?sl=en&tl=' + lang + '&u=' + encodeURIComponent(url)
-        : '';
       var source = item.source || '';
       var vendor = item.vendor || '';
 
@@ -156,8 +160,8 @@
       html += date;
       html += '</div>';
       html += '<div class="blog-title"><a href="' + url + '" target="_blank" rel="noopener noreferrer">' + title + '</a>';
-      if (translateUrl) {
-        html += ' <a href="' + translateUrl + '" target="_blank" rel="noopener noreferrer" class="translate-link" title="Google Translate">翻訳</a>';
+      if (lang !== 'en') {
+        html += ' <span class="lang-badge">EN</span>';
       }
       html += '</div>';
       if (description) {

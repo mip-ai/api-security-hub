@@ -200,9 +200,6 @@
           : (item.descriptionOriginal || item.description || '');
         var date = item.pubDate ? new Date(item.pubDate).toLocaleDateString(lang, { year:'numeric', month:'short', day:'numeric' }) : '';
         var url = item.link || '#';
-        var translateUrl = (lang !== 'en' && url !== '#')
-          ? 'https://translate.google.com/translate?sl=en&tl=' + lang + '&u=' + encodeURIComponent(url)
-          : '';
         var source = item.source || '';
 
         html += '<div class="news-item" style="margin-bottom:12px;">';
@@ -212,8 +209,8 @@
         }
         html += '</div>';
         html += '<a href="' + url + '" target="_blank" rel="noopener noreferrer">' + title + '</a>';
-        if (translateUrl) {
-          html += ' <a href="' + translateUrl + '" target="_blank" rel="noopener noreferrer" style="font-size:0.6rem;padding:1px 5px;border-radius:3px;background:rgba(0,212,170,0.15);color:#00d4aa;text-decoration:none;font-weight:700;letter-spacing:0.5px;vertical-align:middle;">翻訳</a>';
+        if (lang !== 'en') {
+          html += ' <span style="font-size:0.6rem;padding:1px 5px;border-radius:3px;background:var(--border-color,#2a2a2a);color:var(--text-secondary,#a0a0a0);font-weight:700;letter-spacing:0.5px;vertical-align:middle;">EN</span>';
         }
         if (description) {
           html += '<p style="margin:4px 0 0;font-size:0.9rem;">' + description + '</p>';
