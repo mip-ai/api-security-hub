@@ -1,7 +1,49 @@
 {
-  "lastUpdated": "2026-03-19T13:12:18.265Z",
+  "lastUpdated": "2026-03-19T15:57:17.211Z",
   "itemCount": 20,
   "items": [
+    {
+      "title": {
+        "en": "Russian hackers exploit Zimbra flaw in Ukrainian govt attacks",
+        "ja": "ロシアのハッカーがウクライナ政府攻撃でZimbraの欠陥を悪用",
+        "es": "Los piratas informáticos rusos aprovechan la falla de Zimbra en los ataques al gobierno ucraniano",
+        "pt": "Hackers russos exploram falha do Zimbra em ataques do governo ucraniano",
+        "fr": "Des pirates russes exploitent une faille de Zimbra lors d'attaques contre le gouvernement ukrainien"
+      },
+      "titleOriginal": "Russian hackers exploit Zimbra flaw in Ukrainian govt attacks",
+      "link": "https://www.bleepingcomputer.com/news/security/russian-apt28-military-hackers-exploit-zimbra-flaw-in-ukrainian-govt-attacks/",
+      "pubDate": "2026-03-19T14:55:50.000Z",
+      "description": {
+        "en": "Hackers part of APT28, a state-backed threat group linked to Russia's military intelligence service (GRU), are exploiting a Zimbra Collaboration Suite (ZCS) vulnerability in attacks targeting Ukrainian government entities. [...]",
+        "ja": "ロシアの軍事情報局（GRU）に関連する国家支援の脅威グループであるAPT28の一部のハッカーが、ウクライナ政府機関を標的とした攻撃でZimbra Collaboration Suite（ZCS）の脆弱性を悪用している。 [...]",
+        "es": "Los piratas informáticos que forman parte de APT28, un grupo de amenazas respaldado por el estado vinculado al servicio de inteligencia militar de Rusia (GRU), están explotando una vulnerabilidad de Zimbra Collaboration Suite (ZCS) en ataques dirigidos a entidades gubernamentales ucranianas. [...]",
+        "pt": "Hackers que fazem parte do APT28, um grupo de ameaças apoiado pelo Estado e ligado ao serviço de inteligência militar da Rússia (GRU), estão explorando uma vulnerabilidade do Zimbra Collaboration Suite (ZCS) em ataques direcionados a entidades governamentais ucranianas. [...]",
+        "fr": "Les pirates informatiques faisant partie d'APT28, un groupe de menace soutenu par l'État et lié au service de renseignement militaire russe (GRU), exploitent une vulnérabilité de Zimbra Collaboration Suite (ZCS) dans des attaques ciblant des entités gouvernementales ukrainiennes. [...]"
+      },
+      "descriptionOriginal": "Hackers part of APT28, a state-backed threat group linked to Russia's military intelligence service (GRU), are exploiting a Zimbra Collaboration Suite (ZCS) vulnerability in attacks targeting Ukrainian government entities. [...]",
+      "source": "BleepingComputer"
+    },
+    {
+      "title": {
+        "en": "Russian APT Exploits Zimbra Vulnerability Against Ukraine",
+        "ja": "ロシアのAPTがウクライナに対するZimbraの脆弱性を悪用",
+        "es": "APT rusa explota vulnerabilidad de Zimbra contra Ucrania",
+        "pt": "APT russo explora vulnerabilidade do Zimbra contra a Ucrânia",
+        "fr": "L'APT russe exploite la vulnérabilité de Zimbra contre l'Ukraine"
+      },
+      "titleOriginal": "Russian APT Exploits Zimbra Vulnerability Against Ukraine",
+      "link": "https://www.securityweek.com/russian-apt-exploits-zimbra-vulnerability-against-ukraine/",
+      "pubDate": "2026-03-19T13:24:54.000Z",
+      "description": {
+        "en": "Insufficient sanitization of CSS content within HTML emails leads to inline script execution when the message is opened in a browser. The post Russian APT Exploits Zimbra Vulnerability Against Ukraine appeared first on SecurityWeek.",
+        "ja": "HTML 電子メール内の CSS コンテンツのサニタイズが不十分であると、メッセージをブラウザで開いたときにインライン スクリプトが実行されます。 ロシアの APT がウクライナに対する Zimbra の脆弱性を悪用するという投稿は、SecurityWeek に最初に掲載されました。",
+        "es": "Una limpieza insuficiente del contenido CSS de los correos electrónicos HTML provoca la ejecución de un script en línea cuando el mensaje se abre en un navegador. La publicación APT rusa explota la vulnerabilidad de Zimbra contra Ucrania apareció por primera vez en SecurityWeek.",
+        "pt": "A limpeza insuficiente do conteúdo CSS em e-mails HTML leva à execução de scripts embutidos quando a mensagem é aberta em um navegador. O posto APT russo explora vulnerabilidade do Zimbra contra a Ucrânia apareceu pela primeira vez na SecurityWeek.",
+        "fr": "Une désinfection insuffisante du contenu CSS dans les e-mails HTML entraîne l'exécution d'un script en ligne lorsque le message est ouvert dans un navigateur. L’article russe APT exploite la vulnérabilité Zimbra contre l’Ukraine apparaît en premier sur SecurityWeek."
+      },
+      "descriptionOriginal": "Insufficient sanitization of CSS content within HTML emails leads to inline script execution when the message is opened in a browser. The post Russian APT Exploits Zimbra Vulnerability Against Ukraine appeared first on SecurityWeek.",
+      "source": "SecurityWeek"
+    },
     {
       "title": {
         "en": "CISA urges US orgs to secure Microsoft Intune systems after Stryker breach",
@@ -15,7 +57,7 @@
       "pubDate": "2026-03-19T11:02:27.000Z",
       "description": {
         "en": "CISA warned U.S. organizations to follow Microsoft guidance to strengthen the Intune endpoint management tool after a cyberattack exploited it to wipe medical technology giant Stryker's systems. [...]",
-        "ja": "Intune エンドポイント管理ツールが医療技術大手 Stryker のシステムを消去するためにサイバー攻撃に悪用されたことを受け、CISA は米国の組織に対し、Intune エンドポイント管理ツールを強化する Microsoft のガイダンスに従うよう警告した。 [...]",
+        "ja": "Intune エンドポイント管理ツールが医療技術大手 Stryker のシステムを消去するためにサイバー攻撃に悪用されたことを受け、CISA は米国の組織に対し、Intune エンドポイント管理ツールを強化するための Microsoft のガイダンスに従うよう警告した。 [...]",
         "es": "CISA advirtió a las organizaciones estadounidenses que siguieran las directrices de Microsoft para fortalecer la herramienta de gestión de terminales Intune después de que un ciberataque la explotara para borrar los sistemas del gigante de la tecnología médica Stryker. [...]",
         "pt": "A CISA alertou as organizações dos EUA para seguirem as orientações da Microsoft para fortalecer a ferramenta de gerenciamento de endpoint Intune depois que um ataque cibernético a explorou para limpar os sistemas da gigante de tecnologia médica Stryker. [...]",
         "fr": "La CISA a averti les organisations américaines de suivre les directives de Microsoft pour renforcer l'outil de gestion des points de terminaison Intune après qu'une cyberattaque l'a exploité pour effacer les systèmes du géant de la technologie médicale Stryker. [...]"
@@ -78,7 +120,7 @@
       "pubDate": "2026-03-19T08:57:59.000Z",
       "description": {
         "en": "Amazon found evidence that the FMC software vulnerability has been exploited since late January, and found links to Russia. The post Cisco Firewall Vulnerability Exploited as Zero-Day in Interlock Ransomware Attacks appeared first on SecurityWeek.",
-        "ja": "AmazonはFMCソフトウェアの脆弱性が1月下旬から悪用された証拠を発見し、ロシアとの関連も発見した。 Cisco ファイアウォールの脆弱性がインターロック ランサムウェア攻撃のゼロデイ攻撃として悪用された後の記事は、SecurityWeek に初めて掲載されました。",
+        "ja": "AmazonはFMCソフトウェアの脆弱性が1月下旬から悪用された証拠を発見し、ロシアとの関連も発見した。 Cisco ファイアウォールの脆弱性がインターロック ランサムウェア攻撃のゼロデイ攻撃として悪用された後の記事は、SecurityWeek に最初に掲載されました。",
         "es": "Amazon encontró evidencia de que la vulnerabilidad del software FMC ha sido explotada desde finales de enero y encontró enlaces a Rusia. La publicación La vulnerabilidad del firewall de Cisco explotada como día cero en ataques de ransomware Interlock apareció por primera vez en SecurityWeek.",
         "pt": "A Amazon encontrou evidências de que a vulnerabilidade do software FMC foi explorada desde o final de janeiro e encontrou ligações com a Rússia. A postagem Vulnerabilidade do Cisco Firewall explorada como dia zero em ataques de ransomware Interlock apareceu pela primeira vez na SecurityWeek.",
         "fr": "Amazon a trouvé des preuves que la vulnérabilité du logiciel FMC était exploitée depuis fin janvier et a trouvé des liens vers la Russie. La vulnérabilité du pare-feu Cisco exploitée comme Zero-Day dans les attaques Interlock Ransomware est apparue en premier sur SecurityWeek."
@@ -99,7 +141,7 @@
       "pubDate": "2026-03-19T06:05:00.000Z",
       "description": {
         "en": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) has urged government agencies to apply patches for two security flaws impacting Synacor Zimbra Collaboration Suite (ZCS) and Microsoft Office SharePoint, stating they have been actively exploited in the wild. The vulnerabilities in que",
-        "ja": "米国サイバーセキュリティ・インフラストラクチャセキュリティ庁（CISA）は、Synacor Zimbra Collaboration Suite（ZCS）とMicrosoft Office SharePointに影響を与える2つのセキュリティ上の欠陥が実際に活発に悪用されているとして、政府機関にパッチを適用するよう促した。 que の脆弱性",
+        "ja": "米国サイバーセキュリティ・インフラセキュリティ庁（CISA）は、Synacor Zimbra Collaboration Suite（ZCS）とMicrosoft Office SharePointに影響を与える2つのセキュリティ上の欠陥が実際に悪用されているとして、政府機関にパッチを適用するよう促した。 que の脆弱性",
         "es": "La Agencia de Seguridad de Infraestructura y Ciberseguridad de EE. UU. (CISA) ha instado a las agencias gubernamentales a aplicar parches para dos fallas de seguridad que afectan a Synacor Zimbra Collaboration Suite (ZCS) y Microsoft Office SharePoint, afirmando que han sido explotadas activamente en la naturaleza. Las vulnerabilidades en que",
         "pt": "A Agência de Segurança Cibernética e de Infraestrutura dos EUA (CISA) instou as agências governamentais a aplicarem patches para duas falhas de segurança que afetam o Synacor Zimbra Collaboration Suite (ZCS) e o Microsoft Office SharePoint, afirmando que eles foram ativamente explorados em estado selvagem. As vulnerabilidades em que",
         "fr": "L'Agence américaine de cybersécurité et de sécurité des infrastructures (CISA) a exhorté les agences gouvernementales à appliquer des correctifs pour deux failles de sécurité affectant Synacor Zimbra Collaboration Suite (ZCS) et Microsoft Office SharePoint, affirmant qu'elles ont été activement exploitées dans la nature. Les vulnérabilités en que"
@@ -206,7 +248,7 @@
         "en": "A high-severity security flaw affecting default installations of Ubuntu Desktop versions 24.04 and later could be exploited to escalate privileges to the root level. Tracked as CVE-2026-3888 (CVSS score: 7.8), the issue could allow an attacker to seize control of a susceptible system. \"This flaw (CV",
         "ja": "Ubuntu Desktop バージョン 24.04 以降のデフォルトのインストールに影響を与える重大度の高いセキュリティ上の欠陥が悪用され、権限がルート レベルに昇格される可能性があります。 CVE-2026-3888 (CVSS スコア: 7.8) として追跡されているこの問題により、攻撃者が影響を受けやすいシステムの制御を奪われる可能性があります。 「この欠陥（CV",
         "es": "Una falla de seguridad de alta gravedad que afecta las instalaciones predeterminadas de las versiones 24.04 y posteriores de Ubuntu Desktop podría aprovecharse para escalar privilegios al nivel raíz. Registrado como CVE-2026-3888 (puntuación CVSS: 7,8), el problema podría permitir a un atacante tomar el control de un sistema susceptible. \"Este defecto (CV",
-        "pt": "Uma falha de segurança de alta gravidade que afeta as instalações padrão do Ubuntu Desktop versões 24.04 e posteriores pode ser explorada para escalar privilégios para o nível raiz. Rastreado como CVE-2026-3888 (pontuação CVSS: 7,8), o problema pode permitir que um invasor assuma o controle de um sistema suscetível. \"Esta falha (CV",
+        "pt": "Uma falha de segurança de alta gravidade que afeta as instalações padrão do Ubuntu Desktop versões 24.04 e posteriores pode ser explorada para escalar privilégios para o nível raiz. Rastreado como CVE-2026-3888 (pontuação CVSS: 7,8), o problema pode permitir que um invasor assuma o controle de um sistema suscetível. \"Essa falha (CV",
         "fr": "Une faille de sécurité de haute gravité affectant les installations par défaut d'Ubuntu Desktop versions 24.04 et ultérieures pourrait être exploitée pour élever les privilèges au niveau racine. Suivi comme CVE-2026-3888 (score CVSS : 7,8), le problème pourrait permettre à un attaquant de prendre le contrôle d'un système sensible. \"Cette faille (CV"
       },
       "descriptionOriginal": "A high-severity security flaw affecting default installations of Ubuntu Desktop versions 24.04 and later could be exploited to escalate privileges to the root level. Tracked as CVE-2026-3888 (CVSS score: 7.8), the issue could allow an attacker to seize control of a susceptible system. \"This flaw (CV",
@@ -218,7 +260,7 @@
         "ja": "Apple、iOS および macOS で同一オリジン ポリシーのバイパスを可能にする WebKit の脆弱性を修正",
         "es": "Apple corrige la vulnerabilidad de WebKit permitiendo omitir la política del mismo origen en iOS y macOS",
         "pt": "Apple corrige vulnerabilidade do WebKit, permitindo ignorar políticas de mesma origem no iOS e macOS",
-        "fr": "Apple corrige la vulnérabilité de WebKit permettant de contourner la politique de même origine sur iOS et macOS"
+        "fr": "Apple corrige la vulnérabilité de WebKit permettant le contournement de la politique de même origine sur iOS et macOS"
       },
       "titleOriginal": "Apple Fixes WebKit Vulnerability Enabling Same-Origin Policy Bypass on iOS and macOS",
       "link": "https://thehackernews.com/2026/03/apple-fixes-webkit-vulnerability.html",
@@ -237,7 +279,7 @@
       "title": {
         "en": "CISA Flags Actively Exploited Wing FTP Vulnerability Leaking Server Paths",
         "ja": "CISA、サーバーパス漏洩の Wing FTP 脆弱性が積極的に悪用されていると報告",
-        "es": "CISA señala rutas de servidor que filtran rutas de servidor de vulnerabilidad Wing FTP explotadas activamente",
+        "es": "CISA señala rutas de servidor con fugas de vulnerabilidad Wing FTP activamente explotada",
         "pt": "CISA sinaliza vulnerabilidade de FTP de Wing explorada ativamente, vazamento de caminhos de servidor",
         "fr": "CISA signale une vulnérabilité FTP de Wing activement exploitée qui fuit les chemins de serveur"
       },
@@ -246,7 +288,7 @@
       "pubDate": "2026-03-17T05:23:00.000Z",
       "description": {
         "en": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Monday added a medium-severity security flaw impacting Wing FTP to its Known Exploited Vulnerabilities (KEV) catalog, citing evidence of active exploitation. The vulnerability, CVE-2025-47813 (CVSS score: 4.3), is an information dis",
-        "ja": "米国サイバーセキュリティ・インフラセキュリティ庁（CISA）は月曜日、活発な悪用の証拠を引用し、Wing FTPに影響を与える中程度の重大度のセキュリティ欠陥を既知の悪用された脆弱性（KEV）カタログに追加した。 脆弱性 CVE-2025-47813 (CVSS スコア: 4.3) は、情報セキュリティです。",
+        "ja": "米国サイバーセキュリティ・インフラストラクチャセキュリティ庁（CISA）は月曜日、活発な悪用の証拠を引用し、Wing FTPに影響を与える中程度の重大度のセキュリティ欠陥を既知の悪用された脆弱性（KEV）カタログに追加した。 脆弱性 CVE-2025-47813 (CVSS スコア: 4.3) は、情報セキュリティです。",
         "es": "La Agencia de Seguridad de Infraestructura y Ciberseguridad de EE. UU. (CISA) agregó el lunes una falla de seguridad de gravedad media que afecta a Wing FTP a su catálogo de vulnerabilidades explotadas conocidas (KEV), citando evidencia de explotación activa. La vulnerabilidad, CVE-2025-47813 (puntuación CVSS: 4,3), es una información dis",
         "pt": "A Agência de Segurança Cibernética e de Infraestrutura dos EUA (CISA) adicionou na segunda-feira uma falha de segurança de gravidade média que afeta o Wing FTP ao seu catálogo de Vulnerabilidades Exploradas Conhecidas (KEV), citando evidências de exploração ativa. A vulnerabilidade, CVE-2025-47813 (pontuação CVSS: 4,3), é uma falha de informação",
         "fr": "L'Agence américaine de cybersécurité et de sécurité des infrastructures (CISA) a ajouté lundi une faille de sécurité de gravité moyenne affectant Wing FTP à son catalogue de vulnérabilités exploitées connues (KEV), citant des preuves d'exploitation active. La vulnérabilité, CVE-2025-47813 (score CVSS : 4,3), est un message d'information."
@@ -257,7 +299,7 @@
     {
       "title": {
         "en": "Android 17 Blocks Non-Accessibility Apps from Accessibility API to Prevent Malware Abuse",
-        "ja": "Android 17 は、マルウェアの悪用を防ぐために、アクセシビリティ非対応アプリをアクセシビリティ API からブロックします",
+        "ja": "Android 17 はマルウェアの悪用を防ぐために、アクセシビリティ非対応アプリをアクセシビリティ API からブロックします",
         "es": "Android 17 bloquea aplicaciones que no son de accesibilidad de la API de accesibilidad para evitar el abuso de malware",
         "pt": "Android 17 bloqueia aplicativos não acessíveis da API de acessibilidade para evitar abuso de malware",
         "fr": "Android 17 bloque les applications non accessibles de l'API d'accessibilité pour empêcher les abus de logiciels malveillants"
@@ -302,7 +344,7 @@
         "ja": "Veeamは7つの重要なバックアップとパッチを適用します。 リモートでコードが実行されるレプリケーションの欠陥",
         "es": "Veeam parchea 7 copias de seguridad y actualizaciones críticas Defectos de replicación que permiten la ejecución remota de código",
         "pt": "Veeam corrige 7 atualizações críticas de backup e atualização Falhas de replicação que permitem execução remota de código",
-        "fr": "Veeam met à jour 7 les sauvegardes et les sauvegardes critiques Failles de réplication permettant l'exécution de code à distance"
+        "fr": "Veeam met à jour 7 les sauvegardes et sauvegardes critiques Failles de réplication permettant l'exécution de code à distance"
       },
       "titleOriginal": "Veeam Patches 7 Critical Backup &amp; Replication Flaws Allowing Remote Code Execution",
       "link": "https://thehackernews.com/2026/03/veeam-patches-7-critical-backup.html",
@@ -374,52 +416,10 @@
         "en": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Wednesday added a critical security flaw impacting n8n to its Known Exploited Vulnerabilities (KEV) catalog, based on evidence of active exploitation. The vulnerability, tracked as CVE-2025-68613 (CVSS score: 9.9), concerns a case o",
         "ja": "米国サイバーセキュリティ・インフラセキュリティ庁 (CISA) は水曜日、活発な悪用の証拠に基づいて、n8n に影響を与える重大なセキュリティ上の欠陥を既知の悪用された脆弱性 (KEV) カタログに追加しました。 CVE-2025-68613 (CVSS スコア: 9.9) として追跡されているこの脆弱性は、次のケースに関係しています。",
         "es": "La Agencia de Seguridad de Infraestructura y Ciberseguridad de EE. UU. (CISA) agregó el miércoles una falla de seguridad crítica que afecta a n8n a su catálogo de vulnerabilidades explotadas conocidas (KEV), basándose en evidencia de explotación activa. La vulnerabilidad, rastreada como CVE-2025-68613 (puntuación CVSS: 9,9), se refiere a un caso o",
-        "pt": "A Agência de Segurança Cibernética e de Infraestrutura dos EUA (CISA) adicionou na quarta-feira uma falha crítica de segurança que afeta o n8n ao seu catálogo de Vulnerabilidades Exploradas Conhecidas (KEV), com base em evidências de exploração ativa. The vulnerability, tracked as CVE-2025-68613 (CVSS score: 9.9), concerns a case o",
+        "pt": "A Agência de Segurança Cibernética e de Infraestrutura dos EUA (CISA) adicionou na quarta-feira uma falha crítica de segurança que afeta o n8n ao seu catálogo de Vulnerabilidades Exploradas Conhecidas (KEV), com base em evidências de exploração ativa. A vulnerabilidade, rastreada como CVE-2025-68613 (pontuação CVSS: 9,9), diz respeito a um caso de",
         "fr": "L'Agence américaine de cybersécurité et de sécurité des infrastructures (CISA) a ajouté mercredi une faille de sécurité critique affectant n8n à son catalogue de vulnérabilités exploitées connues (KEV), sur la base de preuves d'exploitation active. La vulnérabilité, suivie comme CVE-2025-68613 (score CVSS : 9,9), concerne un cas o"
       },
       "descriptionOriginal": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Wednesday added a critical security flaw impacting n8n to its Known Exploited Vulnerabilities (KEV) catalog, based on evidence of active exploitation. The vulnerability, tracked as CVE-2025-68613 (CVSS score: 9.9), concerns a case o",
-      "source": "The Hacker News"
-    },
-    {
-      "title": {
-        "en": "Critical n8n Flaws Allow Remote Code Execution and Exposure of Stored Credentials",
-        "ja": "n8n の重大な欠陥により、リモートでコードが実行され、保存されている認証情報が漏洩する可能性がある",
-        "es": "Defectos críticos de n8n permiten la ejecución remota de código y la exposición de credenciales almacenadas",
-        "pt": "Falhas críticas n8n permitem execução remota de código e exposição de credenciais armazenadas",
-        "fr": "Les failles critiques de n8n permettent l'exécution de code à distance et l'exposition des informations d'identification stockées"
-      },
-      "titleOriginal": "Critical n8n Flaws Allow Remote Code Execution and Exposure of Stored Credentials",
-      "link": "https://thehackernews.com/2026/03/critical-n8n-flaws-allow-remote-code.html",
-      "pubDate": "2026-03-11T14:51:00.000Z",
-      "description": {
-        "en": "Cybersecurity researchers have disclosed details of two now-patched security flaws in the n8n workflow automation platform, including two critical bugs that could result in arbitrary command execution. The vulnerabilities are listed below - CVE-2026-27577 (CVSS score: 9.4) - Expression sandbox escap",
-        "ja": "サイバーセキュリティ研究者は、n8n ワークフロー自動化プラットフォームにパッチが適用された 2 つのセキュリティ上の欠陥の詳細を明らかにしました。これには、任意のコマンドの実行を引き起こす可能性のある 2 つの重大なバグが含まれます。 脆弱性は以下のとおりです - CVE-2026-27577 (CVSS スコア: 9.4) - Expression Sandbox escap",
-        "es": "Investigadores de ciberseguridad han revelado detalles de dos fallas de seguridad ahora parcheadas en la plataforma de automatización de flujo de trabajo n8n, incluidos dos errores críticos que podrían resultar en la ejecución de comandos arbitrarios. Las vulnerabilidades se enumeran a continuación: CVE-2026-27577 (puntuación CVSS: 9,4) - Escape de la zona de pruebas de expresión",
-        "pt": "Pesquisadores de segurança cibernética divulgaram detalhes de duas falhas de segurança agora corrigidas na plataforma de automação de fluxo de trabalho n8n, incluindo dois bugs críticos que podem resultar na execução arbitrária de comandos. As vulnerabilidades estão listadas abaixo - CVE-2026-27577 (pontuação CVSS: 9,4) - Expressão sandbox escape",
-        "fr": "Les chercheurs en cybersécurité ont divulgué les détails de deux failles de sécurité désormais corrigées dans la plate-forme d'automatisation des flux de travail n8n, notamment deux bogues critiques qui pourraient entraîner l'exécution arbitraire de commandes. Les vulnérabilités sont répertoriées ci-dessous - CVE-2026-27577 (score CVSS : 9,4) - Évasion du bac à sable d'expression"
-      },
-      "descriptionOriginal": "Cybersecurity researchers have disclosed details of two now-patched security flaws in the n8n workflow automation platform, including two critical bugs that could result in arbitrary command execution. The vulnerabilities are listed below - CVE-2026-27577 (CVSS score: 9.4) - Expression sandbox escap",
-      "source": "The Hacker News"
-    },
-    {
-      "title": {
-        "en": "Dozens of Vendors Patch Security Flaws Across Enterprise Software and Network Devices",
-        "ja": "数十のベンダーがエンタープライズ ソフトウェアとネットワーク デバイス全体のセキュリティ上の欠陥にパッチを適用",
-        "es": "Docenas de proveedores parchean fallas de seguridad en software empresarial y dispositivos de red",
-        "pt": "Dezenas de fornecedores corrigem falhas de segurança em softwares empresariais e dispositivos de rede",
-        "fr": "Des dizaines de fournisseurs corrigent les failles de sécurité des logiciels d'entreprise et des périphériques réseau"
-      },
-      "titleOriginal": "Dozens of Vendors Patch Security Flaws Across Enterprise Software and Network Devices",
-      "link": "https://thehackernews.com/2026/03/dozens-of-vendors-patch-security-flaws.html",
-      "pubDate": "2026-03-11T12:26:00.000Z",
-      "description": {
-        "en": "SAP has released security updates to address two critical security flaws that could be exploited to achieve arbitrary code execution on affected systems. The vulnerabilities in question listed below - CVE-2019-17571 (CVSS score: 9.8) - A code injection vulnerability in SAP Quotation Management Insur",
-        "ja": "SAP は、影響を受けるシステム上で任意のコードを実行するために悪用される可能性がある 2 つの重大なセキュリティ欠陥に対処するセキュリティ アップデートをリリースしました。 問題の脆弱性は以下のとおりです - CVE-2019-17571 (CVSS スコア: 9.8) - SAP Quotation Management Insur のコード インジェクションの脆弱性",
-        "es": "SAP ha publicado actualizaciones de seguridad para abordar dos fallas de seguridad críticas que podrían explotarse para lograr la ejecución de código arbitrario en los sistemas afectados. Las vulnerabilidades en cuestión se enumeran a continuación: CVE-2019-17571 (puntuación CVSS: 9,8): una vulnerabilidad de inyección de código en SAP Quotation Management Insur",
-        "pt": "A SAP lançou atualizações de segurança para solucionar duas falhas críticas de segurança que poderiam ser exploradas para obter execução arbitrária de código nos sistemas afetados. As vulnerabilidades em questão listadas abaixo - CVE-2019-17571 (pontuação CVSS: 9,8) - Uma vulnerabilidade de injeção de código no SAP Quotation Management Insur",
-        "fr": "SAP a publié des mises à jour de sécurité pour corriger deux failles de sécurité critiques qui pourraient être exploitées pour réaliser l'exécution de code arbitraire sur les systèmes concernés. Les vulnérabilités en question répertoriées ci-dessous - CVE-2019-17571 (score CVSS : 9,8) - Une vulnérabilité d'injection de code dans SAP Quotation Management Insur"
-      },
-      "descriptionOriginal": "SAP has released security updates to address two critical security flaws that could be exploited to achieve arbitrary code execution on affected systems. The vulnerabilities in question listed below - CVE-2019-17571 (CVSS score: 9.8) - A code injection vulnerability in SAP Quotation Management Insur",
       "source": "The Hacker News"
     }
   ]
