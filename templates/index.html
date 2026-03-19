@@ -194,7 +194,10 @@
           ? (item.description[lang] || item.description.en || item.descriptionOriginal || '')
           : (item.descriptionOriginal || item.description || '');
         var date = item.pubDate ? new Date(item.pubDate).toLocaleDateString(lang, { year:'numeric', month:'short', day:'numeric' }) : '';
-        var url = item.link || '#';
+        var originalUrl = item.link || '#';
+        var url = (lang !== 'en' && originalUrl !== '#')
+          ? 'https://translate.google.com/translate?sl=en&tl=' + lang + '&u=' + encodeURIComponent(originalUrl)
+          : originalUrl;
         var source = item.source || '';
 
         html += '<div class="news-item" style="margin-bottom:12px;">';
@@ -204,6 +207,9 @@
         }
         html += '</div>';
         html += '<a href="' + url + '" target="_blank" rel="noopener noreferrer">' + title + '</a>';
+        if (lang !== 'en') {
+          html += ' <a href="' + originalUrl + '" target="_blank" rel="noopener noreferrer" style="font-size:0.6rem;padding:1px 5px;border-radius:3px;background:var(--border-color,#2a2a2a);color:var(--text-secondary,#a0a0a0);text-decoration:none;font-weight:700;letter-spacing:0.5px;vertical-align:middle;">EN</a>';
+        }
         if (description) {
           html += '<p style="margin:4px 0 0;font-size:0.9rem;">' + description + '</p>';
         }
