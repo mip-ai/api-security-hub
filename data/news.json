@@ -1,7 +1,70 @@
 {
-  "lastUpdated": "2026-03-19T04:55:12.308Z",
+  "lastUpdated": "2026-03-19T09:44:06.497Z",
   "itemCount": 20,
   "items": [
+    {
+      "title": {
+        "en": "CISA Warns of Attacks Exploiting Recent SharePoint Vulnerability",
+        "ja": "CISA、最近の SharePoint の脆弱性を悪用した攻撃を警告",
+        "es": "CISA advierte sobre ataques que aprovechan la reciente vulnerabilidad de SharePoint",
+        "pt": "CISA alerta sobre ataques que exploram vulnerabilidade recente do SharePoint",
+        "fr": "CISA met en garde contre les attaques exploitant une vulnérabilité récente de SharePoint"
+      },
+      "titleOriginal": "CISA Warns of Attacks Exploiting Recent SharePoint Vulnerability",
+      "link": "https://www.securityweek.com/cisa-warns-of-attacks-exploiting-recent-sharepoint-vulnerability/",
+      "pubDate": "2026-03-19T09:42:52.000Z",
+      "description": {
+        "en": "The SharePoint remote code execution vulnerability CVE-2026-20963, which Microsoft patched in January, has been exploited in the wild. The post CISA Warns of Attacks Exploiting Recent SharePoint Vulnerability appeared first on SecurityWeek.",
+        "ja": "Microsoft が 1 月にパッチを適用した SharePoint リモート コード実行の脆弱性 CVE-2026-20963 は、実際に悪用されています。 CISA が最近の SharePoint の脆弱性を悪用した攻撃を警告する投稿は、SecurityWeek に最初に掲載されました。",
+        "es": "La vulnerabilidad de ejecución remota de código de SharePoint CVE-2026-20963, que Microsoft parchó en enero, ha sido explotada en estado salvaje. La publicación CISA advierte sobre ataques que explotan una vulnerabilidad reciente de SharePoint apareció por primera vez en SecurityWeek.",
+        "pt": "A vulnerabilidade de execução remota de código do SharePoint CVE-2026-20963, que a Microsoft corrigiu em janeiro, foi explorada à solta. A postagem CISA alerta sobre ataques que exploram vulnerabilidade recente do SharePoint apareceu pela primeira vez na SecurityWeek.",
+        "fr": "La vulnérabilité d'exécution de code à distance SharePoint CVE-2026-20963, que Microsoft a corrigée en janvier, a été exploitée de manière sauvage. Le message CISA met en garde contre les attaques exploitant une vulnérabilité récente de SharePoint apparaît en premier sur SecurityWeek."
+      },
+      "descriptionOriginal": "The SharePoint remote code execution vulnerability CVE-2026-20963, which Microsoft patched in January, has been exploited in the wild. The post CISA Warns of Attacks Exploiting Recent SharePoint Vulnerability appeared first on SecurityWeek.",
+      "source": "SecurityWeek"
+    },
+    {
+      "title": {
+        "en": "Cisco Firewall Vulnerability Exploited as Zero-Day in Interlock Ransomware Attacks",
+        "ja": "Cisco ファイアウォールの脆弱性がインターロック ランサムウェア攻撃のゼロデイ攻撃として悪用される",
+        "es": "Vulnerabilidad del firewall de Cisco explotada como día cero en ataques de ransomware Interlock",
+        "pt": "Vulnerabilidade do Cisco Firewall explorada como dia zero em ataques de ransomware Interlock",
+        "fr": "Une vulnérabilité du pare-feu Cisco exploitée comme Zero-Day dans des attaques de ransomware Interlock"
+      },
+      "titleOriginal": "Cisco Firewall Vulnerability Exploited as Zero-Day in Interlock Ransomware Attacks",
+      "link": "https://www.securityweek.com/cisco-firewall-vulnerability-exploited-as-zero-day-in-interlock-ransomware-attacks/",
+      "pubDate": "2026-03-19T08:57:59.000Z",
+      "description": {
+        "en": "Amazon found evidence that the FMC software vulnerability has been exploited since late January, and found links to Russia. The post Cisco Firewall Vulnerability Exploited as Zero-Day in Interlock Ransomware Attacks appeared first on SecurityWeek.",
+        "ja": "AmazonはFMCソフトウェアの脆弱性が1月下旬から悪用された証拠を発見し、ロシアとの関連も発見した。 Cisco ファイアウォールの脆弱性がインターロック ランサムウェア攻撃のゼロデイ攻撃として悪用された後の記事は、SecurityWeek に最初に掲載されました。",
+        "es": "Amazon encontró evidencia de que la vulnerabilidad del software FMC ha sido explotada desde finales de enero y encontró enlaces a Rusia. La publicación La vulnerabilidad del firewall de Cisco explotada como día cero en ataques de ransomware Interlock apareció por primera vez en SecurityWeek.",
+        "pt": "A Amazon encontrou evidências de que a vulnerabilidade do software FMC foi explorada desde o final de janeiro e encontrou ligações com a Rússia. A postagem Vulnerabilidade do Cisco Firewall explorada como dia zero em ataques de ransomware Interlock apareceu pela primeira vez na SecurityWeek.",
+        "fr": "Amazon a trouvé des preuves que la vulnérabilité du logiciel FMC était exploitée depuis fin janvier et a trouvé des liens vers la Russie. La vulnérabilité du pare-feu Cisco exploitée comme Zero-Day dans les attaques Interlock Ransomware est apparue en premier sur SecurityWeek."
+      },
+      "descriptionOriginal": "Amazon found evidence that the FMC software vulnerability has been exploited since late January, and found links to Russia. The post Cisco Firewall Vulnerability Exploited as Zero-Day in Interlock Ransomware Attacks appeared first on SecurityWeek.",
+      "source": "SecurityWeek"
+    },
+    {
+      "title": {
+        "en": "CISA Warns of Zimbra, SharePoint Flaw Exploits; Cisco Zero-Day Hit in Ransomware Attacks",
+        "ja": "CISA、Zimbra、SharePointの欠陥悪用を警告。 ランサムウェア攻撃におけるシスコのゼロデイ ヒット",
+        "es": "CISA advierte sobre Zimbra y vulnerabilidades de SharePoint; Cisco Zero-Day afectado por ataques de ransomware",
+        "pt": "CISA alerta sobre falhas no Zimbra e no SharePoint; Cisco Zero-Day Hit em ataques de ransomware",
+        "fr": "CISA met en garde contre les failles de Zimbra et SharePoint ; Cisco Zero-Day touché dans les attaques de ransomware"
+      },
+      "titleOriginal": "CISA Warns of Zimbra, SharePoint Flaw Exploits; Cisco Zero-Day Hit in Ransomware Attacks",
+      "link": "https://thehackernews.com/2026/03/cisa-warns-of-zimbra-sharepoint-flaw.html",
+      "pubDate": "2026-03-19T06:05:00.000Z",
+      "description": {
+        "en": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) has urged government agencies to apply patches for two security flaws impacting Synacor Zimbra Collaboration Suite (ZCS) and Microsoft Office SharePoint, stating they have been actively exploited in the wild. The vulnerabilities in que",
+        "ja": "米国サイバーセキュリティ・インフラストラクチャセキュリティ庁（CISA）は、Synacor Zimbra Collaboration Suite（ZCS）とMicrosoft Office SharePointに影響を与える2つのセキュリティ上の欠陥が実際に活発に悪用されているとして、政府機関にパッチを適用するよう促した。 que の脆弱性",
+        "es": "La Agencia de Seguridad de Infraestructura y Ciberseguridad de EE. UU. (CISA) ha instado a las agencias gubernamentales a aplicar parches para dos fallas de seguridad que afectan a Synacor Zimbra Collaboration Suite (ZCS) y Microsoft Office SharePoint, afirmando que han sido explotadas activamente en la naturaleza. Las vulnerabilidades en que",
+        "pt": "A Agência de Segurança Cibernética e de Infraestrutura dos EUA (CISA) instou as agências governamentais a aplicarem patches para duas falhas de segurança que afetam o Synacor Zimbra Collaboration Suite (ZCS) e o Microsoft Office SharePoint, afirmando que eles foram ativamente explorados em estado selvagem. As vulnerabilidades em que",
+        "fr": "L'Agence américaine de cybersécurité et de sécurité des infrastructures (CISA) a exhorté les agences gouvernementales à appliquer des correctifs pour deux failles de sécurité affectant Synacor Zimbra Collaboration Suite (ZCS) et Microsoft Office SharePoint, affirmant qu'elles ont été activement exploitées dans la nature. Les vulnérabilités en que"
+      },
+      "descriptionOriginal": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) has urged government agencies to apply patches for two security flaws impacting Synacor Zimbra Collaboration Suite (ZCS) and Microsoft Office SharePoint, stating they have been actively exploited in the wild. The vulnerabilities in que",
+      "source": "The Hacker News"
+    },
     {
       "title": {
         "en": "Aura confirms data breach exposing 900,000 marketing contacts",
@@ -172,13 +235,13 @@
     },
     {
       "title": {
-        "en": "New “Darksword” iOS exploit used in infostealer attack on iPhones",
-        "ja": "iPhone に対する情報窃取攻撃に使用された新しい「Darksword」iOS エクスプロイト",
-        "es": "Nuevo exploit de iOS \"Darksword\" utilizado en un ataque de robo de información en iPhones",
-        "pt": "Nova exploração iOS “Darksword” usada em ataque infostealer em iPhones",
-        "fr": "Nouvel exploit iOS « Darksword » utilisé dans une attaque d’infostealer sur les iPhones"
+        "en": "New DarkSword iOS exploit used in infostealer attack on iPhones",
+        "ja": "新しい DarkSword iOS エクスプロイトが iPhone への情報窃取攻撃に使用される",
+        "es": "Nuevo exploit DarkSword para iOS utilizado en un ataque de robo de información en iPhones",
+        "pt": "Nova exploração do DarkSword iOS usada em ataque de infostealer em iPhones",
+        "fr": "Nouvel exploit DarkSword iOS utilisé dans une attaque d'infostealer sur les iPhones"
       },
-      "titleOriginal": "New “Darksword” iOS exploit used in infostealer attack on iPhones",
+      "titleOriginal": "New DarkSword iOS exploit used in infostealer attack on iPhones",
       "link": "https://www.bleepingcomputer.com/news/security/new-darksword-ios-exploit-used-in-infostealer-attack-on-iphones/",
       "pubDate": "2026-03-18T14:02:08.000Z",
       "description": {
@@ -231,27 +294,6 @@
         "fr": "Axée sur la sécurisation de l’IA autonome sur les points finaux, la startup investira dans le développement de produits. L'article Manifold lève 8 millions de dollars pour la détection et la réponse à l'IA apparaît en premier sur SecurityWeek."
       },
       "descriptionOriginal": "Focused on securing autonomous AI on endpoints, the startup will invest in product development. The post Manifold Raises $8 Million for AI Detection and Response appeared first on SecurityWeek.",
-      "source": "SecurityWeek"
-    },
-    {
-      "title": {
-        "en": "Iranian Hackers Likely Used Malware-Stolen Credentials in Stryker Breach",
-        "ja": "イランのハッカーがStryker侵害でマルウェアで盗んだ認証情報を使用した可能性",
-        "es": "Los piratas informáticos iraníes probablemente utilizaron credenciales robadas por malware en la infracción de Stryker",
-        "pt": "Hackers iranianos provavelmente usaram credenciais roubadas por malware na violação do Stryker",
-        "fr": "Les pirates iraniens ont probablement utilisé des informations d'identification volées par des logiciels malveillants lors de la violation de Stryker"
-      },
-      "titleOriginal": "Iranian Hackers Likely Used Malware-Stolen Credentials in Stryker Breach",
-      "link": "https://www.securityweek.com/iranian-hackers-likely-used-malware-stolen-credentials-in-stryker-breach/",
-      "pubDate": "2026-03-18T12:47:00.000Z",
-      "description": {
-        "en": "The medtech giant has been working on restoring systems affected by the cyberattack conducted by the Handala hackers. The post Iranian Hackers Likely Used Malware-Stolen Credentials in Stryker Breach appeared first on SecurityWeek.",
-        "ja": "医療技術大手は、ハンダラハッカーによるサイバー攻撃の影響を受けたシステムの復旧に取り組んでいる。 「イランのハッカーがストライカー侵害でマルウェアで盗まれた認証情報を使用した可能性がある」という投稿は、SecurityWeek に最初に掲載されました。",
-        "es": "El gigante de la tecnología médica ha estado trabajando para restaurar los sistemas afectados por el ciberataque realizado por los piratas informáticos Handala. La publicación Hackers iraníes probablemente utilizaron credenciales robadas con malware en Stryker Breach apareció por primera vez en SecurityWeek.",
-        "pt": "A gigante da tecnologia médica tem trabalhado na restauração de sistemas afetados pelo ataque cibernético conduzido pelos hackers Handala. A postagem Hackers iranianos provavelmente usaram credenciais roubadas por malware na violação do Stryker apareceu pela primeira vez na SecurityWeek.",
-        "fr": "Le géant des technologies médicales travaille à la restauration des systèmes affectés par la cyberattaque menée par les pirates de Handala. L'article Les pirates iraniens ont probablement utilisé des informations d'identification volées par des logiciels malveillants dans Stryker Breach apparaît en premier sur SecurityWeek."
-      },
-      "descriptionOriginal": "The medtech giant has been working on restoring systems affected by the cyberattack conducted by the Handala hackers. The post Iranian Hackers Likely Used Malware-Stolen Credentials in Stryker Breach appeared first on SecurityWeek.",
       "source": "SecurityWeek"
     },
     {
@@ -378,48 +420,6 @@
         "fr": "L'Agence américaine de cybersécurité et de sécurité des infrastructures (CISA) a ajouté lundi une faille de sécurité de gravité moyenne affectant Wing FTP à son catalogue de vulnérabilités exploitées connues (KEV), citant des preuves d'exploitation active. La vulnérabilité, CVE-2025-47813 (score CVSS : 4,3), est un message d'information."
       },
       "descriptionOriginal": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Monday added a medium-severity security flaw impacting Wing FTP to its Known Exploited Vulnerabilities (KEV) catalog, citing evidence of active exploitation. The vulnerability, CVE-2025-47813 (CVSS score: 4.3), is an information dis",
-      "source": "The Hacker News"
-    },
-    {
-      "title": {
-        "en": "GlassWorm Attack Uses Stolen GitHub Tokens to Force-Push Malware Into Python Repos",
-        "ja": "GlassWorm 攻撃は、盗まれた GitHub トークンを使用してマルウェアを Python リポジトリに強制プッシュします",
-        "es": "El ataque GlassWorm utiliza tokens de GitHub robados para forzar el envío de malware a repositorios de Python",
-        "pt": "Ataque GlassWorm usa tokens GitHub roubados para forçar malware em repositórios Python",
-        "fr": "L'attaque GlassWorm utilise des jetons GitHub volés pour forcer l'insertion de logiciels malveillants dans les dépôts Python"
-      },
-      "titleOriginal": "GlassWorm Attack Uses Stolen GitHub Tokens to Force-Push Malware Into Python Repos",
-      "link": "https://thehackernews.com/2026/03/glassworm-attack-uses-stolen-github.html",
-      "pubDate": "2026-03-16T19:37:00.000Z",
-      "description": {
-        "en": "The GlassWorm malware campaign is being used to fuel an ongoing attack that leverages the stolen GitHub tokens to inject malware into hundreds of Python repositories. \"The attack targets Python projects — including Django apps, ML research code, Streamlit dashboards, and PyPI packages — by appending",
-        "ja": "GlassWorm マルウェア キャンペーンは、盗まれた GitHub トークンを利用して数百の Python リポジトリにマルウェアを注入する進行中の攻撃を促進するために使用されています。 「この攻撃は、Django アプリ、ML 研究コード、Streamlit ダッシュボード、PyPI パッケージを含む Python プロジェクトをターゲットにしています。",
-        "es": "La campaña de malware GlassWorm se está utilizando para impulsar un ataque continuo que aprovecha los tokens de GitHub robados para inyectar malware en cientos de repositorios de Python. \"El ataque apunta a proyectos Python, incluidas aplicaciones Django, código de investigación de ML, paneles Streamlit y paquetes PyPI, agregando",
-        "pt": "A campanha de malware GlassWorm está sendo usada para alimentar um ataque contínuo que aproveita os tokens roubados do GitHub para injetar malware em centenas de repositórios Python. “O ataque tem como alvo projetos Python – incluindo aplicativos Django, código de pesquisa de ML, painéis Streamlit e pacotes PyPI – anexando",
-        "fr": "La campagne de malware GlassWorm est utilisée pour alimenter une attaque en cours qui exploite les jetons GitHub volés pour injecter des logiciels malveillants dans des centaines de référentiels Python. \"L'attaque cible les projets Python, notamment les applications Django, le code de recherche ML, les tableaux de bord Streamlit et les packages PyPI, en ajoutant"
-      },
-      "descriptionOriginal": "The GlassWorm malware campaign is being used to fuel an ongoing attack that leverages the stolen GitHub tokens to inject malware into hundreds of Python repositories. \"The attack targets Python projects — including Django apps, ML research code, Streamlit dashboards, and PyPI packages — by appending",
-      "source": "The Hacker News"
-    },
-    {
-      "title": {
-        "en": "⚡ Weekly Recap: Chrome 0-Days, Router Botnets, AWS Breach, Rogue AI Agents &amp; More",
-        "ja": "⚡ 毎週の要約: Chrome ゼロデイ、ルーター ボットネット、AWS ブリーチ、不正 AI エージェント、および もっと",
-        "es": "⚡ Resumen semanal: Chrome 0-Days, Botnets de enrutadores, Incumplimiento de AWS, Agentes de IA no autorizados y amenazas Más",
-        "pt": "⚡ Recapitulação semanal: Chrome 0-Days, botnets de roteador, violação da AWS, agentes de IA desonestos e amp; Mais",
-        "fr": "⚡ Récapitulatif hebdomadaire : Chrome 0-Days, botnets de routeurs, violations AWS, agents Rogue AI et amp; Plus"
-      },
-      "titleOriginal": "⚡ Weekly Recap: Chrome 0-Days, Router Botnets, AWS Breach, Rogue AI Agents &amp; More",
-      "link": "https://thehackernews.com/2026/03/weekly-recap-chrome-0-days-router.html",
-      "pubDate": "2026-03-16T14:17:00.000Z",
-      "description": {
-        "en": "Some weeks in security feel normal. Then you read a few tabs and get that immediate “ah, great, we’re doing this now” feeling. This week has that energy. Fresh messes, old problems getting sharper, and research that stops feeling theoretical real fast. A few bits hit a little too close to real life,",
-        "ja": "数週間の安全な生活が普通に感じられます。 次に、いくつかのタブを読むと、すぐに「ああ、すごい、今これをやっているんだ」という感覚が得られます。 今週はそのエネルギーがあります。 新鮮な混乱、より鮮明になっている古い問題、そして理論的だと感じられなくなる研究。 いくつかのビットは現実の生活に少し近づきすぎますが、",
-        "es": "Algunas semanas en seguridad se sienten normales. Luego lees algunas pestañas y tienes esa sensación inmediata de \"ah, genial, estamos haciendo esto ahora\". Esta semana tiene esa energía. Nuevos líos, viejos problemas que se vuelven más agudos e investigaciones que dejan de parecer teóricas muy rápidamente. Algunas partes se acercan demasiado a la vida real,",
-        "pt": "Algumas semanas em segurança parecem normais. Então você lê algumas guias e tem aquela sensação imediata de “ah, ótimo, estamos fazendo isso agora”. Esta semana tem essa energia. Novas bagunças, velhos problemas ficando mais nítidos e pesquisas que deixam de parecer teóricas muito rapidamente. Algumas partes chegaram um pouco perto demais da vida real,",
-        "fr": "Quelques semaines en sécurité semblent normales. Ensuite, vous lisez quelques onglets et ressentez immédiatement le sentiment « ah, super, nous faisons ça maintenant ». Cette semaine a cette énergie. De nouveaux dégâts, d'anciens problèmes qui deviennent plus aigus et des recherches qui cessent très vite de paraître théoriques. Quelques passages sont un peu trop proches de la réalité,"
-      },
-      "descriptionOriginal": "Some weeks in security feel normal. Then you read a few tabs and get that immediate “ah, great, we’re doing this now” feeling. This week has that energy. Fresh messes, old problems getting sharper, and research that stops feeling theoretical real fast. A few bits hit a little too close to real life,",
       "source": "The Hacker News"
     }
   ]
