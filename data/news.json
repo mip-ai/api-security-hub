@@ -1,7 +1,28 @@
 {
-  "lastUpdated": "2026-03-18T21:35:29.114Z",
+  "lastUpdated": "2026-03-19T04:55:12.308Z",
   "itemCount": 20,
   "items": [
+    {
+      "title": {
+        "en": "Aura confirms data breach exposing 900,000 marketing contacts",
+        "ja": "Aura、90万人のマーケティング担当者を暴露するデータ侵害を確認",
+        "es": "Aura confirma violación de datos que expone a 900.000 contactos de marketing",
+        "pt": "Aura confirma violação de dados expondo 900.000 contatos de marketing",
+        "fr": "Aura confirme une violation de données exposant 900 000 contacts marketing"
+      },
+      "titleOriginal": "Aura confirms data breach exposing 900,000 marketing contacts",
+      "link": "https://www.bleepingcomputer.com/news/security/aura-confirms-data-breach-exposing-900-000-marketing-contacts/",
+      "pubDate": "2026-03-18T22:56:50.000Z",
+      "description": {
+        "en": "Identity protection company Aura has confirmed that an unauthorized party gained access to nearly 900,000 customer records containing names and email addresses. [...]",
+        "ja": "ID 保護会社 Aura は、名前と電子メール アドレスを含む約 900,000 件の顧客記録に不正な人物がアクセスしたことを確認しました。 [...]",
+        "es": "La empresa de protección de identidad Aura ha confirmado que una parte no autorizada obtuvo acceso a casi 900.000 registros de clientes que contienen nombres y direcciones de correo electrónico. [...]",
+        "pt": "A empresa de proteção de identidade Aura confirmou que uma parte não autorizada obteve acesso a quase 900.000 registros de clientes contendo nomes e endereços de e-mail. [...]",
+        "fr": "La société de protection d'identité Aura a confirmé qu'une partie non autorisée a eu accès à près de 900 000 dossiers clients contenant des noms et des adresses e-mail. [...]"
+      },
+      "descriptionOriginal": "Identity protection company Aura has confirmed that an unauthorized party gained access to nearly 900,000 customer records containing names and email addresses. [...]",
+      "source": "BleepingComputer"
+    },
     {
       "title": {
         "en": "CISA orders feds to patch Zimbra XSS flaw exploited in attacks",
@@ -162,7 +183,7 @@
       "pubDate": "2026-03-18T14:02:08.000Z",
       "description": {
         "en": "A new exploit kit for iOS devices and delivery framework dubbed \"Darksword\" has been used to steal a wide range of personal information, including data from cryptocurrency wallet app. [...]",
-        "ja": "iOS デバイス用の新しいエクスプロイト キットと「Darksword」と呼ばれる配信フレームワークが、仮想通貨ウォレット アプリからのデータを含む幅広い個人情報を盗むために使用されました。 [...]",
+        "ja": "iOS デバイス用の新しいエクスプロイト キットと「Darksword」と呼ばれる配信フレームワークが、暗号通貨ウォレット アプリからのデータを含む幅広い個人情報を盗むために使用されました。 [...]",
         "es": "Se ha utilizado un nuevo kit de explotación para dispositivos iOS y un marco de entrega denominado \"Darksword\" para robar una amplia gama de información personal, incluidos datos de la aplicación de billetera de criptomonedas. [...]",
         "pt": "Um novo kit de exploração para dispositivos iOS e estrutura de entrega apelidado de “Darksword” foi usado para roubar uma ampla gama de informações pessoais, incluindo dados do aplicativo de carteira de criptomoeda. [...]",
         "fr": "Un nouveau kit d'exploitation pour les appareils iOS et le cadre de livraison baptisé « Darksword » a été utilisé pour voler un large éventail d'informations personnelles, y compris les données de l'application de portefeuille de crypto-monnaie. [...]"
@@ -257,7 +278,7 @@
     {
       "title": {
         "en": "Ubuntu CVE-2026-3888 Bug Lets Attackers Gain Root via systemd Cleanup Timing Exploit",
-        "ja": "Ubuntu CVE-2026-3888 のバグにより、攻撃者が systemd クリーンアップ タイミングを悪用してルートを取得できる",
+        "ja": "Ubuntu CVE-2026-3888 のバグにより、攻撃者は systemd クリーンアップ タイミングを悪用してルートを取得できます",
         "es": "El error CVE-2026-3888 de Ubuntu permite a los atacantes obtener raíz a través del exploit de sincronización de limpieza systemd",
         "pt": "Bug CVE-2026-3888 do Ubuntu permite que invasores ganhem root por meio da exploração de tempo de limpeza do systemd",
         "fr": "Le bug Ubuntu CVE-2026-3888 permet aux attaquants d'obtenir la racine via l'exploit de synchronisation de nettoyage systemd"
@@ -269,7 +290,7 @@
         "en": "A high-severity security flaw affecting default installations of Ubuntu Desktop versions 24.04 and later could be exploited to escalate privileges to the root level. Tracked as CVE-2026-3888 (CVSS score: 7.8), the issue could allow an attacker to seize control of a susceptible system. \"This flaw (CV",
         "ja": "Ubuntu Desktop バージョン 24.04 以降のデフォルトのインストールに影響を与える重大度の高いセキュリティ上の欠陥が悪用され、権限がルート レベルに昇格される可能性があります。 CVE-2026-3888 (CVSS スコア: 7.8) として追跡されているこの問題により、攻撃者が影響を受けやすいシステムの制御を奪われる可能性があります。 「この欠陥（CV",
         "es": "Una falla de seguridad de alta gravedad que afecta las instalaciones predeterminadas de las versiones 24.04 y posteriores de Ubuntu Desktop podría aprovecharse para escalar privilegios al nivel raíz. Registrado como CVE-2026-3888 (puntuación CVSS: 7,8), el problema podría permitir a un atacante tomar el control de un sistema susceptible. \"Este defecto (CV",
-        "pt": "Uma falha de segurança de alta gravidade que afeta as instalações padrão do Ubuntu Desktop versões 24.04 e posteriores pode ser explorada para escalar privilégios para o nível raiz. Rastreado como CVE-2026-3888 (pontuação CVSS: 7,8), o problema pode permitir que um invasor assuma o controle de um sistema suscetível. \"Essa falha (CV",
+        "pt": "Uma falha de segurança de alta gravidade que afeta as instalações padrão do Ubuntu Desktop versões 24.04 e posteriores pode ser explorada para escalar privilégios para o nível raiz. Rastreado como CVE-2026-3888 (pontuação CVSS: 7,8), o problema pode permitir que um invasor assuma o controle de um sistema suscetível. \"Esta falha (CV",
         "fr": "Une faille de sécurité de haute gravité affectant les installations par défaut d'Ubuntu Desktop versions 24.04 et ultérieures pourrait être exploitée pour élever les privilèges au niveau racine. Suivi comme CVE-2026-3888 (score CVSS : 7,8), le problème pourrait permettre à un attaquant de prendre le contrôle d'un système sensible. \"Cette faille (CV"
       },
       "descriptionOriginal": "A high-severity security flaw affecting default installations of Ubuntu Desktop versions 24.04 and later could be exploited to escalate privileges to the root level. Tracked as CVE-2026-3888 (CVSS score: 7.8), the issue could allow an attacker to seize control of a susceptible system. \"This flaw (CV",
@@ -290,7 +311,7 @@
         "en": "Apple on Tuesday released its first round of Background Security Improvements to address a security flaw in WebKit that affects iOS, iPadOS, and macOS. The vulnerability, tracked as CVE-2026-20643 (CVSS score: N/A), has been described as a cross-origin issue in WebKit's Navigation API that could be ",
         "ja": "Appleは火曜日、iOS、iPadOS、macOSに影響を与えるWebKitのセキュリティ欠陥に対処するため、バックグラウンドセキュリティ改善の第一弾をリリースした。 この脆弱性は CVE-2026-20643 (CVSS スコア: N/A) として追跡され、WebKit のナビゲーション API のクロスオリジンの問題として説明されています。",
         "es": "Apple lanzó el martes su primera ronda de mejoras de seguridad en segundo plano para abordar una falla de seguridad en WebKit que afecta a iOS, iPadOS y macOS. La vulnerabilidad, rastreada como CVE-2026-20643 (puntuación CVSS: N/A), se ha descrito como un problema de origen cruzado en la API de navegación de WebKit que podría ser",
-        "pt": "A Apple lançou na terça-feira sua primeira rodada de melhorias de segurança em segundo plano para solucionar uma falha de segurança no WebKit que afeta iOS, iPadOS e macOS. A vulnerabilidade, rastreada como CVE-2026-20643 (pontuação CVSS: N/A), foi descrita como um problema de origem cruzada na API de navegação do WebKit que poderia ser",
+        "pt": "A Apple lançou na terça-feira sua primeira rodada de melhorias de segurança em segundo plano para solucionar uma falha de segurança no WebKit que afeta iOS, iPadOS e macOS. A vulnerabilidade, rastreada como CVE-2026-20643 (pontuação CVSS: N/A), foi descrita como um problema de origem cruzada na API de navegação do WebKit que pode ser",
         "fr": "Apple a publié mardi sa première série d'améliorations de la sécurité en arrière-plan pour corriger une faille de sécurité dans WebKit qui affecte iOS, iPadOS et macOS. La vulnérabilité, suivie comme CVE-2026-20643 (score CVSS : N/A), a été décrite comme un problème d'origine croisée dans l'API de navigation de WebKit qui pourrait être"
       },
       "descriptionOriginal": "Apple on Tuesday released its first round of Background Security Improvements to address a security flaw in WebKit that affects iOS, iPadOS, and macOS. The vulnerability, tracked as CVE-2026-20643 (CVSS score: N/A), has been described as a cross-origin issue in WebKit's Navigation API that could be ",
@@ -320,7 +341,7 @@
     {
       "title": {
         "en": "Top 5 Things CISOs Need to Do Today to Secure AI Agents",
-        "ja": "AI エージェントを保護するために CISO が今日行う必要がある 5 つのこと",
+        "ja": "AI エージェントを保護するために CISO が今日実行する必要がある 5 つのこと",
         "es": "Las cinco cosas principales que los CISO deben hacer hoy para proteger a los agentes de IA",
         "pt": "As 5 principais coisas que os CISOs precisam fazer hoje para proteger os agentes de IA",
         "fr": "Top 5 des choses que les RSSI doivent faire aujourd'hui pour sécuriser les agents IA"
@@ -330,7 +351,7 @@
       "pubDate": "2026-03-17T14:02:12.000Z",
       "description": {
         "en": "AI agents are autonomous actors with real access to data and systems, not just copilots. Token Security explains why identity-based access control is critical to prevent misuse and data exposure. [...]",
-        "ja": "AI エージェントは、副操縦士だけでなく、データやシステムに実際にアクセスできる自律的なアクターです。 Token Security は、悪用やデータ漏洩を防ぐために ID ベースのアクセス制御が重要である理由を説明します。 [...]",
+        "ja": "AI エージェントは、副操縦士だけでなく、データやシステムに実際にアクセスできる自律的なアクターです。 Token Security は、悪用やデータ漏えいを防ぐために ID ベースのアクセス制御が重要である理由を説明します。 [...]",
         "es": "Los agentes de IA son actores autónomos con acceso real a datos y sistemas, no sólo copilotos. Token Security explica por qué el control de acceso basado en identidad es fundamental para evitar el uso indebido y la exposición de datos. [...]",
         "pt": "Os agentes de IA são atores autónomos com acesso real a dados e sistemas, e não apenas copilotos. A Token Security explica por que o controle de acesso baseado em identidade é fundamental para evitar o uso indevido e a exposição de dados. [...]",
         "fr": "Les agents d’IA sont des acteurs autonomes disposant d’un réel accès aux données et aux systèmes, et pas seulement des copilotes. Token Security explique pourquoi le contrôle d'accès basé sur l'identité est essentiel pour prévenir les abus et l'exposition des données. [...]"
@@ -351,7 +372,7 @@
       "pubDate": "2026-03-17T05:23:00.000Z",
       "description": {
         "en": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Monday added a medium-severity security flaw impacting Wing FTP to its Known Exploited Vulnerabilities (KEV) catalog, citing evidence of active exploitation. The vulnerability, CVE-2025-47813 (CVSS score: 4.3), is an information dis",
-        "ja": "米国サイバーセキュリティ・インフラセキュリティ庁（CISA）は月曜日、活発な悪用の証拠を引用し、Wing FTPに影響を与える中程度の重大度のセキュリティ欠陥を既知の悪用された脆弱性（KEV）カタログに追加した。 脆弱性 CVE-2025-47813 (CVSS スコア: 4.3) は、情報セキュリティです。",
+        "ja": "米国サイバーセキュリティ・インフラストラクチャセキュリティ庁（CISA）は月曜日、活発な悪用の証拠を引用し、Wing FTPに影響を与える中程度の重大度のセキュリティ欠陥を既知の悪用された脆弱性（KEV）カタログに追加した。 脆弱性 CVE-2025-47813 (CVSS スコア: 4.3) は、情報セキュリティです。",
         "es": "La Agencia de Seguridad de Infraestructura y Ciberseguridad de EE. UU. (CISA) agregó el lunes una falla de seguridad de gravedad media que afecta a Wing FTP a su catálogo de vulnerabilidades explotadas conocidas (KEV), citando evidencia de explotación activa. La vulnerabilidad, CVE-2025-47813 (puntuación CVSS: 4,3), es una información dis",
         "pt": "A Agência de Segurança Cibernética e de Infraestrutura dos EUA (CISA) adicionou na segunda-feira uma falha de segurança de gravidade média que afeta o Wing FTP ao seu catálogo de Vulnerabilidades Exploradas Conhecidas (KEV), citando evidências de exploração ativa. A vulnerabilidade, CVE-2025-47813 (pontuação CVSS: 4,3), é uma falha de informação",
         "fr": "L'Agence américaine de cybersécurité et de sécurité des infrastructures (CISA) a ajouté lundi une faille de sécurité de gravité moyenne affectant Wing FTP à son catalogue de vulnérabilités exploitées connues (KEV), citant des preuves d'exploitation active. La vulnérabilité, CVE-2025-47813 (score CVSS : 4,3), est un message d'information."
@@ -393,33 +414,12 @@
       "pubDate": "2026-03-16T14:17:00.000Z",
       "description": {
         "en": "Some weeks in security feel normal. Then you read a few tabs and get that immediate “ah, great, we’re doing this now” feeling. This week has that energy. Fresh messes, old problems getting sharper, and research that stops feeling theoretical real fast. A few bits hit a little too close to real life,",
-        "ja": "数週間の安全な生活が普通に感じられます。 次に、いくつかのタブを読むと、すぐに「ああ、すごい、今これをやっているんだ」という感覚が得られます。 今週はそのエネルギーがあります。 新鮮な混乱、より鮮明になっている古い問題、そして理論的だと感じられなくなる研究。 いくつかの点は現実の生活に少し近づきすぎていますが、",
+        "ja": "数週間の安全な生活が普通に感じられます。 次に、いくつかのタブを読むと、すぐに「ああ、すごい、今これをやっているんだ」という感覚が得られます。 今週はそのエネルギーがあります。 新鮮な混乱、より鮮明になっている古い問題、そして理論的だと感じられなくなる研究。 いくつかのビットは現実の生活に少し近づきすぎますが、",
         "es": "Algunas semanas en seguridad se sienten normales. Luego lees algunas pestañas y tienes esa sensación inmediata de \"ah, genial, estamos haciendo esto ahora\". Esta semana tiene esa energía. Nuevos líos, viejos problemas que se vuelven más agudos e investigaciones que dejan de parecer teóricas muy rápidamente. Algunas partes se acercan demasiado a la vida real,",
         "pt": "Algumas semanas em segurança parecem normais. Então você lê algumas guias e tem aquela sensação imediata de “ah, ótimo, estamos fazendo isso agora”. Esta semana tem essa energia. Novas bagunças, velhos problemas ficando mais nítidos e pesquisas que deixam de parecer teóricas muito rapidamente. Algumas partes chegaram um pouco perto demais da vida real,",
         "fr": "Quelques semaines en sécurité semblent normales. Ensuite, vous lisez quelques onglets et ressentez immédiatement le sentiment « ah, super, nous faisons ça maintenant ». Cette semaine a cette énergie. De nouveaux dégâts, d'anciens problèmes qui deviennent plus aigus et des recherches qui cessent très vite de paraître théoriques. Quelques passages sont un peu trop proches de la réalité,"
       },
       "descriptionOriginal": "Some weeks in security feel normal. Then you read a few tabs and get that immediate “ah, great, we’re doing this now” feeling. This week has that energy. Fresh messes, old problems getting sharper, and research that stops feeling theoretical real fast. A few bits hit a little too close to real life,",
-      "source": "The Hacker News"
-    },
-    {
-      "title": {
-        "en": "Why Security Validation Is Becoming Agentic",
-        "ja": "セキュリティ検証がエージェント的になる理由",
-        "es": "Por qué la validación de seguridad se está volviendo agente",
-        "pt": "Por que a validação de segurança está se tornando agente",
-        "fr": "Pourquoi la validation de sécurité devient agentique"
-      },
-      "titleOriginal": "Why Security Validation Is Becoming Agentic",
-      "link": "https://thehackernews.com/2026/03/why-security-validation-is-becoming.html",
-      "pubDate": "2026-03-16T11:58:00.000Z",
-      "description": {
-        "en": "If you run security at any reasonably complex organization, your validation stack probably looks something like this: a BAS tool in one corner. A pentest engagement, or maybe an automated pentesting product, in another. A vulnerability scanner feeding an attack surface management platform somewhere ",
-        "ja": "かなり複雑な組織でセキュリティを実行している場合、検証スタックはおそらく次のようになります。片隅に BAS ツールが置かれています。 別の侵入テストの取り組み、または自動侵入テスト製品の可能性もあります。 どこかの攻撃対象領域管理プラットフォームに脆弱性スキャナーを供給する",
-        "es": "Si ejecuta la seguridad en cualquier organización razonablemente compleja, su pila de validación probablemente se vea así: una herramienta BAS en una esquina. Un compromiso de pentesting, o tal vez un producto de pentesting automatizado, en otro. Un escáner de vulnerabilidades que alimenta una plataforma de gestión de superficies de ataque en algún lugar",
-        "pt": "Se você administra segurança em qualquer organização razoavelmente complexa, sua pilha de validação provavelmente se parecerá com isto: uma ferramenta BAS em um canto. Um compromisso de pentest, ou talvez um produto de pentesting automatizado, em outro. Um scanner de vulnerabilidade alimentando uma plataforma de gerenciamento de superfície de ataque em algum lugar",
-        "fr": "Si vous gérez la sécurité dans une organisation raisonnablement complexe, votre pile de validation ressemble probablement à ceci : un outil BAS dans un coin. Un engagement pentest, ou peut-être un produit pentesting automatisé, dans un autre. Un scanner de vulnérabilités alimentant une plateforme de gestion de surface d'attaque quelque part"
-      },
-      "descriptionOriginal": "If you run security at any reasonably complex organization, your validation stack probably looks something like this: a BAS tool in one corner. A pentest engagement, or maybe an automated pentesting product, in another. A vulnerability scanner feeding an attack surface management platform somewhere ",
       "source": "The Hacker News"
     }
   ]
