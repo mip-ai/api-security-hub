@@ -29,6 +29,7 @@
     { href: 'tools.html', icon: '\u{1F6E0}', labelKey: 'nav_tools' },
     { href: 'guidelines.html', icon: '\u{1F4CB}', labelKey: 'nav_guidelines' },
     { href: 'news.html', icon: '\u{1F4F0}', labelKey: 'nav_news' },
+    { href: 'vendor-blogs.html', icon: '\u{1F4DD}', labelKey: 'nav_vendor_blogs' },
   ];
 
   // --- Nav labels per language (fallback if data-i18n not available) ---
@@ -41,6 +42,7 @@
       nav_tools: 'Security Tools',
       nav_guidelines: 'Internal Guidelines',
       nav_news: 'Latest News',
+      nav_vendor_blogs: 'Vendor Blogs',
     },
     ja: {
       nav_home: '\u30C8\u30C3\u30D7\u30DA\u30FC\u30B8',
@@ -50,6 +52,7 @@
       nav_tools: '\u30BB\u30AD\u30E5\u30EA\u30C6\u30A3\u30C4\u30FC\u30EB',
       nav_guidelines: '\u793E\u5185\u30AC\u30A4\u30C9\u30E9\u30A4\u30F3',
       nav_news: '\u6700\u65B0\u60C5\u5831',
+      nav_vendor_blogs: '\u30D9\u30F3\u30C0\u30FC\u30D6\u30ED\u30B0',
     },
     es: {
       nav_home: 'Inicio',
@@ -59,6 +62,7 @@
       nav_tools: 'Herramientas',
       nav_guidelines: 'Directrices',
       nav_news: 'Noticias',
+      nav_vendor_blogs: 'Blogs de Proveedores',
     },
     pt: {
       nav_home: 'In\u00EDcio',
@@ -68,6 +72,7 @@
       nav_tools: 'Ferramentas',
       nav_guidelines: 'Diretrizes',
       nav_news: 'Not\u00EDcias',
+      nav_vendor_blogs: 'Blogs de Fornecedores',
     },
     fr: {
       nav_home: 'Accueil',
@@ -77,6 +82,7 @@
       nav_tools: 'Outils',
       nav_guidelines: 'Directives',
       nav_news: 'Actualit\u00E9s',
+      nav_vendor_blogs: 'Blogs Fournisseurs',
     },
   };
 

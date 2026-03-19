@@ -1,0 +1,14 @@
+{
+  "vb_page_title": "Vendor Blogs - API Security Reference Hub",
+  "vb_heading": "API Security Vendor Blogs",
+  "vb_subtitle": "Latest insights from leading API security vendors — automatically updated.",
+  "vb_latest_heading": "<span class=\"section-icon\">&#x1F4DD;</span> Latest Blog Posts",
+  "vb_last_updated": "Last updated: ",
+  "vb_filter_all": "All",
+  "vb_loading": "Loading blog posts...",
+  "vb_about_heading": "<span class=\"section-icon\">&#x1F3E2;</span> About These Vendors",
+  "vb_about_salt": "Pioneer in API security platforms. Specializes in API discovery, runtime protection, and posture governance using AI/ML-powered behavioral analysis.",
+  "vb_about_wallarm": "Provides end-to-end API security including API threat prevention, API attack surface management, and real-time vulnerability detection.",
+  "vb_about_cequence": "Specializes in Unified API Protection (UAP) — combining API discovery, compliance, and bot/fraud defense in a single platform.",
+  "vb_about_imperva": "Comprehensive application and data security provider. Offers API security as part of a broader WAF, DDoS protection, and data security portfolio."
+}

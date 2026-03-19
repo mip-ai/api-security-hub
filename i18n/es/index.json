@@ -23,6 +23,8 @@
   "index_card_guidelines_desc": "Listas de verificación / Criterios de revisión",
   "index_card_news_title": "Información más reciente",
   "index_card_news_desc": "Noticias sobre vulnerabilidades / CVE / Tendencias",
+  "index_card_vendor_blogs_title": "Blogs de Proveedores",
+  "index_card_vendor_blogs_desc": "Últimas publicaciones de Salt Security / Wallarm / Cequence / Imperva",
   "index_quickref_heading": "<span class=\"section-icon\">⚡</span> Referencia rápida",
   "index_quickref_description": "Principios fundamentales de seguridad API",
   "index_quickref_least_privilege_title": "🔒 Principio de privilegio mínimo",

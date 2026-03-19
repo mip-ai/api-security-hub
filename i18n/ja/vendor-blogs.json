@@ -1,0 +1,14 @@
+{
+  "vb_page_title": "ベンダーブログ - API Security Reference Hub",
+  "vb_heading": "APIセキュリティベンダーブログ",
+  "vb_subtitle": "主要なAPIセキュリティベンダーの最新インサイトを自動更新でお届けします。",
+  "vb_latest_heading": "<span class=\"section-icon\">&#x1F4DD;</span> 最新ブログ記事",
+  "vb_last_updated": "最終更新: ",
+  "vb_filter_all": "すべて",
+  "vb_loading": "ブログ記事を読み込み中...",
+  "vb_about_heading": "<span class=\"section-icon\">&#x1F3E2;</span> ベンダー紹介",
+  "vb_about_salt": "APIセキュリティプラットフォームのパイオニア。AI/ML駆動の行動分析を用いたAPI検出、ランタイム保護、ポスチャーガバナンスを専門としています。",
+  "vb_about_wallarm": "API脅威防御、API攻撃対象領域管理、リアルタイム脆弱性検出を含むエンドツーエンドのAPIセキュリティを提供しています。",
+  "vb_about_cequence": "統合API保護（UAP）を専門とし、API検出、コンプライアンス、ボット/不正防御を単一プラットフォームで提供しています。",
+  "vb_about_imperva": "包括的なアプリケーション・データセキュリティプロバイダー。WAF、DDoS防御、データセキュリティの一部としてAPIセキュリティを提供しています。"
+}

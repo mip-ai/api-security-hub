@@ -23,6 +23,8 @@
   "index_card_guidelines_desc": "Checklists / Review Criteria",
   "index_card_news_title": "Latest Information",
   "index_card_news_desc": "Vulnerability News / CVE / Trends",
+  "index_card_vendor_blogs_title": "Vendor Blogs",
+  "index_card_vendor_blogs_desc": "Latest from Salt Security / Wallarm / Cequence / Imperva",
   "index_quickref_heading": "<span class=\"section-icon\">\u26A1</span> Quick Reference",
   "index_quickref_description": "Fundamental Principles of API Security",
   "index_quickref_least_privilege_title": "\uD83D\uDD12 Principle of Least Privilege",

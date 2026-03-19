@@ -1,0 +1,200 @@
+<!DOCTYPE html><html lang="ja"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="vb_page_title">ベンダーブログ - API Security Reference Hub</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .vendor-filters { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:20px; }
+    .vendor-filter-btn {
+      padding:8px 16px; border:1px solid var(--border-color,#dee2e6);
+      border-radius:20px; background:var(--card-bg,#fff); cursor:pointer;
+      font-size:0.9rem; transition:all .2s;
+    }
+    .vendor-filter-btn:hover { border-color:var(--accent-color,#4361ee); }
+    .vendor-filter-btn.active {
+      background:var(--accent-color,#4361ee); color:#fff;
+      border-color:var(--accent-color,#4361ee);
+    }
+    .vendor-badge {
+      display:inline-block; padding:2px 8px; border-radius:10px;
+      font-size:0.75rem; font-weight:600; margin-right:8px;
+    }
+    .vendor-badge.salt { background:#e8f5e9; color:#2e7d32; }
+    .vendor-badge.wallarm { background:#e3f2fd; color:#1565c0; }
+    .vendor-badge.cequence { background:#fce4ec; color:#c62828; }
+    .vendor-badge.imperva { background:#fff3e0; color:#e65100; }
+    .blog-item { padding:16px 0; border-bottom:1px solid var(--border-color,#dee2e6); }
+    .blog-item:last-child { border-bottom:none; }
+    .blog-meta { font-size:0.8rem; color:var(--text-muted,#6c757d); margin-bottom:6px; }
+    .blog-title { font-size:1rem; font-weight:600; margin-bottom:6px; }
+    .blog-title a { color:var(--text-color,#212529); text-decoration:none; }
+    .blog-title a:hover { color:var(--accent-color,#4361ee); text-decoration:underline; }
+    .blog-desc { font-size:0.9rem; color:var(--text-muted,#6c757d); line-height:1.5; }
+    #blog-count { font-size:0.85rem; color:var(--text-muted,#6c757d); margin-bottom:16px; }
+  </style>
+
+    <link rel="alternate" hreflang="en" href="/api-security-hub/en/vendor-blogs.html">
+    <link rel="alternate" hreflang="ja" href="/api-security-hub/ja/vendor-blogs.html">
+    <link rel="alternate" hreflang="es" href="/api-security-hub/es/vendor-blogs.html">
+    <link rel="alternate" hreflang="pt" href="/api-security-hub/pt/vendor-blogs.html">
+    <link rel="alternate" hreflang="fr" href="/api-security-hub/fr/vendor-blogs.html">
+    <link rel="alternate" hreflang="x-default" href="/api-security-hub/en/vendor-blogs.html">
+</head>
+<body>
+
+  <div class="page-header">
+    <h1 data-i18n="vb_heading">APIセキュリティベンダーブログ</h1>
+    <p class="subtitle" data-i18n="vb_subtitle">主要なAPIセキュリティベンダーの最新インサイトを自動更新でお届けします。</p>
+  </div>
+
+  <div class="section">
+    <h2 data-i18n-html="vb_latest_heading"><span class="section-icon">📝</span> 最新ブログ記事</h2>
+    <p id="vb-updated" class="text-muted" style="font-size:0.8rem;">
+      <span data-i18n="vb_last_updated">最終更新: </span><span id="vb-updated-date"></span>
+    </p>
+
+    <!-- Vendor Filter Buttons -->
+    <div class="vendor-filters" id="vendor-filters">
+      <button class="vendor-filter-btn active" data-vendor="all" data-i18n="vb_filter_all">すべて</button>
+      <button class="vendor-filter-btn" data-vendor="salt">Salt Security</button>
+      <button class="vendor-filter-btn" data-vendor="wallarm">Wallarm</button>
+      <button class="vendor-filter-btn" data-vendor="cequence">Cequence</button>
+      <button class="vendor-filter-btn" data-vendor="imperva">Imperva</button>
+    </div>
+
+    <div id="blog-count"></div>
+    <div id="blog-container">
+      <p class="text-muted" data-i18n="vb_loading">ブログ記事を読み込み中...</p>
+    </div>
+  </div>
+
+  <!-- About Vendors -->
+  <div class="section">
+    <h2 data-i18n-html="vb_about_heading"><span class="section-icon">🏢</span> ベンダー紹介</h2>
+    <div class="card-grid">
+      <div class="card">
+        <h3>Salt Security</h3>
+        <p data-i18n="vb_about_salt">APIセキュリティプラットフォームのパイオニア。AI/ML駆動の行動分析を用いたAPI検出、ランタイム保護、ポスチャーガバナンスを専門としています。</p>
+        <span class="card-tag tag-high">API Security Platform</span>
+      </div>
+      <div class="card">
+        <h3>Wallarm</h3>
+        <p data-i18n="vb_about_wallarm">API脅威防御、API攻撃対象領域管理、リアルタイム脆弱性検出を含むエンドツーエンドのAPIセキュリティを提供しています。</p>
+        <span class="card-tag tag-high">API Protection</span>
+      </div>
+      <div class="card">
+        <h3>Cequence</h3>
+        <p data-i18n="vb_about_cequence">統合API保護（UAP）を専門とし、API検出、コンプライアンス、ボット/不正防御を単一プラットフォームで提供しています。</p>
+        <span class="card-tag tag-high">Unified API Protection</span>
+      </div>
+      <div class="card">
+        <h3>Imperva</h3>
+        <p data-i18n="vb_about_imperva">包括的なアプリケーション・データセキュリティプロバイダー。WAF、DDoS防御、データセキュリティの一部としてAPIセキュリティを提供しています。</p>
+        <span class="card-tag tag-high">Application Security</span>
+      </div>
+    </div>
+  </div>
+
+<script src="../js/common.js"></script>
+<script>
+(function() {
+  var langMatch = location.pathname.match(/\/(en|ja|es|pt|fr)\//);
+  var lang = langMatch ? langMatch[1] : 'en';
+  var allItems = [];
+  var currentVendor = 'all';
+
+  // i18n labels
+  var labels = {
+    en: { showing: 'Showing {count} posts', no_posts: 'No blog posts available.', load_fail: 'Failed to load blog posts.' },
+    ja: { showing: '{count}件表示中', no_posts: 'ブログ記事がありません。', load_fail: 'ブログ記事の読み込みに失敗しました。' },
+    es: { showing: 'Mostrando {count} publicaciones', no_posts: 'No hay publicaciones disponibles.', load_fail: 'Error al cargar las publicaciones.' },
+    pt: { showing: 'Mostrando {count} publicações', no_posts: 'Nenhuma publicação disponível.', load_fail: 'Falha ao carregar publicações.' },
+    fr: { showing: 'Affichage de {count} articles', no_posts: 'Aucun article disponible.', load_fail: 'Échec du chargement des articles.' }
+  };
+  var l = labels[lang] || labels.en;
+
+  function renderItems(items) {
+    var container = document.getElementById('blog-container');
+    var countEl = document.getElementById('blog-count');
+
+    if (!items || items.length === 0) {
+      container.innerHTML = '<p class="text-muted">' + l.no_posts + '</p>';
+      countEl.textContent = '';
+      return;
+    }
+
+    countEl.textContent = l.showing.replace('{count}', items.length);
+
+    var html = '';
+    items.forEach(function(item) {
+      var title = (typeof item.title === 'object' && item.title !== null)
+        ? (item.title[lang] || item.title.en || item.titleOriginal || '')
+        : (item.titleOriginal || item.title || '');
+      var description = (typeof item.description === 'object' && item.description !== null)
+        ? (item.description[lang] || item.description.en || item.descriptionOriginal || '')
+        : (item.descriptionOriginal || item.description || '');
+      var date = item.pubDate
+        ? new Date(item.pubDate).toLocaleDateString(lang, { year:'numeric', month:'short', day:'numeric' })
+        : '';
+      var url = item.link || '#';
+      var source = item.source || '';
+      var vendor = item.vendor || '';
+
+      html += '<div class="blog-item" data-vendor="' + vendor + '">';
+      html += '<div class="blog-meta">';
+      html += '<span class="vendor-badge ' + vendor + '">' + source + '</span>';
+      html += date;
+      html += '</div>';
+      html += '<div class="blog-title"><a href="' + url + '" target="_blank" rel="noopener noreferrer">' + title + '</a></div>';
+      if (description) {
+        html += '<div class="blog-desc">' + description + '</div>';
+      }
+      html += '</div>';
+    });
+
+    container.innerHTML = html;
+  }
+
+  function filterItems(vendor) {
+    currentVendor = vendor;
+    if (vendor === 'all') {
+      renderItems(allItems);
+    } else {
+      renderItems(allItems.filter(function(item) { return item.vendor === vendor; }));
+    }
+  }
+
+  // Setup filter buttons
+  var filterBtns = document.querySelectorAll('.vendor-filter-btn');
+  filterBtns.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      filterBtns.forEach(function(b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      filterItems(btn.getAttribute('data-vendor'));
+    });
+  });
+
+  // Fetch data
+  fetch('../data/vendor-blogs.json')
+    .then(function(res) { return res.json(); })
+    .then(function(data) {
+      var updatedDateEl = document.getElementById('vb-updated-date');
+      if (data.lastUpdated && updatedDateEl) {
+        var date = new Date(data.lastUpdated);
+        updatedDateEl.textContent = date.toLocaleDateString(lang, {
+          year: 'numeric', month: 'long', day: 'numeric'
+        });
+      }
+
+      allItems = data.items || [];
+      renderItems(allItems);
+    })
+    .catch(function() {
+      document.getElementById('blog-container').innerHTML =
+        '<p class="text-muted">' + l.load_fail + '</p>';
+    });
+})();
+</script>
+
+
+</body></html>

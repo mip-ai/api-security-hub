@@ -1,0 +1,14 @@
+{
+  "vb_page_title": "Blogs de Proveedores - API Security Reference Hub",
+  "vb_heading": "Blogs de Proveedores de Seguridad API",
+  "vb_subtitle": "Últimas perspectivas de los principales proveedores de seguridad API — actualizado automáticamente.",
+  "vb_latest_heading": "<span class=\"section-icon\">&#x1F4DD;</span> Últimas Publicaciones",
+  "vb_last_updated": "Última actualización: ",
+  "vb_filter_all": "Todos",
+  "vb_loading": "Cargando publicaciones...",
+  "vb_about_heading": "<span class=\"section-icon\">&#x1F3E2;</span> Acerca de Estos Proveedores",
+  "vb_about_salt": "Pionero en plataformas de seguridad API. Se especializa en descubrimiento de API, protección en tiempo de ejecución y gobernanza de postura mediante análisis de comportamiento impulsado por IA/ML.",
+  "vb_about_wallarm": "Proporciona seguridad API de extremo a extremo, incluyendo prevención de amenazas API, gestión de superficie de ataque API y detección de vulnerabilidades en tiempo real.",
+  "vb_about_cequence": "Se especializa en Protección API Unificada (UAP) — combinando descubrimiento de API, cumplimiento y defensa contra bots/fraude en una sola plataforma.",
+  "vb_about_imperva": "Proveedor integral de seguridad de aplicaciones y datos. Ofrece seguridad API como parte de un portafolio más amplio de WAF, protección DDoS y seguridad de datos."
+}

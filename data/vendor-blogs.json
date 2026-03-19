@@ -1,0 +1,446 @@
+{
+  "lastUpdated": "2026-03-19T12:47:46.681Z",
+  "itemCount": 20,
+  "items": [
+    {
+      "title": {
+        "en": "Everyone Is Deploying AI Agents. Almost Nobody Knows What They&#39;re Doing.",
+        "ja": "誰もが AI エージェントを導入しています。 Almost Nobody Knows What They&#39;re Doing.",
+        "es": "Todo el mundo está implementando agentes de IA. Casi nadie sabe lo que está haciendo.",
+        "pt": "Todos estão implantando agentes de IA. Quase ninguém sabe o que está fazendo.",
+        "fr": "Tout le monde déploie des agents IA. Presque personne ne sait ce qu'ils font."
+      },
+      "titleOriginal": "Everyone Is Deploying AI Agents. Almost Nobody Knows What They&#39;re Doing.",
+      "link": "https://salt.security/blog/everyone-is-deploying-ai-agents-almost-nobody-knows-what-theyre-doing",
+      "pubDate": "2026-03-18T13:00:00.000Z",
+      "description": {
+        "en": "What actions can agents perform through MCP servers and APIs, and which are high risk?",
+        "ja": "エージェントは MCP サーバーと API を介してどのようなアクションを実行できますか? どれが高リスクですか?",
+        "es": "¿Qué acciones pueden realizar los agentes a través de servidores MCP y API y cuáles son de alto riesgo?",
+        "pt": "Quais ações os agentes podem realizar por meio de servidores e APIs MCP e quais são de alto risco?",
+        "fr": "Quelles actions les agents peuvent-ils effectuer via les serveurs MCP et les API, et lesquelles présentent un risque élevé ?"
+      },
+      "descriptionOriginal": "What actions can agents perform through MCP servers and APIs, and which are high risk?",
+      "source": "Salt Security",
+      "vendor": "salt"
+    },
+    {
+      "title": {
+        "en": "Why Most DDoS Protection Fails: Solving for Continuity and Resilience",
+        "ja": "ほとんどの DDoS 防御が失敗する理由: 継続性と復元力を解決する",
+        "es": "Por qué falla la mayoría de las protecciones DDoS: soluciones para la continuidad y la resiliencia",
+        "pt": "Por que a maioria das proteções DDoS falha: solução para continuidade e resiliência",
+        "fr": "Pourquoi la plupart des protections DDoS échouent : garantir la continuité et la résilience"
+      },
+      "titleOriginal": "Why Most DDoS Protection Fails: Solving for Continuity and Resilience",
+      "link": "https://www.imperva.com/blog/why-ddos-protection-fails-continuity-resilience/",
+      "pubDate": "2026-03-15T13:04:34.000Z",
+      "description": {
+        "en": "Most organisations assume DDoS (Distributed denial of service) protection is a box they’ve already ticked. If traffic spikes or an attack starts, the thinking goes, their provider will absorb it and move on. But in the real world it can be a different story. Many incidents aren’t caused by the scale",
+        "ja": "ほとんどの組織は、DDoS (分散型サービス拒否) 保護にはすでにチェックが入っていると想定しています。 トラフィックが急増したり、攻撃が開始されたりした場合、プロバイダーがそれを吸収して次に進むと考えられます。 しかし、現実の世界では話は別になる可能性があります。 多くの事件は規模が原因ではない",
+        "es": "La mayoría de las organizaciones asumen que la protección DDoS (denegación de servicio distribuida) es una casilla que ya han marcado. Si el tráfico aumenta o comienza un ataque, se piensa, su proveedor lo absorberá y seguirá adelante. Pero en el mundo real puede ser una historia diferente. Muchos incidentes no son causados ​​por la báscula.",
+        "pt": "A maioria das organizações presume que a proteção DDoS (negação de serviço distribuída) é uma caixa que já foi marcada. Se o tráfego aumentar ou um ataque começar, pensa-se que o provedor irá absorvê-lo e seguir em frente. Mas no mundo real pode ser uma história diferente. Muitos incidentes não são causados ​​pela escala",
+        "fr": "La plupart des organisations supposent que la protection DDoS (déni de service distribué) est une case qu’elles ont déjà cochée. Si le trafic augmente ou si une attaque démarre, pense-t-on, leur fournisseur l’absorbera et passera à autre chose. Mais dans le monde réel, cela peut être une autre histoire. De nombreux incidents ne sont pas causés par la balance"
+      },
+      "descriptionOriginal": "Most organisations assume DDoS (Distributed denial of service) protection is a box they’ve already ticked. If traffic spikes or an attack starts, the thinking goes, their provider will absorb it and move on. But in the real world it can be a different story. Many incidents aren’t caused by the scale",
+      "source": "Imperva",
+      "vendor": "imperva"
+    },
+    {
+      "title": {
+        "en": "An AI Agent Didn’t Hack McKinsey. Its Exposed APIs Did.",
+        "ja": "AIエージェントはマッキンゼーをハッキングしなかった。 公開された API はそうしました。",
+        "es": "Un agente de IA no hackeó a McKinsey. Sus API expuestas lo hicieron.",
+        "pt": "Um agente de IA não hackeou a McKinsey. Suas APIs expostas sim.",
+        "fr": "Un agent IA n’a pas piraté McKinsey. Ses API exposées l’ont fait."
+      },
+      "titleOriginal": "An AI Agent Didn’t Hack McKinsey. Its Exposed APIs Did.",
+      "link": "https://salt.security/blog/mckinsey-hack-exposed-apis",
+      "pubDate": "2026-03-13T16:00:00.000Z",
+      "description": {
+        "en": "The McKinsey breach wasn&#39;t caused by AI, but by an API layer that wasn&#39;t properly secured.",
+        "ja": "マッキンゼーの侵害は AI によって引き起こされたのではなく、適切に保護されていない API レイヤーによって引き起こされました。",
+        "es": "La infracción de McKinsey no fue causada por la IA, sino por una capa de API que no estaba protegida adecuadamente.",
+        "pt": "A violação da McKinsey não foi causada pela IA, mas por uma camada de API que não estava devidamente protegida.",
+        "fr": "La faille McKinsey n’a pas été causée par l’IA, mais par une couche API qui n’était pas correctement sécurisée."
+      },
+      "descriptionOriginal": "The McKinsey breach wasn&#39;t caused by AI, but by an API layer that wasn&#39;t properly secured.",
+      "source": "Salt Security",
+      "vendor": "salt"
+    },
+    {
+      "title": {
+        "en": "Introducing Agent Personas – The Missing Agentic Security Layer",
+        "ja": "エージェント ペルソナの紹介 – 欠けているエージェント セキュリティ層",
+        "es": "Presentamos Agent Personas: la capa de seguridad agente que falta",
+        "pt": "Apresentando Agent Personas – A camada de segurança Agentic ausente",
+        "fr": "Présentation des Agent Personas – La couche de sécurité agent manquante"
+      },
+      "titleOriginal": "Introducing Agent Personas – The Missing Agentic Security Layer",
+      "link": "https://www.cequence.ai/blog/ai/agent-personas-missing-agentic-security-layer/",
+      "pubDate": "2026-03-12T13:00:07.000Z",
+      "description": {
+        "en": "Announcing Agent Personas in the Cequence AI Gateway, which allow organizations and employees to manage AI agent privileges at a granular level. It provides the ability to control, monitor, and govern what an AI agent is allowed to do within a system, including data access, tool calls, system action",
+        "ja": "Cequence AI Gateway でのエージェント ペルソナの発表。これにより、組織や従業員は AI エージェントの権限を詳細なレベルで管理できるようになります。 データ アクセス、ツール呼び出し、システム アクションなど、AI エージェントがシステム内で実行できる内容を制御、監視、管理する機能を提供します。",
+        "es": "Anuncio de Agent Personas en Cequence AI Gateway, que permite a las organizaciones y empleados administrar los privilegios de los agentes de AI a un nivel granular. Proporciona la capacidad de controlar, monitorear y gobernar lo que un agente de IA puede hacer dentro de un sistema, incluido el acceso a datos, llamadas a herramientas y acciones del sistema.",
+        "pt": "Anunciamos Agent Personas no Cequence AI Gateway, que permite que organizações e funcionários gerenciem privilégios de agentes de IA em um nível granular. Ele fornece a capacidade de controlar, monitorar e governar o que um agente de IA pode fazer dentro de um sistema, incluindo acesso a dados, chamadas de ferramentas, ações do sistema",
+        "fr": "Annonce des agents Personas dans Cequence AI Gateway, qui permettent aux organisations et aux employés de gérer les privilèges des agents IA à un niveau granulaire. Il offre la possibilité de contrôler, surveiller et gouverner ce qu'un agent IA est autorisé à faire au sein d'un système, y compris l'accès aux données, les appels d'outils, les actions du système."
+      },
+      "descriptionOriginal": "Announcing Agent Personas in the Cequence AI Gateway, which allow organizations and employees to manage AI agent privileges at a granular level. It provides the ability to control, monitor, and govern what an AI agent is allowed to do within a system, including data access, tool calls, system action",
+      "source": "Cequence",
+      "vendor": "cequence"
+    },
+    {
+      "title": {
+        "en": "The CISO’s Dilemma: How To Scale AI Securely",
+        "ja": "CISO のジレンマ: AI を安全に拡張する方法",
+        "es": "El dilema del CISO: cómo escalar la IA de forma segura",
+        "pt": "O dilema do CISO: como dimensionar a IA com segurança",
+        "fr": "Le dilemme du RSSI : comment faire évoluer l'IA en toute sécurité"
+      },
+      "titleOriginal": "The CISO’s Dilemma: How To Scale AI Securely",
+      "link": "https://lab.wallarm.com/the-cisos-dilemma-how-to-scale-ai-securely/",
+      "pubDate": "2026-03-12T12:00:00.000Z",
+      "description": {
+        "en": "Your board wants AI. Your developers are building with it. Your budget committee is asking for an ROI timeline. But as CISO, you're the one who has to answer when the inevitable question comes up: \"How do we know this is secure?\" If you're like most security leaders, you're caught between two imposs",
+        "ja": "Your board wants AI. 開発者はそれを使用して構築しています。 予算委員会は ROI スケジュールを求めています。 しかし、CISO であるあなたは、「これが安全であるとどうやってわかるのですか?」という避けられない質問が生じたときに答えなければなりません。 あなたがほとんどのセキュリティリーダーと同じなら、あなたは 2 つの不可能な問題の間で板挟みになっているでしょう。",
+        "es": "Tu junta quiere IA. Tus desarrolladores están construyendo con él. Su comité de presupuesto solicita un cronograma de retorno de la inversión. Pero como CISO, usted es quien tiene que responder cuando surge la inevitable pregunta: \"¿Cómo sabemos que esto es seguro?\" Si eres como la mayoría de los líderes de seguridad, estás atrapado entre dos obstáculos.",
+        "pt": "Seu conselho quer IA. Seus desenvolvedores estão construindo com isso. Seu comitê de orçamento está solicitando um cronograma de ROI. Mas, como CISO, é você quem deve responder quando surge a pergunta inevitável: \"Como sabemos que isso é seguro?\" Se você é como a maioria dos líderes de segurança, você está preso entre dois impossíveis",
+        "fr": "Votre conseil d'administration veut l'IA. Vos développeurs construisent avec. Votre comité budgétaire demande un calendrier de retour sur investissement. Mais en tant que RSSI, c'est vous qui devez répondre lorsque l'inévitable question se pose : « Comment pouvons-nous savoir si cela est sécurisé ? » Si vous êtes comme la plupart des responsables de la sécurité, vous êtes pris entre deux impossibilités"
+      },
+      "descriptionOriginal": "Your board wants AI. Your developers are building with it. Your budget committee is asking for an ROI timeline. But as CISO, you're the one who has to answer when the inevitable question comes up: \"How do we know this is secure?\" If you're like most security leaders, you're caught between two imposs",
+      "source": "Wallarm",
+      "vendor": "wallarm"
+    },
+    {
+      "title": {
+        "en": "Agent-to-Agent Attacks Are Coming: What API Security Teaches Us About Securing AI Systems",
+        "ja": "エージェント間攻撃がやってくる: AI システムの保護について API セキュリティが教えること",
+        "es": "Se avecinan ataques de agente a agente: lo que nos enseña la seguridad de API sobre la protección de los sistemas de inteligencia artificial",
+        "pt": "Ataques entre agentes estão chegando: o que a segurança de API nos ensina sobre como proteger sistemas de IA",
+        "fr": "Des attaques d'agent à agent arrivent : ce que la sécurité des API nous apprend sur la sécurisation des systèmes d'IA"
+      },
+      "titleOriginal": "Agent-to-Agent Attacks Are Coming: What API Security Teaches Us About Securing AI Systems",
+      "link": "https://lab.wallarm.com/agent-to-agent-attacks-api-security-ai-systems/",
+      "pubDate": "2026-03-11T12:00:00.000Z",
+      "description": {
+        "en": "AI systems are no longer just isolated models responding to human prompts.&#160; In modern production environments, they are increasingly chained together – delegating tasks, calling tools, and coordinating decisions with limited or no human oversight. Almost all that communication happens through A",
+        "ja": "AI システムはもはや、人間のプロンプトに応答する単なる孤立したモデルではありません。 In modern production environments, they are increasingly chained together – delegating tasks, calling tools, and coordinating decisions with limited or no human oversight. ほとんどすべてのコミュニケーションは A を通じて行われます",
+        "es": "Los sistemas de IA ya no son sólo modelos aislados que responden a indicaciones humanas.&#160; En los entornos de producción modernos, están cada vez más encadenados: delegando tareas, llamando herramientas y coordinando decisiones con supervisión humana limitada o nula. Casi toda esa comunicación ocurre a través de A.",
+        "pt": "Os sistemas de IA não são mais apenas modelos isolados que respondem a solicitações humanas.&#160; Nos ambientes de produção modernos, eles estão cada vez mais encadeados – delegando tarefas, chamando ferramentas e coordenando decisões com supervisão humana limitada ou nenhuma. Quase toda essa comunicação acontece através de A",
+        "fr": "Les systèmes d’IA ne sont plus de simples modèles isolés répondant aux sollicitations humaines. Dans les environnements de production modernes, ils sont de plus en plus enchaînés : déléguant des tâches, appelant des outils et coordonnant des décisions avec une surveillance humaine limitée, voire inexistante. Presque toute cette communication se fait via A"
+      },
+      "descriptionOriginal": "AI systems are no longer just isolated models responding to human prompts.&#160; In modern production environments, they are increasingly chained together – delegating tasks, calling tools, and coordinating decisions with limited or no human oversight. Almost all that communication happens through A",
+      "source": "Wallarm",
+      "vendor": "wallarm"
+    },
+    {
+      "title": {
+        "en": "When your DDoS mitigation provider goes down: Why traffic control can’t be outsourced",
+        "ja": "DDoS 軽減プロバイダーがダウンしたとき: トラフィック制御をアウトソーシングできない理由",
+        "es": "Cuando su proveedor de mitigación de DDoS deja de funcionar: por qué no se puede subcontratar el control del tráfico",
+        "pt": "Quando seu provedor de mitigação de DDoS cai: por que o controle de tráfego não pode ser terceirizado",
+        "fr": "Lorsque votre fournisseur d’atténuation DDoS tombe en panne : pourquoi le contrôle du trafic ne peut pas être externalisé"
+      },
+      "titleOriginal": "When your DDoS mitigation provider goes down: Why traffic control can’t be outsourced",
+      "link": "https://www.imperva.com/blog/ddos-mitigation-provider-outage-traffic-control/",
+      "pubDate": "2026-03-10T15:48:33.000Z",
+      "description": {
+        "en": "Since the headline-grabbing outages of 2021, we’ve had recurring conversations with large enterprises asking some version of the same question. Do we really want our CDN, security, and routing control to live in the same place? This issue of control has become more urgent after a series of well‑publ",
+        "ja": "2021 年のニュースの見出しを飾った障害以来、私たちは大企業と繰り返し同じ質問をする会話をしてきました。 CDN、セキュリティ、ルーティング制御を同じ場所に配置することを本当に望んでいますか? この制御の問題は、一連の公然の報道を受けて、より緊急性を増している。",
+        "es": "Desde las interrupciones que acapararon los titulares en 2021, hemos tenido conversaciones recurrentes con grandes empresas que plantean alguna versión de la misma pregunta. ¿Realmente queremos que nuestra CDN, seguridad y control de enrutamiento residan en el mismo lugar? Esta cuestión de control se ha vuelto más urgente después de una serie de informes bien publicados.",
+        "pt": "Desde as interrupções que ganharam as manchetes em 2021, temos tido conversas recorrentes com grandes empresas fazendo alguma versão da mesma pergunta. Queremos realmente que nosso CDN, segurança e controle de roteamento vivam no mesmo lugar? Esta questão do controlo tornou-se mais urgente após uma série de publicações bem publicadas.",
+        "fr": "Depuis les pannes qui ont fait la une des journaux en 2021, nous avons eu des conversations récurrentes avec de grandes entreprises posant une version ou une autre de la même question. Voulons-nous vraiment que notre CDN, notre sécurité et notre contrôle de routage vivent au même endroit ? Cette question du contrôle est devenue plus urgente après une série d’études bien publiées."
+      },
+      "descriptionOriginal": "Since the headline-grabbing outages of 2021, we’ve had recurring conversations with large enterprises asking some version of the same question. Do we really want our CDN, security, and routing control to live in the same place? This issue of control has become more urgent after a series of well‑publ",
+      "source": "Imperva",
+      "vendor": "imperva"
+    },
+    {
+      "title": {
+        "en": "The Economic Argument: The Real Cost of Insecure APIs in the AI Era",
+        "ja": "経済的議論: AI 時代における安全でない API の実際のコスト",
+        "es": "El argumento económico: el coste real de las API inseguras en la era de la IA",
+        "pt": "O argumento econômico: o custo real das APIs inseguras na era da IA",
+        "fr": "L’argument économique : le coût réel des API non sécurisées à l’ère de l’IA"
+      },
+      "titleOriginal": "The Economic Argument: The Real Cost of Insecure APIs in the AI Era",
+      "link": "https://salt.security/blog/the-economic-argument-the-real-cost-of-insecure-apis-in-the-ai-era",
+      "pubDate": "2026-03-10T12:00:00.000Z",
+      "description": {
+        "en": "Learn three distinct ways that poorly governed and insecure APIs are silently draining enterprise budgets today.",
+        "ja": "今日、管理が不十分で安全でない API が企業の予算を静かに浪費している 3 つの明確な方法を学びましょう。",
+        "es": "Conozca tres formas distintas en las que las API inseguras y mal gobernadas están agotando silenciosamente los presupuestos empresariales de hoy.",
+        "pt": "Aprenda três maneiras distintas pelas quais APIs mal gerenciadas e inseguras estão drenando silenciosamente os orçamentos empresariais hoje.",
+        "fr": "Découvrez trois façons distinctes par lesquelles les API mal gouvernées et non sécurisées épuisent silencieusement les budgets des entreprises aujourd'hui."
+      },
+      "descriptionOriginal": "Learn three distinct ways that poorly governed and insecure APIs are silently draining enterprise budgets today.",
+      "source": "Salt Security",
+      "vendor": "salt"
+    },
+    {
+      "title": {
+        "en": "N8N: Shared Credentials and Account Takeover",
+        "ja": "N8N: 共有認証情報とアカウント乗っ取り",
+        "es": "N8N: Credenciales compartidas y adquisición de cuentas",
+        "pt": "N8N: credenciais compartilhadas e controle de conta",
+        "fr": "N8N : informations d'identification partagées et reprise de compte"
+      },
+      "titleOriginal": "N8N: Shared Credentials and Account Takeover",
+      "link": "https://www.imperva.com/blog/n8n-shared-credentials-and-account-takeover/",
+      "pubDate": "2026-03-03T22:41:12.000Z",
+      "description": {
+        "en": "Executive Summary We identified a security weakness in n8n’s credential management layer that could have completely compromised the application’s security. This finding highlights the core risks of centralized authentication in workflow automation platforms. As n8n serves as the central hub connecti",
+        "ja": "概要 私たちは、n8n の資格情報管理層に、アプリケーションのセキュリティを完全に侵害する可能性のあるセキュリティ上の弱点を特定しました。 この調査結果は、ワークフロー自動化プラットフォームにおける集中認証の核となるリスクを浮き彫りにしています。 n8n は中央ハブ接続として機能します。",
+        "es": "Resumen ejecutivo Identificamos una debilidad de seguridad en la capa de administración de credenciales de n8n que podría haber comprometido completamente la seguridad de la aplicación. Este hallazgo resalta los riesgos principales de la autenticación centralizada en las plataformas de automatización del flujo de trabajo. Como n8n sirve como centro de conexión central",
+        "pt": "Resumo executivo Identificamos uma falha de segurança na camada de gerenciamento de credenciais do n8n que poderia ter comprometido completamente a segurança do aplicativo. Esta descoberta destaca os principais riscos da autenticação centralizada em plataformas de automação de fluxo de trabalho. Como n8n serve como hub central de conexão",
+        "fr": "Résumé Nous avons identifié une faille de sécurité dans la couche de gestion des informations d'identification de n8n qui aurait pu complètement compromettre la sécurité de l'application. Cette découverte met en évidence les principaux risques de l’authentification centralisée dans les plateformes d’automatisation des flux de travail. Comme n8n sert de hub de connexion central"
+      },
+      "descriptionOriginal": "Executive Summary We identified a security weakness in n8n’s credential management layer that could have completely compromised the application’s security. This finding highlights the core risks of centralized authentication in workflow automation platforms. As n8n serves as the central hub connecti",
+      "source": "Imperva",
+      "vendor": "imperva"
+    },
+    {
+      "title": {
+        "en": "Securing Telecom’s Agentic Future",
+        "ja": "テレコムのエージェントの未来を守る",
+        "es": "Asegurar el futuro agente de las telecomunicaciones",
+        "pt": "Garantindo o Futuro Agente das Telecom",
+        "fr": "Assurer l’avenir agent des télécommunications"
+      },
+      "titleOriginal": "Securing Telecom’s Agentic Future",
+      "link": "https://www.cequence.ai/blog/bot-management/securing-telecoms-agentic-future/",
+      "pubDate": "2026-03-03T14:00:23.000Z",
+      "description": {
+        "en": "Why Cequence Is Co-Chairing TM Forum&#8217;s AI-Native Blueprint Initiative This past Sunday, at Mobile World Congress in Barcelona, TM Forum officially named Cequence Security as Co-Chair of its AI-Native Blueprint Initiative, specifically leading the Agentic Interaction Security workstream. For th",
+        "ja": "Cequence が TM フォーラムの AI ネイティブ ブループリント イニシアティブの共同議長を務める理由 先週の日曜日、バルセロナで開催されたモバイル ワールド コングレスで、TM フォーラムは正式に Cequence セキュリティを AI ネイティブ ブループリント イニシアチブの共同議長に任命し、特にエージェントティック インタラクション セキュリティ ワークストリームを主導しました。 のために",
+        "es": "Por qué Cequence copreside la iniciativa AI-Native Blueprint de TM Forum El domingo pasado, en el Mobile World Congress en Barcelona, ​​TM Forum nombró oficialmente a Cequence Security copresidente de su iniciativa AI-Native Blueprint, específicamente liderando el flujo de trabajo de seguridad de interacción agente. Para el",
+        "pt": "Por que Cequence é copresidente da iniciativa AI-Native Blueprint do TM Forum No último domingo, no Mobile World Congress em Barcelona, ​​o TM Forum nomeou oficialmente Cequence Security como copresidente de sua iniciativa AI-Native Blueprint, liderando especificamente o fluxo de trabalho Agentic Interaction Security. Adiante",
+        "fr": "Pourquoi Cequence co-préside l'initiative AI-Native Blueprint du TM Forum Dimanche dernier, lors du Mobile World Congress à Barcelone, TM Forum a officiellement nommé Cequence Security co-président de son initiative AI-Native Blueprint, dirigeant spécifiquement le flux de travail sur la sécurité des interactions agentiques. Pour le"
+      },
+      "descriptionOriginal": "Why Cequence Is Co-Chairing TM Forum&#8217;s AI-Native Blueprint Initiative This past Sunday, at Mobile World Congress in Barcelona, TM Forum officially named Cequence Security as Co-Chair of its AI-Native Blueprint Initiative, specifically leading the Agentic Interaction Security workstream. For th",
+      "source": "Cequence",
+      "vendor": "cequence"
+    },
+    {
+      "title": {
+        "en": "Everyone Knows About Broken Authorization &#8211; So Why Does It Still Work for Attackers?",
+        "ja": "認証の破損については誰もが知っています &#8211; では、なぜそれが依然として攻撃者にとって機能するのでしょうか?",
+        "es": "Todo el mundo sabe acerca de la autorización incumplida &#8211; Entonces, ¿por qué sigue funcionando para los atacantes?",
+        "pt": "Todo mundo sabe sobre autorização quebrada & #8211; Então, por que ainda funciona para invasores?",
+        "fr": "Tout le monde connaît les autorisations brisées – Alors pourquoi cela fonctionne-t-il toujours pour les attaquants ?"
+      },
+      "titleOriginal": "Everyone Knows About Broken Authorization &#8211; So Why Does It Still Work for Attackers?",
+      "link": "https://lab.wallarm.com/broken-authorization-why-still-works-for-attackers/",
+      "pubDate": "2026-03-02T13:00:00.000Z",
+      "description": {
+        "en": "Broken authorization is one of the most widely known API vulnerabilities.&#160; It features in the OWASP Top 10, AppSec conversations, and secure coding guidelines. Broken Object Level Authorization (BOLA) and Broken Function Level Authorization (BFLA) account for hundreds of API vulnerabilities eve",
+        "ja": "認証の失敗は、最も広く知られている API の脆弱性の 1 つです。 これは、OWASP Top 10、AppSec の会話、およびセキュア コーディング ガイドラインで取り上げられています。 Broken Object Level Authorization (BOLA) および Broken Function Level Authorization (BFLA) は、数百もの API 脆弱性の原因となっています。",
+        "es": "La autorización rota es una de las vulnerabilidades de API más conocidas.&#160; Aparece en OWASP Top 10, conversaciones de AppSec y pautas de codificación segura. La autorización de nivel de objeto roto (BOLA) y la autorización de nivel de función rota (BFLA) representan cientos de vulnerabilidades de API.",
+        "pt": "A autorização quebrada é uma das vulnerabilidades de API mais conhecidas.&#160; Ele aparece no OWASP Top 10, conversas AppSec e diretrizes de codificação segura. A Autorização de Nível de Objeto Quebrado (BOLA) e a Autorização de Nível de Função Quebrada (BFLA) são responsáveis ​​por centenas de vulnerabilidades de API",
+        "fr": "L'autorisation brisée est l'une des vulnérabilités les plus connues des API. Il figure dans le Top 10 OWASP, les conversations AppSec et les directives de codage sécurisé. L'autorisation au niveau des objets brisés (BOLA) et l'autorisation au niveau des fonctions brisées (BFLA) représentent des centaines de vulnérabilités d'API chaque jour."
+      },
+      "descriptionOriginal": "Broken authorization is one of the most widely known API vulnerabilities.&#160; It features in the OWASP Top 10, AppSec conversations, and secure coding guidelines. Broken Object Level Authorization (BOLA) and Broken Function Level Authorization (BFLA) account for hundreds of API vulnerabilities eve",
+      "source": "Wallarm",
+      "vendor": "wallarm"
+    },
+    {
+      "title": {
+        "en": "Airline Seat Spinning: An Illustration of Sophisticated Fraud",
+        "ja": "航空会社のシート回転: 高度な詐欺の実例",
+        "es": "Rotación de asientos de avión: un ejemplo de fraude sofisticado",
+        "pt": "Spinning de assentos de avião: uma ilustração de fraude sofisticada",
+        "fr": "Le filage des sièges des compagnies aériennes : une illustration d’une fraude sophistiquée"
+      },
+      "titleOriginal": "Airline Seat Spinning: An Illustration of Sophisticated Fraud",
+      "link": "https://www.cequence.ai/blog/bot-management/seat-spinning-fraud/",
+      "pubDate": "2026-02-24T17:09:51.000Z",
+      "description": {
+        "en": "Undermining Revenue, Trust, and Operational Integrity For airline CIOs, CISOs, and revenue platform leaders, malicious bots are no longer just a nuisance. They are a direct assault on revenue integrity and customer trust. One of the most damaging and least understood manifestations of this threat is",
+        "ja": "収益、信頼、運用上の整合性を損なう 航空会社の CIO、CISO、収益プラットフォームのリーダーにとって、悪意のあるボットはもはや単なる迷惑者ではありません。 これらは収益の完全性と顧客の信頼に対する直接的な攻撃です。 この脅威の最も有害でありながら最も理解されていない症状の 1 つは、",
+        "es": "Socavando los ingresos, la confianza y la integridad operativa Para los CIO, CISO y líderes de plataformas de ingresos de las aerolíneas, los bots maliciosos ya no son solo una molestia. Son un ataque directo a la integridad de los ingresos y a la confianza de los clientes. Una de las manifestaciones más dañinas y menos comprendidas de esta amenaza es",
+        "pt": "Prejudicando a receita, a confiança e a integridade operacional Para CIOs, CISOs e líderes de plataformas de receitas de companhias aéreas, os bots maliciosos não são mais apenas um incômodo. Eles são um ataque direto à integridade da receita e à confiança do cliente. Uma das manifestações mais prejudiciais e menos compreendidas desta ameaça é",
+        "fr": "Porter atteinte aux revenus, à la confiance et à l'intégrité opérationnelle Pour les DSI, RSSI et responsables des plateformes de revenus des compagnies aériennes, les robots malveillants ne sont plus seulement une nuisance. Ils constituent une attaque directe contre l’intégrité des revenus et la confiance des clients. L’une des manifestations les plus dommageables et les moins comprises de cette menace est"
+      },
+      "descriptionOriginal": "Undermining Revenue, Trust, and Operational Integrity For airline CIOs, CISOs, and revenue platform leaders, malicious bots are no longer just a nuisance. They are a direct assault on revenue integrity and customer trust. One of the most damaging and least understood manifestations of this threat is",
+      "source": "Cequence",
+      "vendor": "cequence"
+    },
+    {
+      "title": {
+        "en": "Integrating Advanced API Security with Imperva Gateway Environment",
+        "ja": "高度な API セキュリティと Imperva ゲートウェイ環境の統合",
+        "es": "Integración de seguridad API avanzada con el entorno Imperva Gateway",
+        "pt": "Integrando segurança avançada de API com ambiente Imperva Gateway",
+        "fr": "Intégration de la sécurité API avancée avec l'environnement Imperva Gateway"
+      },
+      "titleOriginal": "Integrating Advanced API Security with Imperva Gateway Environment",
+      "link": "https://www.imperva.com/blog/integrating-advanced-api-security-imperva-gateway/",
+      "pubDate": "2026-02-24T14:33:31.000Z",
+      "description": {
+        "en": "As APIs power the majority of modern web applications, implementing robust API security is no longer optional &#8211; it’s a critical necessity for data protection. This guide explores how to seamlessly integrate API gateway security into your Imperva on-premises environment to mitigate OWASP Top 10",
+        "ja": "最新の Web アプリケーションの大部分は API によって支えられているため、堅牢な API セキュリティの実装はもはやオプションではありません。 これはデータ保護にとって極めて重要です。 このガイドでは、API ゲートウェイのセキュリティを Imperva オンプレミス環境にシームレスに統合して、OWASP Top 10 の影響を軽減する方法について説明します。",
+        "es": "Dado que las API impulsan la mayoría de las aplicaciones web modernas, implementar una seguridad API sólida ya no es opcional; es una necesidad crítica para la protección de datos. Esta guía explora cómo integrar perfectamente la seguridad de la puerta de enlace API en su entorno local Imperva para mitigar el Top 10 de OWASP.",
+        "pt": "Como as APIs alimentam a maioria dos aplicativos da Web modernos, a implementação de segurança robusta de API não é mais opcional - é mais uma opção. é uma necessidade crítica para a proteção de dados. Este guia explora como integrar perfeitamente a segurança do gateway API em seu ambiente local Imperva para mitigar os 10 principais problemas do OWASP",
+        "fr": "Alors que les API alimentent la majorité des applications Web modernes, la mise en œuvre d’une sécurité API robuste n’est plus facultative – c’est plutôt une option. c’est une nécessité cruciale pour la protection des données. Ce guide explique comment intégrer de manière transparente la sécurité de la passerelle API dans votre environnement sur site Imperva pour atténuer le Top 10 OWASP."
+      },
+      "descriptionOriginal": "As APIs power the majority of modern web applications, implementing robust API security is no longer optional &#8211; it’s a critical necessity for data protection. This guide explores how to seamlessly integrate API gateway security into your Imperva on-premises environment to mitigate OWASP Top 10",
+      "source": "Imperva",
+      "vendor": "imperva"
+    },
+    {
+      "title": {
+        "en": "The Coming Regulatory Wave for AI Agents &amp; Their APIs",
+        "ja": "AI エージェントおよび AI に対する今後の規制の波 それらの API",
+        "es": "La próxima ola regulatoria para agentes y agentes de IA Sus API",
+        "pt": "A próxima onda regulatória para agentes e agentes de IA Suas APIs",
+        "fr": "La prochaine vague de réglementation pour les agents et les agents d’IA Leurs API"
+      },
+      "titleOriginal": "The Coming Regulatory Wave for AI Agents &amp; Their APIs",
+      "link": "https://salt.security/blog/the-coming-regulatory-wave-for-ai-agents-their-apis",
+      "pubDate": "2026-02-24T13:00:00.000Z",
+      "description": {
+        "en": "By treating the Agentic AI Action Layer as your primary compliance boundary, you can satisfy the strict demands of regulators without slowing down your engineering teams.",
+        "ja": "Agentic AI アクション レイヤーを主要なコンプライアンス境界として扱うことで、エンジニアリング チームの速度を低下させることなく、規制当局の厳しい要求を満たすことができます。",
+        "es": "Al tratar la capa de acción de IA agente como su principal límite de cumplimiento, puede satisfacer las estrictas demandas de los reguladores sin ralentizar a sus equipos de ingeniería.",
+        "pt": "Ao tratar a camada de ação Agentic AI como seu principal limite de conformidade, você pode satisfazer as demandas rigorosas dos reguladores sem atrasar suas equipes de engenharia.",
+        "fr": "En traitant l'Agentic AI Action Layer comme votre principale limite de conformité, vous pouvez satisfaire aux exigences strictes des régulateurs sans ralentir vos équipes d'ingénierie."
+      },
+      "descriptionOriginal": "By treating the Agentic AI Action Layer as your primary compliance boundary, you can satisfy the strict demands of regulators without slowing down your engineering teams.",
+      "source": "Salt Security",
+      "vendor": "salt"
+    },
+    {
+      "title": {
+        "en": "Cloud Based  WAF Upload Scan and Control: The New Standard for File Upload Security",
+        "ja": "クラウドベースの WAF アップロード スキャンと制御: ファイル アップロード セキュリティの新しい標準",
+        "es": "Escaneo y control de carga WAF basado en la nube: el nuevo estándar para la seguridad de la carga de archivos",
+        "pt": "Verificação e controle de upload WAF baseado em nuvem: o novo padrão para segurança de upload de arquivos",
+        "fr": "Analyse et contrôle des téléchargements WAF basés sur le cloud : la nouvelle norme en matière de sécurité du téléchargement de fichiers"
+      },
+      "titleOriginal": "Cloud Based  WAF Upload Scan and Control: The New Standard for File Upload Security",
+      "link": "https://www.imperva.com/blog/cloud-based-waf-upload-scan-and-control-the-new-standard-for-file-upload-security/",
+      "pubDate": "2026-02-23T17:45:31.000Z",
+      "description": {
+        "en": "We&#8217;re excited to announce the launch of Upload Scan and Control, an essential new feature for Imperva Cloud WAF. This add-on tackles one of the most critical vulnerabilities facing web applications today—insecure file uploads—offering protection with scalability, simplicity, and enterprise-gra",
+        "ja": "Imperva Cloud WAF に不可欠な新機能であるアップロード スキャンとコントロールのリリースを発表できることを嬉しく思います。 このアドオンは、今日 Web アプリケーションが直面している最も重大な脆弱性の 1 つである安全でないファイルのアップロードに対処し、拡張性、シンプルさ、エンタープライズ対応の保護を提供します。",
+        "es": "Nos complace anunciar el lanzamiento de Upload Scan and Control, una nueva característica esencial para Imperva Cloud WAF. Este complemento aborda una de las vulnerabilidades más críticas a las que se enfrentan las aplicaciones web en la actualidad (cargas de archivos inseguras) y ofrece protección con escalabilidad, simplicidad y calidad empresarial.",
+        "pt": "Temos o prazer de anunciar o lançamento do Upload Scan and Control, um novo recurso essencial para o Imperva Cloud WAF. Este complemento aborda uma das vulnerabilidades mais críticas que os aplicativos da Web enfrentam atualmente – uploads de arquivos inseguros – oferecendo proteção com escalabilidade, simplicidade e nível empresarial.",
+        "fr": "Nous sommes ravis d'annoncer le lancement de Upload Scan and Control, une nouvelle fonctionnalité essentielle pour Imperva Cloud WAF. Ce module complémentaire s'attaque à l'une des vulnérabilités les plus critiques auxquelles sont confrontées les applications Web aujourd'hui : le téléchargement de fichiers non sécurisés, offrant une protection avec évolutivité, simplicité et niveau d'entreprise."
+      },
+      "descriptionOriginal": "We&#8217;re excited to announce the launch of Upload Scan and Control, an essential new feature for Imperva Cloud WAF. This add-on tackles one of the most critical vulnerabilities facing web applications today—insecure file uploads—offering protection with scalability, simplicity, and enterprise-gra",
+      "source": "Imperva",
+      "vendor": "imperva"
+    },
+    {
+      "title": {
+        "en": "Why Your SOC is Blind to Your Biggest Attack Surface (And How to Fix It)",
+        "ja": "SOC が最大の攻撃対象領域を認識できない理由 (およびそれを修正する方法)",
+        "es": "Por qué su SOC no ve su mayor superficie de ataque (y cómo solucionarlo)",
+        "pt": "Por que seu SOC ignora sua maior superfície de ataque (e como consertar isso)",
+        "fr": "Pourquoi votre SOC est aveugle à votre plus grande surface d'attaque (et comment y remédier)"
+      },
+      "titleOriginal": "Why Your SOC is Blind to Your Biggest Attack Surface (And How to Fix It)",
+      "link": "https://salt.security/blog/why-your-soc-is-blind-to-your-biggest-attack-surface-and-how-to-fix-it",
+      "pubDate": "2026-02-23T13:00:00.000Z",
+      "description": {
+        "en": "Before you can secure your APIs, you have to know they exist. This customer faced a common challenge: they lacked a \"living view\" of their API fabric.",
+        "ja": "API を保護する前に、API が存在することを知る必要があります。 このお客様は、API ファブリックの「生きているビュー」が欠けているという共通の課題に直面していました。",
+        "es": "Antes de poder proteger sus API, debe saber que existen. Este cliente enfrentó un desafío común: carecía de una \"visión viva\" de su tejido API.",
+        "pt": "Antes de proteger suas APIs, você precisa saber que elas existem. Esse cliente enfrentou um desafio comum: faltava-lhe uma \"visão dinâmica\" da estrutura da API.",
+        "fr": "Avant de pouvoir sécuriser vos API, vous devez savoir qu’elles existent. Ce client était confronté à un défi commun : il lui manquait une « vue vivante » de sa structure API."
+      },
+      "descriptionOriginal": "Before you can secure your APIs, you have to know they exist. This customer faced a common challenge: they lacked a \"living view\" of their API fabric.",
+      "source": "Salt Security",
+      "vendor": "salt"
+    },
+    {
+      "title": {
+        "en": "Your Most Dangerous User Is Not Human: How AI Agents and MCP Servers Broke the Internal API Walled Garden",
+        "ja": "最も危険なユーザーは人間ではありません: AI エージェントと MCP サーバーが内部 API の壁を突破した方法",
+        "es": "Su usuario más peligroso no es humano: cómo los agentes de IA y los servidores MCP rompieron el jardín amurallado de API interno",
+        "pt": "Seu usuário mais perigoso não é humano: como agentes de IA e servidores MCP quebraram o jardim murado da API interna",
+        "fr": "Votre utilisateur le plus dangereux n'est pas humain : comment les agents IA et les serveurs MCP ont brisé le jardin clos de l'API interne"
+      },
+      "titleOriginal": "Your Most Dangerous User Is Not Human: How AI Agents and MCP Servers Broke the Internal API Walled Garden",
+      "link": "https://salt.security/blog/your-most-dangerous-user-is-not-human-how-ai-agents-and-mcp-servers-broke-the-internal-api-walled-garden",
+      "pubDate": "2026-02-19T21:53:00.000Z",
+      "description": {
+        "en": "Legitimate AI agents act as trusted internal entities but can be exploited to bypass Data Loss Prevention (DLP) policies, as seen in recent Microsoft Office vulnerabilities.",
+        "ja": "正規の AI エージェントは信頼できる内部エンティティとして機能しますが、最近の Microsoft Office の脆弱性で見られるように、データ損失防止 (DLP) ポリシーをバイパスするために悪用される可能性があります。",
+        "es": "Los agentes legítimos de IA actúan como entidades internas confiables, pero pueden explotarse para eludir las políticas de Prevención de pérdida de datos (DLP), como se vio en las vulnerabilidades recientes de Microsoft Office.",
+        "pt": "Agentes legítimos de IA atuam como entidades internas confiáveis, mas podem ser explorados para contornar políticas de prevenção contra perda de dados (DLP), como visto em vulnerabilidades recentes do Microsoft Office.",
+        "fr": "Les agents d'IA légitimes agissent comme des entités internes de confiance, mais peuvent être exploités pour contourner les politiques de prévention contre la perte de données (DLP), comme le montrent les récentes vulnérabilités de Microsoft Office."
+      },
+      "descriptionOriginal": "Legitimate AI agents act as trusted internal entities but can be exploited to bypass Data Loss Prevention (DLP) policies, as seen in recent Microsoft Office vulnerabilities.",
+      "source": "Salt Security",
+      "vendor": "salt"
+    },
+    {
+      "title": {
+        "en": "Security Guardrails: The Foundation of Agentic AI Governance",
+        "ja": "セキュリティ ガードレール: Agentic AI ガバナンスの基盤",
+        "es": "Barandillas de seguridad: la base de la gobernanza de la IA agente",
+        "pt": "Protetores de segurança: a base da governança de IA agente",
+        "fr": "Garde-corps de sécurité : le fondement de la gouvernance de l'IA agentique"
+      },
+      "titleOriginal": "Security Guardrails: The Foundation of Agentic AI Governance",
+      "link": "https://www.cequence.ai/blog/ai/agentic-ai-security-guardrails/",
+      "pubDate": "2026-02-19T16:20:45.000Z",
+      "description": {
+        "en": "Agentic AI represents a fundamental shift in how enterprises employ artificial intelligence. We are moving from passive assistants that generate content to autonomous systems that plan, reason, call APIs, and execute workflows. Organizations are investing in agentic AI for two clear business reasons",
+        "ja": "エージェントティック AI は、企業による人工知能の採用方法における根本的な変化を表しています。 私たちは、コンテンツを生成する受動的なアシスタントから、計画、推論、API の呼び出し、ワークフローの実行を行う自律システムに移行しつつあります。 組織がエージェント AI に投資している理由は 2 つあります。",
+        "es": "La IA agente representa un cambio fundamental en la forma en que las empresas emplean la inteligencia artificial. Estamos pasando de asistentes pasivos que generan contenido a sistemas autónomos que planifican, razonan, llaman a API y ejecutan flujos de trabajo. Las organizaciones están invirtiendo en IA agente por dos razones comerciales claras",
+        "pt": "A Agentic AI representa uma mudança fundamental na forma como as empresas empregam inteligência artificial. Estamos passando de assistentes passivos que geram conteúdo para sistemas autônomos que planejam, raciocinam, chamam APIs e executam fluxos de trabalho. As organizações estão investindo em IA de agência por dois motivos comerciais claros",
+        "fr": "L’IA agentique représente un changement fondamental dans la manière dont les entreprises utilisent l’intelligence artificielle. Nous passons d'assistants passifs qui génèrent du contenu à des systèmes autonomes qui planifient, raisonnent, appellent des API et exécutent des flux de travail. Les organisations investissent dans l’IA agentique pour deux raisons commerciales claires"
+      },
+      "descriptionOriginal": "Agentic AI represents a fundamental shift in how enterprises employ artificial intelligence. We are moving from passive assistants that generate content to autonomous systems that plan, reason, call APIs, and execute workflows. Organizations are investing in agentic AI for two clear business reasons",
+      "source": "Cequence",
+      "vendor": "cequence"
+    },
+    {
+      "title": {
+        "en": "From Shadow APIs to Shadow AI: How the API Threat Model Is Expanding Faster Than Most Defenses",
+        "ja": "シャドウ API からシャドウ AI へ: API 脅威モデルがどのようにしてほとんどの防御よりも速く拡大しているか",
+        "es": "De las API en la sombra a la IA en la sombra: cómo el modelo de amenazas a las API se está expandiendo más rápido que la mayoría de las defensas",
+        "pt": "De Shadow APIs a Shadow AI: como o modelo de ameaças de API está se expandindo mais rápido que a maioria das defesas",
+        "fr": "Des API Shadow à l'IA Shadow : comment le modèle de menace des API se développe plus rapidement que la plupart des défenses"
+      },
+      "titleOriginal": "From Shadow APIs to Shadow AI: How the API Threat Model Is Expanding Faster Than Most Defenses",
+      "link": "https://lab.wallarm.com/shadow-ai-api-security-risk/",
+      "pubDate": "2026-02-18T12:00:00.000Z",
+      "description": {
+        "en": "The shadow technology problem is getting worse.&#160; Over the past few years, organizations have scaled microservices, cloud-native apps, and partner integrations faster than corporate governance models could keep up, resulting in undocumented or shadow APIs. We’re now seeing this pattern all over ",
+        "ja": "シャドウ テクノロジーの問題は悪化しています。&#160; 過去数年間、組織はコーポレート ガバナンス モデルが追いつくよりも速いスピードでマイクロサービス、クラウド ネイティブ アプリ、パートナー統合を拡張してきたため、文書化されていない API やシャドウ API が発生しています。 現在、このパターンがあちこちで見られています",
+        "es": "El problema de la tecnología oculta está empeorando.&#160; En los últimos años, las organizaciones han ampliado los microservicios, las aplicaciones nativas de la nube y las integraciones de socios más rápido de lo que los modelos de gobierno corporativo podrían mantener, lo que ha resultado en API ocultas o no documentadas. Ahora estamos viendo este patrón en todas partes",
+        "pt": "O problema da tecnologia paralela está piorando. Nos últimos anos, as organizações escalaram microsserviços, aplicativos nativos da nuvem e integrações de parceiros mais rapidamente do que os modelos de governança corporativa poderiam acompanhar, resultando em APIs não documentadas ou ocultas. Agora estamos vendo esse padrão por toda parte",
+        "fr": "Le problème de la technologie fantôme s’aggrave.&#160; Au cours des dernières années, les organisations ont fait évoluer leurs microservices, leurs applications cloud natives et leurs intégrations de partenaires plus rapidement que les modèles de gouvernance d'entreprise ne pouvaient suivre, ce qui a abouti à des API non documentées ou fantômes. Nous voyons maintenant ce schéma partout"
+      },
+      "descriptionOriginal": "The shadow technology problem is getting worse.&#160; Over the past few years, organizations have scaled microservices, cloud-native apps, and partner integrations faster than corporate governance models could keep up, resulting in undocumented or shadow APIs. We’re now seeing this pattern all over ",
+      "source": "Wallarm",
+      "vendor": "wallarm"
+    },
+    {
+      "title": {
+        "en": "A New Denial-of-Service Vector in React Server Components",
+        "ja": "React サーバー コンポーネントの新しいサービス拒否ベクトル",
+        "es": "Un nuevo vector de denegación de servicio en los componentes del servidor React",
+        "pt": "Um novo vetor de negação de serviço nos componentes do React Server",
+        "fr": "Un nouveau vecteur de déni de service dans les composants du serveur React"
+      },
+      "titleOriginal": "A New Denial-of-Service Vector in React Server Components",
+      "link": "https://www.imperva.com/blog/a-new-denial-of-service-vector-in-react-server-components/",
+      "pubDate": "2026-02-17T18:48:22.000Z",
+      "description": {
+        "en": "React Server Components (RSC) have introduced a hybrid execution model that expands application capabilities while increasing the potential attack surface. Following earlier disclosures and fixes related to React DoS vulnerabilities, an additional analysis of RSC internals was conducted to assess wh",
+        "ja": "React Server Components (RSC) は、潜在的な攻撃対象領域を増やしながらアプリケーションの機能を拡張するハイブリッド実行モデルを導入しました。 React DoS 脆弱性に関連する以前の開示と修正に続き、RSC 内部の追加分析が、脆弱性を評価するために実施されました。",
+        "es": "React Server Components (RSC) ha introducido un modelo de ejecución híbrido que amplía las capacidades de la aplicación al tiempo que aumenta la superficie de ataque potencial. Luego de revelaciones y correcciones anteriores relacionadas con las vulnerabilidades de React DoS, se realizó un análisis adicional de los componentes internos de RSC para evaluar por qué",
+        "pt": "Os componentes do React Server (RSC) introduziram um modelo de execução híbrido que expande os recursos do aplicativo enquanto aumenta a superfície de ataque potencial. Seguindo divulgações anteriores e correções relacionadas às vulnerabilidades do React DoS, uma análise adicional dos internos do RSC foi conduzida para avaliar o que",
+        "fr": "Les composants React Server (RSC) ont introduit un modèle d'exécution hybride qui étend les capacités des applications tout en augmentant la surface d'attaque potentielle. Suite à des divulgations antérieures et à des correctifs liés aux vulnérabilités React DoS, une analyse supplémentaire des composants internes de RSC a été menée pour évaluer pourquoi"
+      },
+      "descriptionOriginal": "React Server Components (RSC) have introduced a hybrid execution model that expands application capabilities while increasing the potential attack surface. Following earlier disclosures and fixes related to React DoS vulnerabilities, an additional analysis of RSC internals was conducted to assess wh",
+      "source": "Imperva",
+      "vendor": "imperva"
+    }
+  ]
+}
