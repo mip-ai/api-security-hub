@@ -86,6 +86,14 @@
     },
   };
 
+  // --- Translation tip labels per language (non-English only) ---
+  const TRANSLATE_TIP = {
+    ja: '\u{1F310} \u5916\u90E8\u30EA\u30F3\u30AF\u5148\u306E\u8A18\u4E8B\u306F\u82F1\u8A9E\u3067\u3059\u3002\u30D6\u30E9\u30A6\u30B6\u306E\u7FFB\u8A33\u6A5F\u80FD\uFF08\u53F3\u30AF\u30EA\u30C3\u30AF \u2192 \u7FFB\u8A33\uFF09\u3092\u3054\u5229\u7528\u304F\u3060\u3055\u3044\u3002',
+    es: '\u{1F310} Los art\u00EDculos enlazados est\u00E1n en ingl\u00E9s. Use la funci\u00F3n de traducci\u00F3n de su navegador (clic derecho \u2192 Traducir).',
+    pt: '\u{1F310} Os artigos vinculados est\u00E3o em ingl\u00EAs. Use o recurso de tradu\u00E7\u00E3o do seu navegador (clique direito \u2192 Traduzir).',
+    fr: '\u{1F310} Les articles li\u00E9s sont en anglais. Utilisez la fonction de traduction de votre navigateur (clic droit \u2192 Traduire).',
+  };
+
   // --- Footer labels per language ---
   const FOOTER_LABELS = {
     en: {
@@ -217,6 +225,14 @@
     existingContent.className = 'content-wrapper';
     while (body.firstChild) {
       existingContent.appendChild(body.firstChild);
+    }
+
+    // Insert translation tip for non-English pages
+    if (currentLang !== 'en' && TRANSLATE_TIP[currentLang]) {
+      const tip = document.createElement('div');
+      tip.style.cssText = 'font-size:0.82rem;color:var(--text-secondary,#a0a0a0);background:var(--bg-card,#1a1a1a);border:1px solid var(--border-color,#2a2a2a);border-radius:8px;padding:8px 14px;margin-bottom:12px;';
+      tip.textContent = TRANSLATE_TIP[currentLang];
+      existingContent.insertBefore(tip, existingContent.firstChild);
     }
 
     const main = document.createElement('main');
