@@ -1,350 +1,14 @@
 {
-  "lastUpdated": "2026-03-19T09:44:06.497Z",
-  "itemCount": 20,
+  "lastUpdated": "2026-03-19T13:06:24.535Z",
+  "itemCount": 3,
   "items": [
-    {
-      "title": {
-        "en": "CISA Warns of Attacks Exploiting Recent SharePoint Vulnerability",
-        "ja": "CISA、最近の SharePoint の脆弱性を悪用した攻撃を警告",
-        "es": "CISA advierte sobre ataques que aprovechan la reciente vulnerabilidad de SharePoint",
-        "pt": "CISA alerta sobre ataques que exploram vulnerabilidade recente do SharePoint",
-        "fr": "CISA met en garde contre les attaques exploitant une vulnérabilité récente de SharePoint"
-      },
-      "titleOriginal": "CISA Warns of Attacks Exploiting Recent SharePoint Vulnerability",
-      "link": "https://www.securityweek.com/cisa-warns-of-attacks-exploiting-recent-sharepoint-vulnerability/",
-      "pubDate": "2026-03-19T09:42:52.000Z",
-      "description": {
-        "en": "The SharePoint remote code execution vulnerability CVE-2026-20963, which Microsoft patched in January, has been exploited in the wild. The post CISA Warns of Attacks Exploiting Recent SharePoint Vulnerability appeared first on SecurityWeek.",
-        "ja": "Microsoft が 1 月にパッチを適用した SharePoint リモート コード実行の脆弱性 CVE-2026-20963 は、実際に悪用されています。 CISA が最近の SharePoint の脆弱性を悪用した攻撃を警告する投稿は、SecurityWeek に最初に掲載されました。",
-        "es": "La vulnerabilidad de ejecución remota de código de SharePoint CVE-2026-20963, que Microsoft parchó en enero, ha sido explotada en estado salvaje. La publicación CISA advierte sobre ataques que explotan una vulnerabilidad reciente de SharePoint apareció por primera vez en SecurityWeek.",
-        "pt": "A vulnerabilidade de execução remota de código do SharePoint CVE-2026-20963, que a Microsoft corrigiu em janeiro, foi explorada à solta. A postagem CISA alerta sobre ataques que exploram vulnerabilidade recente do SharePoint apareceu pela primeira vez na SecurityWeek.",
-        "fr": "La vulnérabilité d'exécution de code à distance SharePoint CVE-2026-20963, que Microsoft a corrigée en janvier, a été exploitée de manière sauvage. Le message CISA met en garde contre les attaques exploitant une vulnérabilité récente de SharePoint apparaît en premier sur SecurityWeek."
-      },
-      "descriptionOriginal": "The SharePoint remote code execution vulnerability CVE-2026-20963, which Microsoft patched in January, has been exploited in the wild. The post CISA Warns of Attacks Exploiting Recent SharePoint Vulnerability appeared first on SecurityWeek.",
-      "source": "SecurityWeek"
-    },
-    {
-      "title": {
-        "en": "Cisco Firewall Vulnerability Exploited as Zero-Day in Interlock Ransomware Attacks",
-        "ja": "Cisco ファイアウォールの脆弱性がインターロック ランサムウェア攻撃のゼロデイ攻撃として悪用される",
-        "es": "Vulnerabilidad del firewall de Cisco explotada como día cero en ataques de ransomware Interlock",
-        "pt": "Vulnerabilidade do Cisco Firewall explorada como dia zero em ataques de ransomware Interlock",
-        "fr": "Une vulnérabilité du pare-feu Cisco exploitée comme Zero-Day dans des attaques de ransomware Interlock"
-      },
-      "titleOriginal": "Cisco Firewall Vulnerability Exploited as Zero-Day in Interlock Ransomware Attacks",
-      "link": "https://www.securityweek.com/cisco-firewall-vulnerability-exploited-as-zero-day-in-interlock-ransomware-attacks/",
-      "pubDate": "2026-03-19T08:57:59.000Z",
-      "description": {
-        "en": "Amazon found evidence that the FMC software vulnerability has been exploited since late January, and found links to Russia. The post Cisco Firewall Vulnerability Exploited as Zero-Day in Interlock Ransomware Attacks appeared first on SecurityWeek.",
-        "ja": "AmazonはFMCソフトウェアの脆弱性が1月下旬から悪用された証拠を発見し、ロシアとの関連も発見した。 Cisco ファイアウォールの脆弱性がインターロック ランサムウェア攻撃のゼロデイ攻撃として悪用された後の記事は、SecurityWeek に最初に掲載されました。",
-        "es": "Amazon encontró evidencia de que la vulnerabilidad del software FMC ha sido explotada desde finales de enero y encontró enlaces a Rusia. La publicación La vulnerabilidad del firewall de Cisco explotada como día cero en ataques de ransomware Interlock apareció por primera vez en SecurityWeek.",
-        "pt": "A Amazon encontrou evidências de que a vulnerabilidade do software FMC foi explorada desde o final de janeiro e encontrou ligações com a Rússia. A postagem Vulnerabilidade do Cisco Firewall explorada como dia zero em ataques de ransomware Interlock apareceu pela primeira vez na SecurityWeek.",
-        "fr": "Amazon a trouvé des preuves que la vulnérabilité du logiciel FMC était exploitée depuis fin janvier et a trouvé des liens vers la Russie. La vulnérabilité du pare-feu Cisco exploitée comme Zero-Day dans les attaques Interlock Ransomware est apparue en premier sur SecurityWeek."
-      },
-      "descriptionOriginal": "Amazon found evidence that the FMC software vulnerability has been exploited since late January, and found links to Russia. The post Cisco Firewall Vulnerability Exploited as Zero-Day in Interlock Ransomware Attacks appeared first on SecurityWeek.",
-      "source": "SecurityWeek"
-    },
-    {
-      "title": {
-        "en": "CISA Warns of Zimbra, SharePoint Flaw Exploits; Cisco Zero-Day Hit in Ransomware Attacks",
-        "ja": "CISA、Zimbra、SharePointの欠陥悪用を警告。 ランサムウェア攻撃におけるシスコのゼロデイ ヒット",
-        "es": "CISA advierte sobre Zimbra y vulnerabilidades de SharePoint; Cisco Zero-Day afectado por ataques de ransomware",
-        "pt": "CISA alerta sobre falhas no Zimbra e no SharePoint; Cisco Zero-Day Hit em ataques de ransomware",
-        "fr": "CISA met en garde contre les failles de Zimbra et SharePoint ; Cisco Zero-Day touché dans les attaques de ransomware"
-      },
-      "titleOriginal": "CISA Warns of Zimbra, SharePoint Flaw Exploits; Cisco Zero-Day Hit in Ransomware Attacks",
-      "link": "https://thehackernews.com/2026/03/cisa-warns-of-zimbra-sharepoint-flaw.html",
-      "pubDate": "2026-03-19T06:05:00.000Z",
-      "description": {
-        "en": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) has urged government agencies to apply patches for two security flaws impacting Synacor Zimbra Collaboration Suite (ZCS) and Microsoft Office SharePoint, stating they have been actively exploited in the wild. The vulnerabilities in que",
-        "ja": "米国サイバーセキュリティ・インフラストラクチャセキュリティ庁（CISA）は、Synacor Zimbra Collaboration Suite（ZCS）とMicrosoft Office SharePointに影響を与える2つのセキュリティ上の欠陥が実際に活発に悪用されているとして、政府機関にパッチを適用するよう促した。 que の脆弱性",
-        "es": "La Agencia de Seguridad de Infraestructura y Ciberseguridad de EE. UU. (CISA) ha instado a las agencias gubernamentales a aplicar parches para dos fallas de seguridad que afectan a Synacor Zimbra Collaboration Suite (ZCS) y Microsoft Office SharePoint, afirmando que han sido explotadas activamente en la naturaleza. Las vulnerabilidades en que",
-        "pt": "A Agência de Segurança Cibernética e de Infraestrutura dos EUA (CISA) instou as agências governamentais a aplicarem patches para duas falhas de segurança que afetam o Synacor Zimbra Collaboration Suite (ZCS) e o Microsoft Office SharePoint, afirmando que eles foram ativamente explorados em estado selvagem. As vulnerabilidades em que",
-        "fr": "L'Agence américaine de cybersécurité et de sécurité des infrastructures (CISA) a exhorté les agences gouvernementales à appliquer des correctifs pour deux failles de sécurité affectant Synacor Zimbra Collaboration Suite (ZCS) et Microsoft Office SharePoint, affirmant qu'elles ont été activement exploitées dans la nature. Les vulnérabilités en que"
-      },
-      "descriptionOriginal": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) has urged government agencies to apply patches for two security flaws impacting Synacor Zimbra Collaboration Suite (ZCS) and Microsoft Office SharePoint, stating they have been actively exploited in the wild. The vulnerabilities in que",
-      "source": "The Hacker News"
-    },
-    {
-      "title": {
-        "en": "Aura confirms data breach exposing 900,000 marketing contacts",
-        "ja": "Aura、90万人のマーケティング担当者を暴露するデータ侵害を確認",
-        "es": "Aura confirma violación de datos que expone a 900.000 contactos de marketing",
-        "pt": "Aura confirma violação de dados expondo 900.000 contatos de marketing",
-        "fr": "Aura confirme une violation de données exposant 900 000 contacts marketing"
-      },
-      "titleOriginal": "Aura confirms data breach exposing 900,000 marketing contacts",
-      "link": "https://www.bleepingcomputer.com/news/security/aura-confirms-data-breach-exposing-900-000-marketing-contacts/",
-      "pubDate": "2026-03-18T22:56:50.000Z",
-      "description": {
-        "en": "Identity protection company Aura has confirmed that an unauthorized party gained access to nearly 900,000 customer records containing names and email addresses. [...]",
-        "ja": "ID 保護会社 Aura は、名前と電子メール アドレスを含む約 900,000 件の顧客記録に不正な人物がアクセスしたことを確認しました。 [...]",
-        "es": "La empresa de protección de identidad Aura ha confirmado que una parte no autorizada obtuvo acceso a casi 900.000 registros de clientes que contienen nombres y direcciones de correo electrónico. [...]",
-        "pt": "A empresa de proteção de identidade Aura confirmou que uma parte não autorizada obteve acesso a quase 900.000 registros de clientes contendo nomes e endereços de e-mail. [...]",
-        "fr": "La société de protection d'identité Aura a confirmé qu'une partie non autorisée a eu accès à près de 900 000 dossiers clients contenant des noms et des adresses e-mail. [...]"
-      },
-      "descriptionOriginal": "Identity protection company Aura has confirmed that an unauthorized party gained access to nearly 900,000 customer records containing names and email addresses. [...]",
-      "source": "BleepingComputer"
-    },
-    {
-      "title": {
-        "en": "CISA orders feds to patch Zimbra XSS flaw exploited in attacks",
-        "ja": "CISA、攻撃に悪用されたZimbra XSSの欠陥にパッチを適用するよう連邦政府に命令",
-        "es": "CISA ordena a los federales reparar la falla Zimbra XSS explotada en ataques",
-        "pt": "CISA ordena que federais corrijam falha do Zimbra XSS explorada em ataques",
-        "fr": "La CISA ordonne au gouvernement fédéral de corriger la faille Zimbra XSS exploitée lors d'attaques"
-      },
-      "titleOriginal": "CISA orders feds to patch Zimbra XSS flaw exploited in attacks",
-      "link": "https://www.bleepingcomputer.com/news/security/cisa-orders-feds-to-patch-zimbra-xss-flaw-exploited-in-attacks/",
-      "pubDate": "2026-03-18T19:57:13.000Z",
-      "description": {
-        "en": "CISA has ordered U.S. government agencies to secure their servers against an actively exploited vulnerability in the Zimbra Collaboration Suite (ZCS). [...]",
-        "ja": "CISA は、米国政府機関に対し、Zimbra Collaboration Suite (ZCS) で積極的に悪用されている脆弱性からサーバーを保護するよう命令しました。 [...]",
-        "es": "CISA ha ordenado a las agencias gubernamentales de EE. UU. que protejan sus servidores contra una vulnerabilidad explotada activamente en Zimbra Collaboration Suite (ZCS). [...]",
-        "pt": "A CISA ordenou que as agências governamentais dos EUA protegessem seus servidores contra uma vulnerabilidade explorada ativamente no Zimbra Collaboration Suite (ZCS). [...]",
-        "fr": "La CISA a ordonné aux agences gouvernementales américaines de sécuriser leurs serveurs contre une vulnérabilité activement exploitée dans la Zimbra Collaboration Suite (ZCS). [...]"
-      },
-      "descriptionOriginal": "CISA has ordered U.S. government agencies to secure their servers against an actively exploited vulnerability in the Zimbra Collaboration Suite (ZCS). [...]",
-      "source": "BleepingComputer"
-    },
-    {
-      "title": {
-        "en": "The Collapse of Predictive Security in the Age of Machine-Speed Attacks",
-        "ja": "マシンスピード攻撃の時代における予測型セキュリティの崩壊",
-        "es": "El colapso de la seguridad predictiva en la era de los ataques a velocidad de las máquinas",
-        "pt": "O colapso da segurança preditiva na era dos ataques à velocidade das máquinas",
-        "fr": "L’effondrement de la sécurité prédictive à l’ère des attaques à la vitesse des machines"
-      },
-      "titleOriginal": "The Collapse of Predictive Security in the Age of Machine-Speed Attacks",
-      "link": "https://www.securityweek.com/the-collapse-of-predictive-security-in-the-age-of-machine-speed-attacks/",
-      "pubDate": "2026-03-18T19:37:25.000Z",
-      "description": {
-        "en": "With exploitation of vulnerabilities taking just days, preemptive security must be the new model for defenders. The post The Collapse of Predictive Security in the Age of Machine-Speed Attacks appeared first on SecurityWeek.",
-        "ja": "脆弱性の悪用にはわずか数日しかかからないため、先制セキュリティは防御者にとっての新しいモデルでなければなりません。 この記事「マシンスピード攻撃の時代における予測型セキュリティの崩壊」は、SecurityWeek に最初に掲載されました。",
-        "es": "Dado que la explotación de vulnerabilidades lleva solo unos días, la seguridad preventiva debe ser el nuevo modelo para los defensores. La publicación El colapso de la seguridad predictiva en la era de los ataques a velocidad de las máquinas apareció por primera vez en SecurityWeek.",
-        "pt": "Com a exploração de vulnerabilidades demorando apenas alguns dias, a segurança preventiva deve ser o novo modelo para os defensores. A postagem O colapso da segurança preditiva na era dos ataques à velocidade das máquinas apareceu pela primeira vez na SecurityWeek.",
-        "fr": "Alors que l’exploitation des vulnérabilités ne prend que quelques jours, la sécurité préventive doit être le nouveau modèle pour les défenseurs. L'article L'effondrement de la sécurité prédictive à l'ère des attaques à la vitesse des machines est apparu en premier sur SecurityWeek."
-      },
-      "descriptionOriginal": "With exploitation of vulnerabilities taking just days, preemptive security must be the new model for defenders. The post The Collapse of Predictive Security in the Age of Machine-Speed Attacks appeared first on SecurityWeek.",
-      "source": "SecurityWeek"
-    },
-    {
-      "title": {
-        "en": "ConnectWise patches new flaw allowing ScreenConnect hijacking",
-        "ja": "ConnectWiseがScreenConnectハイジャックを可能にする新たな欠陥を修正",
-        "es": "ConnectWise corrige una nueva falla que permite el secuestro de ScreenConnect",
-        "pt": "ConnectWise corrige nova falha que permite o sequestro do ScreenConnect",
-        "fr": "ConnectWise corrige une nouvelle faille permettant le détournement de ScreenConnect"
-      },
-      "titleOriginal": "ConnectWise patches new flaw allowing ScreenConnect hijacking",
-      "link": "https://www.bleepingcomputer.com/news/security/connectwise-patches-new-flaw-allowing-screenconnect-hijacking/",
-      "pubDate": "2026-03-18T18:10:35.000Z",
-      "description": {
-        "en": "ConnectWise is warning ScreenConnect customers of a cryptographic signature verification vulnerability that could lead to unauthorized access and privilege escalation. [...]",
-        "ja": "ConnectWise は、ScreenConnect の顧客に対し、不正アクセスや権限昇格につながる可能性のある暗号化署名検証の脆弱性について警告しています。 [...]",
-        "es": "ConnectWise advierte a los clientes de ScreenConnect sobre una vulnerabilidad de verificación de firma criptográfica que podría provocar acceso no autorizado y escalada de privilegios. [...]",
-        "pt": "ConnectWise está alertando os clientes do ScreenConnect sobre uma vulnerabilidade de verificação de assinatura criptográfica que pode levar a acesso não autorizado e escalonamento de privilégios. [...]",
-        "fr": "ConnectWise avertit les clients ScreenConnect d'une vulnérabilité de vérification de signature cryptographique qui pourrait conduire à un accès non autorisé et à une élévation de privilèges. [...]"
-      },
-      "descriptionOriginal": "ConnectWise is warning ScreenConnect customers of a cryptographic signature verification vulnerability that could lead to unauthorized access and privilege escalation. [...]",
-      "source": "BleepingComputer"
-    },
-    {
-      "title": {
-        "en": "Ransomware gang exploits Cisco flaw in zero-day attacks since January",
-        "ja": "ランサムウェア集団が 1 月以降、シスコの欠陥をゼロデイ攻撃で悪用",
-        "es": "Una banda de ransomware explota la falla de Cisco en ataques de día cero desde enero",
-        "pt": "Gangue de ransomware explora falha da Cisco em ataques de dia zero desde janeiro",
-        "fr": "Un gang de ransomwares exploite une faille de Cisco dans des attaques zero-day depuis janvier"
-      },
-      "titleOriginal": "Ransomware gang exploits Cisco flaw in zero-day attacks since January",
-      "link": "https://www.bleepingcomputer.com/news/security/interlock-ransomware-exploited-secure-fmc-flaw-in-zero-day-attacks-since-january/",
-      "pubDate": "2026-03-18T16:53:42.000Z",
-      "description": {
-        "en": "The Interlock ransomware gang has been exploiting a maximum severity remote code execution (RCE) vulnerability in Cisco's Secure Firewall Management Center (FMC) software in zero-day attacks since late January. [...]",
-        "ja": "Interlock ランサムウェア集団は、1 月下旬以来、シスコの Secure Firewall Management Center (FMC) ソフトウェアにある最大重大度のリモート コード実行 (RCE) の脆弱性をゼロデイ攻撃で悪用しています。 [...]",
-        "es": "La pandilla de ransomware Interlock ha estado explotando una vulnerabilidad de ejecución remota de código (RCE) de máxima gravedad en el software Secure Firewall Management Center (FMC) de Cisco en ataques de día cero desde finales de enero. [...]",
-        "pt": "A gangue de ransomware Interlock tem explorado uma vulnerabilidade de execução remota de código (RCE) de gravidade máxima no software Secure Firewall Management Center (FMC) da Cisco em ataques de dia zero desde o final de janeiro. [...]",
-        "fr": "Le groupe de ransomwares Interlock exploite depuis fin janvier une vulnérabilité d'exécution de code à distance (RCE) de gravité maximale dans le logiciel Secure Firewall Management Center (FMC) de Cisco dans le cadre d'attaques zero-day. [...]"
-      },
-      "descriptionOriginal": "The Interlock ransomware gang has been exploiting a maximum severity remote code execution (RCE) vulnerability in Cisco's Secure Firewall Management Center (FMC) software in zero-day attacks since late January. [...]",
-      "source": "BleepingComputer"
-    },
-    {
-      "title": {
-        "en": "Interlock Ransomware Exploits Cisco FMC Zero-Day CVE-2026-20131 for Root Access",
-        "ja": "Interlock ランサムウェアが Cisco FMC Zero-Day CVE-2026-20131 を悪用してルート アクセスを実現",
-        "es": "Interlock Ransomware explota Cisco FMC Zero-Day CVE-2026-20131 para acceso raíz",
-        "pt": "Interlock Ransomware explora Cisco FMC Zero-Day CVE-2026-20131 para acesso root",
-        "fr": "Interlock Ransomware exploite Cisco FMC Zero-Day CVE-2026-20131 pour l'accès root"
-      },
-      "titleOriginal": "Interlock Ransomware Exploits Cisco FMC Zero-Day CVE-2026-20131 for Root Access",
-      "link": "https://thehackernews.com/2026/03/interlock-ransomware-exploits-cisco-fmc.html",
-      "pubDate": "2026-03-18T16:00:00.000Z",
-      "description": {
-        "en": "Amazon Threat Intelligence is warning of an active Interlock ransomware campaign that's exploiting a recently disclosed critical security flaw in Cisco Secure Firewall Management Center (FMC) Software. The vulnerability in question is CVE-2026-20131 (CVSS score: 10.0), a case of insecure deserializa",
-        "ja": "Amazon Threat Intelligence は、最近明らかになった Cisco Secure Firewall Management Center (FMC) ソフトウェアの重大なセキュリティ欠陥を悪用するアクティブな Interlock ランサムウェア キャンペーンについて警告しています。 問題の脆弱性は CVE-2026-20131 (CVSS スコア: 10.0) で、安全でないデシリアライザのケースです。",
-        "es": "Amazon Threat Intelligence advierte sobre una campaña activa de ransomware Interlock que explota una falla de seguridad crítica recientemente revelada en el software Cisco Secure Firewall Management Center (FMC). La vulnerabilidad en cuestión es CVE-2026-20131 (puntaje CVSS: 10.0), un caso de deserializa insegura",
-        "pt": "O Amazon Threat Intelligence está alertando sobre uma campanha ativa de ransomware Interlock que está explorando uma falha crítica de segurança divulgada recentemente no software Cisco Secure Firewall Management Center (FMC). A vulnerabilidade em questão é CVE-2026-20131 (pontuação CVSS: 10.0), um caso de desserialização insegura",
-        "fr": "Amazon Threat Intelligence met en garde contre une campagne active de ransomware Interlock qui exploite une faille de sécurité critique récemment révélée dans le logiciel Cisco Secure Firewall Management Center (FMC). La vulnérabilité en question est CVE-2026-20131 (score CVSS : 10,0), un cas de désérialisation non sécurisée"
-      },
-      "descriptionOriginal": "Amazon Threat Intelligence is warning of an active Interlock ransomware campaign that's exploiting a recently disclosed critical security flaw in Cisco Secure Firewall Management Center (FMC) Software. The vulnerability in question is CVE-2026-20131 (CVSS score: 10.0), a case of insecure deserializa",
-      "source": "The Hacker News"
-    },
-    {
-      "title": {
-        "en": "&#8216;DarkSword&#8217; iOS Exploit Kit Used by State-Sponsored Hackers, Spyware Vendors",
-        "ja": "「ダークソード」 国家支援のハッカーやスパイウェアベンダーが利用するiOSエクスプロイトキット",
-        "es": "&#8216;Espada Oscura&#8217; Kit de explotación de iOS utilizado por piratas informáticos y proveedores de software espía patrocinados por el estado",
-        "pt": "&#8216;Espada Negra&#8217; Kit de exploração do iOS usado por hackers patrocinados pelo Estado e fornecedores de spyware",
-        "fr": "&#8216;DarkSword&#8217; Kit d'exploitation iOS utilisé par les pirates informatiques parrainés par l'État et les fournisseurs de logiciels espions"
-      },
-      "titleOriginal": "&#8216;DarkSword&#8217; iOS Exploit Kit Used by State-Sponsored Hackers, Spyware Vendors",
-      "link": "https://www.securityweek.com/darksword-ios-exploit-kit-used-by-state-sponsored-hackers-spyware-vendors/",
-      "pubDate": "2026-03-18T15:30:50.000Z",
-      "description": {
-        "en": "Targeting six iOS vulnerabilities and leading to full device compromise, the exploit chain is meant for surveillance. The post &#8216;DarkSword&#8217; iOS Exploit Kit Used by State-Sponsored Hackers, Spyware Vendors appeared first on SecurityWeek.",
-        "ja": "6 つの iOS の脆弱性をターゲットにし、デバイス全体の侵害につながるエクスプロイト チェーンは監視を目的としています。 投稿「ダークソード」 国家支援のハッカーやスパイウェア ベンダーが使用する iOS エクスプロイト キットが SecurityWeek に初めて登場しました。",
-        "es": "La cadena de exploits, dirigida a seis vulnerabilidades de iOS y provocando un compromiso total del dispositivo, está destinada a la vigilancia. La publicación &#8216;DarkSword&#8217; El kit de explotación de iOS utilizado por piratas informáticos patrocinados por el estado y proveedores de software espía apareció por primera vez en SecurityWeek.",
-        "pt": "Visando seis vulnerabilidades do iOS e levando ao comprometimento total do dispositivo, a cadeia de exploração destina-se à vigilância. A postagem &#8216;DarkSword&#8217; iOS Exploit Kit usado por hackers patrocinados pelo Estado, os fornecedores de spyware apareceram pela primeira vez na SecurityWeek.",
-        "fr": "Ciblant six vulnérabilités iOS et conduisant à une compromission complète de l’appareil, la chaîne d’exploitation est destinée à la surveillance. Le message &#8216;DarkSword&#8217; Kit d'exploitation iOS Utilisé par les pirates informatiques parrainés par l'État, les fournisseurs de logiciels espions sont apparus en premier sur SecurityWeek."
-      },
-      "descriptionOriginal": "Targeting six iOS vulnerabilities and leading to full device compromise, the exploit chain is meant for surveillance. The post &#8216;DarkSword&#8217; iOS Exploit Kit Used by State-Sponsored Hackers, Spyware Vendors appeared first on SecurityWeek.",
-      "source": "SecurityWeek"
-    },
-    {
-      "title": {
-        "en": "The Refund Fraud Economy: Exploiting Major Retailers and Payment Platforms",
-        "ja": "返金詐欺経済: 大手小売業者と決済プラットフォームを悪用する",
-        "es": "La economía del fraude de reembolsos: explotación de los principales minoristas y plataformas de pago",
-        "pt": "A economia da fraude de reembolso: explorando grandes varejistas e plataformas de pagamento",
-        "fr": "L’économie de la fraude au remboursement : exploiter les principaux détaillants et plateformes de paiement"
-      },
-      "titleOriginal": "The Refund Fraud Economy: Exploiting Major Retailers and Payment Platforms",
-      "link": "https://www.bleepingcomputer.com/news/security/the-refund-fraud-economy-exploiting-major-retailers-and-payment-platforms/",
-      "pubDate": "2026-03-18T14:05:15.000Z",
-      "description": {
-        "en": "Refund fraud is now a business, with methods and tutorials sold to exploit return policies for profit. Flare shows how fraudsters turn refunds and chargebacks into a repeatable profit model. [...]",
-        "ja": "返金詐欺は今やビジネスとなっており、返品ポリシーを悪用して利益を得る方法やチュートリアルが販売されています。 Flare は、詐欺師がどのように返金とチャージバックを再現可能な収益モデルに変えるかを示しています。 [...]",
-        "es": "El fraude de reembolsos es ahora un negocio, y se venden métodos y tutoriales para explotar las políticas de devolución con fines de lucro. Flare muestra cómo los estafadores convierten los reembolsos y las devoluciones de cargo en un modelo de ganancias repetible. [...]",
-        "pt": "A fraude de reembolso é agora um negócio, com métodos e tutoriais vendidos para explorar políticas de devolução com fins lucrativos. Flare mostra como os fraudadores transformam reembolsos e estornos em um modelo de lucro repetível. [...]",
-        "fr": "La fraude au remboursement est désormais un business, avec des méthodes et des tutoriels vendus pour exploiter les politiques de retour à des fins lucratives. Flare montre comment les fraudeurs transforment les remboursements et les rétrofacturations en un modèle de profit reproductible. [...]"
-      },
-      "descriptionOriginal": "Refund fraud is now a business, with methods and tutorials sold to exploit return policies for profit. Flare shows how fraudsters turn refunds and chargebacks into a repeatable profit model. [...]",
-      "source": "BleepingComputer"
-    },
-    {
-      "title": {
-        "en": "New DarkSword iOS exploit used in infostealer attack on iPhones",
-        "ja": "新しい DarkSword iOS エクスプロイトが iPhone への情報窃取攻撃に使用される",
-        "es": "Nuevo exploit DarkSword para iOS utilizado en un ataque de robo de información en iPhones",
-        "pt": "Nova exploração do DarkSword iOS usada em ataque de infostealer em iPhones",
-        "fr": "Nouvel exploit DarkSword iOS utilisé dans une attaque d'infostealer sur les iPhones"
-      },
-      "titleOriginal": "New DarkSword iOS exploit used in infostealer attack on iPhones",
-      "link": "https://www.bleepingcomputer.com/news/security/new-darksword-ios-exploit-used-in-infostealer-attack-on-iphones/",
-      "pubDate": "2026-03-18T14:02:08.000Z",
-      "description": {
-        "en": "A new exploit kit for iOS devices and delivery framework dubbed \"Darksword\" has been used to steal a wide range of personal information, including data from cryptocurrency wallet app. [...]",
-        "ja": "iOS デバイス用の新しいエクスプロイト キットと「Darksword」と呼ばれる配信フレームワークが、暗号通貨ウォレット アプリからのデータを含む幅広い個人情報を盗むために使用されました。 [...]",
-        "es": "Se ha utilizado un nuevo kit de explotación para dispositivos iOS y un marco de entrega denominado \"Darksword\" para robar una amplia gama de información personal, incluidos datos de la aplicación de billetera de criptomonedas. [...]",
-        "pt": "Um novo kit de exploração para dispositivos iOS e estrutura de entrega apelidado de “Darksword” foi usado para roubar uma ampla gama de informações pessoais, incluindo dados do aplicativo de carteira de criptomoeda. [...]",
-        "fr": "Un nouveau kit d'exploitation pour les appareils iOS et le cadre de livraison baptisé « Darksword » a été utilisé pour voler un large éventail d'informations personnelles, y compris les données de l'application de portefeuille de crypto-monnaie. [...]"
-      },
-      "descriptionOriginal": "A new exploit kit for iOS devices and delivery framework dubbed \"Darksword\" has been used to steal a wide range of personal information, including data from cryptocurrency wallet app. [...]",
-      "source": "BleepingComputer"
-    },
-    {
-      "title": {
-        "en": "Shadow AI Risk: How SaaS Apps Are Quietly Enabling Massive Breaches",
-        "ja": "シャドウ AI リスク: SaaS アプリがどのようにして大規模な侵害を密かに可能にするのか",
-        "es": "Riesgo de IA en la sombra: cómo las aplicaciones SaaS están permitiendo silenciosamente violaciones masivas",
-        "pt": "Risco de Shadow AI: como os aplicativos SaaS estão permitindo violações massivas silenciosamente",
-        "fr": "Shadow AI Risk : comment les applications SaaS permettent discrètement des violations massives"
-      },
-      "titleOriginal": "Shadow AI Risk: How SaaS Apps Are Quietly Enabling Massive Breaches",
-      "link": "https://www.securityweek.com/the-shadow-ai-problem-how-saas-apps-are-quietly-enabling-massive-breaches/",
-      "pubDate": "2026-03-18T14:00:00.000Z",
-      "description": {
-        "en": "From Chaos to Control examines the chaos that often comes from shadow AI hidden in SaaS apps and urges better visibility and control over agentic AI. The post Shadow AI Risk: How SaaS Apps Are Quietly Enabling Massive Breaches appeared first on SecurityWeek.",
-        "ja": "「From Chaos to Control」では、SaaS アプリに隠されたシャドウ AI からよく発生する混乱を検証し、エージェント AI の可視性と制御の向上を促します。 この投稿「シャドウ AI リスク: SaaS アプリが大規模侵害を静かに可能にする方法」は、SecurityWeek に最初に掲載されました。",
-        "es": "Del Caos al Control examina el caos que a menudo surge de la IA en la sombra oculta en aplicaciones SaaS e insta a una mejor visibilidad y control sobre la IA agente. La publicación Riesgo de IA en la sombra: cómo las aplicaciones SaaS permiten silenciosamente violaciones masivas apareció por primera vez en SecurityWeek.",
-        "pt": "Do Caos ao Controle examina o caos que muitas vezes vem da IA ​​oculta escondida em aplicativos SaaS e pede melhor visibilidade e controle sobre a IA de agente. A postagem Shadow AI Risk: como os aplicativos SaaS estão permitindo silenciosamente violações massivas apareceu pela primeira vez na SecurityWeek.",
-        "fr": "From Chaos to Control examine le chaos qui provient souvent de l'IA fantôme cachée dans les applications SaaS et préconise une meilleure visibilité et un meilleur contrôle sur l'IA agentique. L'article Shadow AI Risk : Comment les applications SaaS permettent discrètement des violations massives est apparu en premier sur SecurityWeek."
-      },
-      "descriptionOriginal": "From Chaos to Control examines the chaos that often comes from shadow AI hidden in SaaS apps and urges better visibility and control over agentic AI. The post Shadow AI Risk: How SaaS Apps Are Quietly Enabling Massive Breaches appeared first on SecurityWeek.",
-      "source": "SecurityWeek"
-    },
-    {
-      "title": {
-        "en": "Manifold Raises $8 Million for AI Detection and Response",
-        "ja": "Manifold が AI の検出と対応のために 800 万ドルを調達",
-        "es": "Manifold recauda 8 millones de dólares para la detección y respuesta de IA",
-        "pt": "Manifold levanta US$ 8 milhões para detecção e resposta de IA",
-        "fr": "Manifold lève 8 millions de dollars pour la détection et la réponse de l'IA"
-      },
-      "titleOriginal": "Manifold Raises $8 Million for AI Detection and Response",
-      "link": "https://www.securityweek.com/manifold-raises-8-million-for-ai-detection-and-response/",
-      "pubDate": "2026-03-18T13:59:23.000Z",
-      "description": {
-        "en": "Focused on securing autonomous AI on endpoints, the startup will invest in product development. The post Manifold Raises $8 Million for AI Detection and Response appeared first on SecurityWeek.",
-        "ja": "エンドポイント上の自律型 AI の安全性を確保することに重点を置き、このスタートアップは製品開発に投資します。 Manifold が AI の検出と対応のために 800 万ドルを調達という記事は、SecurityWeek に最初に掲載されました。",
-        "es": "Centrada en asegurar la IA autónoma en los puntos finales, la startup invertirá en el desarrollo de productos. La publicación Manifold recauda $8 millones para detección y respuesta de IA apareció por primera vez en SecurityWeek.",
-        "pt": "Focada em garantir IA autônoma em endpoints, a startup investirá no desenvolvimento de produtos. A postagem Manifold levanta US$ 8 milhões para detecção e resposta de IA apareceu pela primeira vez na SecurityWeek.",
-        "fr": "Axée sur la sécurisation de l’IA autonome sur les points finaux, la startup investira dans le développement de produits. L'article Manifold lève 8 millions de dollars pour la détection et la réponse à l'IA apparaît en premier sur SecurityWeek."
-      },
-      "descriptionOriginal": "Focused on securing autonomous AI on endpoints, the startup will invest in product development. The post Manifold Raises $8 Million for AI Detection and Response appeared first on SecurityWeek.",
-      "source": "SecurityWeek"
-    },
-    {
-      "title": {
-        "en": "Critical Unpatched Telnetd Flaw (CVE-2026-32746) Enables Unauthenticated Root RCE",
-        "ja": "パッチが適用されていない Telnetd の重大な欠陥 (CVE-2026-32746) により、認証されていないルート RCE が有効になる",
-        "es": "Fallo crítico de Telnetd sin parches (CVE-2026-32746) permite RCE raíz no autenticado",
-        "pt": "Falha crítica de Telnetd não corrigida (CVE-2026-32746) permite RCE raiz não autenticado",
-        "fr": "Une faille Telnetd critique non corrigée (CVE-2026-32746) permet un RCE racine non authentifié"
-      },
-      "titleOriginal": "Critical Unpatched Telnetd Flaw (CVE-2026-32746) Enables Unauthenticated Root RCE",
-      "link": "https://thehackernews.com/2026/03/critical-telnetd-flaw-cve-2026-32746.html",
-      "pubDate": "2026-03-18T12:30:00.000Z",
-      "description": {
-        "en": "Cybersecurity researchers have disclosed a critical security flaw impacting the GNU InetUtils telnet daemon (telnetd) that could be exploited by an unauthenticated remote attacker to execute arbitrary code with elevated privileges. The vulnerability, tracked as CVE-2026-32746, carries a CVSS score o",
-        "ja": "サイバーセキュリティ研究者は、GNU InetUtils Telnet デーモン (telnetd) に影響を与える重大なセキュリティ上の欠陥を明らかにしました。この欠陥は、認証されていないリモート攻撃者によって悪用され、昇格された特権で任意のコードを実行する可能性があります。 この脆弱性は CVE-2026-32746 として追跡されており、CVSS スコアは次のとおりです。",
-        "es": "Investigadores de ciberseguridad han revelado una falla de seguridad crítica que afecta al demonio telnet GNU InetUtils (telnetd) y que podría ser explotada por un atacante remoto no autenticado para ejecutar código arbitrario con privilegios elevados. La vulnerabilidad, rastreada como CVE-2026-32746, lleva una puntuación CVSS o",
-        "pt": "Pesquisadores de segurança cibernética revelaram uma falha crítica de segurança que afeta o daemon telnet GNU InetUtils (telnetd) que poderia ser explorado por um invasor remoto não autenticado para executar código arbitrário com privilégios elevados. A vulnerabilidade, rastreada como CVE-2026-32746, carrega uma pontuação CVSS de",
-        "fr": "Des chercheurs en cybersécurité ont révélé une faille de sécurité critique affectant le démon telnet GNU InetUtils (telnetd) qui pourrait être exploitée par un attaquant distant non authentifié pour exécuter du code arbitraire avec des privilèges élevés. La vulnérabilité, suivie comme CVE-2026-32746, porte un score CVSS o"
-      },
-      "descriptionOriginal": "Cybersecurity researchers have disclosed a critical security flaw impacting the GNU InetUtils telnet daemon (telnetd) that could be exploited by an unauthenticated remote attacker to execute arbitrary code with elevated privileges. The vulnerability, tracked as CVE-2026-32746, carries a CVSS score o",
-      "source": "The Hacker News"
-    },
-    {
-      "title": {
-        "en": "Ubuntu CVE-2026-3888 Bug Lets Attackers Gain Root via systemd Cleanup Timing Exploit",
-        "ja": "Ubuntu CVE-2026-3888 のバグにより、攻撃者は systemd クリーンアップ タイミングを悪用してルートを取得できます",
-        "es": "El error CVE-2026-3888 de Ubuntu permite a los atacantes obtener raíz a través del exploit de sincronización de limpieza systemd",
-        "pt": "Bug CVE-2026-3888 do Ubuntu permite que invasores ganhem root por meio da exploração de tempo de limpeza do systemd",
-        "fr": "Le bug Ubuntu CVE-2026-3888 permet aux attaquants d'obtenir la racine via l'exploit de synchronisation de nettoyage systemd"
-      },
-      "titleOriginal": "Ubuntu CVE-2026-3888 Bug Lets Attackers Gain Root via systemd Cleanup Timing Exploit",
-      "link": "https://thehackernews.com/2026/03/ubuntu-cve-2026-3888-bug-lets-attackers.html",
-      "pubDate": "2026-03-18T08:08:00.000Z",
-      "description": {
-        "en": "A high-severity security flaw affecting default installations of Ubuntu Desktop versions 24.04 and later could be exploited to escalate privileges to the root level. Tracked as CVE-2026-3888 (CVSS score: 7.8), the issue could allow an attacker to seize control of a susceptible system. \"This flaw (CV",
-        "ja": "Ubuntu Desktop バージョン 24.04 以降のデフォルトのインストールに影響を与える重大度の高いセキュリティ上の欠陥が悪用され、権限がルート レベルに昇格される可能性があります。 CVE-2026-3888 (CVSS スコア: 7.8) として追跡されているこの問題により、攻撃者が影響を受けやすいシステムの制御を奪われる可能性があります。 「この欠陥（CV",
-        "es": "Una falla de seguridad de alta gravedad que afecta las instalaciones predeterminadas de las versiones 24.04 y posteriores de Ubuntu Desktop podría aprovecharse para escalar privilegios al nivel raíz. Registrado como CVE-2026-3888 (puntuación CVSS: 7,8), el problema podría permitir a un atacante tomar el control de un sistema susceptible. \"Este defecto (CV",
-        "pt": "Uma falha de segurança de alta gravidade que afeta as instalações padrão do Ubuntu Desktop versões 24.04 e posteriores pode ser explorada para escalar privilégios para o nível raiz. Rastreado como CVE-2026-3888 (pontuação CVSS: 7,8), o problema pode permitir que um invasor assuma o controle de um sistema suscetível. \"Esta falha (CV",
-        "fr": "Une faille de sécurité de haute gravité affectant les installations par défaut d'Ubuntu Desktop versions 24.04 et ultérieures pourrait être exploitée pour élever les privilèges au niveau racine. Suivi comme CVE-2026-3888 (score CVSS : 7,8), le problème pourrait permettre à un attaquant de prendre le contrôle d'un système sensible. \"Cette faille (CV"
-      },
-      "descriptionOriginal": "A high-severity security flaw affecting default installations of Ubuntu Desktop versions 24.04 and later could be exploited to escalate privileges to the root level. Tracked as CVE-2026-3888 (CVSS score: 7.8), the issue could allow an attacker to seize control of a susceptible system. \"This flaw (CV",
-      "source": "The Hacker News"
-    },
     {
       "title": {
         "en": "Apple Fixes WebKit Vulnerability Enabling Same-Origin Policy Bypass on iOS and macOS",
         "ja": "Apple、iOS および macOS で同一オリジン ポリシーのバイパスを可能にする WebKit の脆弱性を修正",
         "es": "Apple corrige la vulnerabilidad de WebKit permitiendo omitir la política del mismo origen en iOS y macOS",
         "pt": "Apple corrige vulnerabilidade do WebKit, permitindo ignorar políticas de mesma origem no iOS e macOS",
-        "fr": "Apple corrige la vulnérabilité de WebKit permettant le contournement de la politique de même origine sur iOS et macOS"
+        "fr": "Apple corrige la vulnérabilité de WebKit permettant de contourner la politique de même origine sur iOS et macOS"
       },
       "titleOriginal": "Apple Fixes WebKit Vulnerability Enabling Same-Origin Policy Bypass on iOS and macOS",
       "link": "https://thehackernews.com/2026/03/apple-fixes-webkit-vulnerability.html",
@@ -353,7 +17,7 @@
         "en": "Apple on Tuesday released its first round of Background Security Improvements to address a security flaw in WebKit that affects iOS, iPadOS, and macOS. The vulnerability, tracked as CVE-2026-20643 (CVSS score: N/A), has been described as a cross-origin issue in WebKit's Navigation API that could be ",
         "ja": "Appleは火曜日、iOS、iPadOS、macOSに影響を与えるWebKitのセキュリティ欠陥に対処するため、バックグラウンドセキュリティ改善の第一弾をリリースした。 この脆弱性は CVE-2026-20643 (CVSS スコア: N/A) として追跡され、WebKit のナビゲーション API のクロスオリジンの問題として説明されています。",
         "es": "Apple lanzó el martes su primera ronda de mejoras de seguridad en segundo plano para abordar una falla de seguridad en WebKit que afecta a iOS, iPadOS y macOS. La vulnerabilidad, rastreada como CVE-2026-20643 (puntuación CVSS: N/A), se ha descrito como un problema de origen cruzado en la API de navegación de WebKit que podría ser",
-        "pt": "A Apple lançou na terça-feira sua primeira rodada de melhorias de segurança em segundo plano para solucionar uma falha de segurança no WebKit que afeta iOS, iPadOS e macOS. A vulnerabilidade, rastreada como CVE-2026-20643 (pontuação CVSS: N/A), foi descrita como um problema de origem cruzada na API de navegação do WebKit que pode ser",
+        "pt": "A Apple lançou na terça-feira sua primeira rodada de melhorias de segurança em segundo plano para solucionar uma falha de segurança no WebKit que afeta iOS, iPadOS e macOS. A vulnerabilidade, rastreada como CVE-2026-20643 (pontuação CVSS: N/A), foi descrita como um problema de origem cruzada na API de navegação do WebKit que poderia ser",
         "fr": "Apple a publié mardi sa première série d'améliorations de la sécurité en arrière-plan pour corriger une faille de sécurité dans WebKit qui affecte iOS, iPadOS et macOS. La vulnérabilité, suivie comme CVE-2026-20643 (score CVSS : N/A), a été décrite comme un problème d'origine croisée dans l'API de navigation de WebKit qui pourrait être"
       },
       "descriptionOriginal": "Apple on Tuesday released its first round of Background Security Improvements to address a security flaw in WebKit that affects iOS, iPadOS, and macOS. The vulnerability, tracked as CVE-2026-20643 (CVSS score: N/A), has been described as a cross-origin issue in WebKit's Navigation API that could be ",
@@ -361,65 +25,44 @@
     },
     {
       "title": {
-        "en": "Apple pushes first Background Security Improvements update to fix WebKit flaw",
-        "ja": "Apple、WebKit の欠陥を修正するために最初のバックグラウンド セキュリティ改善アップデートをプッシュ",
-        "es": "Apple lanza la primera actualización de mejoras de seguridad en segundo plano para corregir la falla de WebKit",
-        "pt": "Apple lança primeira atualização de melhorias de segurança em segundo plano para corrigir falha do WebKit",
-        "fr": "Apple propose la première mise à jour des améliorations de la sécurité en arrière-plan pour corriger une faille WebKit"
+        "en": "Android 17 Blocks Non-Accessibility Apps from Accessibility API to Prevent Malware Abuse",
+        "ja": "Android 17 は、マルウェアの悪用を防ぐために、アクセシビリティ非対応アプリをアクセシビリティ API からブロックします",
+        "es": "Android 17 bloquea aplicaciones que no son de accesibilidad de la API de accesibilidad para evitar el abuso de malware",
+        "pt": "Android 17 bloqueia aplicativos não acessíveis da API de acessibilidade para evitar abuso de malware",
+        "fr": "Android 17 bloque les applications non accessibles de l'API d'accessibilité pour empêcher les abus de logiciels malveillants"
       },
-      "titleOriginal": "Apple pushes first Background Security Improvements update to fix WebKit flaw",
-      "link": "https://www.bleepingcomputer.com/news/security/apple-pushes-first-background-security-improvements-update-to-fix-webkit-flaw/",
-      "pubDate": "2026-03-18T01:06:31.000Z",
+      "titleOriginal": "Android 17 Blocks Non-Accessibility Apps from Accessibility API to Prevent Malware Abuse",
+      "link": "https://thehackernews.com/2026/03/android-17-blocks-non-accessibility.html",
+      "pubDate": "2026-03-16T05:43:00.000Z",
       "description": {
-        "en": "Apple has released its first Background Security Improvements update to fix a WebKit flaw tracked as CVE-2026-20643 on iPhones, iPads, and Macs without requiring a full operating system upgrade. [...]",
-        "ja": "Apple は、iPhone、iPad、Mac で CVE-2026-20643 として追跡されている WebKit の欠陥を、オペレーティング システムを完全にアップグレードすることなく修正するための最初のバックグラウンド セキュリティ改善アップデートをリリースしました。 [...]",
-        "es": "Apple lanzó su primera actualización de Mejoras de seguridad en segundo plano para corregir una falla de WebKit rastreada como CVE-2026-20643 en iPhones, iPads y Mac sin requerir una actualización completa del sistema operativo. [...]",
-        "pt": "A Apple lançou sua primeira atualização de melhorias de segurança em segundo plano para corrigir uma falha do WebKit rastreada como CVE-2026-20643 em iPhones, iPads e Macs sem exigir uma atualização completa do sistema operacional. [...]",
-        "fr": "Apple a publié sa première mise à jour d'améliorations de la sécurité en arrière-plan pour corriger une faille WebKit identifiée comme CVE-2026-20643 sur les iPhones, iPads et Mac sans nécessiter une mise à niveau complète du système d'exploitation. [...]"
+        "en": "Google is testing a new security feature as part of Android Advanced Protection Mode (AAPM) that prevents certain kinds of apps from using the accessibility services API. The change, incorporated in Android 17 Beta 2, was first reported by Android Authority last week. AAPM was introduced by Google i",
+        "ja": "Google は、特定の種類のアプリがユーザー補助サービス API を使用できないようにする、Android 高度な保護モード (AAPM) の一部として新しいセキュリティ機能をテストしています。 この変更は Android 17 Beta 2 に組み込まれており、先週 Android Authority によって初めて報告されました。 AAPM was introduced by Google i",
+        "es": "Google está probando una nueva función de seguridad como parte del Modo de protección avanzada de Android (AAPM) que evita que ciertos tipos de aplicaciones utilicen la API de servicios de accesibilidad. El cambio, incorporado en Android 17 Beta 2, fue informado por primera vez por Android Authority la semana pasada. AAPM fue introducido por Google i",
+        "pt": "O Google está testando um novo recurso de segurança como parte do Modo de Proteção Avançada do Android (AAPM) que impede que certos tipos de aplicativos usem a API de serviços de acessibilidade. A mudança, incorporada no Android 17 Beta 2, foi relatada pela primeira vez pela Android Authority na semana passada. AAPM foi introduzido pelo Google i",
+        "fr": "Google teste une nouvelle fonctionnalité de sécurité dans le cadre du mode de protection avancée Android (AAPM) qui empêche certains types d'applications d'utiliser l'API des services d'accessibilité. Le changement, incorporé dans Android 17 Beta 2, a été signalé pour la première fois par Android Authority la semaine dernière. AAPM a été introduit par Google i"
       },
-      "descriptionOriginal": "Apple has released its first Background Security Improvements update to fix a WebKit flaw tracked as CVE-2026-20643 on iPhones, iPads, and Macs without requiring a full operating system upgrade. [...]",
-      "source": "BleepingComputer"
+      "descriptionOriginal": "Google is testing a new security feature as part of Android Advanced Protection Mode (AAPM) that prevents certain kinds of apps from using the accessibility services API. The change, incorporated in Android 17 Beta 2, was first reported by Android Authority last week. AAPM was introduced by Google i",
+      "source": "The Hacker News"
     },
     {
       "title": {
-        "en": "Top 5 Things CISOs Need to Do Today to Secure AI Agents",
-        "ja": "AI エージェントを保護するために CISO が今日実行する必要がある 5 つのこと",
-        "es": "Las cinco cosas principales que los CISO deben hacer hoy para proteger a los agentes de IA",
-        "pt": "As 5 principais coisas que os CISOs precisam fazer hoje para proteger os agentes de IA",
-        "fr": "Top 5 des choses que les RSSI doivent faire aujourd'hui pour sécuriser les agents IA"
+        "en": "ThreatsDay Bulletin: OAuth Trap, EDR Killer, Signal Phishing, Zombie ZIP, AI Platform Hack &amp; More",
+        "ja": "ThreatsDay 速報: OAuth トラップ、EDR キラー、シグナル フィッシング、ゾンビ ZIP、AI プラットフォーム ハックおよびセキュリティ もっと",
+        "es": "Boletín ThreatsDay: OAuth Trap, EDR Killer, Signal Phishing, Zombie ZIP, AI Platform Hack &amp; Más",
+        "pt": "Boletim ThreatsDay: OAuth Trap, EDR Killer, Signal Phishing, Zombie ZIP, AI Platform Hack &amp; Mais",
+        "fr": "Bulletin ThreatsDay : OAuth Trap, EDR Killer, Signal Phishing, Zombie ZIP, AI Platform Hack &amp; Plus"
       },
-      "titleOriginal": "Top 5 Things CISOs Need to Do Today to Secure AI Agents",
-      "link": "https://www.bleepingcomputer.com/news/security/top-5-things-cisos-need-to-do-today-to-secure-ai-agents/",
-      "pubDate": "2026-03-17T14:02:12.000Z",
+      "titleOriginal": "ThreatsDay Bulletin: OAuth Trap, EDR Killer, Signal Phishing, Zombie ZIP, AI Platform Hack &amp; More",
+      "link": "https://thehackernews.com/2026/03/threatsday-bulletin-oauth-trap-edr.html",
+      "pubDate": "2026-03-12T13:14:00.000Z",
       "description": {
-        "en": "AI agents are autonomous actors with real access to data and systems, not just copilots. Token Security explains why identity-based access control is critical to prevent misuse and data exposure. [...]",
-        "ja": "AI エージェントは、副操縦士だけでなく、データやシステムに実際にアクセスできる自律的なアクターです。 Token Security は、悪用やデータ漏えいを防ぐために ID ベースのアクセス制御が重要である理由を説明します。 [...]",
-        "es": "Los agentes de IA son actores autónomos con acceso real a datos y sistemas, no sólo copilotos. Token Security explica por qué el control de acceso basado en identidad es fundamental para evitar el uso indebido y la exposición de datos. [...]",
-        "pt": "Os agentes de IA são atores autónomos com acesso real a dados e sistemas, e não apenas copilotos. A Token Security explica por que o controle de acesso baseado em identidade é fundamental para evitar o uso indevido e a exposição de dados. [...]",
-        "fr": "Les agents d’IA sont des acteurs autonomes disposant d’un réel accès aux données et aux systèmes, et pas seulement des copilotes. Token Security explique pourquoi le contrôle d'accès basé sur l'identité est essentiel pour prévenir les abus et l'exposition des données. [...]"
+        "en": "Another Thursday, another pile of weird security stuff that somehow happened in just seven days. Some of it is clever. Some of it is lazy. A few bits fall into that uncomfortable category of “yeah… this is probably going to show up in real incidents sooner than we’d like.” The pattern this week feel",
+        "ja": "また木曜日、どういうわけかわずか 7 日間で奇妙なセキュリティ関連の出来事がまた山積みになりました。 その一部は巧妙です。 怠惰なものもあります。 いくつかのビットは、「ああ…これはおそらく私たちが望むよりも早く実際の事件に現れるだろう」という不快なカテゴリーに分類されます。 今週の模様",
+        "es": "Otro jueves, otro montón de cosas raras de seguridad que de alguna manera sucedieron en sólo siete días. Algo de esto es inteligente. Algo de eso es vago. Algunas partes caen en esa categoría incómoda de \"sí... esto probablemente aparecerá en incidentes reales antes de lo que nos gustaría\". El patrón de esta semana se siente",
+        "pt": "Outra quinta-feira, outra pilha de coisas estranhas de segurança que de alguma forma aconteceram em apenas sete dias. Parte disso é inteligente. Parte disso é preguiçoso. Algumas partes se enquadram naquela categoria desconfortável de “sim... isso provavelmente aparecerá em incidentes reais mais cedo do que gostaríamos”. O padrão desta semana parece",
+        "fr": "Un autre jeudi, une autre pile de trucs de sécurité étranges qui se sont produits en seulement sept jours. Certaines d’entre elles sont intelligentes. Une partie est paresseuse. Quelques éléments entrent dans cette catégorie inconfortable du « ouais… cela va probablement apparaître dans de vrais incidents plus tôt que nous le souhaiterions ». Le modèle de cette semaine semble"
       },
-      "descriptionOriginal": "AI agents are autonomous actors with real access to data and systems, not just copilots. Token Security explains why identity-based access control is critical to prevent misuse and data exposure. [...]",
-      "source": "BleepingComputer"
-    },
-    {
-      "title": {
-        "en": "CISA Flags Actively Exploited Wing FTP Vulnerability Leaking Server Paths",
-        "ja": "CISA、サーバーパス漏洩の Wing FTP 脆弱性が積極的に悪用されていると報告",
-        "es": "CISA señala rutas de servidor con fugas de vulnerabilidad Wing FTP activamente explotada",
-        "pt": "CISA sinaliza vulnerabilidade de FTP de Wing explorada ativamente, vazamento de caminhos de servidor",
-        "fr": "CISA signale une vulnérabilité FTP de Wing activement exploitée qui fuit les chemins de serveur"
-      },
-      "titleOriginal": "CISA Flags Actively Exploited Wing FTP Vulnerability Leaking Server Paths",
-      "link": "https://thehackernews.com/2026/03/cisa-flags-actively-exploited-wing-ftp.html",
-      "pubDate": "2026-03-17T05:23:00.000Z",
-      "description": {
-        "en": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Monday added a medium-severity security flaw impacting Wing FTP to its Known Exploited Vulnerabilities (KEV) catalog, citing evidence of active exploitation. The vulnerability, CVE-2025-47813 (CVSS score: 4.3), is an information dis",
-        "ja": "米国サイバーセキュリティ・インフラストラクチャセキュリティ庁（CISA）は月曜日、活発な悪用の証拠を引用し、Wing FTPに影響を与える中程度の重大度のセキュリティ欠陥を既知の悪用された脆弱性（KEV）カタログに追加した。 脆弱性 CVE-2025-47813 (CVSS スコア: 4.3) は、情報セキュリティです。",
-        "es": "La Agencia de Seguridad de Infraestructura y Ciberseguridad de EE. UU. (CISA) agregó el lunes una falla de seguridad de gravedad media que afecta a Wing FTP a su catálogo de vulnerabilidades explotadas conocidas (KEV), citando evidencia de explotación activa. La vulnerabilidad, CVE-2025-47813 (puntuación CVSS: 4,3), es una información dis",
-        "pt": "A Agência de Segurança Cibernética e de Infraestrutura dos EUA (CISA) adicionou na segunda-feira uma falha de segurança de gravidade média que afeta o Wing FTP ao seu catálogo de Vulnerabilidades Exploradas Conhecidas (KEV), citando evidências de exploração ativa. A vulnerabilidade, CVE-2025-47813 (pontuação CVSS: 4,3), é uma falha de informação",
-        "fr": "L'Agence américaine de cybersécurité et de sécurité des infrastructures (CISA) a ajouté lundi une faille de sécurité de gravité moyenne affectant Wing FTP à son catalogue de vulnérabilités exploitées connues (KEV), citant des preuves d'exploitation active. La vulnérabilité, CVE-2025-47813 (score CVSS : 4,3), est un message d'information."
-      },
-      "descriptionOriginal": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Monday added a medium-severity security flaw impacting Wing FTP to its Known Exploited Vulnerabilities (KEV) catalog, citing evidence of active exploitation. The vulnerability, CVE-2025-47813 (CVSS score: 4.3), is an information dis",
+      "descriptionOriginal": "Another Thursday, another pile of weird security stuff that somehow happened in just seven days. Some of it is clever. Some of it is lazy. A few bits fall into that uncomfortable category of “yeah… this is probably going to show up in real incidents sooner than we’d like.” The pattern this week feel",
       "source": "The Hacker News"
     }
   ]

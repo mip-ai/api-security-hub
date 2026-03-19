@@ -43,31 +43,41 @@ const TARGET_LANGS = [
   { code: 'fr', googleCode: 'fr' },
 ];
 
-// --- API Security Keywords (case-insensitive matching) ---
-const API_KEYWORDS = [
+// --- Tier 1: API-specific keywords (match alone = include) ---
+const TIER1_KEYWORDS = [
   'api',
-  'oauth',
-  'jwt',
-  'token',
-  'authentication bypass',
-  'authorization',
-  'ssrf',
-  'injection',
-  'endpoint',
   'rest api',
   'graphql',
-  'webhook',
   'api key',
-  'rate limit',
-  'cors',
+  'api gateway',
+  'api endpoint',
+  'api security',
+  'api token',
+  'api abuse',
   'openapi',
   'swagger',
-  'microservice',
-  'api gateway',
-  'broken access',
+  'webhook',
+  'oauth',
+  'jwt',
   'bola',
   'idor',
+  'broken object level',
+  'broken function level',
+  'cors',
+  'rate limit',
+  'ssrf',
+  'microservice',
+];
+
+// --- Tier 2: General security keywords (match only when Tier 1 also matches) ---
+const TIER2_KEYWORDS = [
+  'authentication bypass',
+  'authorization',
+  'injection',
+  'endpoint',
+  'token',
   'credential',
+  'broken access',
   'owasp',
   'cve-',
   'vulnerability',
@@ -127,9 +137,13 @@ function parseRSS(xml, source) {
 }
 
 // --- Check if an item is API-security related ---
+// Tier 1 hit alone = include. Tier 2 hit = include only if Tier 1 also hits.
 function isApiRelated(item) {
   const text = `${item.title} ${item.description}`.toLowerCase();
-  return API_KEYWORDS.some((kw) => text.includes(kw.toLowerCase()));
+  const hasTier1 = TIER1_KEYWORDS.some((kw) => text.includes(kw));
+  if (hasTier1) return true;
+  // Tier 2 alone is not enough — skip
+  return false;
 }
 
 // --- Fetch a single feed with timeout ---
