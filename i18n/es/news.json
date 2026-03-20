@@ -6,6 +6,8 @@
   "news_feed_loading": "Cargando noticias...",
   "news_feed_error": "Error al cargar las noticias.",
   "news_feed_last_updated": "Última actualización: ",
+  "news_feed_show_all": "Mostrar todo",
+  "news_feed_show_less": "Mostrar menos",
 
   "news_stat1_label": "Organizaciones que experimentaron problemas de seguridad de API (2025)",
   "news_stat2_label": "Aumento interanual de CVE relacionados con la IA (2024)",

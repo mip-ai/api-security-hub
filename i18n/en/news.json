@@ -7,6 +7,8 @@
   "news_feed_loading": "Loading news...",
   "news_feed_error": "Failed to load news.",
   "news_feed_last_updated": "Last updated: ",
+  "news_feed_show_all": "Show all",
+  "news_feed_show_less": "Show less",
 
   "news_stat1_label": "Organizations that experienced API security issues (2025)",
   "news_stat2_label": "Year-over-year increase in AI-related CVEs (2024)",

@@ -25,6 +25,8 @@
     <div id="news-feed-container">
       <p class="text-muted" data-i18n="news_feed_loading">ニュースを読み込み中...</p>
     </div>
+    <span id="news-feed-expand-text" data-i18n="news_feed_show_all" style="display:none;">すべて表示</span>
+    <span id="news-feed-collapse-text" data-i18n="news_feed_show_less" style="display:none;">折りたたむ</span>
   </div>
 
   <!-- Key Stats -->
@@ -231,9 +233,10 @@
         return;
       }
 
-      var displayItems = items.slice(0, 20);
-      var html = '';
-      displayItems.forEach(function(item) {
+      var INITIAL_COUNT = 5;
+      var allItems = items.slice(0, 20);
+
+      function renderItem(item) {
         var title = (typeof item.title === 'object' && item.title !== null)
           ? (item.title[lang] || item.title.en || item.titleOriginal || '')
           : (item.titleOriginal || item.title || '');
@@ -243,24 +246,49 @@
         var pubDate = item.pubDate ? new Date(item.pubDate).toLocaleDateString(lang, { year:'numeric', month:'short', day:'numeric' }) : '';
         var url = item.link || '#';
         var source = item.source || '';
-
-        html += '<div class="news-item" style="margin-bottom:12px;">';
-        html += '<div style="font-size:0.8rem;" class="text-muted">' + pubDate;
-        if (source) {
-          html += ' | ' + source;
-        }
-        html += '</div>';
-        html += '<a href="' + url + '" target="_blank" rel="noopener noreferrer">' + title + '</a>';
+        var h = '<div class="news-item" style="margin-bottom:12px;">';
+        h += '<div style="font-size:0.8rem;" class="text-muted">' + pubDate;
+        if (source) h += ' | ' + source;
+        h += '</div>';
+        h += '<a href="' + url + '" target="_blank" rel="noopener noreferrer">' + title + '</a>';
         if (lang !== 'en') {
-          html += ' <span style="font-size:0.6rem;padding:1px 5px;border-radius:3px;background:var(--border-color,#2a2a2a);color:var(--text-secondary,#a0a0a0);font-weight:700;letter-spacing:0.5px;vertical-align:middle;">EN</span>';
+          h += ' <span style="font-size:0.6rem;padding:1px 5px;border-radius:3px;background:var(--border-color,#2a2a2a);color:var(--text-secondary,#a0a0a0);font-weight:700;letter-spacing:0.5px;vertical-align:middle;">EN</span>';
         }
         if (description) {
-          html += '<p style="margin:4px 0 0;font-size:0.9rem;">' + description + '</p>';
+          h += '<p style="margin:4px 0 0;font-size:0.9rem;">' + description + '</p>';
         }
-        html += '</div>';
+        h += '</div>';
+        return h;
+      }
+
+      var html = '';
+      allItems.forEach(function(item, i) {
+        if (i < INITIAL_COUNT) {
+          html += renderItem(item);
+        }
       });
 
+      if (allItems.length > INITIAL_COUNT) {
+        var restHtml = '';
+        allItems.forEach(function(item, i) {
+          if (i >= INITIAL_COUNT) restHtml += renderItem(item);
+        });
+        html += '<div id="news-feed-rest" style="display:none;">' + restHtml + '</div>';
+        html += '<button id="news-feed-toggle" onclick="var r=document.getElementById(\'news-feed-rest\');var b=document.getElementById(\'news-feed-toggle\');if(r.style.display===\'none\'){r.style.display=\'block\';b.textContent=b.getAttribute(\'data-label-collapse\');}else{r.style.display=\'none\';b.textContent=b.getAttribute(\'data-label-expand\');}" style="margin-top:8px;padding:6px 16px;cursor:pointer;border:1px solid var(--border-color,#333);background:var(--card-bg,#1a1a1a);color:var(--text-primary,#e0e0e0);border-radius:4px;font-size:0.9rem;"></button>';
+      }
+
       container.innerHTML = html;
+
+      var toggleBtn = document.getElementById('news-feed-toggle');
+      if (toggleBtn) {
+        var remaining = allItems.length - INITIAL_COUNT;
+        var expandText = (document.getElementById('news-feed-expand-text') || {}).textContent || 'Show all';
+        var collapseText = (document.getElementById('news-feed-collapse-text') || {}).textContent || 'Show less';
+        var expandLabel = expandText + ' (' + remaining + ')';
+        toggleBtn.setAttribute('data-label-expand', expandLabel);
+        toggleBtn.setAttribute('data-label-collapse', collapseText);
+        toggleBtn.textContent = expandLabel;
+      }
     })
     .catch(function() {
       var container = document.getElementById('news-feed-container');
