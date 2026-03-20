@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-20T15:44:34.942Z",
+  "lastUpdated": "2026-03-20T21:32:36.554Z",
   "itemCount": 18,
   "items": [
     {
@@ -27,7 +27,7 @@
     {
       "title": {
         "en": "Why Most DDoS Protection Fails: Solving for Continuity and Resilience",
-        "ja": "ほとんどの DDoS 防御が失敗する理由: 継続性と復元力を解決する",
+        "ja": "ほとんどの DDoS 防御が失敗する理由: 継続性と回復力の解決",
         "es": "Por qué falla la mayoría de las protecciones DDoS: soluciones para la continuidad y la resiliencia",
         "pt": "Por que a maioria das proteções DDoS falha: solução para continuidade e resiliência",
         "fr": "Pourquoi la plupart des protections DDoS échouent : garantir la continuité et la résilience"
@@ -81,7 +81,7 @@
       "pubDate": "2026-03-12T13:00:07.000Z",
       "description": {
         "en": "Announcing Agent Personas in the Cequence AI Gateway, which allow organizations and employees to manage AI agent privileges at a granular level. It provides the ability to control, monitor, and govern what an AI agent is allowed to do within a system, including data access, tool calls, system action",
-        "ja": "Cequence AI Gateway でのエージェント ペルソナの発表。これにより、組織や従業員は AI エージェントの権限を詳細なレベルで管理できるようになります。 データ アクセス、ツール呼び出し、システム アクションなど、AI エージェントがシステム内で実行できる内容を制御、監視、管理する機能を提供します。",
+        "ja": "Cequence AI Gateway でのエージェント ペルソナの発表。これにより、組織や従業員は AI エージェントの権限を詳細なレベルで管理できるようになります。 データ アクセス、ツール呼び出し、システム アクションなど、システム内で AI エージェントが実行できることを制御、監視、管理する機能を提供します。",
         "es": "Anuncio de Agent Personas en Cequence AI Gateway, que permite a las organizaciones y empleados administrar los privilegios de los agentes de AI a un nivel granular. Proporciona la capacidad de controlar, monitorear y gobernar lo que un agente de IA puede hacer dentro de un sistema, incluido el acceso a datos, llamadas a herramientas y acciones del sistema.",
         "pt": "Anunciamos Agent Personas no Cequence AI Gateway, que permite que organizações e funcionários gerenciem privilégios de agentes de IA em um nível granular. Ele fornece a capacidade de controlar, monitorar e governar o que um agente de IA pode fazer dentro de um sistema, incluindo acesso a dados, chamadas de ferramentas, ações do sistema",
         "fr": "Annonce des agents Personas dans Cequence AI Gateway, qui permettent aux organisations et aux employés de gérer les privilèges des agents IA à un niveau granulaire. Il offre la possibilité de contrôler, surveiller et gouverner ce qu'un agent IA est autorisé à faire au sein d'un système, y compris l'accès aux données, les appels d'outils, les actions du système."
@@ -128,7 +128,7 @@
         "ja": "AI システムはもはや、人間のプロンプトに応答する単なる孤立したモデルではありません。 現代の運用環境では、人間による監視が制限されているかまったくない状態で、タスクの委任、ツールの呼び出し、意思決定の調整がますます連鎖的に行われています。 ほとんどすべてのコミュニケーションは A を通じて行われます",
         "es": "Los sistemas de IA ya no son sólo modelos aislados que responden a indicaciones humanas.&#160; En los entornos de producción modernos, están cada vez más encadenados: delegando tareas, llamando herramientas y coordinando decisiones con supervisión humana limitada o nula. Casi toda esa comunicación ocurre a través de A.",
         "pt": "Os sistemas de IA não são mais apenas modelos isolados que respondem a solicitações humanas.&#160; Nos ambientes de produção modernos, eles estão cada vez mais encadeados – delegando tarefas, chamando ferramentas e coordenando decisões com supervisão humana limitada ou nenhuma. Quase toda essa comunicação acontece através de A",
-        "fr": "Les systèmes d’IA ne sont plus de simples modèles isolés répondant aux sollicitations humaines. Dans les environnements de production modernes, ils sont de plus en plus enchaînés : déléguant des tâches, appelant des outils et coordonnant des décisions avec une surveillance humaine limitée, voire inexistante. Presque toute cette communication se fait via A"
+        "fr": "Les systèmes d’IA ne sont plus de simples modèles isolés répondant aux sollicitations humaines. Dans les environnements de production modernes, ils sont de plus en plus enchaînés – déléguant des tâches, appelant des outils et coordonnant des décisions avec une surveillance humaine limitée, voire inexistante. Presque toute cette communication se fait via A"
       },
       "descriptionOriginal": "AI systems are no longer just isolated models responding to human prompts.&#160; In modern production environments, they are increasingly chained together – delegating tasks, calling tools, and coordinating decisions with limited or no human oversight. Almost all that communication happens through A",
       "source": "Wallarm",
@@ -191,7 +191,7 @@
       "pubDate": "2026-03-03T22:41:12.000Z",
       "description": {
         "en": "Executive Summary We identified a security weakness in n8n’s credential management layer that could have completely compromised the application’s security. This finding highlights the core risks of centralized authentication in workflow automation platforms. As n8n serves as the central hub connecti",
-        "ja": "概要 私たちは、n8n の認証情報管理層に、アプリケーションのセキュリティを完全に侵害する可能性があるセキュリティ上の弱点を特定しました。 この調査結果は、ワークフロー自動化プラットフォームにおける集中認証の核となるリスクを浮き彫りにしています。 n8n は中央ハブ接続として機能します。",
+        "ja": "概要 私たちは、n8n の資格情報管理層に、アプリケーションのセキュリティを完全に侵害する可能性のあるセキュリティ上の弱点を特定しました。 この調査結果は、ワークフロー自動化プラットフォームにおける集中認証の中核的なリスクを浮き彫りにしています。 n8n は中央ハブ接続として機能します。",
         "es": "Resumen ejecutivo Identificamos una debilidad de seguridad en la capa de administración de credenciales de n8n que podría haber comprometido completamente la seguridad de la aplicación. Este hallazgo resalta los riesgos principales de la autenticación centralizada en las plataformas de automatización del flujo de trabajo. Como n8n sirve como centro de conexión central",
         "pt": "Resumo executivo Identificamos uma falha de segurança na camada de gerenciamento de credenciais do n8n que poderia ter comprometido completamente a segurança do aplicativo. Esta descoberta destaca os principais riscos da autenticação centralizada em plataformas de automação de fluxo de trabalho. Como n8n serve como hub central de conexão",
         "fr": "Résumé Nous avons identifié une faille de sécurité dans la couche de gestion des informations d'identification de n8n qui aurait pu complètement compromettre la sécurité de l'application. Cette découverte met en évidence les principaux risques de l’authentification centralisée dans les plateformes d’automatisation des flux de travail. Comme n8n sert de hub central de connexion"
@@ -213,7 +213,7 @@
       "pubDate": "2026-03-03T14:00:23.000Z",
       "description": {
         "en": "Why Cequence Is Co-Chairing TM Forum&#8217;s AI-Native Blueprint Initiative This past Sunday, at Mobile World Congress in Barcelona, TM Forum officially named Cequence Security as Co-Chair of its AI-Native Blueprint Initiative, specifically leading the Agentic Interaction Security workstream. For th",
-        "ja": "Cequence が TM フォーラムの AI ネイティブ ブループリント イニシアチブの共同議長を務める理由 先週の日曜日、バルセロナで開催されたモバイル ワールド コングレスで、TM フォーラムは正式に Cequence セキュリティを AI ネイティブ ブループリント イニシアチブの共同議長に任命し、特にエージェントティック インタラクション セキュリティ ワークストリームを主導しました。 のために",
+        "ja": "Cequence が TM フォーラムの AI ネイティブ ブループリント イニシアティブの共同議長を務める理由 先週の日曜日、バルセロナで開催されたモバイル ワールド コングレスで、TM フォーラムは正式に Cequence セキュリティを AI ネイティブ ブループリント イニシアチブの共同議長に任命し、特にエージェントティック インタラクション セキュリティ ワークストリームを主導しました。 のために",
         "es": "Por qué Cequence copreside la iniciativa AI-Native Blueprint de TM Forum El domingo pasado, en el Mobile World Congress en Barcelona, ​​TM Forum nombró oficialmente a Cequence Security copresidente de su iniciativa AI-Native Blueprint, específicamente liderando el flujo de trabajo de seguridad de interacción agente. Para el",
         "pt": "Por que Cequence é copresidente da iniciativa AI-Native Blueprint do TM Forum No último domingo, no Mobile World Congress em Barcelona, ​​o TM Forum nomeou oficialmente Cequence Security como copresidente de sua iniciativa AI-Native Blueprint, liderando especificamente o fluxo de trabalho Agentic Interaction Security. Adiante",
         "fr": "Pourquoi Cequence co-préside l'initiative AI-Native Blueprint du TM Forum Dimanche dernier, lors du Mobile World Congress à Barcelone, TM Forum a officiellement nommé Cequence Security co-président de son initiative AI-Native Blueprint, dirigeant spécifiquement le flux de travail sur la sécurité des interactions agentiques. Pour le"
@@ -257,7 +257,7 @@
       "pubDate": "2026-02-24T17:09:51.000Z",
       "description": {
         "en": "Undermining Revenue, Trust, and Operational Integrity For airline CIOs, CISOs, and revenue platform leaders, malicious bots are no longer just a nuisance. They are a direct assault on revenue integrity and customer trust. One of the most damaging and least understood manifestations of this threat is",
-        "ja": "収益、信頼、運用上の整合性を損なう 航空会社の CIO、CISO、収益プラットフォームのリーダーにとって、悪意のあるボットはもはや単なる迷惑者ではありません。 これらは収益の完全性と顧客の信頼に対する直接的な攻撃です。 この脅威の最も有害でありながら最も理解されていない現象の 1 つは、",
+        "ja": "収益、信頼、運用上の整合性を損なう 航空会社の CIO、CISO、収益プラットフォームのリーダーにとって、悪意のあるボットはもはや単なる迷惑者ではありません。 これらは収益の完全性と顧客の信頼に対する直接的な攻撃です。 この脅威の最も有害でありながら最も理解されていない症状の 1 つは、",
         "es": "Socavando los ingresos, la confianza y la integridad operativa Para los CIO, CISO y líderes de plataformas de ingresos de las aerolíneas, los bots maliciosos ya no son solo una molestia. Son un ataque directo a la integridad de los ingresos y a la confianza de los clientes. Una de las manifestaciones más dañinas y menos comprendidas de esta amenaza es",
         "pt": "Prejudicando a receita, a confiança e a integridade operacional Para CIOs, CISOs e líderes de plataformas de receitas de companhias aéreas, os bots maliciosos não são mais apenas um incômodo. Eles são um ataque direto à integridade da receita e à confiança do cliente. Uma das manifestações mais prejudiciais e menos compreendidas desta ameaça é",
         "fr": "Porter atteinte aux revenus, à la confiance et à l'intégrité opérationnelle Pour les DSI, RSSI et responsables des plateformes de revenus des compagnies aériennes, les robots malveillants ne sont plus seulement une nuisance. Ils constituent une attaque directe contre l’intégrité des revenus et la confiance des clients. L’une des manifestations les plus dommageables et les moins comprises de cette menace est"
@@ -357,7 +357,7 @@
     {
       "title": {
         "en": "Your Most Dangerous User Is Not Human: How AI Agents and MCP Servers Broke the Internal API Walled Garden",
-        "ja": "最も危険なユーザーは人間ではありません: AI エージェントと MCP サーバーが内部 API の壁をどのように突破したか",
+        "ja": "最も危険なユーザーは人間ではありません: AI エージェントと MCP サーバーが内部 API の壁に囲まれた庭をどのように突破したか",
         "es": "Su usuario más peligroso no es humano: cómo los agentes de IA y los servidores MCP rompieron el jardín amurallado de API interno",
         "pt": "Seu usuário mais perigoso não é humano: como agentes de IA e servidores MCP quebraram o jardim murado da API interna",
         "fr": "Votre utilisateur le plus dangereux n'est pas humain : comment les agents IA et les serveurs MCP ont brisé le jardin clos de l'API interne"
