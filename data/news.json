@@ -1,26 +1,47 @@
 {
-  "lastUpdated": "2026-03-20T04:47:19.703Z",
-  "itemCount": 20,
+  "lastUpdated": "2026-03-20T09:42:12.322Z",
+  "itemCount": 19,
   "items": [
     {
       "title": {
-        "en": "54 EDR Killers Use BYOVD to Exploit 34 Signed Vulnerable Drivers and Disable Security",
-        "ja": "54 の EDR キラーが BYOVD を使用して 34 の署名付き脆弱性ドライバーを悪用し、セキュリティを無効にする",
-        "es": "54 asesinos de EDR utilizan BYOVD para explotar 34 controladores vulnerables firmados y desactivar la seguridad",
-        "pt": "54 assassinos de EDR usam BYOVD para explorar 34 drivers vulneráveis ​​assinados e desativar a segurança",
-        "fr": "54 tueurs EDR utilisent BYOVD pour exploiter 34 pilotes vulnérables signés et désactiver la sécurité"
+        "en": "Critical Langflow Vulnerability Exploited Hours After Public Disclosure",
+        "ja": "Langflow の重大な脆弱性、公開から数時間後に悪用される",
+        "es": "Vulnerabilidad crítica de Langflow explotada horas después de la divulgación pública",
+        "pt": "Vulnerabilidade crítica do Langflow explorada horas após divulgação pública",
+        "fr": "Une vulnérabilité critique de Langflow exploitée quelques heures après sa divulgation publique"
       },
-      "titleOriginal": "54 EDR Killers Use BYOVD to Exploit 34 Signed Vulnerable Drivers and Disable Security",
+      "titleOriginal": "Critical Langflow Vulnerability Exploited Hours After Public Disclosure",
+      "link": "https://www.securityweek.com/critical-langflow-vulnerability-exploited-hours-after-public-disclosure/",
+      "pubDate": "2026-03-20T08:38:56.000Z",
+      "description": {
+        "en": "Because attacker-supplied flow data is used in public flows, the bug leads to unauthenticated remote code execution. The post Critical Langflow Vulnerability Exploited Hours After Public Disclosure appeared first on SecurityWeek.",
+        "ja": "攻撃者が提供したフロー データはパブリック フローで使用されるため、このバグにより認証されていないリモート コードが実行されます。 「Langflow の重大な脆弱性、公開から数時間後に悪用された」という記事は、SecurityWeek に最初に掲載されました。",
+        "es": "Debido a que los datos de flujo proporcionados por el atacante se utilizan en flujos públicos, el error conduce a la ejecución remota de código no autenticado. La publicación Vulnerabilidad crítica de Langflow explotada horas después de la divulgación pública apareció por primera vez en SecurityWeek.",
+        "pt": "Como os dados de fluxo fornecidos pelo invasor são usados ​​em fluxos públicos, o bug leva à execução remota de código não autenticado. A postagem Vulnerabilidade crítica do Langflow explorada horas após a divulgação pública apareceu pela primeira vez na SecurityWeek.",
+        "fr": "Étant donné que les données de flux fournies par l'attaquant sont utilisées dans des flux publics, le bug conduit à l'exécution de code à distance non authentifié. La vulnérabilité critique Langflow exploitée quelques heures après la divulgation publique est apparue en premier sur SecurityWeek."
+      },
+      "descriptionOriginal": "Because attacker-supplied flow data is used in public flows, the bug leads to unauthenticated remote code execution. The post Critical Langflow Vulnerability Exploited Hours After Public Disclosure appeared first on SecurityWeek.",
+      "source": "SecurityWeek"
+    },
+    {
+      "title": {
+        "en": "54 EDR Killers Use BYOVD to Exploit 35 Signed Vulnerable Drivers and Disable Security",
+        "ja": "54 の EDR キラーが BYOVD を使用して 35 の署名付き脆弱性ドライバーを悪用し、セキュリティを無効にする",
+        "es": "54 asesinos de EDR utilizan BYOVD para explotar 35 controladores vulnerables firmados y desactivar la seguridad",
+        "pt": "54 assassinos de EDR usam BYOVD para explorar 35 drivers vulneráveis ​​assinados e desativar a segurança",
+        "fr": "54 tueurs EDR utilisent BYOVD pour exploiter 35 pilotes vulnérables signés et désactiver la sécurité"
+      },
+      "titleOriginal": "54 EDR Killers Use BYOVD to Exploit 35 Signed Vulnerable Drivers and Disable Security",
       "link": "https://thehackernews.com/2026/03/54-edr-killers-use-byovd-to-exploit-34.html",
       "pubDate": "2026-03-19T18:52:00.000Z",
       "description": {
-        "en": "A new analysis of endpoint detection and response (EDR) killers has revealed that 54 of them leverage a technique known as bring your own vulnerable driver (BYOVD) by abusing a total of 34 vulnerable drivers. EDR killer programs have been a common presence in ransomware intrusions as they offer a wa",
-        "ja": "エンドポイント検出および対応 (EDR) キラーの新しい分析により、そのうちの 54 が脆弱なドライバーの持ち込み (BYOVD) として知られる手法を利用し、合計 34 の脆弱なドライバーを悪用していることが明らかになりました。 EDR キラー プログラムは、ランサムウェア侵入において一般的に存在します。",
-        "es": "Un nuevo análisis de los asesinos de detección y respuesta de endpoints (EDR) ha revelado que 54 de ellos aprovechan una técnica conocida como trae tu propio controlador vulnerable (BYOVD) al abusar de un total de 34 controladores vulnerables. Los programas asesinos de EDR han sido una presencia común en las intrusiones de ransomware, ya que ofrecen una forma de",
-        "pt": "Uma nova análise de assassinos de detecção e resposta de endpoint (EDR) revelou que 54 deles aproveitam uma técnica conhecida como traga seu próprio driver vulnerável (BYOVD), abusando de um total de 34 drivers vulneráveis. Os programas EDR killer têm sido uma presença comum em invasões de ransomware, pois oferecem uma solução",
-        "fr": "Une nouvelle analyse des tueurs EDR (Endpoint Detection and Response) a révélé que 54 d'entre eux exploitent une technique connue sous le nom de BYOVD (Bring Your Own Vulnable Driver) en abusant d'un total de 34 pilotes vulnérables. Les programmes tueurs EDR sont courants dans les intrusions de ransomwares car ils offrent une solution"
+        "en": "A new analysis of endpoint detection and response (EDR) killers has revealed that 54 of them leverage a technique known as bring your own vulnerable driver (BYOVD) by abusing a total of 35 vulnerable drivers. EDR killer programs have been a common presence in ransomware intrusions as they offer a wa",
+        "ja": "エンドポイント検出および対応 (EDR) キラーの新しい分析により、そのうちの 54 が脆弱なドライバーの持ち込み (BYOVD) として知られる手法を利用し、合計 35 の脆弱なドライバーを悪用していることが明らかになりました。 EDR キラー プログラムは、ランサムウェア侵入において一般的に存在します。",
+        "es": "Un nuevo análisis de los asesinos de detección y respuesta de endpoints (EDR) ha revelado que 54 de ellos aprovechan una técnica conocida como trae tu propio controlador vulnerable (BYOVD) al abusar de un total de 35 controladores vulnerables. Los programas asesinos de EDR han sido una presencia común en las intrusiones de ransomware, ya que ofrecen una forma de",
+        "pt": "Uma nova análise de assassinos de detecção e resposta de endpoint (EDR) revelou que 54 deles aproveitam uma técnica conhecida como traga seu próprio driver vulnerável (BYOVD), abusando de um total de 35 drivers vulneráveis. Os programas EDR killer têm sido uma presença comum em invasões de ransomware, pois oferecem uma solução",
+        "fr": "Une nouvelle analyse des tueurs EDR (Endpoint Detection and Response) a révélé que 54 d’entre eux exploitent une technique connue sous le nom de BYOVD (Bring Your Own Vulnable Driver) en abusant d’un total de 35 conducteurs vulnérables. Les programmes tueurs EDR sont courants dans les intrusions de ransomwares car ils offrent une solution"
       },
-      "descriptionOriginal": "A new analysis of endpoint detection and response (EDR) killers has revealed that 54 of them leverage a technique known as bring your own vulnerable driver (BYOVD) by abusing a total of 34 vulnerable drivers. EDR killer programs have been a common presence in ransomware intrusions as they offer a wa",
+      "descriptionOriginal": "A new analysis of endpoint detection and response (EDR) killers has revealed that 54 of them leverage a technique known as bring your own vulnerable driver (BYOVD) by abusing a total of 35 vulnerable drivers. EDR killer programs have been a common presence in ransomware intrusions as they offer a wa",
       "source": "The Hacker News"
     },
     {
@@ -46,27 +67,6 @@
     },
     {
       "title": {
-        "en": "Russian APT Exploits Zimbra Vulnerability Against Ukraine",
-        "ja": "ロシアのAPTがウクライナに対するZimbraの脆弱性を悪用",
-        "es": "APT rusa explota vulnerabilidad de Zimbra contra Ucrania",
-        "pt": "APT russo explora vulnerabilidade do Zimbra contra a Ucrânia",
-        "fr": "L'APT russe exploite la vulnérabilité de Zimbra contre l'Ukraine"
-      },
-      "titleOriginal": "Russian APT Exploits Zimbra Vulnerability Against Ukraine",
-      "link": "https://www.securityweek.com/russian-apt-exploits-zimbra-vulnerability-against-ukraine/",
-      "pubDate": "2026-03-19T13:24:54.000Z",
-      "description": {
-        "en": "Insufficient sanitization of CSS content within HTML emails leads to inline script execution when the message is opened in a browser. The post Russian APT Exploits Zimbra Vulnerability Against Ukraine appeared first on SecurityWeek.",
-        "ja": "HTML 電子メール内の CSS コンテンツのサニタイズが不十分であると、メッセージをブラウザで開いたときにインライン スクリプトが実行されます。 ロシアの APT がウクライナに対する Zimbra の脆弱性を悪用するという投稿は、SecurityWeek に最初に掲載されました。",
-        "es": "Una limpieza insuficiente del contenido CSS de los correos electrónicos HTML provoca la ejecución de un script en línea cuando el mensaje se abre en un navegador. La publicación APT rusa explota la vulnerabilidad de Zimbra contra Ucrania apareció por primera vez en SecurityWeek.",
-        "pt": "A limpeza insuficiente do conteúdo CSS em e-mails HTML leva à execução de scripts embutidos quando a mensagem é aberta em um navegador. O posto APT russo explora vulnerabilidade do Zimbra contra a Ucrânia apareceu pela primeira vez na SecurityWeek.",
-        "fr": "Une désinfection insuffisante du contenu CSS dans les e-mails HTML entraîne l'exécution d'un script en ligne lorsque le message est ouvert dans un navigateur. L’article russe APT exploite la vulnérabilité Zimbra contre l’Ukraine apparaît en premier sur SecurityWeek."
-      },
-      "descriptionOriginal": "Insufficient sanitization of CSS content within HTML emails leads to inline script execution when the message is opened in a browser. The post Russian APT Exploits Zimbra Vulnerability Against Ukraine appeared first on SecurityWeek.",
-      "source": "SecurityWeek"
-    },
-    {
-      "title": {
         "en": "CISA urges US orgs to secure Microsoft Intune systems after Stryker breach",
         "ja": "CISA、Stryker の侵害を受けて米国組織に Microsoft Intune システムを保護するよう要請",
         "es": "CISA insta a las organizaciones estadounidenses a proteger los sistemas Microsoft Intune después de la violación de Stryker",
@@ -78,7 +78,7 @@
       "pubDate": "2026-03-19T11:02:27.000Z",
       "description": {
         "en": "CISA warned U.S. organizations to follow Microsoft guidance to strengthen the Intune endpoint management tool after a cyberattack exploited it to wipe medical technology giant Stryker's systems. [...]",
-        "ja": "Intune エンドポイント管理ツールが医療技術大手 Stryker のシステムを消去するためにサイバー攻撃に悪用されたことを受け、CISA は米国の組織に対し、Intune エンドポイント管理ツールを強化する Microsoft のガイダンスに従うよう警告した。 [...]",
+        "ja": "Intune エンドポイント管理ツールが医療技術大手 Stryker のシステムを消去するためにサイバー攻撃に悪用されたことを受け、CISA は米国の組織に対し、Intune エンドポイント管理ツールを強化するための Microsoft のガイダンスに従うよう警告した。 [...]",
         "es": "CISA advirtió a las organizaciones estadounidenses que siguieran las directrices de Microsoft para fortalecer la herramienta de gestión de terminales Intune después de que un ciberataque la explotara para borrar los sistemas del gigante de la tecnología médica Stryker. [...]",
         "pt": "A CISA alertou as organizações dos EUA para seguirem as orientações da Microsoft para fortalecer a ferramenta de gerenciamento de endpoint Intune depois que um ataque cibernético a explorou para limpar os sistemas da gigante de tecnologia médica Stryker. [...]",
         "fr": "La CISA a averti les organisations américaines de suivre les directives de Microsoft pour renforcer l'outil de gestion des points de terminaison Intune après qu'une cyberattaque l'a exploité pour effacer les systèmes du géant de la technologie médicale Stryker. [...]"
@@ -120,55 +120,13 @@
       "pubDate": "2026-03-19T06:05:00.000Z",
       "description": {
         "en": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) has urged government agencies to apply patches for two security flaws impacting Synacor Zimbra Collaboration Suite (ZCS) and Microsoft Office SharePoint, stating they have been actively exploited in the wild. The vulnerabilities in que",
-        "ja": "米国サイバーセキュリティ・インフラストラクチャセキュリティ庁（CISA）は、Synacor Zimbra Collaboration Suite（ZCS）とMicrosoft Office SharePointに影響を与える2つのセキュリティ上の欠陥が実際に活発に悪用されているとして、政府機関にパッチを適用するよう促した。 que の脆弱性",
+        "ja": "米国サイバーセキュリティ・インフラセキュリティ庁（CISA）は、Synacor Zimbra Collaboration Suite（ZCS）とMicrosoft Office SharePointに影響を与える2つのセキュリティ上の欠陥が実際に悪用されているとして、政府機関にパッチを適用するよう促した。 que の脆弱性",
         "es": "La Agencia de Seguridad de Infraestructura y Ciberseguridad de EE. UU. (CISA) ha instado a las agencias gubernamentales a aplicar parches para dos fallas de seguridad que afectan a Synacor Zimbra Collaboration Suite (ZCS) y Microsoft Office SharePoint, afirmando que han sido explotadas activamente en la naturaleza. Las vulnerabilidades en que",
         "pt": "A Agência de Segurança Cibernética e de Infraestrutura dos EUA (CISA) instou as agências governamentais a aplicarem patches para duas falhas de segurança que afetam o Synacor Zimbra Collaboration Suite (ZCS) e o Microsoft Office SharePoint, afirmando que eles foram ativamente explorados em estado selvagem. As vulnerabilidades em que",
         "fr": "L'Agence américaine de cybersécurité et de sécurité des infrastructures (CISA) a exhorté les agences gouvernementales à appliquer des correctifs pour deux failles de sécurité affectant Synacor Zimbra Collaboration Suite (ZCS) et Microsoft Office SharePoint, affirmant qu'elles ont été activement exploitées dans la nature. Les vulnérabilités en que"
       },
       "descriptionOriginal": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) has urged government agencies to apply patches for two security flaws impacting Synacor Zimbra Collaboration Suite (ZCS) and Microsoft Office SharePoint, stating they have been actively exploited in the wild. The vulnerabilities in que",
       "source": "The Hacker News"
-    },
-    {
-      "title": {
-        "en": "CISA orders feds to patch Zimbra XSS flaw exploited in attacks",
-        "ja": "CISA、攻撃に悪用されたZimbra XSSの欠陥にパッチを適用するよう連邦政府に命令",
-        "es": "CISA ordena a los federales reparar la falla Zimbra XSS explotada en ataques",
-        "pt": "CISA ordena que federais corrijam falha do Zimbra XSS explorada em ataques",
-        "fr": "La CISA ordonne au gouvernement fédéral de corriger la faille Zimbra XSS exploitée lors d'attaques"
-      },
-      "titleOriginal": "CISA orders feds to patch Zimbra XSS flaw exploited in attacks",
-      "link": "https://www.bleepingcomputer.com/news/security/cisa-orders-feds-to-patch-zimbra-xss-flaw-exploited-in-attacks/",
-      "pubDate": "2026-03-18T19:57:13.000Z",
-      "description": {
-        "en": "CISA has ordered U.S. government agencies to secure their servers against an actively exploited vulnerability in the Zimbra Collaboration Suite (ZCS). [...]",
-        "ja": "CISA は、米国政府機関に対し、Zimbra Collaboration Suite (ZCS) で積極的に悪用されている脆弱性からサーバーを保護するよう命令しました。 [...]",
-        "es": "CISA ha ordenado a las agencias gubernamentales de EE. UU. que protejan sus servidores contra una vulnerabilidad explotada activamente en Zimbra Collaboration Suite (ZCS). [...]",
-        "pt": "A CISA ordenou que as agências governamentais dos EUA protegessem seus servidores contra uma vulnerabilidade explorada ativamente no Zimbra Collaboration Suite (ZCS). [...]",
-        "fr": "La CISA a ordonné aux agences gouvernementales américaines de sécuriser leurs serveurs contre une vulnérabilité activement exploitée dans la Zimbra Collaboration Suite (ZCS). [...]"
-      },
-      "descriptionOriginal": "CISA has ordered U.S. government agencies to secure their servers against an actively exploited vulnerability in the Zimbra Collaboration Suite (ZCS). [...]",
-      "source": "BleepingComputer"
-    },
-    {
-      "title": {
-        "en": "Ransomware gang exploits Cisco flaw in zero-day attacks since January",
-        "ja": "ランサムウェア集団が 1 月以降、シスコの欠陥をゼロデイ攻撃で悪用",
-        "es": "Una banda de ransomware explota la falla de Cisco en ataques de día cero desde enero",
-        "pt": "Gangue de ransomware explora falha da Cisco em ataques de dia zero desde janeiro",
-        "fr": "Un gang de ransomwares exploite une faille de Cisco dans des attaques zero-day depuis janvier"
-      },
-      "titleOriginal": "Ransomware gang exploits Cisco flaw in zero-day attacks since January",
-      "link": "https://www.bleepingcomputer.com/news/security/interlock-ransomware-exploited-secure-fmc-flaw-in-zero-day-attacks-since-january/",
-      "pubDate": "2026-03-18T16:53:42.000Z",
-      "description": {
-        "en": "The Interlock ransomware gang has been exploiting a maximum severity remote code execution (RCE) vulnerability in Cisco's Secure Firewall Management Center (FMC) software in zero-day attacks since late January. [...]",
-        "ja": "Interlock ランサムウェア集団は、1 月下旬以来、シスコの Secure Firewall Management Center (FMC) ソフトウェアにある最大重大度のリモート コード実行 (RCE) の脆弱性をゼロデイ攻撃で悪用しています。 [...]",
-        "es": "La pandilla de ransomware Interlock ha estado explotando una vulnerabilidad de ejecución remota de código (RCE) de máxima gravedad en el software Secure Firewall Management Center (FMC) de Cisco en ataques de día cero desde finales de enero. [...]",
-        "pt": "A gangue de ransomware Interlock tem explorado uma vulnerabilidade de execução remota de código (RCE) de gravidade máxima no software Secure Firewall Management Center (FMC) da Cisco em ataques de dia zero desde o final de janeiro. [...]",
-        "fr": "Le groupe de ransomwares Interlock exploite depuis fin janvier une vulnérabilité d'exécution de code à distance (RCE) de gravité maximale dans le logiciel Secure Firewall Management Center (FMC) de Cisco dans le cadre d'attaques zero-day. [...]"
-      },
-      "descriptionOriginal": "The Interlock ransomware gang has been exploiting a maximum severity remote code execution (RCE) vulnerability in Cisco's Secure Firewall Management Center (FMC) software in zero-day attacks since late January. [...]",
-      "source": "BleepingComputer"
     },
     {
       "title": {
@@ -215,7 +173,7 @@
     {
       "title": {
         "en": "Ubuntu CVE-2026-3888 Bug Lets Attackers Gain Root via systemd Cleanup Timing Exploit",
-        "ja": "Ubuntu CVE-2026-3888 のバグにより、攻撃者は systemd クリーンアップ タイミングを悪用してルートを取得できます",
+        "ja": "Ubuntu CVE-2026-3888 のバグにより、攻撃者が systemd クリーンアップ タイミングを悪用してルートを取得できる",
         "es": "El error CVE-2026-3888 de Ubuntu permite a los atacantes obtener raíz a través del exploit de sincronización de limpieza systemd",
         "pt": "Bug CVE-2026-3888 do Ubuntu permite que invasores ganhem root por meio da exploração de tempo de limpeza do systemd",
         "fr": "Le bug Ubuntu CVE-2026-3888 permet aux attaquants d'obtenir la racine via l'exploit de synchronisation de nettoyage systemd"
@@ -227,7 +185,7 @@
         "en": "A high-severity security flaw affecting default installations of Ubuntu Desktop versions 24.04 and later could be exploited to escalate privileges to the root level. Tracked as CVE-2026-3888 (CVSS score: 7.8), the issue could allow an attacker to seize control of a susceptible system. \"This flaw (CV",
         "ja": "Ubuntu Desktop バージョン 24.04 以降のデフォルトのインストールに影響を与える重大度の高いセキュリティ上の欠陥が悪用され、権限がルート レベルに昇格される可能性があります。 CVE-2026-3888 (CVSS スコア: 7.8) として追跡されているこの問題により、攻撃者が影響を受けやすいシステムの制御を奪われる可能性があります。 「この欠陥（CV",
         "es": "Una falla de seguridad de alta gravedad que afecta las instalaciones predeterminadas de las versiones 24.04 y posteriores de Ubuntu Desktop podría aprovecharse para escalar privilegios al nivel raíz. Registrado como CVE-2026-3888 (puntuación CVSS: 7,8), el problema podría permitir a un atacante tomar el control de un sistema susceptible. \"Este defecto (CV",
-        "pt": "Uma falha de segurança de alta gravidade que afeta as instalações padrão do Ubuntu Desktop versões 24.04 e posteriores pode ser explorada para escalar privilégios para o nível raiz. Rastreado como CVE-2026-3888 (pontuação CVSS: 7,8), o problema pode permitir que um invasor assuma o controle de um sistema suscetível. \"Esta falha (CV",
+        "pt": "Uma falha de segurança de alta gravidade que afeta as instalações padrão do Ubuntu Desktop versões 24.04 e posteriores pode ser explorada para escalar privilégios para o nível raiz. Rastreado como CVE-2026-3888 (pontuação CVSS: 7,8), o problema pode permitir que um invasor assuma o controle de um sistema suscetível. \"Essa falha (CV",
         "fr": "Une faille de sécurité de haute gravité affectant les installations par défaut d'Ubuntu Desktop versions 24.04 et ultérieures pourrait être exploitée pour élever les privilèges au niveau racine. Suivi comme CVE-2026-3888 (score CVSS : 7,8), le problème pourrait permettre à un attaquant de prendre le contrôle d'un système sensible. \"Cette faille (CV"
       },
       "descriptionOriginal": "A high-severity security flaw affecting default installations of Ubuntu Desktop versions 24.04 and later could be exploited to escalate privileges to the root level. Tracked as CVE-2026-3888 (CVSS score: 7.8), the issue could allow an attacker to seize control of a susceptible system. \"This flaw (CV",
@@ -248,7 +206,7 @@
         "en": "Apple on Tuesday released its first round of Background Security Improvements to address a security flaw in WebKit that affects iOS, iPadOS, and macOS. The vulnerability, tracked as CVE-2026-20643 (CVSS score: N/A), has been described as a cross-origin issue in WebKit's Navigation API that could be ",
         "ja": "Appleは火曜日、iOS、iPadOS、macOSに影響を与えるWebKitのセキュリティ欠陥に対処するため、バックグラウンドセキュリティ改善の第一弾をリリースした。 この脆弱性は CVE-2026-20643 (CVSS スコア: N/A) として追跡され、WebKit のナビゲーション API のクロスオリジンの問題として説明されています。",
         "es": "Apple lanzó el martes su primera ronda de mejoras de seguridad en segundo plano para abordar una falla de seguridad en WebKit que afecta a iOS, iPadOS y macOS. La vulnerabilidad, rastreada como CVE-2026-20643 (puntuación CVSS: N/A), se ha descrito como un problema de origen cruzado en la API de navegación de WebKit que podría ser",
-        "pt": "A Apple lançou na terça-feira sua primeira rodada de melhorias de segurança em segundo plano para solucionar uma falha de segurança no WebKit que afeta iOS, iPadOS e macOS. A vulnerabilidade, rastreada como CVE-2026-20643 (pontuação CVSS: N/A), foi descrita como um problema de origem cruzada na API de navegação do WebKit que pode ser",
+        "pt": "A Apple lançou na terça-feira sua primeira rodada de melhorias de segurança em segundo plano para solucionar uma falha de segurança no WebKit que afeta iOS, iPadOS e macOS. A vulnerabilidade, rastreada como CVE-2026-20643 (pontuação CVSS: N/A), foi descrita como um problema de origem cruzada na API de navegação do WebKit que poderia ser",
         "fr": "Apple a publié mardi sa première série d'améliorations de la sécurité en arrière-plan pour corriger une faille de sécurité dans WebKit qui affecte iOS, iPadOS et macOS. La vulnérabilité, suivie comme CVE-2026-20643 (score CVSS : N/A), a été décrite comme un problème d'origine croisée dans l'API de navigation de WebKit qui pourrait être"
       },
       "descriptionOriginal": "Apple on Tuesday released its first round of Background Security Improvements to address a security flaw in WebKit that affects iOS, iPadOS, and macOS. The vulnerability, tracked as CVE-2026-20643 (CVSS score: N/A), has been described as a cross-origin issue in WebKit's Navigation API that could be ",
@@ -278,7 +236,7 @@
     {
       "title": {
         "en": "Android 17 Blocks Non-Accessibility Apps from Accessibility API to Prevent Malware Abuse",
-        "ja": "Android 17 は、マルウェアの悪用を防ぐために、アクセシビリティ非対応アプリをアクセシビリティ API からブロックします",
+        "ja": "Android 17 はマルウェアの悪用を防ぐために、アクセシビリティ非対応アプリをアクセシビリティ API からブロックします",
         "es": "Android 17 bloquea aplicaciones que no son de accesibilidad de la API de accesibilidad para evitar el abuso de malware",
         "pt": "Android 17 bloqueia aplicativos não acessíveis da API de acessibilidade para evitar abuso de malware",
         "fr": "Android 17 bloque les applications non accessibles de l'API d'accessibilité pour empêcher les abus de logiciels malveillants"
@@ -323,7 +281,7 @@
         "ja": "Veeamは7つの重要なバックアップとパッチを適用します。 リモートでコードが実行されるレプリケーションの欠陥",
         "es": "Veeam parchea 7 copias de seguridad y actualizaciones críticas Defectos de replicación que permiten la ejecución remota de código",
         "pt": "Veeam corrige 7 atualizações críticas de backup e atualização Falhas de replicação que permitem execução remota de código",
-        "fr": "Veeam met à jour 7 les sauvegardes et les sauvegardes critiques Failles de réplication permettant l'exécution de code à distance"
+        "fr": "Veeam met à jour 7 les sauvegardes et sauvegardes critiques Failles de réplication permettant l'exécution de code à distance"
       },
       "titleOriginal": "Veeam Patches 7 Critical Backup &amp; Replication Flaws Allowing Remote Code Execution",
       "link": "https://thehackernews.com/2026/03/veeam-patches-7-critical-backup.html",
@@ -344,7 +302,7 @@
         "ja": "ThreatsDay 速報: OAuth トラップ、EDR キラー、シグナル フィッシング、ゾンビ ZIP、AI プラットフォーム ハックとセキュリティ もっと",
         "es": "Boletín ThreatsDay: OAuth Trap, EDR Killer, Signal Phishing, Zombie ZIP, AI Platform Hack &amp; Más",
         "pt": "Boletim ThreatsDay: OAuth Trap, EDR Killer, Signal Phishing, Zombie ZIP, AI Platform Hack &amp; Mais",
-        "fr": "Bulletin ThreatsDay : OAuth Trap, EDR Killer, Signal Phishing, Zombie ZIP, AI Platform Hack &amp; Plus"
+        "fr": "Bulletin ThreatsDay : OAuth Trap, EDR Killer, Signal Phishing, Zombie ZIP, AI Platform Hack &amp; Plus"
       },
       "titleOriginal": "ThreatsDay Bulletin: OAuth Trap, EDR Killer, Signal Phishing, Zombie ZIP, AI Platform Hack &amp; More",
       "link": "https://thehackernews.com/2026/03/threatsday-bulletin-oauth-trap-edr.html",
@@ -373,7 +331,7 @@
       "description": {
         "en": "Apple on Wednesday backported fixes for a security flaw in iOS, iPadOS, and macOS Sonoma to older versions after it was found to be used as part of the Coruna exploit kit. The vulnerability, tracked as CVE-2023-43010, relates to an unspecified vulnerability in WebKit that could result in memory corr",
         "ja": "Appleは水曜日、iOS、iPadOS、macOS Sonomaのセキュリティ上の欠陥がCorunaエクスプロイトキットの一部として使用されていることが判明したため、修正を古いバージョンにバックポートした。 この脆弱性は CVE-2023-43010 として追跡されており、メモリ破損を引き起こす可能性がある WebKit の不特定の脆弱性に関連しています。",
-        "es": "Apple respaldó el miércoles correcciones para una falla de seguridad en iOS, iPadOS y macOS Sonoma a versiones anteriores después de que se descubrió que se usaba como parte del kit de exploits Coruña. La vulnerabilidad, rastreada como CVE-2023-43010, se relaciona con una vulnerabilidad no especificada en WebKit que podría provocar errores de memoria.",
+        "es": "Apple respaldó el miércoles correcciones para una falla de seguridad en iOS, iPadOS y macOS Sonoma a versiones anteriores después de que se descubrió que se usaba como parte del kit de exploits Coruna. La vulnerabilidad, rastreada como CVE-2023-43010, se relaciona con una vulnerabilidad no especificada en WebKit que podría provocar errores de memoria.",
         "pt": "A Apple transferiu na quarta-feira correções para uma falha de segurança no iOS, iPadOS e macOS Sonoma para versões mais antigas depois que foi descoberto que ele era usado como parte do kit de exploração Coruna. A vulnerabilidade, rastreada como CVE-2023-43010, está relacionada a uma vulnerabilidade não especificada no WebKit que pode resultar em corrupção de memória",
         "fr": "Apple a rétroporté mercredi des correctifs pour une faille de sécurité dans iOS, iPadOS et macOS Sonoma vers des versions plus anciennes après qu'il a été découvert qu'elle était utilisée dans le cadre du kit d'exploitation Coruna. La vulnérabilité, suivie comme CVE-2023-43010, est liée à une vulnérabilité non spécifiée dans WebKit qui pourrait entraîner une correction de la mémoire."
       },
@@ -421,6 +379,27 @@
       },
       "descriptionOriginal": "Cybersecurity researchers have disclosed details of two now-patched security flaws in the n8n workflow automation platform, including two critical bugs that could result in arbitrary command execution. The vulnerabilities are listed below - CVE-2026-27577 (CVSS score: 9.4) - Expression sandbox escap",
       "source": "The Hacker News"
+    },
+    {
+      "title": {
+        "en": "Active defense: introducing a stateful vulnerability scanner for APIs",
+        "ja": "積極的な防御: API 用のステートフル脆弱性スキャナーの導入",
+        "es": "Defensa activa: introducción de un escáner de vulnerabilidades con estado para API",
+        "pt": "Defesa ativa: introdução de um scanner de vulnerabilidade com estado para APIs",
+        "fr": "Défense active : introduction d'un scanner de vulnérabilités avec état pour les API"
+      },
+      "titleOriginal": "Active defense: introducing a stateful vulnerability scanner for APIs",
+      "link": "https://blog.cloudflare.com/vulnerability-scanner/",
+      "pubDate": "2026-03-09T14:00:00.000Z",
+      "description": {
+        "en": "Cloudflare’s new Web and API Vulnerability Scanner helps teams proactively find logic flaws. By using AI to build API call graphs, we identify vulnerabilities that standard defensive tools miss.",
+        "ja": "Cloudflareの新しいWebおよびAPI脆弱性スキャナは、チームがロジックの欠陥を積極的に発見するのに役立ちます。 AI を使用して API コール グラフを構築することで、標準の防御ツールが見逃す脆弱性を特定します。",
+        "es": "El nuevo escáner de vulnerabilidades web y API de Cloudflare ayuda a los equipos a encontrar fallas lógicas de manera proactiva. Al utilizar IA para crear gráficos de llamadas API, identificamos vulnerabilidades que las herramientas defensivas estándar pasan por alto.",
+        "pt": "O novo scanner de vulnerabilidades de Web e API da Cloudflare ajuda as equipes a encontrar falhas lógicas de forma proativa. Ao usar IA para construir gráficos de chamadas de API, identificamos vulnerabilidades que as ferramentas defensivas padrão não percebem.",
+        "fr": "Le nouveau scanner de vulnérabilités Web et API de Cloudflare aide les équipes à trouver de manière proactive les failles logiques. En utilisant l’IA pour créer des graphiques d’appels d’API, nous identifions les vulnérabilités qui échappent aux outils défensifs standards."
+      },
+      "descriptionOriginal": "Cloudflare’s new Web and API Vulnerability Scanner helps teams proactively find logic flaws. By using AI to build API call graphs, we identify vulnerabilities that standard defensive tools miss.",
+      "source": "Cloudflare Blog"
     }
   ]
 }
