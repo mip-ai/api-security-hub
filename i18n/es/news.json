@@ -2,6 +2,11 @@
   "news_page_title": "Últimas noticias: Centro de referencia de seguridad API",
   "news_heading": "Seguridad API Últimas noticias",
   "news_subtitle": "Cubriendo incidentes recientes de vulnerabilidad de API, información CVE y tendencias de la industria.",
+  "news_feed_heading": "<span class=\"section-icon\">\uD83D\uDCE1</span> Últimas noticias",
+  "news_feed_loading": "Cargando noticias...",
+  "news_feed_error": "Error al cargar las noticias.",
+  "news_feed_last_updated": "Última actualización: ",
+
   "news_stat1_label": "Organizaciones que experimentaron problemas de seguridad de API (2025)",
   "news_stat2_label": "Aumento interanual de CVE relacionados con la IA (2024)",
   "news_stat3_label": "Ataques originados en sesiones autenticadas (2025)",

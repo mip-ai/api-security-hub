@@ -3,6 +3,11 @@
   "news_heading": "APIセキュリティ最新情報",
   "news_subtitle": "最近のAPI脆弱性インシデント、CVE情報、業界トレンドを紹介します。",
 
+  "news_feed_heading": "<span class=\"section-icon\">\uD83D\uDCE1</span> 最新ニュースフィード",
+  "news_feed_loading": "ニュースを読み込み中...",
+  "news_feed_error": "ニュースの読み込みに失敗しました。",
+  "news_feed_last_updated": "最終更新: ",
+
   "news_stat1_label": "APIセキュリティ問題を経験した組織 (2025)",
   "news_stat2_label": "AI関連CVEの前年比増加率 (2024)",
   "news_stat3_label": "認証済みセッションからの攻撃 (2025)",

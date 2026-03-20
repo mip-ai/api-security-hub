@@ -3,6 +3,11 @@
   "news_heading": "API Security Latest News",
   "news_subtitle": "Covering recent API vulnerability incidents, CVE information, and industry trends.",
 
+  "news_feed_heading": "<span class=\"section-icon\">\uD83D\uDCE1</span> Latest News Feed",
+  "news_feed_loading": "Loading news...",
+  "news_feed_error": "Failed to load news.",
+  "news_feed_last_updated": "Last updated: ",
+
   "news_stat1_label": "Organizations that experienced API security issues (2025)",
   "news_stat2_label": "Year-over-year increase in AI-related CVEs (2024)",
   "news_stat3_label": "Attacks originating from authenticated sessions (2025)",
