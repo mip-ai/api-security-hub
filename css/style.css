@@ -104,6 +104,19 @@ img {
   padding: 12px 0;
 }
 
+.sidebar-section-header {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 16px 20px 4px;
+  margin-top: 4px;
+}
+
+.sidebar-section-header:first-child {
+  margin-top: 0;
+}
+
 .sidebar-nav a {
   display: flex;
   align-items: center;

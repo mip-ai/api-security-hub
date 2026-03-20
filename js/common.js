@@ -20,67 +20,95 @@
     return match ? match[1] : 'en';
   }
 
+  // --- Section definitions for sidebar grouping ---
+  const SECTIONS = [
+    { id: 'api_security', labelKey: 'nav_section_api' },
+    { id: 'ai_security', labelKey: 'nav_section_ai' },
+    { id: 'information', labelKey: 'nav_section_info' },
+  ];
+
   // --- Page definitions (labels are embedded at build time via data-i18n) ---
   const pages = [
-    { href: 'index.html', icon: '\u{1F3E0}', labelKey: 'nav_home' },
-    { href: 'owasp-top10.html', icon: '\u{1F51F}', labelKey: 'nav_owasp' },
-    { href: 'auth.html', icon: '\u{1F510}', labelKey: 'nav_auth' },
-    { href: 'rate-limiting.html', icon: '\u26A1', labelKey: 'nav_rate_limiting' },
-    { href: 'tools.html', icon: '\u{1F6E0}', labelKey: 'nav_tools' },
-    { href: 'guidelines.html', icon: '\u{1F4CB}', labelKey: 'nav_guidelines' },
-    { href: 'news.html', icon: '\u{1F4F0}', labelKey: 'nav_news' },
-    { href: 'vendor-blogs.html', icon: '\u{1F4DD}', labelKey: 'nav_vendor_blogs' },
+    { href: 'index.html', icon: '\u{1F3E0}', labelKey: 'nav_home', section: null },
+    { href: 'owasp-top10.html', icon: '\u{1F51F}', labelKey: 'nav_owasp', section: 'api_security' },
+    { href: 'auth.html', icon: '\u{1F510}', labelKey: 'nav_auth', section: 'api_security' },
+    { href: 'rate-limiting.html', icon: '\u26A1', labelKey: 'nav_rate_limiting', section: 'api_security' },
+    { href: 'tools.html', icon: '\u{1F6E0}', labelKey: 'nav_tools', section: 'api_security' },
+    { href: 'guidelines.html', icon: '\u{1F4CB}', labelKey: 'nav_guidelines', section: 'api_security' },
+    { href: 'owasp-llm-top10.html', icon: '\u{1F916}', labelKey: 'nav_owasp_llm', section: 'ai_security' },
+    { href: 'news.html', icon: '\u{1F4F0}', labelKey: 'nav_news', section: 'information' },
+    { href: 'vendor-blogs.html', icon: '\u{1F4DD}', labelKey: 'nav_vendor_blogs', section: 'information' },
   ];
 
   // --- Nav labels per language (fallback if data-i18n not available) ---
   const NAV_LABELS = {
     en: {
       nav_home: 'Home',
+      nav_section_api: 'API Security',
+      nav_section_ai: 'AI Security',
+      nav_section_info: 'Information',
       nav_owasp: 'OWASP Top 10',
       nav_auth: 'Auth & Authorization',
       nav_rate_limiting: 'Rate Limiting & Validation',
       nav_tools: 'Security Tools',
       nav_guidelines: 'Internal Guidelines',
+      nav_owasp_llm: 'OWASP LLM Top 10',
       nav_news: 'Latest News',
       nav_vendor_blogs: 'Vendor Blogs',
     },
     ja: {
       nav_home: '\u30C8\u30C3\u30D7\u30DA\u30FC\u30B8',
+      nav_section_api: 'API\u30BB\u30AD\u30E5\u30EA\u30C6\u30A3',
+      nav_section_ai: 'AI\u30BB\u30AD\u30E5\u30EA\u30C6\u30A3',
+      nav_section_info: '\u60C5\u5831',
       nav_owasp: 'OWASP Top 10',
       nav_auth: '\u8A8D\u8A3C\u30FB\u8A8D\u53EF',
       nav_rate_limiting: '\u30EC\u30FC\u30C8\u5236\u9650\u30FB\u5165\u529B\u691C\u8A3C',
       nav_tools: '\u30BB\u30AD\u30E5\u30EA\u30C6\u30A3\u30C4\u30FC\u30EB',
       nav_guidelines: '\u793E\u5185\u30AC\u30A4\u30C9\u30E9\u30A4\u30F3',
+      nav_owasp_llm: 'OWASP LLM Top 10',
       nav_news: '\u6700\u65B0\u60C5\u5831',
       nav_vendor_blogs: '\u30D9\u30F3\u30C0\u30FC\u30D6\u30ED\u30B0',
     },
     es: {
       nav_home: 'Inicio',
+      nav_section_api: 'Seguridad API',
+      nav_section_ai: 'Seguridad IA',
+      nav_section_info: 'Informaci\u00F3n',
       nav_owasp: 'OWASP Top 10',
       nav_auth: 'Autenticaci\u00F3n',
       nav_rate_limiting: 'L\u00EDmite de tasa',
       nav_tools: 'Herramientas',
       nav_guidelines: 'Directrices',
+      nav_owasp_llm: 'OWASP LLM Top 10',
       nav_news: 'Noticias',
       nav_vendor_blogs: 'Blogs de Proveedores',
     },
     pt: {
       nav_home: 'In\u00EDcio',
+      nav_section_api: 'Seguran\u00E7a API',
+      nav_section_ai: 'Seguran\u00E7a IA',
+      nav_section_info: 'Informa\u00E7\u00E3o',
       nav_owasp: 'OWASP Top 10',
       nav_auth: 'Autentica\u00E7\u00E3o',
       nav_rate_limiting: 'Limite de taxa',
       nav_tools: 'Ferramentas',
       nav_guidelines: 'Diretrizes',
+      nav_owasp_llm: 'OWASP LLM Top 10',
       nav_news: 'Not\u00EDcias',
       nav_vendor_blogs: 'Blogs de Fornecedores',
     },
     fr: {
       nav_home: 'Accueil',
+      nav_section_api: 'S\u00E9curit\u00E9 API',
+      nav_section_ai: 'S\u00E9curit\u00E9 IA',
+      nav_section_info: 'Informations',
       nav_owasp: 'OWASP Top 10',
       nav_auth: 'Authentification',
       nav_rate_limiting: 'Limite de d\u00E9bit',
       nav_tools: 'Outils',
       nav_guidelines: 'Directives',
+      nav_owasp_llm: 'OWASP LLM Top 10',
       nav_news: 'Actualit\u00E9s',
       nav_vendor_blogs: 'Blogs Fournisseurs',
     },
@@ -141,6 +169,28 @@
 
     const current = currentFile();
 
+    // Build nav HTML with section grouping
+    let navHtml = '';
+    // Render pages without a section first (e.g. Home)
+    pages.filter(p => !p.section).forEach(p => {
+      navHtml += `<a href="${p.href}" class="${current === p.href ? 'active' : ''}">
+            <span class="nav-icon">${p.icon}</span>
+            <span>${getNavLabel(p.labelKey)}</span>
+          </a>`;
+    });
+    // Render each section with header
+    SECTIONS.forEach(sec => {
+      const sectionPages = pages.filter(p => p.section === sec.id);
+      if (sectionPages.length === 0) return;
+      navHtml += `<div class="sidebar-section-header">${getNavLabel(sec.labelKey)}</div>`;
+      sectionPages.forEach(p => {
+        navHtml += `<a href="${p.href}" class="${current === p.href ? 'active' : ''}">
+            <span class="nav-icon">${p.icon}</span>
+            <span>${getNavLabel(p.labelKey)}</span>
+          </a>`;
+      });
+    });
+
     sidebar.innerHTML = `
       <div class="sidebar-header">
         <div class="logo">
@@ -152,12 +202,7 @@
         </div>
       </div>
       <nav class="sidebar-nav">
-        ${pages.map(p => `
-          <a href="${p.href}" class="${current === p.href ? 'active' : ''}">
-            <span class="nav-icon">${p.icon}</span>
-            <span>${getNavLabel(p.labelKey)}</span>
-          </a>
-        `).join('')}
+        ${navHtml}
       </nav>
       <div class="lang-switcher">
         <div class="lang-switcher-label">\u{1F310} Language</div>
