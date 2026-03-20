@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-03-20T09:43:21.189Z",
-  "itemCount": 19,
+  "lastUpdated": "2026-03-20T15:44:34.942Z",
+  "itemCount": 18,
   "items": [
     {
       "title": {
@@ -397,28 +397,6 @@
       "descriptionOriginal": "Agentic AI represents a fundamental shift in how enterprises employ artificial intelligence. We are moving from passive assistants that generate content to autonomous systems that plan, reason, call APIs, and execute workflows. Organizations are investing in agentic AI for two clear business reasons",
       "source": "Cequence",
       "vendor": "cequence"
-    },
-    {
-      "title": {
-        "en": "From Shadow APIs to Shadow AI: How the API Threat Model Is Expanding Faster Than Most Defenses",
-        "ja": "シャドウ API からシャドウ AI へ: API 脅威モデルがどのようにしてほとんどの防御よりも速く拡大しているか",
-        "es": "De las API en la sombra a la IA en la sombra: cómo el modelo de amenazas a las API se está expandiendo más rápido que la mayoría de las defensas",
-        "pt": "De Shadow APIs a Shadow AI: como o modelo de ameaças de API está se expandindo mais rápido que a maioria das defesas",
-        "fr": "Des API Shadow à l'IA Shadow : comment le modèle de menace des API se développe plus rapidement que la plupart des défenses"
-      },
-      "titleOriginal": "From Shadow APIs to Shadow AI: How the API Threat Model Is Expanding Faster Than Most Defenses",
-      "link": "https://lab.wallarm.com/shadow-ai-api-security-risk/",
-      "pubDate": "2026-02-18T12:00:00.000Z",
-      "description": {
-        "en": "The shadow technology problem is getting worse.&#160; Over the past few years, organizations have scaled microservices, cloud-native apps, and partner integrations faster than corporate governance models could keep up, resulting in undocumented or shadow APIs. We’re now seeing this pattern all over ",
-        "ja": "シャドウ テクノロジーの問題は悪化しています。&#160; 過去数年間、組織はコーポレート ガバナンス モデルが追いつかないほどの速さでマイクロサービス、クラウド ネイティブ アプリ、パートナー統合を拡張してきたため、文書化されていない API やシャドウ API が発生しています。 今ではこのパターンがあちこちで見られます",
-        "es": "El problema de la tecnología oculta está empeorando.&#160; En los últimos años, las organizaciones han ampliado los microservicios, las aplicaciones nativas de la nube y las integraciones de socios más rápido de lo que los modelos de gobierno corporativo podrían mantener, lo que ha resultado en API ocultas o no documentadas. Ahora estamos viendo este patrón en todas partes",
-        "pt": "O problema da tecnologia paralela está piorando. Nos últimos anos, as organizações escalaram microsserviços, aplicativos nativos da nuvem e integrações de parceiros mais rapidamente do que os modelos de governança corporativa poderiam acompanhar, resultando em APIs não documentadas ou ocultas. Agora estamos vendo esse padrão por toda parte",
-        "fr": "Le problème de la technologie fantôme s’aggrave. Au cours des dernières années, les organisations ont fait évoluer leurs microservices, leurs applications cloud natives et leurs intégrations de partenaires plus rapidement que les modèles de gouvernance d'entreprise ne pouvaient suivre, ce qui a abouti à des API non documentées ou fantômes. Nous voyons maintenant ce schéma partout"
-      },
-      "descriptionOriginal": "The shadow technology problem is getting worse.&#160; Over the past few years, organizations have scaled microservices, cloud-native apps, and partner integrations faster than corporate governance models could keep up, resulting in undocumented or shadow APIs. We’re now seeing this pattern all over ",
-      "source": "Wallarm",
-      "vendor": "wallarm"
     }
   ]
 }
