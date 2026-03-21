@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-20T21:31:49.667Z",
+  "lastUpdated": "2026-03-21T04:27:13.074Z",
   "itemCount": 20,
   "items": [
     {
@@ -57,10 +57,10 @@
       "pubDate": "2026-03-20T15:15:00.000Z",
       "description": {
         "en": "A critical security flaw impacting Langflow has come under active exploitation within 20 hours of public disclosure, highlighting the speed at which threat actors weaponize newly published vulnerabilities. The security defect, tracked as CVE-2026-33017 (CVSS score: 9.3), is a case of missing authent",
-        "ja": "Langflow に影響を与える重大なセキュリティ上の欠陥は、公開から 20 時間以内に積極的に悪用されており、脅威アクターが新たに公開された脆弱性を武器化するスピードの速さを浮き彫りにしています。 CVE-2026-33017 (CVSS スコア: 9.3) として追跡されているセキュリティ欠陥は、認証が欠落しているケースです。",
+        "ja": "Langflow に影響を与える重大なセキュリティ上の欠陥は、公開から 20 時間以内に積極的に悪用されており、脅威アクターが新たに公開された脆弱性を武器化するスピードの速さを浮き彫りにしています。 CVE-2026-33017 (CVSS スコア: 9.3) として追跡されるセキュリティ欠陥は、認証が欠落しているケースです。",
         "es": "Una falla de seguridad crítica que afecta a Langflow ha sido explotada activamente dentro de las 20 horas posteriores a la divulgación pública, lo que destaca la velocidad a la que los actores de amenazas utilizan como arma las vulnerabilidades recientemente publicadas. El defecto de seguridad, identificado como CVE-2026-33017 (puntuación CVSS: 9,3), es un caso de falta de autenticación.",
         "pt": "Uma falha crítica de segurança que afeta o Langflow foi explorada ativamente 20 horas após a divulgação pública, destacando a velocidade com que os atores da ameaça transformam em armas as vulnerabilidades recém-publicadas. O defeito de segurança, rastreado como CVE-2026-33017 (pontuação CVSS: 9,3), é um caso de falta de autenticação",
-        "fr": "Une faille de sécurité critique affectant Langflow a été activement exploitée dans les 20 heures suivant sa divulgation publique, mettant en évidence la vitesse à laquelle les acteurs malveillants exploitent les vulnérabilités nouvellement publiées. Le défaut de sécurité, identifié comme CVE-2026-33017 (score CVSS : 9,3), est un cas d'authentification manquante."
+        "fr": "Une faille de sécurité critique affectant Langflow a été activement exploitée dans les 20 heures suivant sa divulgation publique, soulignant la vitesse à laquelle les acteurs malveillants exploitent les vulnérabilités nouvellement publiées. Le défaut de sécurité, identifié comme CVE-2026-33017 (score CVSS : 9,3), est un cas d'authentification manquante."
       },
       "descriptionOriginal": "A critical security flaw impacting Langflow has come under active exploitation within 20 hours of public disclosure, highlighting the speed at which threat actors weaponize newly published vulnerabilities. The security defect, tracked as CVE-2026-33017 (CVSS score: 9.3), is a case of missing authent",
       "source": "The Hacker News"
@@ -120,7 +120,7 @@
       "pubDate": "2026-03-20T08:38:56.000Z",
       "description": {
         "en": "Because attacker-supplied flow data is used in public flows, the bug leads to unauthenticated remote code execution. The post Critical Langflow Vulnerability Exploited Hours After Public Disclosure appeared first on SecurityWeek.",
-        "ja": "攻撃者が提供したフロー データはパブリック フローで使用されるため、このバグにより認証されていないリモート コードが実行されます。 「Langflow の重大な脆弱性、公開から数時間後に悪用された」という投稿が SecurityWeek に最初に掲載されました。",
+        "ja": "攻撃者が提供したフロー データはパブリック フローで使用されるため、このバグにより認証されていないリモート コードが実行されます。 「Langflow の重大な脆弱性、公開から数時間後に悪用された」という記事は、SecurityWeek に最初に掲載されました。",
         "es": "Debido a que los datos de flujo proporcionados por el atacante se utilizan en flujos públicos, el error conduce a la ejecución remota de código no autenticado. La publicación Vulnerabilidad crítica de Langflow explotada horas después de la divulgación pública apareció por primera vez en SecurityWeek.",
         "pt": "Como os dados de fluxo fornecidos pelo invasor são usados ​​em fluxos públicos, o bug leva à execução remota de código não autenticado. A postagem Vulnerabilidade crítica do Langflow explorada horas após a divulgação pública apareceu pela primeira vez na SecurityWeek.",
         "fr": "Étant donné que les données de flux fournies par l'attaquant sont utilisées dans des flux publics, le bug conduit à l'exécution de code à distance non authentifié. La vulnérabilité critique Langflow exploitée quelques heures après la divulgation publique est apparue en premier sur SecurityWeek."
@@ -183,7 +183,7 @@
       "pubDate": "2026-03-19T06:05:00.000Z",
       "description": {
         "en": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) has urged government agencies to apply patches for two security flaws impacting Synacor Zimbra Collaboration Suite (ZCS) and Microsoft Office SharePoint, stating they have been actively exploited in the wild. The vulnerabilities in que",
-        "ja": "米国サイバーセキュリティ・インフラストラクチャセキュリティ庁（CISA）は、Synacor Zimbra Collaboration Suite（ZCS）とMicrosoft Office SharePointに影響を与える2つのセキュリティ上の欠陥が実際に活発に悪用されているとして、政府機関にパッチを適用するよう促した。 que の脆弱性",
+        "ja": "米国サイバーセキュリティ・インフラセキュリティ庁（CISA）は、Synacor Zimbra Collaboration Suite（ZCS）とMicrosoft Office SharePointに影響を与える2つのセキュリティ上の欠陥が実際に悪用されているとして、政府機関にパッチを適用するよう促した。 que の脆弱性",
         "es": "La Agencia de Seguridad de Infraestructura y Ciberseguridad de EE. UU. (CISA) ha instado a las agencias gubernamentales a aplicar parches para dos fallas de seguridad que afectan a Synacor Zimbra Collaboration Suite (ZCS) y Microsoft Office SharePoint, afirmando que han sido explotadas activamente en la naturaleza. Las vulnerabilidades en que",
         "pt": "A Agência de Segurança Cibernética e de Infraestrutura dos EUA (CISA) instou as agências governamentais a aplicarem patches para duas falhas de segurança que afetam o Synacor Zimbra Collaboration Suite (ZCS) e o Microsoft Office SharePoint, afirmando que eles foram ativamente explorados em estado selvagem. As vulnerabilidades em que",
         "fr": "L'Agence américaine de cybersécurité et de sécurité des infrastructures (CISA) a exhorté les agences gouvernementales à appliquer des correctifs pour deux failles de sécurité affectant Synacor Zimbra Collaboration Suite (ZCS) et Microsoft Office SharePoint, affirmant qu'elles ont été activement exploitées dans la nature. Les vulnérabilités en que"
@@ -216,7 +216,7 @@
       "title": {
         "en": "Critical Unpatched Telnetd Flaw (CVE-2026-32746) Enables Unauthenticated Root RCE",
         "ja": "パッチが適用されていない Telnetd の重大な欠陥 (CVE-2026-32746) により、認証されていないルート RCE が有効になる",
-        "es": "Critical Unpatched Telnetd Flaw (CVE-2026-32746) Enables Unauthenticated Root RCE",
+        "es": "Fallo crítico de Telnetd sin parches (CVE-2026-32746) permite RCE raíz no autenticado",
         "pt": "Falha crítica de Telnetd não corrigida (CVE-2026-32746) permite RCE raiz não autenticado",
         "fr": "Une faille Telnetd critique non corrigée (CVE-2026-32746) permet un RCE racine non authentifié"
       },
@@ -226,7 +226,7 @@
       "description": {
         "en": "Cybersecurity researchers have disclosed a critical security flaw impacting the GNU InetUtils telnet daemon (telnetd) that could be exploited by an unauthenticated remote attacker to execute arbitrary code with elevated privileges. The vulnerability, tracked as CVE-2026-32746, carries a CVSS score o",
         "ja": "サイバーセキュリティ研究者は、GNU InetUtils Telnet デーモン (telnetd) に影響を与える重大なセキュリティ上の欠陥を明らかにしました。この欠陥は、認証されていないリモート攻撃者によって悪用され、昇格された特権で任意のコードを実行する可能性があります。 この脆弱性は CVE-2026-32746 として追跡されており、CVSS スコアは次のとおりです。",
-        "es": "Investigadores de ciberseguridad han revelado una falla de seguridad crítica que afecta al demonio telnet GNU InetUtils (telnetd) y que podría ser explotada por un atacante remoto no autenticado para ejecutar código arbitrario con privilegios elevados. The vulnerability, tracked as CVE-2026-32746, carries a CVSS score o",
+        "es": "Investigadores de ciberseguridad han revelado una falla de seguridad crítica que afecta al demonio telnet GNU InetUtils (telnetd) y que podría ser explotada por un atacante remoto no autenticado para ejecutar código arbitrario con privilegios elevados. La vulnerabilidad, rastreada como CVE-2026-32746, lleva una puntuación CVSS o",
         "pt": "Pesquisadores de segurança cibernética revelaram uma falha crítica de segurança que afeta o daemon telnet GNU InetUtils (telnetd) que poderia ser explorado por um invasor remoto não autenticado para executar código arbitrário com privilégios elevados. A vulnerabilidade, rastreada como CVE-2026-32746, carrega uma pontuação CVSS de",
         "fr": "Des chercheurs en cybersécurité ont révélé une faille de sécurité critique affectant le démon telnet GNU InetUtils (telnetd) qui pourrait être exploitée par un attaquant distant non authentifié pour exécuter du code arbitraire avec des privilèges élevés. La vulnérabilité, suivie comme CVE-2026-32746, porte un score CVSS o"
       },
@@ -236,7 +236,7 @@
     {
       "title": {
         "en": "Ubuntu CVE-2026-3888 Bug Lets Attackers Gain Root via systemd Cleanup Timing Exploit",
-        "ja": "Ubuntu CVE-2026-3888 のバグにより、攻撃者は systemd クリーンアップ タイミングを悪用してルートを取得できます",
+        "ja": "Ubuntu CVE-2026-3888 のバグにより、攻撃者が systemd クリーンアップ タイミングを悪用してルートを取得できる",
         "es": "El error CVE-2026-3888 de Ubuntu permite a los atacantes obtener raíz a través del exploit de sincronización de limpieza systemd",
         "pt": "Bug CVE-2026-3888 do Ubuntu permite que invasores ganhem root por meio da exploração de tempo de limpeza do systemd",
         "fr": "Le bug Ubuntu CVE-2026-3888 permet aux attaquants d'obtenir la racine via l'exploit de synchronisation de nettoyage systemd"
@@ -246,9 +246,9 @@
       "pubDate": "2026-03-18T08:08:00.000Z",
       "description": {
         "en": "A high-severity security flaw affecting default installations of Ubuntu Desktop versions 24.04 and later could be exploited to escalate privileges to the root level. Tracked as CVE-2026-3888 (CVSS score: 7.8), the issue could allow an attacker to seize control of a susceptible system. \"This flaw (CV",
-        "ja": "A high-severity security flaw affecting default installations of Ubuntu Desktop versions 24.04 and later could be exploited to escalate privileges to the root level. CVE-2026-3888 (CVSS スコア: 7.8) として追跡されているこの問題により、攻撃者が影響を受けやすいシステムの制御を奪われる可能性があります。 「この欠陥（CV",
+        "ja": "Ubuntu Desktop バージョン 24.04 以降のデフォルトのインストールに影響を与える重大度の高いセキュリティ上の欠陥が悪用され、権限がルート レベルに昇格される可能性があります。 CVE-2026-3888 (CVSS スコア: 7.8) として追跡されているこの問題により、攻撃者が影響を受けやすいシステムの制御を奪われる可能性があります。 「この欠陥（CV",
         "es": "Una falla de seguridad de alta gravedad que afecta las instalaciones predeterminadas de las versiones 24.04 y posteriores de Ubuntu Desktop podría aprovecharse para escalar privilegios al nivel raíz. Registrado como CVE-2026-3888 (puntuación CVSS: 7,8), el problema podría permitir a un atacante tomar el control de un sistema susceptible. \"Este defecto (CV",
-        "pt": "Uma falha de segurança de alta gravidade que afeta as instalações padrão do Ubuntu Desktop versões 24.04 e posteriores pode ser explorada para escalar privilégios para o nível raiz. Rastreado como CVE-2026-3888 (pontuação CVSS: 7,8), o problema pode permitir que um invasor assuma o controle de um sistema suscetível. \"Esta falha (CV",
+        "pt": "Uma falha de segurança de alta gravidade que afeta as instalações padrão do Ubuntu Desktop versões 24.04 e posteriores pode ser explorada para escalar privilégios para o nível raiz. Rastreado como CVE-2026-3888 (pontuação CVSS: 7,8), o problema pode permitir que um invasor assuma o controle de um sistema suscetível. \"Essa falha (CV",
         "fr": "Une faille de sécurité de haute gravité affectant les installations par défaut d'Ubuntu Desktop versions 24.04 et ultérieures pourrait être exploitée pour élever les privilèges au niveau racine. Suivi comme CVE-2026-3888 (score CVSS : 7,8), le problème pourrait permettre à un attaquant de prendre le contrôle d'un système sensible. \"Cette faille (CV"
       },
       "descriptionOriginal": "A high-severity security flaw affecting default installations of Ubuntu Desktop versions 24.04 and later could be exploited to escalate privileges to the root level. Tracked as CVE-2026-3888 (CVSS score: 7.8), the issue could allow an attacker to seize control of a susceptible system. \"This flaw (CV",
@@ -269,7 +269,7 @@
         "en": "Apple on Tuesday released its first round of Background Security Improvements to address a security flaw in WebKit that affects iOS, iPadOS, and macOS. The vulnerability, tracked as CVE-2026-20643 (CVSS score: N/A), has been described as a cross-origin issue in WebKit's Navigation API that could be ",
         "ja": "Appleは火曜日、iOS、iPadOS、macOSに影響を与えるWebKitのセキュリティ欠陥に対処するため、バックグラウンドセキュリティ改善の第一弾をリリースした。 この脆弱性は CVE-2026-20643 (CVSS スコア: N/A) として追跡され、WebKit のナビゲーション API のクロスオリジンの問題として説明されています。",
         "es": "Apple lanzó el martes su primera ronda de mejoras de seguridad en segundo plano para abordar una falla de seguridad en WebKit que afecta a iOS, iPadOS y macOS. La vulnerabilidad, rastreada como CVE-2026-20643 (puntuación CVSS: N/A), se ha descrito como un problema de origen cruzado en la API de navegación de WebKit que podría ser",
-        "pt": "A Apple lançou na terça-feira sua primeira rodada de melhorias de segurança em segundo plano para solucionar uma falha de segurança no WebKit que afeta iOS, iPadOS e macOS. A vulnerabilidade, rastreada como CVE-2026-20643 (pontuação CVSS: N/A), foi descrita como um problema de origem cruzada na API de navegação do WebKit que pode ser",
+        "pt": "A Apple lançou na terça-feira sua primeira rodada de melhorias de segurança em segundo plano para solucionar uma falha de segurança no WebKit que afeta iOS, iPadOS e macOS. A vulnerabilidade, rastreada como CVE-2026-20643 (pontuação CVSS: N/A), foi descrita como um problema de origem cruzada na API de navegação do WebKit que poderia ser",
         "fr": "Apple a publié mardi sa première série d'améliorations de la sécurité en arrière-plan pour corriger une faille de sécurité dans WebKit qui affecte iOS, iPadOS et macOS. La vulnérabilité, suivie comme CVE-2026-20643 (score CVSS : N/A), a été décrite comme un problème d'origine croisée dans l'API de navigation de WebKit qui pourrait être"
       },
       "descriptionOriginal": "Apple on Tuesday released its first round of Background Security Improvements to address a security flaw in WebKit that affects iOS, iPadOS, and macOS. The vulnerability, tracked as CVE-2026-20643 (CVSS score: N/A), has been described as a cross-origin issue in WebKit's Navigation API that could be ",
@@ -344,7 +344,7 @@
         "ja": "Veeamは7つの重要なバックアップとパッチを適用します。 リモートでコードが実行されるレプリケーションの欠陥",
         "es": "Veeam parchea 7 copias de seguridad y actualizaciones críticas Defectos de replicación que permiten la ejecución remota de código",
         "pt": "Veeam corrige 7 atualizações críticas de backup e atualização Falhas de replicação que permitem execução remota de código",
-        "fr": "Veeam met à jour 7 les sauvegardes et les sauvegardes critiques Failles de réplication permettant l'exécution de code à distance"
+        "fr": "Veeam met à jour 7 les sauvegardes et sauvegardes critiques Failles de réplication permettant l'exécution de code à distance"
       },
       "titleOriginal": "Veeam Patches 7 Critical Backup &amp; Replication Flaws Allowing Remote Code Execution",
       "link": "https://thehackernews.com/2026/03/veeam-patches-7-critical-backup.html",
@@ -365,7 +365,7 @@
         "ja": "ThreatsDay 速報: OAuth トラップ、EDR キラー、シグナル フィッシング、ゾンビ ZIP、AI プラットフォーム ハックとセキュリティ もっと",
         "es": "Boletín ThreatsDay: OAuth Trap, EDR Killer, Signal Phishing, Zombie ZIP, AI Platform Hack &amp; Más",
         "pt": "Boletim ThreatsDay: OAuth Trap, EDR Killer, Signal Phishing, Zombie ZIP, AI Platform Hack &amp; Mais",
-        "fr": "Bulletin ThreatsDay : OAuth Trap, EDR Killer, Signal Phishing, Zombie ZIP, AI Platform Hack &amp; Plus"
+        "fr": "Bulletin ThreatsDay : OAuth Trap, EDR Killer, Signal Phishing, Zombie ZIP, AI Platform Hack &amp; Plus"
       },
       "titleOriginal": "ThreatsDay Bulletin: OAuth Trap, EDR Killer, Signal Phishing, Zombie ZIP, AI Platform Hack &amp; More",
       "link": "https://thehackernews.com/2026/03/threatsday-bulletin-oauth-trap-edr.html",
@@ -394,7 +394,7 @@
       "description": {
         "en": "Apple on Wednesday backported fixes for a security flaw in iOS, iPadOS, and macOS Sonoma to older versions after it was found to be used as part of the Coruna exploit kit. The vulnerability, tracked as CVE-2023-43010, relates to an unspecified vulnerability in WebKit that could result in memory corr",
         "ja": "Appleは水曜日、iOS、iPadOS、macOS Sonomaのセキュリティ上の欠陥がCorunaエクスプロイトキットの一部として使用されていることが判明したため、修正を古いバージョンにバックポートした。 この脆弱性は CVE-2023-43010 として追跡されており、メモリ破損を引き起こす可能性がある WebKit の不特定の脆弱性に関連しています。",
-        "es": "Apple respaldó el miércoles correcciones para una falla de seguridad en iOS, iPadOS y macOS Sonoma a versiones anteriores después de que se descubrió que se usaba como parte del kit de exploits Coruña. La vulnerabilidad, rastreada como CVE-2023-43010, se relaciona con una vulnerabilidad no especificada en WebKit que podría provocar errores de memoria.",
+        "es": "Apple respaldó el miércoles correcciones para una falla de seguridad en iOS, iPadOS y macOS Sonoma a versiones anteriores después de que se descubrió que se usaba como parte del kit de exploits Coruna. La vulnerabilidad, rastreada como CVE-2023-43010, se relaciona con una vulnerabilidad no especificada en WebKit que podría provocar errores de memoria.",
         "pt": "A Apple transferiu na quarta-feira correções para uma falha de segurança no iOS, iPadOS e macOS Sonoma para versões mais antigas depois que foi descoberto que ele era usado como parte do kit de exploração Coruna. A vulnerabilidade, rastreada como CVE-2023-43010, está relacionada a uma vulnerabilidade não especificada no WebKit que pode resultar em corrupção de memória",
         "fr": "Apple a rétroporté mercredi des correctifs pour une faille de sécurité dans iOS, iPadOS et macOS Sonoma vers des versions plus anciennes après qu'il a été découvert qu'elle était utilisée dans le cadre du kit d'exploitation Coruna. La vulnérabilité, suivie comme CVE-2023-43010, est liée à une vulnérabilité non spécifiée dans WebKit qui pourrait entraîner une correction de la mémoire."
       },
