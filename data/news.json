@@ -1,7 +1,28 @@
 {
-  "lastUpdated": "2026-03-21T04:27:13.074Z",
+  "lastUpdated": "2026-03-21T09:32:41.324Z",
   "itemCount": 20,
   "items": [
+    {
+      "title": {
+        "en": "CISA Flags Apple, Craft CMS, Laravel Bugs in KEV, Orders Patching by April 3, 2026",
+        "ja": "CISAがApple、Craft CMS、KEVのLaravelバグにフラグを立て、2026年4月3日までにパッチ適用を命令",
+        "es": "CISA señala errores de Apple, Craft CMS y Laravel en KEV y solicita parches antes del 3 de abril de 2026",
+        "pt": "CISA sinaliza Apple, Craft CMS, Laravel Bugs em KEV, patch de pedidos até 3 de abril de 2026",
+        "fr": "CISA signale Apple, Craft CMS, Laravel Bugs dans KEV et ordonne la mise à jour d'ici le 3 avril 2026"
+      },
+      "titleOriginal": "CISA Flags Apple, Craft CMS, Laravel Bugs in KEV, Orders Patching by April 3, 2026",
+      "link": "https://thehackernews.com/2026/03/cisa-flags-apple-craft-cms-laravel-bugs.html",
+      "pubDate": "2026-03-21T08:25:00.000Z",
+      "description": {
+        "en": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Friday added five security flaws impacting Apple, Craft CMS, and Laravel Livewire to its Known Exploited Vulnerabilities (KEV) catalog, urging federal agencies to patch them by April 3, 2026. The vulnerabilities that have come under",
+        "ja": "米国サイバーセキュリティ・インフラセキュリティ庁（CISA）は金曜日、Apple、Craft CMS、Laravel Livewireに影響を与える5つのセキュリティ上の欠陥を既知の悪用された脆弱性（KEV）カタログに追加し、連邦政府機関に対し2026年4月3日までにパッチを適用するよう求めた。",
+        "es": "La Agencia de Seguridad de Infraestructura y Ciberseguridad de EE. UU. (CISA) agregó el viernes cinco fallas de seguridad que afectan a Apple, Craft CMS y Laravel Livewire a su catálogo de vulnerabilidades explotadas conocidas (KEV), instando a las agencias federales a parchearlas antes del 3 de abril de 2026. Las vulnerabilidades que se han visto afectadas",
+        "pt": "A Agência de Segurança Cibernética e de Infraestrutura dos EUA (CISA) adicionou na sexta-feira cinco falhas de segurança que afetam Apple, Craft CMS e Laravel Livewire ao seu catálogo de Vulnerabilidades Exploradas Conhecidas (KEV), instando as agências federais a corrigi-las até 3 de abril de 2026. As vulnerabilidades que surgiram",
+        "fr": "L'Agence américaine de cybersécurité et de sécurité des infrastructures (CISA) a ajouté vendredi cinq failles de sécurité affectant Apple, Craft CMS et Laravel Livewire à son catalogue de vulnérabilités exploitées connues (KEV), exhortant les agences fédérales à les corriger d'ici le 3 avril 2026."
+      },
+      "descriptionOriginal": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Friday added five security flaws impacting Apple, Craft CMS, and Laravel Livewire to its Known Exploited Vulnerabilities (KEV) catalog, urging federal agencies to patch them by April 3, 2026. The vulnerabilities that have come under",
+      "source": "The Hacker News"
+    },
     {
       "title": {
         "en": "Oracle pushes emergency fix for critical Identity Manager RCE flaw",
@@ -378,27 +399,6 @@
         "fr": "Un autre jeudi, une autre pile de trucs de sécurité étranges qui se sont produits en seulement sept jours. Certaines d’entre elles sont intelligentes. Une partie est paresseuse. Quelques éléments entrent dans cette catégorie inconfortable du « ouais… cela va probablement apparaître dans de vrais incidents plus tôt que nous le souhaiterions ». Le modèle de cette semaine semble"
       },
       "descriptionOriginal": "Another Thursday, another pile of weird security stuff that somehow happened in just seven days. Some of it is clever. Some of it is lazy. A few bits fall into that uncomfortable category of “yeah… this is probably going to show up in real incidents sooner than we’d like.” The pattern this week feel",
-      "source": "The Hacker News"
-    },
-    {
-      "title": {
-        "en": "Apple Issues Security Updates for Older iOS Devices Targeted by Coruna WebKit Exploit",
-        "ja": "Apple、Coruna WebKitエクスプロイトの標的となった古いiOSデバイスのセキュリティアップデートを発行",
-        "es": "Apple publica actualizaciones de seguridad para dispositivos iOS más antiguos atacados por el exploit Coruna WebKit",
-        "pt": "Apple emite atualizações de segurança para dispositivos iOS mais antigos direcionados pela exploração do Coruna WebKit",
-        "fr": "Apple publie des mises à jour de sécurité pour les anciens appareils iOS ciblés par l'exploit Coruna WebKit"
-      },
-      "titleOriginal": "Apple Issues Security Updates for Older iOS Devices Targeted by Coruna WebKit Exploit",
-      "link": "https://thehackernews.com/2026/03/apple-issues-security-updates-for-older.html",
-      "pubDate": "2026-03-12T09:58:00.000Z",
-      "description": {
-        "en": "Apple on Wednesday backported fixes for a security flaw in iOS, iPadOS, and macOS Sonoma to older versions after it was found to be used as part of the Coruna exploit kit. The vulnerability, tracked as CVE-2023-43010, relates to an unspecified vulnerability in WebKit that could result in memory corr",
-        "ja": "Appleは水曜日、iOS、iPadOS、macOS Sonomaのセキュリティ上の欠陥がCorunaエクスプロイトキットの一部として使用されていることが判明したため、修正を古いバージョンにバックポートした。 この脆弱性は CVE-2023-43010 として追跡されており、メモリ破損を引き起こす可能性がある WebKit の不特定の脆弱性に関連しています。",
-        "es": "Apple respaldó el miércoles correcciones para una falla de seguridad en iOS, iPadOS y macOS Sonoma a versiones anteriores después de que se descubrió que se usaba como parte del kit de exploits Coruna. La vulnerabilidad, rastreada como CVE-2023-43010, se relaciona con una vulnerabilidad no especificada en WebKit que podría provocar errores de memoria.",
-        "pt": "A Apple transferiu na quarta-feira correções para uma falha de segurança no iOS, iPadOS e macOS Sonoma para versões mais antigas depois que foi descoberto que ele era usado como parte do kit de exploração Coruna. A vulnerabilidade, rastreada como CVE-2023-43010, está relacionada a uma vulnerabilidade não especificada no WebKit que pode resultar em corrupção de memória",
-        "fr": "Apple a rétroporté mercredi des correctifs pour une faille de sécurité dans iOS, iPadOS et macOS Sonoma vers des versions plus anciennes après qu'il a été découvert qu'elle était utilisée dans le cadre du kit d'exploitation Coruna. La vulnérabilité, suivie comme CVE-2023-43010, est liée à une vulnérabilité non spécifiée dans WebKit qui pourrait entraîner une correction de la mémoire."
-      },
-      "descriptionOriginal": "Apple on Wednesday backported fixes for a security flaw in iOS, iPadOS, and macOS Sonoma to older versions after it was found to be used as part of the Coruna exploit kit. The vulnerability, tracked as CVE-2023-43010, relates to an unspecified vulnerability in WebKit that could result in memory corr",
       "source": "The Hacker News"
     },
     {
