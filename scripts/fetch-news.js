@@ -1,7 +1,7 @@
 /**
- * API Security News Fetcher (Multilingual)
+ * API & AI Security News Fetcher (Multilingual)
  *
- * Fetches security news from RSS feeds, filters for API-related content,
+ * Fetches security news from RSS feeds, filters for API & AI security content,
  * translates to multiple languages, and outputs to data/news.json.
  *
  * Runs via GitHub Actions cron at JST 6:00, 12:00, 18:00, 0:00.
@@ -43,8 +43,9 @@ const TARGET_LANGS = [
   { code: 'fr', googleCode: 'fr' },
 ];
 
-// --- Tier 1: API-specific keywords (match alone = include) ---
+// --- Tier 1: API & AI security keywords (match alone = include) ---
 const TIER1_KEYWORDS = [
+  // API-specific
   'api',
   'rest api',
   'graphql',
@@ -67,10 +68,30 @@ const TIER1_KEYWORDS = [
   'rate limit',
   'ssrf',
   'microservice',
+  // AI / LLM / Agentic security
+  'llm',
+  'large language model',
+  'ai agent',
+  'agentic ai',
+  'prompt injection',
+  'ai security',
+  'ai safety',
+  'genai',
+  'generative ai',
+  'model poisoning',
+  'rag attack',
+  'retrieval augmented',
+  'ai vulnerability',
+  'llm vulnerability',
+  'owasp llm',
+  'owasp agentic',
+  'ai supply chain',
+  'agent hijack',
 ];
 
-// --- Tier 2: General security keywords (match only when Tier 1 also matches) ---
+// --- Tier 2: General security keywords (match only when 2+ match) ---
 const TIER2_KEYWORDS = [
+  // General security
   'authentication bypass',
   'authorization',
   'injection',
@@ -86,6 +107,19 @@ const TIER2_KEYWORDS = [
   'data leak',
   'data exposure',
   'security flaw',
+  // AI / ML general
+  'artificial intelligence',
+  'machine learning',
+  'chatbot',
+  'copilot',
+  'deepfake',
+  'hallucination',
+  'training data',
+  'fine-tuning',
+  'model jailbreak',
+  'ai model',
+  'neural network',
+  'adversarial attack',
 ];
 
 const FOURTEEN_DAYS_MS = 14 * 24 * 60 * 60 * 1000;

@@ -1,11 +1,11 @@
 {
-  "lastUpdated": "2026-03-21T21:27:30.217Z",
+  "lastUpdated": "2026-03-21T23:35:08.209Z",
   "itemCount": 20,
   "items": [
     {
       "title": {
         "en": "Trivy vulnerability scanner breach pushed infostealer via GitHub Actions",
-        "ja": "Trivy 脆弱性スキャナ侵害により、GitHub Actions 経由でインフォスティーラーがプッシュされました",
+        "ja": "Trivy 脆弱性スキャナ侵害が GitHub Actions 経由でインフォスティーラーをプッシュ",
         "es": "La violación del escáner de vulnerabilidades de Trivy empujó al ladrón de información a través de GitHub Actions",
         "pt": "Violação do scanner de vulnerabilidade Trivy enviou infostealer por meio do GitHub Actions",
         "fr": "La violation du scanner de vulnérabilité Trivy a poussé le voleur d'informations via les actions GitHub"
@@ -57,10 +57,10 @@
       "pubDate": "2026-03-21T10:24:00.000Z",
       "description": {
         "en": "Oracle has released security updates to address a critical security flaw impacting Identity Manager and Web Services Manager that could be exploited to achieve remote code execution. The vulnerability, tracked as CVE-2026-21992, carries a CVSS score of 9.8 out of a maximum of 10.0. \"This vulnerabili",
-        "ja": "オラクルは、Identity Manager および Web Services Manager に影響を与える重大なセキュリティ上の欠陥に対処するためのセキュリティ アップデートをリリースしました。この欠陥が悪用されてリモート コードが実行される可能性があります。 この脆弱性は CVE-2026-21992 として追跡され、CVSS スコアは最大 10.0 点中 9.8 点です。 「この脆弱性は",
+        "ja": "オラクルは、Identity Manager および Web Services Manager に影響を与える重大なセキュリティ上の欠陥に対処するためのセキュリティ アップデートをリリースしました。この欠陥が悪用されてリモート コードが実行される可能性があります。 この脆弱性は CVE-2026-21992 として追跡され、CVSS スコアは最大 10.0 点中 9.8 点です。 「この脆弱性は、",
         "es": "Oracle ha publicado actualizaciones de seguridad para abordar una falla de seguridad crítica que afecta a Identity Manager y Web Services Manager y que podría explotarse para lograr la ejecución remota de código. La vulnerabilidad, rastreada como CVE-2026-21992, tiene una puntuación CVSS de 9,8 de un máximo de 10,0. \"Esta vulnerabilidad",
         "pt": "A Oracle lançou atualizações de segurança para solucionar uma falha crítica de segurança que afeta o Identity Manager e o Web Services Manager e que poderia ser explorada para obter execução remota de código. A vulnerabilidade, rastreada como CVE-2026-21992, carrega uma pontuação CVSS de 9,8 de um máximo de 10,0. “Essa vulnerabilidade",
-        "fr": "Oracle a publié des mises à jour de sécurité pour corriger une faille de sécurité critique affectant Identity Manager et Web Services Manager qui pourrait être exploitée pour réaliser l'exécution de code à distance. La vulnérabilité, identifiée comme CVE-2026-21992, présente un score CVSS de 9,8 sur un maximum de 10,0. \"Cette vulnérabilité"
+        "fr": "Oracle a publié des mises à jour de sécurité pour corriger une faille de sécurité critique affectant Identity Manager et Web Services Manager qui pourrait être exploitée pour réaliser l'exécution de code à distance. La vulnérabilité, identifiée comme CVE-2026-21992, a un score CVSS de 9,8 sur un maximum de 10,0. \"Cette vulnérabilité"
       },
       "descriptionOriginal": "Oracle has released security updates to address a critical security flaw impacting Identity Manager and Web Services Manager that could be exploited to achieve remote code execution. The vulnerability, tracked as CVE-2026-21992, carries a CVSS score of 9.8 out of a maximum of 10.0. \"This vulnerabili",
       "source": "The Hacker News"
@@ -172,6 +172,27 @@
     },
     {
       "title": {
+        "en": "The Importance of Behavioral Analytics in AI-Enabled Cyber Attacks",
+        "ja": "AI を活用したサイバー攻撃における行動分析の重要性",
+        "es": "La importancia del análisis del comportamiento en los ciberataques basados ​​en IA",
+        "pt": "A importância da análise comportamental em ataques cibernéticos habilitados para IA",
+        "fr": "L'importance de l'analyse comportementale dans les cyberattaques basées sur l'IA"
+      },
+      "titleOriginal": "The Importance of Behavioral Analytics in AI-Enabled Cyber Attacks",
+      "link": "https://thehackernews.com/2026/03/the-importance-of-behavioral-analytics.html",
+      "pubDate": "2026-03-20T10:00:00.000Z",
+      "description": {
+        "en": "Artificial Intelligence (AI) is changing how individuals and organizations conduct many activities, including how cybercriminals carry out phishing attacks and iterate on malware. Now, cybercriminals are using AI to generate personalized phishing emails, deepfakes and malware that evade traditional ",
+        "ja": "人工知能 (AI) は、サイバー犯罪者によるフィッシング攻撃の実行方法やマルウェアの反復方法など、個人や組織の多くの活動の実行方法を変えています。 現在、サイバー犯罪者は AI を使用して、従来のセキュリティを回避するパーソナライズされたフィッシングメール、ディープフェイク、マルウェアを生成しています。",
+        "es": "La Inteligencia Artificial (IA) está cambiando la forma en que las personas y las organizaciones realizan muchas actividades, incluida la forma en que los ciberdelincuentes llevan a cabo ataques de phishing e iteran sobre malware. Ahora, los ciberdelincuentes utilizan la IA para generar correos electrónicos de phishing personalizados, deepfakes y malware que evaden los métodos tradicionales.",
+        "pt": "A Inteligência Artificial (IA) está mudando a forma como indivíduos e organizações realizam muitas atividades, incluindo a forma como os cibercriminosos realizam ataques de phishing e iteram em malware. Agora, os cibercriminosos estão usando IA para gerar e-mails de phishing personalizados, deepfakes e malware que escapam aos tradicionais",
+        "fr": "L'intelligence artificielle (IA) change la façon dont les individus et les organisations mènent de nombreuses activités, notamment la façon dont les cybercriminels mènent des attaques de phishing et réitèrent les logiciels malveillants. Désormais, les cybercriminels utilisent l'IA pour générer des e-mails de phishing personnalisés, des deepfakes et des logiciels malveillants qui échappent aux méthodes traditionnelles."
+      },
+      "descriptionOriginal": "Artificial Intelligence (AI) is changing how individuals and organizations conduct many activities, including how cybercriminals carry out phishing attacks and iterate on malware. Now, cybercriminals are using AI to generate personalized phishing emails, deepfakes and malware that evade traditional ",
+      "source": "The Hacker News"
+    },
+    {
+      "title": {
         "en": "Magento PolyShell Flaw Enables Unauthenticated Uploads, RCE and Account Takeover",
         "ja": "Magento PolyShell の欠陥により、認証されていないアップロード、RCE、アカウント乗っ取りが可能になる",
         "es": "La falla de Magento PolyShell permite cargas no autenticadas, RCE y apropiación de cuentas",
@@ -228,7 +249,7 @@
         "ja": "エンドポイント検出および対応 (EDR) キラーの新しい分析により、そのうちの 54 が脆弱なドライバーの持ち込み (BYOVD) として知られる手法を利用し、合計 35 の脆弱なドライバーを悪用していることが明らかになりました。 EDR キラー プログラムは、ランサムウェア侵入において一般的に存在します。",
         "es": "Un nuevo análisis de los asesinos de detección y respuesta de endpoints (EDR) ha revelado que 54 de ellos aprovechan una técnica conocida como trae tu propio controlador vulnerable (BYOVD) al abusar de un total de 35 controladores vulnerables. Los programas asesinos de EDR han sido una presencia común en las intrusiones de ransomware, ya que ofrecen una forma de",
         "pt": "Uma nova análise de assassinos de detecção e resposta de endpoint (EDR) revelou que 54 deles aproveitam uma técnica conhecida como traga seu próprio driver vulnerável (BYOVD), abusando de um total de 35 drivers vulneráveis. Os programas EDR killer têm sido uma presença comum em invasões de ransomware, pois oferecem uma solução",
-        "fr": "Une nouvelle analyse des tueurs EDR (Endpoint Detection and Response) a révélé que 54 d’entre eux exploitent une technique connue sous le nom de BYOVD (Bring Your Own Vulnable Driver) en abusant d’un total de 35 conducteurs vulnérables. Les programmes tueurs EDR sont courants dans les intrusions de ransomwares car ils offrent une solution"
+        "fr": "Une nouvelle analyse des tueurs de détection et de réponse aux points finaux (EDR) a révélé que 54 d'entre eux exploitent une technique connue sous le nom de BYOVD (Bring Your Own Vulnable Driver) en abusant d'un total de 35 conducteurs vulnérables. Les programmes tueurs EDR sont fréquemment présents dans les intrusions de ransomwares car ils offrent une solution de sécurité."
       },
       "descriptionOriginal": "A new analysis of endpoint detection and response (EDR) killers has revealed that 54 of them leverage a technique known as bring your own vulnerable driver (BYOVD) by abusing a total of 35 vulnerable drivers. EDR killer programs have been a common presence in ransomware intrusions as they offer a wa",
       "source": "The Hacker News"
@@ -299,7 +320,7 @@
     {
       "title": {
         "en": "Ubuntu CVE-2026-3888 Bug Lets Attackers Gain Root via systemd Cleanup Timing Exploit",
-        "ja": "Ubuntu CVE-2026-3888 のバグにより、攻撃者が systemd クリーンアップ タイミングを悪用してルートを取得できる",
+        "ja": "Ubuntu CVE-2026-3888 のバグにより、攻撃者は systemd クリーンアップ タイミングを悪用してルートを取得できます",
         "es": "El error CVE-2026-3888 de Ubuntu permite a los atacantes obtener raíz a través del exploit de sincronización de limpieza systemd",
         "pt": "Bug CVE-2026-3888 do Ubuntu permite que invasores ganhem root por meio da exploração de tempo de limpeza do systemd",
         "fr": "Le bug Ubuntu CVE-2026-3888 permet aux attaquants d'obtenir la racine via l'exploit de synchronisation de nettoyage systemd"
@@ -323,7 +344,7 @@
         "ja": "Apple、iOS および macOS で同一オリジン ポリシーのバイパスを可能にする WebKit の脆弱性を修正",
         "es": "Apple corrige la vulnerabilidad de WebKit permitiendo omitir la política del mismo origen en iOS y macOS",
         "pt": "Apple corrige vulnerabilidade do WebKit, permitindo ignorar políticas de mesma origem no iOS e macOS",
-        "fr": "Apple corrige la vulnérabilité de WebKit permettant le contournement de la politique de même origine sur iOS et macOS"
+        "fr": "Apple corrige la vulnérabilité de WebKit permettant de contourner la politique de même origine sur iOS et macOS"
       },
       "titleOriginal": "Apple Fixes WebKit Vulnerability Enabling Same-Origin Policy Bypass on iOS and macOS",
       "link": "https://thehackernews.com/2026/03/apple-fixes-webkit-vulnerability.html",
@@ -332,7 +353,7 @@
         "en": "Apple on Tuesday released its first round of Background Security Improvements to address a security flaw in WebKit that affects iOS, iPadOS, and macOS. The vulnerability, tracked as CVE-2026-20643 (CVSS score: N/A), has been described as a cross-origin issue in WebKit's Navigation API that could be ",
         "ja": "Appleは火曜日、iOS、iPadOS、macOSに影響を与えるWebKitのセキュリティ欠陥に対処するため、バックグラウンドセキュリティ改善の第一弾をリリースした。 この脆弱性は CVE-2026-20643 (CVSS スコア: N/A) として追跡され、WebKit のナビゲーション API のクロスオリジンの問題として説明されています。",
         "es": "Apple lanzó el martes su primera ronda de mejoras de seguridad en segundo plano para abordar una falla de seguridad en WebKit que afecta a iOS, iPadOS y macOS. La vulnerabilidad, rastreada como CVE-2026-20643 (puntuación CVSS: N/A), se ha descrito como un problema de origen cruzado en la API de navegación de WebKit que podría ser",
-        "pt": "A Apple lançou na terça-feira sua primeira rodada de melhorias de segurança em segundo plano para solucionar uma falha de segurança no WebKit que afeta iOS, iPadOS e macOS. A vulnerabilidade, rastreada como CVE-2026-20643 (pontuação CVSS: N/A), foi descrita como um problema de origem cruzada na API de navegação do WebKit que pode ser",
+        "pt": "A Apple lançou na terça-feira sua primeira rodada de melhorias de segurança em segundo plano para solucionar uma falha de segurança no WebKit que afeta iOS, iPadOS e macOS. A vulnerabilidade, rastreada como CVE-2026-20643 (pontuação CVSS: N/A), foi descrita como um problema de origem cruzada na API de navegação do WebKit que poderia ser",
         "fr": "Apple a publié mardi sa première série d'améliorations de la sécurité en arrière-plan pour corriger une faille de sécurité dans WebKit qui affecte iOS, iPadOS et macOS. La vulnérabilité, suivie comme CVE-2026-20643 (score CVSS : N/A), a été décrite comme un problème d'origine croisée dans l'API de navigation de WebKit qui pourrait être"
       },
       "descriptionOriginal": "Apple on Tuesday released its first round of Background Security Improvements to address a security flaw in WebKit that affects iOS, iPadOS, and macOS. The vulnerability, tracked as CVE-2026-20643 (CVSS score: N/A), has been described as a cross-origin issue in WebKit's Navigation API that could be ",
@@ -361,6 +382,27 @@
     },
     {
       "title": {
+        "en": "⚡ Weekly Recap: Chrome 0-Days, Router Botnets, AWS Breach, Rogue AI Agents &amp; More",
+        "ja": "⚡ 毎週の要約: Chrome ゼロデイ、ルーター ボットネット、AWS ブリーチ、不正 AI エージェント、および もっと",
+        "es": "⚡ Resumen semanal: Chrome 0-Days, Botnets de enrutadores, Incumplimiento de AWS, Agentes de IA no autorizados y amenazas Más",
+        "pt": "⚡ Recapitulação semanal: Chrome 0-Days, botnets de roteador, violação da AWS, agentes de IA desonestos e ameaças. Mais",
+        "fr": "⚡ Récapitulatif hebdomadaire : Chrome 0-Days, botnets de routeurs, violations AWS, agents Rogue AI et amp; Plus"
+      },
+      "titleOriginal": "⚡ Weekly Recap: Chrome 0-Days, Router Botnets, AWS Breach, Rogue AI Agents &amp; More",
+      "link": "https://thehackernews.com/2026/03/weekly-recap-chrome-0-days-router.html",
+      "pubDate": "2026-03-16T14:17:00.000Z",
+      "description": {
+        "en": "Some weeks in security feel normal. Then you read a few tabs and get that immediate “ah, great, we’re doing this now” feeling. This week has that energy. Fresh messes, old problems getting sharper, and research that stops feeling theoretical real fast. A few bits hit a little too close to real life,",
+        "ja": "数週間の安全な生活が普通に感じられます。 次に、いくつかのタブを読むと、すぐに「ああ、すごい、今これをやっているんだ」という感覚が得られます。 今週はそのエネルギーがあります。 新鮮な混乱、より鮮明になっている古い問題、そして理論的だと感じられなくなる研究。 いくつかの点は現実の生活に少し近づきすぎていますが、",
+        "es": "Algunas semanas en seguridad se sienten normales. Luego lees algunas pestañas y tienes esa sensación inmediata de \"ah, genial, estamos haciendo esto ahora\". Esta semana tiene esa energía. Nuevos líos, viejos problemas que se vuelven más agudos e investigaciones que dejan de parecer teóricas muy rápidamente. Algunas partes se acercan demasiado a la vida real,",
+        "pt": "Algumas semanas em segurança parecem normais. Então você lê algumas guias e tem aquela sensação imediata de “ah, ótimo, estamos fazendo isso agora”. Esta semana tem essa energia. Novas bagunças, velhos problemas ficando mais nítidos e pesquisas que deixam de parecer teóricas muito rapidamente. Algumas partes chegaram um pouco perto demais da vida real,",
+        "fr": "Quelques semaines en sécurité semblent normales. Ensuite, vous lisez quelques onglets et ressentez immédiatement ce sentiment « ah, super, nous faisons ça maintenant ». Cette semaine a cette énergie. De nouveaux dégâts, d'anciens problèmes qui deviennent plus aigus et des recherches qui cessent très vite de paraître théoriques. Quelques passages sont un peu trop proches de la réalité,"
+      },
+      "descriptionOriginal": "Some weeks in security feel normal. Then you read a few tabs and get that immediate “ah, great, we’re doing this now” feeling. This week has that energy. Fresh messes, old problems getting sharper, and research that stops feeling theoretical real fast. A few bits hit a little too close to real life,",
+      "source": "The Hacker News"
+    },
+    {
+      "title": {
         "en": "Android 17 Blocks Non-Accessibility Apps from Accessibility API to Prevent Malware Abuse",
         "ja": "Android 17 は、マルウェアの悪用を防ぐために、アクセシビリティ非対応アプリをアクセシビリティ API からブロックします",
         "es": "Android 17 bloquea aplicaciones que no son de accesibilidad de la API de accesibilidad para evitar el abuso de malware",
@@ -378,48 +420,6 @@
         "fr": "Google teste une nouvelle fonctionnalité de sécurité dans le cadre du mode de protection avancée Android (AAPM) qui empêche certains types d'applications d'utiliser l'API des services d'accessibilité. Le changement, incorporé dans Android 17 Beta 2, a été signalé pour la première fois par Android Authority la semaine dernière. AAPM a été introduit par Google i"
       },
       "descriptionOriginal": "Google is testing a new security feature as part of Android Advanced Protection Mode (AAPM) that prevents certain kinds of apps from using the accessibility services API. The change, incorporated in Android 17 Beta 2, was first reported by Android Authority last week. AAPM was introduced by Google i",
-      "source": "The Hacker News"
-    },
-    {
-      "title": {
-        "en": "Google Fixes Two Chrome Zero-Days Exploited in the Wild Affecting Skia and V8",
-        "ja": "Google、Skia と V8 に影響を与える、実際に悪用された 2 つの Chrome ゼロデイを修正",
-        "es": "Google corrige dos Chrome Zero-Day explotados en estado salvaje que afectan a Skia y V8",
-        "pt": "Google corrige dois dias zero do Chrome explorados na natureza, afetando Skia e V8",
-        "fr": "Google corrige deux Chrome Zero-Days exploités dans la nature affectant Skia et V8"
-      },
-      "titleOriginal": "Google Fixes Two Chrome Zero-Days Exploited in the Wild Affecting Skia and V8",
-      "link": "https://thehackernews.com/2026/03/google-fixes-two-chrome-zero-days.html",
-      "pubDate": "2026-03-13T09:17:00.000Z",
-      "description": {
-        "en": "Google on Thursday released security updates for its Chrome web browser to address two high-severity vulnerabilities that it said have been exploited in the wild. The list of vulnerabilities is as follows - CVE-2026-3909 (CVSS score: 8.8) - An out-of-bounds write vulnerability in the Skia 2D graphic",
-        "ja": "Googleは木曜日、実際に悪用されているとされる2つの重大度の高い脆弱性に対処するため、Chrome Webブラウザのセキュリティアップデートをリリースした。 脆弱性のリストは次のとおりです - CVE-2026-3909 (CVSS スコア: 8.8) - Skia 2D グラフィックの境界外書き込みの脆弱性",
-        "es": "Google lanzó el jueves actualizaciones de seguridad para su navegador web Chrome para abordar dos vulnerabilidades de alta gravedad que, según dijo, han sido explotadas en la naturaleza. La lista de vulnerabilidades es la siguiente: CVE-2026-3909 (puntuación CVSS: 8,8): una vulnerabilidad de escritura fuera de límites en el gráfico Skia 2D.",
-        "pt": "O Google lançou na quinta-feira atualizações de segurança para seu navegador Chrome para solucionar duas vulnerabilidades de alta gravidade que, segundo ele, foram exploradas em estado selvagem. A lista de vulnerabilidades é a seguinte - CVE-2026-3909 (pontuação CVSS: 8,8) - Uma vulnerabilidade de gravação fora dos limites no gráfico Skia 2D",
-        "fr": "Google a publié jeudi des mises à jour de sécurité pour son navigateur Web Chrome afin de corriger deux vulnérabilités de haute gravité qui, selon lui, ont été exploitées de manière sauvage. La liste des vulnérabilités est la suivante - CVE-2026-3909 (score CVSS : 8,8) - Une vulnérabilité d'écriture hors limites dans le graphique Skia 2D"
-      },
-      "descriptionOriginal": "Google on Thursday released security updates for its Chrome web browser to address two high-severity vulnerabilities that it said have been exploited in the wild. The list of vulnerabilities is as follows - CVE-2026-3909 (CVSS score: 8.8) - An out-of-bounds write vulnerability in the Skia 2D graphic",
-      "source": "The Hacker News"
-    },
-    {
-      "title": {
-        "en": "Veeam Patches 7 Critical Backup &amp; Replication Flaws Allowing Remote Code Execution",
-        "ja": "Veeamは7つの重要なバックアップとパッチを適用します。 リモートでコードが実行されるレプリケーションの欠陥",
-        "es": "Veeam parchea 7 copias de seguridad y actualizaciones críticas Defectos de replicación que permiten la ejecución remota de código",
-        "pt": "Veeam corrige 7 atualizações críticas de backup e atualização Falhas de replicação que permitem execução remota de código",
-        "fr": "Veeam met à jour 7 les sauvegardes et les sauvegardes critiques Failles de réplication permettant l'exécution de code à distance"
-      },
-      "titleOriginal": "Veeam Patches 7 Critical Backup &amp; Replication Flaws Allowing Remote Code Execution",
-      "link": "https://thehackernews.com/2026/03/veeam-patches-7-critical-backup.html",
-      "pubDate": "2026-03-13T04:15:00.000Z",
-      "description": {
-        "en": "Veeam has released security updates to address multiple critical vulnerabilities in its Backup & Replication software that, if successfully exploited, could result in remote code execution. The vulnerabilities are as follows - CVE-2026-21666 (CVSS score: 9.9) - A vulnerability that allows an authent",
-        "ja": "Veeam は、悪用に成功するとリモートでコードが実行される可能性があるバックアップ & レプリケーション ソフトウェアの複数の重大な脆弱性に対処するセキュリティ アップデートをリリースしました。 脆弱性は以下のとおりです ・ CVE-2026-21666 (CVSS スコア: 9.9) ・ 認証が可能になる脆弱性",
-        "es": "Veeam ha lanzado actualizaciones de seguridad para abordar múltiples vulnerabilidades críticas en su software Backup & Replication que, si se explotan con éxito, podrían resultar en la ejecución remota de código. Las vulnerabilidades son las siguientes: CVE-2026-21666 (puntuación CVSS: 9,9): una vulnerabilidad que permite a un usuario",
-        "pt": "A Veeam lançou atualizações de segurança para solucionar diversas vulnerabilidades críticas em seu software de Backup e Replicação que, se exploradas com sucesso, podem resultar na execução remota de código. As vulnerabilidades são as seguintes - CVE-2026-21666 (pontuação CVSS: 9,9) - Uma vulnerabilidade que permite uma autenticação",
-        "fr": "Veeam a publié des mises à jour de sécurité pour corriger plusieurs vulnérabilités critiques de son logiciel de sauvegarde et de réplication qui, si elles sont exploitées avec succès, pourraient entraîner l'exécution de code à distance. Les vulnérabilités sont les suivantes - CVE-2026-21666 (score CVSS : 9,9) - Une vulnérabilité qui permet"
-      },
-      "descriptionOriginal": "Veeam has released security updates to address multiple critical vulnerabilities in its Backup & Replication software that, if successfully exploited, could result in remote code execution. The vulnerabilities are as follows - CVE-2026-21666 (CVSS score: 9.9) - A vulnerability that allows an authent",
       "source": "The Hacker News"
     }
   ]

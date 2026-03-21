@@ -1,7 +1,7 @@
 /**
  * Vendor Blog Fetcher (Multilingual)
  *
- * Fetches blog posts from API security vendor RSS feeds,
+ * Fetches blog posts from API & AI security vendor RSS feeds,
  * translates to multiple languages, and outputs to data/vendor-blogs.json.
  *
  * No keyword filtering needed — vendor blogs are already security-focused.
@@ -11,8 +11,9 @@ const fs = require('fs');
 const path = require('path');
 const translate = require('google-translate-api-x');
 
-// --- RSS Feed Sources (API Security Vendors) ---
+// --- RSS Feed Sources (API & AI Security Vendors) ---
 const FEEDS = [
+  // API Security Vendors
   {
     url: 'https://salt.security/blog/rss.xml',
     source: 'Salt Security',
@@ -32,6 +33,17 @@ const FEEDS = [
     url: 'https://www.imperva.com/blog/feed/',
     source: 'Imperva',
     vendor: 'imperva',
+  },
+  // AI Security Vendors
+  {
+    url: 'https://protectai.com/blog/rss.xml',
+    source: 'Protect AI',
+    vendor: 'protectai',
+  },
+  {
+    url: 'https://blog.trailofbits.com/feed/',
+    source: 'Trail of Bits',
+    vendor: 'trailofbits',
   },
 ];
 

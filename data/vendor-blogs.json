@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-03-21T21:29:31.391Z",
-  "itemCount": 17,
+  "lastUpdated": "2026-03-21T23:35:17.331Z",
+  "itemCount": 19,
   "items": [
     {
       "title": {
@@ -82,7 +82,7 @@
       "description": {
         "en": "Announcing Agent Personas in the Cequence AI Gateway, which allow organizations and employees to manage AI agent privileges at a granular level. It provides the ability to control, monitor, and govern what an AI agent is allowed to do within a system, including data access, tool calls, system action",
         "ja": "Cequence AI Gateway でのエージェント ペルソナの発表。これにより、組織や従業員は AI エージェントの権限を詳細なレベルで管理できるようになります。 データ アクセス、ツール呼び出し、システム アクションなど、AI エージェントがシステム内で実行できる内容を制御、監視、管理する機能を提供します。",
-        "es": "Anuncio de Agent Personas en Cequence AI Gateway, que permite a las organizaciones y empleados administrar los privilegios de los agentes de AI a un nivel granular. Proporciona la capacidad de controlar, monitorear y gobernar lo que un agente de IA puede hacer dentro de un sistema, incluido el acceso a datos, llamadas a herramientas y acciones del sistema.",
+        "es": "Anuncio de Agent Personas en Cequence AI Gateway, que permite a las organizaciones y a los empleados administrar los privilegios de los agentes de AI a un nivel granular. Proporciona la capacidad de controlar, monitorear y gobernar lo que un agente de IA puede hacer dentro de un sistema, incluido el acceso a datos, llamadas a herramientas y acciones del sistema.",
         "pt": "Anunciamos Agent Personas no Cequence AI Gateway, que permite que organizações e funcionários gerenciem privilégios de agentes de IA em um nível granular. Ele fornece a capacidade de controlar, monitorar e governar o que um agente de IA pode fazer dentro de um sistema, incluindo acesso a dados, chamadas de ferramentas, ações do sistema",
         "fr": "Annonce des agents Personas dans Cequence AI Gateway, qui permettent aux organisations et aux employés de gérer les privilèges des agents IA à un niveau granulaire. Il offre la possibilité de contrôler, surveiller et gouverner ce qu'un agent IA est autorisé à faire au sein d'un système, y compris l'accès aux données, les appels d'outils, les actions du système."
       },
@@ -106,7 +106,7 @@
         "ja": "取締役会は AI を望んでいます。 開発者はそれを使用して構築しています。 予算委員会は ROI スケジュールを求めています。 しかし、CISO であるあなたは、「これが安全であるとどうやってわかるのですか?」という避けられない質問が生じたときに答えなければなりません。 あなたがほとんどのセキュリティリーダーと同じなら、あなたは 2 つの不可能な問題の間で板挟みになっているでしょう。",
         "es": "Tu junta quiere IA. Tus desarrolladores están construyendo con él. Su comité de presupuesto solicita un cronograma de retorno de la inversión. Pero como CISO, usted es quien tiene que responder cuando surge la inevitable pregunta: \"¿Cómo sabemos que esto es seguro?\" Si eres como la mayoría de los líderes de seguridad, estás atrapado entre dos obstáculos.",
         "pt": "Seu conselho quer IA. Seus desenvolvedores estão construindo com isso. Seu comitê de orçamento está solicitando um cronograma de ROI. Mas, como CISO, é você quem deve responder quando surge a pergunta inevitável: \"Como sabemos que isso é seguro?\" Se você é como a maioria dos líderes de segurança, você está preso entre dois impossíveis",
-        "fr": "Votre conseil d'administration veut l'IA. Vos développeurs construisent avec. Votre comité budgétaire demande un calendrier de retour sur investissement. Mais en tant que RSSI, c'est vous qui devez répondre lorsque l'inévitable question se pose : « Comment pouvons-nous savoir si cela est sécurisé ? » Si vous êtes comme la plupart des responsables de la sécurité, vous êtes pris entre deux impossibilités"
+        "fr": "Votre conseil d'administration veut de l'IA. Vos développeurs construisent avec. Votre comité budgétaire demande un calendrier de retour sur investissement. Mais en tant que RSSI, c'est vous qui devez répondre lorsque l'inévitable question se pose : « Comment pouvons-nous savoir si cela est sécurisé ? » Si vous êtes comme la plupart des responsables de la sécurité, vous êtes pris entre deux impossibilités"
       },
       "descriptionOriginal": "Your board wants AI. Your developers are building with it. Your budget committee is asking for an ROI timeline. But as CISO, you're the one who has to answer when the inevitable question comes up: \"How do we know this is secure?\" If you're like most security leaders, you're caught between two imposs",
       "source": "Wallarm",
@@ -133,6 +133,28 @@
       "descriptionOriginal": "AI systems are no longer just isolated models responding to human prompts.&#160; In modern production environments, they are increasingly chained together – delegating tasks, calling tools, and coordinating decisions with limited or no human oversight. Almost all that communication happens through A",
       "source": "Wallarm",
       "vendor": "wallarm"
+    },
+    {
+      "title": {
+        "en": "Six mistakes in ERC-4337 smart accounts",
+        "ja": "ERC-4337 スマート アカウントの 6 つの間違い",
+        "es": "Seis errores en las cuentas inteligentes ERC-4337",
+        "pt": "Seis erros em contas inteligentes ERC-4337",
+        "fr": "Six erreurs dans les comptes intelligents ERC-4337"
+      },
+      "titleOriginal": "Six mistakes in ERC-4337 smart accounts",
+      "link": "https://blog.trailofbits.com/2026/03/11/six-mistakes-in-erc-4337-smart-accounts/",
+      "pubDate": "2026-03-11T11:00:00.000Z",
+      "description": {
+        "en": "<p>Account abstraction transforms fixed “private key can do anything” models into programmable systems that enable batching, recovery and spending limits, and flexible gas payment. But that programmability introduces risks: a single bug can be as catastrophic as leaking a private key.</p> <p>After a",
+        "ja": "<p>アカウントの抽象化により、固定された「秘密キーで何でもできる」モデルが、バッチ処理、回収と支出の制限、柔軟なガス支払いを可能にするプログラム可能なシステムに変換されます。 しかし、そのプログラマビリティにはリスクが伴います。単一のバグは、秘密鍵の漏洩と同じくらい致命的なものになる可能性があります。</p> <p>",
+        "es": "<p>La abstracción de cuentas transforma modelos fijos de “la clave privada puede hacer cualquier cosa” en sistemas programables que permiten límites de procesamiento por lotes, recuperación y gasto, y pagos flexibles de gas. Pero esa programabilidad presenta riesgos: un solo error puede ser tan catastrófico como la filtración de una clave privada.</p> <p>Después de un",
+        "pt": "<p>A abstração de contas transforma modelos fixos de “chave privada pode fazer qualquer coisa” em sistemas programáveis ​​que permitem lotes, recuperação e limites de gastos, além de pagamento flexível de gás. Mas essa programabilidade introduz riscos: um único bug pode ser tão catastrófico quanto o vazamento de uma chave privada.</p> <p>Depois de um",
+        "fr": "<p>L'abstraction de compte transforme les modèles fixes « la clé privée peut tout faire » en systèmes programmables qui permettent des limites de traitement par lots, de récupération et de dépenses, ainsi qu'un paiement flexible du gaz. Mais cette programmabilité introduit des risques : un seul bug peut être aussi catastrophique que la fuite d'une clé privée.</p> <p>Après une"
+      },
+      "descriptionOriginal": "<p>Account abstraction transforms fixed “private key can do anything” models into programmable systems that enable batching, recovery and spending limits, and flexible gas payment. But that programmability introduces risks: a single bug can be as catastrophic as leaking a private key.</p> <p>After a",
+      "source": "Trail of Bits",
+      "vendor": "trailofbits"
     },
     {
       "title": {
@@ -170,7 +192,7 @@
       "description": {
         "en": "Learn three distinct ways that poorly governed and insecure APIs are silently draining enterprise budgets today.",
         "ja": "今日、管理が不十分で安全でない API が企業の予算を静かに浪費している 3 つの明確な方法を学びましょう。",
-        "es": "Conozca tres formas distintas en las que las API inseguras y mal gobernadas están agotando silenciosamente los presupuestos empresariales en la actualidad.",
+        "es": "Conozca tres formas distintas en las que las API inseguras y mal gobernadas están agotando silenciosamente los presupuestos empresariales de hoy.",
         "pt": "Aprenda três maneiras distintas pelas quais APIs mal gerenciadas e inseguras estão drenando silenciosamente os orçamentos empresariais hoje.",
         "fr": "Découvrez trois façons distinctes par lesquelles les API mal gouvernées et non sécurisées épuisent silencieusement les budgets des entreprises aujourd'hui."
       },
@@ -194,7 +216,7 @@
         "ja": "概要 私たちは、n8n の資格情報管理層に、アプリケーションのセキュリティを完全に侵害する可能性のあるセキュリティ上の弱点を特定しました。 この調査結果は、ワークフロー自動化プラットフォームにおける集中認証の中核的なリスクを浮き彫りにしています。 n8n は中央ハブ接続として機能します。",
         "es": "Resumen ejecutivo Identificamos una debilidad de seguridad en la capa de administración de credenciales de n8n que podría haber comprometido completamente la seguridad de la aplicación. Este hallazgo resalta los riesgos principales de la autenticación centralizada en las plataformas de automatización del flujo de trabajo. Como n8n sirve como centro de conexión central",
         "pt": "Resumo executivo Identificamos uma falha de segurança na camada de gerenciamento de credenciais do n8n que poderia ter comprometido completamente a segurança do aplicativo. Esta descoberta destaca os principais riscos da autenticação centralizada em plataformas de automação de fluxo de trabalho. Como n8n serve como hub central de conexão",
-        "fr": "Résumé Nous avons identifié une faille de sécurité dans la couche de gestion des informations d'identification de n8n qui aurait pu complètement compromettre la sécurité de l'application. Cette découverte met en évidence les principaux risques de l’authentification centralisée dans les plateformes d’automatisation des flux de travail. Comme n8n sert de hub central de connexion"
+        "fr": "Résumé Nous avons identifié une faille de sécurité dans la couche de gestion des informations d'identification de n8n qui aurait pu complètement compromettre la sécurité de l'application. Cette découverte met en évidence les principaux risques de l’authentification centralisée dans les plateformes d’automatisation des flux de travail. Comme n8n sert de hub de connexion central"
       },
       "descriptionOriginal": "Executive Summary We identified a security weakness in n8n’s credential management layer that could have completely compromised the application’s security. This finding highlights the core risks of centralized authentication in workflow automation platforms. As n8n serves as the central hub connecti",
       "source": "Imperva",
@@ -213,7 +235,7 @@
       "pubDate": "2026-03-03T14:00:23.000Z",
       "description": {
         "en": "Why Cequence Is Co-Chairing TM Forum&#8217;s AI-Native Blueprint Initiative This past Sunday, at Mobile World Congress in Barcelona, TM Forum officially named Cequence Security as Co-Chair of its AI-Native Blueprint Initiative, specifically leading the Agentic Interaction Security workstream. For th",
-        "ja": "Cequence が TM フォーラムの AI ネイティブ ブループリント イニシアチブの共同議長を務める理由 先週の日曜日、バルセロナで開催されたモバイル ワールド コングレスで、TM フォーラムは正式に Cequence セキュリティを AI ネイティブ ブループリント イニシアチブの共同議長に任命し、特にエージェントティック インタラクション セキュリティ ワークストリームを主導しました。 のために",
+        "ja": "Cequence が TM フォーラムの AI ネイティブ ブループリント イニシアティブの共同議長を務める理由 先週の日曜日、バルセロナで開催されたモバイル ワールド コングレスで、TM フォーラムは正式に Cequence セキュリティを AI ネイティブ ブループリント イニシアチブの共同議長に任命し、特にエージェントティック インタラクション セキュリティ ワークストリームを主導しました。 のために",
         "es": "Por qué Cequence copreside la iniciativa AI-Native Blueprint de TM Forum El domingo pasado, en el Mobile World Congress en Barcelona, ​​TM Forum nombró oficialmente a Cequence Security copresidente de su iniciativa AI-Native Blueprint, específicamente liderando el flujo de trabajo de seguridad de interacción agente. Para el",
         "pt": "Por que Cequence é copresidente da iniciativa AI-Native Blueprint do TM Forum No último domingo, no Mobile World Congress em Barcelona, ​​o TM Forum nomeou oficialmente Cequence Security como copresidente de sua iniciativa AI-Native Blueprint, liderando especificamente o fluxo de trabalho Agentic Interaction Security. Adiante",
         "fr": "Pourquoi Cequence co-préside l'initiative AI-Native Blueprint du TM Forum Dimanche dernier, lors du Mobile World Congress à Barcelone, TM Forum a officiellement nommé Cequence Security co-président de son initiative AI-Native Blueprint, dirigeant spécifiquement le flux de travail sur la sécurité des interactions agentiques. Pour le"
@@ -243,6 +265,28 @@
       "descriptionOriginal": "Broken authorization is one of the most widely known API vulnerabilities.&#160; It features in the OWASP Top 10, AppSec conversations, and secure coding guidelines. Broken Object Level Authorization (BOLA) and Broken Function Level Authorization (BFLA) account for hundreds of API vulnerabilities eve",
       "source": "Wallarm",
       "vendor": "wallarm"
+    },
+    {
+      "title": {
+        "en": "mquire: Linux memory forensics without external dependencies",
+        "ja": "mquire: 外部依存関係を使用しない Linux メモリ フォレンジック",
+        "es": "mquire: análisis forense de la memoria de Linux sin dependencias externas",
+        "pt": "mquire: análise forense de memória Linux sem dependências externas",
+        "fr": "mquire : analyse de la mémoire Linux sans dépendances externes"
+      },
+      "titleOriginal": "mquire: Linux memory forensics without external dependencies",
+      "link": "https://blog.trailofbits.com/2026/02/25/mquire-linux-memory-forensics-without-external-dependencies/",
+      "pubDate": "2026-02-25T12:00:00.000Z",
+      "description": {
+        "en": "<p>If you’ve ever done Linux memory forensics, you know the frustration: without debug symbols that match the exact kernel version, you’re stuck. These symbols aren’t typically installed on production systems and must be sourced from external repositories, which quickly become outdated when systems ",
+        "ja": "<p>Linux メモリ フォレンジックを行ったことがある人なら、そのイライラをご存知でしょう。カーネル バージョンと正確に一致するデバッグ シンボルがなければ、行き詰まってしまいます。 これらのシンボルは通常、運用システムにはインストールされず、外部リポジトリから取得する必要があります。システムが稼働するとすぐに古くなります。",
+        "es": "<p>Si alguna vez has realizado análisis forenses de la memoria de Linux, conoces la frustración: sin símbolos de depuración que coincidan con la versión exacta del kernel, estás estancado. Estos símbolos no suelen instalarse en sistemas de producción y deben obtenerse de repositorios externos, que rápidamente quedan obsoletos cuando los sistemas",
+        "pt": "<p>Se você já fez análise forense de memória do Linux, você conhece a frustração: sem símbolos de depuração que correspondam à versão exata do kernel, você está preso. Esses símbolos normalmente não são instalados em sistemas de produção e devem ser provenientes de repositórios externos, que rapidamente ficam desatualizados quando os sistemas",
+        "fr": "<p>Si vous avez déjà effectué une analyse approfondie de la mémoire Linux, vous connaissez la frustration : sans symboles de débogage correspondant à la version exacte du noyau, vous êtes bloqué. Ces symboles ne sont généralement pas installés sur les systèmes de production et doivent provenir de référentiels externes, qui deviennent rapidement obsolètes lorsque les systèmes"
+      },
+      "descriptionOriginal": "<p>If you’ve ever done Linux memory forensics, you know the frustration: without debug symbols that match the exact kernel version, you’re stuck. These symbols aren’t typically installed on production systems and must be sourced from external repositories, which quickly become outdated when systems ",
+      "source": "Trail of Bits",
+      "vendor": "trailofbits"
     },
     {
       "title": {
@@ -281,7 +325,7 @@
         "en": "As APIs power the majority of modern web applications, implementing robust API security is no longer optional &#8211; it’s a critical necessity for data protection. This guide explores how to seamlessly integrate API gateway security into your Imperva on-premises environment to mitigate OWASP Top 10",
         "ja": "最新の Web アプリケーションの大部分は API によって支えられているため、堅牢な API セキュリティの実装はもはやオプションではありません。 これはデータ保護にとって極めて重要です。 このガイドでは、API ゲートウェイのセキュリティを Imperva オンプレミス環境にシームレスに統合して、OWASP Top 10 の影響を軽減する方法について説明します。",
         "es": "Dado que las API impulsan la mayoría de las aplicaciones web modernas, implementar una seguridad API sólida ya no es opcional; es una necesidad crítica para la protección de datos. Esta guía explora cómo integrar perfectamente la seguridad de la puerta de enlace API en su entorno local Imperva para mitigar el Top 10 de OWASP.",
-        "pt": "Como as APIs alimentam a maioria dos aplicativos da web modernos, a implementação de segurança robusta de API não é mais opcional - é mais opcional. é uma necessidade crítica para a proteção de dados. Este guia explora como integrar perfeitamente a segurança do gateway API em seu ambiente local Imperva para mitigar os 10 principais problemas do OWASP",
+        "pt": "Como as APIs alimentam a maioria dos aplicativos da Web modernos, a implementação de segurança robusta de API não é mais opcional - é mais uma opção. é uma necessidade crítica para a proteção de dados. Este guia explora como integrar perfeitamente a segurança do gateway API em seu ambiente local Imperva para mitigar os 10 principais problemas do OWASP",
         "fr": "Alors que les API alimentent la majorité des applications Web modernes, la mise en œuvre d’une sécurité API robuste n’est plus facultative – c’est plutôt une option. c’est une nécessité cruciale pour la protection des données. Ce guide explique comment intégrer de manière transparente la sécurité de la passerelle API dans votre environnement sur site Imperva pour atténuer le Top 10 OWASP."
       },
       "descriptionOriginal": "As APIs power the majority of modern web applications, implementing robust API security is no longer optional &#8211; it’s a critical necessity for data protection. This guide explores how to seamlessly integrate API gateway security into your Imperva on-premises environment to mitigate OWASP Top 10",
@@ -356,25 +400,25 @@
     },
     {
       "title": {
-        "en": "Your Most Dangerous User Is Not Human: How AI Agents and MCP Servers Broke the Internal API Walled Garden",
-        "ja": "最も危険なユーザーは人間ではありません: AI エージェントと MCP サーバーが内部 API の壁に囲まれた庭をどのように突破したか",
-        "es": "Su usuario más peligroso no es humano: cómo los agentes de IA y los servidores MCP rompieron el jardín amurallado de API interno",
-        "pt": "Seu usuário mais perigoso não é humano: como agentes de IA e servidores MCP quebraram o jardim murado da API interna",
-        "fr": "Votre utilisateur le plus dangereux n'est pas humain : comment les agents IA et les serveurs MCP ont brisé le jardin clos de l'API interne"
+        "en": "Using threat modeling and prompt injection to audit Comet",
+        "ja": "脅威モデリングとプロンプト インジェクションを使用して Comet を監査する",
+        "es": "Uso de modelado de amenazas e inyección rápida para auditar a Comet",
+        "pt": "Usando modelagem de ameaças e injeção imediata para auditar o Comet",
+        "fr": "Utiliser la modélisation des menaces et l’injection rapide pour auditer Comet"
       },
-      "titleOriginal": "Your Most Dangerous User Is Not Human: How AI Agents and MCP Servers Broke the Internal API Walled Garden",
-      "link": "https://salt.security/blog/your-most-dangerous-user-is-not-human-how-ai-agents-and-mcp-servers-broke-the-internal-api-walled-garden",
-      "pubDate": "2026-02-19T21:53:00.000Z",
+      "titleOriginal": "Using threat modeling and prompt injection to audit Comet",
+      "link": "https://blog.trailofbits.com/2026/02/20/using-threat-modeling-and-prompt-injection-to-audit-comet/",
+      "pubDate": "2026-02-20T16:00:00.000Z",
       "description": {
-        "en": "Legitimate AI agents act as trusted internal entities but can be exploited to bypass Data Loss Prevention (DLP) policies, as seen in recent Microsoft Office vulnerabilities.",
-        "ja": "正規の AI エージェントは信頼できる内部エンティティとして機能しますが、最近の Microsoft Office の脆弱性で見られるように、データ損失防止 (DLP) ポリシーをバイパスするために悪用される可能性があります。",
-        "es": "Los agentes legítimos de IA actúan como entidades internas confiables, pero pueden explotarse para eludir las políticas de Prevención de pérdida de datos (DLP), como se vio en las vulnerabilidades recientes de Microsoft Office.",
-        "pt": "Agentes legítimos de IA atuam como entidades internas confiáveis, mas podem ser explorados para contornar políticas de prevenção contra perda de dados (DLP), como visto em vulnerabilidades recentes do Microsoft Office.",
-        "fr": "Les agents d'IA légitimes agissent comme des entités internes de confiance, mais peuvent être exploités pour contourner les politiques de prévention contre la perte de données (DLP), comme le montrent les récentes vulnérabilités de Microsoft Office."
+        "en": "<p>Before launching their Comet browser, Perplexity hired us to test the security of their AI-powered browsing features. Using adversarial testing guided by our TRAIL threat model, we demonstrated how four prompt injection techniques could extract users&rsquo; private information from Gmail by explo",
+        "ja": "<p>Comet ブラウザをリリースする前に、Perplexity は AI を活用したブラウジング機能のセキュリティをテストするために私たちを雇いました。 TRAIL 脅威モデルに基づいた敵対的テストを使用して、4 つのプロンプト インジェクション技術がどのようにユーザーを抽出できるかを実証しました。 Explo による Gmail からの個人情報",
+        "es": "<p>Antes de lanzar su navegador Comet, Perplexity nos contrató para probar la seguridad de sus funciones de navegación impulsadas por IA. Utilizando pruebas adversas guiadas por nuestro modelo de amenazas TRAIL, demostramos cómo cuatro técnicas de inyección rápida podrían extraer la seguridad de los usuarios. información privada de Gmail por explo",
+        "pt": "<p>Antes de lançar seu navegador Comet, a Perplexity nos contratou para testar a segurança de seus recursos de navegação baseados em IA. Usando testes adversários guiados por nosso modelo de ameaça TRAIL, demonstramos como quatro técnicas de injeção imediata poderiam extrair informações dos usuários. informações privadas do Gmail por Explo",
+        "fr": "<p>Avant de lancer son navigateur Comet, Perplexity nous a engagés pour tester la sécurité de ses fonctionnalités de navigation basées sur l'IA. À l’aide de tests contradictoires guidés par notre modèle de menace TRAIL, nous avons démontré comment quatre techniques d’injection rapide pouvaient extraire les utilisateurs de leurs menaces. informations privées de Gmail par explo"
       },
-      "descriptionOriginal": "Legitimate AI agents act as trusted internal entities but can be exploited to bypass Data Loss Prevention (DLP) policies, as seen in recent Microsoft Office vulnerabilities.",
-      "source": "Salt Security",
-      "vendor": "salt"
+      "descriptionOriginal": "<p>Before launching their Comet browser, Perplexity hired us to test the security of their AI-powered browsing features. Using adversarial testing guided by our TRAIL threat model, we demonstrated how four prompt injection techniques could extract users&rsquo; private information from Gmail by explo",
+      "source": "Trail of Bits",
+      "vendor": "trailofbits"
     }
   ]
 }
