@@ -1,7 +1,28 @@
 {
-  "lastUpdated": "2026-03-21T15:27:02.725Z",
+  "lastUpdated": "2026-03-21T21:27:30.217Z",
   "itemCount": 20,
   "items": [
+    {
+      "title": {
+        "en": "Trivy vulnerability scanner breach pushed infostealer via GitHub Actions",
+        "ja": "Trivy 脆弱性スキャナ侵害により、GitHub Actions 経由でインフォスティーラーがプッシュされました",
+        "es": "La violación del escáner de vulnerabilidades de Trivy empujó al ladrón de información a través de GitHub Actions",
+        "pt": "Violação do scanner de vulnerabilidade Trivy enviou infostealer por meio do GitHub Actions",
+        "fr": "La violation du scanner de vulnérabilité Trivy a poussé le voleur d'informations via les actions GitHub"
+      },
+      "titleOriginal": "Trivy vulnerability scanner breach pushed infostealer via GitHub Actions",
+      "link": "https://www.bleepingcomputer.com/news/security/trivy-vulnerability-scanner-breach-pushed-infostealer-via-github-actions/",
+      "pubDate": "2026-03-21T17:30:41.000Z",
+      "description": {
+        "en": "The Trivy vulnerability scanner was compromised in a supply-chain attack by threat actors known as TeamPCP, which distributed credential-stealing malware through official releases and GitHub Actions. [...]",
+        "ja": "Trivy 脆弱性スキャナーは、TeamPCP として知られる攻撃者によるサプライ チェーン攻撃で侵害され、公式リリースと GitHub Actions を通じて認証情報を盗むマルウェアを配布しました。 [...]",
+        "es": "El escáner de vulnerabilidades Trivy se vio comprometido en un ataque a la cadena de suministro por parte de actores de amenazas conocidos como TeamPCP, que distribuyeron malware de robo de credenciales a través de lanzamientos oficiales y GitHub Actions. [...]",
+        "pt": "O scanner de vulnerabilidade Trivy foi comprometido em um ataque à cadeia de suprimentos por agentes de ameaças conhecidos como TeamPCP, que distribuíram malware para roubo de credenciais por meio de lançamentos oficiais e ações do GitHub. [...]",
+        "fr": "Le scanner de vulnérabilités Trivy a été compromis lors d'une attaque de la chaîne d'approvisionnement par des acteurs malveillants connus sous le nom de TeamPCP, qui ont distribué des logiciels malveillants de vol d'informations d'identification via des versions officielles et des actions GitHub. [...]"
+      },
+      "descriptionOriginal": "The Trivy vulnerability scanner was compromised in a supply-chain attack by threat actors known as TeamPCP, which distributed credential-stealing malware through official releases and GitHub Actions. [...]",
+      "source": "BleepingComputer"
+    },
     {
       "title": {
         "en": "Critical Quest KACE Vulnerability Potentially Exploited in Attacks",
@@ -15,7 +36,7 @@
       "pubDate": "2026-03-21T11:00:00.000Z",
       "description": {
         "en": "The vulnerability is tracked as CVE-2025-32975 and it may have been exploited in attacks against the education sector. The post Critical Quest KACE Vulnerability Potentially Exploited in Attacks appeared first on SecurityWeek.",
-        "ja": "この脆弱性は CVE-2025-32975 として追跡されており、教育部門に対する攻撃に悪用された可能性があります。 クリティカル クエスト「KACE の脆弱性が攻撃に悪用される可能性がある」の記事は、SecurityWeek に初めて掲載されました。",
+        "ja": "この脆弱性は CVE-2025-32975 として追跡されており、教育部門に対する攻撃に悪用された可能性があります。 投稿Critical Quest「KACEの脆弱性が攻撃に悪用される可能性がある」は、SecurityWeekに最初に掲載されました。",
         "es": "La vulnerabilidad se rastrea como CVE-2025-32975 y puede haber sido explotada en ataques contra el sector educativo. La publicación Vulnerabilidad crítica de Quest KACE potencialmente explotada en ataques apareció por primera vez en SecurityWeek.",
         "pt": "A vulnerabilidade é rastreada como CVE-2025-32975 e pode ter sido explorada em ataques contra o setor educacional. A postagem Vulnerabilidade crítica da Quest KACE potencialmente explorada em ataques apareceu pela primeira vez na SecurityWeek.",
         "fr": "La vulnérabilité est identifiée comme CVE-2025-32975 et elle pourrait avoir été exploitée lors d'attaques contre le secteur de l'éducation. L'article Quête critique de la vulnérabilité KACE potentiellement exploitée lors d'attaques apparaît en premier sur SecurityWeek."
@@ -36,7 +57,7 @@
       "pubDate": "2026-03-21T10:24:00.000Z",
       "description": {
         "en": "Oracle has released security updates to address a critical security flaw impacting Identity Manager and Web Services Manager that could be exploited to achieve remote code execution. The vulnerability, tracked as CVE-2026-21992, carries a CVSS score of 9.8 out of a maximum of 10.0. \"This vulnerabili",
-        "ja": "オラクルは、Identity Manager および Web Services Manager に影響を与える重大なセキュリティ上の欠陥に対処するためのセキュリティ更新をリリースしました。この欠陥が悪用されてリモートでコードが実行される可能性があります。 この脆弱性は CVE-2026-21992 として追跡されており、CVSS スコアは最大 10.0 点中 9.8 点です。 「この脆弱性は",
+        "ja": "オラクルは、Identity Manager および Web Services Manager に影響を与える重大なセキュリティ上の欠陥に対処するためのセキュリティ アップデートをリリースしました。この欠陥が悪用されてリモート コードが実行される可能性があります。 この脆弱性は CVE-2026-21992 として追跡され、CVSS スコアは最大 10.0 点中 9.8 点です。 「この脆弱性は",
         "es": "Oracle ha publicado actualizaciones de seguridad para abordar una falla de seguridad crítica que afecta a Identity Manager y Web Services Manager y que podría explotarse para lograr la ejecución remota de código. La vulnerabilidad, rastreada como CVE-2026-21992, tiene una puntuación CVSS de 9,8 de un máximo de 10,0. \"Esta vulnerabilidad",
         "pt": "A Oracle lançou atualizações de segurança para solucionar uma falha crítica de segurança que afeta o Identity Manager e o Web Services Manager e que poderia ser explorada para obter execução remota de código. A vulnerabilidade, rastreada como CVE-2026-21992, carrega uma pontuação CVSS de 9,8 de um máximo de 10,0. “Essa vulnerabilidade",
         "fr": "Oracle a publié des mises à jour de sécurité pour corriger une faille de sécurité critique affectant Identity Manager et Web Services Manager qui pourrait être exploitée pour réaliser l'exécution de code à distance. La vulnérabilité, identifiée comme CVE-2026-21992, présente un score CVSS de 9,8 sur un maximum de 10,0. \"Cette vulnérabilité"
@@ -99,7 +120,7 @@
       "pubDate": "2026-03-20T17:47:00.000Z",
       "description": {
         "en": "Trivy, a popular open-source vulnerability scanner maintained by Aqua Security, was compromised a second time within the span of a month to deliver malware that stole sensitive CI/CD secrets. The latest incident impacted GitHub Actions \"aquasecurity/trivy-action\" and \"aquasecurity/setup-trivy,\" whic",
-        "ja": "Aqua Security が管理する人気のオープンソース脆弱性スキャナーである Trivy は、機密の CI/CD 秘密を盗むマルウェアを配布するために 1 か月以内に 2 回目の侵害を受けました。 最新のインシデントは、GitHub アクション「aquasecurity/trivy-action」および「aquasecurity/setup-trivy」に影響を与えました。",
+        "ja": "Aqua Security が管理する人気のオープンソース脆弱性スキャナーである Trivy は、機密の CI/CD 秘密を盗むマルウェアを配布するために 1 か月以内に 2 度目の侵害を受けました。 最新のインシデントは、GitHub アクション「aquasecurity/trivy-action」および「aquasecurity/setup-trivy」に影響を与えました。",
         "es": "Trivy, un popular escáner de vulnerabilidades de código abierto mantenido por Aqua Security, se vio comprometido por segunda vez en el lapso de un mes para entregar malware que robaba secretos confidenciales de CI/CD. El último incidente afectó a las acciones de GitHub \"aquasecurity/trivy-action\" y \"aquasecurity/setup-trivy\", que",
         "pt": "Trivy, um popular scanner de vulnerabilidades de código aberto mantido pela Aqua Security, foi comprometido pela segunda vez no período de um mês para entregar malware que roubava segredos confidenciais de CI/CD. O incidente mais recente impactou as ações do GitHub \"aquasecurity/trivy-action\" e \"aquasecurity/setup-trivy\", que",
         "fr": "Trivy, un scanner de vulnérabilités open source populaire géré par Aqua Security, a été compromis une deuxième fois en l'espace d'un mois pour diffuser des logiciels malveillants qui ont volé des secrets CI/CD sensibles. Le dernier incident a impacté les actions GitHub « aquasecurity/trivy-action » et « aquasecurity/setup-trivy », qui"
@@ -120,10 +141,10 @@
       "pubDate": "2026-03-20T15:15:00.000Z",
       "description": {
         "en": "A critical security flaw impacting Langflow has come under active exploitation within 20 hours of public disclosure, highlighting the speed at which threat actors weaponize newly published vulnerabilities. The security defect, tracked as CVE-2026-33017 (CVSS score: 9.3), is a case of missing authent",
-        "ja": "Langflow に影響を与える重大なセキュリティ上の欠陥は、公開から 20 時間以内に積極的に悪用されており、脅威アクターが新たに公開された脆弱性を武器化するスピードの速さを浮き彫りにしています。 CVE-2026-33017 (CVSS スコア: 9.3) として追跡されているセキュリティ欠陥は、認証が欠落しているケースです。",
+        "ja": "Langflow に影響を与える重大なセキュリティ上の欠陥は、公開から 20 時間以内に積極的に悪用されており、脅威アクターが新たに公開された脆弱性を武器化するスピードの速さを浮き彫りにしています。 CVE-2026-33017 (CVSS スコア: 9.3) として追跡されるセキュリティ欠陥は、認証が欠落しているケースです。",
         "es": "Una falla de seguridad crítica que afecta a Langflow ha sido explotada activamente dentro de las 20 horas posteriores a la divulgación pública, lo que destaca la velocidad a la que los actores de amenazas utilizan como arma las vulnerabilidades recientemente publicadas. El defecto de seguridad, identificado como CVE-2026-33017 (puntuación CVSS: 9,3), es un caso de falta de autenticación.",
         "pt": "Uma falha crítica de segurança que afeta o Langflow foi explorada ativamente 20 horas após a divulgação pública, destacando a velocidade com que os atores da ameaça transformam em armas as vulnerabilidades recém-publicadas. O defeito de segurança, rastreado como CVE-2026-33017 (pontuação CVSS: 9,3), é um caso de falta de autenticação",
-        "fr": "Une faille de sécurité critique affectant Langflow a été activement exploitée dans les 20 heures suivant sa divulgation publique, mettant en évidence la vitesse à laquelle les acteurs malveillants exploitent les vulnérabilités nouvellement publiées. Le défaut de sécurité, identifié comme CVE-2026-33017 (score CVSS : 9,3), est un cas d'authentification manquante."
+        "fr": "Une faille de sécurité critique affectant Langflow a été activement exploitée dans les 20 heures suivant sa divulgation publique, soulignant la vitesse à laquelle les acteurs malveillants exploitent les vulnérabilités nouvellement publiées. Le défaut de sécurité, identifié comme CVE-2026-33017 (score CVSS : 9,3), est un cas d'authentification manquante."
       },
       "descriptionOriginal": "A critical security flaw impacting Langflow has come under active exploitation within 20 hours of public disclosure, highlighting the speed at which threat actors weaponize newly published vulnerabilities. The security defect, tracked as CVE-2026-33017 (CVSS score: 9.3), is a case of missing authent",
       "source": "The Hacker News"
@@ -183,7 +204,7 @@
       "pubDate": "2026-03-20T08:38:56.000Z",
       "description": {
         "en": "Because attacker-supplied flow data is used in public flows, the bug leads to unauthenticated remote code execution. The post Critical Langflow Vulnerability Exploited Hours After Public Disclosure appeared first on SecurityWeek.",
-        "ja": "攻撃者が提供したフロー データはパブリック フローで使用されるため、このバグにより認証されていないリモート コードが実行されます。 「Langflow の重大な脆弱性、公開から数時間後に悪用された」という投稿が SecurityWeek に最初に掲載されました。",
+        "ja": "攻撃者が提供したフロー データはパブリック フローで使用されるため、このバグにより認証されていないリモート コードが実行されます。 「Langflow の重大な脆弱性、公開から数時間後に悪用された」という記事は、SecurityWeek に最初に掲載されました。",
         "es": "Debido a que los datos de flujo proporcionados por el atacante se utilizan en flujos públicos, el error conduce a la ejecución remota de código no autenticado. La publicación Vulnerabilidad crítica de Langflow explotada horas después de la divulgación pública apareció por primera vez en SecurityWeek.",
         "pt": "Como os dados de fluxo fornecidos pelo invasor são usados ​​em fluxos públicos, o bug leva à execução remota de código não autenticado. A postagem Vulnerabilidade crítica do Langflow explorada horas após a divulgação pública apareceu pela primeira vez na SecurityWeek.",
         "fr": "Étant donné que les données de flux fournies par l'attaquant sont utilisées dans des flux publics, le bug conduit à l'exécution de code à distance non authentifié. La vulnérabilité critique Langflow exploitée quelques heures après la divulgation publique est apparue en premier sur SecurityWeek."
@@ -278,7 +299,7 @@
     {
       "title": {
         "en": "Ubuntu CVE-2026-3888 Bug Lets Attackers Gain Root via systemd Cleanup Timing Exploit",
-        "ja": "Ubuntu CVE-2026-3888 のバグにより、攻撃者は systemd クリーンアップ タイミングを悪用してルートを取得できます",
+        "ja": "Ubuntu CVE-2026-3888 のバグにより、攻撃者が systemd クリーンアップ タイミングを悪用してルートを取得できる",
         "es": "El error CVE-2026-3888 de Ubuntu permite a los atacantes obtener raíz a través del exploit de sincronización de limpieza systemd",
         "pt": "Bug CVE-2026-3888 do Ubuntu permite que invasores ganhem root por meio da exploração de tempo de limpeza do systemd",
         "fr": "Le bug Ubuntu CVE-2026-3888 permet aux attaquants d'obtenir la racine via l'exploit de synchronisation de nettoyage systemd"
@@ -330,7 +351,7 @@
       "pubDate": "2026-03-17T05:23:00.000Z",
       "description": {
         "en": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Monday added a medium-severity security flaw impacting Wing FTP to its Known Exploited Vulnerabilities (KEV) catalog, citing evidence of active exploitation. The vulnerability, CVE-2025-47813 (CVSS score: 4.3), is an information dis",
-        "ja": "米国サイバーセキュリティ・インフラストラクチャセキュリティ庁（CISA）は月曜日、活発な悪用の証拠を引用し、Wing FTPに影響を与える中程度の重大度のセキュリティ欠陥を既知の悪用された脆弱性（KEV）カタログに追加した。 脆弱性 CVE-2025-47813 (CVSS スコア: 4.3) は、情報セキュリティです。",
+        "ja": "米国サイバーセキュリティ・インフラセキュリティ庁（CISA）は月曜日、活発な悪用の証拠を引用し、Wing FTPに影響を与える中程度の重大度のセキュリティ欠陥を既知の悪用された脆弱性（KEV）カタログに追加した。 脆弱性 CVE-2025-47813 (CVSS スコア: 4.3) は、情報セキュリティです。",
         "es": "La Agencia de Seguridad de Infraestructura y Ciberseguridad de EE. UU. (CISA) agregó el lunes una falla de seguridad de gravedad media que afecta a Wing FTP a su catálogo de vulnerabilidades explotadas conocidas (KEV), citando evidencia de explotación activa. La vulnerabilidad, CVE-2025-47813 (puntuación CVSS: 4,3), es una información dis",
         "pt": "A Agência de Segurança Cibernética e de Infraestrutura dos EUA (CISA) adicionou na segunda-feira uma falha de segurança de gravidade média que afeta o Wing FTP ao seu catálogo de Vulnerabilidades Exploradas Conhecidas (KEV), citando evidências de exploração ativa. A vulnerabilidade, CVE-2025-47813 (pontuação CVSS: 4,3), é uma falha de informação",
         "fr": "L'Agence américaine de cybersécurité et de sécurité des infrastructures (CISA) a ajouté lundi une faille de sécurité de gravité moyenne affectant Wing FTP à son catalogue de vulnérabilités exploitées connues (KEV), citant des preuves d'exploitation active. La vulnérabilité, CVE-2025-47813 (score CVSS : 4,3), est un message d'information."
@@ -341,7 +362,7 @@
     {
       "title": {
         "en": "Android 17 Blocks Non-Accessibility Apps from Accessibility API to Prevent Malware Abuse",
-        "ja": "Android 17 はマルウェアの悪用を防ぐために、アクセシビリティ非対応アプリをアクセシビリティ API からブロックします",
+        "ja": "Android 17 は、マルウェアの悪用を防ぐために、アクセシビリティ非対応アプリをアクセシビリティ API からブロックします",
         "es": "Android 17 bloquea aplicaciones que no son de accesibilidad de la API de accesibilidad para evitar el abuso de malware",
         "pt": "Android 17 bloqueia aplicativos não acessíveis da API de acessibilidade para evitar abuso de malware",
         "fr": "Android 17 bloque les applications non accessibles de l'API d'accessibilité pour empêcher les abus de logiciels malveillants"
@@ -400,27 +421,6 @@
       },
       "descriptionOriginal": "Veeam has released security updates to address multiple critical vulnerabilities in its Backup & Replication software that, if successfully exploited, could result in remote code execution. The vulnerabilities are as follows - CVE-2026-21666 (CVSS score: 9.9) - A vulnerability that allows an authent",
       "source": "The Hacker News"
-    },
-    {
-      "title": {
-        "en": "Active defense: introducing a stateful vulnerability scanner for APIs",
-        "ja": "積極的な防御: API 用のステートフル脆弱性スキャナーの導入",
-        "es": "Defensa activa: introducción de un escáner de vulnerabilidades con estado para API",
-        "pt": "Defesa ativa: introdução de um scanner de vulnerabilidade com estado para APIs",
-        "fr": "Défense active : introduction d'un scanner de vulnérabilités avec état pour les API"
-      },
-      "titleOriginal": "Active defense: introducing a stateful vulnerability scanner for APIs",
-      "link": "https://blog.cloudflare.com/vulnerability-scanner/",
-      "pubDate": "2026-03-09T14:00:00.000Z",
-      "description": {
-        "en": "Cloudflare’s new Web and API Vulnerability Scanner helps teams proactively find logic flaws. By using AI to build API call graphs, we identify vulnerabilities that standard defensive tools miss.",
-        "ja": "Cloudflareの新しいWebおよびAPI脆弱性スキャナは、チームがロジックの欠陥を積極的に発見するのに役立ちます。 AI を使用して API コール グラフを構築することで、標準の防御ツールが見逃す脆弱性を特定します。",
-        "es": "El nuevo escáner de vulnerabilidades web y API de Cloudflare ayuda a los equipos a encontrar fallas lógicas de manera proactiva. Al utilizar IA para crear gráficos de llamadas API, identificamos vulnerabilidades que las herramientas defensivas estándar pasan por alto.",
-        "pt": "O novo scanner de vulnerabilidades de Web e API da Cloudflare ajuda as equipes a encontrar falhas lógicas de forma proativa. Ao usar IA para construir gráficos de chamadas de API, identificamos vulnerabilidades que as ferramentas defensivas padrão não percebem.",
-        "fr": "Le nouveau scanner de vulnérabilités Web et API de Cloudflare aide les équipes à trouver de manière proactive les failles logiques. En utilisant l’IA pour créer des graphiques d’appels d’API, nous identifions les vulnérabilités qui échappent aux outils défensifs standards."
-      },
-      "descriptionOriginal": "Cloudflare’s new Web and API Vulnerability Scanner helps teams proactively find logic flaws. By using AI to build API call graphs, we identify vulnerabilities that standard defensive tools miss.",
-      "source": "Cloudflare Blog"
     }
   ]
 }

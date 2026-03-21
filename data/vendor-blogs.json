@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-03-21T15:27:47.036Z",
-  "itemCount": 18,
+  "lastUpdated": "2026-03-21T21:29:31.391Z",
+  "itemCount": 17,
   "items": [
     {
       "title": {
@@ -27,7 +27,7 @@
     {
       "title": {
         "en": "Why Most DDoS Protection Fails: Solving for Continuity and Resilience",
-        "ja": "ほとんどの DDoS 防御が失敗する理由: 継続性と回復力の解決",
+        "ja": "ほとんどの DDoS 防御が失敗する理由: 継続性と復元力を解決する",
         "es": "Por qué falla la mayoría de las protecciones DDoS: soluciones para la continuidad y la resiliencia",
         "pt": "Por que a maioria das proteções DDoS falha: solução para continuidade e resiliência",
         "fr": "Pourquoi la plupart des protections DDoS échouent : garantir la continuité et la résilience"
@@ -81,7 +81,7 @@
       "pubDate": "2026-03-12T13:00:07.000Z",
       "description": {
         "en": "Announcing Agent Personas in the Cequence AI Gateway, which allow organizations and employees to manage AI agent privileges at a granular level. It provides the ability to control, monitor, and govern what an AI agent is allowed to do within a system, including data access, tool calls, system action",
-        "ja": "Cequence AI Gateway でのエージェント ペルソナの発表。これにより、組織や従業員は AI エージェントの権限を詳細なレベルで管理できるようになります。 データ アクセス、ツール呼び出し、システム アクションなど、システム内で AI エージェントが実行できることを制御、監視、管理する機能を提供します。",
+        "ja": "Cequence AI Gateway でのエージェント ペルソナの発表。これにより、組織や従業員は AI エージェントの権限を詳細なレベルで管理できるようになります。 データ アクセス、ツール呼び出し、システム アクションなど、AI エージェントがシステム内で実行できる内容を制御、監視、管理する機能を提供します。",
         "es": "Anuncio de Agent Personas en Cequence AI Gateway, que permite a las organizaciones y empleados administrar los privilegios de los agentes de AI a un nivel granular. Proporciona la capacidad de controlar, monitorear y gobernar lo que un agente de IA puede hacer dentro de un sistema, incluido el acceso a datos, llamadas a herramientas y acciones del sistema.",
         "pt": "Anunciamos Agent Personas no Cequence AI Gateway, que permite que organizações e funcionários gerenciem privilégios de agentes de IA em um nível granular. Ele fornece a capacidade de controlar, monitorar e governar o que um agente de IA pode fazer dentro de um sistema, incluindo acesso a dados, chamadas de ferramentas, ações do sistema",
         "fr": "Annonce des agents Personas dans Cequence AI Gateway, qui permettent aux organisations et aux employés de gérer les privilèges des agents IA à un niveau granulaire. Il offre la possibilité de contrôler, surveiller et gouverner ce qu'un agent IA est autorisé à faire au sein d'un système, y compris l'accès aux données, les appels d'outils, les actions du système."
@@ -213,7 +213,7 @@
       "pubDate": "2026-03-03T14:00:23.000Z",
       "description": {
         "en": "Why Cequence Is Co-Chairing TM Forum&#8217;s AI-Native Blueprint Initiative This past Sunday, at Mobile World Congress in Barcelona, TM Forum officially named Cequence Security as Co-Chair of its AI-Native Blueprint Initiative, specifically leading the Agentic Interaction Security workstream. For th",
-        "ja": "Cequence が TM フォーラムの AI ネイティブ ブループリント イニシアティブの共同議長を務める理由 先週の日曜日、バルセロナで開催されたモバイル ワールド コングレスで、TM フォーラムは正式に Cequence セキュリティを AI ネイティブ ブループリント イニシアチブの共同議長に任命し、特にエージェントティック インタラクション セキュリティ ワークストリームを主導しました。 のために",
+        "ja": "Cequence が TM フォーラムの AI ネイティブ ブループリント イニシアチブの共同議長を務める理由 先週の日曜日、バルセロナで開催されたモバイル ワールド コングレスで、TM フォーラムは正式に Cequence セキュリティを AI ネイティブ ブループリント イニシアチブの共同議長に任命し、特にエージェントティック インタラクション セキュリティ ワークストリームを主導しました。 のために",
         "es": "Por qué Cequence copreside la iniciativa AI-Native Blueprint de TM Forum El domingo pasado, en el Mobile World Congress en Barcelona, ​​TM Forum nombró oficialmente a Cequence Security copresidente de su iniciativa AI-Native Blueprint, específicamente liderando el flujo de trabajo de seguridad de interacción agente. Para el",
         "pt": "Por que Cequence é copresidente da iniciativa AI-Native Blueprint do TM Forum No último domingo, no Mobile World Congress em Barcelona, ​​o TM Forum nomeou oficialmente Cequence Security como copresidente de sua iniciativa AI-Native Blueprint, liderando especificamente o fluxo de trabalho Agentic Interaction Security. Adiante",
         "fr": "Pourquoi Cequence co-préside l'initiative AI-Native Blueprint du TM Forum Dimanche dernier, lors du Mobile World Congress à Barcelone, TM Forum a officiellement nommé Cequence Security co-président de son initiative AI-Native Blueprint, dirigeant spécifiquement le flux de travail sur la sécurité des interactions agentiques. Pour le"
@@ -375,28 +375,6 @@
       "descriptionOriginal": "Legitimate AI agents act as trusted internal entities but can be exploited to bypass Data Loss Prevention (DLP) policies, as seen in recent Microsoft Office vulnerabilities.",
       "source": "Salt Security",
       "vendor": "salt"
-    },
-    {
-      "title": {
-        "en": "Security Guardrails: The Foundation of Agentic AI Governance",
-        "ja": "セキュリティ ガードレール: Agentic AI ガバナンスの基盤",
-        "es": "Barandillas de seguridad: la base de la gobernanza de la IA agente",
-        "pt": "Protetores de segurança: a base da governança de IA agente",
-        "fr": "Garde-corps de sécurité : le fondement de la gouvernance de l'IA agentique"
-      },
-      "titleOriginal": "Security Guardrails: The Foundation of Agentic AI Governance",
-      "link": "https://www.cequence.ai/blog/ai/agentic-ai-security-guardrails/",
-      "pubDate": "2026-02-19T16:20:45.000Z",
-      "description": {
-        "en": "Agentic AI represents a fundamental shift in how enterprises employ artificial intelligence. We are moving from passive assistants that generate content to autonomous systems that plan, reason, call APIs, and execute workflows. Organizations are investing in agentic AI for two clear business reasons",
-        "ja": "エージェントティック AI は、企業による人工知能の採用方法における根本的な変化を表しています。 私たちは、コンテンツを生成する受動的なアシスタントから、計画、推論、API の呼び出し、ワークフローの実行を行う自律システムに移行しつつあります。 組織がエージェント AI に投資している理由は 2 つあります。",
-        "es": "La IA agente representa un cambio fundamental en la forma en que las empresas emplean la inteligencia artificial. Estamos pasando de asistentes pasivos que generan contenido a sistemas autónomos que planifican, razonan, llaman a API y ejecutan flujos de trabajo. Las organizaciones están invirtiendo en IA agente por dos razones comerciales claras",
-        "pt": "A Agentic AI representa uma mudança fundamental na forma como as empresas empregam inteligência artificial. Estamos passando de assistentes passivos que geram conteúdo para sistemas autônomos que planejam, raciocinam, chamam APIs e executam fluxos de trabalho. As organizações estão investindo em IA de agência por dois motivos comerciais claros",
-        "fr": "L’IA agentique représente un changement fondamental dans la manière dont les entreprises utilisent l’intelligence artificielle. Nous passons d'assistants passifs qui génèrent du contenu à des systèmes autonomes qui planifient, raisonnent, appellent des API et exécutent des flux de travail. Les organisations investissent dans l’IA agentique pour deux raisons commerciales claires"
-      },
-      "descriptionOriginal": "Agentic AI represents a fundamental shift in how enterprises employ artificial intelligence. We are moving from passive assistants that generate content to autonomous systems that plan, reason, call APIs, and execute workflows. Organizations are investing in agentic AI for two clear business reasons",
-      "source": "Cequence",
-      "vendor": "cequence"
     }
   ]
 }
