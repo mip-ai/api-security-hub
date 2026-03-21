@@ -27,6 +27,8 @@
   "index_card_vendor_blogs_desc": "Latest from Salt Security / Wallarm / Cequence / Imperva",
   "index_card_owasp_llm_title": "OWASP LLM Top 10",
   "index_card_owasp_llm_desc": "The 10 most critical security risks for LLM applications with Python code examples",
+  "index_card_owasp_agentic_title": "OWASP Agentic Top 10",
+  "index_card_owasp_agentic_desc": "The 10 most critical security risks for AI agent systems with Python code examples",
   "index_quickref_heading": "<span class=\"section-icon\">\u26A1</span> Quick Reference",
   "index_quickref_description": "Fundamental Principles of API Security",
   "index_quickref_least_privilege_title": "\uD83D\uDD12 Principle of Least Privilege",

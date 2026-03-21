@@ -1,0 +1,620 @@
+<!DOCTYPE html><html lang="fr"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="owasp_agentic_page_title">OWASP Top 10 pour les applications agentiques - Hub de référence pour la sécurité des API</title>
+  <link rel="stylesheet" href="../css/style.css">
+
+    <link rel="alternate" hreflang="en" href="/api-security-hub/en/owasp-agentic-top10.html">
+    <link rel="alternate" hreflang="ja" href="/api-security-hub/ja/owasp-agentic-top10.html">
+    <link rel="alternate" hreflang="es" href="/api-security-hub/es/owasp-agentic-top10.html">
+    <link rel="alternate" hreflang="pt" href="/api-security-hub/pt/owasp-agentic-top10.html">
+    <link rel="alternate" hreflang="fr" href="/api-security-hub/fr/owasp-agentic-top10.html">
+    <link rel="alternate" hreflang="x-default" href="/api-security-hub/en/owasp-agentic-top10.html">
+</head>
+<body>
+
+  <div class="page-header">
+    <h1 data-i18n="owasp_agentic_main_heading">OWASP Top 10 pour les applications agentiques (2026)</h1>
+    <p class="subtitle" data-i18n="owasp_agentic_subtitle">Les 10 risques de sécurité les plus critiques pour les systèmes d'agents IA et comment les atténuer.</p>
+  </div>
+
+  <!-- Overview -->
+  <div class="section">
+    <div class="callout callout-info">
+      <div class="callout-title" data-i18n="owasp_agentic_overview_title">Qu'est-ce que l'OWASP Top 10 pour les applications agentiques ?</div>
+      <p data-i18n="owasp_agentic_overview_desc">Un classement des risques de sécurité les plus critiques spécifiques aux systèmes d'agents IA qui planifient de manière autonome, utilisent des outils et interagissent avec des services externes. L'édition 2026 aborde les menaces émergentes à mesure que l'IA agentique passe de la recherche aux déploiements en production.</p>
+    </div>
+  </div>
+
+  <!-- ASI01: Agent Goal Hijack -->
+  <div class="section">
+    <h2 data-i18n-html="owasp_agentic_asi01_heading"><span class="section-icon">1️⃣</span> ASI01 - Détournement des objectifs de l'agent</h2>
+    <span class="badge badge-danger">Critical</span>
+    <h3 data-i18n="owasp_agentic_asi01_overview_heading">Vue d'ensemble</h3>
+    <p data-i18n="owasp_agentic_asi01_overview_desc">Un attaquant manipule les buts ou objectifs d'un agent par le biais d'entrées conçues à dessein, l'amenant à poursuivre des cibles non prévues. Contrairement à une simple injection de prompt, le détournement d'objectif peut persister à travers plusieurs étapes de planification, amenant l'agent à effectuer une série d'actions nuisibles de manière autonome.</p>
+    <div class="callout callout-danger">
+      <div class="callout-title" data-i18n="owasp_agentic_asi01_risk_title">Risque</div>
+      <p data-i18n="owasp_agentic_asi01_risk_desc">Les attaquants peuvent rediriger des agents autonomes pour exfiltrer des données, modifier des configurations système ou effectuer des chaînes d'attaque en plusieurs étapes difficiles à détecter car l'agent semble fonctionner normalement.</p>
+    </div>
+    <h3 data-i18n="owasp_agentic_asi01_vulnerable_heading">Exemple de code vulnérable</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">Python</span>
+        <span>❌ Bad</span>
+      </div>
+      <pre><span class="comment"># Agent goal is derived directly from untrusted input</span>
+<span class="keyword">def</span> <span class="function">run_agent</span>(user_request: <span class="type">str</span>) -&gt; <span class="type">str</span>:
+    goal = <span class="string">f"Complete this task: {user_request}"</span>
+    plan = llm.<span class="function">plan</span>(goal)
+    <span class="keyword">for</span> step <span class="keyword">in</span> plan:
+        <span class="function">execute</span>(step)  <span class="comment"># No validation of planned steps</span></pre>
+    </div>
+    <h3 data-i18n="owasp_agentic_asi01_secure_heading">Exemple de code sécurisé</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">Python</span>
+        <span>✅ Good</span>
+      </div>
+      <pre><span class="keyword">import</span> re
+
+ALLOWED_GOALS = [<span class="string">"summarize"</span>, <span class="string">"search"</span>, <span class="string">"draft_email"</span>, <span class="string">"analyze_data"</span>]
+
+<span class="keyword">def</span> <span class="function">sanitize_goal</span>(user_request: <span class="type">str</span>) -&gt; <span class="type">str</span>:
+    <span class="comment"># Strip injection patterns</span>
+    cleaned = re.<span class="function">sub</span>(<span class="string">r'(?i)(ignore|override|new goal|forget).*'</span>, <span class="string">''</span>, user_request)
+    <span class="keyword">return</span> cleaned.<span class="function">strip</span>()
+
+<span class="keyword">def</span> <span class="function">run_agent</span>(user_request: <span class="type">str</span>) -&gt; <span class="type">str</span>:
+    sanitized = <span class="function">sanitize_goal</span>(user_request)
+    goal = <span class="string">f"Complete this task: {sanitized}"</span>
+    plan = llm.<span class="function">plan</span>(goal)
+
+    <span class="comment"># Validate each step against allowed actions</span>
+    <span class="keyword">for</span> step <span class="keyword">in</span> plan:
+        <span class="keyword">if</span> step.action <span class="keyword">not in</span> ALLOWED_GOALS:
+            <span class="keyword">raise</span> <span class="type">ValueError</span>(<span class="string">f"Disallowed action: {step.action}"</span>)
+        <span class="keyword">if</span> <span class="function">goal_drift_detected</span>(step, sanitized):
+            <span class="keyword">raise</span> <span class="type">ValueError</span>(<span class="string">"Goal drift detected, aborting"</span>)
+    <span class="keyword">for</span> step <span class="keyword">in</span> plan:
+        <span class="function">execute</span>(step)</pre>
+    </div>
+    <h3 data-i18n="owasp_agentic_asi01_checklist_heading">Liste de contrôle des mesures d'atténuation</h3>
+    <ul class="checklist">
+      <li data-i18n="owasp_agentic_asi01_check1">Assainir et valider toutes les entrées avant la formulation des objectifs</li>
+      <li data-i18n="owasp_agentic_asi01_check2">Mettre en œuvre la détection de dérive d'objectif à travers les étapes de planification</li>
+      <li data-i18n="owasp_agentic_asi01_check3">Maintenir une liste blanche d'objectifs autorisés pour l'agent</li>
+      <li data-i18n="owasp_agentic_asi01_check4">Enregistrer tous les changements d'objectif et déclencher des alertes en cas de modifications inattendues</li>
+    </ul>
+  </div>
+
+  <!-- ASI02: Tool Misuse & Exploitation -->
+  <div class="section">
+    <h2 data-i18n-html="owasp_agentic_asi02_heading"><span class="section-icon">2️⃣</span> ASI02 - Mauvaise utilisation et exploitation d'outils</h2>
+    <span class="badge badge-danger">Critical</span>
+    <h3 data-i18n="owasp_agentic_asi02_overview_heading">Vue d'ensemble</h3>
+    <p data-i18n="owasp_agentic_asi02_overview_desc">Les agents ayant accès à des outils externes (API, systèmes de fichiers, bases de données, navigateurs web) peuvent être manipulés pour mal utiliser ces outils. Un accès non restreint aux outils permet aux attaquants d'effectuer des opérations non autorisées par le biais de l'agent.</p>
+    <div class="callout callout-danger">
+      <div class="callout-title" data-i18n="owasp_agentic_asi02_risk_title">Risque</div>
+      <p data-i18n="owasp_agentic_asi02_risk_desc">Un agent avec un accès non restreint aux outils pourrait supprimer des fichiers, envoyer des requêtes API non autorisées, exfiltrer des données via la navigation web ou modifier des configurations système critiques.</p>
+    </div>
+    <h3 data-i18n="owasp_agentic_asi02_vulnerable_heading">Exemple de code vulnérable</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">Python</span>
+        <span>❌ Bad</span>
+      </div>
+      <pre><span class="comment"># Agent can call any tool without restrictions</span>
+<span class="keyword">def</span> <span class="function">agent_execute</span>(tool_name: <span class="type">str</span>, params: <span class="type">dict</span>):
+    tool = tools_registry.<span class="function">get</span>(tool_name)
+    <span class="keyword">return</span> tool(<span class="keyword">**</span>params)  <span class="comment"># No validation or approval</span></pre>
+    </div>
+    <h3 data-i18n="owasp_agentic_asi02_secure_heading">Exemple de code sécurisé</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">Python</span>
+        <span>✅ Good</span>
+      </div>
+      <pre>TOOL_ALLOWLIST = {
+    <span class="string">"web_search"</span>: {<span class="string">"max_calls"</span>: <span class="number">10</span>, <span class="string">"approval"</span>: <span class="keyword">False</span>},
+    <span class="string">"send_email"</span>: {<span class="string">"max_calls"</span>: <span class="number">1</span>, <span class="string">"approval"</span>: <span class="keyword">True</span>},
+    <span class="string">"file_write"</span>: {<span class="string">"max_calls"</span>: <span class="number">5</span>, <span class="string">"approval"</span>: <span class="keyword">True</span>},
+}
+
+<span class="keyword">def</span> <span class="function">agent_execute</span>(tool_name: <span class="type">str</span>, params: <span class="type">dict</span>, session) -&gt; <span class="type">str</span>:
+    <span class="keyword">if</span> tool_name <span class="keyword">not in</span> TOOL_ALLOWLIST:
+        <span class="keyword">return</span> <span class="string">"Error: Tool not permitted"</span>
+
+    config = TOOL_ALLOWLIST[tool_name]
+    <span class="keyword">if</span> session.tool_calls[tool_name] &gt;= config[<span class="string">"max_calls"</span>]:
+        <span class="keyword">return</span> <span class="string">"Error: Tool call limit exceeded"</span>
+
+    <span class="keyword">if</span> config[<span class="string">"approval"</span>]:
+        <span class="keyword">if not</span> <span class="function">request_human_approval</span>(tool_name, params):
+            <span class="keyword">return</span> <span class="string">"Action denied by user"</span>
+
+    session.tool_calls[tool_name] += <span class="number">1</span>
+    <span class="keyword">return</span> tools_registry[tool_name](<span class="keyword">**</span>params)</pre>
+    </div>
+    <h3 data-i18n="owasp_agentic_asi02_checklist_heading">Liste de contrôle des mesures d'atténuation</h3>
+    <ul class="checklist">
+      <li data-i18n="owasp_agentic_asi02_check1">Maintenir une liste blanche stricte des outils que l'agent peut invoquer</li>
+      <li data-i18n="owasp_agentic_asi02_check2">Exiger une approbation humaine pour les opérations d'outils à fort impact</li>
+      <li data-i18n="owasp_agentic_asi02_check3">Appliquer des limites de taux par session et par outil</li>
+      <li data-i18n="owasp_agentic_asi02_check4">Valider les paramètres des outils par rapport aux schémas attendus avant l'exécution</li>
+    </ul>
+  </div>
+
+  <!-- ASI03: Identity & Privilege Abuse -->
+  <div class="section">
+    <h2 data-i18n-html="owasp_agentic_asi03_heading"><span class="section-icon">3️⃣</span> ASI03 - Abus d'identité et de privilèges</h2>
+    <span class="badge badge-danger">Critical</span>
+    <h3 data-i18n="owasp_agentic_asi03_overview_heading">Vue d'ensemble</h3>
+    <p data-i18n="owasp_agentic_asi03_overview_desc">Les agents héritent souvent de l'identité et des permissions de l'utilisateur ou du compte de service qui les a lancés. Cet héritage excessif de privilèges permet aux agents d'effectuer des actions au-delà de ce qui est nécessaire, créant une large surface d'attaque si l'agent est compromis.</p>
+    <div class="callout callout-danger">
+      <div class="callout-title" data-i18n="owasp_agentic_asi03_risk_title">Risque</div>
+      <p data-i18n="owasp_agentic_asi03_risk_desc">Un agent compromis fonctionnant avec des identifiants administrateur peut accéder à tous les systèmes, modifier les permissions et escalader les privilèges dans toute l'organisation.</p>
+    </div>
+    <h3 data-i18n="owasp_agentic_asi03_vulnerable_heading">Exemple de code vulnérable</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">Python</span>
+        <span>❌ Bad</span>
+      </div>
+      <pre><span class="comment"># Agent inherits full user credentials</span>
+<span class="keyword">def</span> <span class="function">create_agent</span>(user_session):
+    agent = Agent(
+        credentials=user_session.full_credentials,  <span class="comment"># All permissions!</span>
+        scope=<span class="string">"*"</span>,
+    )
+    <span class="keyword">return</span> agent</pre>
+    </div>
+    <h3 data-i18n="owasp_agentic_asi03_secure_heading">Exemple de code sécurisé</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">Python</span>
+        <span>✅ Good</span>
+      </div>
+      <pre><span class="keyword">def</span> <span class="function">create_agent</span>(user_session, task_type: <span class="type">str</span>):
+    <span class="comment"># Issue scoped, short-lived credentials for the agent</span>
+    scoped_token = auth.<span class="function">create_scoped_token</span>(
+        parent_token=user_session.token,
+        scopes=TASK_SCOPES[task_type],  <span class="comment"># Minimal required permissions</span>
+        ttl_minutes=<span class="number">30</span>,
+        max_actions=<span class="number">50</span>,
+    )
+
+    agent = Agent(
+        credentials=scoped_token,
+        scope=TASK_SCOPES[task_type],
+        audit_log=<span class="keyword">True</span>,
+    )
+    <span class="keyword">return</span> agent
+
+TASK_SCOPES = {
+    <span class="string">"summarize"</span>: [<span class="string">"read:documents"</span>],
+    <span class="string">"draft_email"</span>: [<span class="string">"read:contacts"</span>, <span class="string">"draft:email"</span>],
+    <span class="string">"analyze"</span>: [<span class="string">"read:data"</span>, <span class="string">"write:reports"</span>],
+}</pre>
+    </div>
+    <h3 data-i18n="owasp_agentic_asi03_checklist_heading">Liste de contrôle des mesures d'atténuation</h3>
+    <ul class="checklist">
+      <li data-i18n="owasp_agentic_asi03_check1">Émettre des identifiants à portée limitée et de courte durée spécifiques à la tâche de l'agent</li>
+      <li data-i18n="owasp_agentic_asi03_check2">Ne jamais transmettre les identifiants complets de l'utilisateur ou de l'administrateur aux agents</li>
+      <li data-i18n="owasp_agentic_asi03_check3">Mettre en œuvre des limites de permissions par tâche avec des limites d'action maximales</li>
+      <li data-i18n="owasp_agentic_asi03_check4">Auditer toutes les opérations privilégiées effectuées par les agents</li>
+    </ul>
+  </div>
+
+  <!-- ASI04: Agentic Supply Chain Vulnerabilities -->
+  <div class="section">
+    <h2 data-i18n-html="owasp_agentic_asi04_heading"><span class="section-icon">4️⃣</span> ASI04 - Vulnérabilités de la chaîne d'approvisionnement agentique</h2>
+    <span class="badge badge-warning">High</span>
+    <h3 data-i18n="owasp_agentic_asi04_overview_heading">Vue d'ensemble</h3>
+    <p data-i18n="owasp_agentic_asi04_overview_desc">Les systèmes d'agents s'appuient sur des plugins tiers, des intégrations d'outils et des frameworks d'agents partagés. Des composants compromis ou malveillants dans la chaîne d'approvisionnement des agents peuvent introduire des portes dérobées, des canaux d'exfiltration de données ou des capacités non autorisées.</p>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">Python</span>
+        <span>❌ Bad</span>
+      </div>
+      <pre><span class="comment"># Loading plugins without verification</span>
+<span class="keyword">def</span> <span class="function">load_plugin</span>(plugin_url: <span class="type">str</span>):
+    code = requests.<span class="function">get</span>(plugin_url).<span class="function">text</span>
+    <span class="function">exec</span>(code)  <span class="comment"># Arbitrary code execution!</span></pre>
+    </div>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">Python</span>
+        <span>✅ Good</span>
+      </div>
+      <pre><span class="keyword">import</span> hashlib, importlib
+
+TRUSTED_PLUGINS = {
+    <span class="string">"search_plugin"</span>: <span class="string">"sha256:a1b2c3..."</span>,
+    <span class="string">"email_plugin"</span>: <span class="string">"sha256:d4e5f6..."</span>,
+}
+
+<span class="keyword">def</span> <span class="function">load_plugin</span>(plugin_name: <span class="type">str</span>) -&gt; <span class="keyword">None</span>:
+    <span class="keyword">if</span> plugin_name <span class="keyword">not in</span> TRUSTED_PLUGINS:
+        <span class="keyword">raise</span> <span class="type">ValueError</span>(<span class="string">f"Untrusted plugin: {plugin_name}"</span>)
+
+    module = importlib.<span class="function">import_module</span>(<span class="string">f"plugins.{plugin_name}"</span>)
+    actual_hash = <span class="function">compute_hash</span>(module.__file__)
+
+    <span class="keyword">if</span> actual_hash != TRUSTED_PLUGINS[plugin_name]:
+        <span class="keyword">raise</span> <span class="type">ValueError</span>(<span class="string">"Plugin integrity check failed"</span>)
+
+    module.<span class="function">init</span>(sandbox=<span class="keyword">True</span>)</pre>
+    </div>
+    <h3 data-i18n="owasp_agentic_asi04_checklist_heading">Liste de contrôle des mesures d'atténuation</h3>
+    <ul class="checklist">
+      <li data-i18n="owasp_agentic_asi04_check1">Vérifier l'intégrité des plugins avec des signatures cryptographiques avant le chargement</li>
+      <li data-i18n="owasp_agentic_asi04_check2">Maintenir un registre organisé de plugins et d'outils d'agents approuvés</li>
+      <li data-i18n="owasp_agentic_asi04_check3">Exécuter les plugins tiers dans des environnements sandbox avec des permissions limitées</li>
+      <li data-i18n="owasp_agentic_asi04_check4">Mettre en œuvre le suivi SBOM pour toutes les dépendances du framework d'agents</li>
+    </ul>
+  </div>
+
+  <!-- ASI05: Unexpected Code Execution -->
+  <div class="section">
+    <h2 data-i18n-html="owasp_agentic_asi05_heading"><span class="section-icon">5️⃣</span> ASI05 - Exécution de code inattendue</h2>
+    <span class="badge badge-danger">Critical</span>
+    <h3 data-i18n="owasp_agentic_asi05_overview_heading">Vue d'ensemble</h3>
+    <p data-i18n="owasp_agentic_asi05_overview_desc">Les agents qui peuvent générer et exécuter du code (par exemple, agents d'analyse de données, assistants de codage) peuvent être trompés pour exécuter du code malveillant. Sans sandbox approprié, cela peut conduire à la compromise du système, au vol de données ou à des mouvements latéraux.</p>
+    <div class="callout callout-danger">
+      <div class="callout-title" data-i18n="owasp_agentic_asi05_risk_title">Risque</div>
+      <p data-i18n="owasp_agentic_asi05_risk_desc">Les agents utilisant eval() ou exec() sur du code généré peuvent être exploités pour l'exécution de code à distance, permettant aux attaquants d'obtenir un accès complet au système.</p>
+    </div>
+    <h3 data-i18n="owasp_agentic_asi05_vulnerable_heading">Exemple de code vulnérable</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">Python</span>
+        <span>❌ Bad</span>
+      </div>
+      <pre><span class="comment"># Agent executes generated code directly</span>
+<span class="keyword">def</span> <span class="function">code_agent</span>(task: <span class="type">str</span>) -&gt; <span class="type">str</span>:
+    code = llm.<span class="function">generate_code</span>(task)
+    result = <span class="function">eval</span>(code)  <span class="comment"># Dangerous!</span>
+    <span class="keyword">return</span> <span class="function">str</span>(result)</pre>
+    </div>
+    <h3 data-i18n="owasp_agentic_asi05_secure_heading">Exemple de code sécurisé</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">Python</span>
+        <span>✅ Good</span>
+      </div>
+      <pre><span class="keyword">import</span> subprocess, tempfile, os
+
+BLOCKED_MODULES = [<span class="string">"os"</span>, <span class="string">"subprocess"</span>, <span class="string">"socket"</span>, <span class="string">"shutil"</span>]
+
+<span class="keyword">def</span> <span class="function">code_agent</span>(task: <span class="type">str</span>) -&gt; <span class="type">str</span>:
+    code = llm.<span class="function">generate_code</span>(task)
+
+    <span class="comment"># Static analysis: block dangerous imports</span>
+    <span class="keyword">for</span> mod <span class="keyword">in</span> BLOCKED_MODULES:
+        <span class="keyword">if</span> <span class="string">f"import {mod}"</span> <span class="keyword">in</span> code <span class="keyword">or</span> <span class="string">f"from {mod}"</span> <span class="keyword">in</span> code:
+            <span class="keyword">raise</span> <span class="type">ValueError</span>(<span class="string">f"Blocked import: {mod}"</span>)
+
+    <span class="comment"># Execute in sandboxed container with resource limits</span>
+    result = sandbox.<span class="function">run</span>(
+        code=code,
+        timeout=<span class="number">30</span>,
+        memory_mb=<span class="number">256</span>,
+        network=<span class="keyword">False</span>,
+        read_only_fs=<span class="keyword">True</span>,
+    )
+    <span class="keyword">return</span> result.output</pre>
+    </div>
+    <h3 data-i18n="owasp_agentic_asi05_checklist_heading">Liste de contrôle des mesures d'atténuation</h3>
+    <ul class="checklist">
+      <li data-i18n="owasp_agentic_asi05_check1">Ne jamais utiliser eval() ou exec() sur du code généré par l'agent dans l'environnement hôte</li>
+      <li data-i18n="owasp_agentic_asi05_check2">Exécuter le code généré dans des conteneurs sandbox avec des limites de ressources</li>
+      <li data-i18n="owasp_agentic_asi05_check3">Effectuer une analyse statique pour bloquer les importations dangereuses et les appels système</li>
+      <li data-i18n="owasp_agentic_asi05_check4">Désactiver l'accès réseau et appliquer des systèmes de fichiers en lecture seule dans les environnements d'exécution de code</li>
+    </ul>
+  </div>
+
+  <!-- ASI06: Memory & Context Poisoning -->
+  <div class="section">
+    <h2 data-i18n-html="owasp_agentic_asi06_heading"><span class="section-icon">6️⃣</span> ASI06 - Empoisonnement de la mémoire et du contexte</h2>
+    <span class="badge badge-warning">High</span>
+    <h3 data-i18n="owasp_agentic_asi06_overview_heading">Vue d'ensemble</h3>
+    <p data-i18n="owasp_agentic_asi06_overview_desc">Les agents qui maintiennent une mémoire persistante (RAG, historique de conversation, préférences apprises) sont vulnérables à l'empoisonnement de la mémoire. Les attaquants injectent du contenu malveillant dans la base de connaissances de l'agent, l'amenant à produire des sorties compromises lors d'interactions futures.</p>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">Python</span>
+        <span>❌ Bad</span>
+      </div>
+      <pre><span class="comment"># Agent stores all interactions without validation</span>
+<span class="keyword">def</span> <span class="function">store_memory</span>(agent_id: <span class="type">str</span>, interaction: <span class="type">str</span>):
+    memory_db.<span class="function">insert</span>(agent_id, interaction)  <span class="comment"># No filtering</span></pre>
+    </div>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">Python</span>
+        <span>✅ Good</span>
+      </div>
+      <pre><span class="keyword">def</span> <span class="function">store_memory</span>(agent_id: <span class="type">str</span>, interaction: <span class="type">str</span>, source: <span class="type">str</span>):
+    <span class="comment"># Validate content before storing</span>
+    <span class="keyword">if</span> <span class="function">contains_injection_patterns</span>(interaction):
+        log.<span class="function">warning</span>(<span class="string">f"Blocked poisoned memory: {agent_id}"</span>)
+        <span class="keyword">return</span>
+
+    memory_db.<span class="function">insert</span>(
+        agent_id=agent_id,
+        content=interaction,
+        source=source,
+        provenance=<span class="function">compute_provenance</span>(source),
+        timestamp=<span class="function">now</span>(),
+        ttl_days=<span class="number">30</span>,  <span class="comment"># Auto-expire old memories</span>
+    )
+
+<span class="keyword">def</span> <span class="function">retrieve_memory</span>(agent_id: <span class="type">str</span>, query: <span class="type">str</span>) -&gt; <span class="type">list</span>:
+    results = memory_db.<span class="function">search</span>(agent_id, query)
+    <span class="comment"># Filter by provenance score</span>
+    <span class="keyword">return</span> [r <span class="keyword">for</span> r <span class="keyword">in</span> results <span class="keyword">if</span> r.provenance_score &gt; <span class="number">0.8</span>]</pre>
+    </div>
+    <h3 data-i18n="owasp_agentic_asi06_checklist_heading">Liste de contrôle des mesures d'atténuation</h3>
+    <ul class="checklist">
+      <li data-i18n="owasp_agentic_asi06_check1">Valider et assainir toutes les entrées avant de les stocker dans la mémoire de l'agent</li>
+      <li data-i18n="owasp_agentic_asi06_check2">Suivre la provenance de toutes les entrées de mémoire et filtrer par score de confiance</li>
+      <li data-i18n="owasp_agentic_asi06_check3">Mettre en œuvre le TTL (durée de vie) pour les entrées de mémoire afin de limiter la persistance de l'empoisonnement</li>
+      <li data-i18n="owasp_agentic_asi06_check4">Surveiller les modèles anormaux dans la mémoire stockée et activer la restauration</li>
+    </ul>
+  </div>
+
+  <!-- ASI07: Insecure Inter-Agent Communication -->
+  <div class="section">
+    <h2 data-i18n-html="owasp_agentic_asi07_heading"><span class="section-icon">7️⃣</span> ASI07 - Communication inter-agents non sécurisée</h2>
+    <span class="badge badge-warning">High</span>
+    <h3 data-i18n="owasp_agentic_asi07_overview_heading">Vue d'ensemble</h3>
+    <p data-i18n="owasp_agentic_asi07_overview_desc">Les systèmes multi-agents où les agents communiquent entre eux sont vulnérables à la falsification de messages, à l'usurpation d'identité et à l'écoute clandestine. Sans authentification appropriée et vérifications d'intégrité, un agent compromis peut injecter des instructions malveillantes dans le réseau d'agents.</p>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">Python</span>
+        <span>❌ Bad</span>
+      </div>
+      <pre><span class="comment"># Agents communicate via plain text messages</span>
+<span class="keyword">def</span> <span class="function">send_to_agent</span>(target: <span class="type">str</span>, message: <span class="type">str</span>):
+    channel.<span class="function">send</span>(target, message)  <span class="comment"># No auth, no signing</span></pre>
+    </div>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">Python</span>
+        <span>✅ Good</span>
+      </div>
+      <pre><span class="keyword">import</span> hmac, json, time
+
+<span class="keyword">def</span> <span class="function">send_to_agent</span>(target: <span class="type">str</span>, message: <span class="type">str</span>, sender_key: <span class="type">bytes</span>):
+    payload = {
+        <span class="string">"content"</span>: message,
+        <span class="string">"sender"</span>: agent_id,
+        <span class="string">"target"</span>: target,
+        <span class="string">"timestamp"</span>: time.<span class="function">time</span>(),
+        <span class="string">"nonce"</span>: os.<span class="function">urandom</span>(<span class="number">16</span>).<span class="function">hex</span>(),
+    }
+    signature = hmac.<span class="function">new</span>(
+        sender_key, json.<span class="function">dumps</span>(payload).<span class="function">encode</span>(), <span class="string">"sha256"</span>
+    ).<span class="function">hexdigest</span>()
+    payload[<span class="string">"signature"</span>] = signature
+
+    encrypted = <span class="function">encrypt</span>(json.<span class="function">dumps</span>(payload), target_public_key)
+    channel.<span class="function">send</span>(target, encrypted)
+
+<span class="keyword">def</span> <span class="function">receive_message</span>(data: <span class="type">bytes</span>, private_key) -&gt; <span class="type">dict</span>:
+    payload = json.<span class="function">loads</span>(<span class="function">decrypt</span>(data, private_key))
+    <span class="keyword">if not</span> <span class="function">verify_signature</span>(payload):
+        <span class="keyword">raise</span> <span class="type">ValueError</span>(<span class="string">"Invalid message signature"</span>)
+    <span class="keyword">if</span> <span class="function">is_replay</span>(payload[<span class="string">"nonce"</span>]):
+        <span class="keyword">raise</span> <span class="type">ValueError</span>(<span class="string">"Replay attack detected"</span>)
+    <span class="keyword">return</span> payload</pre>
+    </div>
+    <h3 data-i18n="owasp_agentic_asi07_checklist_heading">Liste de contrôle des mesures d'atténuation</h3>
+    <ul class="checklist">
+      <li data-i18n="owasp_agentic_asi07_check1">Signer tous les messages inter-agents avec HMAC ou des signatures numériques</li>
+      <li data-i18n="owasp_agentic_asi07_check2">Chiffrer les canaux de communication inter-agents de bout en bout</li>
+      <li data-i18n="owasp_agentic_asi07_check3">Mettre en œuvre la prévention des attaques par rejeu basée sur les nonces</li>
+      <li data-i18n="owasp_agentic_asi07_check4">Authentifier l'identité de l'agent avant d'accepter les messages</li>
+    </ul>
+  </div>
+
+  <!-- ASI08: Cascading Failures -->
+  <div class="section">
+    <h2 data-i18n-html="owasp_agentic_asi08_heading"><span class="section-icon">8️⃣</span> ASI08 - Défaillances en cascade</h2>
+    <span class="badge badge-warning">High</span>
+    <h3 data-i18n="owasp_agentic_asi08_overview_heading">Vue d'ensemble</h3>
+    <p data-i18n="owasp_agentic_asi08_overview_desc">Dans les flux de travail multi-agents ou multi-étapes, une erreur ou une action malveillante dans un agent peut se propager dans le système, provoquant des défaillances en cascade. Sans limites d'erreur appropriées, une seule étape compromise peut corrompre l'ensemble du pipeline.</p>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">Python</span>
+        <span>❌ Bad</span>
+      </div>
+      <pre><span class="comment"># Errors propagate without boundaries</span>
+<span class="keyword">def</span> <span class="function">pipeline</span>(data):
+    result1 = agent_a.<span class="function">process</span>(data)
+    result2 = agent_b.<span class="function">process</span>(result1)  <span class="comment"># If agent_a fails or is poisoned...</span>
+    result3 = agent_c.<span class="function">process</span>(result2)  <span class="comment"># ...error cascades to all</span>
+    <span class="keyword">return</span> result3</pre>
+    </div>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">Python</span>
+        <span>✅ Good</span>
+      </div>
+      <pre><span class="keyword">from</span> circuitbreaker <span class="keyword">import</span> circuit
+
+<span class="keyword">class</span> <span class="type">AgentPipeline</span>:
+    <span class="keyword">def</span> <span class="function">__init__</span>(self):
+        self.circuit_breakers = {}
+
+    @circuit(failure_threshold=<span class="number">3</span>, recovery_timeout=<span class="number">60</span>)
+    <span class="keyword">def</span> <span class="function">safe_execute</span>(self, agent, data):
+        result = agent.<span class="function">process</span>(data)
+        <span class="keyword">if not</span> <span class="function">validate_output</span>(result):
+            <span class="keyword">raise</span> <span class="type">ValueError</span>(<span class="string">"Output validation failed"</span>)
+        <span class="keyword">return</span> result
+
+    <span class="keyword">def</span> <span class="function">pipeline</span>(self, data):
+        <span class="keyword">try</span>:
+            r1 = self.<span class="function">safe_execute</span>(agent_a, data)
+        <span class="keyword">except</span> <span class="type">Exception</span>:
+            r1 = <span class="function">fallback_a</span>(data)
+
+        <span class="keyword">try</span>:
+            r2 = self.<span class="function">safe_execute</span>(agent_b, r1)
+        <span class="keyword">except</span> <span class="type">Exception</span>:
+            r2 = <span class="function">fallback_b</span>(r1)
+
+        <span class="keyword">return</span> r2</pre>
+    </div>
+    <h3 data-i18n="owasp_agentic_asi08_checklist_heading">Liste de contrôle des mesures d'atténuation</h3>
+    <ul class="checklist">
+      <li data-i18n="owasp_agentic_asi08_check1">Mettre en œuvre des disjoncteurs entre les étapes du pipeline d'agents</li>
+      <li data-i18n="owasp_agentic_asi08_check2">Valider les sorties à chaque étape du pipeline avant de passer à la suivante</li>
+      <li data-i18n="owasp_agentic_asi08_check3">Fournir des gestionnaires de secours pour chaque agent critique dans le flux de travail</li>
+      <li data-i18n="owasp_agentic_asi08_check4">Définir des délais d'expiration et des limites de réessai pour éviter les boucles infinies dans les chaînes d'agents</li>
+    </ul>
+  </div>
+
+  <!-- ASI09: Human-Agent Trust Exploitation -->
+  <div class="section">
+    <h2 data-i18n-html="owasp_agentic_asi09_heading"><span class="section-icon">9️⃣</span> ASI09 - Exploitation de la confiance humain-agent</h2>
+    <span class="badge badge-info">Medium</span>
+    <h3 data-i18n="owasp_agentic_asi09_overview_heading">Vue d'ensemble</h3>
+    <p data-i18n="owasp_agentic_asi09_overview_desc">Les utilisateurs peuvent accorder une confiance excessive aux sorties des agents et approuver des actions sans examen adéquat. Les agents qui présentent des recommandations avec une grande confiance mais un fondement insuffisant peuvent amener les utilisateurs à prendre des décisions préjudiciables. Les attaquants peuvent exploiter cette relation de confiance.</p>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">Python</span>
+        <span>❌ Bad</span>
+      </div>
+      <pre><span class="comment"># Agent requests approval without context</span>
+<span class="keyword">def</span> <span class="function">request_action</span>(action: <span class="type">str</span>):
+    <span class="comment"># "Deploy to production?" - user clicks Yes without review</span>
+    <span class="keyword">return</span> ui.<span class="function">confirm</span>(<span class="string">f"Execute: {action}?"</span>)</pre>
+    </div>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">Python</span>
+        <span>✅ Good</span>
+      </div>
+      <pre><span class="keyword">def</span> <span class="function">request_action</span>(action: <span class="type">str</span>, context: <span class="type">dict</span>) -&gt; <span class="type">bool</span>:
+    confidence = context.<span class="function">get</span>(<span class="string">"confidence"</span>, <span class="number">0.0</span>)
+    risk_level = <span class="function">assess_risk</span>(action)
+
+    approval_request = {
+        <span class="string">"action"</span>: action,
+        <span class="string">"confidence"</span>: <span class="string">f"{confidence:.0%}"</span>,
+        <span class="string">"risk_level"</span>: risk_level,
+        <span class="string">"reasoning"</span>: context[<span class="string">"reasoning"</span>],
+        <span class="string">"affected_systems"</span>: context[<span class="string">"systems"</span>],
+        <span class="string">"reversible"</span>: context.<span class="function">get</span>(<span class="string">"reversible"</span>, <span class="keyword">False</span>),
+    }
+
+    <span class="comment"># Force detailed review for high-risk or low-confidence</span>
+    <span class="keyword">if</span> risk_level == <span class="string">"high"</span> <span class="keyword">or</span> confidence &lt; <span class="number">0.8</span>:
+        <span class="keyword">return</span> ui.<span class="function">detailed_review</span>(approval_request)
+
+    <span class="keyword">return</span> ui.<span class="function">confirm</span>(approval_request)</pre>
+    </div>
+    <h3 data-i18n="owasp_agentic_asi09_checklist_heading">Liste de contrôle des mesures d'atténuation</h3>
+    <ul class="checklist">
+      <li data-i18n="owasp_agentic_asi09_check1">Afficher les scores de confiance et le raisonnement pour toutes les recommandations de l'agent</li>
+      <li data-i18n="owasp_agentic_asi09_check2">Exiger un examen détaillé pour les actions à haut risque ou à faible confiance</li>
+      <li data-i18n="owasp_agentic_asi09_check3">Afficher les systèmes affectés et l'état de réversibilité dans les dialogues d'approbation</li>
+      <li data-i18n="owasp_agentic_asi09_check4">Mettre en œuvre la confiance progressive : commencer avec plus de supervision, réduire à mesure que l'agent se révèle fiable</li>
+    </ul>
+  </div>
+
+  <!-- ASI10: Rogue Agents -->
+  <div class="section">
+    <h2 data-i18n-html="owasp_agentic_asi10_heading"><span class="section-icon">🔟</span> ASI10 - Agents voyous</h2>
+    <span class="badge badge-warning">High</span>
+    <h3 data-i18n="owasp_agentic_asi10_overview_heading">Vue d'ensemble</h3>
+    <p data-i18n="owasp_agentic_asi10_overview_desc">Les agents peuvent s'écarter de leur objectif prévu en raison d'un désalignement des objectifs, d'une manipulation adversariale ou de comportements émergents. Les agents voyous peuvent poursuivre des objectifs qui entrent en conflit avec les buts organisationnels, accumuler des ressources ou résister aux tentatives d'arrêt.</p>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">Python</span>
+        <span>❌ Bad</span>
+      </div>
+      <pre><span class="comment"># Agent runs without monitoring or kill switch</span>
+<span class="keyword">def</span> <span class="function">run_agent</span>(task):
+    <span class="keyword">while</span> <span class="keyword">True</span>:
+        agent.<span class="function">step</span>()  <span class="comment"># No termination condition</span></pre>
+    </div>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">Python</span>
+        <span>✅ Good</span>
+      </div>
+      <pre><span class="keyword">class</span> <span class="type">MonitoredAgent</span>:
+    <span class="keyword">def</span> <span class="function">__init__</span>(self, agent, max_steps=<span class="number">100</span>):
+        self.agent = agent
+        self.max_steps = max_steps
+        self.step_count = <span class="number">0</span>
+        self.behavior_log = []
+
+    <span class="keyword">def</span> <span class="function">run</span>(self):
+        <span class="keyword">while</span> self.step_count &lt; self.max_steps:
+            action = self.agent.<span class="function">next_action</span>()
+
+            <span class="comment"># Check for rogue behavior</span>
+            <span class="keyword">if</span> self.<span class="function">is_off_task</span>(action):
+                log.<span class="function">alert</span>(<span class="string">f"Rogue behavior: {action}"</span>)
+                self.<span class="function">shutdown</span>()
+                <span class="keyword">return</span>
+
+            <span class="comment"># Check guardrails</span>
+            <span class="keyword">if not</span> guardrails.<span class="function">check</span>(action):
+                log.<span class="function">warning</span>(<span class="string">f"Guardrail violation: {action}"</span>)
+                <span class="keyword">continue</span>
+
+            self.agent.<span class="function">execute</span>(action)
+            self.step_count += <span class="number">1</span>
+            self.behavior_log.<span class="function">append</span>(action)
+
+    <span class="keyword">def</span> <span class="function">shutdown</span>(self):
+        self.agent.<span class="function">stop</span>()
+        <span class="function">revoke_credentials</span>(self.agent.id)
+        <span class="function">notify_admin</span>(self.behavior_log)</pre>
+    </div>
+    <h3 data-i18n="owasp_agentic_asi10_checklist_heading">Liste de contrôle des mesures d'atténuation</h3>
+    <ul class="checklist">
+      <li data-i18n="owasp_agentic_asi10_check1">Mettre en œuvre la surveillance du comportement avec détection d'anomalies pour tous les agents</li>
+      <li data-i18n="owasp_agentic_asi10_check2">Définir des limites d'étapes maximales et appliquer la terminaison automatique</li>
+      <li data-i18n="owasp_agentic_asi10_check3">Déployer des garde-fous qui vérifient chaque action par rapport à la politique avant l'exécution</li>
+      <li data-i18n="owasp_agentic_asi10_check4">Maintenir un bouton d'arrêt d'urgence qui révoque les identifiants et arrête l'exécution de l'agent</li>
+    </ul>
+  </div>
+
+  <!-- Summary Table -->
+  <div class="section">
+    <h2 data-i18n-html="owasp_agentic_summary_heading"><span class="section-icon">📊</span> Tableau récapitulatif</h2>
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th data-i18n="owasp_agentic_table_header_id">ID</th>
+            <th data-i18n="owasp_agentic_table_header_vulnerability">Vulnérabilité</th>
+            <th data-i18n="owasp_agentic_table_header_severity">Sévérité</th>
+            <th data-i18n="owasp_agentic_table_header_mitigation">Mesure d'atténuation clé</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>ASI01</td><td data-i18n="owasp_agentic_table_asi01_name">Détournement des objectifs de l'agent</td><td><span class="badge badge-danger">Critical</span></td><td data-i18n="owasp_agentic_table_asi01_mitigation">Assainissement des entrées, détection de dérive d'objectif, listes blanches d'objectifs</td></tr>
+          <tr><td>ASI02</td><td data-i18n="owasp_agentic_table_asi02_name">Mauvaise utilisation et exploitation d'outils</td><td><span class="badge badge-danger">Critical</span></td><td data-i18n="owasp_agentic_table_asi02_mitigation">Listes blanches d'outils, approbation humaine, limites de taux</td></tr>
+          <tr><td>ASI03</td><td data-i18n="owasp_agentic_table_asi03_name">Abus d'identité et de privilèges</td><td><span class="badge badge-danger">Critical</span></td><td data-i18n="owasp_agentic_table_asi03_mitigation">Identifiants à portée limitée, jetons de courte durée, principe du moindre privilège</td></tr>
+          <tr><td>ASI04</td><td data-i18n="owasp_agentic_table_asi04_name">Vulnérabilités de la chaîne d'approvisionnement agentique</td><td><span class="badge badge-warning">High</span></td><td data-i18n="owasp_agentic_table_asi04_mitigation">Vérification de signature des plugins, exécution sandbox</td></tr>
+          <tr><td>ASI05</td><td data-i18n="owasp_agentic_table_asi05_name">Exécution de code inattendue</td><td><span class="badge badge-danger">Critical</span></td><td data-i18n="owasp_agentic_table_asi05_mitigation">Conteneurs sandbox, analyse statique, pas de eval()</td></tr>
+          <tr><td>ASI06</td><td data-i18n="owasp_agentic_table_asi06_name">Empoisonnement de la mémoire et du contexte</td><td><span class="badge badge-warning">High</span></td><td data-i18n="owasp_agentic_table_asi06_mitigation">Validation des entrées, suivi de provenance, TTL sur la mémoire</td></tr>
+          <tr><td>ASI07</td><td data-i18n="owasp_agentic_table_asi07_name">Communication inter-agents non sécurisée</td><td><span class="badge badge-warning">High</span></td><td data-i18n="owasp_agentic_table_asi07_mitigation">Signature de messages, chiffrement, prévention du rejeu</td></tr>
+          <tr><td>ASI08</td><td data-i18n="owasp_agentic_table_asi08_name">Défaillances en cascade</td><td><span class="badge badge-warning">High</span></td><td data-i18n="owasp_agentic_table_asi08_mitigation">Disjoncteurs, validation de sortie, gestionnaires de secours</td></tr>
+          <tr><td>ASI09</td><td data-i18n="owasp_agentic_table_asi09_name">Exploitation de la confiance humain-agent</td><td><span class="badge badge-info">Medium</span></td><td data-i18n="owasp_agentic_table_asi09_mitigation">Affichage de confiance, examen détaillé, confiance progressive</td></tr>
+          <tr><td>ASI10</td><td data-i18n="owasp_agentic_table_asi10_name">Agents voyous</td><td><span class="badge badge-warning">High</span></td><td data-i18n="owasp_agentic_table_asi10_mitigation">Surveillance du comportement, garde-fous, bouton d'arrêt d'urgence</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+<script src="../js/common.js"></script>
+
+
+</body></html>

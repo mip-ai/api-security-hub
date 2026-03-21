@@ -27,6 +27,8 @@
   "index_card_vendor_blogs_desc": "Salt Security / Wallarm / Cequence / Imperva の最新記事",
   "index_card_owasp_llm_title": "OWASP LLM Top 10",
   "index_card_owasp_llm_desc": "LLMアプリケーションの最も重要な10のセキュリティリスクとPythonコード例",
+  "index_card_owasp_agentic_title": "OWASP Agentic Top 10",
+  "index_card_owasp_agentic_desc": "AIエージェントシステムの最も重要な10のセキュリティリスクとPythonコード例",
   "index_quickref_heading": "<span class=\"section-icon\">⚡</span> クイックリファレンス",
   "index_quickref_description": "APIセキュリティの基本原則",
   "index_quickref_least_privilege_title": "🔒 最小権限の原則",

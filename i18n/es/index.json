@@ -27,6 +27,8 @@
   "index_card_vendor_blogs_desc": "Últimas publicaciones de Salt Security / Wallarm / Cequence / Imperva",
   "index_card_owasp_llm_title": "OWASP LLM Top 10",
   "index_card_owasp_llm_desc": "Los 10 riesgos de seguridad más críticos para aplicaciones LLM con ejemplos de código Python",
+  "index_card_owasp_agentic_title": "OWASP Agentic Top 10",
+  "index_card_owasp_agentic_desc": "Los 10 riesgos de seguridad más críticos para sistemas de agentes IA con ejemplos de código Python",
   "index_quickref_heading": "<span class=\"section-icon\">⚡</span> Referencia rápida",
   "index_quickref_description": "Principios fundamentales de seguridad API",
   "index_quickref_least_privilege_title": "🔒 Principio de privilegio mínimo",
