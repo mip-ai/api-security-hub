@@ -18,7 +18,11 @@
         "fr": "Un cas d'école sur pourquoi l'infrastructure IA nécessite la même rigueur de sécurité que les systèmes traditionnels."
       },
       "category": "ai",
-      "tags": ["critical", "data-exposure", "ai-infrastructure"],
+      "tags": [
+        "critical",
+        "data-exposure",
+        "ai-infrastructure"
+      ],
       "addedDate": "2026-03-22"
     },
     {
@@ -38,7 +42,11 @@
         "fr": "Souligne le danger persistant des secrets codés en dur dans les dépôts de code. L'analyse automatique des secrets est essentielle."
       },
       "category": "ai",
-      "tags": ["critical", "api-key-leak", "ai-tools"],
+      "tags": [
+        "critical",
+        "api-key-leak",
+        "ai-tools"
+      ],
       "addedDate": "2026-03-22"
     },
     {
@@ -58,7 +66,11 @@
         "fr": "Le rapport Wallarm 2025 révèle une croissance explosive des vulnérabilités IA. La surface d'attaque s'étend plus vite que les défenses."
       },
       "category": "ai",
-      "tags": ["report", "trends", "cve"],
+      "tags": [
+        "report",
+        "trends",
+        "cve"
+      ],
       "addedDate": "2026-03-22"
     }
   ],
@@ -79,7 +91,11 @@
         "pt": "OWASP publicou atualizações da lista Agentic AI Top 10, destacando sequestro de objetivos de agentes e escalonamento de privilégios. Vários vazamentos de chaves API foram reportados em plataformas de IA.",
         "fr": "L'OWASP a publié des mises à jour de la liste Agentic AI Top 10, soulignant le détournement d'objectifs d'agents et l'escalade de privilèges. Plusieurs fuites de clés API ont été signalées sur des plateformes d'IA."
       },
-      "keyThemes": ["ai-agents", "api-key-security", "owasp-updates"]
+      "keyThemes": [
+        "ai-agents",
+        "api-key-security",
+        "owasp-updates"
+      ]
     }
   ],
   "featuredUrls": [
