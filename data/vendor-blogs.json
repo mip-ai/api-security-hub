@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-03-22T15:29:40.186Z",
-  "itemCount": 19,
+  "lastUpdated": "2026-03-22T21:28:55.481Z",
+  "itemCount": 18,
   "items": [
     {
       "title": {
@@ -84,7 +84,7 @@
       "pubDate": "2026-03-12T13:00:07.000Z",
       "description": {
         "en": "Announcing Agent Personas in the Cequence AI Gateway, which allow organizations and employees to manage AI agent privileges at a granular level. It provides the ability to control, monitor, and govern what an AI agent is allowed to do within a system, including data access, tool calls, system action",
-        "ja": "Cequence AI Gateway でのエージェント ペルソナの発表。これにより、組織や従業員は AI エージェントの権限を詳細なレベルで管理できるようになります。 データ アクセス、ツール呼び出し、システム アクションなど、AI エージェントがシステム内で実行できる内容を制御、監視、管理する機能を提供します。",
+        "ja": "Cequence AI Gateway でのエージェント ペルソナの発表。これにより、組織や従業員は AI エージェントの権限を詳細なレベルで管理できるようになります。 データ アクセス、ツール呼び出し、システム アクションなど、システム内で AI エージェントが実行できることを制御、監視、管理する機能を提供します。",
         "es": "Anuncio de Agent Personas en Cequence AI Gateway, que permite a las organizaciones y empleados administrar los privilegios de los agentes de AI a un nivel granular. Proporciona la capacidad de controlar, monitorear y gobernar lo que un agente de IA puede hacer dentro de un sistema, incluido el acceso a datos, llamadas a herramientas y acciones del sistema.",
         "pt": "Anunciamos Agent Personas no Cequence AI Gateway, que permite que organizações e funcionários gerenciem privilégios de agentes de IA em um nível granular. Ele fornece a capacidade de controlar, monitorar e governar o que um agente de IA pode fazer dentro de um sistema, incluindo acesso a dados, chamadas de ferramentas, ações do sistema",
         "fr": "Annonce des agents Personas dans Cequence AI Gateway, qui permettent aux organisations et aux employés de gérer les privilèges des agents IA à un niveau granulaire. Il offre la possibilité de contrôler, surveiller et gouverner ce qu'un agent IA est autorisé à faire au sein d'un système, y compris l'accès aux données, les appels d'outils, les actions du système."
@@ -199,7 +199,7 @@
       "pubDate": "2026-03-10T12:00:00.000Z",
       "description": {
         "en": "Learn three distinct ways that poorly governed and insecure APIs are silently draining enterprise budgets today.",
-        "ja": "今日、管理が不十分で安全でない API が企業の予算を静かに浪費している 3 つの明確な方法を学びましょう。",
+        "ja": "今日、管理が不十分で安全でない API が企業の予算を静かに浪費している 3 つの明確な原因を学びましょう。",
         "es": "Conozca tres formas distintas en las que las API inseguras y mal gobernadas están agotando silenciosamente los presupuestos empresariales en la actualidad.",
         "pt": "Aprenda três maneiras distintas pelas quais APIs mal gerenciadas e inseguras estão drenando silenciosamente os orçamentos empresariais hoje.",
         "fr": "Découvrez trois façons distinctes par lesquelles les API mal gouvernées et non sécurisées épuisent silencieusement les budgets des entreprises aujourd'hui."
@@ -222,7 +222,7 @@
       "pubDate": "2026-03-03T22:41:12.000Z",
       "description": {
         "en": "Executive Summary We identified a security weakness in n8n’s credential management layer that could have completely compromised the application’s security. This finding highlights the core risks of centralized authentication in workflow automation platforms. As n8n serves as the central hub connecti",
-        "ja": "概要 私たちは、n8n の資格情報管理層に、アプリケーションのセキュリティを完全に侵害する可能性のあるセキュリティ上の弱点を特定しました。 この調査結果は、ワークフロー自動化プラットフォームにおける集中認証の核となるリスクを浮き彫りにしています。 n8n は中央ハブ接続として機能します。",
+        "ja": "概要 私たちは、n8n の認証情報管理層に、アプリケーションのセキュリティを完全に侵害する可能性があるセキュリティ上の弱点を特定しました。 この調査結果は、ワークフロー自動化プラットフォームにおける集中認証の核となるリスクを浮き彫りにしています。 n8n は中央ハブ接続として機能します。",
         "es": "Resumen ejecutivo Identificamos una debilidad de seguridad en la capa de administración de credenciales de n8n que podría haber comprometido completamente la seguridad de la aplicación. Este hallazgo resalta los riesgos principales de la autenticación centralizada en las plataformas de automatización del flujo de trabajo. Como n8n sirve como centro de conexión central",
         "pt": "Resumo executivo Identificamos uma falha de segurança na camada de gerenciamento de credenciais do n8n que poderia ter comprometido completamente a segurança do aplicativo. Esta descoberta destaca os principais riscos da autenticação centralizada em plataformas de automação de fluxo de trabalho. Como n8n serve como hub central de conexão",
         "fr": "Résumé Nous avons identifié une faille de sécurité dans la couche de gestion des informations d'identification de n8n qui aurait pu complètement compromettre la sécurité de l'application. Cette découverte met en évidence les principaux risques de l’authentification centralisée dans les plateformes d’automatisation des flux de travail. Comme n8n sert de hub de connexion central"
@@ -245,7 +245,7 @@
       "pubDate": "2026-03-03T14:00:23.000Z",
       "description": {
         "en": "Why Cequence Is Co-Chairing TM Forum&#8217;s AI-Native Blueprint Initiative This past Sunday, at Mobile World Congress in Barcelona, TM Forum officially named Cequence Security as Co-Chair of its AI-Native Blueprint Initiative, specifically leading the Agentic Interaction Security workstream. For th",
-        "ja": "Cequence が TM フォーラムの AI ネイティブ ブループリント イニシアティブの共同議長を務める理由 先週の日曜日、バルセロナで開催されたモバイル ワールド コングレスで、TM フォーラムは正式に Cequence セキュリティを AI ネイティブ ブループリント イニシアチブの共同議長に任命し、特にエージェントティック インタラクション セキュリティ ワークストリームを主導しました。 のために",
+        "ja": "Cequence が TM フォーラムの AI ネイティブ ブループリント イニシアチブの共同議長を務める理由 先週の日曜日、バルセロナで開催されたモバイル ワールド コングレスで、TM フォーラムは正式に Cequence セキュリティを AI ネイティブ ブループリント イニシアチブの共同議長に任命し、特にエージェントティック インタラクション セキュリティ ワークストリームを主導しました。 のために",
         "es": "Por qué Cequence copreside la iniciativa AI-Native Blueprint de TM Forum El domingo pasado, en el Mobile World Congress en Barcelona, ​​TM Forum nombró oficialmente a Cequence Security copresidente de su iniciativa AI-Native Blueprint, específicamente liderando el flujo de trabajo de seguridad de interacción agente. Para el",
         "pt": "Por que Cequence é copresidente da iniciativa AI-Native Blueprint do TM Forum No último domingo, no Mobile World Congress em Barcelona, ​​o TM Forum nomeou oficialmente Cequence Security como copresidente de sua iniciativa AI-Native Blueprint, liderando especificamente o fluxo de trabalho Agentic Interaction Security. Adiante",
         "fr": "Pourquoi Cequence co-préside l'initiative AI-Native Blueprint du TM Forum Dimanche dernier, lors du Mobile World Congress à Barcelone, TM Forum a officiellement nommé Cequence Security co-président de son initiative AI-Native Blueprint, dirigeant spécifiquement le flux de travail sur la sécurité des interactions agentiques. Pour le"
@@ -270,7 +270,7 @@
         "en": "Broken authorization is one of the most widely known API vulnerabilities.&#160; It features in the OWASP Top 10, AppSec conversations, and secure coding guidelines. Broken Object Level Authorization (BOLA) and Broken Function Level Authorization (BFLA) account for hundreds of API vulnerabilities eve",
         "ja": "認証の失敗は、最も広く知られている API の脆弱性の 1 つです。 これは、OWASP Top 10、AppSec の会話、およびセキュア コーディング ガイドラインで取り上げられています。 Broken Object Level Authorization (BOLA) および Broken Function Level Authorization (BFLA) は、数百もの API 脆弱性の原因となっています。",
         "es": "La autorización rota es una de las vulnerabilidades de API más conocidas.&#160; Aparece en OWASP Top 10, conversaciones de AppSec y pautas de codificación segura. La autorización de nivel de objeto roto (BOLA) y la autorización de nivel de función rota (BFLA) representan cientos de vulnerabilidades de API.",
-        "pt": "A autorização quebrada é uma das vulnerabilidades de API mais conhecidas.&#160; Ele aparece no OWASP Top 10, conversas AppSec e diretrizes de codificação segura. A Autorização de Nível de Objeto Quebrado (BOLA) e a Autorização de Nível de Função Quebrada (BFLA) são responsáveis ​​por centenas de vulnerabilidades de API",
+        "pt": "A autorização quebrada é uma das vulnerabilidades de API mais conhecidas.&#160; Ele aparece no OWASP Top 10, conversas AppSec e diretrizes de codificação segura. Autorização de nível de objeto quebrado (BOLA) e autorização de nível de função quebrada (BFLA) são responsáveis ​​por centenas de vulnerabilidades de API",
         "fr": "L'autorisation brisée est l'une des vulnérabilités les plus connues des API. Il figure dans le Top 10 OWASP, les conversations AppSec et les directives de codage sécurisé. L'autorisation au niveau des objets brisés (BOLA) et l'autorisation au niveau des fonctions brisées (BFLA) représentent des centaines de vulnérabilités d'API chaque jour."
       },
       "descriptionOriginal": "Broken authorization is one of the most widely known API vulnerabilities.&#160; It features in the OWASP Top 10, AppSec conversations, and secure coding guidelines. Broken Object Level Authorization (BOLA) and Broken Function Level Authorization (BFLA) account for hundreds of API vulnerabilities eve",
@@ -291,7 +291,7 @@
       "pubDate": "2026-02-25T12:00:00.000Z",
       "description": {
         "en": "<p>If you’ve ever done Linux memory forensics, you know the frustration: without debug symbols that match the exact kernel version, you’re stuck. These symbols aren’t typically installed on production systems and must be sourced from external repositories, which quickly become outdated when systems ",
-        "ja": "<p>Linux メモリ フォレンジックを行ったことがある人なら、そのイライラをご存知でしょう。カーネル バージョンと正確に一致するデバッグ シンボルがなければ、行き詰まってしまいます。 これらのシンボルは通常、運用システムにはインストールされず、外部リポジトリから取得する必要があります。システムが稼働するとすぐに古くなります。",
+        "ja": "<p>Linux メモリ フォレンジックを行ったことがある人なら、そのイライラをご存知でしょう。カーネル バージョンと正確に一致するデバッグ シンボルがなければ、行き詰まってしまいます。 これらのシンボルは通常、運用システムにはインストールされず、外部リポジトリから取得する必要があります。システムが稼働するとすぐに古くなってしまいます。",
         "es": "<p>Si alguna vez has realizado análisis forenses de la memoria de Linux, conoces la frustración: sin símbolos de depuración que coincidan con la versión exacta del kernel, estás estancado. Estos símbolos no suelen instalarse en sistemas de producción y deben obtenerse de repositorios externos, que rápidamente quedan obsoletos cuando los sistemas",
         "pt": "<p>Se você já fez análise forense de memória do Linux, você conhece a frustração: sem símbolos de depuração que correspondam à versão exata do kernel, você está preso. Esses símbolos normalmente não são instalados em sistemas de produção e devem ser provenientes de repositórios externos, que rapidamente ficam desatualizados quando os sistemas",
         "fr": "<p>Si vous avez déjà effectué une analyse approfondie de la mémoire Linux, vous connaissez la frustration : sans symboles de débogage correspondant à la version exacte du noyau, vous êtes bloqué. Ces symboles ne sont généralement pas installés sur les systèmes de production et doivent provenir de référentiels externes, qui deviennent rapidement obsolètes lorsque les systèmes"
@@ -339,7 +339,7 @@
         "en": "As APIs power the majority of modern web applications, implementing robust API security is no longer optional &#8211; it’s a critical necessity for data protection. This guide explores how to seamlessly integrate API gateway security into your Imperva on-premises environment to mitigate OWASP Top 10",
         "ja": "最新の Web アプリケーションの大部分は API によって支えられているため、堅牢な API セキュリティの実装はもはやオプションではありません。 これはデータ保護にとって極めて重要です。 このガイドでは、API ゲートウェイのセキュリティを Imperva オンプレミス環境にシームレスに統合して、OWASP Top 10 の影響を軽減する方法について説明します。",
         "es": "Dado que las API impulsan la mayoría de las aplicaciones web modernas, implementar una seguridad API sólida ya no es opcional; es una necesidad crítica para la protección de datos. Esta guía explora cómo integrar perfectamente la seguridad de la puerta de enlace API en su entorno local Imperva para mitigar el Top 10 de OWASP.",
-        "pt": "Como as APIs alimentam a maioria dos aplicativos da web modernos, a implementação de segurança robusta de API não é mais opcional - é mais opcional. é uma necessidade crítica para a proteção de dados. Este guia explora como integrar perfeitamente a segurança do gateway API em seu ambiente local Imperva para mitigar os 10 principais problemas do OWASP",
+        "pt": "Como as APIs alimentam a maioria dos aplicativos da web modernos, a implementação de segurança robusta de API não é mais opcional - é mais uma opção. é uma necessidade crítica para a proteção de dados. Este guia explora como integrar perfeitamente a segurança do gateway API em seu ambiente local Imperva para mitigar os 10 principais problemas do OWASP",
         "fr": "Alors que les API alimentent la majorité des applications Web modernes, la mise en œuvre d’une sécurité API robuste n’est plus facultative – c’est plutôt une option. c’est une nécessité cruciale pour la protection des données. Ce guide explique comment intégrer de manière transparente la sécurité de la passerelle API dans votre environnement sur site Imperva pour atténuer le Top 10 OWASP."
       },
       "descriptionOriginal": "As APIs power the majority of modern web applications, implementing robust API security is no longer optional &#8211; it’s a critical necessity for data protection. This guide explores how to seamlessly integrate API gateway security into your Imperva on-premises environment to mitigate OWASP Top 10",
@@ -415,29 +415,6 @@
       "source": "Salt Security",
       "vendor": "salt",
       "category": "general"
-    },
-    {
-      "title": {
-        "en": "Using threat modeling and prompt injection to audit Comet",
-        "ja": "脅威モデリングとプロンプト インジェクションを使用して Comet を監査する",
-        "es": "Uso de modelado de amenazas e inyección rápida para auditar a Comet",
-        "pt": "Usando modelagem de ameaças e injeção imediata para auditar o Comet",
-        "fr": "Utiliser la modélisation des menaces et l’injection rapide pour auditer Comet"
-      },
-      "titleOriginal": "Using threat modeling and prompt injection to audit Comet",
-      "link": "https://blog.trailofbits.com/2026/02/20/using-threat-modeling-and-prompt-injection-to-audit-comet/",
-      "pubDate": "2026-02-20T16:00:00.000Z",
-      "description": {
-        "en": "<p>Before launching their Comet browser, Perplexity hired us to test the security of their AI-powered browsing features. Using adversarial testing guided by our TRAIL threat model, we demonstrated how four prompt injection techniques could extract users&rsquo; private information from Gmail by explo",
-        "ja": "<p>Comet ブラウザをリリースする前に、Perplexity は AI を活用したブラウジング機能のセキュリティをテストするために私たちを雇いました。 TRAIL 脅威モデルに基づいた敵対的テストを使用して、4 つのプロンプト インジェクション技術がどのようにユーザーを抽出できるかを実証しました。 Explo による Gmail からの個人情報",
-        "es": "<p>Antes de lanzar su navegador Comet, Perplexity nos contrató para probar la seguridad de sus funciones de navegación impulsadas por IA. Utilizando pruebas adversas guiadas por nuestro modelo de amenazas TRAIL, demostramos cómo cuatro técnicas de inyección rápida podrían extraer la seguridad de los usuarios. información privada de Gmail por explo",
-        "pt": "<p>Antes de lançar seu navegador Comet, a Perplexity nos contratou para testar a segurança de seus recursos de navegação baseados em IA. Usando testes adversários guiados por nosso modelo de ameaça TRAIL, demonstramos como quatro técnicas de injeção imediata poderiam extrair informações dos usuários. informações privadas do Gmail por Explo",
-        "fr": "<p>Avant de lancer son navigateur Comet, Perplexity nous a engagés pour tester la sécurité de ses fonctionnalités de navigation basées sur l'IA. À l’aide de tests contradictoires guidés par notre modèle de menace TRAIL, nous avons démontré comment quatre techniques d’injection rapide pouvaient extraire les utilisateurs de leurs menaces. informations privées de Gmail par explo"
-      },
-      "descriptionOriginal": "<p>Before launching their Comet browser, Perplexity hired us to test the security of their AI-powered browsing features. Using adversarial testing guided by our TRAIL threat model, we demonstrated how four prompt injection techniques could extract users&rsquo; private information from Gmail by explo",
-      "source": "Trail of Bits",
-      "vendor": "trailofbits",
-      "category": "ai"
     }
   ]
 }
