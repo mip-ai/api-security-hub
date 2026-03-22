@@ -1,5 +1,5 @@
 /* ============================================
-   API Security Reference Site - Common JS
+   AI Security Hub - Common JS
    ============================================ */
 
 (function () {
@@ -22,8 +22,8 @@
 
   // --- Section definitions for sidebar grouping ---
   const SECTIONS = [
-    { id: 'api_security', labelKey: 'nav_section_platform' },
     { id: 'ai_security', labelKey: 'nav_section_ai' },
+    { id: 'api_security', labelKey: 'nav_section_platform' },
     { id: 'devops', labelKey: 'nav_section_devops' },
     { id: 'information', labelKey: 'nav_section_info' },
   ];
@@ -167,23 +167,23 @@
   // --- Footer labels per language ---
   const FOOTER_LABELS = {
     en: {
-      desc: 'API Security Reference Hub &mdash; Security information portal for development teams',
+      desc: 'AI Security Hub &mdash; Security information portal for development teams',
       ref: 'Reference: ',
     },
     ja: {
-      desc: 'API Security Reference Hub &mdash; \u793E\u5185\u5411\u3051\u30BB\u30AD\u30E5\u30EA\u30C6\u30A3\u60C5\u5831\u30DD\u30FC\u30BF\u30EB',
+      desc: 'AI Security Hub &mdash; \u793E\u5185\u5411\u3051\u30BB\u30AD\u30E5\u30EA\u30C6\u30A3\u60C5\u5831\u30DD\u30FC\u30BF\u30EB',
       ref: '\u53C2\u8003: ',
     },
     es: {
-      desc: 'API Security Reference Hub &mdash; Portal de informaci\u00F3n de seguridad',
+      desc: 'AI Security Hub &mdash; Portal de informaci\u00F3n de seguridad',
       ref: 'Referencia: ',
     },
     pt: {
-      desc: 'API Security Reference Hub &mdash; Portal de informa\u00E7\u00F5es de seguran\u00E7a',
+      desc: 'AI Security Hub &mdash; Portal de informa\u00E7\u00F5es de seguran\u00E7a',
       ref: 'Refer\u00EAncia: ',
     },
     fr: {
-      desc: 'API Security Reference Hub &mdash; Portail d\'informations de s\u00E9curit\u00E9',
+      desc: 'AI Security Hub &mdash; Portail d\'informations de s\u00E9curit\u00E9',
       ref: 'R\u00E9f\u00E9rence : ',
     },
   };
@@ -238,8 +238,8 @@
         <div class="logo">
           <span class="logo-icon">\u{1F6E1}</span>
           <div>
-            <div>API Security</div>
-            <div class="logo-sub">Reference Hub</div>
+            <div>AI Security</div>
+            <div class="logo-sub">Hub</div>
           </div>
         </div>
       </div>
@@ -255,7 +255,7 @@
         </select>
       </div>
       <div class="sidebar-footer">
-        &copy; 2025 API Security Reference<br>
+        &copy; 2025 AI Security Hub<br>
         Internal Use Only
       </div>
     `;
@@ -268,7 +268,7 @@
     header.className = 'mobile-header';
     header.innerHTML = `
       <button class="hamburger" id="hamburger" aria-label="Open menu">\u2630</button>
-      <span class="mobile-title">\u{1F6E1} API Security</span>
+      <span class="mobile-title">\u{1F6E1} AI Security Hub</span>
       <span style="width:40px"></span>
     `;
     return header;
