@@ -9,7 +9,8 @@
 
 const fs = require('fs');
 const path = require('path');
-const translate = require('google-translate-api-x');
+const deepl = require('deepl-node');
+const translator = new deepl.Translator(process.env.DEEPL_API_KEY);
 
 // --- RSS Feed Sources ---
 const FEEDS = [
@@ -37,10 +38,10 @@ const FEEDS = [
 
 // --- Target languages for translation ---
 const TARGET_LANGS = [
-  { code: 'ja', googleCode: 'ja' },
-  { code: 'es', googleCode: 'es' },
-  { code: 'pt', googleCode: 'pt' },
-  { code: 'fr', googleCode: 'fr' },
+  { code: 'ja', deeplCode: 'ja' },
+  { code: 'es', deeplCode: 'es' },
+  { code: 'pt', deeplCode: 'pt-BR' },
+  { code: 'fr', deeplCode: 'fr' },
 ];
 
 // --- Tier 1: API & AI security keywords (match alone = include) ---
@@ -261,7 +262,7 @@ async function fetchFeed(feed) {
 async function translateText(text, targetLangCode) {
   if (!text) return '';
   try {
-    const result = await translate(text, { from: 'en', to: targetLangCode });
+    const result = await translator.translateText(text, 'en', targetLangCode);
     return result.text;
   } catch (err) {
     console.error(`  [TRANSLATE ERR] ${targetLangCode}: ${err.message}`);
@@ -281,8 +282,8 @@ async function translateItem(item, index) {
 
   for (const lang of TARGET_LANGS) {
     const [translatedTitle, translatedDesc] = await Promise.all([
-      translateText(item.title, lang.googleCode),
-      translateText(item.description, lang.googleCode),
+      translateText(item.title, lang.deeplCode),
+      translateText(item.description, lang.deeplCode),
     ]);
     titleTranslations[lang.code] = translatedTitle;
     descTranslations[lang.code] = translatedDesc;

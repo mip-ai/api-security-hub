@@ -4,18 +4,18 @@
     {
       "title": {
         "ja": "DeepSeekのデータベース露出: 100万件超のチャット履歴・APIキーを含むログが公開状態に",
-        "en": "DeepSeek database exposed: Over 1 million chat histories and logs containing API keys exposed",
-        "es": "Base de datos DeepSeek expuesta: más de 1 millón de historiales de chat y registros que contienen claves API expuestos",
-        "pt": "Banco de dados DeepSeek exposto: Mais de 1 milhão de históricos de bate-papo e logs contendo chaves de API expostas",
-        "fr": "Base de données DeepSeek exposée : plus d'un million d'historiques de discussion et de journaux contenant des clés API exposés"
+        "en": "DeepSeek Database Exposed: Over 1 Million Logs Including Chat History and API Keys Become Public",
+        "es": "Exposición de la base de datos de DeepSeek: los registros que contienen más de 1 millón de historiales de chat y claves API están ahora a disposición del público.",
+        "pt": "Exposição do banco de dados do DeepSeek: registros contendo mais de 1 milhão de históricos de bate-papo e chaves de API agora estão disponíveis publicamente.",
+        "fr": "Exposition de la base de données DeepSeek : des journaux contenant plus d'un million d'historiques de chat et de clés API sont désormais accessibles au public."
       },
       "link": "https://www.wiz.io/blog/wiz-research-uncovers-exposed-deepseek-database-leak",
       "commentary": {
         "ja": "AIインフラにも従来のシステムと同等のセキュリティ対策が必要であることを示す教科書的事例。未認証のデータベースアクセスにより、チャット履歴、APIシークレット、運用メタデータが露出。",
-        "en": "A textbook example showing that AI infrastructure requires the same security measures as traditional systems. Unauthenticated database access exposed chat history, API secrets, and operational metadata.",
-        "es": "Un ejemplo de libro de texto que muestra que la infraestructura de IA requiere las mismas medidas de seguridad que los sistemas tradicionales. El acceso no autenticado a la base de datos expuso el historial de chat, los secretos de API y los metadatos operativos.",
-        "pt": "Um exemplo clássico que mostra que a infraestrutura de IA requer as mesmas medidas de segurança que os sistemas tradicionais. O acesso não autenticado ao banco de dados expôs o histórico de bate-papo, segredos de API e metadados operacionais.",
-        "fr": "Un exemple classique montrant que l'infrastructure d'IA nécessite les mêmes mesures de sécurité que les systèmes traditionnels. L'accès non authentifié à la base de données expose l'historique des discussions, les secrets de l'API et les métadonnées opérationnelles."
+        "en": "A textbook example of how AI infrastructure requires the same security measures as traditional systems. Unauthorized database access exposed chat history, API secrets, and operational metadata.",
+        "es": "Caso práctico de manual que demuestra que la infraestructura de IA requiere las mismas medidas de seguridad que los sistemas tradicionales. Un acceso no autorizado a la base de datos dejó al descubierto el historial de chat, secretos de la API y metadatos operativos.",
+        "pt": "Estudo de caso exemplar que mostra que a infraestrutura de IA exige as mesmas medidas de segurança que os sistemas tradicionais. O acesso não autorizado ao banco de dados expôs o histórico de bate-papo, os segredos da API e os metadados operacionais.",
+        "fr": "Une étude de cas classique montrant que l'infrastructure de l'IA nécessite les mêmes mesures de sécurité que les systèmes traditionnels. L'accès non autorisé à la base de données a exposé l'historique des conversations, les secrets de l'API et les métadonnées opérationnelles."
       },
       "category": "ai",
       "tags": [
@@ -28,18 +28,18 @@
     {
       "title": {
         "ja": "DOGE職員がxAIプライベートAPIキーをGitHubに漏洩 — 52以上のLLMへのアクセス",
-        "en": "DOGE employee leaks xAI private API key to GitHub — access to 52+ LLMs",
-        "es": "Un empleado de DOGE filtra la clave API privada de xAI a GitHub: acceso a más de 52 LLM",
-        "pt": "Funcionário do DOGE vaza chave de API privada xAI para GitHub – acesso a mais de 52 LLMs",
-        "fr": "Un employé de DOGE divulgue la clé API privée xAI sur GitHub – accès à plus de 52 LLM"
+        "en": "DOGE staff leaked xAI private API key to GitHub - access to over 52 LLMs",
+        "es": "El personal del DOGE filtró las claves API privadas de xAI a GitHub: acceso a más de 52 LLM.",
+        "pt": "A equipe do DOGE vazou chaves de API privadas do xAI para o GitHub - acesso a mais de 52 LLMs.",
+        "fr": "Le personnel de la DOGE a divulgué les clés privées de l'API xAI sur GitHub - accès à plus de 52 LLM."
       },
       "link": "https://krebsonsecurity.com/2025/07/doge-denizen-marko-elez-leaked-api-key-for-xai/",
       "commentary": {
         "ja": "コードリポジトリにハードコードされたシークレットの永続的な危険性を浮き彫りにする事例。政府関連の開発者でもこの過ちを犯す。自動シークレットスキャンが不可欠。",
-        "en": "A case study that highlights the persistent dangers of hard-coded secrets in code repositories. Even government developers make this mistake. Automatic secret scanning is essential.",
-        "es": "Un estudio de caso que destaca los peligros persistentes de los secretos codificados en los repositorios de códigos. Incluso los promotores gubernamentales cometen este error. El escaneo secreto automático es esencial.",
-        "pt": "Um estudo de caso que destaca os perigos persistentes de segredos codificados em repositórios de código. Até mesmo os desenvolvedores governamentais cometem esse erro. A verificação automática de segredos é essencial.",
-        "fr": "Une étude de cas qui met en évidence les dangers persistants des secrets codés en dur dans les référentiels de code. Même les promoteurs gouvernementaux font cette erreur. L'analyse automatique des secrets est essentielle."
+        "en": "A case study that highlights the enduring danger of hard-coded secrets in code repositories. Even government-related developers make this mistake. Automatic secret scanning is essential.",
+        "es": "Un estudio de caso que pone de relieve los peligros persistentes de los secretos codificados en los repositorios de código. Incluso los desarrolladores relacionados con el gobierno cometen este error. La exploración automática de secretos es esencial.",
+        "pt": "Um estudo de caso que destaca os perigos permanentes dos segredos codificados em repositórios de código. Até mesmo os desenvolvedores relacionados ao governo cometem esse erro. A varredura automática de segredos é essencial.",
+        "fr": "Une étude de cas soulignant les dangers persistants des secrets codés en dur dans les référentiels de code. Même les développeurs du secteur public commettent cette erreur. L'analyse automatique des secrets est essentielle."
       },
       "category": "ai",
       "tags": [
@@ -52,18 +52,18 @@
     {
       "title": {
         "ja": "AI関連CVEが2024年に前年比1,025%急増",
-        "en": "AI-related CVE will surge 1,025% year-on-year in 2024",
-        "es": "El CVE relacionado con la IA aumentará un 1.025 % interanual en 2024",
-        "pt": "CVE relacionado à IA aumentará 1.025% ano a ano em 2024",
-        "fr": "Le CVE lié à l'IA augmentera de 1 025 % sur un an en 2024"
+        "en": "AI-related CVEs to surge 1,025% YoY in 2024",
+        "es": "Los CVE relacionados con la IA se dispararán un 1.025% interanual en 2024",
+        "pt": "CVEs relacionados à IA terão um aumento de 1.025% em relação ao ano anterior em 2024",
+        "fr": "Les CVE liés à l'IA vont bondir de 1 025 % en glissement annuel en 2024."
       },
       "link": "https://www.wallarm.com/reports/2025-api-security-report",
       "commentary": {
         "ja": "Wallarmの2025年レポートがAI脆弱性の爆発的増加を明らかに。CISAのKEVカタログの50%以上がAPI関連に。攻撃対象面が防御よりも速く拡大している。",
-        "en": "Wallarm's 2025 Report Reveals Explosive Growth in AI Vulnerabilities. More than 50% of CISA's KEV catalog is API-related. The attack surface is expanding faster than the defense.",
-        "es": "El informe 2025 de Wallarm revela un crecimiento explosivo de las vulnerabilidades de la IA. Más del 50% del catálogo KEV de CISA está relacionado con API. La superficie de ataque se está expandiendo más rápido que la defensa.",
-        "pt": "O relatório de 2025 da Wallarm revela crescimento explosivo nas vulnerabilidades de IA. Mais de 50% do catálogo KEV da CISA está relacionado à API. A superfície de ataque está se expandindo mais rapidamente que a defesa.",
-        "fr": "Le rapport 2025 de Wallarm révèle une croissance explosive des vulnérabilités de l'IA. Plus de 50 % du catalogue KEV de CISA est lié aux API. La surface d'attaque s'étend plus vite que la défense."
+        "en": "Wallarm's 2025 Report Reveals Explosive Growth in AI Vulnerabilities; Over 50% of CISA's KEV Catalog is API-Related. Attack surface is expanding faster than defenses.",
+        "es": "El informe 2025 de Wallarm revela un crecimiento explosivo de las vulnerabilidades de IA; más del 50% del catálogo KEV de CISA está ahora relacionado con API. La superficie de ataque crece más rápido que las defensas.",
+        "pt": "O relatório 2025 da Wallarm revela um crescimento explosivo das vulnerabilidades de IA; mais de 50% do catálogo KEV da CISA está agora relacionado à API. A superfície de ataque está se expandindo mais rapidamente do que as defesas.",
+        "fr": "Le rapport 2025 de Wallarm révèle une croissance explosive des vulnérabilités liées à l'IA ; plus de 50 % du catalogue KEV de CISA est désormais lié aux API. La surface d'attaque s'étend plus rapidement que les défenses."
       },
       "category": "ai",
       "tags": [
@@ -79,17 +79,17 @@
       "weekOf": "2026-03-17",
       "title": {
         "ja": "3月17日の週: サプライチェーン攻撃とAIツール脆弱性が同時多発",
-        "en": "Week of March 17th: Supply chain attacks and AI tool vulnerabilities occur simultaneously",
-        "es": "Semana del 17 de marzo: los ataques a la cadena de suministro y las vulnerabilidades de las herramientas de inteligencia artificial ocurren simultáneamente",
-        "pt": "Semana de 17 de março: ataques à cadeia de suprimentos e vulnerabilidades de ferramentas de IA ocorrem simultaneamente",
-        "fr": "Semaine du 17 mars : les attaques de la chaîne d'approvisionnement et les vulnérabilités des outils d'IA se produisent simultanément"
+        "en": "Week of March 17: Simultaneous Supply Chain Attacks and AI Tool Vulnerabilities",
+        "es": "Semana del 17 de marzo: ataques simultáneos a la cadena de suministro y vulnerabilidades de las herramientas de IA",
+        "pt": "Semana de 17 de março: ataques simultâneos à cadeia de suprimentos e vulnerabilidades de ferramentas de IA",
+        "fr": "Semaine du 17 mars : attaques simultanées de la chaîne d'approvisionnement et vulnérabilités des outils d'IA"
       },
       "summary": {
         "ja": "Trivyが1ヶ月で2度目のサプライチェーン侵害を受け、GitHub Actions経由でCI/CDシークレットが窃取された。AIワークフローツールLangflowでは重大なRCE脆弱性(CVE-2026-33017, CVSS 9.3)が公開わずか20時間で攻撃に悪用開始。Salt SecurityやCequenceがAIエージェントのセキュリティリスクに関する記事を相次いで公開し、エージェント権限管理の重要性が業界の焦点に。Oracle Identity Managerの緊急パッチ(CVSS 9.8)やCISAのKEV追加ラッシュも重なり、防御側にとって多忙な一週間となった。",
-        "en": "Trivy suffers its second supply chain breach in a month, with CI/CD secrets stolen via GitHub Actions. A serious RCE vulnerability (CVE-2026-33017, CVSS 9.3) was exploited in attacks in the AI ​​workflow tool Langflow just 20 hours after its release. Salt Security and Cequence have published articles on the security risks of AI agents one after another, and the importance of agent privilege management has become the focus of the industry. Coupled with an emergency patch for Oracle Identity Manager (CVSS 9.8) and a rush to add KEV to CISA, it was a busy week for defenders.",
-        "es": "Trivy sufre su segunda violación de la cadena de suministro en un mes, con secretos de CI/CD robados a través de GitHub Actions. Una grave vulnerabilidad RCE (CVE-2026-33017, CVSS 9.3) fue explotada en ataques a la herramienta de flujo de trabajo de IA Langflow solo 20 horas después de su lanzamiento. Salt Security y Cequence han publicado artículos sobre los riesgos de seguridad de los agentes de IA uno tras otro, y la importancia de la gestión de privilegios de los agentes se ha convertido en el foco de la industria. Junto con un parche de emergencia para Oracle Identity Manager (CVSS 9.8) y la prisa por agregar KEV a CISA, fue una semana ocupada para los defensores.",
-        "pt": "Trivy sofre sua segunda violação na cadeia de suprimentos em um mês, com segredos de CI/CD roubados por meio do GitHub Actions. Uma vulnerabilidade grave de RCE (CVE-2026-33017, CVSS 9.3) foi explorada em ataques na ferramenta de fluxo de trabalho de IA Langflow apenas 20 horas após seu lançamento. Salt Security e Cequence publicaram artigos sobre os riscos de segurança dos agentes de IA, um após o outro, e a importância do gerenciamento de privilégios dos agentes tornou-se o foco da indústria. Juntamente com um patch de emergência para o Oracle Identity Manager (CVSS 9.8) e uma pressa para adicionar o KEV ao CISA, foi uma semana movimentada para os defensores.",
-        "fr": "Trivy subit sa deuxième violation de la chaîne d'approvisionnement en un mois, avec des secrets CI/CD volés via GitHub Actions. Une grave vulnérabilité RCE (CVE-2026-33017, CVSS 9.3) a été exploitée lors d'attaques dans l'outil de workflow d'IA Langflow seulement 20 heures après sa sortie. Salt Security et Cequence ont publié l'un après l'autre des articles sur les risques de sécurité des agents IA, et l'importance de la gestion des privilèges des agents est devenue au centre de l'industrie. Couplée à un correctif d'urgence pour Oracle Identity Manager (CVSS 9.8) et à la précipitation pour ajouter KEV à CISA, ce fut une semaine chargée pour les défenseurs."
+        "en": "Trivy suffers second supply chain breach in a month, CI/CD secret stolen via GitHub Actions; Critical RCE vulnerability (CVE-2026-33017, CVSS 9.3) in the AI workflow tool Langflow is open to attack in just 20 hours; Salt Security and Cequence publish a series of articles on AI agent security risks, bringing the importance of agent privilege management into industry focus; Oracle Identity Manager emergency patch (CVSS 9.3) is released; and a new vulnerability in the AI workflow tool Langflow is open for attack. Salt Security and Cequence published a series of articles on AI agent security risks, and the importance of agent privilege management became an industry focus; Oracle Identity Manager emergency patch (CVSS 9.8) and CISA's KEV addition The rush also coincided with a busy week for defenders.",
+        "es": "Trivy sufre la segunda brecha en la cadena de suministro en un mes, secreto de CI/CD robado a través de GitHub Actions; Vulnerabilidad crítica RCE (CVE-2026-33017, CVSS 9.3) en la herramienta de flujo de trabajo de IA Langflow atacada sólo 20 horas después de su divulgación. Comenzó la explotación; Salt Security y Cequence publicaron una serie de artículos sobre los riesgos de seguridad de los agentes de IA, y la importancia de la gestión de privilegios de los agentes se convirtió en un foco de atención de la industria; Parche de emergencia de Oracle Identity Manager (CVSS 9.8) y adición de CISA KEV. El ajetreo también coincidió con una semana ajetreada para los defensores.",
+        "pt": "Trivy sofre a segunda violação da cadeia de suprimentos em um mês, segredo de CI/CD roubado por meio do GitHub Actions; vulnerabilidade crítica de RCE (CVE-2026-33017, CVSS 9.3) na ferramenta de fluxo de trabalho de IA Langflow atacada apenas 20 horas após a divulgação. A exploração começou; a Salt Security e a Cequence publicaram uma série de artigos sobre riscos de segurança de agentes de IA, e a importância do gerenciamento de privilégios de agentes tornou-se um foco do setor; patch de emergência do Oracle Identity Manager (CVSS 9.8) e adição do CISA KEV A correria também coincidiu com uma semana movimentada para os defensores.",
+        "fr": "Trivy subit la deuxième violation de sa chaîne d'approvisionnement en un mois, le secret CI/CD a été volé via des actions GitHub ; une vulnérabilité RCE critique (CVE-2026-33017, CVSS 9.3) dans l'outil de flux de travail d'IA Langflow a été attaquée 20 heures seulement après sa divulgation. L'exploitation a commencé ; Salt Security et Cequence ont publié une série d'articles sur les risques de sécurité des agents d'IA, et l'importance de la gestion des privilèges des agents est devenue une priorité pour l'industrie ; correctif d'urgence Oracle Identity Manager (CVSS 9.8) et ajout de CISA KEV. La ruée a également coïncidé avec une semaine chargée pour les défenseurs."
       },
       "keyThemes": [
         "supply-chain",

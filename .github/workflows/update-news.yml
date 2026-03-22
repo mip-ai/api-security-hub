@@ -37,9 +37,13 @@ jobs:
 
       - name: Fetch Security News
         run: node scripts/fetch-news.js
+        env:
+          DEEPL_API_KEY: ${{ secrets.DEEPL_API_KEY }}
 
       - name: Fetch Vendor Blog Posts
         run: node scripts/fetch-vendor-blogs.js
+        env:
+          DEEPL_API_KEY: ${{ secrets.DEEPL_API_KEY }}
 
       - name: Build i18n pages
         run: node scripts/build-i18n.js

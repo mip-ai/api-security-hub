@@ -3,6 +3,7 @@
   "private": true,
   "dependencies": {
     "cheerio": "^1.0.0",
+    "deepl-node": "^1.24.0",
     "google-translate-api-x": "^10.7.1"
   }
 }

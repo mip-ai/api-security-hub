@@ -14,13 +14,14 @@
 
 const fs = require('fs');
 const path = require('path');
-const translate = require('google-translate-api-x');
+const deepl = require('deepl-node');
+const translator = new deepl.Translator(process.env.DEEPL_API_KEY);
 
 const TARGET_LANGS = [
-  { code: 'en', googleCode: 'en' },
-  { code: 'es', googleCode: 'es' },
-  { code: 'pt', googleCode: 'pt' },
-  { code: 'fr', googleCode: 'fr' },
+  { code: 'en', deeplCode: 'en-US' },
+  { code: 'es', deeplCode: 'es' },
+  { code: 'pt', deeplCode: 'pt-BR' },
+  { code: 'fr', deeplCode: 'fr' },
 ];
 
 const SOURCE_LANG = 'ja';
@@ -29,7 +30,7 @@ const SOURCE_LANG = 'ja';
 async function translateText(text, targetLangCode) {
   if (!text) return '';
   try {
-    const result = await translate(text, { from: SOURCE_LANG, to: targetLangCode });
+    const result = await translator.translateText(text, SOURCE_LANG, targetLangCode);
     return result.text;
   } catch (err) {
     console.error(`  [TRANSLATE ERR] ${targetLangCode}: ${err.message}`);
@@ -52,7 +53,7 @@ async function translateField(obj) {
 
   for (const lang of TARGET_LANGS) {
     if (!obj[lang.code]) {
-      obj[lang.code] = await translateText(obj[SOURCE_LANG], lang.googleCode);
+      obj[lang.code] = await translateText(obj[SOURCE_LANG], lang.deeplCode);
       await new Promise(r => setTimeout(r, 200));
     }
   }
