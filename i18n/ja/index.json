@@ -75,5 +75,5 @@
   "index_howto_desc": "上部のナビゲーションメニューから各セクションに移動できます。初めての方は OWASP Top 10 → 認証・認可 → レート制限 の順で読み進めることを推奨します。",
   "index_disclaimer_title": "免責事項",
   "index_disclaimer_desc": "本サイトの情報はセキュリティ啓発・防御目的で提供されています。攻撃目的での利用は禁止します。記載内容は2025年時点の情報に基づいています。",
-  "index_editor_picks_heading": "<span class=\"section-icon\">&#x2B50;</span> 編集者のおすすめ"
+  "index_editor_picks_heading": "<span class=\"section-icon\">&#x2B50;</span> 編集者の注目ニュース"
 }
