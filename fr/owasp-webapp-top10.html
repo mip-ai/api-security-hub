@@ -1,0 +1,605 @@
+<!DOCTYPE html><html lang="fr"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="owasp_webapp_page_title">OWASP Web Application Top 10 (2025) - API Security Reference Hub</title>
+  <link rel="stylesheet" href="../css/style.css">
+
+    <link rel="alternate" hreflang="en" href="/api-security-hub/en/owasp-webapp-top10.html">
+    <link rel="alternate" hreflang="ja" href="/api-security-hub/ja/owasp-webapp-top10.html">
+    <link rel="alternate" hreflang="es" href="/api-security-hub/es/owasp-webapp-top10.html">
+    <link rel="alternate" hreflang="pt" href="/api-security-hub/pt/owasp-webapp-top10.html">
+    <link rel="alternate" hreflang="fr" href="/api-security-hub/fr/owasp-webapp-top10.html">
+    <link rel="alternate" hreflang="x-default" href="/api-security-hub/en/owasp-webapp-top10.html">
+</head>
+<body>
+
+  <div class="page-header">
+    <h1 data-i18n="owasp_webapp_main_heading">OWASP Web Application Top 10 (2025)</h1>
+    <p class="subtitle" data-i18n="owasp_webapp_subtitle">Les 10 risques de sécurité les plus critiques pour les applications web et comment les atténuer.</p>
+  </div>
+
+  <!-- Overview -->
+  <div class="section">
+    <div class="callout callout-info">
+      <div class="callout-title" data-i18n="owasp_webapp_overview_title">Qu'est-ce que l'OWASP Web Application Top 10 ?</div>
+      <p data-i18n="owasp_webapp_overview_desc">L'OWASP Top 10 est le document de sensibilisation le plus largement reconnu en matière de sécurité des applications web. L'édition 2025 reflète le paysage des menaces le plus récent, introduisant de nouvelles catégories telles que les Défaillances de la Chaîne d'Approvisionnement Logicielle et la Gestion Inadéquate des Conditions Exceptionnelles.</p>
+    </div>
+  </div>
+
+  <!-- A01: Broken Access Control -->
+  <div class="section">
+    <h2 data-i18n-html="owasp_webapp_a01_heading"><span class="section-icon">1️⃣</span> A01 - Contrôle d'Accès Défaillant</h2>
+    <span class="badge badge-danger">Critical</span>
+    <h3 data-i18n="owasp_webapp_a01_overview_heading">Aperçu</h3>
+    <p data-i18n="owasp_webapp_a01_overview_desc">Le contrôle d'accès applique des politiques pour que les utilisateurs ne puissent pas agir en dehors de leurs permissions prévues. Les défaillances conduisent typiquement à la divulgation non autorisée d'informations, la modification ou la destruction de données, ou l'exécution de fonctions en dehors des limites de l'utilisateur.</p>
+    <div class="callout callout-danger">
+      <div class="callout-title" data-i18n="owasp_webapp_a01_risk_title">Risque</div>
+      <p data-i18n="owasp_webapp_a01_risk_desc">Les attaquants peuvent exploiter les failles de contrôle d'accès pour accéder aux comptes d'autres utilisateurs, consulter des fichiers sensibles, modifier les données d'autres utilisateurs ou changer les droits d'accès.</p>
+    </div>
+    <h3 data-i18n="owasp_webapp_a01_vulnerable_heading">Exemple de Code Vulnérable</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">Python</span>
+        <span>❌ Bad</span>
+      </div>
+      <pre><span class="comment"># User ID taken directly from request without authorization check</span>
+@app.<span class="function">route</span>(<span class="string">'/api/user/&lt;user_id&gt;/profile'</span>)
+<span class="keyword">def</span> <span class="function">get_profile</span>(user_id):
+    user = db.<span class="function">get_user</span>(user_id)  <span class="comment"># No ownership check!</span>
+    <span class="keyword">return</span> <span class="function">jsonify</span>(user.to_dict())</pre>
+    </div>
+    <h3 data-i18n="owasp_webapp_a01_secure_heading">Exemple de Code Sécurisé</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">Python</span>
+        <span>✅ Good</span>
+      </div>
+      <pre>@app.<span class="function">route</span>(<span class="string">'/api/user/&lt;user_id&gt;/profile'</span>)
+@<span class="function">login_required</span>
+<span class="keyword">def</span> <span class="function">get_profile</span>(user_id):
+    <span class="comment"># Verify the requesting user owns this resource</span>
+    <span class="keyword">if</span> current_user.id != user_id <span class="keyword">and not</span> current_user.is_admin:
+        <span class="function">abort</span>(<span class="number">403</span>)
+
+    user = db.<span class="function">get_user</span>(user_id)
+    <span class="keyword">if not</span> user:
+        <span class="function">abort</span>(<span class="number">404</span>)
+    <span class="keyword">return</span> <span class="function">jsonify</span>(user.to_dict())</pre>
+    </div>
+    <h3 data-i18n="owasp_webapp_a01_checklist_heading">Liste de Vérification d'Atténuation</h3>
+    <ul class="checklist">
+      <li data-i18n="owasp_webapp_a01_check1">Refuser l'accès par défaut sauf pour les ressources publiques</li>
+      <li data-i18n="owasp_webapp_a01_check2">Implémenter des vérifications de contrôle d'accès côté serveur à chaque requête</li>
+      <li data-i18n="owasp_webapp_a01_check3">Appliquer la propriété des enregistrements au lieu d'accepter les IDs soumis par l'utilisateur</li>
+      <li data-i18n="owasp_webapp_a01_check4">Journaliser les échecs de contrôle d'accès et alerter les administrateurs sur les violations répétées</li>
+    </ul>
+  </div>
+
+  <!-- A02: Security Misconfiguration -->
+  <div class="section">
+    <h2 data-i18n-html="owasp_webapp_a02_heading"><span class="section-icon">2️⃣</span> A02 - Mauvaise Configuration de Sécurité</h2>
+    <span class="badge badge-warning">High</span>
+    <h3 data-i18n="owasp_webapp_a02_overview_heading">Aperçu</h3>
+    <p data-i18n="owasp_webapp_a02_overview_desc">La mauvaise configuration de sécurité se produit lorsque les paramètres de sécurité sont définis, implémentés ou maintenus incorrectement. Cela inclut le manque de renforcement de sécurité, les fonctionnalités inutiles activées, les comptes par défaut avec des mots de passe inchangés, les messages d'erreur trop détaillés et les en-têtes de sécurité HTTP mal configurés.</p>
+    <div class="callout callout-danger">
+      <div class="callout-title" data-i18n="owasp_webapp_a02_risk_title">Risque</div>
+      <p data-i18n="owasp_webapp_a02_risk_desc">Les serveurs, frameworks ou services cloud mal configurés peuvent exposer des données sensibles, permettre un accès non autorisé ou fournir aux attaquants des informations pour planifier des attaques supplémentaires.</p>
+    </div>
+    <h3 data-i18n="owasp_webapp_a02_vulnerable_heading">Exemple de Code Vulnérable</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">Python</span>
+        <span>❌ Bad</span>
+      </div>
+      <pre><span class="comment"># Debug mode enabled in production, verbose errors exposed</span>
+app = Flask(__name__)
+app.config[<span class="string">'DEBUG'</span>] = <span class="keyword">True</span>  <span class="comment"># Exposes stack traces!</span>
+app.config[<span class="string">'SECRET_KEY'</span>] = <span class="string">'default-secret'</span>  <span class="comment"># Default key!</span></pre>
+    </div>
+    <h3 data-i18n="owasp_webapp_a02_secure_heading">Exemple de Code Sécurisé</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">Python</span>
+        <span>✅ Good</span>
+      </div>
+      <pre><span class="keyword">import</span> os
+
+app = Flask(__name__)
+app.config[<span class="string">'DEBUG'</span>] = <span class="keyword">False</span>
+app.config[<span class="string">'SECRET_KEY'</span>] = os.environ[<span class="string">'SECRET_KEY'</span>]
+
+@app.<span class="function">after_request</span>
+<span class="keyword">def</span> <span class="function">set_security_headers</span>(response):
+    response.headers[<span class="string">'X-Content-Type-Options'</span>] = <span class="string">'nosniff'</span>
+    response.headers[<span class="string">'X-Frame-Options'</span>] = <span class="string">'DENY'</span>
+    response.headers[<span class="string">'Strict-Transport-Security'</span>] = <span class="string">'max-age=31536000; includeSubDomains'</span>
+    response.headers[<span class="string">'Content-Security-Policy'</span>] = <span class="string">"default-src 'self'"</span>
+    <span class="keyword">return</span> response</pre>
+    </div>
+    <h3 data-i18n="owasp_webapp_a02_checklist_heading">Liste de Vérification d'Atténuation</h3>
+    <ul class="checklist">
+      <li data-i18n="owasp_webapp_a02_check1">Implémenter un processus de renforcement reproductible pour tous les environnements</li>
+      <li data-i18n="owasp_webapp_a02_check2">Supprimer ou désactiver les fonctionnalités, frameworks et comptes par défaut inutiles</li>
+      <li data-i18n="owasp_webapp_a02_check3">Configurer les en-têtes de sécurité appropriés (CSP, HSTS, X-Frame-Options)</li>
+      <li data-i18n="owasp_webapp_a02_check4">Utiliser des outils automatisés pour vérifier l'efficacité des configurations</li>
+    </ul>
+  </div>
+
+  <!-- A03: Software Supply Chain Failures -->
+  <div class="section">
+    <h2 data-i18n-html="owasp_webapp_a03_heading"><span class="section-icon">3️⃣</span> A03 - Défaillances de la Chaîne d'Approvisionnement Logicielle</h2>
+    <span class="badge badge-warning">High</span>
+    <h3 data-i18n="owasp_webapp_a03_overview_heading">Aperçu</h3>
+    <p data-i18n="owasp_webapp_a03_overview_desc">Nouveau en 2025. Se concentre sur les risques liés aux composants tiers, aux dépendances et aux pipelines CI/CD. Les attaquants ciblent la chaîne d'approvisionnement logicielle en compromettant des packages, en injectant du code malveillant dans des bibliothèques open source ou en exploitant les vulnérabilités du pipeline de build.</p>
+    <div class="callout callout-danger">
+      <div class="callout-title" data-i18n="owasp_webapp_a03_risk_title">Risque</div>
+      <p data-i18n="owasp_webapp_a03_risk_desc">Une seule dépendance compromise peut affecter des milliers d'applications. Les attaques de la chaîne d'approvisionnement peuvent conduire au vol de données, à l'installation de portes dérobées ou à la compromission complète du système avec une détection minimale.</p>
+    </div>
+    <h3 data-i18n="owasp_webapp_a03_vulnerable_heading">Exemple de Code Vulnérable</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">JavaScript</span>
+        <span>❌ Bad</span>
+      </div>
+      <pre><span class="comment">// package.json with unpinned dependencies</span>
+{
+  <span class="string">"dependencies"</span>: {
+    <span class="string">"express"</span>: <span class="string">"*"</span>,           <span class="comment">// Any version!</span>
+    <span class="string">"lodash"</span>: <span class="string">"^4.0.0"</span>,       <span class="comment">// Wide range</span>
+    <span class="string">"unknown-pkg"</span>: <span class="string">"^1.0.0"</span>   <span class="comment">// Unvetted package</span>
+  }
+}</pre>
+    </div>
+    <h3 data-i18n="owasp_webapp_a03_secure_heading">Exemple de Code Sécurisé</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">JavaScript</span>
+        <span>✅ Good</span>
+      </div>
+      <pre><span class="comment">// package.json with pinned versions + lockfile + audit</span>
+{
+  <span class="string">"dependencies"</span>: {
+    <span class="string">"express"</span>: <span class="string">"4.21.2"</span>,
+    <span class="string">"lodash"</span>: <span class="string">"4.17.21"</span>
+  },
+  <span class="string">"scripts"</span>: {
+    <span class="string">"preinstall"</span>: <span class="string">"npx npm-audit-resolver"</span>,
+    <span class="string">"integrity-check"</span>: <span class="string">"npm audit signatures"</span>
+  }
+}
+<span class="comment">// Also: use package-lock.json, enable Dependabot/Renovate,
+// generate SBOM, verify package provenance</span></pre>
+    </div>
+    <h3 data-i18n="owasp_webapp_a03_checklist_heading">Liste de Vérification d'Atténuation</h3>
+    <ul class="checklist">
+      <li data-i18n="owasp_webapp_a03_check1">Fixer les versions des dépendances et utiliser des fichiers de verrouillage pour des builds reproductibles</li>
+      <li data-i18n="owasp_webapp_a03_check2">Activer l'analyse automatisée des dépendances (Dependabot, Snyk, Renovate)</li>
+      <li data-i18n="owasp_webapp_a03_check3">Générer et maintenir une Nomenclature Logicielle (SBOM)</li>
+      <li data-i18n="owasp_webapp_a03_check4">Vérifier la provenance et les signatures des packages avant inclusion</li>
+    </ul>
+  </div>
+
+  <!-- A04: Cryptographic Failures -->
+  <div class="section">
+    <h2 data-i18n-html="owasp_webapp_a04_heading"><span class="section-icon">4️⃣</span> A04 - Défaillances Cryptographiques</h2>
+    <span class="badge badge-warning">High</span>
+    <h3 data-i18n="owasp_webapp_a04_overview_heading">Aperçu</h3>
+    <p data-i18n="owasp_webapp_a04_overview_desc">Défaillances liées à la cryptographie qui conduisent souvent à l'exposition de données sensibles. Cela inclut l'utilisation d'algorithmes obsolètes, la génération faible de clés, le manque de chiffrement pour les données en transit ou au repos, et la validation incorrecte des certificats.</p>
+    <div class="callout callout-danger">
+      <div class="callout-title" data-i18n="owasp_webapp_a04_risk_title">Risque</div>
+      <p data-i18n="owasp_webapp_a04_risk_desc">Un chiffrement faible ou manquant peut exposer des mots de passe, des numéros de carte de crédit, des dossiers médicaux, des informations personnelles et des secrets commerciaux, pouvant entraîner des violations réglementaires (RGPD, PCI DSS).</p>
+    </div>
+    <h3 data-i18n="owasp_webapp_a04_vulnerable_heading">Exemple de Code Vulnérable</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">Python</span>
+        <span>❌ Bad</span>
+      </div>
+      <pre><span class="keyword">import</span> hashlib
+
+<span class="comment"># Storing passwords with weak hashing</span>
+<span class="keyword">def</span> <span class="function">store_password</span>(password: <span class="type">str</span>) -&gt; <span class="type">str</span>:
+    <span class="keyword">return</span> hashlib.<span class="function">md5</span>(password.<span class="function">encode</span>()).<span class="function">hexdigest</span>()  <span class="comment"># MD5 is broken!</span></pre>
+    </div>
+    <h3 data-i18n="owasp_webapp_a04_secure_heading">Exemple de Code Sécurisé</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">Python</span>
+        <span>✅ Good</span>
+      </div>
+      <pre><span class="keyword">import</span> bcrypt
+
+<span class="keyword">def</span> <span class="function">store_password</span>(password: <span class="type">str</span>) -&gt; <span class="type">bytes</span>:
+    <span class="comment"># Use bcrypt with automatic salting</span>
+    salt = bcrypt.<span class="function">gensalt</span>(rounds=<span class="number">12</span>)
+    <span class="keyword">return</span> bcrypt.<span class="function">hashpw</span>(password.<span class="function">encode</span>(), salt)
+
+<span class="keyword">def</span> <span class="function">verify_password</span>(password: <span class="type">str</span>, hashed: <span class="type">bytes</span>) -&gt; <span class="type">bool</span>:
+    <span class="keyword">return</span> bcrypt.<span class="function">checkpw</span>(password.<span class="function">encode</span>(), hashed)</pre>
+    </div>
+    <h3 data-i18n="owasp_webapp_a04_checklist_heading">Liste de Vérification d'Atténuation</h3>
+    <ul class="checklist">
+      <li data-i18n="owasp_webapp_a04_check1">Utiliser des algorithmes forts et actuels (AES-256, bcrypt/argon2, SHA-256+)</li>
+      <li data-i18n="owasp_webapp_a04_check2">Chiffrer toutes les données sensibles en transit (TLS 1.2+) et au repos</li>
+      <li data-i18n="owasp_webapp_a04_check3">Ne jamais utiliser d'algorithmes obsolètes (MD5, SHA-1, DES, RC4)</li>
+      <li data-i18n="owasp_webapp_a04_check4">Implémenter une gestion appropriée des clés avec des politiques de rotation</li>
+    </ul>
+  </div>
+
+  <!-- A05: Injection -->
+  <div class="section">
+    <h2 data-i18n-html="owasp_webapp_a05_heading"><span class="section-icon">5️⃣</span> A05 - Injection</h2>
+    <span class="badge badge-danger">Critical</span>
+    <h3 data-i18n="owasp_webapp_a05_overview_heading">Aperçu</h3>
+    <p data-i18n="owasp_webapp_a05_overview_desc">Les failles d'injection se produisent lorsque des données non fiables sont envoyées à un interpréteur dans le cadre d'une commande ou d'une requête. L'injection SQL, l'injection NoSQL, l'injection de commandes OS et le Cross-Site Scripting (XSS) sont les formes les plus courantes. Des données hostiles peuvent tromper l'interpréteur pour exécuter des commandes non prévues.</p>
+    <div class="callout callout-danger">
+      <div class="callout-title" data-i18n="owasp_webapp_a05_risk_title">Risque</div>
+      <p data-i18n="owasp_webapp_a05_risk_desc">L'injection peut entraîner la perte de données, la corruption, l'accès non autorisé, la prise de contrôle complète de l'hôte ou le déni de service. L'injection SQL seule reste l'un des vecteurs d'attaque les plus dangereux et les plus répandus.</p>
+    </div>
+    <h3 data-i18n="owasp_webapp_a05_vulnerable_heading">Exemple de Code Vulnérable</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">Python</span>
+        <span>❌ Bad</span>
+      </div>
+      <pre><span class="comment"># SQL injection via string concatenation</span>
+<span class="keyword">def</span> <span class="function">get_user</span>(username: <span class="type">str</span>):
+    query = <span class="string">f"SELECT * FROM users WHERE name = '{username}'"</span>
+    <span class="keyword">return</span> db.<span class="function">execute</span>(query)  <span class="comment"># username = "' OR '1'='1"</span></pre>
+    </div>
+    <h3 data-i18n="owasp_webapp_a05_secure_heading">Exemple de Code Sécurisé</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">Python</span>
+        <span>✅ Good</span>
+      </div>
+      <pre><span class="comment"># Parameterized queries prevent SQL injection</span>
+<span class="keyword">def</span> <span class="function">get_user</span>(username: <span class="type">str</span>):
+    query = <span class="string">"SELECT * FROM users WHERE name = %s"</span>
+    <span class="keyword">return</span> db.<span class="function">execute</span>(query, (username,))
+
+<span class="comment"># For XSS prevention, escape output</span>
+<span class="keyword">from</span> markupsafe <span class="keyword">import</span> escape
+
+<span class="keyword">def</span> <span class="function">render_comment</span>(comment: <span class="type">str</span>) -&gt; <span class="type">str</span>:
+    <span class="keyword">return</span> <span class="string">f"&lt;p&gt;{escape(comment)}&lt;/p&gt;"</span></pre>
+    </div>
+    <h3 data-i18n="owasp_webapp_a05_checklist_heading">Liste de Vérification d'Atténuation</h3>
+    <ul class="checklist">
+      <li data-i18n="owasp_webapp_a05_check1">Utiliser des requêtes paramétrées ou des instructions préparées pour toutes les opérations de base de données</li>
+      <li data-i18n="owasp_webapp_a05_check2">Utiliser un encodage de sortie contextuel pour prévenir le XSS</li>
+      <li data-i18n="owasp_webapp_a05_check3">Valider et assainir toutes les entrées utilisateur côté serveur</li>
+      <li data-i18n="owasp_webapp_a05_check4">Utiliser des ORM avec des requêtes paramétrées plutôt que la construction de chaînes SQL brutes</li>
+    </ul>
+  </div>
+
+  <!-- A06: Insecure Design -->
+  <div class="section">
+    <h2 data-i18n-html="owasp_webapp_a06_heading"><span class="section-icon">6️⃣</span> A06 - Conception Non Sécurisée</h2>
+    <span class="badge badge-warning">High</span>
+    <h3 data-i18n="owasp_webapp_a06_overview_heading">Aperçu</h3>
+    <p data-i18n="owasp_webapp_a06_overview_desc">La conception non sécurisée fait référence aux risques liés aux défauts de conception et d'architecture. Elle nécessite l'utilisation de la modélisation des menaces, de modèles de conception sécurisés et d'architectures de référence. Une conception non sécurisée ne peut pas être corrigée par une implémentation parfaite ; les contrôles de sécurité nécessaires n'ont jamais été créés pour se défendre contre des attaques spécifiques.</p>
+    <div class="callout callout-danger">
+      <div class="callout-title" data-i18n="owasp_webapp_a06_risk_title">Risque</div>
+      <p data-i18n="owasp_webapp_a06_risk_desc">Les défauts de conception peuvent conduire à des vulnérabilités de logique métier difficiles à détecter avec des outils automatisés. L'absence de limites de débit sur les opérations sensibles, le manque d'authentification multifacteur pour les actions critiques ou la détection insuffisante de la fraude sont des défaillances au niveau de la conception.</p>
+    </div>
+    <h3 data-i18n="owasp_webapp_a06_vulnerable_heading">Exemple de Code Vulnérable</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">Python</span>
+        <span>❌ Bad</span>
+      </div>
+      <pre><span class="comment"># Password reset with no rate limit or verification</span>
+@app.<span class="function">route</span>(<span class="string">'/reset-password'</span>, methods=[<span class="string">'POST'</span>])
+<span class="keyword">def</span> <span class="function">reset_password</span>():
+    email = request.form[<span class="string">'email'</span>]
+    new_pass = request.form[<span class="string">'new_password'</span>]
+    user = db.<span class="function">find_by_email</span>(email)
+    user.password = <span class="function">hash_password</span>(new_pass)  <span class="comment"># No token verification!</span>
+    db.<span class="function">save</span>(user)</pre>
+    </div>
+    <h3 data-i18n="owasp_webapp_a06_secure_heading">Exemple de Code Sécurisé</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">Python</span>
+        <span>✅ Good</span>
+      </div>
+      <pre><span class="keyword">from</span> datetime <span class="keyword">import</span> datetime, timedelta
+
+@app.<span class="function">route</span>(<span class="string">'/reset-password'</span>, methods=[<span class="string">'POST'</span>])
+@<span class="function">rate_limit</span>(<span class="string">"3/hour"</span>)
+<span class="keyword">def</span> <span class="function">reset_password</span>():
+    token = request.form[<span class="string">'token'</span>]
+    new_pass = request.form[<span class="string">'new_password'</span>]
+
+    <span class="comment"># Verify time-limited, single-use token</span>
+    reset_req = db.<span class="function">find_reset_token</span>(token)
+    <span class="keyword">if not</span> reset_req <span class="keyword">or</span> reset_req.used <span class="keyword">or</span> reset_req.expires &lt; datetime.<span class="function">utcnow</span>():
+        <span class="function">abort</span>(<span class="number">400</span>, <span class="string">"Invalid or expired token"</span>)
+
+    <span class="comment"># Enforce password complexity</span>
+    <span class="keyword">if not</span> <span class="function">meets_password_policy</span>(new_pass):
+        <span class="function">abort</span>(<span class="number">400</span>, <span class="string">"Password does not meet requirements"</span>)
+
+    reset_req.user.password = <span class="function">hash_password</span>(new_pass)
+    reset_req.used = <span class="keyword">True</span>
+    db.<span class="function">save_all</span>([reset_req.user, reset_req])</pre>
+    </div>
+    <h3 data-i18n="owasp_webapp_a06_checklist_heading">Liste de Vérification d'Atténuation</h3>
+    <ul class="checklist">
+      <li data-i18n="owasp_webapp_a06_check1">Intégrer la modélisation des menaces dans le cycle de vie du développement</li>
+      <li data-i18n="owasp_webapp_a06_check2">Appliquer la limitation de débit et les contrôles anti-automatisation sur les opérations sensibles</li>
+      <li data-i18n="owasp_webapp_a06_check3">Utiliser des modèles de conception sécurisés et des architectures de référence</li>
+      <li data-i18n="owasp_webapp_a06_check4">Écrire des tests unitaires et d'intégration pour les cas d'abus, pas seulement les cas d'utilisation</li>
+    </ul>
+  </div>
+
+  <!-- A07: Authentication Failures -->
+  <div class="section">
+    <h2 data-i18n-html="owasp_webapp_a07_heading"><span class="section-icon">7️⃣</span> A07 - Défaillances d'Authentification</h2>
+    <span class="badge badge-warning">High</span>
+    <h3 data-i18n="owasp_webapp_a07_overview_heading">Aperçu</h3>
+    <p data-i18n="owasp_webapp_a07_overview_desc">La confirmation de l'identité de l'utilisateur, l'authentification et la gestion des sessions sont critiques. Les défaillances d'authentification se produisent lorsque les applications permettent le credential stuffing, la force brute, les mots de passe faibles, ou ont une gestion de session défectueuse comme des IDs de session qui ne tournent pas après la connexion.</p>
+    <div class="callout callout-danger">
+      <div class="callout-title" data-i18n="owasp_webapp_a07_risk_title">Risque</div>
+      <p data-i18n="owasp_webapp_a07_risk_desc">Les attaquants peuvent accéder aux comptes utilisateur via le credential stuffing automatisé, la force brute ou le détournement de session. Les comptes compromis peuvent conduire au vol d'identité, à la fraude et aux violations de données.</p>
+    </div>
+    <h3 data-i18n="owasp_webapp_a07_vulnerable_heading">Exemple de Code Vulnérable</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">Python</span>
+        <span>❌ Bad</span>
+      </div>
+      <pre><span class="comment"># No brute force protection, weak session handling</span>
+@app.<span class="function">route</span>(<span class="string">'/login'</span>, methods=[<span class="string">'POST'</span>])
+<span class="keyword">def</span> <span class="function">login</span>():
+    user = db.<span class="function">find_by_email</span>(request.form[<span class="string">'email'</span>])
+    <span class="keyword">if</span> user <span class="keyword">and</span> user.password == request.form[<span class="string">'password'</span>]:  <span class="comment"># Plain comparison!</span>
+        session[<span class="string">'user'</span>] = user.id  <span class="comment"># Session ID not rotated</span>
+        <span class="keyword">return</span> <span class="function">redirect</span>(<span class="string">'/dashboard'</span>)</pre>
+    </div>
+    <h3 data-i18n="owasp_webapp_a07_secure_heading">Exemple de Code Sécurisé</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">Python</span>
+        <span>✅ Good</span>
+      </div>
+      <pre><span class="keyword">from</span> flask_limiter <span class="keyword">import</span> Limiter
+
+limiter = Limiter(app, default_limits=[<span class="string">"100/hour"</span>])
+
+@app.<span class="function">route</span>(<span class="string">'/login'</span>, methods=[<span class="string">'POST'</span>])
+@limiter.<span class="function">limit</span>(<span class="string">"5/minute"</span>)
+<span class="keyword">def</span> <span class="function">login</span>():
+    user = db.<span class="function">find_by_email</span>(request.form[<span class="string">'email'</span>])
+    <span class="keyword">if not</span> user <span class="keyword">or not</span> bcrypt.<span class="function">checkpw</span>(
+        request.form[<span class="string">'password'</span>].<span class="function">encode</span>(), user.password_hash
+    ):
+        <span class="comment"># Generic error to prevent user enumeration</span>
+        <span class="keyword">return</span> <span class="string">"Invalid credentials"</span>, <span class="number">401</span>
+
+    <span class="comment"># Rotate session ID after authentication</span>
+    session.<span class="function">regenerate</span>()
+    session[<span class="string">'user'</span>] = user.id
+
+    <span class="comment"># Check for MFA requirement</span>
+    <span class="keyword">if</span> user.mfa_enabled:
+        <span class="keyword">return</span> <span class="function">redirect</span>(<span class="string">'/mfa-verify'</span>)
+    <span class="keyword">return</span> <span class="function">redirect</span>(<span class="string">'/dashboard'</span>)</pre>
+    </div>
+    <h3 data-i18n="owasp_webapp_a07_checklist_heading">Liste de Vérification d'Atténuation</h3>
+    <ul class="checklist">
+      <li data-i18n="owasp_webapp_a07_check1">Implémenter l'authentification multifacteur (MFA) pour toutes les opérations critiques</li>
+      <li data-i18n="owasp_webapp_a07_check2">Appliquer une protection contre la force brute avec limitation de débit et verrouillage de compte</li>
+      <li data-i18n="owasp_webapp_a07_check3">Faire tourner les IDs de session après l'authentification et utiliser des flags de session sécurisés</li>
+      <li data-i18n="owasp_webapp_a07_check4">Utiliser des messages d'erreur génériques pour empêcher l'énumération des utilisateurs</li>
+    </ul>
+  </div>
+
+  <!-- A08: Software or Data Integrity Failures -->
+  <div class="section">
+    <h2 data-i18n-html="owasp_webapp_a08_heading"><span class="section-icon">8️⃣</span> A08 - Défaillances d'Intégrité des Logiciels ou Données</h2>
+    <span class="badge badge-warning">High</span>
+    <h3 data-i18n="owasp_webapp_a08_overview_heading">Aperçu</h3>
+    <p data-i18n="owasp_webapp_a08_overview_desc">Les défaillances d'intégrité des logiciels et des données se rapportent au code et à l'infrastructure qui ne protègent pas contre les violations d'intégrité. Cela inclut la désérialisation non sécurisée, l'utilisation de CDN ou plugins non fiables sans vérification d'intégrité, et les mécanismes de mise à jour automatique sans mises à jour signées.</p>
+    <div class="callout callout-danger">
+      <div class="callout-title" data-i18n="owasp_webapp_a08_risk_title">Risque</div>
+      <p data-i18n="owasp_webapp_a08_risk_desc">La désérialisation non sécurisée peut conduire à l'exécution de code à distance. Le chargement de scripts depuis des CDN non fiables sans Subresource Integrity (SRI) peut permettre aux attaquants d'injecter du code malveillant dans votre application.</p>
+    </div>
+    <h3 data-i18n="owasp_webapp_a08_vulnerable_heading">Exemple de Code Vulnérable</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">HTML</span>
+        <span>❌ Bad</span>
+      </div>
+      <pre><span class="comment">&lt;!-- Loading external scripts without integrity checks --&gt;</span>
+&lt;<span class="keyword">script</span> src=<span class="string">"https://cdn.example.com/lib.js"</span>&gt;&lt;/<span class="keyword">script</span>&gt;
+
+<span class="comment">&lt;!-- Insecure deserialization in Python --&gt;</span>
+<span class="keyword">import</span> pickle
+data = pickle.<span class="function">loads</span>(user_input)  <span class="comment"># Arbitrary code execution!</span></pre>
+    </div>
+    <h3 data-i18n="owasp_webapp_a08_secure_heading">Exemple de Code Sécurisé</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">HTML</span>
+        <span>✅ Good</span>
+      </div>
+      <pre><span class="comment">&lt;!-- Use Subresource Integrity (SRI) for external scripts --&gt;</span>
+&lt;<span class="keyword">script</span> src=<span class="string">"https://cdn.example.com/lib.js"</span>
+  integrity=<span class="string">"sha384-oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K..."</span>
+  crossorigin=<span class="string">"anonymous"</span>&gt;&lt;/<span class="keyword">script</span>&gt;
+
+<span class="comment"># Use safe deserialization in Python</span>
+<span class="keyword">import</span> json
+data = json.<span class="function">loads</span>(user_input)  <span class="comment"># Safe: only parses JSON data</span></pre>
+    </div>
+    <h3 data-i18n="owasp_webapp_a08_checklist_heading">Liste de Vérification d'Atténuation</h3>
+    <ul class="checklist">
+      <li data-i18n="owasp_webapp_a08_check1">Utiliser Subresource Integrity (SRI) pour tous les scripts et feuilles de style externes</li>
+      <li data-i18n="owasp_webapp_a08_check2">Ne jamais utiliser de désérialisation non sécurisée (pickle, yaml.load) sur des entrées non fiables</li>
+      <li data-i18n="owasp_webapp_a08_check3">Vérifier les signatures numériques sur les mises à jour logicielles et les artefacts CI/CD</li>
+      <li data-i18n="owasp_webapp_a08_check4">Implémenter des vérifications d'intégrité dans les pipelines CI/CD pour prévenir la falsification</li>
+    </ul>
+  </div>
+
+  <!-- A09: Security Logging & Alerting Failures -->
+  <div class="section">
+    <h2 data-i18n-html="owasp_webapp_a09_heading"><span class="section-icon">9️⃣</span> A09 - Défaillances de Journalisation et d'Alerte de Sécurité</h2>
+    <span class="badge badge-info">Medium</span>
+    <h3 data-i18n="owasp_webapp_a09_overview_heading">Aperçu</h3>
+    <p data-i18n="owasp_webapp_a09_overview_desc">Sans journalisation, surveillance et alertes suffisantes, les violations ne peuvent pas être détectées en temps opportun. Une journalisation insuffisante, une intégration inefficace avec les systèmes de réponse aux incidents et le manque d'alertes en temps réel permettent aux attaquants de continuer à attaquer les systèmes, de maintenir la persistance et de falsifier ou extraire des données.</p>
+    <div class="callout callout-danger">
+      <div class="callout-title" data-i18n="owasp_webapp_a09_risk_title">Risque</div>
+      <p data-i18n="owasp_webapp_a09_risk_desc">Sans journalisation appropriée, les attaquants peuvent opérer sans être détectés pendant de longues périodes. La plupart des études sur les violations montrent que le temps moyen de détection d'une violation dépasse 200 jours, souvent découverte par des parties externes plutôt que par la surveillance interne.</p>
+    </div>
+    <h3 data-i18n="owasp_webapp_a09_vulnerable_heading">Exemple de Code Vulnérable</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">Python</span>
+        <span>❌ Bad</span>
+      </div>
+      <pre><span class="comment"># No logging of security-relevant events</span>
+@app.<span class="function">route</span>(<span class="string">'/login'</span>, methods=[<span class="string">'POST'</span>])
+<span class="keyword">def</span> <span class="function">login</span>():
+    user = <span class="function">authenticate</span>(request.form)
+    <span class="keyword">if not</span> user:
+        <span class="keyword">return</span> <span class="string">"Login failed"</span>, <span class="number">401</span>  <span class="comment"># No record of failure</span>
+    <span class="keyword">return</span> <span class="function">redirect</span>(<span class="string">'/dashboard'</span>)</pre>
+    </div>
+    <h3 data-i18n="owasp_webapp_a09_secure_heading">Exemple de Code Sécurisé</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">Python</span>
+        <span>✅ Good</span>
+      </div>
+      <pre><span class="keyword">import</span> logging
+<span class="keyword">from</span> datetime <span class="keyword">import</span> datetime
+
+security_log = logging.<span class="function">getLogger</span>(<span class="string">'security'</span>)
+
+@app.<span class="function">route</span>(<span class="string">'/login'</span>, methods=[<span class="string">'POST'</span>])
+<span class="keyword">def</span> <span class="function">login</span>():
+    user = <span class="function">authenticate</span>(request.form)
+    <span class="keyword">if not</span> user:
+        security_log.<span class="function">warning</span>(
+            <span class="string">"LOGIN_FAILED | ip=%s | email=%s | time=%s"</span>,
+            request.remote_addr,
+            request.form.<span class="function">get</span>(<span class="string">'email'</span>, <span class="string">'unknown'</span>),
+            datetime.<span class="function">utcnow</span>().<span class="function">isoformat</span>(),
+        )
+        <span class="function">check_brute_force</span>(request.remote_addr)
+        <span class="keyword">return</span> <span class="string">"Invalid credentials"</span>, <span class="number">401</span>
+
+    security_log.<span class="function">info</span>(
+        <span class="string">"LOGIN_SUCCESS | user_id=%s | ip=%s"</span>,
+        user.id, request.remote_addr,
+    )
+    <span class="keyword">return</span> <span class="function">redirect</span>(<span class="string">'/dashboard'</span>)</pre>
+    </div>
+    <h3 data-i18n="owasp_webapp_a09_checklist_heading">Liste de Vérification d'Atténuation</h3>
+    <ul class="checklist">
+      <li data-i18n="owasp_webapp_a09_check1">Journaliser toutes les tentatives d'authentification, les échecs de contrôle d'accès et les erreurs de validation d'entrée</li>
+      <li data-i18n="owasp_webapp_a09_check2">Utiliser un système centralisé de gestion des journaux avec protection contre la falsification</li>
+      <li data-i18n="owasp_webapp_a09_check3">Implémenter des alertes en temps réel pour les modèles d'activité suspecte</li>
+      <li data-i18n="owasp_webapp_a09_check4">Établir un plan de réponse aux incidents avec des procédures d'escalade définies</li>
+    </ul>
+  </div>
+
+  <!-- A10: Mishandling of Exceptional Conditions -->
+  <div class="section">
+    <h2 data-i18n-html="owasp_webapp_a10_heading"><span class="section-icon">🔟</span> A10 - Gestion Inadéquate des Conditions Exceptionnelles</h2>
+    <span class="badge badge-info">Medium</span>
+    <h3 data-i18n="owasp_webapp_a10_overview_heading">Aperçu</h3>
+    <p data-i18n="owasp_webapp_a10_overview_desc">Nouveau en 2025. Les applications qui gèrent incorrectement les erreurs, exceptions et cas limites peuvent exposer des informations sensibles, entrer dans des états incohérents ou créer des conditions exploitables. Cela inclut les messages d'erreur détaillés en production, les exceptions non capturées qui contournent les contrôles de sécurité et les conditions de course.</p>
+    <div class="callout callout-danger">
+      <div class="callout-title" data-i18n="owasp_webapp_a10_risk_title">Risque</div>
+      <p data-i18n="owasp_webapp_a10_risk_desc">La gestion inadéquate des erreurs peut exposer des traces de pile, des détails de base de données ou des chemins internes. Les conditions de course dans les vérifications de sécurité peuvent permettre des attaques TOCTOU (Time-of-Check-to-Time-of-Use), contournant l'autorisation ou la validation de paiement.</p>
+    </div>
+    <h3 data-i18n="owasp_webapp_a10_vulnerable_heading">Exemple de Code Vulnérable</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">Python</span>
+        <span>❌ Bad</span>
+      </div>
+      <pre><span class="comment"># Exposing internal details in error messages</span>
+@app.<span class="function">route</span>(<span class="string">'/api/data'</span>)
+<span class="keyword">def</span> <span class="function">get_data</span>():
+    <span class="keyword">try</span>:
+        result = db.<span class="function">query</span>(request.args[<span class="string">'q'</span>])
+        <span class="keyword">return</span> <span class="function">jsonify</span>(result)
+    <span class="keyword">except</span> <span class="type">Exception</span> <span class="keyword">as</span> e:
+        <span class="keyword">return</span> <span class="function">jsonify</span>({<span class="string">"error"</span>: <span class="function">str</span>(e)}), <span class="number">500</span>  <span class="comment"># Leaks DB details!</span></pre>
+    </div>
+    <h3 data-i18n="owasp_webapp_a10_secure_heading">Exemple de Code Sécurisé</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">Python</span>
+        <span>✅ Good</span>
+      </div>
+      <pre><span class="keyword">import</span> uuid, logging
+
+logger = logging.<span class="function">getLogger</span>(__name__)
+
+@app.<span class="function">errorhandler</span>(<span class="type">Exception</span>)
+<span class="keyword">def</span> <span class="function">handle_exception</span>(e):
+    error_id = <span class="function">str</span>(uuid.<span class="function">uuid4</span>())
+    logger.<span class="function">error</span>(<span class="string">"Unhandled exception [%s]: %s"</span>, error_id, e, exc_info=<span class="keyword">True</span>)
+
+    <span class="comment"># Return generic error with reference ID for support</span>
+    <span class="keyword">return</span> <span class="function">jsonify</span>({
+        <span class="string">"error"</span>: <span class="string">"An internal error occurred"</span>,
+        <span class="string">"reference"</span>: error_id,
+    }), <span class="number">500</span>
+
+@app.<span class="function">route</span>(<span class="string">'/api/data'</span>)
+<span class="keyword">def</span> <span class="function">get_data</span>():
+    q = request.args.<span class="function">get</span>(<span class="string">'q'</span>)
+    <span class="keyword">if not</span> q <span class="keyword">or not</span> <span class="function">is_valid_query</span>(q):
+        <span class="keyword">return</span> <span class="function">jsonify</span>({<span class="string">"error"</span>: <span class="string">"Invalid query parameter"</span>}), <span class="number">400</span>
+
+    result = db.<span class="function">query</span>(q)
+    <span class="keyword">return</span> <span class="function">jsonify</span>(result)</pre>
+    </div>
+    <h3 data-i18n="owasp_webapp_a10_checklist_heading">Liste de Vérification d'Atténuation</h3>
+    <ul class="checklist">
+      <li data-i18n="owasp_webapp_a10_check1">Ne jamais exposer de traces de pile, d'erreurs de base de données ou de chemins internes en production</li>
+      <li data-i18n="owasp_webapp_a10_check2">Implémenter un gestionnaire d'erreurs global qui renvoie des messages génériques avec des IDs de référence</li>
+      <li data-i18n="owasp_webapp_a10_check3">Tester les conditions de course dans les opérations critiques de sécurité</li>
+      <li data-i18n="owasp_webapp_a10_check4">S'assurer que tous les chemins d'erreur maintiennent les invariants de sécurité et nettoient les ressources</li>
+    </ul>
+  </div>
+
+  <!-- Summary Table -->
+  <div class="section">
+    <h2 data-i18n-html="owasp_webapp_summary_heading"><span class="section-icon">📊</span> Tableau Récapitulatif</h2>
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th data-i18n="owasp_webapp_table_header_id">ID</th>
+            <th data-i18n="owasp_webapp_table_header_vulnerability">Vulnérabilité</th>
+            <th data-i18n="owasp_webapp_table_header_severity">Sévérité</th>
+            <th data-i18n="owasp_webapp_table_header_mitigation">Atténuation Clé</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>A01</td><td data-i18n="owasp_webapp_table_a01_name">Contrôle d'Accès Défaillant</td><td><span class="badge badge-danger">Critical</span></td><td data-i18n="owasp_webapp_table_a01_mitigation">Vérifications d'accès côté serveur, refus par défaut, propriété des enregistrements</td></tr>
+          <tr><td>A02</td><td data-i18n="owasp_webapp_table_a02_name">Mauvaise Configuration de Sécurité</td><td><span class="badge badge-warning">High</span></td><td data-i18n="owasp_webapp_table_a02_mitigation">Processus de renforcement, en-têtes de sécurité, désactivation des paramètres par défaut</td></tr>
+          <tr><td>A03</td><td data-i18n="owasp_webapp_table_a03_name">Défaillances de la Chaîne d'Approvisionnement Logicielle</td><td><span class="badge badge-warning">High</span></td><td data-i18n="owasp_webapp_table_a03_mitigation">Dépendances fixées, SBOM, analyse des dépendances</td></tr>
+          <tr><td>A04</td><td data-i18n="owasp_webapp_table_a04_name">Défaillances Cryptographiques</td><td><span class="badge badge-warning">High</span></td><td data-i18n="owasp_webapp_table_a04_mitigation">Algorithmes forts, TLS 1.2+, gestion des clés</td></tr>
+          <tr><td>A05</td><td data-i18n="owasp_webapp_table_a05_name">Injection</td><td><span class="badge badge-danger">Critical</span></td><td data-i18n="owasp_webapp_table_a05_mitigation">Requêtes paramétrées, encodage de sortie, validation d'entrée</td></tr>
+          <tr><td>A06</td><td data-i18n="owasp_webapp_table_a06_name">Conception Non Sécurisée</td><td><span class="badge badge-warning">High</span></td><td data-i18n="owasp_webapp_table_a06_mitigation">Modélisation des menaces, modèles sécurisés, tests de cas d'abus</td></tr>
+          <tr><td>A07</td><td data-i18n="owasp_webapp_table_a07_name">Défaillances d'Authentification</td><td><span class="badge badge-warning">High</span></td><td data-i18n="owasp_webapp_table_a07_mitigation">MFA, protection contre la force brute, rotation de session</td></tr>
+          <tr><td>A08</td><td data-i18n="owasp_webapp_table_a08_name">Défaillances d'Intégrité des Logiciels ou Données</td><td><span class="badge badge-warning">High</span></td><td data-i18n="owasp_webapp_table_a08_mitigation">SRI, mises à jour signées, désérialisation sécurisée</td></tr>
+          <tr><td>A09</td><td data-i18n="owasp_webapp_table_a09_name">Défaillances de Journalisation et d'Alerte de Sécurité</td><td><span class="badge badge-info">Medium</span></td><td data-i18n="owasp_webapp_table_a09_mitigation">Journalisation centralisée, alertes en temps réel, réponse aux incidents</td></tr>
+          <tr><td>A10</td><td data-i18n="owasp_webapp_table_a10_name">Gestion Inadéquate des Conditions Exceptionnelles</td><td><span class="badge badge-info">Medium</span></td><td data-i18n="owasp_webapp_table_a10_mitigation">Gestionnaire d'erreurs global, messages génériques, prévention TOCTOU</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+<script src="../js/common.js"></script>
+
+
+</body></html>

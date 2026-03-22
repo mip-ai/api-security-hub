@@ -1,6 +1,6 @@
 {
   "nav_home": "Hogar",
-  "nav_section_api": "Seguridad API",
+  "nav_section_platform": "Seguridad de Plataforma",
   "nav_section_ai": "Seguridad IA",
   "nav_section_info": "Información",
   "nav_owasp": "Top 10 de OWASP",
@@ -8,6 +8,7 @@
   "nav_rate_limiting": "Limitación y validación de tarifas",
   "nav_tools": "Herramientas de seguridad",
   "nav_guidelines": "Directrices internas",
+  "nav_owasp_webapp": "OWASP Web App Top 10",
   "nav_owasp_llm": "OWASP LLM Top 10",
   "nav_news": "Últimas noticias",
   "nav_vendor_blogs": "Blogs de Proveedores",

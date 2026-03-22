@@ -25,6 +25,8 @@
   "index_card_news_desc": "Vulnerability News / CVE / Trends",
   "index_card_vendor_blogs_title": "Vendor Blogs",
   "index_card_vendor_blogs_desc": "Latest from Salt Security / Wallarm / Cequence / Imperva",
+  "index_card_owasp_webapp_title": "OWASP Web App Top 10",
+  "index_card_owasp_webapp_desc": "The 10 most critical web application security risks with code examples",
   "index_card_owasp_llm_title": "OWASP LLM Top 10",
   "index_card_owasp_llm_desc": "The 10 most critical security risks for LLM applications with Python code examples",
   "index_card_owasp_agentic_title": "OWASP Agentic Top 10",

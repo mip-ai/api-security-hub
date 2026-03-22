@@ -1,6 +1,6 @@
 {
   "nav_home": "Lar",
-  "nav_section_api": "Segurança API",
+  "nav_section_platform": "Segurança de Plataforma",
   "nav_section_ai": "Segurança IA",
   "nav_section_info": "Informação",
   "nav_owasp": "Top 10 da OWASP",
@@ -8,6 +8,7 @@
   "nav_rate_limiting": "Limitação e validação de taxa",
   "nav_tools": "Ferramentas de segurança",
   "nav_guidelines": "Diretrizes Internas",
+  "nav_owasp_webapp": "OWASP Web App Top 10",
   "nav_owasp_llm": "OWASP LLM Top 10",
   "nav_news": "Últimas Notícias",
   "nav_vendor_blogs": "Blogs de Fornecedores",

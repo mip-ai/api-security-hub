@@ -22,7 +22,7 @@
 
   // --- Section definitions for sidebar grouping ---
   const SECTIONS = [
-    { id: 'api_security', labelKey: 'nav_section_api' },
+    { id: 'api_security', labelKey: 'nav_section_platform' },
     { id: 'ai_security', labelKey: 'nav_section_ai' },
     { id: 'information', labelKey: 'nav_section_info' },
   ];
@@ -35,6 +35,7 @@
     { href: 'rate-limiting.html', icon: '\u26A1', labelKey: 'nav_rate_limiting', section: 'api_security' },
     { href: 'tools.html', icon: '\u{1F6E0}', labelKey: 'nav_tools', section: 'api_security' },
     { href: 'guidelines.html', icon: '\u{1F4CB}', labelKey: 'nav_guidelines', section: 'api_security' },
+    { href: 'owasp-webapp-top10.html', icon: '\u{1F310}', labelKey: 'nav_owasp_webapp', section: 'api_security' },
     { href: 'owasp-llm-top10.html', icon: '\u{1F916}', labelKey: 'nav_owasp_llm', section: 'ai_security' },
     { href: 'owasp-agentic-top10.html', icon: '\u{1F9BE}', labelKey: 'nav_owasp_agentic', section: 'ai_security' },
     { href: 'news.html', icon: '\u{1F4F0}', labelKey: 'nav_news', section: 'information' },
@@ -45,7 +46,7 @@
   const NAV_LABELS = {
     en: {
       nav_home: 'Home',
-      nav_section_api: 'API Security',
+      nav_section_platform: 'Platform Security',
       nav_section_ai: 'AI Security',
       nav_section_info: 'Information',
       nav_owasp: 'OWASP Top 10',
@@ -53,6 +54,7 @@
       nav_rate_limiting: 'Rate Limiting & Validation',
       nav_tools: 'Security Tools',
       nav_guidelines: 'Internal Guidelines',
+      nav_owasp_webapp: 'OWASP Web App Top 10',
       nav_owasp_llm: 'OWASP LLM Top 10',
       nav_owasp_agentic: 'OWASP Agentic Top 10',
       nav_news: 'Latest News',
@@ -60,7 +62,7 @@
     },
     ja: {
       nav_home: '\u30C8\u30C3\u30D7\u30DA\u30FC\u30B8',
-      nav_section_api: 'API\u30BB\u30AD\u30E5\u30EA\u30C6\u30A3',
+      nav_section_platform: '\u30D7\u30E9\u30C3\u30C8\u30D5\u30A9\u30FC\u30E0\u30BB\u30AD\u30E5\u30EA\u30C6\u30A3',
       nav_section_ai: 'AI\u30BB\u30AD\u30E5\u30EA\u30C6\u30A3',
       nav_section_info: '\u60C5\u5831',
       nav_owasp: 'OWASP Top 10',
@@ -68,6 +70,7 @@
       nav_rate_limiting: '\u30EC\u30FC\u30C8\u5236\u9650\u30FB\u5165\u529B\u691C\u8A3C',
       nav_tools: '\u30BB\u30AD\u30E5\u30EA\u30C6\u30A3\u30C4\u30FC\u30EB',
       nav_guidelines: '\u793E\u5185\u30AC\u30A4\u30C9\u30E9\u30A4\u30F3',
+      nav_owasp_webapp: 'OWASP Web App Top 10',
       nav_owasp_llm: 'OWASP LLM Top 10',
       nav_owasp_agentic: 'OWASP Agentic Top 10',
       nav_news: '\u6700\u65B0\u60C5\u5831',
@@ -75,7 +78,7 @@
     },
     es: {
       nav_home: 'Inicio',
-      nav_section_api: 'Seguridad API',
+      nav_section_platform: 'Seguridad de Plataforma',
       nav_section_ai: 'Seguridad IA',
       nav_section_info: 'Informaci\u00F3n',
       nav_owasp: 'OWASP Top 10',
@@ -83,6 +86,7 @@
       nav_rate_limiting: 'L\u00EDmite de tasa',
       nav_tools: 'Herramientas',
       nav_guidelines: 'Directrices',
+      nav_owasp_webapp: 'OWASP Web App Top 10',
       nav_owasp_llm: 'OWASP LLM Top 10',
       nav_owasp_agentic: 'OWASP Agentic Top 10',
       nav_news: 'Noticias',
@@ -90,7 +94,7 @@
     },
     pt: {
       nav_home: 'In\u00EDcio',
-      nav_section_api: 'Seguran\u00E7a API',
+      nav_section_platform: 'Seguran\u00E7a de Plataforma',
       nav_section_ai: 'Seguran\u00E7a IA',
       nav_section_info: 'Informa\u00E7\u00E3o',
       nav_owasp: 'OWASP Top 10',
@@ -98,6 +102,7 @@
       nav_rate_limiting: 'Limite de taxa',
       nav_tools: 'Ferramentas',
       nav_guidelines: 'Diretrizes',
+      nav_owasp_webapp: 'OWASP Web App Top 10',
       nav_owasp_llm: 'OWASP LLM Top 10',
       nav_owasp_agentic: 'OWASP Agentic Top 10',
       nav_news: 'Not\u00EDcias',
@@ -105,7 +110,7 @@
     },
     fr: {
       nav_home: 'Accueil',
-      nav_section_api: 'S\u00E9curit\u00E9 API',
+      nav_section_platform: 'S\u00E9curit\u00E9 de Plateforme',
       nav_section_ai: 'S\u00E9curit\u00E9 IA',
       nav_section_info: 'Informations',
       nav_owasp: 'OWASP Top 10',
@@ -113,6 +118,7 @@
       nav_rate_limiting: 'Limite de d\u00E9bit',
       nav_tools: 'Outils',
       nav_guidelines: 'Directives',
+      nav_owasp_webapp: 'OWASP Web App Top 10',
       nav_owasp_llm: 'OWASP LLM Top 10',
       nav_owasp_agentic: 'OWASP Agentic Top 10',
       nav_news: 'Actualit\u00E9s',

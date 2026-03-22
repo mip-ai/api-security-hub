@@ -1,6 +1,6 @@
 {
   "nav_home": "トップページ",
-  "nav_section_api": "APIセキュリティ",
+  "nav_section_platform": "プラットフォームセキュリティ",
   "nav_section_ai": "AIセキュリティ",
   "nav_section_info": "情報",
   "nav_owasp": "OWASP Top 10",
@@ -8,6 +8,7 @@
   "nav_rate_limiting": "レート制限・入力検証",
   "nav_tools": "セキュリティツール",
   "nav_guidelines": "社内ガイドライン",
+  "nav_owasp_webapp": "OWASP Web App Top 10",
   "nav_owasp_llm": "OWASP LLM Top 10",
   "nav_news": "最新情報",
   "nav_vendor_blogs": "ベンダーブログ",
