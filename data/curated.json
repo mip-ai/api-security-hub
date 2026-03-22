@@ -3,19 +3,19 @@
   "editorPicks": [
     {
       "title": {
-        "en": "DeepSeek's Exposed Database: 1M+ Logs with Chat History and API Keys",
         "ja": "DeepSeekのデータベース露出: 100万件超のチャット履歴・APIキーを含むログが公開状態に",
-        "es": "Base de datos expuesta de DeepSeek: más de 1M de registros con historial de chat y claves API",
-        "pt": "Banco de dados exposto do DeepSeek: mais de 1M de logs com histórico de chat e chaves API",
-        "fr": "Base de données exposée de DeepSeek : plus d'1M de logs avec historique de chat et clés API"
+        "en": "DeepSeek database exposed: Over 1 million chat histories and logs containing API keys exposed",
+        "es": "Base de datos DeepSeek expuesta: más de 1 millón de historiales de chat y registros que contienen claves API expuestos",
+        "pt": "Banco de dados DeepSeek exposto: Mais de 1 milhão de históricos de bate-papo e logs contendo chaves de API expostas",
+        "fr": "Base de données DeepSeek exposée : plus d'un million d'historiques de discussion et de journaux contenant des clés API exposés"
       },
       "link": "https://www.wiz.io/blog/wiz-research-uncovers-exposed-deepseek-database-leak",
       "commentary": {
-        "en": "A textbook case of why AI infrastructure needs the same security rigor as traditional systems. Unauthenticated database access exposed chat history, API secrets, and operational metadata.",
         "ja": "AIインフラにも従来のシステムと同等のセキュリティ対策が必要であることを示す教科書的事例。未認証のデータベースアクセスにより、チャット履歴、APIシークレット、運用メタデータが露出。",
-        "es": "Un caso de libro sobre por qué la infraestructura de IA necesita el mismo rigor de seguridad que los sistemas tradicionales.",
-        "pt": "Um caso exemplar de por que a infraestrutura de IA precisa do mesmo rigor de segurança que os sistemas tradicionais.",
-        "fr": "Un cas d'école sur pourquoi l'infrastructure IA nécessite la même rigueur de sécurité que les systèmes traditionnels."
+        "en": "A textbook example showing that AI infrastructure requires the same security measures as traditional systems. Unauthenticated database access exposed chat history, API secrets, and operational metadata.",
+        "es": "Un ejemplo de libro de texto que muestra que la infraestructura de IA requiere las mismas medidas de seguridad que los sistemas tradicionales. El acceso no autenticado a la base de datos expuso el historial de chat, los secretos de API y los metadatos operativos.",
+        "pt": "Um exemplo clássico que mostra que a infraestrutura de IA requer as mesmas medidas de segurança que os sistemas tradicionais. O acesso não autenticado ao banco de dados expôs o histórico de bate-papo, segredos de API e metadados operacionais.",
+        "fr": "Un exemple classique montrant que l’infrastructure d’IA nécessite les mêmes mesures de sécurité que les systèmes traditionnels. L'accès non authentifié à la base de données expose l'historique des discussions, les secrets de l'API et les métadonnées opérationnelles."
       },
       "category": "ai",
       "tags": [
@@ -27,19 +27,19 @@
     },
     {
       "title": {
-        "en": "DOGE Employee Leaks xAI Private API Key on GitHub — Access to 52+ LLMs",
         "ja": "DOGE職員がxAIプライベートAPIキーをGitHubに漏洩 — 52以上のLLMへのアクセス",
-        "es": "Empleado de DOGE filtra clave API privada de xAI en GitHub — acceso a más de 52 LLMs",
-        "pt": "Funcionário do DOGE vaza chave API privada do xAI no GitHub — acesso a mais de 52 LLMs",
-        "fr": "Un employé du DOGE divulgue la clé API privée de xAI sur GitHub — accès à plus de 52 LLMs"
+        "en": "DOGE employee leaks xAI private API key to GitHub — access to 52+ LLMs",
+        "es": "Un empleado de DOGE filtra la clave API privada de xAI a GitHub: acceso a más de 52 LLM",
+        "pt": "Funcionário do DOGE vaza chave de API privada xAI para GitHub – acesso a mais de 52 LLMs",
+        "fr": "Un employé de DOGE divulgue la clé API privée xAI sur GitHub – accès à plus de 52 LLM"
       },
       "link": "https://krebsonsecurity.com/2025/07/doge-denizen-marko-elez-leaked-api-key-for-xai/",
       "commentary": {
-        "en": "Highlights the persistent danger of hardcoded secrets in code repositories. Even government-adjacent developers make this mistake. Automated secret scanning is essential.",
         "ja": "コードリポジトリにハードコードされたシークレットの永続的な危険性を浮き彫りにする事例。政府関連の開発者でもこの過ちを犯す。自動シークレットスキャンが不可欠。",
-        "es": "Destaca el peligro persistente de secretos codificados en repositorios de código. La detección automática de secretos es esencial.",
-        "pt": "Destaca o perigo persistente de segredos codificados em repositórios de código. A varredura automática de segredos é essencial.",
-        "fr": "Souligne le danger persistant des secrets codés en dur dans les dépôts de code. L'analyse automatique des secrets est essentielle."
+        "en": "A case study that highlights the persistent dangers of hard-coded secrets in code repositories. Even government developers make this mistake. Automatic secret scanning is essential.",
+        "es": "Un estudio de caso que destaca los peligros persistentes de los secretos codificados en los repositorios de códigos. Incluso los promotores gubernamentales cometen este error. El escaneo secreto automático es esencial.",
+        "pt": "Um estudo de caso que destaca os perigos persistentes de segredos codificados em repositórios de código. Até mesmo os desenvolvedores governamentais cometem esse erro. A verificação automática de segredos é essencial.",
+        "fr": "Une étude de cas qui met en évidence les dangers persistants des secrets codés en dur dans les référentiels de code. Même les promoteurs gouvernementaux font cette erreur. L’analyse automatique des secrets est essentielle."
       },
       "category": "ai",
       "tags": [
@@ -51,19 +51,19 @@
     },
     {
       "title": {
-        "en": "AI-Related CVEs Surge 1,025% Year-over-Year in 2024",
         "ja": "AI関連CVEが2024年に前年比1,025%急増",
-        "es": "Los CVEs relacionados con IA aumentan un 1.025% interanual en 2024",
-        "pt": "CVEs relacionados a IA aumentam 1.025% ano a ano em 2024",
-        "fr": "Les CVEs liés à l'IA augmentent de 1 025% en glissement annuel en 2024"
+        "en": "AI-related CVE will surge 1,025% year-on-year in 2024",
+        "es": "El CVE relacionado con la IA aumentará un 1.025 % interanual en 2024",
+        "pt": "CVE relacionado à IA aumentará 1.025% ano a ano em 2024",
+        "fr": "Le CVE lié à l’IA augmentera de 1 025 % sur un an en 2024"
       },
       "link": "https://www.wallarm.com/reports/2025-api-security-report",
       "commentary": {
-        "en": "Wallarm's 2025 report reveals explosive growth in AI vulnerabilities. Over 50% of CISA's KEV catalog is now API-related. The attack surface is expanding faster than defenses.",
         "ja": "Wallarmの2025年レポートがAI脆弱性の爆発的増加を明らかに。CISAのKEVカタログの50%以上がAPI関連に。攻撃対象面が防御よりも速く拡大している。",
-        "es": "El informe de Wallarm 2025 revela un crecimiento explosivo de vulnerabilidades de IA. La superficie de ataque se expande más rápido que las defensas.",
-        "pt": "O relatório da Wallarm 2025 revela crescimento explosivo de vulnerabilidades de IA. A superfície de ataque está se expandindo mais rápido que as defesas.",
-        "fr": "Le rapport Wallarm 2025 révèle une croissance explosive des vulnérabilités IA. La surface d'attaque s'étend plus vite que les défenses."
+        "en": "Wallarm's 2025 Report Reveals Explosive Growth in AI Vulnerabilities. More than 50% of CISA's KEV catalog is API-related. The attack surface is expanding faster than the defense.",
+        "es": "El informe 2025 de Wallarm revela un crecimiento explosivo de las vulnerabilidades de la IA. Más del 50% del catálogo KEV de CISA está relacionado con API. La superficie de ataque se está expandiendo más rápido que la defensa.",
+        "pt": "O relatório de 2025 da Wallarm revela crescimento explosivo nas vulnerabilidades de IA. Mais de 50% do catálogo KEV da CISA está relacionado à API. A superfície de ataque está se expandindo mais rapidamente que a defesa.",
+        "fr": "Le rapport 2025 de Wallarm révèle une croissance explosive des vulnérabilités de l'IA. Plus de 50 % du catalogue KEV de CISA est lié aux API. La surface d’attaque s’étend plus vite que la défense."
       },
       "category": "ai",
       "tags": [
@@ -78,18 +78,18 @@
     {
       "weekOf": "2026-03-17",
       "title": {
-        "en": "Week of March 17: AI Security Takes Center Stage",
         "ja": "3月17日の週: AIセキュリティが注目を集める",
-        "es": "Semana del 17 de marzo: La seguridad IA toma protagonismo",
-        "pt": "Semana de 17 de março: Segurança IA ganha destaque",
-        "fr": "Semaine du 17 mars : La sécurité IA prend le devant de la scène"
+        "en": "Week of March 17th: AI security takes center stage",
+        "es": "Semana del 17 de marzo: la seguridad de la IA ocupa un lugar central",
+        "pt": "Semana de 17 de março: a segurança da IA ​​é o centro das atenções",
+        "fr": "Semaine du 17 mars : la sécurité de l'IA occupe le devant de la scène"
       },
       "summary": {
-        "en": "OWASP released updates to the Agentic AI Top 10 list, highlighting agent goal hijacking and privilege escalation as top concerns for 2026. Meanwhile, several high-profile API key leaks were reported across AI platforms.",
         "ja": "OWASPがAgentic AI Top 10リストを更新し、エージェント目標ハイジャックと権限昇格を2026年の最重要課題として強調。一方、AIプラットフォーム全体で複数の注目すべきAPIキー漏洩が報告された。",
-        "es": "OWASP publicó actualizaciones de la lista Agentic AI Top 10, destacando el secuestro de objetivos de agentes y la escalación de privilegios. Se reportaron varias filtraciones de claves API en plataformas de IA.",
-        "pt": "OWASP publicou atualizações da lista Agentic AI Top 10, destacando sequestro de objetivos de agentes e escalonamento de privilégios. Vários vazamentos de chaves API foram reportados em plataformas de IA.",
-        "fr": "L'OWASP a publié des mises à jour de la liste Agentic AI Top 10, soulignant le détournement d'objectifs d'agents et l'escalade de privilèges. Plusieurs fuites de clés API ont été signalées sur des plateformes d'IA."
+        "en": "OWASP updates Agent AI Top 10 list, highlighting agent goal hijacking and privilege escalation as top issues for 2026. Meanwhile, multiple notable API key leaks were reported across AI platforms.",
+        "es": "OWASP actualiza la lista Agent AI Top 10, destacando el secuestro de objetivos de los agentes y la escalada de privilegios como los principales problemas para 2026. Mientras tanto, se informaron múltiples fugas de claves API notables en todas las plataformas de AI.",
+        "pt": "OWASP atualiza a lista dos 10 principais agentes de IA, destacando o sequestro de metas de agentes e o escalonamento de privilégios como os principais problemas para 2026. Enquanto isso, vários vazamentos notáveis ​​de chaves de API foram relatados em plataformas de IA.",
+        "fr": "L'OWASP met à jour la liste des 10 meilleurs agents AI, mettant en évidence le détournement d'objectifs d'agent et l'élévation de privilèges comme principaux problèmes pour 2026. Entre-temps, plusieurs fuites notables de clés API ont été signalées sur les plates-formes d'IA."
       },
       "keyThemes": [
         "ai-agents",
