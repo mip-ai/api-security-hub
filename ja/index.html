@@ -191,26 +191,75 @@
     </div>
   </div>
 
-  <!-- OWASP Top 3 -->
+  <!-- #1 Risk from Each OWASP Category -->
   <div class="section">
-    <h2 data-i18n-html="index_top3_heading"><span class="section-icon">🚨</span> 注目すべき脆弱性 Top 3</h2>
-    <p data-i18n-html="index_top3_description">OWASP API Security Top 10 から特に重要度の高い3項目をピックアップ。<a href="owasp-top10.html">全項目を見る →</a></p>
+    <h2 data-i18n-html="index_top_risks_heading"><span class="section-icon">🚨</span> 各カテゴリの最重要リスク</h2>
+    <p data-i18n="index_top_risks_description">当サイトがカバーする8つのOWASP Top 10カテゴリから、それぞれ最優先のリスクを紹介。</p>
     <div class="card-grid">
-      <div class="card">
-        <h3 data-i18n="index_top3_api1_title">API1 - 認可の不備 (BOLA)</h3>
-        <p data-i18n="index_top3_api1_desc">他のユーザーのリソースに不正アクセスできてしまう脆弱性。最も頻出かつ影響の大きい問題。</p>
-        <span class="card-tag tag-critical">Critical</span>
-      </div>
-      <div class="card">
-        <h3 data-i18n="index_top3_api2_title">API2 - 認証の不備</h3>
-        <p data-i18n="index_top3_api2_desc">認証メカニズムの実装ミスにより、攻撃者が他ユーザーのIDを乗っ取れる脆弱性。</p>
-        <span class="card-tag tag-critical">Critical</span>
-      </div>
-      <div class="card">
-        <h3 data-i18n="index_top3_api3_title">API3 - オブジェクトプロパティレベル認可の不備</h3>
-        <p data-i18n="index_top3_api3_desc">APIが返すオブジェクト内の機密プロパティへのアクセス制御が不十分な脆弱性。</p>
-        <span class="card-tag tag-high">High</span>
-      </div>
+      <a href="owasp-llm-top10.html" class="card-link">
+        <div class="card">
+          <div class="card-icon">🤖</div>
+          <h3 data-i18n="index_risk_llm_title">LLM01 - プロンプトインジェクション</h3>
+          <p data-i18n="index_risk_llm_desc">細工された入力がLLMの動作を操作し、指示をバイパスしたり機密データを抽出する攻撃。</p>
+          <span class="card-tag tag-critical">LLM Top 10</span>
+        </div>
+      </a>
+      <a href="owasp-agentic-top10.html" class="card-link">
+        <div class="card">
+          <div class="card-icon">🦾</div>
+          <h3 data-i18n="index_risk_agentic_title">ASI01 - エージェント目標ハイジャック</h3>
+          <p data-i18n="index_risk_agentic_desc">攻撃者がエージェントの目標を操作し、複数ステップにわたって意図しない行動を実行させる。</p>
+          <span class="card-tag tag-critical">Agentic Top 10</span>
+        </div>
+      </a>
+      <a href="owasp-ml-top10.html" class="card-link">
+        <div class="card">
+          <div class="card-icon">🧠</div>
+          <h3 data-i18n="index_risk_ml_title">ML01 - 入力操作攻撃</h3>
+          <p data-i18n="index_risk_ml_desc">敵対的入力によりMLモデルに誤った予測をさせ、検出システムやコンテンツフィルタを回避する。</p>
+          <span class="card-tag tag-critical">ML Top 10</span>
+        </div>
+      </a>
+      <a href="owasp-top10.html" class="card-link">
+        <div class="card">
+          <div class="card-icon">🔟</div>
+          <h3 data-i18n="index_risk_api_title">API1 - オブジェクトレベル認可の不備</h3>
+          <p data-i18n="index_risk_api_desc">オブジェクトIDの操作により他ユーザーのデータに不正アクセス。最も頻出するAPI脆弱性。</p>
+          <span class="card-tag tag-critical">API Top 10</span>
+        </div>
+      </a>
+      <a href="owasp-webapp-top10.html" class="card-link">
+        <div class="card">
+          <div class="card-icon">🌐</div>
+          <h3 data-i18n="index_risk_webapp_title">A01 - アクセス制御の不備</h3>
+          <p data-i18n="index_risk_webapp_desc">ユーザーが意図された権限を超えて操作でき、データの不正な開示・変更・破壊につながる。</p>
+          <span class="card-tag tag-critical">Web App Top 10</span>
+        </div>
+      </a>
+      <a href="owasp-cloud-top10.html" class="card-link">
+        <div class="card">
+          <div class="card-icon">☁️</div>
+          <h3 data-i18n="index_risk_cloud_title">CNAS-1 - 安全でない構成</h3>
+          <p data-i18n="index_risk_cloud_desc">クラウドサービス・コンテナ・オーケストレーターの設定ミスがクラウドネイティブ侵害の主因。</p>
+          <span class="card-tag tag-high">Cloud Top 10</span>
+        </div>
+      </a>
+      <a href="owasp-cicd-top10.html" class="card-link">
+        <div class="card">
+          <div class="card-icon">🔄</div>
+          <h3 data-i18n="index_risk_cicd_title">CICD-SEC-1 - 不十分なフロー制御</h3>
+          <p data-i18n="index_risk_cicd_desc">攻撃者がレビューや承認なしにパイプライン経由で悪意あるコードを投入する。</p>
+          <span class="card-tag tag-high">CI/CD Top 10</span>
+        </div>
+      </a>
+      <a href="owasp-k8s-top10.html" class="card-link">
+        <div class="card">
+          <div class="card-icon">☸</div>
+          <h3 data-i18n="index_risk_k8s_title">K01 - 安全でないワークロード構成</h3>
+          <p data-i18n="index_risk_k8s_desc">root権限・過剰な特権・書き込み可能なファイルシステムで動作するコンテナが攻撃対象面を拡大。</p>
+          <span class="card-tag tag-high">K8s Top 10</span>
+        </div>
+      </a>
     </div>
   </div>
 

@@ -191,26 +191,75 @@
     </div>
   </div>
 
-  <!-- OWASP Top 3 -->
+  <!-- #1 Risk from Each OWASP Category -->
   <div class="section">
-    <h2 data-i18n-html="index_top3_heading"><span class="section-icon">🚨</span> Top 3 des vulnérabilités à surveiller</h2>
-    <p data-i18n-html="index_top3_description">Trois des éléments les plus graves du Top 10 de la sécurité des API OWASP. <a href="owasp-top10.html">Afficher tous les éléments →</a></p>
+    <h2 data-i18n-html="index_top_risks_heading"><span class="section-icon">🚨</span> #1 Risk from Each Category</h2>
+    <p data-i18n="index_top_risks_description">The highest-priority risk from each of the 8 OWASP Top 10 categories covered on this site.</p>
     <div class="card-grid">
-      <div class="card">
-        <h3 data-i18n="index_top3_api1_title">API1&nbsp;–&nbsp;Autorisation au niveau de l'objet brisé (BOLA)</h3>
-        <p data-i18n="index_top3_api1_desc">Une vulnérabilité qui permet un accès non autorisé aux ressources d'autres utilisateurs. Le problème le plus fréquent et le plus impactant.</p>
-        <span class="card-tag tag-critical">Critical</span>
-      </div>
-      <div class="card">
-        <h3 data-i18n="index_top3_api2_title">API2 - Authentification rompue</h3>
-        <p data-i18n="index_top3_api2_desc">Une vulnérabilité causée par des mécanismes d'authentification défectueux qui permet aux attaquants de s'emparer de l'identité d'autres utilisateurs.</p>
-        <span class="card-tag tag-critical">Critical</span>
-      </div>
-      <div class="card">
-        <h3 data-i18n="index_top3_api3_title">API3&nbsp;–&nbsp;Autorisation au niveau de la propriété d'un objet cassé</h3>
-        <p data-i18n="index_top3_api3_desc">Une vulnérabilité où le contrôle d'accès aux propriétés sensibles au sein des objets renvoyés par les API est insuffisant.</p>
-        <span class="card-tag tag-high">High</span>
-      </div>
+      <a href="owasp-llm-top10.html" class="card-link">
+        <div class="card">
+          <div class="card-icon">🤖</div>
+          <h3 data-i18n="index_risk_llm_title">LLM01 - Prompt Injection</h3>
+          <p data-i18n="index_risk_llm_desc">Crafted inputs manipulate LLM behavior, bypassing instructions or extracting sensitive data via direct or indirect injection.</p>
+          <span class="card-tag tag-critical">LLM Top 10</span>
+        </div>
+      </a>
+      <a href="owasp-agentic-top10.html" class="card-link">
+        <div class="card">
+          <div class="card-icon">🦾</div>
+          <h3 data-i18n="index_risk_agentic_title">ASI01 - Agent Goal Hijack</h3>
+          <p data-i18n="index_risk_agentic_desc">Attackers manipulate an agent's objectives through crafted inputs, causing it to pursue unintended targets across multiple steps.</p>
+          <span class="card-tag tag-critical">Agentic Top 10</span>
+        </div>
+      </a>
+      <a href="owasp-ml-top10.html" class="card-link">
+        <div class="card">
+          <div class="card-icon">🧠</div>
+          <h3 data-i18n="index_risk_ml_title">ML01 - Input Manipulation Attack</h3>
+          <p data-i18n="index_risk_ml_desc">Adversarial inputs cause ML models to make incorrect predictions, bypassing detection systems and content filters.</p>
+          <span class="card-tag tag-critical">ML Top 10</span>
+        </div>
+      </a>
+      <a href="owasp-top10.html" class="card-link">
+        <div class="card">
+          <div class="card-icon">🔟</div>
+          <h3 data-i18n="index_risk_api_title">API1 - Broken Object Level Authorization</h3>
+          <p data-i18n="index_risk_api_desc">Unauthorized access to other users' data by manipulating object IDs. The most frequently occurring API vulnerability.</p>
+          <span class="card-tag tag-critical">API Top 10</span>
+        </div>
+      </a>
+      <a href="owasp-webapp-top10.html" class="card-link">
+        <div class="card">
+          <div class="card-icon">🌐</div>
+          <h3 data-i18n="index_risk_webapp_title">A01 - Broken Access Control</h3>
+          <p data-i18n="index_risk_webapp_desc">Users act outside intended permissions, leading to unauthorized disclosure, modification, or destruction of data.</p>
+          <span class="card-tag tag-critical">Web App Top 10</span>
+        </div>
+      </a>
+      <a href="owasp-cloud-top10.html" class="card-link">
+        <div class="card">
+          <div class="card-icon">☁️</div>
+          <h3 data-i18n="index_risk_cloud_title">CNAS-1 - Insecure Configuration</h3>
+          <p data-i18n="index_risk_cloud_desc">Misconfigured cloud services, containers, and orchestrators are the leading cause of cloud-native breaches.</p>
+          <span class="card-tag tag-high">Cloud Top 10</span>
+        </div>
+      </a>
+      <a href="owasp-cicd-top10.html" class="card-link">
+        <div class="card">
+          <div class="card-icon">🔄</div>
+          <h3 data-i18n="index_risk_cicd_title">CICD-SEC-1 - Insufficient Flow Control</h3>
+          <p data-i18n="index_risk_cicd_desc">Attackers push malicious code through pipelines without proper review or approval gates, bypassing branch protections.</p>
+          <span class="card-tag tag-high">CI/CD Top 10</span>
+        </div>
+      </a>
+      <a href="owasp-k8s-top10.html" class="card-link">
+        <div class="card">
+          <div class="card-icon">☸</div>
+          <h3 data-i18n="index_risk_k8s_title">K01 - Insecure Workload Configurations</h3>
+          <p data-i18n="index_risk_k8s_desc">Containers running as root with excessive privileges and writable filesystems create significant attack surfaces.</p>
+          <span class="card-tag tag-high">K8s Top 10</span>
+        </div>
+      </a>
     </div>
   </div>
 
