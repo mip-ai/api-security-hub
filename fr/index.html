@@ -3,6 +3,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title data-i18n="index_page_title">AI Security Hub</title>
   <link rel="stylesheet" href="../css/style.css">
+  <meta name="description" content="Comprehensive OWASP Top 10 reference for AI, web, cloud, and DevOps security. 8 categories, 80+ risks covered.">
+  <meta property="og:title" content="AI Security Hub">
+  <meta property="og:description" content="Comprehensive OWASP Top 10 reference for AI, web, cloud, and DevOps security. 8 categories, 80+ risks covered.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://secaihub.com/fr/index.html">
+  <meta property="og:site_name" content="AI Security Hub">
+  <meta name="twitter:card" content="summary">
 
     <link rel="alternate" hreflang="en" href="/api-security-hub/en/index.html">
     <link rel="alternate" hreflang="ja" href="/api-security-hub/ja/index.html">
@@ -24,11 +31,11 @@
       </div>
       <div class="stat-item">
         <div class="stat-number">8</div>
-        <div class="stat-label" data-i18n="index_stat_sections">Sections</div>
+        <div class="stat-label" data-i18n="index_stat_sections">Catégories OWASP</div>
       </div>
       <div class="stat-item">
-        <div class="stat-number">50+</div>
-        <div class="stat-label" data-i18n="index_stat_checks">Vérifier les éléments</div>
+        <div class="stat-number">80+</div>
+        <div class="stat-label" data-i18n="index_stat_checks">Risques de Sécurité</div>
       </div>
     </div>
   </div>
@@ -49,6 +56,32 @@
   <div class="section">
     <h2 data-i18n-html="index_content_heading"><span class="section-icon">📚</span> Contenu</h2>
     <p data-i18n="index_content_description">Cliquez sur chaque section pour afficher les détails.</p>
+    <h3 class="card-group-heading" data-i18n="index_group_ai">🤖 Sécurité IA</h3>
+    <div class="highlight-cards">
+      <a href="owasp-llm-top10.html" class="card-link">
+        <div class="highlight-card">
+          <div class="hl-icon">🤖</div>
+          <h3 data-i18n="index_card_owasp_llm_title">OWASP LLM Top 10</h3>
+          <p data-i18n="index_card_owasp_llm_desc">Les 10 risques de sécurité les plus critiques pour les applications LLM avec des exemples de code Python</p>
+        </div>
+      </a>
+      <a href="owasp-agentic-top10.html" class="card-link">
+        <div class="highlight-card">
+          <div class="hl-icon">🦾</div>
+          <h3 data-i18n="index_card_owasp_agentic_title">OWASP Agentic Top 10</h3>
+          <p data-i18n="index_card_owasp_agentic_desc">Les 10 risques de sécurité les plus critiques pour les systèmes d'agents IA avec des exemples de code Python</p>
+        </div>
+      </a>
+      <a href="owasp-ml-top10.html" class="card-link">
+        <div class="highlight-card">
+          <div class="hl-icon">🧠</div>
+          <h3 data-i18n="index_card_owasp_ml_title">OWASP ML Top 10</h3>
+          <p data-i18n="index_card_owasp_ml_desc">Les 10 risques de sécurité les plus critiques en apprentissage automatique avec des exemples de code Python</p>
+        </div>
+      </a>
+    </div>
+
+    <h3 class="card-group-heading" data-i18n="index_group_infra">🏗 Infrastructure</h3>
     <div class="highlight-cards">
       <a href="owasp-top10.html" class="card-link">
         <div class="highlight-card">
@@ -57,6 +90,38 @@
           <p data-i18n="index_card_owasp_desc">Les 10 vulnérabilités les plus critiques avec des exemples de codes d'atténuation</p>
         </div>
       </a>
+      <a href="owasp-webapp-top10.html" class="card-link">
+        <div class="highlight-card">
+          <div class="hl-icon">🌐</div>
+          <h3 data-i18n="index_card_owasp_webapp_title">OWASP Web App Top 10</h3>
+          <p data-i18n="index_card_owasp_webapp_desc">Les 10 risques de sécurité les plus critiques pour les applications web avec des exemples de code</p>
+        </div>
+      </a>
+      <a href="owasp-cloud-top10.html" class="card-link">
+        <div class="highlight-card">
+          <div class="hl-icon">☁️</div>
+          <h3 data-i18n="index_card_owasp_cloud_title">OWASP Cloud-Native Top 10</h3>
+          <p data-i18n="index_card_owasp_cloud_desc">Les 10 risques de sécurité les plus critiques pour les applications cloud-native avec des exemples Kubernetes/Terraform</p>
+        </div>
+      </a>
+      <a href="owasp-cicd-top10.html" class="card-link">
+        <div class="highlight-card">
+          <div class="hl-icon">🔄</div>
+          <h3 data-i18n="index_card_owasp_cicd_title">OWASP CI/CD Top 10</h3>
+          <p data-i18n="index_card_owasp_cicd_desc">Les 10 risques de sécurité les plus critiques dans les pipelines CI/CD avec des exemples GitHub Actions/Jenkins</p>
+        </div>
+      </a>
+      <a href="owasp-k8s-top10.html" class="card-link">
+        <div class="highlight-card">
+          <div class="hl-icon">☸</div>
+          <h3 data-i18n="index_card_owasp_k8s_title">OWASP Kubernetes Top 10</h3>
+          <p data-i18n="index_card_owasp_k8s_desc">Les 10 risques de sécurité les plus critiques dans Kubernetes avec des exemples YAML/Terraform/Helm</p>
+        </div>
+      </a>
+    </div>
+
+    <h3 class="card-group-heading" data-i18n="index_group_practices">📋 Pratiques et Informations</h3>
+    <div class="highlight-cards">
       <a href="auth.html" class="card-link">
         <div class="highlight-card">
           <div class="hl-icon">🔐</div>
@@ -82,7 +147,7 @@
         <div class="highlight-card">
           <div class="hl-icon">📋</div>
           <h3 data-i18n="index_card_guidelines_title">Directives internes</h3>
-          <p data-i18n="index_card_guidelines_desc">Listes de contrôle/Critères d’examen</p>
+          <p data-i18n="index_card_guidelines_desc">Listes de contrôle/Critères d'examen</p>
         </div>
       </a>
       <a href="news.html" class="card-link">
@@ -97,55 +162,6 @@
           <div class="hl-icon">📝</div>
           <h3 data-i18n="index_card_vendor_blogs_title">Blogs Fournisseurs</h3>
           <p data-i18n="index_card_vendor_blogs_desc">Derniers articles de Salt Security / Wallarm / Cequence / Imperva</p>
-        </div>
-      </a>
-      <a href="owasp-webapp-top10.html" class="card-link">
-        <div class="highlight-card">
-          <div class="hl-icon">🌐</div>
-          <h3 data-i18n="index_card_owasp_webapp_title">OWASP Web App Top 10</h3>
-          <p data-i18n="index_card_owasp_webapp_desc">Les 10 risques de sécurité les plus critiques pour les applications web avec des exemples de code</p>
-        </div>
-      </a>
-      <a href="owasp-cloud-top10.html" class="card-link">
-        <div class="highlight-card">
-          <div class="hl-icon">☁️</div>
-          <h3 data-i18n="index_card_owasp_cloud_title">OWASP Cloud-Native Top 10</h3>
-          <p data-i18n="index_card_owasp_cloud_desc">The 10 most critical cloud-native application security risks with Kubernetes/Terraform examples</p>
-        </div>
-      </a>
-      <a href="owasp-llm-top10.html" class="card-link">
-        <div class="highlight-card">
-          <div class="hl-icon">🤖</div>
-          <h3 data-i18n="index_card_owasp_llm_title">OWASP LLM Top 10</h3>
-          <p data-i18n="index_card_owasp_llm_desc">Les 10 risques de sécurité les plus critiques pour les applications LLM avec des exemples de code Python</p>
-        </div>
-      </a>
-      <a href="owasp-agentic-top10.html" class="card-link">
-        <div class="highlight-card">
-          <div class="hl-icon">🦾</div>
-          <h3 data-i18n="index_card_owasp_agentic_title">OWASP Agentic Top 10</h3>
-          <p data-i18n="index_card_owasp_agentic_desc">Les 10 risques de sécurité les plus critiques pour les systèmes d'agents IA avec des exemples de code Python</p>
-        </div>
-      </a>
-      <a href="owasp-ml-top10.html" class="card-link">
-        <div class="highlight-card">
-          <div class="hl-icon">🧠</div>
-          <h3 data-i18n="index_card_owasp_ml_title">OWASP ML Top 10</h3>
-          <p data-i18n="index_card_owasp_ml_desc">The 10 most critical machine learning security risks with Python code examples</p>
-        </div>
-      </a>
-      <a href="owasp-cicd-top10.html" class="card-link">
-        <div class="highlight-card">
-          <div class="hl-icon">🔄</div>
-          <h3 data-i18n="index_card_owasp_cicd_title">OWASP CI/CD Top 10</h3>
-          <p data-i18n="index_card_owasp_cicd_desc">The 10 most critical CI/CD pipeline security risks with GitHub Actions/Jenkins examples</p>
-        </div>
-      </a>
-      <a href="owasp-k8s-top10.html" class="card-link">
-        <div class="highlight-card">
-          <div class="hl-icon">☸</div>
-          <h3 data-i18n="index_card_owasp_k8s_title">OWASP Kubernetes Top 10</h3>
-          <p data-i18n="index_card_owasp_k8s_desc">The 10 most critical Kubernetes security risks with YAML/Terraform/Helm examples</p>
         </div>
       </a>
     </div>
@@ -203,7 +219,7 @@
     <h2 data-i18n-html="index_getting_started_heading"><span class="section-icon">🚀</span> Pour commencer</h2>
     <div class="callout callout-info">
       <div class="callout-title" data-i18n="index_howto_title">Comment utiliser ce site</div>
-      <p data-i18n="index_howto_desc">Accédez à chaque section à l’aide de la barre latérale (menu hamburger sur mobile). Pour les nouveaux arrivants, nous recommandons de lire dans cet ordre&nbsp;: OWASP Top 10 → Authentification et autorisation → Limitation de débit.</p>
+      <p data-i18n="index_howto_desc">Accédez à chaque section à l'aide du menu de navigation en haut (menu hamburger sur mobile). Pour les nouveaux arrivants, nous recommandons de lire dans cet ordre&nbsp;: OWASP Top 10 → Authentification et autorisation → Limitation de débit.</p>
     </div>
     <div class="callout callout-warning">
       <div class="callout-title" data-i18n="index_disclaimer_title">Clause de non-responsabilité</div>

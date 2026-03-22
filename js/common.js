@@ -20,42 +20,73 @@
     return match ? match[1] : 'en';
   }
 
-  // --- Section definitions for sidebar grouping ---
-  const SECTIONS = [
-    { id: 'ai_security', labelKey: 'nav_section_ai' },
-    { id: 'api_security', labelKey: 'nav_section_platform' },
-    { id: 'devops', labelKey: 'nav_section_devops' },
-    { id: 'information', labelKey: 'nav_section_info' },
+  // --- Navigation menu structure ---
+  const NAV_MENU = [
+    {
+      id: 'owasp',
+      labelKey: 'nav_menu_owasp',
+      type: 'mega',
+      groups: [
+        {
+          labelKey: 'nav_group_ai',
+          items: [
+            { href: 'owasp-llm-top10.html', icon: '\u{1F916}', labelKey: 'nav_owasp_llm' },
+            { href: 'owasp-agentic-top10.html', icon: '\u{1F9BE}', labelKey: 'nav_owasp_agentic' },
+            { href: 'owasp-ml-top10.html', icon: '\u{1F9E0}', labelKey: 'nav_owasp_ml' },
+          ],
+        },
+        {
+          labelKey: 'nav_group_infra',
+          items: [
+            { href: 'owasp-top10.html', icon: '\u{1F51F}', labelKey: 'nav_owasp' },
+            { href: 'owasp-webapp-top10.html', icon: '\u{1F310}', labelKey: 'nav_owasp_webapp' },
+            { href: 'owasp-cloud-top10.html', icon: '\u2601\uFE0F', labelKey: 'nav_owasp_cloud' },
+            { href: 'owasp-cicd-top10.html', icon: '\u{1F504}', labelKey: 'nav_owasp_cicd' },
+            { href: 'owasp-k8s-top10.html', icon: '\u2638', labelKey: 'nav_owasp_k8s' },
+          ],
+        },
+      ],
+    },
+    {
+      id: 'practices',
+      labelKey: 'nav_menu_practices',
+      type: 'dropdown',
+      items: [
+        { href: 'auth.html', icon: '\u{1F510}', labelKey: 'nav_auth' },
+        { href: 'rate-limiting.html', icon: '\u26A1', labelKey: 'nav_rate_limiting' },
+        { href: 'tools.html', icon: '\u{1F6E0}', labelKey: 'nav_tools' },
+        { href: 'guidelines.html', icon: '\u{1F4CB}', labelKey: 'nav_guidelines' },
+      ],
+    },
+    {
+      id: 'news',
+      labelKey: 'nav_menu_news',
+      type: 'dropdown',
+      items: [
+        { href: 'news.html', icon: '\u{1F4F0}', labelKey: 'nav_news' },
+        { href: 'vendor-blogs.html', icon: '\u{1F4DD}', labelKey: 'nav_vendor_blogs' },
+      ],
+    },
+    {
+      id: 'matrix',
+      labelKey: 'nav_menu_matrix',
+      type: 'link',
+      href: 'matrix.html',
+      badge: 'Soon',
+    },
   ];
 
-  // --- Page definitions (labels are embedded at build time via data-i18n) ---
-  const pages = [
-    { href: 'index.html', icon: '\u{1F3E0}', labelKey: 'nav_home', section: null },
-    { href: 'owasp-top10.html', icon: '\u{1F51F}', labelKey: 'nav_owasp', section: 'api_security' },
-    { href: 'auth.html', icon: '\u{1F510}', labelKey: 'nav_auth', section: 'api_security' },
-    { href: 'rate-limiting.html', icon: '\u26A1', labelKey: 'nav_rate_limiting', section: 'api_security' },
-    { href: 'tools.html', icon: '\u{1F6E0}', labelKey: 'nav_tools', section: 'api_security' },
-    { href: 'guidelines.html', icon: '\u{1F4CB}', labelKey: 'nav_guidelines', section: 'api_security' },
-    { href: 'owasp-webapp-top10.html', icon: '\u{1F310}', labelKey: 'nav_owasp_webapp', section: 'api_security' },
-    { href: 'owasp-cloud-top10.html', icon: '\u2601\uFE0F', labelKey: 'nav_owasp_cloud', section: 'api_security' },
-    { href: 'owasp-llm-top10.html', icon: '\u{1F916}', labelKey: 'nav_owasp_llm', section: 'ai_security' },
-    { href: 'owasp-agentic-top10.html', icon: '\u{1F9BE}', labelKey: 'nav_owasp_agentic', section: 'ai_security' },
-    { href: 'owasp-ml-top10.html', icon: '\u{1F9E0}', labelKey: 'nav_owasp_ml', section: 'ai_security' },
-    { href: 'owasp-cicd-top10.html', icon: '\u{1F504}', labelKey: 'nav_owasp_cicd', section: 'devops' },
-    { href: 'owasp-k8s-top10.html', icon: '\u2638', labelKey: 'nav_owasp_k8s', section: 'devops' },
-    { href: 'news.html', icon: '\u{1F4F0}', labelKey: 'nav_news', section: 'information' },
-    { href: 'vendor-blogs.html', icon: '\u{1F4DD}', labelKey: 'nav_vendor_blogs', section: 'information' },
-  ];
-
-  // --- Nav labels per language (fallback if data-i18n not available) ---
+  // --- Nav labels per language ---
   const NAV_LABELS = {
     en: {
       nav_home: 'Home',
-      nav_section_platform: 'Platform Security',
-      nav_section_ai: 'AI Security',
-      nav_section_devops: 'DevOps Security',
-      nav_section_info: 'Information',
-      nav_owasp: 'OWASP Top 10',
+      nav_menu_owasp: 'OWASP Top 10',
+      nav_menu_practices: 'Practices',
+      nav_menu_news: 'News',
+      nav_menu_matrix: 'Matrix',
+      nav_group_ai: 'AI Security',
+      nav_group_infra: 'Infrastructure',
+      nav_owasp: 'OWASP API Top 10',
       nav_auth: 'Auth & Authorization',
       nav_rate_limiting: 'Rate Limiting & Validation',
       nav_tools: 'Security Tools',
@@ -72,10 +103,12 @@
     },
     ja: {
       nav_home: '\u30C8\u30C3\u30D7\u30DA\u30FC\u30B8',
-      nav_section_platform: '\u30D7\u30E9\u30C3\u30C8\u30D5\u30A9\u30FC\u30E0\u30BB\u30AD\u30E5\u30EA\u30C6\u30A3',
-      nav_section_ai: 'AI\u30BB\u30AD\u30E5\u30EA\u30C6\u30A3',
-      nav_section_devops: 'DevOps\u30BB\u30AD\u30E5\u30EA\u30C6\u30A3',
-      nav_section_info: '\u60C5\u5831',
+      nav_menu_owasp: 'OWASP Top 10',
+      nav_menu_practices: '\u30D7\u30E9\u30AF\u30C6\u30A3\u30B9',
+      nav_menu_news: '\u30CB\u30E5\u30FC\u30B9',
+      nav_menu_matrix: '\u30DE\u30C8\u30EA\u30AF\u30B9',
+      nav_group_ai: 'AI\u30BB\u30AD\u30E5\u30EA\u30C6\u30A3',
+      nav_group_infra: '\u30A4\u30F3\u30D5\u30E9',
       nav_owasp: 'OWASP Top 10',
       nav_auth: '\u8A8D\u8A3C\u30FB\u8A8D\u53EF',
       nav_rate_limiting: '\u30EC\u30FC\u30C8\u5236\u9650\u30FB\u5165\u529B\u691C\u8A3C',
@@ -93,10 +126,12 @@
     },
     es: {
       nav_home: 'Inicio',
-      nav_section_platform: 'Seguridad de Plataforma',
-      nav_section_ai: 'Seguridad IA',
-      nav_section_devops: 'Seguridad DevOps',
-      nav_section_info: 'Informaci\u00F3n',
+      nav_menu_owasp: 'OWASP Top 10',
+      nav_menu_practices: 'Pr\u00E1cticas',
+      nav_menu_news: 'Noticias',
+      nav_menu_matrix: 'Matriz',
+      nav_group_ai: 'Seguridad IA',
+      nav_group_infra: 'Infraestructura',
       nav_owasp: 'OWASP Top 10',
       nav_auth: 'Autenticaci\u00F3n',
       nav_rate_limiting: 'L\u00EDmite de tasa',
@@ -114,10 +149,12 @@
     },
     pt: {
       nav_home: 'In\u00EDcio',
-      nav_section_platform: 'Seguran\u00E7a de Plataforma',
-      nav_section_ai: 'Seguran\u00E7a IA',
-      nav_section_devops: 'Seguran\u00E7a DevOps',
-      nav_section_info: 'Informa\u00E7\u00E3o',
+      nav_menu_owasp: 'OWASP Top 10',
+      nav_menu_practices: 'Pr\u00E1ticas',
+      nav_menu_news: 'Not\u00EDcias',
+      nav_menu_matrix: 'Matriz',
+      nav_group_ai: 'Seguran\u00E7a IA',
+      nav_group_infra: 'Infraestrutura',
       nav_owasp: 'OWASP Top 10',
       nav_auth: 'Autentica\u00E7\u00E3o',
       nav_rate_limiting: 'Limite de taxa',
@@ -135,10 +172,12 @@
     },
     fr: {
       nav_home: 'Accueil',
-      nav_section_platform: 'S\u00E9curit\u00E9 de Plateforme',
-      nav_section_ai: 'S\u00E9curit\u00E9 IA',
-      nav_section_devops: 'S\u00E9curit\u00E9 DevOps',
-      nav_section_info: 'Informations',
+      nav_menu_owasp: 'OWASP Top 10',
+      nav_menu_practices: 'Pratiques',
+      nav_menu_news: 'Actualit\u00E9s',
+      nav_menu_matrix: 'Matrice',
+      nav_group_ai: 'S\u00E9curit\u00E9 IA',
+      nav_group_infra: 'Infrastructure',
       nav_owasp: 'OWASP Top 10',
       nav_auth: 'Authentification',
       nav_rate_limiting: 'Limite de d\u00E9bit',
@@ -203,83 +242,79 @@
     return labels[labelKey] || labelKey;
   }
 
-  // --- Build sidebar ---
-  function buildSidebar() {
-    const sidebar = document.createElement('aside');
-    sidebar.className = 'sidebar';
-    sidebar.id = 'sidebar';
+  // --- Build navbar ---
+  function buildNavbar() {
+    const nav = document.createElement('nav');
+    nav.className = 'navbar';
+    nav.id = 'navbar';
 
     const current = currentFile();
 
-    // Build nav HTML with section grouping
-    let navHtml = '';
-    // Render pages without a section first (e.g. Home)
-    pages.filter(p => !p.section).forEach(p => {
-      navHtml += `<a href="${p.href}" class="${current === p.href ? 'active' : ''}">
-            <span class="nav-icon">${p.icon}</span>
-            <span>${getNavLabel(p.labelKey)}</span>
-          </a>`;
-    });
-    // Render each section with header
-    SECTIONS.forEach(sec => {
-      const sectionPages = pages.filter(p => p.section === sec.id);
-      if (sectionPages.length === 0) return;
-      navHtml += `<div class="sidebar-section-header">${getNavLabel(sec.labelKey)}</div>`;
-      sectionPages.forEach(p => {
-        navHtml += `<a href="${p.href}" class="${current === p.href ? 'active' : ''}">
-            <span class="nav-icon">${p.icon}</span>
-            <span>${getNavLabel(p.labelKey)}</span>
-          </a>`;
-      });
+    // Check if a page is in this menu item (for active highlight)
+    function isActiveInMenu(menuItem) {
+      if (menuItem.type === 'link') return current === menuItem.href;
+      if (menuItem.type === 'dropdown') return menuItem.items.some(i => current === i.href);
+      if (menuItem.type === 'mega') return menuItem.groups.some(g => g.items.some(i => current === i.href));
+      return false;
+    }
+
+    // Build menu HTML
+    let menuHtml = '';
+    NAV_MENU.forEach(menu => {
+      if (menu.type === 'link') {
+        // Matrix: disabled link with badge
+        menuHtml += `<a class="nav-link nav-link-disabled" href="#" onclick="return false;" title="Coming Soon">${getNavLabel(menu.labelKey)} <span class="nav-badge">${menu.badge}</span></a>`;
+      } else if (menu.type === 'mega') {
+        const activeClass = isActiveInMenu(menu) ? ' nav-link-active' : '';
+        menuHtml += `<div class="nav-item has-dropdown">`;
+        menuHtml += `<button class="nav-link${activeClass}" aria-expanded="false">${getNavLabel(menu.labelKey)} <span class="nav-arrow">\u25BE</span></button>`;
+        menuHtml += `<div class="dropdown-panel mega-panel">`;
+        menu.groups.forEach(group => {
+          menuHtml += `<div class="dropdown-group">`;
+          menuHtml += `<div class="dropdown-group-title">${getNavLabel(group.labelKey)}</div>`;
+          group.items.forEach(item => {
+            const activeLink = current === item.href ? ' dropdown-link-active' : '';
+            menuHtml += `<a href="${item.href}" class="dropdown-link${activeLink}"><span class="dropdown-icon">${item.icon}</span> ${getNavLabel(item.labelKey)}</a>`;
+          });
+          menuHtml += `</div>`;
+        });
+        menuHtml += `</div></div>`;
+      } else if (menu.type === 'dropdown') {
+        const activeClass = isActiveInMenu(menu) ? ' nav-link-active' : '';
+        menuHtml += `<div class="nav-item has-dropdown">`;
+        menuHtml += `<button class="nav-link${activeClass}" aria-expanded="false">${getNavLabel(menu.labelKey)} <span class="nav-arrow">\u25BE</span></button>`;
+        menuHtml += `<div class="dropdown-panel">`;
+        menu.items.forEach(item => {
+          const activeLink = current === item.href ? ' dropdown-link-active' : '';
+          menuHtml += `<a href="${item.href}" class="dropdown-link${activeLink}"><span class="dropdown-icon">${item.icon}</span> ${getNavLabel(item.labelKey)}</a>`;
+        });
+        menuHtml += `</div></div>`;
+      }
     });
 
-    sidebar.innerHTML = `
-      <div class="sidebar-header">
-        <div class="logo">
-          <span class="logo-icon">\u{1F6E1}</span>
-          <div>
-            <div>AI Security</div>
-            <div class="logo-sub">Hub</div>
-          </div>
+    // Language select
+    const langOptions = LANGUAGES.map(l =>
+      `<option value="${l.code}" ${l.code === currentLang ? 'selected' : ''}>${l.label}</option>`
+    ).join('');
+
+    nav.innerHTML = `
+      <a href="index.html" class="navbar-logo">\u{1F6E1} AI Security Hub</a>
+      <div class="navbar-menu" id="navbar-menu">
+        ${menuHtml}
+        <div class="navbar-lang-mobile">
+          <select class="lang-select-compact" id="lang-select-mobile">
+            ${langOptions}
+          </select>
         </div>
       </div>
-      <nav class="sidebar-nav">
-        ${navHtml}
-      </nav>
-      <div class="lang-switcher">
-        <div class="lang-switcher-label">\u{1F310} Language</div>
-        <select class="lang-select" id="lang-select">
-          ${LANGUAGES.map(l => `
-            <option value="${l.code}" ${l.code === currentLang ? 'selected' : ''}>${l.label}</option>
-          `).join('')}
+      <div class="navbar-right">
+        <select class="lang-select-compact" id="lang-select">
+          ${langOptions}
         </select>
       </div>
-      <div class="sidebar-footer">
-        &copy; 2025 AI Security Hub<br>
-        Internal Use Only
-      </div>
+      <button class="navbar-toggle" id="navbar-toggle" aria-label="Menu">\u2630</button>
     `;
-    return sidebar;
-  }
-
-  // --- Build mobile header ---
-  function buildMobileHeader() {
-    const header = document.createElement('header');
-    header.className = 'mobile-header';
-    header.innerHTML = `
-      <button class="hamburger" id="hamburger" aria-label="Open menu">\u2630</button>
-      <span class="mobile-title">\u{1F6E1} AI Security Hub</span>
-      <span style="width:40px"></span>
-    `;
-    return header;
-  }
-
-  // --- Build overlay ---
-  function buildOverlay() {
-    const overlay = document.createElement('div');
-    overlay.className = 'sidebar-overlay';
-    overlay.id = 'sidebar-overlay';
-    return overlay;
+    return nav;
   }
 
   // --- Build footer ---
@@ -299,7 +334,6 @@
   // --- Language switch handler ---
   function handleLangSwitch(newLang) {
     const currentPage = currentFile();
-    // Navigate to ../{newLang}/{currentPage}
     window.location.href = '../' + newLang + '/' + currentPage;
   }
 
@@ -327,53 +361,101 @@
     main.appendChild(existingContent);
 
     // Build and insert components
-    const sidebar = buildSidebar();
-    const mobileHeader = buildMobileHeader();
-    const overlay = buildOverlay();
+    const navbar = buildNavbar();
     const footer = buildFooter();
 
-    body.appendChild(mobileHeader);
-    body.appendChild(overlay);
-    body.appendChild(sidebar);
+    body.appendChild(navbar);
     body.appendChild(main);
     body.appendChild(footer);
 
-    // --- Language switcher ---
-    const langSelect = document.getElementById('lang-select');
-    if (langSelect) {
-      langSelect.addEventListener('change', (e) => {
+    // --- Language switchers ---
+    document.querySelectorAll('#lang-select, #lang-select-mobile').forEach(sel => {
+      sel.addEventListener('change', (e) => {
         handleLangSwitch(e.target.value);
       });
-    }
+    });
 
-    // --- Mobile menu toggle ---
-    const hamburger = document.getElementById('hamburger');
-    const sidebarEl = document.getElementById('sidebar');
-    const overlayEl = document.getElementById('sidebar-overlay');
+    // --- Dropdown hover/click behavior ---
+    const navItems = document.querySelectorAll('.nav-item.has-dropdown');
+    let activeDropdown = null;
+    let hoverTimeout = null;
 
-    function openMenu() {
-      sidebarEl.classList.add('open');
-      overlayEl.classList.add('active');
-    }
+    navItems.forEach(item => {
+      const btn = item.querySelector('.nav-link');
+      const panel = item.querySelector('.dropdown-panel');
 
-    function closeMenu() {
-      sidebarEl.classList.remove('open');
-      overlayEl.classList.remove('active');
-    }
+      // Desktop: hover
+      item.addEventListener('mouseenter', () => {
+        clearTimeout(hoverTimeout);
+        if (activeDropdown && activeDropdown !== item) {
+          activeDropdown.classList.remove('dropdown-open');
+          const prevBtn = activeDropdown.querySelector('.nav-link');
+          if (prevBtn) prevBtn.setAttribute('aria-expanded', 'false');
+        }
+        item.classList.add('dropdown-open');
+        btn.setAttribute('aria-expanded', 'true');
+        activeDropdown = item;
+      });
 
-    hamburger.addEventListener('click', () => {
-      if (sidebarEl.classList.contains('open')) {
-        closeMenu();
-      } else {
-        openMenu();
+      item.addEventListener('mouseleave', () => {
+        hoverTimeout = setTimeout(() => {
+          item.classList.remove('dropdown-open');
+          btn.setAttribute('aria-expanded', 'false');
+          if (activeDropdown === item) activeDropdown = null;
+        }, 150);
+      });
+
+      // Click toggle (for mobile and accessibility)
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const isOpen = item.classList.contains('dropdown-open');
+        // Close all others
+        navItems.forEach(other => {
+          if (other !== item) {
+            other.classList.remove('dropdown-open');
+            const otherBtn = other.querySelector('.nav-link');
+            if (otherBtn) otherBtn.setAttribute('aria-expanded', 'false');
+          }
+        });
+        if (isOpen) {
+          item.classList.remove('dropdown-open');
+          btn.setAttribute('aria-expanded', 'false');
+          activeDropdown = null;
+        } else {
+          item.classList.add('dropdown-open');
+          btn.setAttribute('aria-expanded', 'true');
+          activeDropdown = item;
+        }
+      });
+    });
+
+    // Close dropdowns on outside click
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('.nav-item.has-dropdown')) {
+        navItems.forEach(item => {
+          item.classList.remove('dropdown-open');
+          const btn = item.querySelector('.nav-link');
+          if (btn) btn.setAttribute('aria-expanded', 'false');
+        });
+        activeDropdown = null;
       }
     });
 
-    overlayEl.addEventListener('click', closeMenu);
+    // --- Mobile hamburger toggle ---
+    const toggle = document.getElementById('navbar-toggle');
+    const menu = document.getElementById('navbar-menu');
 
-    // Close menu on nav click (mobile)
-    sidebarEl.querySelectorAll('.sidebar-nav a').forEach(link => {
-      link.addEventListener('click', closeMenu);
+    toggle.addEventListener('click', () => {
+      const isOpen = menu.classList.contains('navbar-menu-open');
+      if (isOpen) {
+        menu.classList.remove('navbar-menu-open');
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.textContent = '\u2630';
+      } else {
+        menu.classList.add('navbar-menu-open');
+        toggle.setAttribute('aria-expanded', 'true');
+        toggle.textContent = '\u2715';
+      }
     });
 
     // --- Accordion ---
