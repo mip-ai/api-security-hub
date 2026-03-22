@@ -1,0 +1,664 @@
+<!DOCTYPE html><html lang="ja"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="owasp_cloud_page_title">OWASP Cloud-Native Application Security Top 10 - APIセキュリティリファレンスハブ</title>
+  <link rel="stylesheet" href="../css/style.css">
+
+    <link rel="alternate" hreflang="en" href="/api-security-hub/en/owasp-cloud-top10.html">
+    <link rel="alternate" hreflang="ja" href="/api-security-hub/ja/owasp-cloud-top10.html">
+    <link rel="alternate" hreflang="es" href="/api-security-hub/es/owasp-cloud-top10.html">
+    <link rel="alternate" hreflang="pt" href="/api-security-hub/pt/owasp-cloud-top10.html">
+    <link rel="alternate" hreflang="fr" href="/api-security-hub/fr/owasp-cloud-top10.html">
+    <link rel="alternate" hreflang="x-default" href="/api-security-hub/en/owasp-cloud-top10.html">
+</head>
+<body>
+
+  <div class="page-header">
+    <h1 data-i18n="owasp_cloud_main_heading">OWASP Cloud-Native Application Security Top 10</h1>
+    <p class="subtitle" data-i18n="owasp_cloud_subtitle">クラウドネイティブアプリケーションにおける10の最重要セキュリティリスクとその対策方法。</p>
+  </div>
+
+  <!-- Overview -->
+  <div class="section">
+    <div class="callout callout-info">
+      <div class="callout-title" data-i18n="owasp_cloud_overview_title">Cloud-Native Application Security Top 10とは？</div>
+      <p data-i18n="owasp_cloud_overview_desc">OWASP Cloud-Native Application Security Top 10は、Kubernetes、Docker、サーバーレスアーキテクチャなどのプラットフォーム上で稼働するクラウドネイティブアプリケーションにおける最も顕著なセキュリティリスクを特定しています。誤設定、サプライチェーンリスク、シークレット管理など、クラウドネイティブスタック全体にわたる問題を網羅しています。</p>
+    </div>
+  </div>
+
+  <!-- CNAS-1: Insecure Cloud, Container, or Orchestration Configuration -->
+  <div class="section">
+    <h2 data-i18n-html="owasp_cloud_cnas1_heading"><span class="section-icon">1️⃣</span> CNAS-1 - 安全でないクラウド、コンテナ、またはオーケストレーション設定</h2>
+    <span class="badge badge-danger">Critical</span>
+    <h3 data-i18n="owasp_cloud_cnas1_overview_heading">概要</h3>
+    <p data-i18n="owasp_cloud_cnas1_overview_desc">誤設定されたクラウドサービス、コンテナ、オーケストレーターは、クラウドネイティブ侵害の主要な原因です。これには、コンテナをrootとして実行すること、デフォルト設定の使用、Kubernetes APIサーバーの公開、クラウドリソースの監査ログ有効化失敗などが含まれます。</p>
+    <div class="callout callout-danger">
+      <div class="callout-title" data-i18n="owasp_cloud_cnas1_risk_title">リスク</div>
+      <p data-i18n="owasp_cloud_cnas1_risk_desc">攻撃者は誤設定を悪用してクラスタの完全な制御を取得し、コンテナをエスケープし、クラウドメタデータサービスにアクセスしたり、インフラストラクチャ全体にピボットすることができます。誤設定されたS3バケットや公開されたKubernetesダッシュボード一つで、大規模なデータ侵害につながった事例があります。</p>
+    </div>
+    <h3 data-i18n="owasp_cloud_cnas1_vulnerable_heading">脆弱なコード例</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">Dockerfile</span>
+        <span>❌ Bad</span>
+      </div>
+      <pre><span class="comment"># Running container as root with no resource limits</span>
+<span class="keyword">FROM</span> ubuntu:latest
+<span class="keyword">RUN</span> apt-get update && apt-get install -y curl wget
+<span class="keyword">COPY</span> app /app
+<span class="comment"># No USER directive — runs as root!</span>
+<span class="keyword">CMD</span> [<span class="string">"/app/server"</span>]</pre>
+    </div>
+    <h3 data-i18n="owasp_cloud_cnas1_secure_heading">安全なコード例</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">Dockerfile</span>
+        <span>✅ Good</span>
+      </div>
+      <pre><span class="keyword">FROM</span> gcr.io/distroless/static:nonroot
+<span class="keyword">COPY</span> --chown=65534:65534 app /app
+<span class="keyword">USER</span> 65534:65534
+<span class="keyword">EXPOSE</span> 8080
+<span class="keyword">ENTRYPOINT</span> [<span class="string">"/app/server"</span>]</pre>
+    </div>
+    <h3 data-i18n="owasp_cloud_cnas1_checklist_heading">対策チェックリスト</h3>
+    <ul class="checklist">
+      <li data-i18n="owasp_cloud_cnas1_check1">最小限のdistrolessベースイメージを使用し、コンテナをrootで実行しない</li>
+      <li data-i18n="owasp_cloud_cnas1_check2">KubernetesでPod Security Standards（restricted）を有効化して強制する</li>
+      <li data-i18n="owasp_cloud_cnas1_check3">CheckovやtfsecなどのツールでInfrastructure as Code（Terraform、Helm）をスキャンする</li>
+      <li data-i18n="owasp_cloud_cnas1_check4">クラウドメタデータエンドポイント（169.254.169.254）およびKubernetes APIサーバーへのアクセスを制限する</li>
+    </ul>
+  </div>
+
+  <!-- CNAS-2: Injection Flaws -->
+  <div class="section">
+    <h2 data-i18n-html="owasp_cloud_cnas2_heading"><span class="section-icon">2️⃣</span> CNAS-2 - インジェクションの欠陥（アプリケーション層、クラウドイベント、クラウドサービス）</h2>
+    <span class="badge badge-danger">Critical</span>
+    <h3 data-i18n="owasp_cloud_cnas2_overview_heading">概要</h3>
+    <p data-i18n="owasp_cloud_cnas2_overview_desc">クラウドネイティブアプリケーションは、従来のHTTPリクエストだけでなく、クラウドイベント（SQS、Pub/Sub、EventBridge）、サーバーレストリガー、サービス間通信からも入力を受け取ります。これらのベクターのいずれかでインジェクション欠陥が発生すると、コマンド実行、データ流出、または権限昇格につながる可能性があります。</p>
+    <div class="callout callout-danger">
+      <div class="callout-title" data-i18n="owasp_cloud_cnas2_risk_title">リスク</div>
+      <p data-i18n="owasp_cloud_cnas2_risk_desc">クラウドイベントによってトリガーされるサーバーレス関数は、検証なしで信頼できないデータを処理する可能性があり、OSコマンドインジェクション、NoSQLインジェクション、またはイベント駆動型SSRFにつながります。攻撃者はメッセージキューやイベントバスを汚染して、下流のサービスを侵害することができます。</p>
+    </div>
+    <h3 data-i18n="owasp_cloud_cnas2_vulnerable_heading">脆弱なコード例</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">Python</span>
+        <span>❌ Bad</span>
+      </div>
+      <pre><span class="comment"># Lambda function processing S3 event without sanitizing filename</span>
+<span class="keyword">import</span> os
+
+<span class="keyword">def</span> <span class="function">handler</span>(event, context):
+    bucket = event[<span class="string">'Records'</span>][<span class="number">0</span>][<span class="string">'s3'</span>][<span class="string">'bucket'</span>][<span class="string">'name'</span>]
+    key = event[<span class="string">'Records'</span>][<span class="number">0</span>][<span class="string">'s3'</span>][<span class="string">'object'</span>][<span class="string">'key'</span>]
+    <span class="comment"># Command injection via crafted filename!</span>
+    os.<span class="function">system</span>(<span class="string">f"aws s3 cp s3://{bucket}/{key} /tmp/{key}"</span>)</pre>
+    </div>
+    <h3 data-i18n="owasp_cloud_cnas2_secure_heading">安全なコード例</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">Python</span>
+        <span>✅ Good</span>
+      </div>
+      <pre><span class="keyword">import</span> boto3, re
+<span class="keyword">from</span> urllib.parse <span class="keyword">import</span> unquote_plus
+
+<span class="keyword">def</span> <span class="function">handler</span>(event, context):
+    s3 = boto3.<span class="function">client</span>(<span class="string">'s3'</span>)
+    bucket = event[<span class="string">'Records'</span>][<span class="number">0</span>][<span class="string">'s3'</span>][<span class="string">'bucket'</span>][<span class="string">'name'</span>]
+    key = <span class="function">unquote_plus</span>(event[<span class="string">'Records'</span>][<span class="number">0</span>][<span class="string">'s3'</span>][<span class="string">'object'</span>][<span class="string">'key'</span>])
+
+    <span class="comment"># Validate key against allowlist pattern</span>
+    <span class="keyword">if not</span> re.<span class="function">match</span>(<span class="string">r'^[\w\-./]+$'</span>, key):
+        <span class="keyword">raise</span> <span class="type">ValueError</span>(<span class="string">f"Invalid S3 key: {key}"</span>)
+
+    <span class="comment"># Use SDK instead of shell commands</span>
+    s3.<span class="function">download_file</span>(bucket, key, <span class="string">f'/tmp/{key.split("/")[-1]}'</span>)</pre>
+    </div>
+    <h3 data-i18n="owasp_cloud_cnas2_checklist_heading">対策チェックリスト</h3>
+    <ul class="checklist">
+      <li data-i18n="owasp_cloud_cnas2_check1">クラウドイベント、キュー、トリガーからのすべての入力を検証およびサニタイズする</li>
+      <li data-i18n="owasp_cloud_cnas2_check2">シェルコマンドの代わりにSDK/API呼び出しを使用する（os.system、shell=Trueのsubprocessを避ける）</li>
+      <li data-i18n="owasp_cloud_cnas2_check3">イベントペイロードに入力検証スキーマを適用する（JSON Schema、protobuf）</li>
+      <li data-i18n="owasp_cloud_cnas2_check4">サーバーレス関数からのSSRFを防ぐためにエグレスフィルタリングを実装する</li>
+    </ul>
+  </div>
+
+  <!-- CNAS-3: Improper Authentication & Authorization -->
+  <div class="section">
+    <h2 data-i18n-html="owasp_cloud_cnas3_heading"><span class="section-icon">3️⃣</span> CNAS-3 - 不適切な認証と認可</h2>
+    <span class="badge badge-danger">Critical</span>
+    <h3 data-i18n="owasp_cloud_cnas3_overview_heading">概要</h3>
+    <p data-i18n="owasp_cloud_cnas3_overview_desc">クラウドネイティブ環境は、複数のアイデンティティレイヤーを含みます：クラウドIAM、Kubernetes RBAC、サービスメッシュmTLS、アプリケーションレベルの認証。いずれかのレイヤーで誤設定されたり過度に許可的なポリシーがあると、横展開、権限昇格、機密リソースへの不正アクセスを許してしまいます。</p>
+    <div class="callout callout-danger">
+      <div class="callout-title" data-i18n="owasp_cloud_cnas3_risk_title">リスク</div>
+      <p data-i18n="owasp_cloud_cnas3_risk_desc">ポッドに割り当てられた過度に許可的なIAMロールは、ワークロードにクラウドアカウント全体へのアクセスを許可する可能性があります。サービス間認証の欠如により、侵害されたポッドが他のサービスになりすますことができます。</p>
+    </div>
+    <h3 data-i18n="owasp_cloud_cnas3_vulnerable_heading">脆弱なコード例</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">YAML (Kubernetes)</span>
+        <span>❌ Bad</span>
+      </div>
+      <pre><span class="comment"># Overly permissive ClusterRoleBinding</span>
+<span class="keyword">apiVersion</span>: rbac.authorization.k8s.io/v1
+<span class="keyword">kind</span>: ClusterRoleBinding
+<span class="keyword">metadata</span>:
+  <span class="keyword">name</span>: default-admin
+<span class="keyword">subjects</span>:
+- <span class="keyword">kind</span>: ServiceAccount
+  <span class="keyword">name</span>: default          <span class="comment"># Default SA — shared by all pods!</span>
+  <span class="keyword">namespace</span>: default
+<span class="keyword">roleRef</span>:
+  <span class="keyword">kind</span>: ClusterRole
+  <span class="keyword">name</span>: cluster-admin    <span class="comment"># Full cluster access!</span>
+  <span class="keyword">apiGroup</span>: rbac.authorization.k8s.io</pre>
+    </div>
+    <h3 data-i18n="owasp_cloud_cnas3_secure_heading">安全なコード例</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">YAML (Kubernetes)</span>
+        <span>✅ Good</span>
+      </div>
+      <pre><span class="comment"># Dedicated ServiceAccount with minimal Role</span>
+<span class="keyword">apiVersion</span>: v1
+<span class="keyword">kind</span>: ServiceAccount
+<span class="keyword">metadata</span>:
+  <span class="keyword">name</span>: order-service
+  <span class="keyword">namespace</span>: production
+  <span class="keyword">annotations</span>:
+    <span class="keyword">eks.amazonaws.com/role-arn</span>: arn:aws:iam::123456:role/order-svc
+---
+<span class="keyword">apiVersion</span>: rbac.authorization.k8s.io/v1
+<span class="keyword">kind</span>: Role
+<span class="keyword">metadata</span>:
+  <span class="keyword">name</span>: order-service-role
+  <span class="keyword">namespace</span>: production
+<span class="keyword">rules</span>:
+- <span class="keyword">apiGroups</span>: [<span class="string">""</span>]
+  <span class="keyword">resources</span>: [<span class="string">"configmaps"</span>]
+  <span class="keyword">verbs</span>: [<span class="string">"get"</span>]</pre>
+    </div>
+    <h3 data-i18n="owasp_cloud_cnas3_checklist_heading">対策チェックリスト</h3>
+    <ul class="checklist">
+      <li data-i18n="owasp_cloud_cnas3_check1">ワークロードごとに最小権限RBACを持つ専用のServiceAccountを使用する</li>
+      <li data-i18n="owasp_cloud_cnas3_check2">ノードレベルの資格情報の代わりにIAM Roles for Service Accounts（IRSA/Workload Identity）を実装する</li>
+      <li data-i18n="owasp_cloud_cnas3_check3">すべてのサービス間通信で相互TLS（mTLS）を強制する</li>
+      <li data-i18n="owasp_cloud_cnas3_check4">RBACバインディングを定期的に監査し、使用されていない権限を削除する</li>
+    </ul>
+  </div>
+
+  <!-- CNAS-4: CI/CD Pipeline & Software Supply Chain Flaws -->
+  <div class="section">
+    <h2 data-i18n-html="owasp_cloud_cnas4_heading"><span class="section-icon">4️⃣</span> CNAS-4 - CI/CDパイプラインとソフトウェアサプライチェーンの欠陥</h2>
+    <span class="badge badge-warning">High</span>
+    <h3 data-i18n="owasp_cloud_cnas4_overview_heading">概要</h3>
+    <p data-i18n="owasp_cloud_cnas4_overview_desc">CI/CDパイプラインは、本番環境への書き込みアクセスを持つため、価値の高いターゲットです。ビルドパイプラインの侵害により、サプライチェーン攻撃、悪意のあるコードの注入、バックドア付きイメージのデプロイが可能になります。安全でないパイプライン設定、汚染されたベースイメージ、署名されていないアーティファクトがこのリスクに貢献します。</p>
+    <div class="callout callout-danger">
+      <div class="callout-title" data-i18n="owasp_cloud_cnas4_risk_title">リスク</div>
+      <p data-i18n="owasp_cloud_cnas4_risk_desc">侵害されたCI/CDパイプラインは、すべての環境に悪意のあるコードをデプロイし、パイプライン変数に保存されたシークレットを窃取したり、コンテナイメージを改ざんすることができます。SolarWindsスタイルの攻撃は、サプライチェーン侵害の壊滅的な影響を示しています。</p>
+    </div>
+    <h3 data-i18n="owasp_cloud_cnas4_vulnerable_heading">脆弱なコード例</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">YAML (GitHub Actions)</span>
+        <span>❌ Bad</span>
+      </div>
+      <pre><span class="comment"># Insecure CI pipeline — unpinned actions, no image signing</span>
+<span class="keyword">name</span>: Deploy
+<span class="keyword">on</span>: push
+<span class="keyword">jobs</span>:
+  <span class="keyword">deploy</span>:
+    <span class="keyword">runs-on</span>: ubuntu-latest
+    <span class="keyword">steps</span>:
+    - <span class="keyword">uses</span>: actions/checkout@main   <span class="comment"># Unpinned — could be compromised!</span>
+    - <span class="keyword">run</span>: |
+        docker build -t myapp:latest .
+        docker push myregistry/myapp:latest  <span class="comment"># No signing!</span>
+        kubectl apply -f deploy.yaml         <span class="comment"># No admission control!</span></pre>
+    </div>
+    <h3 data-i18n="owasp_cloud_cnas4_secure_heading">安全なコード例</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">YAML (GitHub Actions)</span>
+        <span>✅ Good</span>
+      </div>
+      <pre><span class="keyword">name</span>: Secure Deploy
+<span class="keyword">on</span>: push
+<span class="keyword">permissions</span>:
+  <span class="keyword">id-token</span>: write
+<span class="keyword">jobs</span>:
+  <span class="keyword">deploy</span>:
+    <span class="keyword">runs-on</span>: ubuntu-latest
+    <span class="keyword">steps</span>:
+    - <span class="keyword">uses</span>: actions/checkout@a5ac7e51b41094c92402da3b24376905380afc29  <span class="comment"># Pinned SHA</span>
+    - <span class="keyword">run</span>: |
+        docker build -t myregistry/myapp:${{ github.sha }} .
+        cosign sign myregistry/myapp:${{ github.sha }}  <span class="comment"># Sign image</span>
+    - <span class="keyword">run</span>: trivy image myregistry/myapp:${{ github.sha }} --exit-code 1
+    - <span class="keyword">run</span>: kubectl apply -f deploy.yaml  <span class="comment"># Admission controller verifies signatures</span></pre>
+    </div>
+    <h3 data-i18n="owasp_cloud_cnas4_checklist_heading">対策チェックリスト</h3>
+    <ul class="checklist">
+      <li data-i18n="owasp_cloud_cnas4_check1">CI/CDアクションと依存関係を正確なSHAハッシュにピン留めし、ブランチやタグは使用しない</li>
+      <li data-i18n="owasp_cloud_cnas4_check2">Cosign/Notaryでコンテナイメージに署名し、アドミッションで署名検証を強制する</li>
+      <li data-i18n="owasp_cloud_cnas4_check3">デプロイ前にイメージの脆弱性をスキャンする（Trivy、Grype）</li>
+      <li data-i18n="owasp_cloud_cnas4_check4">SLSAフレームワークを使用してビルドアーティファクトの出自と整合性を保証する</li>
+    </ul>
+  </div>
+
+  <!-- CNAS-5: Insecure Secrets Storage -->
+  <div class="section">
+    <h2 data-i18n-html="owasp_cloud_cnas5_heading"><span class="section-icon">5️⃣</span> CNAS-5 - 安全でないシークレット保管</h2>
+    <span class="badge badge-danger">Critical</span>
+    <h3 data-i18n="owasp_cloud_cnas5_overview_heading">概要</h3>
+    <p data-i18n="owasp_cloud_cnas5_overview_desc">APIキー、データベース資格情報、TLS証明書などのシークレットは、ソースコードにハードコードされたり、平文のConfigMapに保存されたり、コンテナイメージに埋め込まれることが多くあります。Kubernetes Secretsはデフォルトでbase64エンコードされているだけで暗号化されていないため、最小限の保護しか提供しません。</p>
+    <div class="callout callout-danger">
+      <div class="callout-title" data-i18n="owasp_cloud_cnas5_risk_title">リスク</div>
+      <p data-i18n="owasp_cloud_cnas5_risk_desc">露出したシークレットは、攻撃者にデータベース、クラウドアカウント、サードパーティサービスへの直接アクセスを与える可能性があります。git履歴、コンテナレイヤー、環境変数内のシークレットは容易に発見され悪用されます。</p>
+    </div>
+    <h3 data-i18n="owasp_cloud_cnas5_vulnerable_heading">脆弱なコード例</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">YAML (Kubernetes)</span>
+        <span>❌ Bad</span>
+      </div>
+      <pre><span class="comment"># Secrets in plaintext environment variables</span>
+<span class="keyword">apiVersion</span>: v1
+<span class="keyword">kind</span>: Pod
+<span class="keyword">metadata</span>:
+  <span class="keyword">name</span>: my-app
+<span class="keyword">spec</span>:
+  <span class="keyword">containers</span>:
+  - <span class="keyword">name</span>: app
+    <span class="keyword">env</span>:
+    - <span class="keyword">name</span>: DB_PASSWORD
+      <span class="keyword">value</span>: <span class="string">"SuperSecret123!"</span>   <span class="comment"># Plaintext in manifest!</span>
+    - <span class="keyword">name</span>: AWS_SECRET_KEY
+      <span class="keyword">value</span>: <span class="string">"AKIA..."</span>             <span class="comment"># Cloud credentials in YAML!</span></pre>
+    </div>
+    <h3 data-i18n="owasp_cloud_cnas5_secure_heading">安全なコード例</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">YAML (Kubernetes)</span>
+        <span>✅ Good</span>
+      </div>
+      <pre><span class="comment"># Use External Secrets Operator with a vault backend</span>
+<span class="keyword">apiVersion</span>: external-secrets.io/v1beta1
+<span class="keyword">kind</span>: ExternalSecret
+<span class="keyword">metadata</span>:
+  <span class="keyword">name</span>: my-app-secrets
+<span class="keyword">spec</span>:
+  <span class="keyword">refreshInterval</span>: 1h
+  <span class="keyword">secretStoreRef</span>:
+    <span class="keyword">name</span>: vault-backend
+    <span class="keyword">kind</span>: ClusterSecretStore
+  <span class="keyword">target</span>:
+    <span class="keyword">name</span>: my-app-secrets
+  <span class="keyword">data</span>:
+  - <span class="keyword">secretKey</span>: db-password
+    <span class="keyword">remoteRef</span>:
+      <span class="keyword">key</span>: secret/data/myapp
+      <span class="keyword">property</span>: db-password</pre>
+    </div>
+    <h3 data-i18n="owasp_cloud_cnas5_checklist_heading">対策チェックリスト</h3>
+    <ul class="checklist">
+      <li data-i18n="owasp_cloud_cnas5_check1">シークレットをソースコード、Dockerfile、平文のConfigMapに保存しない</li>
+      <li data-i18n="owasp_cloud_cnas5_check2">自動ローテーション機能を持つシークレットマネージャー（Vault、AWS Secrets Manager、GCP Secret Manager）を使用する</li>
+      <li data-i18n="owasp_cloud_cnas5_check3">Kubernetes Secretsの保存時暗号化を有効化する（KMSプロバイダー）</li>
+      <li data-i18n="owasp_cloud_cnas5_check4">リポジトリとイメージで漏洩したシークレットをスキャンする（git-secrets、TruffleHog、Trivy）</li>
+    </ul>
+  </div>
+
+  <!-- CNAS-6: Over-Permissive or Insecure Network Policies -->
+  <div class="section">
+    <h2 data-i18n-html="owasp_cloud_cnas6_heading"><span class="section-icon">6️⃣</span> CNAS-6 - 過度に許可的または安全でないネットワークポリシー</h2>
+    <span class="badge badge-warning">High</span>
+    <h3 data-i18n="owasp_cloud_cnas6_overview_heading">概要</h3>
+    <p data-i18n="owasp_cloud_cnas6_overview_desc">デフォルトでは、Kubernetesはすべてのポッドが制限なく相互に通信することを許可します。欠落しているか過度に許可的なNetworkPolicies、セキュリティグループ、ファイアウォールルールは、クラスタ内およびクラウドサービス間の横展開を可能にします。</p>
+    <div class="callout callout-danger">
+      <div class="callout-title" data-i18n="owasp_cloud_cnas6_risk_title">リスク</div>
+      <p data-i18n="owasp_cloud_cnas6_risk_desc">ネットワークセグメンテーションがないと、侵害されたポッドがクラスタ内の他のサービスに到達し、データベースに直接アクセスしたり、外部エンドポイントにデータを流出させることができます。フラットなネットワークは、あらゆる侵害の影響範囲を増幅させます。</p>
+    </div>
+    <h3 data-i18n="owasp_cloud_cnas6_vulnerable_heading">脆弱なコード例</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">YAML (Kubernetes)</span>
+        <span>❌ Bad</span>
+      </div>
+      <pre><span class="comment"># No NetworkPolicy — all pods can talk to everything</span>
+<span class="keyword">apiVersion</span>: v1
+<span class="keyword">kind</span>: Namespace
+<span class="keyword">metadata</span>:
+  <span class="keyword">name</span>: production
+<span class="comment"># No NetworkPolicy resources defined</span>
+<span class="comment"># All ingress and egress traffic is allowed by default</span></pre>
+    </div>
+    <h3 data-i18n="owasp_cloud_cnas6_secure_heading">安全なコード例</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">YAML (Kubernetes)</span>
+        <span>✅ Good</span>
+      </div>
+      <pre><span class="comment"># Default-deny all traffic, then allow only what's needed</span>
+<span class="keyword">apiVersion</span>: networking.k8s.io/v1
+<span class="keyword">kind</span>: NetworkPolicy
+<span class="keyword">metadata</span>:
+  <span class="keyword">name</span>: default-deny-all
+  <span class="keyword">namespace</span>: production
+<span class="keyword">spec</span>:
+  <span class="keyword">podSelector</span>: {}
+  <span class="keyword">policyTypes</span>: [<span class="string">"Ingress"</span>, <span class="string">"Egress"</span>]
+---
+<span class="keyword">apiVersion</span>: networking.k8s.io/v1
+<span class="keyword">kind</span>: NetworkPolicy
+<span class="keyword">metadata</span>:
+  <span class="keyword">name</span>: allow-frontend-to-api
+  <span class="keyword">namespace</span>: production
+<span class="keyword">spec</span>:
+  <span class="keyword">podSelector</span>:
+    <span class="keyword">matchLabels</span>:
+      <span class="keyword">app</span>: api-server
+  <span class="keyword">ingress</span>:
+  - <span class="keyword">from</span>:
+    - <span class="keyword">podSelector</span>:
+        <span class="keyword">matchLabels</span>:
+          <span class="keyword">app</span>: frontend
+    <span class="keyword">ports</span>:
+    - <span class="keyword">port</span>: 8080</pre>
+    </div>
+    <h3 data-i18n="owasp_cloud_cnas6_checklist_heading">対策チェックリスト</h3>
+    <ul class="checklist">
+      <li data-i18n="owasp_cloud_cnas6_check1">すべてのネームスペースにデフォルト拒否のNetworkPoliciesを実装する</li>
+      <li data-i18n="owasp_cloud_cnas6_check2">ラベルセレクタを使用してサービス間の必要なトラフィックのみを許可する</li>
+      <li data-i18n="owasp_cloud_cnas6_check3">データ流出とC2通信を防ぐためにエグレストラフィックを制限する</li>
+      <li data-i18n="owasp_cloud_cnas6_check4">NetworkPolicy強制をサポートするCNIプラグイン（Calico、Cilium）を使用する</li>
+    </ul>
+  </div>
+
+  <!-- CNAS-7: Using Components with Known Vulnerabilities -->
+  <div class="section">
+    <h2 data-i18n-html="owasp_cloud_cnas7_heading"><span class="section-icon">7️⃣</span> CNAS-7 - 既知の脆弱性を持つコンポーネントの使用</h2>
+    <span class="badge badge-warning">High</span>
+    <h3 data-i18n="owasp_cloud_cnas7_overview_heading">概要</h3>
+    <p data-i18n="owasp_cloud_cnas7_overview_desc">クラウドネイティブアプリケーションは、オープンソースのベースイメージ、ライブラリ、Kubernetesオペレーターに大きく依存しています。既知のCVEを持つ古いまたはパッチ未適用のコンポーネントを実行すると、文書化されたエクスプロイトにアプリケーションを晒すことになります。コンテナイメージには数百のパッケージが含まれることが多く、それぞれが潜在的な脆弱性となります。</p>
+    <div class="callout callout-danger">
+      <div class="callout-title" data-i18n="owasp_cloud_cnas7_risk_title">リスク</div>
+      <p data-i18n="owasp_cloud_cnas7_risk_desc">ベースイメージの既知の脆弱性（例：Log4Shell、OpenSSLのバグ）は、公開されているツールを使用して悪用できます。攻撃者は脆弱なバージョンを実行しているコンテナを積極的にスキャンしています。パッチ未適用のライブラリ一つで、ワークロード全体が侵害される可能性があります。</p>
+    </div>
+    <h3 data-i18n="owasp_cloud_cnas7_vulnerable_heading">脆弱なコード例</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">Dockerfile</span>
+        <span>❌ Bad</span>
+      </div>
+      <pre><span class="comment"># Using outdated base image with known CVEs</span>
+<span class="keyword">FROM</span> node:14                    <span class="comment"># EOL version with known vulns</span>
+<span class="keyword">COPY</span> package.json .
+<span class="keyword">RUN</span> npm install                 <span class="comment"># No audit, no lockfile verification</span>
+<span class="keyword">COPY</span> . .
+<span class="keyword">CMD</span> [<span class="string">"node"</span>, <span class="string">"server.js"</span>]</pre>
+    </div>
+    <h3 data-i18n="owasp_cloud_cnas7_secure_heading">安全なコード例</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">Dockerfile</span>
+        <span>✅ Good</span>
+      </div>
+      <pre><span class="comment"># Use current, slim base image with vulnerability scanning</span>
+<span class="keyword">FROM</span> node:22-slim <span class="keyword">AS</span> build
+<span class="keyword">WORKDIR</span> /app
+<span class="keyword">COPY</span> package.json package-lock.json ./
+<span class="keyword">RUN</span> npm ci --only=production    <span class="comment"># Reproducible install from lockfile</span>
+<span class="keyword">RUN</span> npm audit --audit-level=high <span class="comment"># Fail on high+ vulns</span>
+
+<span class="keyword">FROM</span> gcr.io/distroless/nodejs22-debian12
+<span class="keyword">COPY</span> --from=build /app /app
+<span class="keyword">CMD</span> [<span class="string">"/app/server.js"</span>]</pre>
+    </div>
+    <h3 data-i18n="owasp_cloud_cnas7_checklist_heading">対策チェックリスト</h3>
+    <ul class="checklist">
+      <li data-i18n="owasp_cloud_cnas7_check1">CI/CDと実行時にコンテナイメージのCVEを継続的にスキャンする</li>
+      <li data-i18n="owasp_cloud_cnas7_check2">攻撃対象領域を減らすために最小限のベースイメージ（distroless、Alpine）を使用する</li>
+      <li data-i18n="owasp_cloud_cnas7_check3">Dependabot、Renovateなどのツールで依存関係の更新を自動化する</li>
+      <li data-i18n="owasp_cloud_cnas7_check4">SBOMを維持し、すべてのデプロイメント全体でコンポーネントのバージョンを追跡する</li>
+    </ul>
+  </div>
+
+  <!-- CNAS-8: Improper Asset Management -->
+  <div class="section">
+    <h2 data-i18n-html="owasp_cloud_cnas8_heading"><span class="section-icon">8️⃣</span> CNAS-8 - 不適切な資産管理</h2>
+    <span class="badge badge-info">Medium</span>
+    <h3 data-i18n="owasp_cloud_cnas8_overview_heading">概要</h3>
+    <p data-i18n="owasp_cloud_cnas8_overview_desc">クラウドネイティブ環境では、リソースのスピンアップは簡単ですが、追跡は困難です。孤立したコンテナ、忘れられたネームスペース、古いクラウドリソース、シャドーITデプロイメントは、管理されていない攻撃対象領域を作り出します。適切な資産インベントリがないと、セキュリティチームは存在を知らないものを保護できません。</p>
+    <div class="callout callout-danger">
+      <div class="callout-title" data-i18n="owasp_cloud_cnas8_risk_title">リスク</div>
+      <p data-i18n="owasp_cloud_cnas8_risk_desc">忘れられたまたは管理されていないリソースは、古いソフトウェアを実行し、セキュリティ監視が欠けており、古い資格情報を持っていることが多いです。攻撃者は、監視やパッチ適用される可能性が低いため、これらの放置された資産をエントリーポイントとして狙います。</p>
+    </div>
+    <h3 data-i18n="owasp_cloud_cnas8_vulnerable_heading">脆弱なコード例</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">Terraform</span>
+        <span>❌ Bad</span>
+      </div>
+      <pre><span class="comment"># Resources created without tagging or lifecycle management</span>
+<span class="keyword">resource</span> <span class="string">"aws_instance"</span> <span class="string">"test_server"</span> {
+  ami           = <span class="string">"ami-0abcdef1234567890"</span>
+  instance_type = <span class="string">"t3.medium"</span>
+  <span class="comment"># No tags — who owns this? What's it for?</span>
+  <span class="comment"># No lifecycle policy — runs forever</span>
+}
+
+<span class="keyword">resource</span> <span class="string">"aws_s3_bucket"</span> <span class="string">"temp_data"</span> {
+  bucket = <span class="string">"temp-data-2024"</span>
+  <span class="comment"># No expiration, no access logging</span>
+}</pre>
+    </div>
+    <h3 data-i18n="owasp_cloud_cnas8_secure_heading">安全なコード例</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">Terraform</span>
+        <span>✅ Good</span>
+      </div>
+      <pre><span class="keyword">resource</span> <span class="string">"aws_instance"</span> <span class="string">"test_server"</span> {
+  ami           = <span class="string">"ami-0abcdef1234567890"</span>
+  instance_type = <span class="string">"t3.medium"</span>
+
+  <span class="keyword">tags</span> = {
+    <span class="keyword">Name</span>        = <span class="string">"test-server"</span>
+    <span class="keyword">Owner</span>       = <span class="string">"platform-team"</span>
+    <span class="keyword">Environment</span> = <span class="string">"staging"</span>
+    <span class="keyword">ManagedBy</span>   = <span class="string">"terraform"</span>
+    <span class="keyword">ExpiresAt</span>   = <span class="string">"2026-04-30"</span>
+  }
+}
+
+<span class="keyword">resource</span> <span class="string">"aws_s3_bucket"</span> <span class="string">"temp_data"</span> {
+  bucket = <span class="string">"temp-data-2024"</span>
+
+  <span class="keyword">tags</span> = {
+    <span class="keyword">Owner</span>     = <span class="string">"data-team"</span>
+    <span class="keyword">ManagedBy</span> = <span class="string">"terraform"</span>
+  }
+
+  <span class="keyword">lifecycle_rule</span> {
+    <span class="keyword">enabled</span> = <span class="keyword">true</span>
+    <span class="keyword">expiration</span> { <span class="keyword">days</span> = 90 }
+  }
+}</pre>
+    </div>
+    <h3 data-i18n="owasp_cloud_cnas8_checklist_heading">対策チェックリスト</h3>
+    <ul class="checklist">
+      <li data-i18n="owasp_cloud_cnas8_check1">すべてのクラウドリソース、クラスタ、ネームスペースのリアルタイムインベントリを維持する</li>
+      <li data-i18n="owasp_cloud_cnas8_check2">すべてのリソースに対して必須のタグ付けポリシー（所有者、環境、有効期限）を強制する</li>
+      <li data-i18n="owasp_cloud_cnas8_check3">孤立したリソースの検出とクリーンアップを自動化する（AWS Config、GCP Asset Inventory）</li>
+      <li data-i18n="owasp_cloud_cnas8_check4">追跡されない手動のリソース作成を防ぐためにInfrastructure as Codeを実装する</li>
+    </ul>
+  </div>
+
+  <!-- CNAS-9: Inadequate Compute Resource Quota Limits -->
+  <div class="section">
+    <h2 data-i18n-html="owasp_cloud_cnas9_heading"><span class="section-icon">9️⃣</span> CNAS-9 - 不十分なコンピュートリソースクォータ制限</h2>
+    <span class="badge badge-info">Medium</span>
+    <h3 data-i18n="owasp_cloud_cnas9_overview_heading">概要</h3>
+    <p data-i18n="owasp_cloud_cnas9_overview_desc">適切なリソースクォータと制限がないと、単一の誤動作または侵害されたワークロードが、利用可能なすべてのCPU、メモリ、ストレージを消費し、他のアプリケーションにサービス拒否を引き起こす可能性があります。リソース制限のない環境では、特にクリプトジャッキング攻撃が一般的です。</p>
+    <div class="callout callout-danger">
+      <div class="callout-title" data-i18n="owasp_cloud_cnas9_risk_title">リスク</div>
+      <p data-i18n="owasp_cloud_cnas9_risk_desc">攻撃者は、すべてのクラスタリソースを消費する暗号通貨マイニングコンテナやリソース集約的なワークロードをデプロイできます。制限がないと、フォーク爆弾やメモリリークが一つのポッドでノード全体をクラッシュさせ、共存するすべてのワークロードに影響を与える可能性があります。</p>
+    </div>
+    <h3 data-i18n="owasp_cloud_cnas9_vulnerable_heading">脆弱なコード例</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">YAML (Kubernetes)</span>
+        <span>❌ Bad</span>
+      </div>
+      <pre><span class="comment"># Pod with no resource limits</span>
+<span class="keyword">apiVersion</span>: v1
+<span class="keyword">kind</span>: Pod
+<span class="keyword">metadata</span>:
+  <span class="keyword">name</span>: my-app
+<span class="keyword">spec</span>:
+  <span class="keyword">containers</span>:
+  - <span class="keyword">name</span>: app
+    <span class="keyword">image</span>: myapp:latest
+    <span class="comment"># No resources block — can consume unlimited CPU/memory!</span></pre>
+    </div>
+    <h3 data-i18n="owasp_cloud_cnas9_secure_heading">安全なコード例</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">YAML (Kubernetes)</span>
+        <span>✅ Good</span>
+      </div>
+      <pre><span class="keyword">apiVersion</span>: v1
+<span class="keyword">kind</span>: Pod
+<span class="keyword">metadata</span>:
+  <span class="keyword">name</span>: my-app
+<span class="keyword">spec</span>:
+  <span class="keyword">containers</span>:
+  - <span class="keyword">name</span>: app
+    <span class="keyword">image</span>: myapp:1.2.3
+    <span class="keyword">resources</span>:
+      <span class="keyword">requests</span>:
+        <span class="keyword">cpu</span>: <span class="string">"100m"</span>
+        <span class="keyword">memory</span>: <span class="string">"128Mi"</span>
+      <span class="keyword">limits</span>:
+        <span class="keyword">cpu</span>: <span class="string">"500m"</span>
+        <span class="keyword">memory</span>: <span class="string">"512Mi"</span>
+---
+<span class="comment"># Namespace-level quota</span>
+<span class="keyword">apiVersion</span>: v1
+<span class="keyword">kind</span>: ResourceQuota
+<span class="keyword">metadata</span>:
+  <span class="keyword">name</span>: compute-quota
+  <span class="keyword">namespace</span>: production
+<span class="keyword">spec</span>:
+  <span class="keyword">hard</span>:
+    <span class="keyword">requests.cpu</span>: <span class="string">"10"</span>
+    <span class="keyword">requests.memory</span>: <span class="string">"20Gi"</span>
+    <span class="keyword">limits.cpu</span>: <span class="string">"20"</span>
+    <span class="keyword">limits.memory</span>: <span class="string">"40Gi"</span></pre>
+    </div>
+    <h3 data-i18n="owasp_cloud_cnas9_checklist_heading">対策チェックリスト</h3>
+    <ul class="checklist">
+      <li data-i18n="owasp_cloud_cnas9_check1">すべてのコンテナにCPUとメモリのリクエスト/制限を設定する</li>
+      <li data-i18n="owasp_cloud_cnas9_check2">ネームスペースレベルでResourceQuotasとLimitRangesを強制する</li>
+      <li data-i18n="owasp_cloud_cnas9_check3">リソース使用状況を監視し、異常な消費パターンにアラートを出す</li>
+      <li data-i18n="owasp_cloud_cnas9_check4">無制限のスケーリングを防ぐために、最大ノード制限付きのクラスタオートスケーラーを使用する</li>
+    </ul>
+  </div>
+
+  <!-- CNAS-10: Ineffective Logging & Monitoring -->
+  <div class="section">
+    <h2 data-i18n-html="owasp_cloud_cnas10_heading"><span class="section-icon">🔟</span> CNAS-10 - 効果的でないログ記録と監視</h2>
+    <span class="badge badge-warning">High</span>
+    <h3 data-i18n="owasp_cloud_cnas10_overview_heading">概要</h3>
+    <p data-i18n="owasp_cloud_cnas10_overview_desc">クラウドネイティブ環境は、複数のレイヤーにわたってログを生成します：アプリケーション、コンテナランタイム、オーケストレーター、サービスメッシュ、クラウドプラットフォーム。集中ログ記録、これらのレイヤー間の相関、実行時脅威検出がないと、セキュリティインシデントは検出されないか、発見が遅すぎることになります。</p>
+    <div class="callout callout-danger">
+      <div class="callout-title" data-i18n="owasp_cloud_cnas10_risk_title">リスク</div>
+      <p data-i18n="owasp_cloud_cnas10_risk_desc">エフェメラルコンテナは終了時にログを失い、フォレンジック証拠を破壊します。Kubernetes監査ログと実行時監視がないと、攻撃者はアラートをトリガーすることなく、バックドアを作成し、権限を昇格させたり、データを流出させることができます。</p>
+    </div>
+    <h3 data-i18n="owasp_cloud_cnas10_vulnerable_heading">脆弱なコード例</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">YAML (Kubernetes)</span>
+        <span>❌ Bad</span>
+      </div>
+      <pre><span class="comment"># No audit policy, no log forwarding</span>
+<span class="keyword">apiVersion</span>: v1
+<span class="keyword">kind</span>: Pod
+<span class="keyword">metadata</span>:
+  <span class="keyword">name</span>: my-app
+<span class="keyword">spec</span>:
+  <span class="keyword">containers</span>:
+  - <span class="keyword">name</span>: app
+    <span class="keyword">image</span>: myapp:latest
+    <span class="comment"># Logs go to stdout only — lost when pod restarts</span>
+    <span class="comment"># No audit logging configured on the cluster</span>
+    <span class="comment"># No runtime security monitoring</span></pre>
+    </div>
+    <h3 data-i18n="owasp_cloud_cnas10_secure_heading">安全なコード例</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">YAML (Kubernetes)</span>
+        <span>✅ Good</span>
+      </div>
+      <pre><span class="comment"># Kubernetes audit policy for security events</span>
+<span class="keyword">apiVersion</span>: audit.k8s.io/v1
+<span class="keyword">kind</span>: Policy
+<span class="keyword">rules</span>:
+- <span class="keyword">level</span>: RequestResponse
+  <span class="keyword">resources</span>:
+  - <span class="keyword">group</span>: <span class="string">""</span>
+    <span class="keyword">resources</span>: [<span class="string">"secrets"</span>, <span class="string">"configmaps"</span>]
+- <span class="keyword">level</span>: Metadata
+  <span class="keyword">resources</span>:
+  - <span class="keyword">group</span>: <span class="string">"rbac.authorization.k8s.io"</span>
+    <span class="keyword">resources</span>: [<span class="string">"clusterroles"</span>, <span class="string">"clusterrolebindings"</span>]
+- <span class="keyword">level</span>: Metadata
+  <span class="keyword">verbs</span>: [<span class="string">"create"</span>, <span class="string">"delete"</span>, <span class="string">"patch"</span>]
+<span class="comment"># Deploy Falco for runtime threat detection</span>
+<span class="comment"># Forward logs to SIEM via Fluent Bit / Fluentd</span></pre>
+    </div>
+    <h3 data-i18n="owasp_cloud_cnas10_checklist_heading">対策チェックリスト</h3>
+    <ul class="checklist">
+      <li data-i18n="owasp_cloud_cnas10_check1">Kubernetes監査ログを有効化し、集中型SIEMに転送する</li>
+      <li data-i18n="owasp_cloud_cnas10_check2">リアルタイム脅威検出のために実行時セキュリティツール（Falco、Sysdig）をデプロイする</li>
+      <li data-i18n="owasp_cloud_cnas10_check3">ポッドのライフサイクルを超えてコンテナログを保持するためにログ集約（Fluent Bit、Loki）を使用する</li>
+      <li data-i18n="owasp_cloud_cnas10_check4">セキュリティ上重要なイベントに対してアラートを作成する：シークレットアクセス、RBAC変更、ポッドへのexec</li>
+    </ul>
+  </div>
+
+  <!-- Summary Table -->
+  <div class="section">
+    <h2 data-i18n-html="owasp_cloud_summary_heading"><span class="section-icon">📊</span> サマリーテーブル</h2>
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th data-i18n="owasp_cloud_table_header_id">ID</th>
+            <th data-i18n="owasp_cloud_table_header_vulnerability">脆弱性</th>
+            <th data-i18n="owasp_cloud_table_header_severity">深刻度</th>
+            <th data-i18n="owasp_cloud_table_header_mitigation">主要な対策</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>CNAS-1</td><td data-i18n="owasp_cloud_table_cnas1_name">安全でないクラウド/コンテナ/オーケストレーション設定</td><td><span class="badge badge-danger">Critical</span></td><td data-i18n="owasp_cloud_table_cnas1_mitigation">Distrolessイメージ、Pod Security Standards、IaCスキャン</td></tr>
+          <tr><td>CNAS-2</td><td data-i18n="owasp_cloud_table_cnas2_name">インジェクションの欠陥（クラウドイベント）</td><td><span class="badge badge-danger">Critical</span></td><td data-i18n="owasp_cloud_table_cnas2_mitigation">入力検証、シェルよりSDK、エグレスフィルタリング</td></tr>
+          <tr><td>CNAS-3</td><td data-i18n="owasp_cloud_table_cnas3_name">不適切な認証と認可</td><td><span class="badge badge-danger">Critical</span></td><td data-i18n="owasp_cloud_table_cnas3_mitigation">最小権限RBAC、IRSA、mTLS</td></tr>
+          <tr><td>CNAS-4</td><td data-i18n="owasp_cloud_table_cnas4_name">CI/CDパイプラインとサプライチェーンの欠陥</td><td><span class="badge badge-warning">High</span></td><td data-i18n="owasp_cloud_table_cnas4_mitigation">固定SHA、イメージ署名、SLSA出自</td></tr>
+          <tr><td>CNAS-5</td><td data-i18n="owasp_cloud_table_cnas5_name">安全でないシークレット保管</td><td><span class="badge badge-danger">Critical</span></td><td data-i18n="owasp_cloud_table_cnas5_mitigation">Vault/Secrets Manager、KMS暗号化、シークレットスキャン</td></tr>
+          <tr><td>CNAS-6</td><td data-i18n="owasp_cloud_table_cnas6_name">過度に許可的なネットワークポリシー</td><td><span class="badge badge-warning">High</span></td><td data-i18n="owasp_cloud_table_cnas6_mitigation">デフォルト拒否、エグレス制限、Calico/Cilium</td></tr>
+          <tr><td>CNAS-7</td><td data-i18n="owasp_cloud_table_cnas7_name">既知の脆弱性を持つコンポーネント</td><td><span class="badge badge-warning">High</span></td><td data-i18n="owasp_cloud_table_cnas7_mitigation">イメージスキャン、最小限のベースイメージ、SBOM</td></tr>
+          <tr><td>CNAS-8</td><td data-i18n="owasp_cloud_table_cnas8_name">不適切な資産管理</td><td><span class="badge badge-info">Medium</span></td><td data-i18n="owasp_cloud_table_cnas8_mitigation">リソースタグ付け、自動クリーンアップ、IaC</td></tr>
+          <tr><td>CNAS-9</td><td data-i18n="owasp_cloud_table_cnas9_name">不十分なコンピュートリソースクォータ</td><td><span class="badge badge-info">Medium</span></td><td data-i18n="owasp_cloud_table_cnas9_mitigation">リソース制限、ResourceQuotas、使用状況監視</td></tr>
+          <tr><td>CNAS-10</td><td data-i18n="owasp_cloud_table_cnas10_name">効果的でないログ記録と監視</td><td><span class="badge badge-warning">High</span></td><td data-i18n="owasp_cloud_table_cnas10_mitigation">監査ログ、Falco/Sysdig、集中型SIEM</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+<script src="../js/common.js"></script>
+
+
+</body></html>

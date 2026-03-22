@@ -1,0 +1,713 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="owasp_cicd_page_title">OWASP Top 10 CI/CD Security Risks - API Security Reference Hub</title>
+  <link rel="stylesheet" href="../css/style.css">
+
+    <link rel="alternate" hreflang="en" href="/api-security-hub/en/owasp-cicd-top10.html">
+    <link rel="alternate" hreflang="ja" href="/api-security-hub/ja/owasp-cicd-top10.html">
+    <link rel="alternate" hreflang="es" href="/api-security-hub/es/owasp-cicd-top10.html">
+    <link rel="alternate" hreflang="pt" href="/api-security-hub/pt/owasp-cicd-top10.html">
+    <link rel="alternate" hreflang="fr" href="/api-security-hub/fr/owasp-cicd-top10.html">
+    <link rel="alternate" hreflang="x-default" href="/api-security-hub/en/owasp-cicd-top10.html">
+</head>
+<body>
+
+  <div class="page-header">
+    <h1 data-i18n="owasp_cicd_main_heading">OWASP Top 10 CI/CD Security Risks</h1>
+    <p class="subtitle" data-i18n="owasp_cicd_subtitle">The 10 most critical security risks in CI/CD pipelines and how to mitigate them.</p>
+  </div>
+
+  <!-- Overview -->
+  <div class="section">
+    <div class="callout callout-info">
+      <div class="callout-title" data-i18n="owasp_cicd_overview_title">What are the CI/CD Security Top 10 Risks?</div>
+      <p data-i18n="owasp_cicd_overview_desc">The OWASP Top 10 CI/CD Security Risks identifies the most significant security risks in Continuous Integration and Continuous Delivery pipelines. CI/CD pipelines are high-value targets because they have direct access to source code, secrets, and production environments. This guide covers flow control, identity management, dependency attacks, pipeline poisoning, and more.</p>
+    </div>
+  </div>
+
+  <!-- CICD-SEC-1 -->
+  <div class="section">
+    <h2 data-i18n-html="owasp_cicd_sec1_heading"><span class="section-icon">1️⃣</span> CICD-SEC-1 - Insufficient Flow Control Mechanisms</h2>
+    <span class="badge badge-danger">Critical</span>
+    <h3 data-i18n="owasp_cicd_sec1_overview_heading">Overview</h3>
+    <p data-i18n="owasp_cicd_sec1_overview_desc">Insufficient flow control mechanisms allow attackers to push malicious code through CI/CD pipelines without proper review or approval gates. This includes bypassing branch protection rules, missing required approvals, and lack of enforcement on who can trigger deployments to production.</p>
+    <div class="callout callout-danger">
+      <div class="callout-title" data-i18n="owasp_cicd_sec1_risk_title">Risk</div>
+      <p data-i18n="owasp_cicd_sec1_risk_desc">Without proper flow control, a single compromised developer account or malicious insider can push code directly to production, bypassing code review, security scans, and approval processes. This can lead to deployment of backdoors, data exfiltration code, or destructive payloads.</p>
+    </div>
+    <h3 data-i18n="owasp_cicd_sec1_vulnerable_heading">Vulnerable Code Example</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">YAML (GitHub Actions)</span>
+        <span>❌ Bad</span>
+      </div>
+      <pre><span class="comment"># No branch protection — anyone can push directly to main</span>
+<span class="keyword">name</span>: Deploy
+<span class="keyword">on</span>:
+  <span class="keyword">push</span>:
+    <span class="keyword">branches</span>: [main]  <span class="comment"># Triggers on any push to main</span>
+<span class="keyword">jobs</span>:
+  <span class="keyword">deploy</span>:
+    <span class="keyword">runs-on</span>: ubuntu-latest
+    <span class="keyword">steps</span>:
+    - <span class="keyword">uses</span>: actions/checkout@v4
+    - <span class="keyword">run</span>: |
+        <span class="comment"># Deploys immediately — no approval gate!</span>
+        kubectl apply -f deploy.yaml
+        kubectl rollout status deployment/myapp</pre>
+    </div>
+    <h3 data-i18n="owasp_cicd_sec1_secure_heading">Secure Code Example</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">YAML (GitHub Actions)</span>
+        <span>✅ Good</span>
+      </div>
+      <pre><span class="keyword">name</span>: Deploy
+<span class="keyword">on</span>:
+  <span class="keyword">push</span>:
+    <span class="keyword">branches</span>: [main]
+<span class="keyword">jobs</span>:
+  <span class="keyword">test</span>:
+    <span class="keyword">runs-on</span>: ubuntu-latest
+    <span class="keyword">steps</span>:
+    - <span class="keyword">uses</span>: actions/checkout@v4
+    - <span class="keyword">run</span>: npm test
+  <span class="keyword">deploy</span>:
+    <span class="keyword">needs</span>: test
+    <span class="keyword">runs-on</span>: ubuntu-latest
+    <span class="keyword">environment</span>: production  <span class="comment"># Requires manual approval</span>
+    <span class="keyword">steps</span>:
+    - <span class="keyword">uses</span>: actions/checkout@v4
+    - <span class="keyword">run</span>: |
+        kubectl apply -f deploy.yaml
+        kubectl rollout status deployment/myapp</pre>
+    </div>
+    <h3 data-i18n="owasp_cicd_sec1_checklist_heading">Mitigation Checklist</h3>
+    <ul class="checklist">
+      <li data-i18n="owasp_cicd_sec1_check1">Enforce branch protection rules requiring PR reviews before merging to main</li>
+      <li data-i18n="owasp_cicd_sec1_check2">Use environment protection rules with required approvers for production deployments</li>
+      <li data-i18n="owasp_cicd_sec1_check3">Implement status checks (tests, security scans) that must pass before merge</li>
+      <li data-i18n="owasp_cicd_sec1_check4">Restrict who can push to protected branches and trigger production deployments</li>
+    </ul>
+  </div>
+
+  <!-- CICD-SEC-2 -->
+  <div class="section">
+    <h2 data-i18n-html="owasp_cicd_sec2_heading"><span class="section-icon">2️⃣</span> CICD-SEC-2 - Inadequate Identity and Access Management</h2>
+    <span class="badge badge-danger">Critical</span>
+    <h3 data-i18n="owasp_cicd_sec2_overview_heading">Overview</h3>
+    <p data-i18n="owasp_cicd_sec2_overview_desc">CI/CD systems involve multiple identities: human users, service accounts, bot tokens, and machine identities. Inadequate IAM allows over-permissive access to repositories, pipelines, and deployment targets. Shared credentials, stale accounts, and lack of MFA compound the risk.</p>
+    <div class="callout callout-danger">
+      <div class="callout-title" data-i18n="owasp_cicd_sec2_risk_title">Risk</div>
+      <p data-i18n="owasp_cicd_sec2_risk_desc">Compromised CI/CD identities with excessive permissions can modify pipelines, access secrets, alter build artifacts, and deploy to production. Shared service accounts make it impossible to audit who performed an action.</p>
+    </div>
+    <h3 data-i18n="owasp_cicd_sec2_vulnerable_heading">Vulnerable Code Example</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">YAML (GitHub Actions)</span>
+        <span>❌ Bad</span>
+      </div>
+      <pre><span class="comment"># Over-permissive workflow with admin token</span>
+<span class="keyword">name</span>: CI
+<span class="keyword">on</span>: push
+<span class="keyword">permissions</span>: write-all  <span class="comment"># Full permissions to everything!</span>
+<span class="keyword">jobs</span>:
+  <span class="keyword">build</span>:
+    <span class="keyword">runs-on</span>: ubuntu-latest
+    <span class="keyword">steps</span>:
+    - <span class="keyword">uses</span>: actions/checkout@v4
+    - <span class="keyword">run</span>: |
+        <span class="comment"># Using org-wide PAT with admin access</span>
+        curl -H "Authorization: token ${{ secrets.ADMIN_PAT }}" \
+          https://api.github.com/repos/org/other-repo/contents/</pre>
+    </div>
+    <h3 data-i18n="owasp_cicd_sec2_secure_heading">Secure Code Example</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">YAML (GitHub Actions)</span>
+        <span>✅ Good</span>
+      </div>
+      <pre><span class="keyword">name</span>: CI
+<span class="keyword">on</span>: push
+<span class="keyword">permissions</span>:
+  <span class="keyword">contents</span>: read    <span class="comment"># Minimum required permissions</span>
+  <span class="keyword">packages</span>: write   <span class="comment"># Only what's needed</span>
+<span class="keyword">jobs</span>:
+  <span class="keyword">build</span>:
+    <span class="keyword">runs-on</span>: ubuntu-latest
+    <span class="keyword">steps</span>:
+    - <span class="keyword">uses</span>: actions/checkout@v4
+    - <span class="keyword">uses</span>: actions/create-github-app-token@v1  <span class="comment"># Scoped app token</span>
+      <span class="keyword">id</span>: app-token
+      <span class="keyword">with</span>:
+        <span class="keyword">app-id</span>: ${{ vars.APP_ID }}
+        <span class="keyword">private-key</span>: ${{ secrets.APP_PRIVATE_KEY }}
+        <span class="keyword">repositories</span>: other-repo  <span class="comment"># Scoped to specific repo</span></pre>
+    </div>
+    <h3 data-i18n="owasp_cicd_sec2_checklist_heading">Mitigation Checklist</h3>
+    <ul class="checklist">
+      <li data-i18n="owasp_cicd_sec2_check1">Apply least-privilege permissions to all workflow tokens and service accounts</li>
+      <li data-i18n="owasp_cicd_sec2_check2">Use GitHub Apps or OIDC federation instead of long-lived PATs</li>
+      <li data-i18n="owasp_cicd_sec2_check3">Enforce MFA for all human accounts with CI/CD access</li>
+      <li data-i18n="owasp_cicd_sec2_check4">Regularly audit and rotate credentials; remove stale accounts and tokens</li>
+    </ul>
+  </div>
+
+  <!-- CICD-SEC-3 -->
+  <div class="section">
+    <h2 data-i18n-html="owasp_cicd_sec3_heading"><span class="section-icon">3️⃣</span> CICD-SEC-3 - Dependency Chain Abuse</h2>
+    <span class="badge badge-danger">Critical</span>
+    <h3 data-i18n="owasp_cicd_sec3_overview_heading">Overview</h3>
+    <p data-i18n="owasp_cicd_sec3_overview_desc">CI/CD pipelines pull dependencies from external package registries (npm, PyPI, Maven, Docker Hub). Attackers exploit this through dependency confusion, typosquatting, compromised maintainer accounts, and malicious packages. A single poisoned dependency can execute arbitrary code during build.</p>
+    <div class="callout callout-danger">
+      <div class="callout-title" data-i18n="owasp_cicd_sec3_risk_title">Risk</div>
+      <p data-i18n="owasp_cicd_sec3_risk_desc">Malicious dependencies execute code during installation (postinstall scripts, setup.py), stealing secrets, injecting backdoors into build artifacts, or establishing persistence. Supply chain attacks like SolarWinds and Codecov demonstrate the catastrophic impact.</p>
+    </div>
+    <h3 data-i18n="owasp_cicd_sec3_vulnerable_heading">Vulnerable Code Example</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">Jenkinsfile</span>
+        <span>❌ Bad</span>
+      </div>
+      <pre><span class="keyword">pipeline</span> {
+  <span class="keyword">agent</span> any
+  <span class="keyword">stages</span> {
+    <span class="keyword">stage</span>(<span class="string">'Build'</span>) {
+      <span class="keyword">steps</span> {
+        <span class="comment">// No lockfile verification, no integrity checks</span>
+        <span class="function">sh</span> <span class="string">'npm install'</span>           <span class="comment">// Fetches latest — could be compromised!</span>
+        <span class="function">sh</span> <span class="string">'pip install -r requirements.txt'</span>  <span class="comment">// No hash verification</span>
+      }
+    }
+  }
+}</pre>
+    </div>
+    <h3 data-i18n="owasp_cicd_sec3_secure_heading">Secure Code Example</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">Jenkinsfile</span>
+        <span>✅ Good</span>
+      </div>
+      <pre><span class="keyword">pipeline</span> {
+  <span class="keyword">agent</span> any
+  <span class="keyword">stages</span> {
+    <span class="keyword">stage</span>(<span class="string">'Build'</span>) {
+      <span class="keyword">steps</span> {
+        <span class="comment">// Use lockfile with integrity verification</span>
+        <span class="function">sh</span> <span class="string">'npm ci'</span>                   <span class="comment">// Uses package-lock.json</span>
+        <span class="function">sh</span> <span class="string">'npm audit --audit-level=high'</span>
+        <span class="comment">// Python: verify hashes from lockfile</span>
+        <span class="function">sh</span> <span class="string">'pip install --require-hashes -r requirements.lock'</span>
+      }
+    }
+    <span class="keyword">stage</span>(<span class="string">'SCA Scan'</span>) {
+      <span class="keyword">steps</span> {
+        <span class="comment">// Software Composition Analysis</span>
+        <span class="function">sh</span> <span class="string">'trivy fs --scanners vuln,secret .'</span>
+      }
+    }
+  }
+}</pre>
+    </div>
+    <h3 data-i18n="owasp_cicd_sec3_checklist_heading">Mitigation Checklist</h3>
+    <ul class="checklist">
+      <li data-i18n="owasp_cicd_sec3_check1">Always use lockfiles (package-lock.json, Pipfile.lock) and verify integrity hashes</li>
+      <li data-i18n="owasp_cicd_sec3_check2">Configure private/internal package registries with namespace scoping to prevent dependency confusion</li>
+      <li data-i18n="owasp_cicd_sec3_check3">Run Software Composition Analysis (SCA) tools in every build pipeline</li>
+      <li data-i18n="owasp_cicd_sec3_check4">Pin dependencies to exact versions and review all dependency updates before merging</li>
+    </ul>
+  </div>
+
+  <!-- CICD-SEC-4 -->
+  <div class="section">
+    <h2 data-i18n-html="owasp_cicd_sec4_heading"><span class="section-icon">4️⃣</span> CICD-SEC-4 - Poisoned Pipeline Execution (PPE)</h2>
+    <span class="badge badge-danger">Critical</span>
+    <h3 data-i18n="owasp_cicd_sec4_overview_heading">Overview</h3>
+    <p data-i18n="owasp_cicd_sec4_overview_desc">Poisoned Pipeline Execution (PPE) occurs when attackers can modify CI/CD pipeline definitions or inject malicious code that executes within the pipeline context. This can happen through manipulating pipeline configuration files in branches, pull requests from forks, or modifying shared pipeline templates.</p>
+    <div class="callout callout-danger">
+      <div class="callout-title" data-i18n="owasp_cicd_sec4_risk_title">Risk</div>
+      <p data-i18n="owasp_cicd_sec4_risk_desc">An attacker who can modify pipeline configuration gains access to all secrets, credentials, and permissions available to the pipeline. They can exfiltrate secrets, tamper with build outputs, or deploy malicious code — all within a trusted execution context.</p>
+    </div>
+    <h3 data-i18n="owasp_cicd_sec4_vulnerable_heading">Vulnerable Code Example</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">YAML (GitHub Actions)</span>
+        <span>❌ Bad</span>
+      </div>
+      <pre><span class="comment"># Runs pipeline from fork PRs with access to secrets</span>
+<span class="keyword">name</span>: CI
+<span class="keyword">on</span>:
+  <span class="keyword">pull_request_target</span>:  <span class="comment"># Runs in base repo context with secrets!</span>
+    <span class="keyword">branches</span>: [main]
+<span class="keyword">jobs</span>:
+  <span class="keyword">build</span>:
+    <span class="keyword">runs-on</span>: ubuntu-latest
+    <span class="keyword">steps</span>:
+    - <span class="keyword">uses</span>: actions/checkout@v4
+      <span class="keyword">with</span>:
+        <span class="keyword">ref</span>: ${{ github.event.pull_request.head.sha }}  <span class="comment"># Checks out fork code!</span>
+    - <span class="keyword">run</span>: make build  <span class="comment"># Fork's Makefile executes with secrets access</span>
+      <span class="keyword">env</span>:
+        <span class="keyword">DEPLOY_KEY</span>: ${{ secrets.DEPLOY_KEY }}</pre>
+    </div>
+    <h3 data-i18n="owasp_cicd_sec4_secure_heading">Secure Code Example</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">YAML (GitHub Actions)</span>
+        <span>✅ Good</span>
+      </div>
+      <pre><span class="comment"># Separate workflows: untrusted build + trusted deploy</span>
+<span class="keyword">name</span>: CI
+<span class="keyword">on</span>:
+  <span class="keyword">pull_request</span>:  <span class="comment"># No secret access for PR builds</span>
+    <span class="keyword">branches</span>: [main]
+<span class="keyword">permissions</span>:
+  <span class="keyword">contents</span>: read
+<span class="keyword">jobs</span>:
+  <span class="keyword">build</span>:
+    <span class="keyword">runs-on</span>: ubuntu-latest
+    <span class="keyword">steps</span>:
+    - <span class="keyword">uses</span>: actions/checkout@v4  <span class="comment"># Checks out merge commit (safe)</span>
+    - <span class="keyword">run</span>: npm ci &amp;&amp; npm test   <span class="comment"># No secrets needed for build/test</span>
+    - <span class="keyword">uses</span>: actions/upload-artifact@v4
+      <span class="keyword">with</span>:
+        <span class="keyword">name</span>: build-output
+        <span class="keyword">path</span>: dist/</pre>
+    </div>
+    <h3 data-i18n="owasp_cicd_sec4_checklist_heading">Mitigation Checklist</h3>
+    <ul class="checklist">
+      <li data-i18n="owasp_cicd_sec4_check1">Never use pull_request_target with checkout of PR head code and secret access combined</li>
+      <li data-i18n="owasp_cicd_sec4_check2">Separate build (untrusted) and deploy (trusted) stages into different workflows</li>
+      <li data-i18n="owasp_cicd_sec4_check3">Require approval for fork PR workflows and limit secrets exposure</li>
+      <li data-i18n="owasp_cicd_sec4_check4">Use immutable pipeline definitions that cannot be modified by contributors</li>
+    </ul>
+  </div>
+
+  <!-- CICD-SEC-5 -->
+  <div class="section">
+    <h2 data-i18n-html="owasp_cicd_sec5_heading"><span class="section-icon">5️⃣</span> CICD-SEC-5 - Insufficient Pipeline-Based Access Controls (PBAC)</h2>
+    <span class="badge badge-warning">High</span>
+    <h3 data-i18n="owasp_cicd_sec5_overview_heading">Overview</h3>
+    <p data-i18n="owasp_cicd_sec5_overview_desc">Pipeline-Based Access Controls (PBAC) govern what resources a pipeline can access: cloud accounts, Kubernetes clusters, databases, and internal services. Insufficient PBAC means pipelines have broader access than needed, violating the principle of least privilege.</p>
+    <div class="callout callout-danger">
+      <div class="callout-title" data-i18n="owasp_cicd_sec5_risk_title">Risk</div>
+      <p data-i18n="owasp_cicd_sec5_risk_desc">Over-privileged pipelines can be exploited to access resources far beyond their intended scope. A compromised build pipeline for a minor service could be used to access production databases, modify infrastructure, or pivot to other environments.</p>
+    </div>
+    <h3 data-i18n="owasp_cicd_sec5_vulnerable_heading">Vulnerable Code Example</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">YAML (GitLab CI)</span>
+        <span>❌ Bad</span>
+      </div>
+      <pre><span class="comment"># Pipeline with admin-level cloud credentials</span>
+<span class="keyword">deploy</span>:
+  <span class="keyword">stage</span>: deploy
+  <span class="keyword">script</span>:
+    - aws configure set aws_access_key_id $AWS_ACCESS_KEY
+    - aws configure set aws_secret_access_key $AWS_SECRET_KEY
+    <span class="comment"># This key has AdministratorAccess policy!</span>
+    - aws s3 sync dist/ s3://my-bucket/
+    - aws ecs update-service --cluster prod --service myapp
+    <span class="comment"># Same credentials could access ANY AWS resource</span></pre>
+    </div>
+    <h3 data-i18n="owasp_cicd_sec5_secure_heading">Secure Code Example</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">YAML (GitHub Actions)</span>
+        <span>✅ Good</span>
+      </div>
+      <pre><span class="keyword">name</span>: Deploy
+<span class="keyword">on</span>:
+  <span class="keyword">push</span>:
+    <span class="keyword">branches</span>: [main]
+<span class="keyword">permissions</span>:
+  <span class="keyword">id-token</span>: write  <span class="comment"># For OIDC</span>
+  <span class="keyword">contents</span>: read
+<span class="keyword">jobs</span>:
+  <span class="keyword">deploy</span>:
+    <span class="keyword">runs-on</span>: ubuntu-latest
+    <span class="keyword">steps</span>:
+    - <span class="keyword">uses</span>: aws-actions/configure-aws-credentials@v4
+      <span class="keyword">with</span>:
+        <span class="keyword">role-to-assume</span>: arn:aws:iam::123456:role/deploy-s3-only
+        <span class="comment"># Scoped role: only s3:PutObject on specific bucket</span>
+        <span class="keyword">aws-region</span>: us-east-1
+    - <span class="keyword">run</span>: aws s3 sync dist/ s3://my-bucket/</pre>
+    </div>
+    <h3 data-i18n="owasp_cicd_sec5_checklist_heading">Mitigation Checklist</h3>
+    <ul class="checklist">
+      <li data-i18n="owasp_cicd_sec5_check1">Use OIDC federation for cloud access instead of static credentials in CI/CD</li>
+      <li data-i18n="owasp_cicd_sec5_check2">Scope IAM roles per pipeline to only the resources that pipeline needs</li>
+      <li data-i18n="owasp_cicd_sec5_check3">Separate deployment roles per environment (staging vs. production)</li>
+      <li data-i18n="owasp_cicd_sec5_check4">Audit pipeline access patterns and alert on out-of-scope resource access</li>
+    </ul>
+  </div>
+
+  <!-- CICD-SEC-6 -->
+  <div class="section">
+    <h2 data-i18n-html="owasp_cicd_sec6_heading"><span class="section-icon">6️⃣</span> CICD-SEC-6 - Insufficient Credential Hygiene</h2>
+    <span class="badge badge-danger">Critical</span>
+    <h3 data-i18n="owasp_cicd_sec6_overview_heading">Overview</h3>
+    <p data-i18n="owasp_cicd_sec6_overview_desc">CI/CD pipelines handle numerous credentials: API keys, cloud tokens, registry passwords, SSH keys, and signing certificates. Poor credential hygiene includes hardcoding secrets in pipeline files, printing secrets in logs, using unencrypted secret storage, and never rotating credentials.</p>
+    <div class="callout callout-danger">
+      <div class="callout-title" data-i18n="owasp_cicd_sec6_risk_title">Risk</div>
+      <p data-i18n="owasp_cicd_sec6_risk_desc">Leaked CI/CD credentials are one of the most common initial access vectors. Secrets exposed in build logs, committed to repositories, or stored without encryption provide attackers with direct access to production systems, cloud accounts, and artifact registries.</p>
+    </div>
+    <h3 data-i18n="owasp_cicd_sec6_vulnerable_heading">Vulnerable Code Example</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">Bash (CI Script)</span>
+        <span>❌ Bad</span>
+      </div>
+      <pre><span class="comment">#!/bin/bash</span>
+<span class="comment"># Secrets hardcoded and leaked in logs</span>
+<span class="keyword">export</span> DOCKER_PASSWORD=<span class="string">"MyS3cret!"</span>         <span class="comment"># Hardcoded!</span>
+<span class="keyword">echo</span> <span class="string">"Logging in with $DOCKER_PASSWORD"</span>  <span class="comment"># Printed to logs!</span>
+
+docker login -u admin -p <span class="string">"$DOCKER_PASSWORD"</span> registry.example.com
+docker push registry.example.com/myapp:latest
+
+<span class="comment"># AWS credentials in environment — visible in process listing</span>
+<span class="keyword">export</span> AWS_SECRET_ACCESS_KEY=<span class="string">"wJalrXUtnFEMI/K7MDENG/bPxRfiCY"</span>
+aws s3 cp artifact.zip s3://releases/</pre>
+    </div>
+    <h3 data-i18n="owasp_cicd_sec6_secure_heading">Secure Code Example</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">YAML (GitHub Actions)</span>
+        <span>✅ Good</span>
+      </div>
+      <pre><span class="keyword">name</span>: Publish
+<span class="keyword">on</span>:
+  <span class="keyword">push</span>:
+    <span class="keyword">tags</span>: [<span class="string">'v*'</span>]
+<span class="keyword">jobs</span>:
+  <span class="keyword">publish</span>:
+    <span class="keyword">runs-on</span>: ubuntu-latest
+    <span class="keyword">steps</span>:
+    - <span class="keyword">uses</span>: actions/checkout@v4
+    - <span class="keyword">uses</span>: docker/login-action@v3  <span class="comment"># Handles credentials securely</span>
+      <span class="keyword">with</span>:
+        <span class="keyword">registry</span>: registry.example.com
+        <span class="keyword">username</span>: ${{ secrets.DOCKER_USER }}   <span class="comment"># Masked in logs</span>
+        <span class="keyword">password</span>: ${{ secrets.DOCKER_TOKEN }}  <span class="comment"># Short-lived token</span>
+    - <span class="keyword">run</span>: |
+        docker build -t registry.example.com/myapp:${{ github.ref_name }} .
+        docker push registry.example.com/myapp:${{ github.ref_name }}</pre>
+    </div>
+    <h3 data-i18n="owasp_cicd_sec6_checklist_heading">Mitigation Checklist</h3>
+    <ul class="checklist">
+      <li data-i18n="owasp_cicd_sec6_check1">Never hardcode secrets in pipeline definitions, scripts, or source code</li>
+      <li data-i18n="owasp_cicd_sec6_check2">Use CI/CD platform secret management with automatic log masking</li>
+      <li data-i18n="owasp_cicd_sec6_check3">Rotate all CI/CD credentials regularly and use short-lived tokens where possible</li>
+      <li data-i18n="owasp_cicd_sec6_check4">Scan repositories and build logs for accidentally exposed secrets</li>
+    </ul>
+  </div>
+
+  <!-- CICD-SEC-7 -->
+  <div class="section">
+    <h2 data-i18n-html="owasp_cicd_sec7_heading"><span class="section-icon">7️⃣</span> CICD-SEC-7 - Insecure System Configuration</h2>
+    <span class="badge badge-warning">High</span>
+    <h3 data-i18n="owasp_cicd_sec7_overview_heading">Overview</h3>
+    <p data-i18n="owasp_cicd_sec7_overview_desc">CI/CD systems (Jenkins, GitLab, GitHub Actions runners) often run with insecure default configurations. This includes outdated software versions, exposed management interfaces, disabled security features, overly permissive network access, and self-hosted runners shared across projects.</p>
+    <div class="callout callout-danger">
+      <div class="callout-title" data-i18n="owasp_cicd_sec7_risk_title">Risk</div>
+      <p data-i18n="owasp_cicd_sec7_risk_desc">Misconfigured CI/CD infrastructure can be exploited to gain unauthorized access to build environments, intercept secrets, or pivot to internal networks. Shared self-hosted runners allow cross-project attacks where one compromised workflow affects others.</p>
+    </div>
+    <h3 data-i18n="owasp_cicd_sec7_vulnerable_heading">Vulnerable Code Example</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">Groovy (Jenkins)</span>
+        <span>❌ Bad</span>
+      </div>
+      <pre><span class="comment">// Jenkins with insecure configuration</span>
+<span class="comment">// - Script console enabled without auth</span>
+<span class="comment">// - Agent-to-controller access unrestricted</span>
+<span class="comment">// - Outdated plugins with known CVEs</span>
+
+<span class="keyword">pipeline</span> {
+  <span class="keyword">agent</span> any  <span class="comment">// Runs on any available agent — no isolation</span>
+  <span class="keyword">stages</span> {
+    <span class="keyword">stage</span>(<span class="string">'Build'</span>) {
+      <span class="keyword">steps</span> {
+        <span class="comment">// Running as root on shared agent</span>
+        <span class="function">sh</span> <span class="string">'whoami'</span>  <span class="comment">// root</span>
+        <span class="function">sh</span> <span class="string">'docker build -t myapp .'</span>
+      }
+    }
+  }
+}</pre>
+    </div>
+    <h3 data-i18n="owasp_cicd_sec7_secure_heading">Secure Code Example</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">Groovy (Jenkins)</span>
+        <span>✅ Good</span>
+      </div>
+      <pre><span class="keyword">pipeline</span> {
+  <span class="keyword">agent</span> {
+    <span class="keyword">kubernetes</span> {  <span class="comment">// Ephemeral, isolated pod per build</span>
+      <span class="keyword">yaml</span> <span class="string">"""
+        apiVersion: v1
+        kind: Pod
+        spec:
+          securityContext:
+            runAsNonRoot: true
+            runAsUser: 1000
+          containers:
+          - name: builder
+            image: builder:1.2.3
+            securityContext:
+              allowPrivilegeEscalation: false
+              readOnlyRootFilesystem: true
+      """</span>
+    }
+  }
+  <span class="keyword">stages</span> {
+    <span class="keyword">stage</span>(<span class="string">'Build'</span>) {
+      <span class="keyword">steps</span> {
+        <span class="keyword">container</span>(<span class="string">'builder'</span>) {
+          <span class="function">sh</span> <span class="string">'make build'</span>
+        }
+      }
+    }
+  }
+}</pre>
+    </div>
+    <h3 data-i18n="owasp_cicd_sec7_checklist_heading">Mitigation Checklist</h3>
+    <ul class="checklist">
+      <li data-i18n="owasp_cicd_sec7_check1">Use ephemeral, isolated build environments (containers/VMs) that are destroyed after each build</li>
+      <li data-i18n="owasp_cicd_sec7_check2">Keep CI/CD platform and all plugins updated to the latest versions</li>
+      <li data-i18n="owasp_cicd_sec7_check3">Restrict network access from build environments; block unnecessary outbound traffic</li>
+      <li data-i18n="owasp_cicd_sec7_check4">Run build agents as non-root with minimal capabilities and read-only filesystems</li>
+    </ul>
+  </div>
+
+  <!-- CICD-SEC-8 -->
+  <div class="section">
+    <h2 data-i18n-html="owasp_cicd_sec8_heading"><span class="section-icon">8️⃣</span> CICD-SEC-8 - Ungoverned Usage of 3rd Party Services</h2>
+    <span class="badge badge-warning">High</span>
+    <h3 data-i18n="owasp_cicd_sec8_overview_heading">Overview</h3>
+    <p data-i18n="owasp_cicd_sec8_overview_desc">CI/CD pipelines often integrate with third-party services: code quality tools, security scanners, notification systems, and deployment platforms. These integrations are granted access tokens and permissions, creating a trust chain. Ungoverned usage means no visibility into what third-party services can access or do.</p>
+    <div class="callout callout-danger">
+      <div class="callout-title" data-i18n="owasp_cicd_sec8_risk_title">Risk</div>
+      <p data-i18n="owasp_cicd_sec8_risk_desc">A compromised third-party service (like the Codecov breach) can access source code, secrets, and build artifacts. Without governance, teams may grant excessive permissions to unknown services, creating invisible attack vectors in the supply chain.</p>
+    </div>
+    <h3 data-i18n="owasp_cicd_sec8_vulnerable_heading">Vulnerable Code Example</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">YAML (GitHub Actions)</span>
+        <span>❌ Bad</span>
+      </div>
+      <pre><span class="keyword">name</span>: CI
+<span class="keyword">on</span>: push
+<span class="keyword">jobs</span>:
+  <span class="keyword">build</span>:
+    <span class="keyword">runs-on</span>: ubuntu-latest
+    <span class="keyword">steps</span>:
+    - <span class="keyword">uses</span>: actions/checkout@v4
+    - <span class="keyword">run</span>: npm test
+    <span class="comment"># Unknown third-party action with full repo access</span>
+    - <span class="keyword">uses</span>: random-org/code-analysis@main  <span class="comment"># Unpinned, unvetted!</span>
+      <span class="keyword">with</span>:
+        <span class="keyword">token</span>: ${{ secrets.GITHUB_TOKEN }}   <span class="comment"># Full token access!</span>
+    <span class="comment"># Uploading coverage to external service with repo token</span>
+    - <span class="keyword">run</span>: |
+        bash &lt;(curl -s https://example.com/uploader.sh)  <span class="comment"># Remote script!</span></pre>
+    </div>
+    <h3 data-i18n="owasp_cicd_sec8_secure_heading">Secure Code Example</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">YAML (GitHub Actions)</span>
+        <span>✅ Good</span>
+      </div>
+      <pre><span class="keyword">name</span>: CI
+<span class="keyword">on</span>: push
+<span class="keyword">permissions</span>:
+  <span class="keyword">contents</span>: read
+<span class="keyword">jobs</span>:
+  <span class="keyword">build</span>:
+    <span class="keyword">runs-on</span>: ubuntu-latest
+    <span class="keyword">steps</span>:
+    - <span class="keyword">uses</span>: actions/checkout@v4
+    - <span class="keyword">run</span>: npm test
+    <span class="comment"># Vetted action pinned to SHA</span>
+    - <span class="keyword">uses</span>: github/codeql-action/analyze@8a470fddafa5cbc14  <span class="comment"># Pinned SHA</span>
+    <span class="comment"># Upload via official CLI tool, not remote scripts</span>
+    - <span class="keyword">uses</span>: codecov/codecov-action@e28ff129e5465c2c0dcc6f003fc735cb6ae0c673
+      <span class="keyword">with</span>:
+        <span class="keyword">token</span>: ${{ secrets.CODECOV_TOKEN }}  <span class="comment"># Scoped token</span>
+        <span class="keyword">fail_ci_if_error</span>: true</pre>
+    </div>
+    <h3 data-i18n="owasp_cicd_sec8_checklist_heading">Mitigation Checklist</h3>
+    <ul class="checklist">
+      <li data-i18n="owasp_cicd_sec8_check1">Maintain an inventory of all third-party services integrated with CI/CD</li>
+      <li data-i18n="owasp_cicd_sec8_check2">Pin third-party actions to SHA hashes and audit before adoption</li>
+      <li data-i18n="owasp_cicd_sec8_check3">Never execute remote scripts (curl | bash) in pipelines</li>
+      <li data-i18n="owasp_cicd_sec8_check4">Review and minimize permissions granted to third-party integrations regularly</li>
+    </ul>
+  </div>
+
+  <!-- CICD-SEC-9 -->
+  <div class="section">
+    <h2 data-i18n-html="owasp_cicd_sec9_heading"><span class="section-icon">9️⃣</span> CICD-SEC-9 - Improper Artifact Integrity Validation</h2>
+    <span class="badge badge-warning">High</span>
+    <h3 data-i18n="owasp_cicd_sec9_overview_heading">Overview</h3>
+    <p data-i18n="owasp_cicd_sec9_overview_desc">Build artifacts (container images, binaries, packages) flow through CI/CD pipelines to production. Without integrity validation, artifacts can be tampered with at any point: during build, in transit, in the artifact registry, or at deployment time. This breaks the trust chain from code to production.</p>
+    <div class="callout callout-danger">
+      <div class="callout-title" data-i18n="owasp_cicd_sec9_risk_title">Risk</div>
+      <p data-i18n="owasp_cicd_sec9_risk_desc">Tampered artifacts can contain backdoors, malware, or modified logic. Without signing and verification, there is no way to detect if an artifact was modified after build. Attackers can replace legitimate images in registries or intercept artifacts in transit.</p>
+    </div>
+    <h3 data-i18n="owasp_cicd_sec9_vulnerable_heading">Vulnerable Code Example</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">Bash</span>
+        <span>❌ Bad</span>
+      </div>
+      <pre><span class="comment">#!/bin/bash</span>
+<span class="comment"># Build and deploy without any integrity checks</span>
+docker build -t myregistry.com/app:latest .
+docker push myregistry.com/app:latest
+
+<span class="comment"># On deployment side — no verification</span>
+docker pull myregistry.com/app:latest  <span class="comment"># Could be tampered!</span>
+docker run myregistry.com/app:latest   <span class="comment"># Tag is mutable!</span></pre>
+    </div>
+    <h3 data-i18n="owasp_cicd_sec9_secure_heading">Secure Code Example</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">YAML (GitHub Actions)</span>
+        <span>✅ Good</span>
+      </div>
+      <pre><span class="keyword">name</span>: Build and Sign
+<span class="keyword">on</span>:
+  <span class="keyword">push</span>:
+    <span class="keyword">tags</span>: [<span class="string">'v*'</span>]
+<span class="keyword">permissions</span>:
+  <span class="keyword">id-token</span>: write
+  <span class="keyword">packages</span>: write
+<span class="keyword">jobs</span>:
+  <span class="keyword">build</span>:
+    <span class="keyword">runs-on</span>: ubuntu-latest
+    <span class="keyword">steps</span>:
+    - <span class="keyword">uses</span>: actions/checkout@v4
+    - <span class="keyword">run</span>: |
+        <span class="comment"># Build with immutable tag (SHA)</span>
+        docker build -t myregistry.com/app:${{ github.sha }} .
+        docker push myregistry.com/app:${{ github.sha }}
+    - <span class="keyword">uses</span>: sigstore/cosign-installer@v3
+    - <span class="keyword">run</span>: |
+        <span class="comment"># Sign image with keyless signing (Sigstore)</span>
+        cosign sign myregistry.com/app:${{ github.sha }}
+        <span class="comment"># Generate and attach SBOM</span>
+        syft myregistry.com/app:${{ github.sha }} -o spdx-json &gt; sbom.json
+        cosign attest --predicate sbom.json myregistry.com/app:${{ github.sha }}</pre>
+    </div>
+    <h3 data-i18n="owasp_cicd_sec9_checklist_heading">Mitigation Checklist</h3>
+    <ul class="checklist">
+      <li data-i18n="owasp_cicd_sec9_check1">Sign all build artifacts (images, binaries) using Cosign/Sigstore or Notary</li>
+      <li data-i18n="owasp_cicd_sec9_check2">Verify signatures at deployment time with admission controllers (Kyverno, OPA Gatekeeper)</li>
+      <li data-i18n="owasp_cicd_sec9_check3">Use immutable tags (SHA digests) instead of mutable tags like :latest</li>
+      <li data-i18n="owasp_cicd_sec9_check4">Implement SLSA provenance to establish a verifiable chain from source to artifact</li>
+    </ul>
+  </div>
+
+  <!-- CICD-SEC-10 -->
+  <div class="section">
+    <h2 data-i18n-html="owasp_cicd_sec10_heading"><span class="section-icon">🔟</span> CICD-SEC-10 - Insufficient Logging and Visibility</h2>
+    <span class="badge badge-info">Medium</span>
+    <h3 data-i18n="owasp_cicd_sec10_overview_heading">Overview</h3>
+    <p data-i18n="owasp_cicd_sec10_overview_desc">CI/CD environments generate critical security events: pipeline executions, configuration changes, secret access, and deployment activities. Without comprehensive logging and monitoring, malicious activities in the pipeline go undetected, and incident response is severely hampered.</p>
+    <div class="callout callout-danger">
+      <div class="callout-title" data-i18n="owasp_cicd_sec10_risk_title">Risk</div>
+      <p data-i18n="owasp_cicd_sec10_risk_desc">Without visibility into CI/CD activities, attackers can modify pipelines, exfiltrate secrets, and tamper with artifacts without triggering any alerts. The lack of audit trails makes it impossible to determine the scope and impact of a breach.</p>
+    </div>
+    <h3 data-i18n="owasp_cicd_sec10_vulnerable_heading">Vulnerable Code Example</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">Bash</span>
+        <span>❌ Bad</span>
+      </div>
+      <pre><span class="comment">#!/bin/bash</span>
+<span class="comment"># Pipeline with no logging or audit trail</span>
+<span class="keyword">echo</span> <span class="string">"Starting deployment..."</span>
+kubectl apply -f deploy.yaml
+<span class="keyword">echo</span> <span class="string">"Done."</span>
+
+<span class="comment"># No record of: who triggered this, what changed,</span>
+<span class="comment"># which image was deployed, what secrets were accessed</span>
+<span class="comment"># Build logs expire after 30 days with no archival</span></pre>
+    </div>
+    <h3 data-i18n="owasp_cicd_sec10_secure_heading">Secure Code Example</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">YAML (GitHub Actions)</span>
+        <span>✅ Good</span>
+      </div>
+      <pre><span class="keyword">name</span>: Audited Deploy
+<span class="keyword">on</span>:
+  <span class="keyword">push</span>:
+    <span class="keyword">branches</span>: [main]
+<span class="keyword">jobs</span>:
+  <span class="keyword">deploy</span>:
+    <span class="keyword">runs-on</span>: ubuntu-latest
+    <span class="keyword">steps</span>:
+    - <span class="keyword">uses</span>: actions/checkout@v4
+    - <span class="keyword">name</span>: Log deployment metadata
+      <span class="keyword">run</span>: |
+        <span class="keyword">echo</span> <span class="string">"=== Deployment Audit Log ==="</span>
+        <span class="keyword">echo</span> <span class="string">"Triggered by: ${{ github.actor }}"</span>
+        <span class="keyword">echo</span> <span class="string">"Commit: ${{ github.sha }}"</span>
+        <span class="keyword">echo</span> <span class="string">"Ref: ${{ github.ref }}"</span>
+        <span class="keyword">echo</span> <span class="string">"Workflow: ${{ github.workflow }}"</span>
+        <span class="keyword">echo</span> <span class="string">"Run ID: ${{ github.run_id }}"</span>
+    - <span class="keyword">name</span>: Deploy with audit
+      <span class="keyword">run</span>: |
+        kubectl apply -f deploy.yaml 2&gt;&amp;1 | tee deploy.log
+        <span class="comment"># Send audit event to SIEM</span>
+        curl -X POST "${{ secrets.SIEM_WEBHOOK }}" \
+          -d '{"event":"deploy","actor":"${{ github.actor }}","sha":"${{ github.sha }}"}'</pre>
+    </div>
+    <h3 data-i18n="owasp_cicd_sec10_checklist_heading">Mitigation Checklist</h3>
+    <ul class="checklist">
+      <li data-i18n="owasp_cicd_sec10_check1">Enable audit logging for all CI/CD platform activities (pipeline changes, secret access, user actions)</li>
+      <li data-i18n="owasp_cicd_sec10_check2">Forward CI/CD audit logs to a centralized SIEM with tamper-proof storage</li>
+      <li data-i18n="owasp_cicd_sec10_check3">Create alerts for suspicious activities: unusual deploy times, config changes, new service integrations</li>
+      <li data-i18n="owasp_cicd_sec10_check4">Retain build and deployment logs for compliance and forensic analysis</li>
+    </ul>
+  </div>
+
+  <!-- Summary Table -->
+  <div class="section">
+    <h2 data-i18n-html="owasp_cicd_summary_heading"><span class="section-icon">📊</span> Summary Table</h2>
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th data-i18n="owasp_cicd_table_header_id">ID</th>
+            <th data-i18n="owasp_cicd_table_header_vulnerability">Vulnerability</th>
+            <th data-i18n="owasp_cicd_table_header_severity">Severity</th>
+            <th data-i18n="owasp_cicd_table_header_mitigation">Key Mitigation</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>CICD-SEC-1</td><td data-i18n="owasp_cicd_table_sec1_name">Insufficient Flow Control Mechanisms</td><td><span class="badge badge-danger">Critical</span></td><td data-i18n="owasp_cicd_table_sec1_mitigation">Branch protection, required approvals, environment gates</td></tr>
+          <tr><td>CICD-SEC-2</td><td data-i18n="owasp_cicd_table_sec2_name">Inadequate Identity and Access Management</td><td><span class="badge badge-danger">Critical</span></td><td data-i18n="owasp_cicd_table_sec2_mitigation">Least-privilege tokens, OIDC, MFA, credential rotation</td></tr>
+          <tr><td>CICD-SEC-3</td><td data-i18n="owasp_cicd_table_sec3_name">Dependency Chain Abuse</td><td><span class="badge badge-danger">Critical</span></td><td data-i18n="owasp_cicd_table_sec3_mitigation">Lockfiles, hash verification, private registries, SCA</td></tr>
+          <tr><td>CICD-SEC-4</td><td data-i18n="owasp_cicd_table_sec4_name">Poisoned Pipeline Execution (PPE)</td><td><span class="badge badge-danger">Critical</span></td><td data-i18n="owasp_cicd_table_sec4_mitigation">Separate build/deploy, immutable pipeline defs, fork controls</td></tr>
+          <tr><td>CICD-SEC-5</td><td data-i18n="owasp_cicd_table_sec5_name">Insufficient PBAC</td><td><span class="badge badge-warning">High</span></td><td data-i18n="owasp_cicd_table_sec5_mitigation">OIDC federation, scoped IAM roles, environment separation</td></tr>
+          <tr><td>CICD-SEC-6</td><td data-i18n="owasp_cicd_table_sec6_name">Insufficient Credential Hygiene</td><td><span class="badge badge-danger">Critical</span></td><td data-i18n="owasp_cicd_table_sec6_mitigation">Secret management, log masking, rotation, secret scanning</td></tr>
+          <tr><td>CICD-SEC-7</td><td data-i18n="owasp_cicd_table_sec7_name">Insecure System Configuration</td><td><span class="badge badge-warning">High</span></td><td data-i18n="owasp_cicd_table_sec7_mitigation">Ephemeral runners, non-root, plugin updates, network isolation</td></tr>
+          <tr><td>CICD-SEC-8</td><td data-i18n="owasp_cicd_table_sec8_name">Ungoverned Usage of 3rd Party Services</td><td><span class="badge badge-warning">High</span></td><td data-i18n="owasp_cicd_table_sec8_mitigation">Service inventory, SHA pinning, no remote scripts</td></tr>
+          <tr><td>CICD-SEC-9</td><td data-i18n="owasp_cicd_table_sec9_name">Improper Artifact Integrity Validation</td><td><span class="badge badge-warning">High</span></td><td data-i18n="owasp_cicd_table_sec9_mitigation">Cosign signing, admission control, SLSA provenance</td></tr>
+          <tr><td>CICD-SEC-10</td><td data-i18n="owasp_cicd_table_sec10_name">Insufficient Logging and Visibility</td><td><span class="badge badge-info">Medium</span></td><td data-i18n="owasp_cicd_table_sec10_mitigation">Audit logging, SIEM integration, alerting, log retention</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+<script src="../js/common.js"></script>
+
+
+</body></html>

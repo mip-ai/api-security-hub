@@ -1,0 +1,781 @@
+<!DOCTYPE html><html lang="ja"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="owasp_ml_page_title">OWASP Machine Learning Security Top 10 - API Security Reference Hub</title>
+  <link rel="stylesheet" href="../css/style.css">
+
+    <link rel="alternate" hreflang="en" href="/api-security-hub/en/owasp-ml-top10.html">
+    <link rel="alternate" hreflang="ja" href="/api-security-hub/ja/owasp-ml-top10.html">
+    <link rel="alternate" hreflang="es" href="/api-security-hub/es/owasp-ml-top10.html">
+    <link rel="alternate" hreflang="pt" href="/api-security-hub/pt/owasp-ml-top10.html">
+    <link rel="alternate" hreflang="fr" href="/api-security-hub/fr/owasp-ml-top10.html">
+    <link rel="alternate" hreflang="x-default" href="/api-security-hub/en/owasp-ml-top10.html">
+</head>
+<body>
+
+  <div class="page-header">
+    <h1 data-i18n="owasp_ml_main_heading">OWASP Machine Learning Security Top 10</h1>
+    <p class="subtitle" data-i18n="owasp_ml_subtitle">機械学習システムにおける最も重要な10の脅威とその対策</p>
+  </div>
+
+  <!-- Overview -->
+  <div class="section">
+    <div class="callout callout-info">
+      <div class="callout-title" data-i18n="owasp_ml_overview_title">OWASP ML Security Top 10とは</div>
+      <p data-i18n="owasp_ml_overview_desc">OWASP Machine Learning Security Top 10は、機械学習システム特有の最も重大なセキュリティリスクを特定します。従来のソフトウェアと異なり、MLシステムは訓練データ、モデル内部、推論パイプラインを標的とした独自の攻撃に対して脆弱です。本ガイドでは、敵対的攻撃、データポイズニング、モデル窃取、サプライチェーンリスクなどを、実践的なPythonコード例とともに解説します。</p>
+    </div>
+  </div>
+
+  <!-- ML01 -->
+  <div class="section">
+    <h2 data-i18n-html="owasp_ml_ml01_heading"><span class="section-icon">1️⃣</span> ML01 - 入力操作攻撃</h2>
+    <span class="badge badge-danger">Critical</span>
+    <h3 data-i18n="owasp_ml_ml01_overview_heading">概要</h3>
+    <p data-i18n="owasp_ml_ml01_overview_desc">入力操作攻撃(敵対的攻撃)は、MLモデルに誤った予測をさせるために特別に設計された入力を作成します。画像、テキスト、その他の入力に対する小さな、しばしば知覚できない摂動によって、分類器を騙し、検出システムを回避し、コンテンツフィルタをすり抜けることができます。これは最もよく知られたML特有の攻撃ベクトルです。</p>
+    <div class="callout callout-danger">
+      <div class="callout-title" data-i18n="owasp_ml_ml01_risk_title">リスク</div>
+      <p data-i18n="owasp_ml_ml01_risk_desc">敵対的サンプルは、安全性が重要なMLシステムを回避できます:自動運転車の認識、マルウェア検出、不正検出、コンテンツモデレーション。攻撃者は、一時停止標識を制限速度標識として分類させたり、マルウェアをMLベースのアンチウイルスに対して無害に見せかけることができます。</p>
+    </div>
+    <h3 data-i18n="owasp_ml_ml01_vulnerable_heading">脆弱なコード例</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">Python</span>
+        <span>❌ Bad</span>
+      </div>
+      <pre><span class="keyword">import</span> numpy <span class="keyword">as</span> np
+<span class="keyword">from</span> tensorflow <span class="keyword">import</span> keras
+
+<span class="comment"># Model with no adversarial robustness</span>
+model = keras.models.load_model(<span class="string">"classifier.h5"</span>)
+
+<span class="keyword">def</span> <span class="function">predict</span>(image):
+    <span class="comment"># Direct prediction — no input validation or preprocessing</span>
+    result = model.predict(np.expand_dims(image, axis=0))
+    <span class="keyword">return</span> np.argmax(result)
+    <span class="comment"># No confidence threshold check</span>
+    <span class="comment"># No input bounds validation</span>
+    <span class="comment"># Vulnerable to FGSM, PGD, C&amp;W attacks</span></pre>
+    </div>
+    <h3 data-i18n="owasp_ml_ml01_secure_heading">安全なコード例</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">Python</span>
+        <span>✅ Good</span>
+      </div>
+      <pre><span class="keyword">import</span> numpy <span class="keyword">as</span> np
+<span class="keyword">from</span> tensorflow <span class="keyword">import</span> keras
+<span class="keyword">from</span> art.defences.preprocessor <span class="keyword">import</span> SpatialSmoothing
+<span class="keyword">from</span> art.defences.detector.evasion <span class="keyword">import</span> BinaryInputDetector
+
+<span class="comment"># Load adversarially trained model</span>
+model = keras.models.load_model(<span class="string">"classifier_robust.h5"</span>)
+
+<span class="comment"># Input preprocessing to remove perturbations</span>
+smoother = SpatialSmoothing(window_size=3)
+detector = BinaryInputDetector(model)
+
+<span class="keyword">def</span> <span class="function">predict_secure</span>(image):
+    <span class="comment"># Validate input bounds</span>
+    <span class="keyword">if</span> image.min() &lt; 0 <span class="keyword">or</span> image.max() &gt; 1:
+        <span class="keyword">raise</span> ValueError(<span class="string">"Input out of expected range"</span>)
+
+    <span class="comment"># Detect adversarial input</span>
+    <span class="keyword">if</span> detector.detect(image):
+        <span class="keyword">raise</span> ValueError(<span class="string">"Adversarial input detected"</span>)
+
+    <span class="comment"># Apply spatial smoothing defense</span>
+    cleaned = smoother(image)[0]
+    result = model.predict(np.expand_dims(cleaned, axis=0))
+
+    <span class="comment"># Reject low-confidence predictions</span>
+    confidence = np.max(result)
+    <span class="keyword">if</span> confidence &lt; 0.85:
+        <span class="keyword">return</span> {<span class="string">"label"</span>: <span class="string">"uncertain"</span>, <span class="string">"confidence"</span>: confidence}
+    <span class="keyword">return</span> {<span class="string">"label"</span>: np.argmax(result), <span class="string">"confidence"</span>: confidence}</pre>
+    </div>
+    <h3 data-i18n="owasp_ml_ml01_checklist_heading">対策チェックリスト</h3>
+    <ul class="checklist">
+      <li data-i18n="owasp_ml_ml01_check1">敵対的訓練を使用して、摂動攻撃に対するモデルの堅牢性を向上させる</li>
+      <li data-i18n="owasp_ml_ml01_check2">入力検証と前処理(空間平滑化、特徴量圧縮)を実装する</li>
+      <li data-i18n="owasp_ml_ml01_check3">信頼度閾値を設定し、低信頼度の予測を拒否する</li>
+      <li data-i18n="owasp_ml_ml01_check4">本番環境に敵対的入力検出器(IBM ART、Microsoft Counterfit)を展開する</li>
+    </ul>
+  </div>
+
+  <!-- ML02 -->
+  <div class="section">
+    <h2 data-i18n-html="owasp_ml_ml02_heading"><span class="section-icon">2️⃣</span> ML02 - データポイズニング攻撃</h2>
+    <span class="badge badge-danger">Critical</span>
+    <h3 data-i18n="owasp_ml_ml02_overview_heading">概要</h3>
+    <p data-i18n="owasp_ml_ml02_overview_desc">データポイズニング攻撃は、訓練データセットに悪意のあるサンプルを注入し、モデルの学習した振る舞いを破壊します。攻撃者は、バックドア(特定の誤分類を引き起こすトリガーパターン)を導入したり、決定境界をシフトさせたり、モデル全体の精度を低下させることができます。これは、訓練データがインターネットやユーザー生成コンテンツから調達される場合に特に危険です。</p>
+    <div class="callout callout-danger">
+      <div class="callout-title" data-i18n="owasp_ml_ml02_risk_title">リスク</div>
+      <p data-i18n="owasp_ml_ml02_risk_desc">汚染されたモデルは、クリーンな入力に対しては正常に動作しますが、特定のトリガーパターンが存在すると誤分類する可能性があります。例えば、バックドアを仕込まれたマルウェア分類器は、特定のバイト列を含むマルウェアサンプルを承認する可能性があります。クリーンデータに対するモデル精度は高いまま維持されるため、攻撃は隠密的です。</p>
+    </div>
+    <h3 data-i18n="owasp_ml_ml02_vulnerable_heading">脆弱なコード例</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">Python</span>
+        <span>❌ Bad</span>
+      </div>
+      <pre><span class="keyword">import</span> pandas <span class="keyword">as</span> pd
+<span class="keyword">from</span> sklearn.ensemble <span class="keyword">import</span> RandomForestClassifier
+
+<span class="comment"># Training on unvalidated, crowdsourced data</span>
+data = pd.read_csv(<span class="string">"user_submitted_data.csv"</span>)  <span class="comment"># No validation!</span>
+
+<span class="comment"># No outlier detection or data quality checks</span>
+X = data.drop(<span class="string">"label"</span>, axis=1)
+y = data[<span class="string">"label"</span>]
+
+model = RandomForestClassifier()
+model.fit(X, y)  <span class="comment"># Training directly on untrusted data!</span>
+
+<span class="comment"># No comparison against clean baseline</span>
+<span class="comment"># No data provenance tracking</span></pre>
+    </div>
+    <h3 data-i18n="owasp_ml_ml02_secure_heading">安全なコード例</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">Python</span>
+        <span>✅ Good</span>
+      </div>
+      <pre><span class="keyword">import</span> pandas <span class="keyword">as</span> pd
+<span class="keyword">import</span> numpy <span class="keyword">as</span> np
+<span class="keyword">from</span> sklearn.ensemble <span class="keyword">import</span> RandomForestClassifier, IsolationForest
+<span class="keyword">from</span> sklearn.model_selection <span class="keyword">import</span> cross_val_score
+
+<span class="comment"># Load data with provenance tracking</span>
+data = pd.read_csv(<span class="string">"training_data.csv"</span>)
+data_hash = hashlib.sha256(data.to_csv().encode()).hexdigest()
+log.info(<span class="string">f"Training data hash: <span class="keyword">{data_hash}</span>"</span>)
+
+X = data.drop(<span class="string">"label"</span>, axis=1)
+y = data[<span class="string">"label"</span>]
+
+<span class="comment"># Detect and remove anomalous samples</span>
+iso_forest = IsolationForest(contamination=0.05, random_state=42)
+outlier_mask = iso_forest.fit_predict(X) == 1
+X_clean, y_clean = X[outlier_mask], y[outlier_mask]
+log.info(<span class="string">f"Removed <span class="keyword">{(~outlier_mask).sum()}</span> outliers from <span class="keyword">{len(X)}</span> samples"</span>)
+
+<span class="comment"># Train and validate against baseline</span>
+model = RandomForestClassifier(random_state=42)
+scores = cross_val_score(model, X_clean, y_clean, cv=5)
+<span class="keyword">if</span> scores.mean() &lt; BASELINE_ACCURACY - 0.05:
+    <span class="keyword">raise</span> ValueError(<span class="string">"Model accuracy dropped — possible data poisoning"</span>)
+
+model.fit(X_clean, y_clean)</pre>
+    </div>
+    <h3 data-i18n="owasp_ml_ml02_checklist_heading">対策チェックリスト</h3>
+    <ul class="checklist">
+      <li data-i18n="owasp_ml_ml02_check1">すべての訓練データを検証・サニタイズし、外れ値検出(Isolation Forest、LOF)を使用する</li>
+      <li data-i18n="owasp_ml_ml02_check2">暗号学的ハッシュとアクセス制御でデータの出所を追跡する</li>
+      <li data-i18n="owasp_ml_ml02_check3">クリーンなベースラインに対してモデルメトリクスを比較し、精度低下を検出する</li>
+      <li data-i18n="owasp_ml_ml02_check4">重要なモデルには堅牢な訓練技術(DPSGD、認証済み防御)を使用する</li>
+    </ul>
+  </div>
+
+  <!-- ML03 -->
+  <div class="section">
+    <h2 data-i18n-html="owasp_ml_ml03_heading"><span class="section-icon">3️⃣</span> ML03 - モデル反転攻撃</h2>
+    <span class="badge badge-warning">High</span>
+    <h3 data-i18n="owasp_ml_ml03_overview_heading">概要</h3>
+    <p data-i18n="owasp_ml_ml03_overview_desc">モデル反転攻撃は、モデルにクエリを実行し、その出力を分析することで、機密性の高い訓練データを再構築します。攻撃者は、訓練中に使用された顔、医療記録、個人データなどの個人情報を復元できます。これは、機密データセット(医療、バイオメトリクス、金融データ)で訓練されたモデルにとって特に懸念されます。</p>
+    <div class="callout callout-danger">
+      <div class="callout-title" data-i18n="owasp_ml_ml03_risk_title">リスク</div>
+      <p data-i18n="owasp_ml_ml03_risk_desc">モデル反転は、訓練データから個人を特定できる情報を暴露することで、データプライバシー規制(GDPR、HIPAA)に違反する可能性があります。顔認識モデルへのAPIアクセス権を持つ攻撃者は、訓練セット内の個人の顔を再構築できます。</p>
+    </div>
+    <h3 data-i18n="owasp_ml_ml03_vulnerable_heading">脆弱なコード例</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">Python (API)</span>
+        <span>❌ Bad</span>
+      </div>
+      <pre><span class="keyword">from</span> flask <span class="keyword">import</span> Flask, request, jsonify
+
+app = Flask(__name__)
+model = load_model(<span class="string">"face_classifier.h5"</span>)
+
+<span class="keyword">@app.route</span>(<span class="string">"/predict"</span>, methods=[<span class="string">"POST"</span>])
+<span class="keyword">def</span> <span class="function">predict</span>():
+    image = request.files[<span class="string">"image"</span>]
+    result = model.predict(preprocess(image))
+    <span class="comment"># Returns full probability vector — enables model inversion!</span>
+    <span class="keyword">return</span> jsonify({
+        <span class="string">"probabilities"</span>: result.tolist(),  <span class="comment"># All class probabilities!</span>
+        <span class="string">"prediction"</span>: int(np.argmax(result)),
+        <span class="string">"confidence"</span>: float(np.max(result))
+    })
+    <span class="comment"># No rate limiting, no query logging</span>
+    <span class="comment"># Unlimited API access for gradient estimation</span></pre>
+    </div>
+    <h3 data-i18n="owasp_ml_ml03_secure_heading">安全なコード例</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">Python (API)</span>
+        <span>✅ Good</span>
+      </div>
+      <pre><span class="keyword">from</span> flask <span class="keyword">import</span> Flask, request, jsonify
+<span class="keyword">from</span> flask_limiter <span class="keyword">import</span> Limiter
+<span class="keyword">import</span> numpy <span class="keyword">as</span> np
+
+app = Flask(__name__)
+limiter = Limiter(app, default_limits=[<span class="string">"100/hour"</span>])
+model = load_model(<span class="string">"face_classifier_dp.h5"</span>)  <span class="comment"># Trained with DP</span>
+
+<span class="keyword">@app.route</span>(<span class="string">"/predict"</span>, methods=[<span class="string">"POST"</span>])
+<span class="keyword">@limiter.limit</span>(<span class="string">"100/hour"</span>)
+<span class="keyword">def</span> <span class="function">predict</span>():
+    image = request.files[<span class="string">"image"</span>]
+    result = model.predict(preprocess(image))
+
+    <span class="comment"># Return only top-1 prediction — no probability vector</span>
+    prediction = int(np.argmax(result))
+    log_query(request.remote_addr, prediction)  <span class="comment"># Audit logging</span>
+
+    <span class="keyword">return</span> jsonify({
+        <span class="string">"prediction"</span>: prediction
+        <span class="comment"># No probabilities, no confidence scores</span>
+    })</pre>
+    </div>
+    <h3 data-i18n="owasp_ml_ml03_checklist_heading">対策チェックリスト</h3>
+    <ul class="checklist">
+      <li data-i18n="owasp_ml_ml03_check1">完全な確率分布ではなく、上位k個の予測のみを返す</li>
+      <li data-i18n="owasp_ml_ml03_check2">情報漏洩を制限するため、差分プライバシー(DP-SGD)でモデルを訓練する</li>
+      <li data-i18n="owasp_ml_ml03_check3">レート制限とクエリログを実装して、抽出試行を検出する</li>
+      <li data-i18n="owasp_ml_ml03_check4">出力摂動(丸め、ノイズ)を追加して、レスポンスの精度を下げる</li>
+    </ul>
+  </div>
+
+  <!-- ML04 -->
+  <div class="section">
+    <h2 data-i18n-html="owasp_ml_ml04_heading"><span class="section-icon">4️⃣</span> ML04 - メンバーシップ推論攻撃</h2>
+    <span class="badge badge-warning">High</span>
+    <h3 data-i18n="owasp_ml_ml04_overview_heading">概要</h3>
+    <p data-i18n="owasp_ml_ml04_overview_desc">メンバーシップ推論攻撃は、特定のデータポイントがモデルの訓練データセットで使用されたかどうかを判定します。既知の入力と未知の入力に対するモデルの信頼度スコアと振る舞いを分析することで、攻撃者は個人的なメンバーシップ情報を推測できます。これは機密データで訓練されたモデルにとって重大なプライバシー脅威です。</p>
+    <div class="callout callout-danger">
+      <div class="callout-title" data-i18n="owasp_ml_ml04_risk_title">リスク</div>
+      <p data-i18n="owasp_ml_ml04_risk_desc">メンバーシップ推論は、特定の個人のデータが訓練に使用されたことを明らかにする可能性があります。例えば、患者の記録が臨床データセットに含まれていたこと、または個人の顔が監視訓練に使用されたことを確認できます。これはプライバシー期待とGDPRなどの規制に違反する可能性があります。</p>
+    </div>
+    <h3 data-i18n="owasp_ml_ml04_vulnerable_heading">脆弱なコード例</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">Python</span>
+        <span>❌ Bad</span>
+      </div>
+      <pre><span class="keyword">from</span> sklearn.neural_network <span class="keyword">import</span> MLPClassifier
+
+<span class="comment"># Overfitted model — memorizes training data</span>
+model = MLPClassifier(
+    hidden_layer_sizes=(512, 512, 256),  <span class="comment"># Over-parameterized!</span>
+    max_iter=1000,
+    <span class="comment"># No regularization</span>
+    <span class="comment"># No early stopping</span>
+)
+model.fit(X_train, y_train)
+
+<span class="comment"># Model memorizes training data → membership inference possible</span>
+<span class="comment"># Training accuracy: 99.9% vs Test accuracy: 82%</span>
+<span class="comment"># This gap indicates overfitting = information leakage</span>
+
+<span class="keyword">def</span> <span class="function">predict_with_confidence</span>(x):
+    proba = model.predict_proba([x])[0]
+    <span class="keyword">return</span> {<span class="string">"probabilities"</span>: proba.tolist()}  <span class="comment"># Leaks membership info!</span></pre>
+    </div>
+    <h3 data-i18n="owasp_ml_ml04_secure_heading">安全なコード例</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">Python</span>
+        <span>✅ Good</span>
+      </div>
+      <pre><span class="keyword">from</span> sklearn.neural_network <span class="keyword">import</span> MLPClassifier
+<span class="keyword">import</span> numpy <span class="keyword">as</span> np
+
+<span class="comment"># Regularized model with early stopping to reduce overfitting</span>
+model = MLPClassifier(
+    hidden_layer_sizes=(128, 64),
+    max_iter=500,
+    alpha=0.01,               <span class="comment"># L2 regularization</span>
+    early_stopping=True,       <span class="comment"># Prevents memorization</span>
+    validation_fraction=0.15,
+)
+model.fit(X_train, y_train)
+
+<span class="comment"># Verify train/test gap is small (low overfitting)</span>
+train_acc = model.score(X_train, y_train)
+test_acc = model.score(X_test, y_test)
+<span class="keyword">assert</span> train_acc - test_acc &lt; 0.05, <span class="string">"Overfitting detected!"</span>
+
+<span class="keyword">def</span> <span class="function">predict_secure</span>(x):
+    pred = model.predict([x])[0]
+    <span class="keyword">return</span> {<span class="string">"prediction"</span>: int(pred)}  <span class="comment"># Label only, no probabilities</span></pre>
+    </div>
+    <h3 data-i18n="owasp_ml_ml04_checklist_heading">対策チェックリスト</h3>
+    <ul class="checklist">
+      <li data-i18n="owasp_ml_ml04_check1">正則化(L2、ドロップアウト、早期停止)を使用してモデルの過学習を防止する</li>
+      <li data-i18n="owasp_ml_ml04_check2">差分プライバシーで訓練し、正式なメンバーシッププライバシー保証を提供する</li>
+      <li data-i18n="owasp_ml_ml04_check3">訓練精度とテスト精度の差を監視・最小化する</li>
+      <li data-i18n="owasp_ml_ml04_check4">API出力を予測のみに制限し、信頼度スコアや確率を公開しない</li>
+    </ul>
+  </div>
+
+  <!-- ML05 -->
+  <div class="section">
+    <h2 data-i18n-html="owasp_ml_ml05_heading"><span class="section-icon">5️⃣</span> ML05 - モデル窃取</h2>
+    <span class="badge badge-danger">Critical</span>
+    <h3 data-i18n="owasp_ml_ml05_overview_heading">概要</h3>
+    <p data-i18n="owasp_ml_ml05_overview_desc">モデル窃取(モデル抽出)攻撃は、専有のMLモデルを体系的にクエリし、入出力ペアで代替モデルを訓練することで、機能的なコピーを作成します。盗まれたモデルは、敵対的サンプルの発見、商業的競合、またはモデルの訓練データのリバースエンジニアリングに使用できます。</p>
+    <div class="callout callout-danger">
+      <div class="callout-title" data-i18n="owasp_ml_ml05_risk_title">リスク</div>
+      <p data-i18n="owasp_ml_ml05_risk_desc">盗まれたモデルは、知的財産と競争優位性の損失を表します。抽出されたモデルは、オフラインで敵対的攻撃を作成したり、決定境界を理解するために使用できます。数百万ドルの訓練投資が、数千のAPIクエリで複製される可能性があります。</p>
+    </div>
+    <h3 data-i18n="owasp_ml_ml05_vulnerable_heading">脆弱なコード例</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">Python (API)</span>
+        <span>❌ Bad</span>
+      </div>
+      <pre><span class="keyword">from</span> flask <span class="keyword">import</span> Flask, request, jsonify
+
+app = Flask(__name__)
+model = load_proprietary_model()
+
+<span class="keyword">@app.route</span>(<span class="string">"/predict"</span>, methods=[<span class="string">"POST"</span>])
+<span class="keyword">def</span> <span class="function">predict</span>():
+    data = request.json[<span class="string">"features"</span>]
+    result = model.predict_proba([data])[0]
+
+    <span class="comment"># Returns full probability distribution</span>
+    <span class="keyword">return</span> jsonify({
+        <span class="string">"probabilities"</span>: result.tolist(),
+        <span class="string">"prediction"</span>: int(np.argmax(result))
+    })
+    <span class="comment"># No rate limiting — unlimited queries</span>
+    <span class="comment"># No anomaly detection on query patterns</span>
+    <span class="comment"># Attacker can extract model with ~10K queries</span></pre>
+    </div>
+    <h3 data-i18n="owasp_ml_ml05_secure_heading">安全なコード例</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">Python (API)</span>
+        <span>✅ Good</span>
+      </div>
+      <pre><span class="keyword">from</span> flask <span class="keyword">import</span> Flask, request, jsonify
+<span class="keyword">from</span> flask_limiter <span class="keyword">import</span> Limiter
+<span class="keyword">import</span> numpy <span class="keyword">as</span> np
+
+app = Flask(__name__)
+limiter = Limiter(app, default_limits=[<span class="string">"50/hour"</span>])
+
+<span class="comment"># Watermarked model for theft detection</span>
+model = load_watermarked_model()
+query_monitor = QueryPatternDetector()
+
+<span class="keyword">@app.route</span>(<span class="string">"/predict"</span>, methods=[<span class="string">"POST"</span>])
+<span class="keyword">@limiter.limit</span>(<span class="string">"50/hour"</span>)
+<span class="keyword">def</span> <span class="function">predict</span>():
+    data = request.json[<span class="string">"features"</span>]
+    api_key = request.headers.get(<span class="string">"X-API-Key"</span>)
+
+    <span class="comment"># Detect extraction patterns (uniform sampling, grid queries)</span>
+    <span class="keyword">if</span> query_monitor.is_suspicious(api_key, data):
+        log_alert(<span class="string">f"Possible extraction: <span class="keyword">{api_key}</span>"</span>)
+        <span class="keyword">return</span> jsonify({<span class="string">"error"</span>: <span class="string">"rate limited"</span>}), 429
+
+    result = model.predict([data])[0]
+    <span class="keyword">return</span> jsonify({
+        <span class="string">"prediction"</span>: int(result)  <span class="comment"># Label only, no probabilities</span>
+    })</pre>
+    </div>
+    <h3 data-i18n="owasp_ml_ml05_checklist_heading">対策チェックリスト</h3>
+    <ul class="checklist">
+      <li data-i18n="owasp_ml_ml05_check1">厳格なレート制限とユーザーごとのクエリクォータを実装する</li>
+      <li data-i18n="owasp_ml_ml05_check2">確率分布なしで最小限の出力(ラベルのみ)を返す</li>
+      <li data-i18n="owasp_ml_ml05_check3">モデル透かしを埋め込み、抽出されたモデルの窃取を検出・証明する</li>
+      <li data-i18n="owasp_ml_ml05_check4">体系的な抽出動作(グリッド検索、境界探索)のクエリパターンを監視する</li>
+    </ul>
+  </div>
+
+  <!-- ML06 -->
+  <div class="section">
+    <h2 data-i18n-html="owasp_ml_ml06_heading"><span class="section-icon">6️⃣</span> ML06 - AIサプライチェーン攻撃</h2>
+    <span class="badge badge-danger">Critical</span>
+    <h3 data-i18n="owasp_ml_ml06_overview_heading">概要</h3>
+    <p data-i18n="owasp_ml_ml06_overview_desc">AIサプライチェーン攻撃は、ML開発パイプラインを標的とします:モデルハブからの事前訓練済みモデル、サードパーティデータセット、MLフレームワーク、依存関係。悪意のあるモデルには隠されたバックドアが含まれ、侵害されたライブラリは脆弱性を注入する可能性があります。MLフレームワークで使用されるシリアル化形式(Pickle、SavedModel)は、ロード時に任意のコードを実行できます。</p>
+    <div class="callout callout-danger">
+      <div class="callout-title" data-i18n="owasp_ml_ml06_risk_title">リスク</div>
+      <p data-i18n="owasp_ml_ml06_risk_desc">悪意のあるモデルファイルをロードすると、任意のコードを実行できます(Pickleデシリアライゼーション攻撃)。信頼できないソースからの事前訓練済みモデルにはバックドアが含まれている可能性があります。侵害されたMLライブラリは、すべての下流ユーザーに影響します。MLサプライチェーンは、従来のソフトウェアサプライチェーンよりもセキュリティ制御が少ないです。</p>
+    </div>
+    <h3 data-i18n="owasp_ml_ml06_vulnerable_heading">脆弱なコード例</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">Python</span>
+        <span>❌ Bad</span>
+      </div>
+      <pre><span class="keyword">import</span> pickle
+<span class="keyword">import</span> torch
+
+<span class="comment"># Loading untrusted model — arbitrary code execution!</span>
+<span class="keyword">with</span> open(<span class="string">"model_from_internet.pkl"</span>, <span class="string">"rb"</span>) <span class="keyword">as</span> f:
+    model = pickle.load(f)  <span class="comment"># DANGEROUS: can execute any code!</span>
+
+<span class="comment"># Loading unverified PyTorch model</span>
+model = torch.load(<span class="string">"untrusted_model.pt"</span>)  <span class="comment"># Uses pickle internally!</span>
+
+<span class="comment"># Using unvetted model from public hub</span>
+<span class="keyword">from</span> transformers <span class="keyword">import</span> AutoModel
+model = AutoModel.from_pretrained(<span class="string">"random-user/suspicious-model"</span>)
+<span class="comment"># No hash verification, no security scan</span></pre>
+    </div>
+    <h3 data-i18n="owasp_ml_ml06_secure_heading">安全なコード例</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">Python</span>
+        <span>✅ Good</span>
+      </div>
+      <pre><span class="keyword">import</span> torch
+<span class="keyword">import</span> hashlib
+<span class="keyword">from</span> safetensors.torch <span class="keyword">import</span> load_file
+
+<span class="comment"># Use SafeTensors — no arbitrary code execution</span>
+model_state = load_file(<span class="string">"model.safetensors"</span>)  <span class="comment"># Safe format!</span>
+model = MyModel()
+model.load_state_dict(model_state)
+
+<span class="comment"># Verify model hash before loading</span>
+EXPECTED_HASH = <span class="string">"sha256:a1b2c3d4..."</span>
+<span class="keyword">with</span> open(<span class="string">"model.safetensors"</span>, <span class="string">"rb"</span>) <span class="keyword">as</span> f:
+    actual_hash = <span class="string">"sha256:"</span> + hashlib.sha256(f.read()).hexdigest()
+<span class="keyword">assert</span> actual_hash == EXPECTED_HASH, <span class="string">"Model integrity check failed!"</span>
+
+<span class="comment"># Use trusted models from verified organizations</span>
+<span class="keyword">from</span> transformers <span class="keyword">import</span> AutoModel
+model = AutoModel.from_pretrained(
+    <span class="string">"google/bert-base-uncased"</span>,  <span class="comment"># Verified organization</span>
+    revision=<span class="string">"a265f77"</span>,           <span class="comment"># Pin to specific commit</span>
+)</pre>
+    </div>
+    <h3 data-i18n="owasp_ml_ml06_checklist_heading">対策チェックリスト</h3>
+    <ul class="checklist">
+      <li data-i18n="owasp_ml_ml06_check1">モデルのシリアル化にはPickleの代わりにSafeTensorsまたはONNX形式を使用する</li>
+      <li data-i18n="owasp_ml_ml06_check2">ロード前に暗号学的ハッシュでモデルの整合性を検証する</li>
+      <li data-i18n="owasp_ml_ml06_check3">信頼できるモデルハブ上の検証済み組織からのみモデルをダウンロードする</li>
+      <li data-i18n="owasp_ml_ml06_check4">ML依存関係の脆弱性をスキャンし、要件内でバージョンを固定する</li>
+    </ul>
+  </div>
+
+  <!-- ML07 -->
+  <div class="section">
+    <h2 data-i18n-html="owasp_ml_ml07_heading"><span class="section-icon">7️⃣</span> ML07 - 転移学習攻撃</h2>
+    <span class="badge badge-warning">High</span>
+    <h3 data-i18n="owasp_ml_ml07_overview_heading">概要</h3>
+    <p data-i18n="owasp_ml_ml07_overview_desc">転移学習攻撃は、事前訓練済みモデルをファインチューニングする一般的な実践を悪用します。ベースモデルに埋め込まれたバックドアは、ファインチューニングを通じて持続し、下流モデルでアクティブなままです。人気のある事前訓練済みモデルを公開する攻撃者は、それを基盤として使用するすべてのアプリケーションを侵害できます。</p>
+    <div class="callout callout-danger">
+      <div class="callout-title" data-i18n="owasp_ml_ml07_risk_title">リスク</div>
+      <p data-i18n="owasp_ml_ml07_risk_desc">事前訓練済みモデルのバックドアは、転移学習中にしばしば凍結される深い層に埋め込まれているため、ファインチューニングを生き延びます。単一の侵害された基盤モデルが、数千の下流アプリケーションに影響を与える可能性があります。攻撃はスケーラブルで検出が困難です。</p>
+    </div>
+    <h3 data-i18n="owasp_ml_ml07_vulnerable_heading">脆弱なコード例</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">Python</span>
+        <span>❌ Bad</span>
+      </div>
+      <pre><span class="keyword">from</span> transformers <span class="keyword">import</span> AutoModelForSequenceClassification
+
+<span class="comment"># Fine-tuning an unvetted pre-trained model</span>
+model = AutoModelForSequenceClassification.from_pretrained(
+    <span class="string">"unknown-user/bert-finetuned-sentiment"</span>,  <span class="comment"># Untrusted source!</span>
+    num_labels=2
+)
+
+<span class="comment"># Freezing base layers — preserves any hidden backdoor</span>
+<span class="keyword">for</span> param <span class="keyword">in</span> model.base_model.parameters():
+    param.requires_grad = False  <span class="comment"># Backdoor in frozen layers persists!</span>
+
+<span class="comment"># Fine-tune only the classification head</span>
+trainer.train()  <span class="comment"># Backdoor remains undetected</span></pre>
+    </div>
+    <h3 data-i18n="owasp_ml_ml07_secure_heading">安全なコード例</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">Python</span>
+        <span>✅ Good</span>
+      </div>
+      <pre><span class="keyword">from</span> transformers <span class="keyword">import</span> AutoModelForSequenceClassification
+<span class="keyword">from</span> neural_cleanse <span class="keyword">import</span> BackdoorDetector
+
+<span class="comment"># Use only verified, trusted base models</span>
+model = AutoModelForSequenceClassification.from_pretrained(
+    <span class="string">"google/bert-base-uncased"</span>,  <span class="comment"># Trusted source</span>
+    num_labels=2,
+    revision=<span class="string">"main"</span>,
+)
+
+<span class="comment"># Scan pre-trained model for backdoors before fine-tuning</span>
+detector = BackdoorDetector(model)
+<span class="keyword">if</span> detector.scan():
+    <span class="keyword">raise</span> SecurityError(<span class="string">"Potential backdoor detected in base model"</span>)
+
+<span class="comment"># Fine-tune ALL layers (not just head) to overwrite potential backdoors</span>
+<span class="keyword">for</span> param <span class="keyword">in</span> model.parameters():
+    param.requires_grad = True  <span class="comment"># Train all layers</span>
+
+<span class="comment"># Validate with clean test set + trigger test set</span>
+trainer.train()
+evaluate_for_backdoors(model, trigger_test_set)</pre>
+    </div>
+    <h3 data-i18n="owasp_ml_ml07_checklist_heading">対策チェックリスト</h3>
+    <ul class="checklist">
+      <li data-i18n="owasp_ml_ml07_check1">信頼できる検証済みソース(主要な研究所、公式リポジトリ)からの事前訓練済みモデルのみを使用する</li>
+      <li data-i18n="owasp_ml_ml07_check2">Neural Cleanseなどのツールを使用して、事前訓練済みモデルのバックドアをスキャンする</li>
+      <li data-i18n="owasp_ml_ml07_check3">埋め込まれたバックドアを上書きするために、すべての層(ヘッドだけでなく)をファインチューニングする</li>
+      <li data-i18n="owasp_ml_ml07_check4">既知のトリガーパターンと異常な入力に対してファインチューニングされたモデルをテストする</li>
+    </ul>
+  </div>
+
+  <!-- ML08 -->
+  <div class="section">
+    <h2 data-i18n-html="owasp_ml_ml08_heading"><span class="section-icon">8️⃣</span> ML08 - モデルスキュー</h2>
+    <span class="badge badge-info">Medium</span>
+    <h3 data-i18n="owasp_ml_ml08_overview_heading">概要</h3>
+    <p data-i18n="owasp_ml_ml08_overview_desc">モデルスキューは、本番環境のデータ分布が訓練データ分布と大きく異なる場合に発生します(訓練・サービング間スキュー)。これは時間の経過とともに自然に発生する(データドリフト)か、攻撃者が本番入力分布を操作してモデルのパフォーマンスを低下させたり、予測にバイアスをかけることで意図的に引き起こされる可能性があります。</p>
+    <div class="callout callout-danger">
+      <div class="callout-title" data-i18n="owasp_ml_ml08_risk_title">リスク</div>
+      <p data-i18n="owasp_ml_ml08_risk_desc">モデルスキューは、モデルが誤った予測を高い信頼度で生成する静かな障害を引き起こします。金融システムでは、攻撃者はスキューを悪用して不正検出を回避できます。推薦システムでは、特定のコンテンツや製品を宣伝するためにスキューを意図的に誘発できます。</p>
+    </div>
+    <h3 data-i18n="owasp_ml_ml08_vulnerable_heading">脆弱なコード例</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">Python</span>
+        <span>❌ Bad</span>
+      </div>
+      <pre><span class="keyword">import</span> joblib
+
+<span class="comment"># Deploy model with no drift monitoring</span>
+model = joblib.load(<span class="string">"model_trained_2023.pkl"</span>)
+
+<span class="keyword">def</span> <span class="function">predict</span>(features):
+    <span class="comment"># No check if input distribution has changed</span>
+    <span class="comment"># No feature validation against training schema</span>
+    <span class="keyword">return</span> model.predict([features])[0]
+    <span class="comment"># Model may be months/years old</span>
+    <span class="comment"># No monitoring of prediction distribution</span>
+    <span class="comment"># Silent degradation goes undetected</span></pre>
+    </div>
+    <h3 data-i18n="owasp_ml_ml08_secure_heading">安全なコード例</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">Python</span>
+        <span>✅ Good</span>
+      </div>
+      <pre><span class="keyword">import</span> joblib
+<span class="keyword">import</span> numpy <span class="keyword">as</span> np
+<span class="keyword">from</span> scipy <span class="keyword">import</span> stats
+<span class="keyword">from</span> evidently <span class="keyword">import</span> ColumnDriftMetric
+
+model = joblib.load(<span class="string">"model.pkl"</span>)
+training_stats = joblib.load(<span class="string">"training_stats.pkl"</span>)
+
+<span class="keyword">def</span> <span class="function">predict_with_monitoring</span>(features):
+    <span class="comment"># Validate feature schema and ranges</span>
+    <span class="keyword">for</span> i, (val, stat) <span class="keyword">in</span> enumerate(zip(features, training_stats)):
+        z_score = abs((val - stat[<span class="string">"mean"</span>]) / stat[<span class="string">"std"</span>])
+        <span class="keyword">if</span> z_score &gt; 5:
+            log.warning(<span class="string">f"Feature <span class="keyword">{i}</span> out of distribution: z=<span class="keyword">{z_score:.1f}</span>"</span>)
+
+    prediction = model.predict([features])[0]
+
+    <span class="comment"># Log prediction distribution for drift monitoring</span>
+    metrics_collector.log(features, prediction)
+
+    <span class="comment"># Periodic drift detection (run by monitoring job)</span>
+    <span class="comment"># drift_report = ColumnDriftMetric().calculate(reference, current)</span>
+    <span class="comment"># Alert if drift detected → trigger retraining</span>
+
+    <span class="keyword">return</span> prediction</pre>
+    </div>
+    <h3 data-i18n="owasp_ml_ml08_checklist_heading">対策チェックリスト</h3>
+    <ul class="checklist">
+      <li data-i18n="owasp_ml_ml08_check1">継続的なデータドリフト監視(Evidently、Whylogs、Great Expectations)を実装する</li>
+      <li data-i18n="owasp_ml_ml08_check2">訓練データのスキーマと統計的境界に対して入力特徴量を検証する</li>
+      <li data-i18n="owasp_ml_ml08_check3">ドリフトが閾値を超えた場合の自動アラートと再訓練トリガーを設定する</li>
+      <li data-i18n="owasp_ml_ml08_check4">時間経過に伴う予測分布を監視し、静かなモデル劣化を検出する</li>
+    </ul>
+  </div>
+
+  <!-- ML09 -->
+  <div class="section">
+    <h2 data-i18n-html="owasp_ml_ml09_heading"><span class="section-icon">9️⃣</span> ML09 - 出力整合性攻撃</h2>
+    <span class="badge badge-warning">High</span>
+    <h3 data-i18n="owasp_ml_ml09_overview_heading">概要</h3>
+    <p data-i18n="owasp_ml_ml09_overview_desc">出力整合性攻撃は、モデル予測がモデルを離れた後、消費アプリケーションに到達する前に改ざんします。これには、予測APIに対する中間者攻撃、モデルサービングインフラストラクチャの操作、キャッシュされた予測の改ざんが含まれます。攻撃はモデル自体ではなく、推論パイプラインを標的とします。</p>
+    <div class="callout callout-danger">
+      <div class="callout-title" data-i18n="owasp_ml_ml09_risk_title">リスク</div>
+      <p data-i18n="owasp_ml_ml09_risk_desc">改ざんされた予測は、下流システムで誤った決定を引き起こす可能性があります:不正取引の承認、医療状態の誤診、または安全システムの上書き。モデル自体が侵害されていないため、標準的なモデル監視では攻撃を検出できません。</p>
+    </div>
+    <h3 data-i18n="owasp_ml_ml09_vulnerable_heading">脆弱なコード例</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">Python</span>
+        <span>❌ Bad</span>
+      </div>
+      <pre><span class="keyword">import</span> requests
+
+<span class="comment"># Consuming model predictions over unencrypted HTTP</span>
+<span class="keyword">def</span> <span class="function">get_prediction</span>(features):
+    response = requests.post(
+        <span class="string">"http://ml-service/predict"</span>,  <span class="comment"># HTTP, not HTTPS!</span>
+        json={<span class="string">"features"</span>: features}
+    )
+    result = response.json()
+    <span class="comment"># No integrity verification of the response</span>
+    <span class="comment"># No validation of prediction format</span>
+    <span class="keyword">return</span> result[<span class="string">"prediction"</span>]  <span class="comment"># Could be tampered!</span></pre>
+    </div>
+    <h3 data-i18n="owasp_ml_ml09_secure_heading">安全なコード例</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">Python</span>
+        <span>✅ Good</span>
+      </div>
+      <pre><span class="keyword">import</span> requests
+<span class="keyword">import</span> hmac
+<span class="keyword">import</span> hashlib
+
+<span class="keyword">def</span> <span class="function">get_prediction</span>(features):
+    response = requests.post(
+        <span class="string">"https://ml-service/predict"</span>,  <span class="comment"># HTTPS (TLS)</span>
+        json={<span class="string">"features"</span>: features},
+        headers={<span class="string">"Authorization"</span>: <span class="string">f"Bearer <span class="keyword">{API_TOKEN}</span>"</span>},
+        verify=True  <span class="comment"># Verify TLS certificate</span>
+    )
+    result = response.json()
+
+    <span class="comment"># Verify response integrity with HMAC signature</span>
+    signature = response.headers.get(<span class="string">"X-Signature"</span>)
+    expected = hmac.new(
+        SHARED_SECRET, str(result).encode(), hashlib.sha256
+    ).hexdigest()
+    <span class="keyword">if</span> <span class="keyword">not</span> hmac.compare_digest(signature, expected):
+        <span class="keyword">raise</span> IntegrityError(<span class="string">"Response signature mismatch!"</span>)
+
+    <span class="comment"># Validate prediction is within expected range</span>
+    pred = result[<span class="string">"prediction"</span>]
+    <span class="keyword">if</span> pred <span class="keyword">not in</span> VALID_LABELS:
+        <span class="keyword">raise</span> ValueError(<span class="string">f"Unexpected prediction: <span class="keyword">{pred}</span>"</span>)
+    <span class="keyword">return</span> pred</pre>
+    </div>
+    <h3 data-i18n="owasp_ml_ml09_checklist_heading">対策チェックリスト</h3>
+    <ul class="checklist">
+      <li data-i18n="owasp_ml_ml09_check1">すべてのモデル推論通信にTLS/mTLSを使用する</li>
+      <li data-i18n="owasp_ml_ml09_check2">整合性検証のためにHMACまたはデジタル署名でモデル応答に署名する</li>
+      <li data-i18n="owasp_ml_ml09_check3">予測出力を期待される範囲と形式に対して検証する</li>
+      <li data-i18n="owasp_ml_ml09_check4">消費者側で予測分布の異常を監視する</li>
+    </ul>
+  </div>
+
+  <!-- ML10 -->
+  <div class="section">
+    <h2 data-i18n-html="owasp_ml_ml10_heading"><span class="section-icon">🔟</span> ML10 - モデルポイズニング</h2>
+    <span class="badge badge-danger">Critical</span>
+    <h3 data-i18n="owasp_ml_ml10_overview_heading">概要</h3>
+    <p data-i18n="owasp_ml_ml10_overview_desc">モデルポイズニングは、訓練済みモデルの重み、パラメータ、またはアーキテクチャを直接変更して、バックドアを注入したり動作を変更します。訓練データを破壊するデータポイズニングとは異なり、モデルポイズニングはモデルアーティファクト自体を標的とします - 侵害されたモデルリポジトリ、内部脅威、またはモデルストレージと展開パイプラインへのサプライチェーン攻撃を通じて。</p>
+    <div class="callout callout-danger">
+      <div class="callout-title" data-i18n="owasp_ml_ml10_risk_title">リスク</div>
+      <p data-i18n="owasp_ml_ml10_risk_desc">直接汚染されたモデルには、標準テストではほぼ検出不可能な高度に標的化されたバックドアが含まれる可能性があります。攻撃者は、トリガー入力に対するモデルの動作を正確に制御できます。モデルレジストリまたは展開パイプラインが侵害された場合、すべての展開が汚染されたモデルを使用します。</p>
+    </div>
+    <h3 data-i18n="owasp_ml_ml10_vulnerable_heading">脆弱なコード例</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">Python</span>
+        <span>❌ Bad</span>
+      </div>
+      <pre><span class="keyword">import</span> mlflow
+
+<span class="comment"># Loading model from registry with no integrity checks</span>
+model_uri = <span class="string">"models:/fraud-detector/Production"</span>
+model = mlflow.pyfunc.load_model(model_uri)
+
+<span class="comment"># No hash verification</span>
+<span class="comment"># No signature validation</span>
+<span class="comment"># No comparison with expected model metrics</span>
+<span class="comment"># Model registry has weak access controls</span>
+<span class="comment"># Anyone with push access can replace the model</span>
+
+predictions = model.predict(new_data)</pre>
+    </div>
+    <h3 data-i18n="owasp_ml_ml10_secure_heading">安全なコード例</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">Python</span>
+        <span>✅ Good</span>
+      </div>
+      <pre><span class="keyword">import</span> mlflow
+<span class="keyword">import</span> hashlib
+<span class="keyword">from</span> sigstore.verify <span class="keyword">import</span> Verifier
+
+<span class="comment"># Verify model signature before loading</span>
+model_uri = <span class="string">"models:/fraud-detector/Production"</span>
+model_path = mlflow.artifacts.download_artifacts(model_uri)
+
+<span class="comment"># Cryptographic signature verification</span>
+verifier = Verifier.production()
+verifier.verify(
+    model_path,
+    expected_identity=<span class="string">"ml-team@company.com"</span>
+)
+
+<span class="comment"># Verify model hash against approved registry</span>
+model_hash = hash_directory(model_path)
+approved_hash = get_approved_hash(<span class="string">"fraud-detector"</span>, <span class="string">"Production"</span>)
+<span class="keyword">assert</span> model_hash == approved_hash, <span class="string">"Model integrity check failed!"</span>
+
+<span class="comment"># Validate model metrics on reference dataset before serving</span>
+model = mlflow.pyfunc.load_model(model_path)
+ref_score = evaluate(model, reference_dataset)
+<span class="keyword">assert</span> ref_score &gt;= MINIMUM_ACCURACY, <span class="string">"Model quality below threshold"</span>
+
+predictions = model.predict(new_data)</pre>
+    </div>
+    <h3 data-i18n="owasp_ml_ml10_checklist_heading">対策チェックリスト</h3>
+    <ul class="checklist">
+      <li data-i18n="owasp_ml_ml10_check1">モデルアーティファクトに暗号学的に署名し、展開前に署名を検証する</li>
+      <li data-i18n="owasp_ml_ml10_check2">監査ログとともにモデルレジストリに厳格なアクセス制御を実装する</li>
+      <li data-i18n="owasp_ml_ml10_check3">本番環境への昇格前に参照データセットでモデルメトリクスを検証する</li>
+      <li data-i18n="owasp_ml_ml10_check4">不変のモデルストレージを使用し、承認されたモデルバージョンのハッシュレジストリを維持する</li>
+    </ul>
+  </div>
+
+  <!-- Summary Table -->
+  <div class="section">
+    <h2 data-i18n-html="owasp_ml_summary_heading"><span class="section-icon">📊</span> まとめ表</h2>
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th data-i18n="owasp_ml_table_header_id">ID</th>
+            <th data-i18n="owasp_ml_table_header_vulnerability">脆弱性</th>
+            <th data-i18n="owasp_ml_table_header_severity">深刻度</th>
+            <th data-i18n="owasp_ml_table_header_mitigation">主な対策</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>ML01</td><td data-i18n="owasp_ml_table_ml01_name">入力操作攻撃</td><td><span class="badge badge-danger">Critical</span></td><td data-i18n="owasp_ml_table_ml01_mitigation">敵対的訓練、入力検証、信頼度閾値</td></tr>
+          <tr><td>ML02</td><td data-i18n="owasp_ml_table_ml02_name">データポイズニング攻撃</td><td><span class="badge badge-danger">Critical</span></td><td data-i18n="owasp_ml_table_ml02_mitigation">外れ値検出、データ出所、ベースライン比較</td></tr>
+          <tr><td>ML03</td><td data-i18n="owasp_ml_table_ml03_name">モデル反転攻撃</td><td><span class="badge badge-warning">High</span></td><td data-i18n="owasp_ml_table_ml03_mitigation">差分プライバシー、最小限の出力、レート制限</td></tr>
+          <tr><td>ML04</td><td data-i18n="owasp_ml_table_ml04_name">メンバーシップ推論攻撃</td><td><span class="badge badge-warning">High</span></td><td data-i18n="owasp_ml_table_ml04_mitigation">正則化、DP訓練、確率非公開</td></tr>
+          <tr><td>ML05</td><td data-i18n="owasp_ml_table_ml05_name">モデル窃取</td><td><span class="badge badge-danger">Critical</span></td><td data-i18n="owasp_ml_table_ml05_mitigation">レート制限、透かし、クエリパターン検出</td></tr>
+          <tr><td>ML06</td><td data-i18n="owasp_ml_table_ml06_name">AIサプライチェーン攻撃</td><td><span class="badge badge-danger">Critical</span></td><td data-i18n="owasp_ml_table_ml06_mitigation">SafeTensors、ハッシュ検証、信頼できるソースのみ</td></tr>
+          <tr><td>ML07</td><td data-i18n="owasp_ml_table_ml07_name">転移学習攻撃</td><td><span class="badge badge-warning">High</span></td><td data-i18n="owasp_ml_table_ml07_mitigation">信頼できるベースモデル、バックドアスキャン、完全ファインチューニング</td></tr>
+          <tr><td>ML08</td><td data-i18n="owasp_ml_table_ml08_name">モデルスキュー</td><td><span class="badge badge-info">Medium</span></td><td data-i18n="owasp_ml_table_ml08_mitigation">ドリフト監視、入力検証、自動再訓練</td></tr>
+          <tr><td>ML09</td><td data-i18n="owasp_ml_table_ml09_name">出力整合性攻撃</td><td><span class="badge badge-warning">High</span></td><td data-i18n="owasp_ml_table_ml09_mitigation">TLS/mTLS、応答署名、出力検証</td></tr>
+          <tr><td>ML10</td><td data-i18n="owasp_ml_table_ml10_name">モデルポイズニング</td><td><span class="badge badge-danger">Critical</span></td><td data-i18n="owasp_ml_table_ml10_mitigation">モデル署名、レジストリアクセス制御、メトリクス検証</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+<script src="../js/common.js"></script>
+
+</body></html>

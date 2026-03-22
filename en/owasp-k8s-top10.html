@@ -1,0 +1,780 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="owasp_k8s_page_title">OWASP Kubernetes Top 10 - API Security Reference Hub</title>
+  <link rel="stylesheet" href="../css/style.css">
+
+    <link rel="alternate" hreflang="en" href="/api-security-hub/en/owasp-k8s-top10.html">
+    <link rel="alternate" hreflang="ja" href="/api-security-hub/ja/owasp-k8s-top10.html">
+    <link rel="alternate" hreflang="es" href="/api-security-hub/es/owasp-k8s-top10.html">
+    <link rel="alternate" hreflang="pt" href="/api-security-hub/pt/owasp-k8s-top10.html">
+    <link rel="alternate" hreflang="fr" href="/api-security-hub/fr/owasp-k8s-top10.html">
+    <link rel="alternate" hreflang="x-default" href="/api-security-hub/en/owasp-k8s-top10.html">
+</head>
+<body>
+
+  <div class="page-header">
+    <h1 data-i18n="owasp_k8s_main_heading">OWASP Kubernetes Top 10</h1>
+    <p class="subtitle" data-i18n="owasp_k8s_subtitle">The 10 most critical security risks in Kubernetes environments and how to mitigate them.</p>
+  </div>
+
+  <!-- Overview -->
+  <div class="section">
+    <div class="callout callout-info">
+      <div class="callout-title" data-i18n="owasp_k8s_overview_title">What is the OWASP Kubernetes Top 10?</div>
+      <p data-i18n="owasp_k8s_overview_desc">The OWASP Kubernetes Top 10 identifies the most significant security risks in Kubernetes environments. Kubernetes has become the de facto standard for container orchestration, but its flexibility and complexity introduce numerous security challenges. This guide covers workload misconfigurations, RBAC issues, secrets management, network segmentation, and more.</p>
+    </div>
+  </div>
+
+  <!-- K01 -->
+  <div class="section">
+    <h2 data-i18n-html="owasp_k8s_k01_heading"><span class="section-icon">1️⃣</span> K01 - Insecure Workload Configurations</h2>
+    <span class="badge badge-danger">Critical</span>
+    <h3 data-i18n="owasp_k8s_k01_overview_heading">Overview</h3>
+    <p data-i18n="owasp_k8s_k01_overview_desc">Insecure workload configurations are the most common Kubernetes security issue. Containers running as root, with excessive privileges, writable filesystems, or without resource limits create significant attack surfaces. Default configurations are often insecure and must be explicitly hardened.</p>
+    <div class="callout callout-danger">
+      <div class="callout-title" data-i18n="owasp_k8s_k01_risk_title">Risk</div>
+      <p data-i18n="owasp_k8s_k01_risk_desc">A compromised container with root privileges and host access can escape the container sandbox, access the host filesystem, and pivot to other workloads. Privilege escalation from a misconfigured pod can lead to full cluster compromise.</p>
+    </div>
+    <h3 data-i18n="owasp_k8s_k01_vulnerable_heading">Vulnerable Code Example</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">YAML (Kubernetes Pod)</span>
+        <span>❌ Bad</span>
+      </div>
+      <pre><span class="keyword">apiVersion</span>: v1
+<span class="keyword">kind</span>: Pod
+<span class="keyword">metadata</span>:
+  <span class="keyword">name</span>: insecure-app
+<span class="keyword">spec</span>:
+  <span class="keyword">containers</span>:
+  - <span class="keyword">name</span>: app
+    <span class="keyword">image</span>: myapp:latest          <span class="comment"># Mutable tag!</span>
+    <span class="keyword">securityContext</span>:
+      <span class="keyword">privileged</span>: true            <span class="comment"># Full host access!</span>
+      <span class="keyword">runAsUser</span>: 0                <span class="comment"># Running as root!</span>
+    <span class="keyword">volumeMounts</span>:
+    - <span class="keyword">mountPath</span>: /host
+      <span class="keyword">name</span>: host-fs
+  <span class="keyword">volumes</span>:
+  - <span class="keyword">name</span>: host-fs
+    <span class="keyword">hostPath</span>:
+      <span class="keyword">path</span>: /                    <span class="comment"># Entire host filesystem!</span></pre>
+    </div>
+    <h3 data-i18n="owasp_k8s_k01_secure_heading">Secure Code Example</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">YAML (Kubernetes Pod)</span>
+        <span>✅ Good</span>
+      </div>
+      <pre><span class="keyword">apiVersion</span>: v1
+<span class="keyword">kind</span>: Pod
+<span class="keyword">metadata</span>:
+  <span class="keyword">name</span>: secure-app
+<span class="keyword">spec</span>:
+  <span class="keyword">securityContext</span>:
+    <span class="keyword">runAsNonRoot</span>: true
+    <span class="keyword">seccompProfile</span>:
+      <span class="keyword">type</span>: RuntimeDefault
+  <span class="keyword">containers</span>:
+  - <span class="keyword">name</span>: app
+    <span class="keyword">image</span>: myapp@sha256:abc123...  <span class="comment"># Immutable digest</span>
+    <span class="keyword">securityContext</span>:
+      <span class="keyword">allowPrivilegeEscalation</span>: false
+      <span class="keyword">readOnlyRootFilesystem</span>: true
+      <span class="keyword">runAsUser</span>: 1000
+      <span class="keyword">capabilities</span>:
+        <span class="keyword">drop</span>: [<span class="string">"ALL"</span>]
+    <span class="keyword">resources</span>:
+      <span class="keyword">limits</span>:
+        <span class="keyword">cpu</span>: <span class="string">"500m"</span>
+        <span class="keyword">memory</span>: <span class="string">"256Mi"</span>
+      <span class="keyword">requests</span>:
+        <span class="keyword">cpu</span>: <span class="string">"100m"</span>
+        <span class="keyword">memory</span>: <span class="string">"128Mi"</span></pre>
+    </div>
+    <h3 data-i18n="owasp_k8s_k01_checklist_heading">Mitigation Checklist</h3>
+    <ul class="checklist">
+      <li data-i18n="owasp_k8s_k01_check1">Run containers as non-root with readOnlyRootFilesystem and drop all capabilities</li>
+      <li data-i18n="owasp_k8s_k01_check2">Set resource limits (CPU/memory) to prevent resource exhaustion attacks</li>
+      <li data-i18n="owasp_k8s_k01_check3">Use immutable image digests instead of mutable tags like :latest</li>
+      <li data-i18n="owasp_k8s_k01_check4">Enable Seccomp and AppArmor/SELinux profiles for defense in depth</li>
+    </ul>
+  </div>
+
+  <!-- K02 -->
+  <div class="section">
+    <h2 data-i18n-html="owasp_k8s_k02_heading"><span class="section-icon">2️⃣</span> K02 - Overly Permissive Authorization Configurations</h2>
+    <span class="badge badge-danger">Critical</span>
+    <h3 data-i18n="owasp_k8s_k02_overview_heading">Overview</h3>
+    <p data-i18n="owasp_k8s_k02_overview_desc">Kubernetes RBAC (Role-Based Access Control) is powerful but complex. Overly permissive roles — especially cluster-admin bindings, wildcard permissions, and excessive service account privileges — allow unauthorized access to cluster resources, secrets, and workloads.</p>
+    <div class="callout callout-danger">
+      <div class="callout-title" data-i18n="owasp_k8s_k02_risk_title">Risk</div>
+      <p data-i18n="owasp_k8s_k02_risk_desc">An attacker who gains access to an over-privileged service account can list secrets, create privileged pods, modify deployments, and escalate to cluster-admin. Wildcard RBAC rules are the Kubernetes equivalent of granting root access.</p>
+    </div>
+    <h3 data-i18n="owasp_k8s_k02_vulnerable_heading">Vulnerable Code Example</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">YAML (Kubernetes RBAC)</span>
+        <span>❌ Bad</span>
+      </div>
+      <pre><span class="comment"># ClusterRoleBinding granting cluster-admin to a service account</span>
+<span class="keyword">apiVersion</span>: rbac.authorization.k8s.io/v1
+<span class="keyword">kind</span>: ClusterRoleBinding
+<span class="keyword">metadata</span>:
+  <span class="keyword">name</span>: app-admin-binding
+<span class="keyword">subjects</span>:
+- <span class="keyword">kind</span>: ServiceAccount
+  <span class="keyword">name</span>: my-app            <span class="comment"># App SA with cluster-admin!</span>
+  <span class="keyword">namespace</span>: default
+<span class="keyword">roleRef</span>:
+  <span class="keyword">kind</span>: ClusterRole
+  <span class="keyword">name</span>: cluster-admin      <span class="comment"># Full cluster control!</span>
+  <span class="keyword">apiGroup</span>: rbac.authorization.k8s.io</pre>
+    </div>
+    <h3 data-i18n="owasp_k8s_k02_secure_heading">Secure Code Example</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">YAML (Kubernetes RBAC)</span>
+        <span>✅ Good</span>
+      </div>
+      <pre><span class="comment"># Scoped Role with minimum required permissions</span>
+<span class="keyword">apiVersion</span>: rbac.authorization.k8s.io/v1
+<span class="keyword">kind</span>: Role
+<span class="keyword">metadata</span>:
+  <span class="keyword">name</span>: app-role
+  <span class="keyword">namespace</span>: my-app-ns
+<span class="keyword">rules</span>:
+- <span class="keyword">apiGroups</span>: [<span class="string">""</span>]
+  <span class="keyword">resources</span>: [<span class="string">"configmaps"</span>]
+  <span class="keyword">verbs</span>: [<span class="string">"get"</span>, <span class="string">"list"</span>]     <span class="comment"># Read-only, specific resources</span>
+  <span class="keyword">resourceNames</span>: [<span class="string">"app-config"</span>]  <span class="comment"># Named resource only</span>
+---
+<span class="keyword">apiVersion</span>: rbac.authorization.k8s.io/v1
+<span class="keyword">kind</span>: RoleBinding
+<span class="keyword">metadata</span>:
+  <span class="keyword">name</span>: app-role-binding
+  <span class="keyword">namespace</span>: my-app-ns
+<span class="keyword">subjects</span>:
+- <span class="keyword">kind</span>: ServiceAccount
+  <span class="keyword">name</span>: my-app
+  <span class="keyword">namespace</span>: my-app-ns
+<span class="keyword">roleRef</span>:
+  <span class="keyword">kind</span>: Role
+  <span class="keyword">name</span>: app-role
+  <span class="keyword">apiGroup</span>: rbac.authorization.k8s.io</pre>
+    </div>
+    <h3 data-i18n="owasp_k8s_k02_checklist_heading">Mitigation Checklist</h3>
+    <ul class="checklist">
+      <li data-i18n="owasp_k8s_k02_check1">Never bind cluster-admin to application service accounts; use namespace-scoped Roles</li>
+      <li data-i18n="owasp_k8s_k02_check2">Avoid wildcard (*) permissions in RBAC rules; specify exact verbs and resources</li>
+      <li data-i18n="owasp_k8s_k02_check3">Regularly audit RBAC bindings with tools like kubectl-who-can or rbac-police</li>
+      <li data-i18n="owasp_k8s_k02_check4">Disable automounting of service account tokens when not needed</li>
+    </ul>
+  </div>
+
+  <!-- K03 -->
+  <div class="section">
+    <h2 data-i18n-html="owasp_k8s_k03_heading"><span class="section-icon">3️⃣</span> K03 - Secrets Management Failures</h2>
+    <span class="badge badge-danger">Critical</span>
+    <h3 data-i18n="owasp_k8s_k03_overview_heading">Overview</h3>
+    <p data-i18n="owasp_k8s_k03_overview_desc">Kubernetes Secrets are only base64-encoded by default, not encrypted. Storing sensitive data (API keys, database passwords, TLS certificates) in plain ConfigMaps, environment variables, or unencrypted Secrets exposes them to anyone with API access. Secrets are also visible in etcd if encryption at rest is not enabled.</p>
+    <div class="callout callout-danger">
+      <div class="callout-title" data-i18n="owasp_k8s_k03_risk_title">Risk</div>
+      <p data-i18n="owasp_k8s_k03_risk_desc">Exposed secrets allow attackers to access databases, cloud accounts, and external services. Secrets stored in etcd without encryption can be read by anyone with etcd access. Environment variable secrets are visible in pod specs and process listings.</p>
+    </div>
+    <h3 data-i18n="owasp_k8s_k03_vulnerable_heading">Vulnerable Code Example</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">YAML (Kubernetes)</span>
+        <span>❌ Bad</span>
+      </div>
+      <pre><span class="comment"># Secret in plain ConfigMap — visible to anyone</span>
+<span class="keyword">apiVersion</span>: v1
+<span class="keyword">kind</span>: ConfigMap
+<span class="keyword">metadata</span>:
+  <span class="keyword">name</span>: app-config
+<span class="keyword">data</span>:
+  <span class="keyword">DB_PASSWORD</span>: <span class="string">"SuperSecret123!"</span>   <span class="comment"># Plaintext password!</span>
+  <span class="keyword">API_KEY</span>: <span class="string">"sk-live-abc123xyz"</span>      <span class="comment"># API key in ConfigMap!</span>
+---
+<span class="keyword">apiVersion</span>: v1
+<span class="keyword">kind</span>: Pod
+<span class="keyword">metadata</span>:
+  <span class="keyword">name</span>: app
+<span class="keyword">spec</span>:
+  <span class="keyword">containers</span>:
+  - <span class="keyword">name</span>: app
+    <span class="keyword">image</span>: myapp:latest
+    <span class="keyword">envFrom</span>:
+    - <span class="keyword">configMapRef</span>:
+        <span class="keyword">name</span>: app-config    <span class="comment"># All values as env vars!</span></pre>
+    </div>
+    <h3 data-i18n="owasp_k8s_k03_secure_heading">Secure Code Example</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">YAML (Kubernetes + External Secrets)</span>
+        <span>✅ Good</span>
+      </div>
+      <pre><span class="comment"># Use External Secrets Operator with a vault backend</span>
+<span class="keyword">apiVersion</span>: external-secrets.io/v1beta1
+<span class="keyword">kind</span>: ExternalSecret
+<span class="keyword">metadata</span>:
+  <span class="keyword">name</span>: app-secrets
+<span class="keyword">spec</span>:
+  <span class="keyword">refreshInterval</span>: 1h
+  <span class="keyword">secretStoreRef</span>:
+    <span class="keyword">name</span>: vault-backend
+    <span class="keyword">kind</span>: ClusterSecretStore
+  <span class="keyword">target</span>:
+    <span class="keyword">name</span>: app-secrets
+  <span class="keyword">data</span>:
+  - <span class="keyword">secretKey</span>: db-password
+    <span class="keyword">remoteRef</span>:
+      <span class="keyword">key</span>: secret/myapp/db
+      <span class="keyword">property</span>: password
+---
+<span class="keyword">apiVersion</span>: v1
+<span class="keyword">kind</span>: Pod
+<span class="keyword">metadata</span>:
+  <span class="keyword">name</span>: app
+<span class="keyword">spec</span>:
+  <span class="keyword">containers</span>:
+  - <span class="keyword">name</span>: app
+    <span class="keyword">image</span>: myapp@sha256:abc123...
+    <span class="keyword">volumeMounts</span>:
+    - <span class="keyword">name</span>: secrets
+      <span class="keyword">mountPath</span>: /etc/secrets
+      <span class="keyword">readOnly</span>: true          <span class="comment"># Mount as read-only files</span>
+  <span class="keyword">volumes</span>:
+  - <span class="keyword">name</span>: secrets
+    <span class="keyword">secret</span>:
+      <span class="keyword">secretName</span>: app-secrets</pre>
+    </div>
+    <h3 data-i18n="owasp_k8s_k03_checklist_heading">Mitigation Checklist</h3>
+    <ul class="checklist">
+      <li data-i18n="owasp_k8s_k03_check1">Enable encryption at rest for Kubernetes Secrets in etcd</li>
+      <li data-i18n="owasp_k8s_k03_check2">Use external secret management (Vault, AWS Secrets Manager, External Secrets Operator)</li>
+      <li data-i18n="owasp_k8s_k03_check3">Mount secrets as files instead of environment variables to reduce exposure</li>
+      <li data-i18n="owasp_k8s_k03_check4">Restrict RBAC access to secrets and audit all secret access with audit logging</li>
+    </ul>
+  </div>
+
+  <!-- K04 -->
+  <div class="section">
+    <h2 data-i18n-html="owasp_k8s_k04_heading"><span class="section-icon">4️⃣</span> K04 - Lack Of Cluster Level Policy Enforcement</h2>
+    <span class="badge badge-warning">High</span>
+    <h3 data-i18n="owasp_k8s_k04_overview_heading">Overview</h3>
+    <p data-i18n="owasp_k8s_k04_overview_desc">Without cluster-level policies, there are no guardrails preventing the deployment of insecure workloads. Pod Security Standards (PSS), admission controllers, and policy engines like OPA Gatekeeper or Kyverno are essential for enforcing security baselines across all namespaces.</p>
+    <div class="callout callout-danger">
+      <div class="callout-title" data-i18n="owasp_k8s_k04_risk_title">Risk</div>
+      <p data-i18n="owasp_k8s_k04_risk_desc">Without policy enforcement, any developer can deploy privileged containers, use hostPath volumes, or disable security controls. A single misconfigured workload can compromise the entire cluster. Manual review cannot scale to catch all violations.</p>
+    </div>
+    <h3 data-i18n="owasp_k8s_k04_vulnerable_heading">Vulnerable Code Example</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">Bash</span>
+        <span>❌ Bad</span>
+      </div>
+      <pre><span class="comment">#!/bin/bash</span>
+<span class="comment"># No admission control — any pod spec is accepted</span>
+<span class="comment"># No Pod Security Standards configured</span>
+
+<span class="comment"># Anyone can deploy a privileged container</span>
+kubectl run hacker-pod --image=alpine \
+  --overrides='{"spec":{"containers":[{
+    "name":"hack",
+    "image":"alpine",
+    "securityContext":{"privileged":true},
+    "command":["nsenter","--target","1","--mount","--uts","--ipc","--net","--pid","--","bash"]
+  }]}}'
+
+<span class="comment"># No policy blocks this — now has host root access!</span></pre>
+    </div>
+    <h3 data-i18n="owasp_k8s_k04_secure_heading">Secure Code Example</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">YAML (Kyverno ClusterPolicy)</span>
+        <span>✅ Good</span>
+      </div>
+      <pre><span class="comment"># Enforce Pod Security Standards with Kyverno</span>
+<span class="keyword">apiVersion</span>: kyverno.io/v1
+<span class="keyword">kind</span>: ClusterPolicy
+<span class="keyword">metadata</span>:
+  <span class="keyword">name</span>: disallow-privileged
+<span class="keyword">spec</span>:
+  <span class="keyword">validationFailureAction</span>: Enforce
+  <span class="keyword">background</span>: true
+  <span class="keyword">rules</span>:
+  - <span class="keyword">name</span>: deny-privileged
+    <span class="keyword">match</span>:
+      <span class="keyword">any</span>:
+      - <span class="keyword">resources</span>:
+          <span class="keyword">kinds</span>: [<span class="string">"Pod"</span>]
+    <span class="keyword">validate</span>:
+      <span class="keyword">message</span>: <span class="string">"Privileged containers are not allowed."</span>
+      <span class="keyword">pattern</span>:
+        <span class="keyword">spec</span>:
+          <span class="keyword">containers</span>:
+          - <span class="keyword">securityContext</span>:
+              <span class="keyword">privileged</span>: <span class="string">"false"</span>
+  - <span class="keyword">name</span>: require-run-as-non-root
+    <span class="keyword">match</span>:
+      <span class="keyword">any</span>:
+      - <span class="keyword">resources</span>:
+          <span class="keyword">kinds</span>: [<span class="string">"Pod"</span>]
+    <span class="keyword">validate</span>:
+      <span class="keyword">message</span>: <span class="string">"Containers must run as non-root."</span>
+      <span class="keyword">pattern</span>:
+        <span class="keyword">spec</span>:
+          <span class="keyword">securityContext</span>:
+            <span class="keyword">runAsNonRoot</span>: true</pre>
+    </div>
+    <h3 data-i18n="owasp_k8s_k04_checklist_heading">Mitigation Checklist</h3>
+    <ul class="checklist">
+      <li data-i18n="owasp_k8s_k04_check1">Enforce Pod Security Standards (Restricted) on all production namespaces</li>
+      <li data-i18n="owasp_k8s_k04_check2">Deploy a policy engine (Kyverno, OPA Gatekeeper) with enforce mode</li>
+      <li data-i18n="owasp_k8s_k04_check3">Block privileged containers, host namespaces, and hostPath volumes via policies</li>
+      <li data-i18n="owasp_k8s_k04_check4">Audit policy violations and review exceptions regularly</li>
+    </ul>
+  </div>
+
+  <!-- K05 -->
+  <div class="section">
+    <h2 data-i18n-html="owasp_k8s_k05_heading"><span class="section-icon">5️⃣</span> K05 - Missing Network Segmentation Controls</h2>
+    <span class="badge badge-warning">High</span>
+    <h3 data-i18n="owasp_k8s_k05_overview_heading">Overview</h3>
+    <p data-i18n="owasp_k8s_k05_overview_desc">By default, all pods in a Kubernetes cluster can communicate with each other without any restrictions. This flat network architecture means that a compromised pod can reach any other pod, service, or even the Kubernetes API server. Network Policies are essential for implementing microsegmentation.</p>
+    <div class="callout callout-danger">
+      <div class="callout-title" data-i18n="owasp_k8s_k05_risk_title">Risk</div>
+      <p data-i18n="owasp_k8s_k05_risk_desc">Without network segmentation, lateral movement is trivial. A compromised frontend pod can directly access backend databases, internal services, and the metadata API (169.254.169.254). This violates the principle of least privilege at the network layer.</p>
+    </div>
+    <h3 data-i18n="owasp_k8s_k05_vulnerable_heading">Vulnerable Code Example</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">YAML (Kubernetes)</span>
+        <span>❌ Bad</span>
+      </div>
+      <pre><span class="comment"># No NetworkPolicy — all pods can communicate freely</span>
+<span class="keyword">apiVersion</span>: v1
+<span class="keyword">kind</span>: Namespace
+<span class="keyword">metadata</span>:
+  <span class="keyword">name</span>: production
+  <span class="comment"># No default deny policy</span>
+  <span class="comment"># No network policies at all</span>
+  <span class="comment"># Any pod can reach:</span>
+  <span class="comment">#   - Other pods in any namespace</span>
+  <span class="comment">#   - Kubernetes API server</span>
+  <span class="comment">#   - Cloud metadata API (169.254.169.254)</span>
+  <span class="comment">#   - External internet</span></pre>
+    </div>
+    <h3 data-i18n="owasp_k8s_k05_secure_heading">Secure Code Example</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">YAML (Kubernetes NetworkPolicy)</span>
+        <span>✅ Good</span>
+      </div>
+      <pre><span class="comment"># Default deny all ingress and egress</span>
+<span class="keyword">apiVersion</span>: networking.k8s.io/v1
+<span class="keyword">kind</span>: NetworkPolicy
+<span class="keyword">metadata</span>:
+  <span class="keyword">name</span>: default-deny-all
+  <span class="keyword">namespace</span>: production
+<span class="keyword">spec</span>:
+  <span class="keyword">podSelector</span>: {}
+  <span class="keyword">policyTypes</span>: [<span class="string">"Ingress"</span>, <span class="string">"Egress"</span>]
+---
+<span class="comment"># Allow only frontend to backend communication</span>
+<span class="keyword">apiVersion</span>: networking.k8s.io/v1
+<span class="keyword">kind</span>: NetworkPolicy
+<span class="keyword">metadata</span>:
+  <span class="keyword">name</span>: allow-frontend-to-backend
+  <span class="keyword">namespace</span>: production
+<span class="keyword">spec</span>:
+  <span class="keyword">podSelector</span>:
+    <span class="keyword">matchLabels</span>:
+      <span class="keyword">app</span>: backend
+  <span class="keyword">policyTypes</span>: [<span class="string">"Ingress"</span>]
+  <span class="keyword">ingress</span>:
+  - <span class="keyword">from</span>:
+    - <span class="keyword">podSelector</span>:
+        <span class="keyword">matchLabels</span>:
+          <span class="keyword">app</span>: frontend
+    <span class="keyword">ports</span>:
+    - <span class="keyword">port</span>: 8080
+      <span class="keyword">protocol</span>: TCP</pre>
+    </div>
+    <h3 data-i18n="owasp_k8s_k05_checklist_heading">Mitigation Checklist</h3>
+    <ul class="checklist">
+      <li data-i18n="owasp_k8s_k05_check1">Apply default-deny NetworkPolicies for both ingress and egress in every namespace</li>
+      <li data-i18n="owasp_k8s_k05_check2">Whitelist only required communication paths between services</li>
+      <li data-i18n="owasp_k8s_k05_check3">Block pod access to cloud metadata APIs (169.254.169.254) via network policies</li>
+      <li data-i18n="owasp_k8s_k05_check4">Use a CNI plugin that supports NetworkPolicy enforcement (Calico, Cilium)</li>
+    </ul>
+  </div>
+
+  <!-- K06 -->
+  <div class="section">
+    <h2 data-i18n-html="owasp_k8s_k06_heading"><span class="section-icon">6️⃣</span> K06 - Overly Exposed Kubernetes Components</h2>
+    <span class="badge badge-warning">High</span>
+    <h3 data-i18n="owasp_k8s_k06_overview_heading">Overview</h3>
+    <p data-i18n="owasp_k8s_k06_overview_desc">Kubernetes control plane components (API server, etcd, kubelet, dashboard) and application services can be inadvertently exposed to the internet or untrusted networks. Exposed dashboards, unauthenticated kubelets, and publicly accessible API servers are common attack vectors.</p>
+    <div class="callout callout-danger">
+      <div class="callout-title" data-i18n="owasp_k8s_k06_risk_title">Risk</div>
+      <p data-i18n="owasp_k8s_k06_risk_desc">Exposed Kubernetes components provide direct access to cluster management. An unauthenticated kubelet API allows container execution. An exposed dashboard with default credentials grants cluster-admin access. Public etcd access exposes all cluster data including secrets.</p>
+    </div>
+    <h3 data-i18n="owasp_k8s_k06_vulnerable_heading">Vulnerable Code Example</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">YAML (Kubernetes Service)</span>
+        <span>❌ Bad</span>
+      </div>
+      <pre><span class="comment"># Kubernetes Dashboard exposed via LoadBalancer</span>
+<span class="keyword">apiVersion</span>: v1
+<span class="keyword">kind</span>: Service
+<span class="keyword">metadata</span>:
+  <span class="keyword">name</span>: kubernetes-dashboard
+  <span class="keyword">namespace</span>: kubernetes-dashboard
+<span class="keyword">spec</span>:
+  <span class="keyword">type</span>: LoadBalancer        <span class="comment"># Public internet access!</span>
+  <span class="keyword">ports</span>:
+  - <span class="keyword">port</span>: 443
+    <span class="keyword">targetPort</span>: 8443
+  <span class="keyword">selector</span>:
+    <span class="keyword">k8s-app</span>: kubernetes-dashboard
+<span class="comment"># Dashboard bound to cluster-admin service account</span>
+<span class="comment"># No authentication required — full cluster access!</span></pre>
+    </div>
+    <h3 data-i18n="owasp_k8s_k06_secure_heading">Secure Code Example</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">YAML (Kubernetes)</span>
+        <span>✅ Good</span>
+      </div>
+      <pre><span class="comment"># Dashboard accessible only via kubectl proxy</span>
+<span class="keyword">apiVersion</span>: v1
+<span class="keyword">kind</span>: Service
+<span class="keyword">metadata</span>:
+  <span class="keyword">name</span>: kubernetes-dashboard
+  <span class="keyword">namespace</span>: kubernetes-dashboard
+<span class="keyword">spec</span>:
+  <span class="keyword">type</span>: ClusterIP           <span class="comment"># Internal only</span>
+  <span class="keyword">ports</span>:
+  - <span class="keyword">port</span>: 443
+    <span class="keyword">targetPort</span>: 8443
+  <span class="keyword">selector</span>:
+    <span class="keyword">k8s-app</span>: kubernetes-dashboard
+---
+<span class="comment"># Access via: kubectl proxy, then browse to:</span>
+<span class="comment"># http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/</span>
+<span class="comment"># Or use kubectl port-forward for secure access</span></pre>
+    </div>
+    <h3 data-i18n="owasp_k8s_k06_checklist_heading">Mitigation Checklist</h3>
+    <ul class="checklist">
+      <li data-i18n="owasp_k8s_k06_check1">Never expose the Kubernetes Dashboard, API server, or etcd to the public internet</li>
+      <li data-i18n="owasp_k8s_k06_check2">Use ClusterIP services and kubectl proxy/port-forward for internal component access</li>
+      <li data-i18n="owasp_k8s_k06_check3">Enable authentication on all Kubernetes components (kubelet, API server, etcd)</li>
+      <li data-i18n="owasp_k8s_k06_check4">Restrict API server access to trusted networks using firewall rules or authorized networks</li>
+    </ul>
+  </div>
+
+  <!-- K07 -->
+  <div class="section">
+    <h2 data-i18n-html="owasp_k8s_k07_heading"><span class="section-icon">7️⃣</span> K07 - Misconfigured And Vulnerable Cluster Components</h2>
+    <span class="badge badge-warning">High</span>
+    <h3 data-i18n="owasp_k8s_k07_overview_heading">Overview</h3>
+    <p data-i18n="owasp_k8s_k07_overview_desc">Kubernetes clusters consist of many components: API server, etcd, kubelet, kube-proxy, CoreDNS, and third-party add-ons (Ingress controllers, service meshes, monitoring). Misconfigured or unpatched components introduce vulnerabilities. Default configurations are often not hardened.</p>
+    <div class="callout callout-danger">
+      <div class="callout-title" data-i18n="owasp_k8s_k07_risk_title">Risk</div>
+      <p data-i18n="owasp_k8s_k07_risk_desc">Vulnerable cluster components can be exploited for remote code execution, privilege escalation, or denial of service. CVEs in kubelet, Ingress controllers, or CNI plugins can lead to container escapes and cluster takeover. Outdated components accumulate known vulnerabilities.</p>
+    </div>
+    <h3 data-i18n="owasp_k8s_k07_vulnerable_heading">Vulnerable Code Example</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">YAML (Kubernetes)</span>
+        <span>❌ Bad</span>
+      </div>
+      <pre><span class="comment"># kubelet with insecure configuration</span>
+<span class="comment"># /var/lib/kubelet/config.yaml</span>
+<span class="keyword">apiVersion</span>: kubelet.config.k8s.io/v1beta1
+<span class="keyword">kind</span>: KubeletConfiguration
+<span class="keyword">authentication</span>:
+  <span class="keyword">anonymous</span>:
+    <span class="keyword">enabled</span>: true              <span class="comment"># Anyone can access kubelet API!</span>
+  <span class="keyword">webhook</span>:
+    <span class="keyword">enabled</span>: false             <span class="comment"># No authorization!</span>
+<span class="keyword">authorization</span>:
+  <span class="keyword">mode</span>: AlwaysAllow            <span class="comment"># All requests permitted!</span>
+<span class="keyword">readOnlyPort</span>: 10255            <span class="comment"># Unauthenticated read port open!</span></pre>
+    </div>
+    <h3 data-i18n="owasp_k8s_k07_secure_heading">Secure Code Example</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">YAML (Kubernetes)</span>
+        <span>✅ Good</span>
+      </div>
+      <pre><span class="comment"># Hardened kubelet configuration</span>
+<span class="keyword">apiVersion</span>: kubelet.config.k8s.io/v1beta1
+<span class="keyword">kind</span>: KubeletConfiguration
+<span class="keyword">authentication</span>:
+  <span class="keyword">anonymous</span>:
+    <span class="keyword">enabled</span>: false             <span class="comment"># Deny anonymous access</span>
+  <span class="keyword">webhook</span>:
+    <span class="keyword">enabled</span>: true              <span class="comment"># Use API server for auth</span>
+  <span class="keyword">x509</span>:
+    <span class="keyword">clientCAFile</span>: /etc/kubernetes/pki/ca.crt
+<span class="keyword">authorization</span>:
+  <span class="keyword">mode</span>: Webhook                <span class="comment"># API server authorizes requests</span>
+<span class="keyword">readOnlyPort</span>: 0                <span class="comment"># Disable read-only port</span>
+<span class="keyword">protectKernelDefaults</span>: true
+<span class="keyword">eventRecordQPS</span>: 5</pre>
+    </div>
+    <h3 data-i18n="owasp_k8s_k07_checklist_heading">Mitigation Checklist</h3>
+    <ul class="checklist">
+      <li data-i18n="owasp_k8s_k07_check1">Keep all cluster components updated to the latest stable versions with security patches</li>
+      <li data-i18n="owasp_k8s_k07_check2">Disable anonymous authentication and read-only ports on kubelet</li>
+      <li data-i18n="owasp_k8s_k07_check3">Run CIS Kubernetes Benchmark scans regularly (kube-bench)</li>
+      <li data-i18n="owasp_k8s_k07_check4">Harden etcd with mutual TLS and restrict access to control plane nodes only</li>
+    </ul>
+  </div>
+
+  <!-- K08 -->
+  <div class="section">
+    <h2 data-i18n-html="owasp_k8s_k08_heading"><span class="section-icon">8️⃣</span> K08 - Cluster To Cloud Lateral Movement</h2>
+    <span class="badge badge-danger">Critical</span>
+    <h3 data-i18n="owasp_k8s_k08_overview_heading">Overview</h3>
+    <p data-i18n="owasp_k8s_k08_overview_desc">Kubernetes clusters running in cloud environments (AWS, GCP, Azure) can access cloud metadata APIs and IAM roles attached to nodes. Attackers who compromise a pod can use these to escalate privileges from the cluster to the cloud account, accessing S3 buckets, databases, and other cloud services.</p>
+    <div class="callout callout-danger">
+      <div class="callout-title" data-i18n="owasp_k8s_k08_risk_title">Risk</div>
+      <p data-i18n="owasp_k8s_k08_risk_desc">Node-level IAM roles are inherited by all pods on that node. A compromised pod can query the metadata API (169.254.169.254) to obtain cloud credentials, then access any cloud resource the node role permits. This enables lateral movement from Kubernetes to the broader cloud environment.</p>
+    </div>
+    <h3 data-i18n="owasp_k8s_k08_vulnerable_heading">Vulnerable Code Example</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">Terraform (AWS EKS)</span>
+        <span>❌ Bad</span>
+      </div>
+      <pre><span class="comment"># Node IAM role with excessive permissions</span>
+<span class="keyword">resource</span> <span class="string">"aws_iam_role_policy_attachment"</span> <span class="string">"node_admin"</span> {
+  <span class="keyword">role</span>       = aws_iam_role.node_role.name
+  <span class="keyword">policy_arn</span> = <span class="string">"arn:aws:iam::aws:policy/AdministratorAccess"</span>
+  <span class="comment"># All pods on this node inherit admin access!</span>
+}
+
+<span class="comment"># No IMDS restrictions — any pod can get node credentials</span>
+<span class="comment"># curl http://169.254.169.254/latest/meta-data/iam/security-credentials/</span></pre>
+    </div>
+    <h3 data-i18n="owasp_k8s_k08_secure_heading">Secure Code Example</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">Terraform (AWS EKS with IRSA)</span>
+        <span>✅ Good</span>
+      </div>
+      <pre><span class="comment"># Use IAM Roles for Service Accounts (IRSA)</span>
+<span class="keyword">resource</span> <span class="string">"aws_iam_role"</span> <span class="string">"app_role"</span> {
+  <span class="keyword">name</span> = <span class="string">"my-app-role"</span>
+  <span class="keyword">assume_role_policy</span> = jsonencode({
+    <span class="keyword">Version</span> = <span class="string">"2012-10-17"</span>
+    <span class="keyword">Statement</span> = [{
+      <span class="keyword">Effect</span> = <span class="string">"Allow"</span>
+      <span class="keyword">Principal</span> = {
+        <span class="keyword">Federated</span> = aws_iam_openid_connect_provider.eks.arn
+      }
+      <span class="keyword">Action</span> = <span class="string">"sts:AssumeRoleWithWebIdentity"</span>
+      <span class="keyword">Condition</span> = {
+        <span class="keyword">StringEquals</span> = {
+          <span class="string">"${aws_iam_openid_connect_provider.eks.url}:sub"</span> =
+            <span class="string">"system:serviceaccount:my-ns:my-app"</span>
+        }
+      }
+    }]
+  })
+}
+
+<span class="comment"># Pod-level scoped IAM via service account annotation</span>
+<span class="comment"># Only this specific pod gets these specific permissions</span></pre>
+    </div>
+    <h3 data-i18n="owasp_k8s_k08_checklist_heading">Mitigation Checklist</h3>
+    <ul class="checklist">
+      <li data-i18n="owasp_k8s_k08_check1">Use pod-level IAM (IRSA on AWS, Workload Identity on GCP/Azure) instead of node-level roles</li>
+      <li data-i18n="owasp_k8s_k08_check2">Block pod access to the cloud metadata API (169.254.169.254) via NetworkPolicy</li>
+      <li data-i18n="owasp_k8s_k08_check3">Enforce IMDSv2 (hop limit = 1) on AWS to prevent pods from accessing node metadata</li>
+      <li data-i18n="owasp_k8s_k08_check4">Apply least-privilege IAM policies scoped to specific resources and actions</li>
+    </ul>
+  </div>
+
+  <!-- K09 -->
+  <div class="section">
+    <h2 data-i18n-html="owasp_k8s_k09_heading"><span class="section-icon">9️⃣</span> K09 - Broken Authentication Mechanisms</h2>
+    <span class="badge badge-danger">Critical</span>
+    <h3 data-i18n="owasp_k8s_k09_overview_heading">Overview</h3>
+    <p data-i18n="owasp_k8s_k09_overview_desc">Kubernetes supports multiple authentication mechanisms: certificates, tokens, OIDC, and webhook authentication. Broken authentication includes using static tokens, sharing kubeconfig files, not rotating certificates, and failing to integrate with identity providers. Service account token auto-mounting creates unnecessary attack surface.</p>
+    <div class="callout callout-danger">
+      <div class="callout-title" data-i18n="owasp_k8s_k09_risk_title">Risk</div>
+      <p data-i18n="owasp_k8s_k09_risk_desc">Stolen or leaked kubeconfig files and service account tokens provide direct cluster access. Static tokens that never expire give persistent access. Without centralized identity management, revoking access for departed team members is difficult and error-prone.</p>
+    </div>
+    <h3 data-i18n="owasp_k8s_k09_vulnerable_heading">Vulnerable Code Example</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">YAML (Kubernetes)</span>
+        <span>❌ Bad</span>
+      </div>
+      <pre><span class="comment"># Static token file for API server authentication</span>
+<span class="comment"># /etc/kubernetes/token-auth-file.csv</span>
+<span class="comment"># token,user,uid,"groups"</span>
+<span class="comment"># abc123,admin,1,"system:masters"  # Static token, never expires!</span>
+
+<span class="comment"># Pod with auto-mounted service account token</span>
+<span class="keyword">apiVersion</span>: v1
+<span class="keyword">kind</span>: Pod
+<span class="keyword">metadata</span>:
+  <span class="keyword">name</span>: app
+<span class="keyword">spec</span>:
+  <span class="comment"># automountServiceAccountToken defaults to true!</span>
+  <span class="comment"># Token mounted at /var/run/secrets/kubernetes.io/serviceaccount/token</span>
+  <span class="keyword">containers</span>:
+  - <span class="keyword">name</span>: app
+    <span class="keyword">image</span>: myapp:latest
+    <span class="comment"># App doesn't need K8s API access but has a token anyway</span></pre>
+    </div>
+    <h3 data-i18n="owasp_k8s_k09_secure_heading">Secure Code Example</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">YAML (Kubernetes)</span>
+        <span>✅ Good</span>
+      </div>
+      <pre><span class="comment"># Disable auto-mounted token for pods that don't need API access</span>
+<span class="keyword">apiVersion</span>: v1
+<span class="keyword">kind</span>: ServiceAccount
+<span class="keyword">metadata</span>:
+  <span class="keyword">name</span>: my-app
+  <span class="keyword">namespace</span>: my-app-ns
+<span class="keyword">automountServiceAccountToken</span>: false  <span class="comment"># No auto-mount</span>
+---
+<span class="comment"># For pods that need API access, use bound tokens with expiry</span>
+<span class="keyword">apiVersion</span>: v1
+<span class="keyword">kind</span>: Pod
+<span class="keyword">metadata</span>:
+  <span class="keyword">name</span>: api-consumer
+<span class="keyword">spec</span>:
+  <span class="keyword">serviceAccountName</span>: api-consumer-sa
+  <span class="keyword">automountServiceAccountToken</span>: false
+  <span class="keyword">containers</span>:
+  - <span class="keyword">name</span>: app
+    <span class="keyword">image</span>: myapp@sha256:abc123...
+    <span class="keyword">volumeMounts</span>:
+    - <span class="keyword">name</span>: token
+      <span class="keyword">mountPath</span>: /var/run/secrets/tokens
+      <span class="keyword">readOnly</span>: true
+  <span class="keyword">volumes</span>:
+  - <span class="keyword">name</span>: token
+    <span class="keyword">projected</span>:
+      <span class="keyword">sources</span>:
+      - <span class="keyword">serviceAccountToken</span>:
+          <span class="keyword">expirationSeconds</span>: 3600  <span class="comment"># 1-hour expiry</span>
+          <span class="keyword">audience</span>: api-server</pre>
+    </div>
+    <h3 data-i18n="owasp_k8s_k09_checklist_heading">Mitigation Checklist</h3>
+    <ul class="checklist">
+      <li data-i18n="owasp_k8s_k09_check1">Use OIDC integration with your identity provider instead of static tokens or certificates</li>
+      <li data-i18n="owasp_k8s_k09_check2">Disable automountServiceAccountToken for pods that don't need Kubernetes API access</li>
+      <li data-i18n="owasp_k8s_k09_check3">Use bound service account tokens with short expiration times</li>
+      <li data-i18n="owasp_k8s_k09_check4">Rotate certificates and tokens regularly; revoke access immediately for offboarded users</li>
+    </ul>
+  </div>
+
+  <!-- K10 -->
+  <div class="section">
+    <h2 data-i18n-html="owasp_k8s_k10_heading"><span class="section-icon">🔟</span> K10 - Inadequate Logging And Monitoring</h2>
+    <span class="badge badge-info">Medium</span>
+    <h3 data-i18n="owasp_k8s_k10_overview_heading">Overview</h3>
+    <p data-i18n="owasp_k8s_k10_overview_desc">Kubernetes generates audit events for API server requests, but audit logging is often disabled or misconfigured. Without proper logging and monitoring, malicious activities — such as unauthorized secret access, RBAC changes, and container escapes — go undetected. Runtime security monitoring at the container and node level is essential.</p>
+    <div class="callout callout-danger">
+      <div class="callout-title" data-i18n="owasp_k8s_k10_risk_title">Risk</div>
+      <p data-i18n="owasp_k8s_k10_risk_desc">Without audit logging, attackers operate undetected. They can create backdoor service accounts, extract secrets, and modify workloads without any record. Incident response is severely impaired when there is no audit trail to determine what happened, when, and by whom.</p>
+    </div>
+    <h3 data-i18n="owasp_k8s_k10_vulnerable_heading">Vulnerable Code Example</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">YAML (Kubernetes)</span>
+        <span>❌ Bad</span>
+      </div>
+      <pre><span class="comment"># API server with no audit logging configured</span>
+<span class="comment"># kube-apiserver flags:</span>
+<span class="comment">#   --audit-log-path=""           # No audit log!</span>
+<span class="comment">#   --audit-policy-file=""        # No audit policy!</span>
+
+<span class="comment"># No runtime security monitoring</span>
+<span class="comment"># No alerting on suspicious activities</span>
+<span class="comment"># Container logs not collected centrally</span>
+<span class="comment"># Default log retention — logs lost on pod restart</span></pre>
+    </div>
+    <h3 data-i18n="owasp_k8s_k10_secure_heading">Secure Code Example</h3>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span class="lang">YAML (Kubernetes Audit Policy)</span>
+        <span>✅ Good</span>
+      </div>
+      <pre><span class="comment"># Comprehensive audit policy</span>
+<span class="keyword">apiVersion</span>: audit.k8s.io/v1
+<span class="keyword">kind</span>: Policy
+<span class="keyword">rules</span>:
+<span class="comment"># Log all secret access at Metadata level</span>
+- <span class="keyword">level</span>: Metadata
+  <span class="keyword">resources</span>:
+  - <span class="keyword">group</span>: <span class="string">""</span>
+    <span class="keyword">resources</span>: [<span class="string">"secrets"</span>]
+<span class="comment"># Log RBAC changes at RequestResponse level</span>
+- <span class="keyword">level</span>: RequestResponse
+  <span class="keyword">resources</span>:
+  - <span class="keyword">group</span>: rbac.authorization.k8s.io
+    <span class="keyword">resources</span>: [<span class="string">"clusterroles"</span>, <span class="string">"clusterrolebindings"</span>, <span class="string">"roles"</span>, <span class="string">"rolebindings"</span>]
+<span class="comment"># Log pod exec/attach (potential attacks)</span>
+- <span class="keyword">level</span>: Request
+  <span class="keyword">resources</span>:
+  - <span class="keyword">group</span>: <span class="string">""</span>
+    <span class="keyword">resources</span>: [<span class="string">"pods/exec"</span>, <span class="string">"pods/attach"</span>, <span class="string">"pods/portforward"</span>]
+<span class="comment"># Default: log at Metadata level</span>
+- <span class="keyword">level</span>: Metadata</pre>
+    </div>
+    <h3 data-i18n="owasp_k8s_k10_checklist_heading">Mitigation Checklist</h3>
+    <ul class="checklist">
+      <li data-i18n="owasp_k8s_k10_check1">Enable Kubernetes API audit logging with a comprehensive audit policy</li>
+      <li data-i18n="owasp_k8s_k10_check2">Deploy runtime security monitoring (Falco, Tetragon) for container-level threat detection</li>
+      <li data-i18n="owasp_k8s_k10_check3">Forward audit logs and container logs to a centralized SIEM with tamper-proof storage</li>
+      <li data-i18n="owasp_k8s_k10_check4">Create alerts for high-risk events: secret access, RBAC changes, pod exec, privilege escalation</li>
+    </ul>
+  </div>
+
+  <!-- Summary Table -->
+  <div class="section">
+    <h2 data-i18n-html="owasp_k8s_summary_heading"><span class="section-icon">📊</span> Summary Table</h2>
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th data-i18n="owasp_k8s_table_header_id">ID</th>
+            <th data-i18n="owasp_k8s_table_header_vulnerability">Vulnerability</th>
+            <th data-i18n="owasp_k8s_table_header_severity">Severity</th>
+            <th data-i18n="owasp_k8s_table_header_mitigation">Key Mitigation</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>K01</td><td data-i18n="owasp_k8s_table_k01_name">Insecure Workload Configurations</td><td><span class="badge badge-danger">Critical</span></td><td data-i18n="owasp_k8s_table_k01_mitigation">Non-root, read-only FS, drop capabilities, resource limits</td></tr>
+          <tr><td>K02</td><td data-i18n="owasp_k8s_table_k02_name">Overly Permissive Authorization</td><td><span class="badge badge-danger">Critical</span></td><td data-i18n="owasp_k8s_table_k02_mitigation">Namespace-scoped RBAC, no wildcards, audit bindings</td></tr>
+          <tr><td>K03</td><td data-i18n="owasp_k8s_table_k03_name">Secrets Management Failures</td><td><span class="badge badge-danger">Critical</span></td><td data-i18n="owasp_k8s_table_k03_mitigation">External secrets, encryption at rest, file mounts</td></tr>
+          <tr><td>K04</td><td data-i18n="owasp_k8s_table_k04_name">Lack Of Policy Enforcement</td><td><span class="badge badge-warning">High</span></td><td data-i18n="owasp_k8s_table_k04_mitigation">Pod Security Standards, Kyverno/OPA Gatekeeper</td></tr>
+          <tr><td>K05</td><td data-i18n="owasp_k8s_table_k05_name">Missing Network Segmentation</td><td><span class="badge badge-warning">High</span></td><td data-i18n="owasp_k8s_table_k05_mitigation">Default-deny NetworkPolicies, microsegmentation</td></tr>
+          <tr><td>K06</td><td data-i18n="owasp_k8s_table_k06_name">Overly Exposed Components</td><td><span class="badge badge-warning">High</span></td><td data-i18n="owasp_k8s_table_k06_mitigation">ClusterIP services, kubectl proxy, firewall rules</td></tr>
+          <tr><td>K07</td><td data-i18n="owasp_k8s_table_k07_name">Misconfigured Cluster Components</td><td><span class="badge badge-warning">High</span></td><td data-i18n="owasp_k8s_table_k07_mitigation">CIS Benchmark, disable anonymous auth, patch management</td></tr>
+          <tr><td>K08</td><td data-i18n="owasp_k8s_table_k08_name">Cluster To Cloud Lateral Movement</td><td><span class="badge badge-danger">Critical</span></td><td data-i18n="owasp_k8s_table_k08_mitigation">IRSA/Workload Identity, block metadata API, IMDSv2</td></tr>
+          <tr><td>K09</td><td data-i18n="owasp_k8s_table_k09_name">Broken Authentication Mechanisms</td><td><span class="badge badge-danger">Critical</span></td><td data-i18n="owasp_k8s_table_k09_mitigation">OIDC integration, bound tokens, disable auto-mount</td></tr>
+          <tr><td>K10</td><td data-i18n="owasp_k8s_table_k10_name">Inadequate Logging And Monitoring</td><td><span class="badge badge-info">Medium</span></td><td data-i18n="owasp_k8s_table_k10_mitigation">Audit logging, Falco/Tetragon, SIEM integration</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+<script src="../js/common.js"></script>
+
+</body></html>
