@@ -29,7 +29,7 @@
   </div>
 
   <!-- A01: Broken Access Control -->
-  <div class="section">
+  <div class="section" id="a01">
     <h2 data-i18n-html="owasp_webapp_a01_heading"><span class="section-icon">1&#xFE0F;&#x20E3;</span> A01 - Broken Access Control</h2>
     <span class="badge badge-danger">Critical</span>
     <h3 data-i18n="owasp_webapp_a01_overview_heading">Overview</h3>
@@ -78,7 +78,7 @@
   </div>
 
   <!-- A02: Security Misconfiguration -->
-  <div class="section">
+  <div class="section" id="a02">
     <h2 data-i18n-html="owasp_webapp_a02_heading"><span class="section-icon">2&#xFE0F;&#x20E3;</span> A02 - Security Misconfiguration</h2>
     <span class="badge badge-warning">High</span>
     <h3 data-i18n="owasp_webapp_a02_overview_heading">Overview</h3>
@@ -128,7 +128,7 @@ app.config[<span class="string">'SECRET_KEY'</span>] = os.environ[<span class="s
   </div>
 
   <!-- A03: Software Supply Chain Failures -->
-  <div class="section">
+  <div class="section" id="a03">
     <h2 data-i18n-html="owasp_webapp_a03_heading"><span class="section-icon">3&#xFE0F;&#x20E3;</span> A03 - Software Supply Chain Failures</h2>
     <span class="badge badge-warning">High</span>
     <h3 data-i18n="owasp_webapp_a03_overview_heading">Overview</h3>
@@ -182,7 +182,7 @@ app.config[<span class="string">'SECRET_KEY'</span>] = os.environ[<span class="s
   </div>
 
   <!-- A04: Cryptographic Failures -->
-  <div class="section">
+  <div class="section" id="a04">
     <h2 data-i18n-html="owasp_webapp_a04_heading"><span class="section-icon">4&#xFE0F;&#x20E3;</span> A04 - Cryptographic Failures</h2>
     <span class="badge badge-warning">High</span>
     <h3 data-i18n="owasp_webapp_a04_overview_heading">Overview</h3>
@@ -229,7 +229,7 @@ app.config[<span class="string">'SECRET_KEY'</span>] = os.environ[<span class="s
   </div>
 
   <!-- A05: Injection -->
-  <div class="section">
+  <div class="section" id="a05">
     <h2 data-i18n-html="owasp_webapp_a05_heading"><span class="section-icon">5&#xFE0F;&#x20E3;</span> A05 - Injection</h2>
     <span class="badge badge-danger">Critical</span>
     <h3 data-i18n="owasp_webapp_a05_overview_heading">Overview</h3>
@@ -276,7 +276,7 @@ app.config[<span class="string">'SECRET_KEY'</span>] = os.environ[<span class="s
   </div>
 
   <!-- A06: Insecure Design -->
-  <div class="section">
+  <div class="section" id="a06">
     <h2 data-i18n-html="owasp_webapp_a06_heading"><span class="section-icon">6&#xFE0F;&#x20E3;</span> A06 - Insecure Design</h2>
     <span class="badge badge-warning">High</span>
     <h3 data-i18n="owasp_webapp_a06_overview_heading">Overview</h3>
@@ -337,7 +337,7 @@ app.config[<span class="string">'SECRET_KEY'</span>] = os.environ[<span class="s
   </div>
 
   <!-- A07: Authentication Failures -->
-  <div class="section">
+  <div class="section" id="a07">
     <h2 data-i18n-html="owasp_webapp_a07_heading"><span class="section-icon">7&#xFE0F;&#x20E3;</span> A07 - Authentication Failures</h2>
     <span class="badge badge-warning">High</span>
     <h3 data-i18n="owasp_webapp_a07_overview_heading">Overview</h3>
@@ -399,7 +399,7 @@ limiter = Limiter(app, default_limits=[<span class="string">"100/hour"</span>])
   </div>
 
   <!-- A08: Software or Data Integrity Failures -->
-  <div class="section">
+  <div class="section" id="a08">
     <h2 data-i18n-html="owasp_webapp_a08_heading"><span class="section-icon">8&#xFE0F;&#x20E3;</span> A08 - Software or Data Integrity Failures</h2>
     <span class="badge badge-warning">High</span>
     <h3 data-i18n="owasp_webapp_a08_overview_heading">Overview</h3>
@@ -446,7 +446,7 @@ data = json.<span class="function">loads</span>(user_input)  <span class="commen
   </div>
 
   <!-- A09: Security Logging & Alerting Failures -->
-  <div class="section">
+  <div class="section" id="a09">
     <h2 data-i18n-html="owasp_webapp_a09_heading"><span class="section-icon">9&#xFE0F;&#x20E3;</span> A09 - Security Logging &amp; Alerting Failures</h2>
     <span class="badge badge-info">Medium</span>
     <h3 data-i18n="owasp_webapp_a09_overview_heading">Overview</h3>
@@ -509,7 +509,7 @@ security_log = logging.<span class="function">getLogger</span>(<span class="stri
   </div>
 
   <!-- A10: Mishandling of Exceptional Conditions -->
-  <div class="section">
+  <div class="section" id="a10">
     <h2 data-i18n-html="owasp_webapp_a10_heading"><span class="section-icon">&#x1F51F;</span> A10 - Mishandling of Exceptional Conditions</h2>
     <span class="badge badge-info">Medium</span>
     <h3 data-i18n="owasp_webapp_a10_overview_heading">Overview</h3>

@@ -34,7 +34,7 @@
   </div>
 
   <!-- ML01 -->
-  <div class="section">
+  <div class="section" id="ml01">
     <h2 data-i18n-html="owasp_ml_ml01_heading"><span class="section-icon">1️⃣</span> ML01 - Input Manipulation Attack</h2>
     <span class="badge badge-danger">Critical</span>
     <h3 data-i18n="owasp_ml_ml01_overview_heading">Overview</h3>
@@ -110,7 +110,7 @@ detector = BinaryInputDetector(model)
   </div>
 
   <!-- ML02 -->
-  <div class="section">
+  <div class="section" id="ml02">
     <h2 data-i18n-html="owasp_ml_ml02_heading"><span class="section-icon">2️⃣</span> ML02 - Data Poisoning Attack</h2>
     <span class="badge badge-danger">Critical</span>
     <h3 data-i18n="owasp_ml_ml02_overview_heading">Overview</h3>
@@ -184,7 +184,7 @@ model.fit(X_clean, y_clean)</pre>
   </div>
 
   <!-- ML03 -->
-  <div class="section">
+  <div class="section" id="ml03">
     <h2 data-i18n-html="owasp_ml_ml03_heading"><span class="section-icon">3️⃣</span> ML03 - Model Inversion Attack</h2>
     <span class="badge badge-warning">High</span>
     <h3 data-i18n="owasp_ml_ml03_overview_heading">Overview</h3>
@@ -256,7 +256,7 @@ model = load_model(<span class="string">"face_classifier_dp.h5"</span>)  <span c
   </div>
 
   <!-- ML04 -->
-  <div class="section">
+  <div class="section" id="ml04">
     <h2 data-i18n-html="owasp_ml_ml04_heading"><span class="section-icon">4️⃣</span> ML04 - Membership Inference Attack</h2>
     <span class="badge badge-warning">High</span>
     <h3 data-i18n="owasp_ml_ml04_overview_heading">Overview</h3>
@@ -328,7 +328,7 @@ test_acc = model.score(X_test, y_test)
   </div>
 
   <!-- ML05 -->
-  <div class="section">
+  <div class="section" id="ml05">
     <h2 data-i18n-html="owasp_ml_ml05_heading"><span class="section-icon">5️⃣</span> ML05 - Model Theft</h2>
     <span class="badge badge-danger">Critical</span>
     <h3 data-i18n="owasp_ml_ml05_overview_heading">Overview</h3>
@@ -405,7 +405,7 @@ query_monitor = QueryPatternDetector()
   </div>
 
   <!-- ML06 -->
-  <div class="section">
+  <div class="section" id="ml06">
     <h2 data-i18n-html="owasp_ml_ml06_heading"><span class="section-icon">6️⃣</span> ML06 - AI Supply Chain Attacks</h2>
     <span class="badge badge-danger">Critical</span>
     <h3 data-i18n="owasp_ml_ml06_overview_heading">Overview</h3>
@@ -473,7 +473,7 @@ model = AutoModel.from_pretrained(
   </div>
 
   <!-- ML07 -->
-  <div class="section">
+  <div class="section" id="ml07">
     <h2 data-i18n-html="owasp_ml_ml07_heading"><span class="section-icon">7️⃣</span> ML07 - Transfer Learning Attack</h2>
     <span class="badge badge-warning">High</span>
     <h3 data-i18n="owasp_ml_ml07_overview_heading">Overview</h3>
@@ -542,7 +542,7 @@ evaluate_for_backdoors(model, trigger_test_set)</pre>
   </div>
 
   <!-- ML08 -->
-  <div class="section">
+  <div class="section" id="ml08">
     <h2 data-i18n-html="owasp_ml_ml08_heading"><span class="section-icon">8️⃣</span> ML08 - Model Skewing</h2>
     <span class="badge badge-info">Medium</span>
     <h3 data-i18n="owasp_ml_ml08_overview_heading">Overview</h3>
@@ -612,7 +612,7 @@ training_stats = joblib.load(<span class="string">"training_stats.pkl"</span>)
   </div>
 
   <!-- ML09 -->
-  <div class="section">
+  <div class="section" id="ml09">
     <h2 data-i18n-html="owasp_ml_ml09_heading"><span class="section-icon">9️⃣</span> ML09 - Output Integrity Attack</h2>
     <span class="badge badge-warning">High</span>
     <h3 data-i18n="owasp_ml_ml09_overview_heading">Overview</h3>
@@ -683,7 +683,7 @@ training_stats = joblib.load(<span class="string">"training_stats.pkl"</span>)
   </div>
 
   <!-- ML10 -->
-  <div class="section">
+  <div class="section" id="ml10">
     <h2 data-i18n-html="owasp_ml_ml10_heading"><span class="section-icon">🔟</span> ML10 - Model Poisoning</h2>
     <span class="badge badge-danger">Critical</span>
     <h3 data-i18n="owasp_ml_ml10_overview_heading">Overview</h3>

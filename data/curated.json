@@ -1,0 +1,89 @@
+{
+  "lastUpdated": "2026-03-22",
+  "editorPicks": [
+    {
+      "title": {
+        "en": "DeepSeek's Exposed Database: 1M+ Logs with Chat History and API Keys",
+        "ja": "DeepSeekのデータベース露出: 100万件超のチャット履歴・APIキーを含むログが公開状態に",
+        "es": "Base de datos expuesta de DeepSeek: más de 1M de registros con historial de chat y claves API",
+        "pt": "Banco de dados exposto do DeepSeek: mais de 1M de logs com histórico de chat e chaves API",
+        "fr": "Base de données exposée de DeepSeek : plus d'1M de logs avec historique de chat et clés API"
+      },
+      "link": "https://www.wiz.io/blog/wiz-research-uncovers-exposed-deepseek-database-leak",
+      "commentary": {
+        "en": "A textbook case of why AI infrastructure needs the same security rigor as traditional systems. Unauthenticated database access exposed chat history, API secrets, and operational metadata.",
+        "ja": "AIインフラにも従来のシステムと同等のセキュリティ対策が必要であることを示す教科書的事例。未認証のデータベースアクセスにより、チャット履歴、APIシークレット、運用メタデータが露出。",
+        "es": "Un caso de libro sobre por qué la infraestructura de IA necesita el mismo rigor de seguridad que los sistemas tradicionales.",
+        "pt": "Um caso exemplar de por que a infraestrutura de IA precisa do mesmo rigor de segurança que os sistemas tradicionais.",
+        "fr": "Un cas d'école sur pourquoi l'infrastructure IA nécessite la même rigueur de sécurité que les systèmes traditionnels."
+      },
+      "category": "ai",
+      "tags": ["critical", "data-exposure", "ai-infrastructure"],
+      "addedDate": "2026-03-22"
+    },
+    {
+      "title": {
+        "en": "DOGE Employee Leaks xAI Private API Key on GitHub — Access to 52+ LLMs",
+        "ja": "DOGE職員がxAIプライベートAPIキーをGitHubに漏洩 — 52以上のLLMへのアクセス",
+        "es": "Empleado de DOGE filtra clave API privada de xAI en GitHub — acceso a más de 52 LLMs",
+        "pt": "Funcionário do DOGE vaza chave API privada do xAI no GitHub — acesso a mais de 52 LLMs",
+        "fr": "Un employé du DOGE divulgue la clé API privée de xAI sur GitHub — accès à plus de 52 LLMs"
+      },
+      "link": "https://krebsonsecurity.com/2025/07/doge-denizen-marko-elez-leaked-api-key-for-xai/",
+      "commentary": {
+        "en": "Highlights the persistent danger of hardcoded secrets in code repositories. Even government-adjacent developers make this mistake. Automated secret scanning is essential.",
+        "ja": "コードリポジトリにハードコードされたシークレットの永続的な危険性を浮き彫りにする事例。政府関連の開発者でもこの過ちを犯す。自動シークレットスキャンが不可欠。",
+        "es": "Destaca el peligro persistente de secretos codificados en repositorios de código. La detección automática de secretos es esencial.",
+        "pt": "Destaca o perigo persistente de segredos codificados em repositórios de código. A varredura automática de segredos é essencial.",
+        "fr": "Souligne le danger persistant des secrets codés en dur dans les dépôts de code. L'analyse automatique des secrets est essentielle."
+      },
+      "category": "ai",
+      "tags": ["critical", "api-key-leak", "ai-tools"],
+      "addedDate": "2026-03-22"
+    },
+    {
+      "title": {
+        "en": "AI-Related CVEs Surge 1,025% Year-over-Year in 2024",
+        "ja": "AI関連CVEが2024年に前年比1,025%急増",
+        "es": "Los CVEs relacionados con IA aumentan un 1.025% interanual en 2024",
+        "pt": "CVEs relacionados a IA aumentam 1.025% ano a ano em 2024",
+        "fr": "Les CVEs liés à l'IA augmentent de 1 025% en glissement annuel en 2024"
+      },
+      "link": "https://www.wallarm.com/reports/2025-api-security-report",
+      "commentary": {
+        "en": "Wallarm's 2025 report reveals explosive growth in AI vulnerabilities. Over 50% of CISA's KEV catalog is now API-related. The attack surface is expanding faster than defenses.",
+        "ja": "Wallarmの2025年レポートがAI脆弱性の爆発的増加を明らかに。CISAのKEVカタログの50%以上がAPI関連に。攻撃対象面が防御よりも速く拡大している。",
+        "es": "El informe de Wallarm 2025 revela un crecimiento explosivo de vulnerabilidades de IA. La superficie de ataque se expande más rápido que las defensas.",
+        "pt": "O relatório da Wallarm 2025 revela crescimento explosivo de vulnerabilidades de IA. A superfície de ataque está se expandindo mais rápido que as defesas.",
+        "fr": "Le rapport Wallarm 2025 révèle une croissance explosive des vulnérabilités IA. La surface d'attaque s'étend plus vite que les défenses."
+      },
+      "category": "ai",
+      "tags": ["report", "trends", "cve"],
+      "addedDate": "2026-03-22"
+    }
+  ],
+  "weeklyHighlights": [
+    {
+      "weekOf": "2026-03-17",
+      "title": {
+        "en": "Week of March 17: AI Security Takes Center Stage",
+        "ja": "3月17日の週: AIセキュリティが注目を集める",
+        "es": "Semana del 17 de marzo: La seguridad IA toma protagonismo",
+        "pt": "Semana de 17 de março: Segurança IA ganha destaque",
+        "fr": "Semaine du 17 mars : La sécurité IA prend le devant de la scène"
+      },
+      "summary": {
+        "en": "OWASP released updates to the Agentic AI Top 10 list, highlighting agent goal hijacking and privilege escalation as top concerns for 2026. Meanwhile, several high-profile API key leaks were reported across AI platforms.",
+        "ja": "OWASPがAgentic AI Top 10リストを更新し、エージェント目標ハイジャックと権限昇格を2026年の最重要課題として強調。一方、AIプラットフォーム全体で複数の注目すべきAPIキー漏洩が報告された。",
+        "es": "OWASP publicó actualizaciones de la lista Agentic AI Top 10, destacando el secuestro de objetivos de agentes y la escalación de privilegios. Se reportaron varias filtraciones de claves API en plataformas de IA.",
+        "pt": "OWASP publicou atualizações da lista Agentic AI Top 10, destacando sequestro de objetivos de agentes e escalonamento de privilégios. Vários vazamentos de chaves API foram reportados em plataformas de IA.",
+        "fr": "L'OWASP a publié des mises à jour de la liste Agentic AI Top 10, soulignant le détournement d'objectifs d'agents et l'escalade de privilèges. Plusieurs fuites de clés API ont été signalées sur des plateformes d'IA."
+      },
+      "keyThemes": ["ai-agents", "api-key-security", "owasp-updates"]
+    }
+  ],
+  "featuredUrls": [
+    "https://www.wiz.io/blog/wiz-research-uncovers-exposed-deepseek-database-leak",
+    "https://krebsonsecurity.com/2025/07/doge-denizen-marko-elez-leaked-api-key-for-xai/"
+  ]
+}

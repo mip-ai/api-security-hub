@@ -1,7 +1,7 @@
 {
   "vb_page_title": "ベンダーブログ - AI Security Hub",
-  "vb_heading": "APIセキュリティベンダーブログ",
-  "vb_subtitle": "主要なAPIセキュリティベンダーの最新インサイトを自動更新でお届けします。",
+  "vb_heading": "セキュリティベンダーブログ",
+  "vb_subtitle": "主要セキュリティベンダーの最新インサイト — 自動更新",
   "vb_latest_heading": "<span class=\"section-icon\">&#x1F4DD;</span> 最新ブログ記事",
   "vb_last_updated": "最終更新: ",
   "vb_filter_all": "すべて",
@@ -11,5 +11,10 @@
   "vb_about_wallarm": "API脅威防御、API攻撃対象領域管理、リアルタイム脆弱性検出を含むエンドツーエンドのAPIセキュリティを提供しています。",
   "vb_about_cequence": "統合API保護（UAP）を専門とし、API検出、コンプライアンス、ボット/不正防御を単一プラットフォームで提供しています。",
   "vb_about_imperva": "包括的なアプリケーション・データセキュリティプロバイダー。WAF、DDoS防御、データセキュリティの一部としてAPIセキュリティを提供しています。",
-  "vb_translate_tip": "記事は英語で書かれています。ブラウザの翻訳機能（右クリック → 翻訳）をご利用ください。"
+  "vb_translate_tip": "記事は英語で書かれています。ブラウザの翻訳機能（右クリック → 翻訳）をご利用ください。",
+  "vb_cat_all": "すべて",
+  "vb_cat_ai": "AIセキュリティ",
+  "vb_cat_infra": "インフラ",
+  "vb_about_protectai": "AI/MLセキュリティプラットフォームのリーダー。機械学習システムの脆弱性スキャン、モデルセキュリティ、サプライチェーン保護を提供。",
+  "vb_about_trailofbits": "ソフトウェアアシュアランス、ブロックチェーンセキュリティ、AI/MLセキュリティの監査・ツーリングに特化したエリートセキュリティリサーチ企業。"
 }

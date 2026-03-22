@@ -4,10 +4,10 @@
   <title data-i18n="vb_page_title">ベンダーブログ - AI Security Hub</title>
   <link rel="stylesheet" href="../css/style.css">
   <meta name="description" content="Security Vendor Blog Aggregator - latest insights from industry security vendors.">
-  <meta property="og:title" content="ベンダーブログ - AI Security Hub">
+  <meta property="og:title" content="Vendor Blogs - AI Security Hub">
   <meta property="og:description" content="Security Vendor Blog Aggregator - latest insights from industry security vendors.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://secaihub.com/ja/vendor-blogs.html">
+  <meta property="og:url" content="https://secaihub.com/en/vendor-blogs.html">
   <meta property="og:site_name" content="AI Security Hub">
   <meta name="twitter:card" content="summary">
   <style>
@@ -30,6 +30,8 @@
     .vendor-badge.wallarm { background:#e3f2fd; color:#1565c0; }
     .vendor-badge.cequence { background:#fce4ec; color:#c62828; }
     .vendor-badge.imperva { background:#fff3e0; color:#e65100; }
+    .vendor-badge.protectai { background:#f3e5f5; color:#7b1fa2; }
+    .vendor-badge.trailofbits { background:#ede7f6; color:#512da8; }
     .blog-item { padding:16px 0; border-bottom:1px solid var(--border-color,#dee2e6); }
     .blog-item:last-child { border-bottom:none; }
     .blog-meta { font-size:0.8rem; color:var(--text-muted,#6c757d); margin-bottom:6px; }
@@ -56,8 +58,8 @@
 <body>
 
   <div class="page-header">
-    <h1 data-i18n="vb_heading">APIセキュリティベンダーブログ</h1>
-    <p class="subtitle" data-i18n="vb_subtitle">主要なAPIセキュリティベンダーの最新インサイトを自動更新でお届けします。</p>
+    <h1 data-i18n="vb_heading">セキュリティベンダーブログ</h1>
+    <p class="subtitle" data-i18n="vb_subtitle">主要セキュリティベンダーの最新インサイト — 自動更新</p>
   </div>
 
   <div class="section">
@@ -66,6 +68,12 @@
       <span data-i18n="vb_last_updated">最終更新: </span><span id="vb-updated-date"></span>
     </p>
 
+    <div class="news-category-tabs" style="display:flex;gap:8px;margin-bottom:12px;">
+      <button class="tab-btn active" data-category="all" data-i18n="vb_cat_all">すべて</button>
+      <button class="tab-btn" data-category="ai" data-i18n="vb_cat_ai">AIセキュリティ</button>
+      <button class="tab-btn" data-category="infra" data-i18n="vb_cat_infra">インフラ</button>
+    </div>
+
     <!-- Vendor Filter Buttons -->
     <div class="vendor-filters" id="vendor-filters">
       <button class="vendor-filter-btn active" data-vendor="all" data-i18n="vb_filter_all">すべて</button>
@@ -73,6 +81,8 @@
       <button class="vendor-filter-btn" data-vendor="wallarm">Wallarm</button>
       <button class="vendor-filter-btn" data-vendor="cequence">Cequence</button>
       <button class="vendor-filter-btn" data-vendor="imperva">Imperva</button>
+      <button class="vendor-filter-btn" data-vendor="protectai">Protect AI</button>
+      <button class="vendor-filter-btn" data-vendor="trailofbits">Trail of Bits</button>
     </div>
 
     <div id="blog-count"></div>
@@ -105,6 +115,16 @@
         <p data-i18n="vb_about_imperva">包括的なアプリケーション・データセキュリティプロバイダー。WAF、DDoS防御、データセキュリティの一部としてAPIセキュリティを提供しています。</p>
         <span class="card-tag tag-high">Application Security</span>
       </div>
+      <div class="card">
+        <h3>Protect AI</h3>
+        <p data-i18n="vb_about_protectai">AI/MLセキュリティプラットフォームのリーダー。機械学習システムの脆弱性スキャン、モデルセキュリティ、サプライチェーン保護を提供。</p>
+        <span class="card-tag tag-critical">AI/ML Security</span>
+      </div>
+      <div class="card">
+        <h3>Trail of Bits</h3>
+        <p data-i18n="vb_about_trailofbits">ソフトウェアアシュアランス、ブロックチェーンセキュリティ、AI/MLセキュリティの監査・ツーリングに特化したエリートセキュリティリサーチ企業。</p>
+        <span class="card-tag tag-critical">Security Research</span>
+      </div>
     </div>
   </div>
 
@@ -115,8 +135,9 @@
   var lang = langMatch ? langMatch[1] : 'en';
   var allItems = [];
   var currentVendor = 'all';
+  var currentCategory = 'all';
+  var featuredUrls = [];
 
-  // i18n labels
   var labels = {
     en: { showing: 'Showing {count} posts', no_posts: 'No blog posts available.', load_fail: 'Failed to load blog posts.' },
     ja: { showing: '{count}件表示中', no_posts: 'ブログ記事がありません。', load_fail: 'ブログ記事の読み込みに失敗しました。' },
@@ -125,6 +146,17 @@
     fr: { showing: 'Affichage de {count} articles', no_posts: 'Aucun article disponible.', load_fail: 'Échec du chargement des articles.' }
   };
   var l = labels[lang] || labels.en;
+
+  function getFilteredItems() {
+    var items = allItems;
+    if (currentCategory !== 'all') {
+      items = items.filter(function(item) { return (item.category || 'general') === currentCategory; });
+    }
+    if (currentVendor !== 'all') {
+      items = items.filter(function(item) { return item.vendor === currentVendor; });
+    }
+    return items;
+  }
 
   function renderItems(items) {
     var container = document.getElementById('blog-container');
@@ -152,13 +184,19 @@
       var url = item.link || '#';
       var source = item.source || '';
       var vendor = item.vendor || '';
+      var cat = item.category || 'general';
 
-      html += '<div class="blog-item" data-vendor="' + vendor + '">';
+      html += '<div class="blog-item" data-vendor="' + vendor + '" data-category="' + cat + '">';
       html += '<div class="blog-meta">';
+      if (cat === 'ai') html += '<span class="cat-badge cat-ai">AI</span> ';
+      else if (cat === 'infra') html += '<span class="cat-badge cat-infra">Infra</span> ';
       html += '<span class="vendor-badge ' + vendor + '">' + source + '</span>';
       html += date;
       html += '</div>';
-      html += '<div class="blog-title"><a href="' + url + '" target="_blank" rel="noopener noreferrer">' + title + '</a>';
+      var isFeatured = featuredUrls.indexOf(url) !== -1;
+      html += '<div class="blog-title">';
+      if (isFeatured) html += '<span class="cat-badge" style="background:rgba(0,212,170,0.2);color:#00d4aa;margin-right:6px;">Recommended</span>';
+      html += '<a href="' + url + '" target="_blank" rel="noopener noreferrer">' + title + '</a>';
       if (lang !== 'en') {
         html += ' <span class="lang-badge">EN</span>';
       }
@@ -172,27 +210,40 @@
     container.innerHTML = html;
   }
 
-  function filterItems(vendor) {
-    currentVendor = vendor;
-    if (vendor === 'all') {
-      renderItems(allItems);
-    } else {
-      renderItems(allItems.filter(function(item) { return item.vendor === vendor; }));
-    }
+  function applyFilters() {
+    renderItems(getFilteredItems());
   }
 
-  // Setup filter buttons
+  // Category tab handlers
+  var catTabs = document.querySelectorAll('.news-category-tabs .tab-btn');
+  catTabs.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      catTabs.forEach(function(b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      currentCategory = btn.getAttribute('data-category');
+      applyFilters();
+    });
+  });
+
+  // Vendor filter button handlers
   var filterBtns = document.querySelectorAll('.vendor-filter-btn');
   filterBtns.forEach(function(btn) {
     btn.addEventListener('click', function() {
       filterBtns.forEach(function(b) { b.classList.remove('active'); });
       btn.classList.add('active');
-      filterItems(btn.getAttribute('data-vendor'));
+      currentVendor = btn.getAttribute('data-vendor');
+      applyFilters();
     });
   });
 
-  // Fetch data
-  fetch('../data/vendor-blogs.json')
+  // Load curated data first, then vendor blogs
+  fetch('../data/curated.json')
+    .then(function(res) { return res.json(); })
+    .then(function(curated) { featuredUrls = curated.featuredUrls || []; })
+    .catch(function() {})
+    .then(function() {
+      return fetch('../data/vendor-blogs.json');
+    })
     .then(function(res) { return res.json(); })
     .then(function(data) {
       var updatedDateEl = document.getElementById('vb-updated-date');

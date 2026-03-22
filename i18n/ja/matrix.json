@@ -1,0 +1,11 @@
+{
+  "matrix_page_title": "OWASP横断マトリクス - AI Security Hub",
+  "matrix_heading": "OWASP横断マトリクス",
+  "matrix_subtitle": "8つのOWASP Top 10リストに共通するセキュリティテーマを横断的にマッピング。リスクがどのように繋がるかを発見できます。",
+  "matrix_intro_title": "このマトリクスの意義",
+  "matrix_intro_desc": "セキュリティリスクは孤立して存在しません。インジェクションはAPI、LLM、Webアプリ、CI/CDパイプラインに現れます。アクセス制御の不備はすべての領域に及びます。このマトリクスは普遍的なパターンを明らかにし、スタック全体で機能する防御を構築する助けとなります。",
+  "matrix_table_heading": "<span class=\"section-icon\">&#x1F4CA;</span> インタラクティブマトリクス",
+  "matrix_table_hint": "各リスクをクリックすると詳細ページに移動します。モバイルでは横スクロールできます。",
+  "matrix_deepdive_heading": "<span class=\"section-icon\">&#x1F50D;</span> テーマ別ディープダイブ",
+  "matrix_deepdive_hint": "各テーマを展開すると、関連するリスクとその接続が表示されます。"
+}

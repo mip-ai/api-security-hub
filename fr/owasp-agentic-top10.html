@@ -4,10 +4,10 @@
   <title data-i18n="owasp_agentic_page_title">OWASP Top 10 pour les applications agentiques - AI Security Hub</title>
   <link rel="stylesheet" href="../css/style.css">
   <meta name="description" content="OWASP Agentic Security Top 10 - Security risks for AI agent systems with Python examples.">
-  <meta property="og:title" content="OWASP Top 10 pour les applications agentiques - AI Security Hub">
+  <meta property="og:title" content="OWASP Top 10 for Agentic Applications - AI Security Hub">
   <meta property="og:description" content="OWASP Agentic Security Top 10 - Security risks for AI agent systems with Python examples.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://secaihub.com/fr/owasp-agentic-top10.html">
+  <meta property="og:url" content="https://secaihub.com/en/owasp-agentic-top10.html">
   <meta property="og:site_name" content="AI Security Hub">
   <meta name="twitter:card" content="summary">
 
@@ -34,7 +34,7 @@
   </div>
 
   <!-- ASI01: Agent Goal Hijack -->
-  <div class="section">
+  <div class="section" id="asi01">
     <h2 data-i18n-html="owasp_agentic_asi01_heading"><span class="section-icon">1️⃣</span> ASI01 - Détournement des objectifs de l'agent</h2>
     <span class="badge badge-danger">Critical</span>
     <h3 data-i18n="owasp_agentic_asi01_overview_heading">Vue d'ensemble</h3>
@@ -95,7 +95,7 @@ ALLOWED_GOALS = [<span class="string">"summarize"</span>, <span class="string">"
   </div>
 
   <!-- ASI02: Tool Misuse & Exploitation -->
-  <div class="section">
+  <div class="section" id="asi02">
     <h2 data-i18n-html="owasp_agentic_asi02_heading"><span class="section-icon">2️⃣</span> ASI02 - Mauvaise utilisation et exploitation d'outils</h2>
     <span class="badge badge-danger">Critical</span>
     <h3 data-i18n="owasp_agentic_asi02_overview_heading">Vue d'ensemble</h3>
@@ -152,7 +152,7 @@ ALLOWED_GOALS = [<span class="string">"summarize"</span>, <span class="string">"
   </div>
 
   <!-- ASI03: Identity & Privilege Abuse -->
-  <div class="section">
+  <div class="section" id="asi03">
     <h2 data-i18n-html="owasp_agentic_asi03_heading"><span class="section-icon">3️⃣</span> ASI03 - Abus d'identité et de privilèges</h2>
     <span class="badge badge-danger">Critical</span>
     <h3 data-i18n="owasp_agentic_asi03_overview_heading">Vue d'ensemble</h3>
@@ -213,7 +213,7 @@ TASK_SCOPES = {
   </div>
 
   <!-- ASI04: Agentic Supply Chain Vulnerabilities -->
-  <div class="section">
+  <div class="section" id="asi04">
     <h2 data-i18n-html="owasp_agentic_asi04_heading"><span class="section-icon">4️⃣</span> ASI04 - Vulnérabilités de la chaîne d'approvisionnement agentique</h2>
     <span class="badge badge-warning">High</span>
     <h3 data-i18n="owasp_agentic_asi04_overview_heading">Vue d'ensemble</h3>
@@ -262,7 +262,7 @@ TRUSTED_PLUGINS = {
   </div>
 
   <!-- ASI05: Unexpected Code Execution -->
-  <div class="section">
+  <div class="section" id="asi05">
     <h2 data-i18n-html="owasp_agentic_asi05_heading"><span class="section-icon">5️⃣</span> ASI05 - Exécution de code inattendue</h2>
     <span class="badge badge-danger">Critical</span>
     <h3 data-i18n="owasp_agentic_asi05_overview_heading">Vue d'ensemble</h3>
@@ -321,7 +321,7 @@ BLOCKED_MODULES = [<span class="string">"os"</span>, <span class="string">"subpr
   </div>
 
   <!-- ASI06: Memory & Context Poisoning -->
-  <div class="section">
+  <div class="section" id="asi06">
     <h2 data-i18n-html="owasp_agentic_asi06_heading"><span class="section-icon">6️⃣</span> ASI06 - Empoisonnement de la mémoire et du contexte</h2>
     <span class="badge badge-warning">High</span>
     <h3 data-i18n="owasp_agentic_asi06_overview_heading">Vue d'ensemble</h3>
@@ -370,7 +370,7 @@ BLOCKED_MODULES = [<span class="string">"os"</span>, <span class="string">"subpr
   </div>
 
   <!-- ASI07: Insecure Inter-Agent Communication -->
-  <div class="section">
+  <div class="section" id="asi07">
     <h2 data-i18n-html="owasp_agentic_asi07_heading"><span class="section-icon">7️⃣</span> ASI07 - Communication inter-agents non sécurisée</h2>
     <span class="badge badge-warning">High</span>
     <h3 data-i18n="owasp_agentic_asi07_overview_heading">Vue d'ensemble</h3>
@@ -425,7 +425,7 @@ BLOCKED_MODULES = [<span class="string">"os"</span>, <span class="string">"subpr
   </div>
 
   <!-- ASI08: Cascading Failures -->
-  <div class="section">
+  <div class="section" id="asi08">
     <h2 data-i18n-html="owasp_agentic_asi08_heading"><span class="section-icon">8️⃣</span> ASI08 - Défaillances en cascade</h2>
     <span class="badge badge-warning">High</span>
     <h3 data-i18n="owasp_agentic_asi08_overview_heading">Vue d'ensemble</h3>
@@ -483,7 +483,7 @@ BLOCKED_MODULES = [<span class="string">"os"</span>, <span class="string">"subpr
   </div>
 
   <!-- ASI09: Human-Agent Trust Exploitation -->
-  <div class="section">
+  <div class="section" id="asi09">
     <h2 data-i18n-html="owasp_agentic_asi09_heading"><span class="section-icon">9️⃣</span> ASI09 - Exploitation de la confiance humain-agent</h2>
     <span class="badge badge-info">Medium</span>
     <h3 data-i18n="owasp_agentic_asi09_overview_heading">Vue d'ensemble</h3>
@@ -532,7 +532,7 @@ BLOCKED_MODULES = [<span class="string">"os"</span>, <span class="string">"subpr
   </div>
 
   <!-- ASI10: Rogue Agents -->
-  <div class="section">
+  <div class="section" id="asi10">
     <h2 data-i18n-html="owasp_agentic_asi10_heading"><span class="section-icon">🔟</span> ASI10 - Agents voyous</h2>
     <span class="badge badge-warning">High</span>
     <h3 data-i18n="owasp_agentic_asi10_overview_heading">Vue d'ensemble</h3>

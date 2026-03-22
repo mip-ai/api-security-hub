@@ -1,0 +1,330 @@
+{
+  "themes": [
+    {
+      "id": "access-control",
+      "name": {
+        "en": "Access Control",
+        "ja": "アクセス制御",
+        "es": "Control de Acceso",
+        "pt": "Controle de Acesso",
+        "fr": "Contrôle d'Accès"
+      },
+      "description": {
+        "en": "Failures in enforcing proper authorization, allowing users to act beyond intended permissions.",
+        "ja": "適切な認可の適用に失敗し、ユーザーが意図された権限を超えて行動できる状態。",
+        "es": "Fallos en la aplicación de la autorización adecuada, permitiendo a los usuarios actuar más allá de los permisos previstos.",
+        "pt": "Falhas na aplicação de autorização adequada, permitindo que usuários ajam além das permissões pretendidas.",
+        "fr": "Échecs dans l'application de l'autorisation appropriée, permettant aux utilisateurs d'agir au-delà des permissions prévues."
+      },
+      "cells": {
+        "api": [
+          { "id": "API1", "name": { "en": "BOLA", "ja": "BOLA", "es": "BOLA", "pt": "BOLA", "fr": "BOLA" }, "anchor": "api1" },
+          { "id": "API5", "name": { "en": "Broken Function Level Auth", "ja": "機能レベル認可の不備", "es": "Auth a Nivel de Función Rota", "pt": "Auth de Nível de Função Quebrada", "fr": "Auth de Niveau Fonction Cassée" }, "anchor": "api5" }
+        ],
+        "llm": [
+          { "id": "LLM06", "name": { "en": "Excessive Agency", "ja": "過剰なエージェンシー", "es": "Agencia Excesiva", "pt": "Agência Excessiva", "fr": "Agence Excessive" }, "anchor": "llm06" }
+        ],
+        "agentic": [
+          { "id": "ASI03", "name": { "en": "Excessive Privilege", "ja": "過剰な権限", "es": "Privilegio Excesivo", "pt": "Privilégio Excessivo", "fr": "Privilège Excessif" }, "anchor": "asi03" }
+        ],
+        "ml": [],
+        "webapp": [
+          { "id": "A01", "name": { "en": "Broken Access Control", "ja": "アクセス制御の不備", "es": "Control de Acceso Roto", "pt": "Controle de Acesso Quebrado", "fr": "Contrôle d'Accès Cassé" }, "anchor": "a01" }
+        ],
+        "cloud": [
+          { "id": "CNAS-5", "name": { "en": "Poor Identity & Access", "ja": "ID・アクセス管理不備", "es": "Identidad y Acceso Deficientes", "pt": "Identidade e Acesso Deficientes", "fr": "Identité et Accès Déficients" }, "anchor": "cnas-5" }
+        ],
+        "cicd": [
+          { "id": "CICD-SEC-5", "name": { "en": "Insufficient PBAC", "ja": "不十分なPBAC", "es": "PBAC Insuficiente", "pt": "PBAC Insuficiente", "fr": "PBAC Insuffisant" }, "anchor": "cicd-sec-5" }
+        ],
+        "k8s": [
+          { "id": "K08", "name": { "en": "Secrets Management", "ja": "シークレット管理", "es": "Gestión de Secretos", "pt": "Gestão de Segredos", "fr": "Gestion des Secrets" }, "anchor": "k08" }
+        ]
+      }
+    },
+    {
+      "id": "injection",
+      "name": {
+        "en": "Injection",
+        "ja": "インジェクション",
+        "es": "Inyección",
+        "pt": "Injeção",
+        "fr": "Injection"
+      },
+      "description": {
+        "en": "Untrusted data sent to an interpreter as part of a command or query, tricking it into executing unintended actions.",
+        "ja": "信頼できないデータがコマンドやクエリの一部としてインタープリターに送信され、意図しないアクションを実行させる攻撃。",
+        "es": "Datos no confiables enviados a un intérprete como parte de un comando o consulta, engañándolo para ejecutar acciones no deseadas.",
+        "pt": "Dados não confiáveis enviados a um interpretador como parte de um comando ou consulta, enganando-o para executar ações indesejadas.",
+        "fr": "Données non fiables envoyées à un interpréteur dans le cadre d'une commande ou requête, le trompant pour exécuter des actions non prévues."
+      },
+      "cells": {
+        "api": [
+          { "id": "API8", "name": { "en": "Security Misconfiguration", "ja": "セキュリティ設定不備", "es": "Mala Configuración", "pt": "Má Configuração", "fr": "Mauvaise Configuration" }, "anchor": "api8" }
+        ],
+        "llm": [
+          { "id": "LLM01", "name": { "en": "Prompt Injection", "ja": "プロンプトインジェクション", "es": "Inyección de Prompt", "pt": "Injeção de Prompt", "fr": "Injection de Prompt" }, "anchor": "llm01" }
+        ],
+        "agentic": [
+          { "id": "ASI01", "name": { "en": "Agent Goal Hijack", "ja": "エージェント目標ハイジャック", "es": "Secuestro de Objetivo", "pt": "Sequestro de Objetivo", "fr": "Détournement d'Objectif" }, "anchor": "asi01" }
+        ],
+        "ml": [
+          { "id": "ML01", "name": { "en": "Input Manipulation", "ja": "入力操作攻撃", "es": "Manipulación de Entrada", "pt": "Manipulação de Entrada", "fr": "Manipulation d'Entrée" }, "anchor": "ml01" }
+        ],
+        "webapp": [
+          { "id": "A03", "name": { "en": "Injection", "ja": "インジェクション", "es": "Inyección", "pt": "Injeção", "fr": "Injection" }, "anchor": "a03" }
+        ],
+        "cloud": [],
+        "cicd": [
+          { "id": "CICD-SEC-3", "name": { "en": "Dependency Chain Abuse", "ja": "依存チェーン悪用", "es": "Abuso de Cadena de Dependencias", "pt": "Abuso de Cadeia de Dependências", "fr": "Abus de Chaîne de Dépendances" }, "anchor": "cicd-sec-3" }
+        ],
+        "k8s": []
+      }
+    },
+    {
+      "id": "data-exposure",
+      "name": {
+        "en": "Data Exposure",
+        "ja": "データ露出",
+        "es": "Exposición de Datos",
+        "pt": "Exposição de Dados",
+        "fr": "Exposition de Données"
+      },
+      "description": {
+        "en": "Sensitive data inadvertently exposed through APIs, logs, responses, or misconfigured storage.",
+        "ja": "機密データがAPI、ログ、レスポンス、または設定不備のストレージを通じて意図せず露出する問題。",
+        "es": "Datos sensibles expuestos inadvertidamente a través de APIs, registros, respuestas o almacenamiento mal configurado.",
+        "pt": "Dados sensíveis expostos inadvertidamente através de APIs, logs, respostas ou armazenamento mal configurado.",
+        "fr": "Données sensibles exposées par inadvertance via des APIs, journaux, réponses ou stockage mal configuré."
+      },
+      "cells": {
+        "api": [
+          { "id": "API3", "name": { "en": "Broken Object Property Auth", "ja": "プロパティレベル認可不備", "es": "Auth de Propiedad de Objeto Rota", "pt": "Auth de Propriedade de Objeto Quebrada", "fr": "Auth de Propriété d'Objet Cassée" }, "anchor": "api3" }
+        ],
+        "llm": [
+          { "id": "LLM02", "name": { "en": "Sensitive Info Disclosure", "ja": "機密情報の漏洩", "es": "Divulgación de Info Sensible", "pt": "Divulgação de Info Sensível", "fr": "Divulgation d'Info Sensible" }, "anchor": "llm02" }
+        ],
+        "agentic": [
+          { "id": "ASI06", "name": { "en": "Uncontrolled Escalation", "ja": "制御不能なエスカレーション", "es": "Escalación Descontrolada", "pt": "Escalonamento Descontrolado", "fr": "Escalade Incontrôlée" }, "anchor": "asi06" }
+        ],
+        "ml": [
+          { "id": "ML02", "name": { "en": "Data Poisoning", "ja": "データポイズニング", "es": "Envenenamiento de Datos", "pt": "Envenenamento de Dados", "fr": "Empoisonnement de Données" }, "anchor": "ml02" }
+        ],
+        "webapp": [
+          { "id": "A02", "name": { "en": "Cryptographic Failures", "ja": "暗号の不備", "es": "Fallos Criptográficos", "pt": "Falhas Criptográficas", "fr": "Défaillances Cryptographiques" }, "anchor": "a02" }
+        ],
+        "cloud": [
+          { "id": "CNAS-7", "name": { "en": "Data Security & Privacy", "ja": "データセキュリティ", "es": "Seguridad de Datos", "pt": "Segurança de Dados", "fr": "Sécurité des Données" }, "anchor": "cnas-7" }
+        ],
+        "cicd": [
+          { "id": "CICD-SEC-6", "name": { "en": "Insufficient Credential Hygiene", "ja": "資格情報管理不備", "es": "Higiene de Credenciales Insuficiente", "pt": "Higiene de Credenciais Insuficiente", "fr": "Hygiène des Identifiants Insuffisante" }, "anchor": "cicd-sec-6" }
+        ],
+        "k8s": [
+          { "id": "K08", "name": { "en": "Secrets Management", "ja": "シークレット管理", "es": "Gestión de Secretos", "pt": "Gestão de Segredos", "fr": "Gestion des Secrets" }, "anchor": "k08" }
+        ]
+      }
+    },
+    {
+      "id": "supply-chain",
+      "name": {
+        "en": "Supply Chain",
+        "ja": "サプライチェーン",
+        "es": "Cadena de Suministro",
+        "pt": "Cadeia de Suprimentos",
+        "fr": "Chaîne d'Approvisionnement"
+      },
+      "description": {
+        "en": "Risks from third-party components, dependencies, plugins, and pre-trained models that introduce vulnerabilities.",
+        "ja": "サードパーティのコンポーネント、依存関係、プラグイン、事前訓練済みモデルが脆弱性を導入するリスク。",
+        "es": "Riesgos de componentes de terceros, dependencias, plugins y modelos pre-entrenados que introducen vulnerabilidades.",
+        "pt": "Riscos de componentes de terceiros, dependências, plugins e modelos pré-treinados que introduzem vulnerabilidades.",
+        "fr": "Risques liés aux composants tiers, dépendances, plugins et modèles pré-entraînés introduisant des vulnérabilités."
+      },
+      "cells": {
+        "api": [],
+        "llm": [
+          { "id": "LLM05", "name": { "en": "Supply Chain Vulnerabilities", "ja": "サプライチェーンの脆弱性", "es": "Vulnerabilidades de Cadena", "pt": "Vulnerabilidades de Cadeia", "fr": "Vulnérabilités de Chaîne" }, "anchor": "llm05" }
+        ],
+        "agentic": [
+          { "id": "ASI05", "name": { "en": "Insecure Plugins/Tools", "ja": "安全でないプラグイン", "es": "Plugins Inseguros", "pt": "Plugins Inseguros", "fr": "Plugins Non Sécurisés" }, "anchor": "asi05" }
+        ],
+        "ml": [
+          { "id": "ML06", "name": { "en": "Corrupted Supply Chain", "ja": "汚染されたサプライチェーン", "es": "Cadena de Suministro Corrupta", "pt": "Cadeia de Suprimentos Corrompida", "fr": "Chaîne d'Approvisionnement Corrompue" }, "anchor": "ml06" }
+        ],
+        "webapp": [
+          { "id": "A06", "name": { "en": "Vulnerable Components", "ja": "脆弱なコンポーネント", "es": "Componentes Vulnerables", "pt": "Componentes Vulneráveis", "fr": "Composants Vulnérables" }, "anchor": "a06" }
+        ],
+        "cloud": [
+          { "id": "CNAS-9", "name": { "en": "Insecure Artifact Mgmt", "ja": "安全でないアーティファクト管理", "es": "Gestión de Artefactos Insegura", "pt": "Gestão de Artefatos Insegura", "fr": "Gestion d'Artefacts Non Sécurisée" }, "anchor": "cnas-9" }
+        ],
+        "cicd": [
+          { "id": "CICD-SEC-3", "name": { "en": "Dependency Chain Abuse", "ja": "依存チェーン悪用", "es": "Abuso de Cadena de Dependencias", "pt": "Abuso de Cadeia de Dependências", "fr": "Abus de Chaîne de Dépendances" }, "anchor": "cicd-sec-3" }
+        ],
+        "k8s": [
+          { "id": "K09", "name": { "en": "Misconfigured Cluster Components", "ja": "クラスタコンポーネント設定不備", "es": "Componentes de Clúster Mal Configurados", "pt": "Componentes de Cluster Mal Configurados", "fr": "Composants de Cluster Mal Configurés" }, "anchor": "k09" }
+        ]
+      }
+    },
+    {
+      "id": "misconfiguration",
+      "name": {
+        "en": "Misconfiguration",
+        "ja": "設定不備",
+        "es": "Mala Configuración",
+        "pt": "Má Configuração",
+        "fr": "Mauvaise Configuration"
+      },
+      "description": {
+        "en": "Insecure default configurations, incomplete setups, open cloud storage, misconfigured HTTP headers or permissions.",
+        "ja": "安全でないデフォルト設定、不完全なセットアップ、オープンなクラウドストレージ、HTTP ヘッダーや権限の設定不備。",
+        "es": "Configuraciones predeterminadas inseguras, configuraciones incompletas, almacenamiento en la nube abierto, encabezados HTTP o permisos mal configurados.",
+        "pt": "Configurações padrão inseguras, configurações incompletas, armazenamento em nuvem aberto, cabeçalhos HTTP ou permissões mal configurados.",
+        "fr": "Configurations par défaut non sécurisées, configurations incomplètes, stockage cloud ouvert, en-têtes HTTP ou permissions mal configurés."
+      },
+      "cells": {
+        "api": [
+          { "id": "API8", "name": { "en": "Security Misconfiguration", "ja": "セキュリティ設定不備", "es": "Mala Configuración", "pt": "Má Configuração", "fr": "Mauvaise Configuration" }, "anchor": "api8" }
+        ],
+        "llm": [],
+        "agentic": [],
+        "ml": [],
+        "webapp": [
+          { "id": "A05", "name": { "en": "Security Misconfiguration", "ja": "セキュリティ設定不備", "es": "Mala Configuración", "pt": "Má Configuração", "fr": "Mauvaise Configuration" }, "anchor": "a05" }
+        ],
+        "cloud": [
+          { "id": "CNAS-1", "name": { "en": "Insecure Configuration", "ja": "安全でない設定", "es": "Configuración Insegura", "pt": "Configuração Insegura", "fr": "Configuration Non Sécurisée" }, "anchor": "cnas-1" }
+        ],
+        "cicd": [
+          { "id": "CICD-SEC-7", "name": { "en": "Insecure System Config", "ja": "安全でないシステム設定", "es": "Config de Sistema Insegura", "pt": "Config de Sistema Insegura", "fr": "Config Système Non Sécurisée" }, "anchor": "cicd-sec-7" }
+        ],
+        "k8s": [
+          { "id": "K01", "name": { "en": "Insecure Workloads", "ja": "安全でないワークロード", "es": "Cargas de Trabajo Inseguras", "pt": "Cargas de Trabalho Inseguras", "fr": "Charges de Travail Non Sécurisées" }, "anchor": "k01" }
+        ]
+      }
+    },
+    {
+      "id": "auth-identity",
+      "name": {
+        "en": "Authentication & Identity",
+        "ja": "認証・ID管理",
+        "es": "Autenticación e Identidad",
+        "pt": "Autenticação e Identidade",
+        "fr": "Authentification et Identité"
+      },
+      "description": {
+        "en": "Weaknesses in authentication mechanisms, session management, and identity verification across systems.",
+        "ja": "認証メカニズム、セッション管理、システム間のID検証における脆弱性。",
+        "es": "Debilidades en mecanismos de autenticación, gestión de sesiones y verificación de identidad entre sistemas.",
+        "pt": "Fraquezas em mecanismos de autenticação, gerenciamento de sessões e verificação de identidade entre sistemas.",
+        "fr": "Faiblesses dans les mécanismes d'authentification, la gestion de sessions et la vérification d'identité entre systèmes."
+      },
+      "cells": {
+        "api": [
+          { "id": "API2", "name": { "en": "Broken Authentication", "ja": "認証の不備", "es": "Autenticación Rota", "pt": "Autenticação Quebrada", "fr": "Authentification Cassée" }, "anchor": "api2" }
+        ],
+        "llm": [],
+        "agentic": [
+          { "id": "ASI02", "name": { "en": "Insecure Agent Identity", "ja": "安全でないエージェントID", "es": "Identidad de Agente Insegura", "pt": "Identidade de Agente Insegura", "fr": "Identité d'Agent Non Sécurisée" }, "anchor": "asi02" }
+        ],
+        "ml": [],
+        "webapp": [
+          { "id": "A07", "name": { "en": "Auth Failures", "ja": "認証の不備", "es": "Fallos de Autenticación", "pt": "Falhas de Autenticação", "fr": "Échecs d'Authentification" }, "anchor": "a07" }
+        ],
+        "cloud": [
+          { "id": "CNAS-5", "name": { "en": "Poor Identity & Access", "ja": "ID・アクセス管理不備", "es": "Identidad y Acceso Deficientes", "pt": "Identidade e Acesso Deficientes", "fr": "Identité et Accès Déficients" }, "anchor": "cnas-5" }
+        ],
+        "cicd": [
+          { "id": "CICD-SEC-6", "name": { "en": "Insufficient Credential Hygiene", "ja": "資格情報管理不備", "es": "Higiene de Credenciales Insuficiente", "pt": "Higiene de Credenciais Insuficiente", "fr": "Hygiène des Identifiants Insuffisante" }, "anchor": "cicd-sec-6" }
+        ],
+        "k8s": [
+          { "id": "K08", "name": { "en": "Secrets Management", "ja": "シークレット管理", "es": "Gestión de Secretos", "pt": "Gestão de Segredos", "fr": "Gestion des Secrets" }, "anchor": "k08" }
+        ]
+      }
+    },
+    {
+      "id": "logging-monitoring",
+      "name": {
+        "en": "Logging & Monitoring",
+        "ja": "ログ・監視",
+        "es": "Registro y Monitoreo",
+        "pt": "Registro e Monitoramento",
+        "fr": "Journalisation et Surveillance"
+      },
+      "description": {
+        "en": "Insufficient logging, monitoring, and alerting that delays detection of breaches and security incidents.",
+        "ja": "不十分なログ記録、監視、アラートにより、侵害やセキュリティインシデントの検出が遅れる問題。",
+        "es": "Registro, monitoreo y alertas insuficientes que retrasan la detección de brechas e incidentes de seguridad.",
+        "pt": "Registro, monitoramento e alertas insuficientes que atrasam a detecção de violações e incidentes de segurança.",
+        "fr": "Journalisation, surveillance et alertes insuffisantes retardant la détection des violations et incidents de sécurité."
+      },
+      "cells": {
+        "api": [
+          { "id": "API9", "name": { "en": "Improper Inventory Mgmt", "ja": "不適切なインベントリ管理", "es": "Gestión de Inventario Inadecuada", "pt": "Gestão de Inventário Inadequada", "fr": "Gestion d'Inventaire Inadéquate" }, "anchor": "api9" }
+        ],
+        "llm": [],
+        "agentic": [
+          { "id": "ASI09", "name": { "en": "Insufficient Logging", "ja": "不十分なログ記録", "es": "Registro Insuficiente", "pt": "Registro Insuficiente", "fr": "Journalisation Insuffisante" }, "anchor": "asi09" }
+        ],
+        "ml": [],
+        "webapp": [
+          { "id": "A09", "name": { "en": "Security Logging Failures", "ja": "ログ記録の不備", "es": "Fallos de Registro", "pt": "Falhas de Registro", "fr": "Échecs de Journalisation" }, "anchor": "a09" }
+        ],
+        "cloud": [
+          { "id": "CNAS-8", "name": { "en": "Compliance & Audit", "ja": "コンプライアンス・監査", "es": "Cumplimiento y Auditoría", "pt": "Conformidade e Auditoria", "fr": "Conformité et Audit" }, "anchor": "cnas-8" }
+        ],
+        "cicd": [],
+        "k8s": [
+          { "id": "K10", "name": { "en": "Vulnerable Components", "ja": "脆弱なコンポーネント", "es": "Componentes Vulnerables", "pt": "Componentes Vulneráveis", "fr": "Composants Vulnérables" }, "anchor": "k10" }
+        ]
+      }
+    },
+    {
+      "id": "resource-management",
+      "name": {
+        "en": "Resource Management",
+        "ja": "リソース管理",
+        "es": "Gestión de Recursos",
+        "pt": "Gestão de Recursos",
+        "fr": "Gestion des Ressources"
+      },
+      "description": {
+        "en": "Lack of resource limits and consumption controls leading to denial of service, cost explosion, or system instability.",
+        "ja": "リソース制限や消費制御の欠如により、サービス拒否、コスト爆発、またはシステム不安定性が発生するリスク。",
+        "es": "Falta de límites de recursos y controles de consumo que llevan a denegación de servicio, explosión de costos o inestabilidad del sistema.",
+        "pt": "Falta de limites de recursos e controles de consumo levando a negação de serviço, explosão de custos ou instabilidade do sistema.",
+        "fr": "Manque de limites de ressources et de contrôles de consommation entraînant un déni de service, une explosion des coûts ou une instabilité du système."
+      },
+      "cells": {
+        "api": [
+          { "id": "API4", "name": { "en": "Unrestricted Resource", "ja": "無制限のリソース消費", "es": "Recurso Sin Restricciones", "pt": "Recurso Sem Restrições", "fr": "Ressource Non Restreinte" }, "anchor": "api4" },
+          { "id": "API6", "name": { "en": "Unrestricted Access to Flows", "ja": "フローへの無制限アクセス", "es": "Acceso Sin Restricciones a Flujos", "pt": "Acesso Sem Restrições a Fluxos", "fr": "Accès Non Restreint aux Flux" }, "anchor": "api6" }
+        ],
+        "llm": [
+          { "id": "LLM04", "name": { "en": "Model Denial of Service", "ja": "モデルDoS", "es": "Denegación de Servicio del Modelo", "pt": "Negação de Serviço do Modelo", "fr": "Déni de Service du Modèle" }, "anchor": "llm04" }
+        ],
+        "agentic": [
+          { "id": "ASI08", "name": { "en": "Uncontrolled Resource Consumption", "ja": "制御不能なリソース消費", "es": "Consumo de Recursos Descontrolado", "pt": "Consumo de Recursos Descontrolado", "fr": "Consommation de Ressources Incontrôlée" }, "anchor": "asi08" }
+        ],
+        "ml": [],
+        "webapp": [],
+        "cloud": [
+          { "id": "CNAS-6", "name": { "en": "Insecure Defaults", "ja": "安全でないデフォルト", "es": "Valores Predeterminados Inseguros", "pt": "Padrões Inseguros", "fr": "Valeurs par Défaut Non Sécurisées" }, "anchor": "cnas-6" }
+        ],
+        "cicd": [],
+        "k8s": [
+          { "id": "K06", "name": { "en": "Broken Auth Mechanisms", "ja": "認証メカニズムの不備", "es": "Mecanismos de Auth Rotos", "pt": "Mecanismos de Auth Quebrados", "fr": "Mécanismes d'Auth Cassés" }, "anchor": "k06" }
+        ]
+      }
+    }
+  ],
+  "lists": {
+    "api": { "label": "API Top 10", "page": "owasp-top10.html", "icon": "\ud83d\udd1f" },
+    "llm": { "label": "LLM Top 10", "page": "owasp-llm-top10.html", "icon": "\ud83e\udd16" },
+    "agentic": { "label": "Agentic Top 10", "page": "owasp-agentic-top10.html", "icon": "\ud83e\uddbe" },
+    "ml": { "label": "ML Top 10", "page": "owasp-ml-top10.html", "icon": "\ud83e\udde0" },
+    "webapp": { "label": "Web App Top 10", "page": "owasp-webapp-top10.html", "icon": "\ud83c\udf10" },
+    "cloud": { "label": "Cloud Top 10", "page": "owasp-cloud-top10.html", "icon": "\u2601\ufe0f" },
+    "cicd": { "label": "CI/CD Top 10", "page": "owasp-cicd-top10.html", "icon": "\ud83d\udd04" },
+    "k8s": { "label": "K8s Top 10", "page": "owasp-k8s-top10.html", "icon": "\u2638" }
+  }
+}

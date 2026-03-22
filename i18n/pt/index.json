@@ -53,5 +53,6 @@
   "index_howto_title": "Como usar este site",
   "index_howto_desc": "Navegue para cada seção usando a barra lateral (menu hambúrguer no celular). Para iniciantes, recomendamos a leitura nesta ordem: OWASP Top 10 → Autenticação e Autorização → Limitação de Taxa.",
   "index_disclaimer_title": "Isenção de responsabilidade",
-  "index_disclaimer_desc": "As informações neste site são fornecidas para fins de conscientização e defesa de segurança. O uso para fins de ataque é proibido. O conteúdo é baseado em informações de 2025."
+  "index_disclaimer_desc": "As informações neste site são fornecidas para fins de conscientização e defesa de segurança. O uso para fins de ataque é proibido. O conteúdo é baseado em informações de 2025.",
+  "index_editor_picks_heading": "<span class=\"section-icon\">&#x2B50;</span> Escolhas do Editor"
 }

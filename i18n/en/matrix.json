@@ -1,0 +1,11 @@
+{
+  "matrix_page_title": "OWASP Cross-Reference Matrix - AI Security Hub",
+  "matrix_heading": "OWASP Cross-Reference Matrix",
+  "matrix_subtitle": "Common security themes mapped across 8 OWASP Top 10 lists — discover how risks connect across domains.",
+  "matrix_intro_title": "Why This Matrix?",
+  "matrix_intro_desc": "Security risks don't exist in isolation. Injection appears in APIs, LLMs, web apps, and CI/CD pipelines. Access control failures span every domain. This matrix reveals the universal patterns — helping you build defenses that work across your entire stack.",
+  "matrix_table_heading": "<span class=\"section-icon\">&#x1F4CA;</span> Interactive Matrix",
+  "matrix_table_hint": "Click any risk to navigate to its detailed page. Scroll horizontally on mobile.",
+  "matrix_deepdive_heading": "<span class=\"section-icon\">&#x1F50D;</span> Theme Deep Dive",
+  "matrix_deepdive_hint": "Expand each theme to see which risks it spans and how they connect."
+}

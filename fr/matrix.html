@@ -1,0 +1,211 @@
+<!DOCTYPE html><html lang="fr"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="matrix_page_title">Matrice de Référence Croisée OWASP - AI Security Hub</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <meta name="description" content="Cross-reference matrix mapping common security themes across 8 OWASP Top 10 lists. Unique interactive comparison tool.">
+  <meta property="og:title" content="OWASP Cross-Reference Matrix - AI Security Hub">
+  <meta property="og:description" content="Cross-reference matrix mapping common security themes across 8 OWASP Top 10 lists.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://secaihub.com/en/matrix.html">
+  <meta property="og:site_name" content="AI Security Hub">
+  <meta name="twitter:card" content="summary">
+  <style>
+    .matrix-wrapper { overflow-x:auto; margin:24px 0; }
+    .matrix-table { width:100%; border-collapse:collapse; font-size:0.85rem; min-width:900px; }
+    .matrix-table th, .matrix-table td { border:1px solid var(--border-color,#2a2a2a); padding:10px 8px; text-align:center; vertical-align:top; }
+    .matrix-table th { background:var(--bg-secondary,#111); color:var(--accent,#00d4aa); font-weight:600; font-size:0.8rem; white-space:nowrap; }
+    .matrix-table th.theme-header { text-align:left; min-width:140px; }
+    .matrix-table td.theme-cell { text-align:left; font-weight:600; background:var(--bg-secondary,#111); }
+    .matrix-table td.empty-cell { background:var(--bg-primary,#0a0a0a); color:var(--text-muted,#666); font-size:0.75rem; }
+    .matrix-cell-link { display:block; padding:4px; border-radius:4px; text-decoration:none; color:var(--text-primary,#e0e0e0); transition:background 0.2s; font-size:0.8rem; margin:2px 0; }
+    .matrix-cell-link:hover { background:var(--accent-dim,rgba(0,212,170,0.15)); color:var(--accent,#00d4aa); }
+    .matrix-cell-link .risk-id { font-weight:700; color:var(--accent,#00d4aa); font-size:0.75rem; }
+    .matrix-cell-link .risk-name { display:block; font-size:0.7rem; color:var(--text-secondary,#a0a0a0); margin-top:1px; }
+    .matrix-cell-link:hover .risk-name { color:var(--accent,#00d4aa); }
+    .list-icon { font-size:1rem; display:block; margin-bottom:2px; }
+    .theme-deep-dive { margin-top:40px; }
+    .theme-section { margin-bottom:16px; }
+    .theme-toggle { width:100%; text-align:left; padding:14px 16px; background:var(--bg-card,#1a1a1a); border:1px solid var(--border-color,#2a2a2a); border-radius:8px; color:var(--text-primary,#e0e0e0); font-size:1rem; font-weight:600; cursor:pointer; display:flex; justify-content:space-between; align-items:center; transition:background 0.2s; }
+    .theme-toggle:hover { background:var(--bg-secondary,#111); }
+    .theme-toggle .toggle-arrow { transition:transform 0.2s; }
+    .theme-toggle.open .toggle-arrow { transform:rotate(180deg); }
+    .theme-detail { display:none; padding:16px; border:1px solid var(--border-color,#2a2a2a); border-top:none; border-radius:0 0 8px 8px; background:var(--bg-card,#1a1a1a); }
+    .theme-detail.open { display:block; }
+    .theme-detail p { margin-bottom:12px; color:var(--text-secondary,#a0a0a0); line-height:1.7; }
+    .theme-detail .risk-chips { display:flex; flex-wrap:wrap; gap:6px; }
+    .risk-chip { display:inline-flex; align-items:center; gap:4px; padding:4px 10px; border-radius:16px; font-size:0.78rem; background:var(--bg-secondary,#111); border:1px solid var(--border-color,#2a2a2a); color:var(--text-primary,#e0e0e0); text-decoration:none; transition:all 0.2s; }
+    .risk-chip:hover { border-color:var(--accent,#00d4aa); color:var(--accent,#00d4aa); }
+    .insight-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px; margin-top:24px; }
+    .insight-card { background:var(--bg-card,#1a1a1a); border:1px solid var(--border-color,#2a2a2a); border-radius:8px; padding:20px; text-align:center; }
+    .insight-number { font-size:2rem; font-weight:700; color:var(--accent,#00d4aa); }
+    .insight-label { font-size:0.85rem; color:var(--text-secondary,#a0a0a0); margin-top:4px; }
+  </style>
+
+    <link rel="alternate" hreflang="en" href="/api-security-hub/en/matrix.html">
+    <link rel="alternate" hreflang="ja" href="/api-security-hub/ja/matrix.html">
+    <link rel="alternate" hreflang="es" href="/api-security-hub/es/matrix.html">
+    <link rel="alternate" hreflang="pt" href="/api-security-hub/pt/matrix.html">
+    <link rel="alternate" hreflang="fr" href="/api-security-hub/fr/matrix.html">
+    <link rel="alternate" hreflang="x-default" href="/api-security-hub/en/matrix.html">
+</head>
+<body>
+
+  <div class="page-header">
+    <h1 data-i18n="matrix_heading">Matrice de Référence Croisée OWASP</h1>
+    <p class="subtitle" data-i18n="matrix_subtitle">Thèmes de sécurité communs cartographiés à travers 8 listes OWASP Top 10 — découvrez comment les risques se connectent entre les domaines.</p>
+  </div>
+
+  <!-- Intro -->
+  <div class="section">
+    <div class="callout callout-info">
+      <div class="callout-title" data-i18n="matrix_intro_title">Pourquoi cette Matrice ?</div>
+      <p data-i18n="matrix_intro_desc">Les risques de sécurité n'existent pas de manière isolée. L'injection apparaît dans les APIs, les LLMs, les applications web et les pipelines CI/CD. Les défaillances du contrôle d'accès couvrent tous les domaines. Cette matrice révèle les schémas universels — vous aidant à construire des défenses qui fonctionnent sur l'ensemble de votre infrastructure.</p>
+    </div>
+  </div>
+
+  <!-- Insight Stats -->
+  <div class="section">
+    <div id="matrix-insights" class="insight-cards"></div>
+  </div>
+
+  <!-- Interactive Matrix Table -->
+  <div class="section">
+    <h2 data-i18n-html="matrix_table_heading"><span class="section-icon">📊</span> Matrice Interactive</h2>
+    <p class="text-muted" style="font-size:0.85rem;margin-bottom:12px;" data-i18n="matrix_table_hint">Cliquez sur un risque pour accéder à sa page détaillée. Faites défiler horizontalement sur mobile.</p>
+    <div class="matrix-wrapper">
+      <table class="matrix-table" id="matrix-table">
+        <thead id="matrix-thead"></thead>
+        <tbody id="matrix-tbody"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Theme Deep Dive -->
+  <div class="section theme-deep-dive">
+    <h2 data-i18n-html="matrix_deepdive_heading"><span class="section-icon">🔍</span> Analyse par Thème</h2>
+    <p class="text-muted" style="font-size:0.85rem;margin-bottom:16px;" data-i18n="matrix_deepdive_hint">Développez chaque thème pour voir quels risques il couvre et comment ils se connectent.</p>
+    <div id="matrix-deepdive"></div>
+  </div>
+
+<script src="../js/common.js"></script>
+<script>
+(function() {
+  var langMatch = location.pathname.match(/\/(en|ja|es|pt|fr)\//);
+  var lang = langMatch ? langMatch[1] : 'en';
+
+  var insightLabels = {
+    en: { themes: 'Security Themes', lists: 'OWASP Lists', connections: 'Cross-Domain Connections', mostUniversal: 'Most Universal Theme' },
+    ja: { themes: 'セキュリティテーマ', lists: 'OWASPリスト', connections: 'クロスドメイン接続', mostUniversal: '最も普遍的なテーマ' },
+    es: { themes: 'Temas de Seguridad', lists: 'Listas OWASP', connections: 'Conexiones entre Dominios', mostUniversal: 'Tema Más Universal' },
+    pt: { themes: 'Temas de Segurança', lists: 'Listas OWASP', connections: 'Conexões entre Domínios', mostUniversal: 'Tema Mais Universal' },
+    fr: { themes: 'Thèmes de Sécurité', lists: 'Listes OWASP', connections: 'Connexions inter-domaines', mostUniversal: 'Thème le Plus Universel' }
+  };
+  var il = insightLabels[lang] || insightLabels.en;
+
+  function getText(obj) {
+    if (!obj) return '';
+    if (typeof obj === 'string') return obj;
+    return obj[lang] || obj.en || '';
+  }
+
+  fetch('../data/matrix.json')
+    .then(function(res) { return res.json(); })
+    .then(function(data) {
+      var themes = data.themes;
+      var lists = data.lists;
+      var listKeys = Object.keys(lists);
+
+      // Build header
+      var thead = document.getElementById('matrix-thead');
+      var headerHtml = '<tr><th class="theme-header">' + (lang === 'ja' ? 'テーマ' : lang === 'es' ? 'Tema' : lang === 'pt' ? 'Tema' : lang === 'fr' ? 'Thème' : 'Theme') + '</th>';
+      listKeys.forEach(function(key) {
+        var l = lists[key];
+        headerHtml += '<th><span class="list-icon">' + l.icon + '</span>' + l.label + '</th>';
+      });
+      headerHtml += '</tr>';
+      thead.innerHTML = headerHtml;
+
+      // Build body
+      var tbody = document.getElementById('matrix-tbody');
+      var totalConnections = 0;
+      var maxSpan = 0;
+      var maxTheme = '';
+      var bodyHtml = '';
+
+      themes.forEach(function(theme) {
+        var span = 0;
+        bodyHtml += '<tr>';
+        bodyHtml += '<td class="theme-cell">' + getText(theme.name) + '</td>';
+        listKeys.forEach(function(key) {
+          var cells = theme.cells[key] || [];
+          if (cells.length === 0) {
+            bodyHtml += '<td class="empty-cell">&mdash;</td>';
+          } else {
+            span++;
+            totalConnections += cells.length;
+            var cellHtml = '<td>';
+            cells.forEach(function(cell) {
+              var page = lists[key].page;
+              var href = page + '#' + cell.anchor;
+              cellHtml += '<a href="' + href + '" class="matrix-cell-link"><span class="risk-id">' + cell.id + '</span><span class="risk-name">' + getText(cell.name) + '</span></a>';
+            });
+            cellHtml += '</td>';
+            bodyHtml += cellHtml;
+          }
+        });
+        bodyHtml += '</tr>';
+        if (span > maxSpan) {
+          maxSpan = span;
+          maxTheme = getText(theme.name);
+        }
+      });
+
+      tbody.innerHTML = bodyHtml;
+
+      // Build insights
+      var insightsEl = document.getElementById('matrix-insights');
+      insightsEl.innerHTML =
+        '<div class="insight-card"><div class="insight-number">' + themes.length + '</div><div class="insight-label">' + il.themes + '</div></div>' +
+        '<div class="insight-card"><div class="insight-number">' + listKeys.length + '</div><div class="insight-label">' + il.lists + '</div></div>' +
+        '<div class="insight-card"><div class="insight-number">' + totalConnections + '</div><div class="insight-label">' + il.connections + '</div></div>' +
+        '<div class="insight-card"><div class="insight-number">' + maxSpan + '/8</div><div class="insight-label">' + il.mostUniversal + '<br><strong>' + maxTheme + '</strong></div></div>';
+
+      // Build deep dive
+      var deepdiveEl = document.getElementById('matrix-deepdive');
+      var ddHtml = '';
+      themes.forEach(function(theme, idx) {
+        ddHtml += '<div class="theme-section">';
+        ddHtml += '<button class="theme-toggle" data-idx="' + idx + '">' + getText(theme.name) + ' <span class="toggle-arrow">&#x25BE;</span></button>';
+        ddHtml += '<div class="theme-detail" id="theme-detail-' + idx + '">';
+        ddHtml += '<p>' + getText(theme.description) + '</p>';
+        ddHtml += '<div class="risk-chips">';
+        listKeys.forEach(function(key) {
+          var cells = theme.cells[key] || [];
+          cells.forEach(function(cell) {
+            var page = lists[key].page;
+            var href = page + '#' + cell.anchor;
+            ddHtml += '<a href="' + href + '" class="risk-chip">' + lists[key].icon + ' ' + cell.id + ' - ' + getText(cell.name) + '</a>';
+          });
+        });
+        ddHtml += '</div></div></div>';
+      });
+      deepdiveEl.innerHTML = ddHtml;
+
+      // Toggle handlers
+      document.querySelectorAll('.theme-toggle').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          var idx = btn.getAttribute('data-idx');
+          var detail = document.getElementById('theme-detail-' + idx);
+          btn.classList.toggle('open');
+          detail.classList.toggle('open');
+        });
+      });
+    })
+    .catch(function() {
+      document.getElementById('matrix-tbody').innerHTML = '<tr><td colspan="9">Failed to load matrix data.</td></tr>';
+    });
+})();
+</script>
+
+</body></html>

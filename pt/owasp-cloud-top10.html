@@ -34,8 +34,8 @@
   </div>
 
   <!-- CNAS-1: Insecure Cloud, Container, or Orchestration Configuration -->
-  <div class="section">
-    <h2 data-i18n-html="owasp_cloud_cnas1_heading"><span class="section-icon">1️⃣</span> CNAS-1 - Configuração Insegura de Nuvem, Contêiner ou Orquestração</h2>
+  <div class="section" id="cnas-1">
+    <h2 data-i18n-html="owasp_cloud_cnas1_heading"><span class="section-icon">1�E�⃣</span> CNAS-1 - Configuração Insegura de Nuvem, Contêiner ou Orquestração</h2>
     <span class="badge badge-danger">Critical</span>
     <h3 data-i18n="owasp_cloud_cnas1_overview_heading">Visão Geral</h3>
     <p data-i18n="owasp_cloud_cnas1_overview_desc">Serviços de nuvem, contêineres e orquestradores mal configurados são a principal causa de violações nativas de nuvem. Isso inclui executar contêineres como root, usar configurações padrão, expor o servidor de API do Kubernetes publicamente e não habilitar o registro de auditoria em recursos de nuvem.</p>
@@ -47,20 +47,20 @@
     <div class="code-block">
       <div class="code-block-header">
         <span class="lang">Dockerfile</span>
-        <span>❌ Bad</span>
+        <span>❁EBad</span>
       </div>
       <pre><span class="comment"># Running container as root with no resource limits</span>
 <span class="keyword">FROM</span> ubuntu:latest
 <span class="keyword">RUN</span> apt-get update && apt-get install -y curl wget
 <span class="keyword">COPY</span> app /app
-<span class="comment"># No USER directive — runs as root!</span>
+<span class="comment"># No USER directive  Eruns as root!</span>
 <span class="keyword">CMD</span> [<span class="string">"/app/server"</span>]</pre>
     </div>
     <h3 data-i18n="owasp_cloud_cnas1_secure_heading">Exemplo de Código Seguro</h3>
     <div class="code-block">
       <div class="code-block-header">
         <span class="lang">Dockerfile</span>
-        <span>✅ Good</span>
+        <span>✁EGood</span>
       </div>
       <pre><span class="keyword">FROM</span> gcr.io/distroless/static:nonroot
 <span class="keyword">COPY</span> --chown=65534:65534 app /app
@@ -78,8 +78,8 @@
   </div>
 
   <!-- CNAS-2: Injection Flaws -->
-  <div class="section">
-    <h2 data-i18n-html="owasp_cloud_cnas2_heading"><span class="section-icon">2️⃣</span> CNAS-2 - Falhas de Injeção (Camada de Aplicação, Eventos de Nuvem, Serviços de Nuvem)</h2>
+  <div class="section" id="cnas-2">
+    <h2 data-i18n-html="owasp_cloud_cnas2_heading"><span class="section-icon">2�E�⃣</span> CNAS-2 - Falhas de Injeção (Camada de Aplicação, Eventos de Nuvem, Serviços de Nuvem)</h2>
     <span class="badge badge-danger">Critical</span>
     <h3 data-i18n="owasp_cloud_cnas2_overview_heading">Visão Geral</h3>
     <p data-i18n="owasp_cloud_cnas2_overview_desc">Aplicações nativas de nuvem recebem entrada não apenas de requisições HTTP tradicionais, mas também de eventos de nuvem (SQS, Pub/Sub, EventBridge), gatilhos serverless e comunicação entre serviços. Falhas de injeção em qualquer um desses vetores podem levar à execução de comandos, exfiltração de dados ou escalação de privilégios.</p>
@@ -91,7 +91,7 @@
     <div class="code-block">
       <div class="code-block-header">
         <span class="lang">Python</span>
-        <span>❌ Bad</span>
+        <span>❁EBad</span>
       </div>
       <pre><span class="comment"># Lambda function processing S3 event without sanitizing filename</span>
 <span class="keyword">import</span> os
@@ -106,7 +106,7 @@
     <div class="code-block">
       <div class="code-block-header">
         <span class="lang">Python</span>
-        <span>✅ Good</span>
+        <span>✁EGood</span>
       </div>
       <pre><span class="keyword">import</span> boto3, re
 <span class="keyword">from</span> urllib.parse <span class="keyword">import</span> unquote_plus
@@ -133,8 +133,8 @@
   </div>
 
   <!-- CNAS-3: Improper Authentication & Authorization -->
-  <div class="section">
-    <h2 data-i18n-html="owasp_cloud_cnas3_heading"><span class="section-icon">3️⃣</span> CNAS-3 - Autenticação e Autorização Inadequadas</h2>
+  <div class="section" id="cnas-3">
+    <h2 data-i18n-html="owasp_cloud_cnas3_heading"><span class="section-icon">3�E�⃣</span> CNAS-3 - Autenticação e Autorização Inadequadas</h2>
     <span class="badge badge-danger">Critical</span>
     <h3 data-i18n="owasp_cloud_cnas3_overview_heading">Visão Geral</h3>
     <p data-i18n="owasp_cloud_cnas3_overview_desc">Ambientes nativos de nuvem envolvem várias camadas de identidade: IAM de nuvem, RBAC do Kubernetes, mTLS de malha de serviço e autenticação em nível de aplicação. Políticas mal configuradas ou excessivamente permissivas em qualquer camada podem permitir movimento lateral, escalação de privilégios ou acesso não autorizado a recursos sensíveis.</p>
@@ -146,7 +146,7 @@
     <div class="code-block">
       <div class="code-block-header">
         <span class="lang">YAML (Kubernetes)</span>
-        <span>❌ Bad</span>
+        <span>❁EBad</span>
       </div>
       <pre><span class="comment"># Overly permissive ClusterRoleBinding</span>
 <span class="keyword">apiVersion</span>: rbac.authorization.k8s.io/v1
@@ -155,7 +155,7 @@
   <span class="keyword">name</span>: default-admin
 <span class="keyword">subjects</span>:
 - <span class="keyword">kind</span>: ServiceAccount
-  <span class="keyword">name</span>: default          <span class="comment"># Default SA — shared by all pods!</span>
+  <span class="keyword">name</span>: default          <span class="comment"># Default SA  Eshared by all pods!</span>
   <span class="keyword">namespace</span>: default
 <span class="keyword">roleRef</span>:
   <span class="keyword">kind</span>: ClusterRole
@@ -166,7 +166,7 @@
     <div class="code-block">
       <div class="code-block-header">
         <span class="lang">YAML (Kubernetes)</span>
-        <span>✅ Good</span>
+        <span>✁EGood</span>
       </div>
       <pre><span class="comment"># Dedicated ServiceAccount with minimal Role</span>
 <span class="keyword">apiVersion</span>: v1
@@ -197,8 +197,8 @@
   </div>
 
   <!-- CNAS-4: CI/CD Pipeline & Software Supply Chain Flaws -->
-  <div class="section">
-    <h2 data-i18n-html="owasp_cloud_cnas4_heading"><span class="section-icon">4️⃣</span> CNAS-4 - Falhas de Pipeline CI/CD e Cadeia de Suprimentos de Software</h2>
+  <div class="section" id="cnas-4">
+    <h2 data-i18n-html="owasp_cloud_cnas4_heading"><span class="section-icon">4�E�⃣</span> CNAS-4 - Falhas de Pipeline CI/CD e Cadeia de Suprimentos de Software</h2>
     <span class="badge badge-warning">High</span>
     <h3 data-i18n="owasp_cloud_cnas4_overview_heading">Visão Geral</h3>
     <p data-i18n="owasp_cloud_cnas4_overview_desc">Pipelines CI/CD são alvos de alto valor porque têm acesso de gravação aos ambientes de produção. Comprometer um pipeline de build permite ataques à cadeia de suprimentos, injeção de código malicioso e implantação de imagens com backdoor. Configurações inseguras de pipeline, imagens base envenenadas e artefatos não assinados contribuem para esse risco.</p>
@@ -210,16 +210,16 @@
     <div class="code-block">
       <div class="code-block-header">
         <span class="lang">YAML (GitHub Actions)</span>
-        <span>❌ Bad</span>
+        <span>❁EBad</span>
       </div>
-      <pre><span class="comment"># Insecure CI pipeline — unpinned actions, no image signing</span>
+      <pre><span class="comment"># Insecure CI pipeline  Eunpinned actions, no image signing</span>
 <span class="keyword">name</span>: Deploy
 <span class="keyword">on</span>: push
 <span class="keyword">jobs</span>:
   <span class="keyword">deploy</span>:
     <span class="keyword">runs-on</span>: ubuntu-latest
     <span class="keyword">steps</span>:
-    - <span class="keyword">uses</span>: actions/checkout@main   <span class="comment"># Unpinned — could be compromised!</span>
+    - <span class="keyword">uses</span>: actions/checkout@main   <span class="comment"># Unpinned  Ecould be compromised!</span>
     - <span class="keyword">run</span>: |
         docker build -t myapp:latest .
         docker push myregistry/myapp:latest  <span class="comment"># No signing!</span>
@@ -229,7 +229,7 @@
     <div class="code-block">
       <div class="code-block-header">
         <span class="lang">YAML (GitHub Actions)</span>
-        <span>✅ Good</span>
+        <span>✁EGood</span>
       </div>
       <pre><span class="keyword">name</span>: Secure Deploy
 <span class="keyword">on</span>: push
@@ -256,8 +256,8 @@
   </div>
 
   <!-- CNAS-5: Insecure Secrets Storage -->
-  <div class="section">
-    <h2 data-i18n-html="owasp_cloud_cnas5_heading"><span class="section-icon">5️⃣</span> CNAS-5 - Armazenamento Inseguro de Segredos</h2>
+  <div class="section" id="cnas-5">
+    <h2 data-i18n-html="owasp_cloud_cnas5_heading"><span class="section-icon">5�E�⃣</span> CNAS-5 - Armazenamento Inseguro de Segredos</h2>
     <span class="badge badge-danger">Critical</span>
     <h3 data-i18n="owasp_cloud_cnas5_overview_heading">Visão Geral</h3>
     <p data-i18n="owasp_cloud_cnas5_overview_desc">Segredos como chaves de API, credenciais de banco de dados e certificados TLS são frequentemente codificados no código-fonte, armazenados em ConfigMaps de texto simples ou incorporados em imagens de contêiner. Secrets do Kubernetes são apenas codificados em base64 por padrão, não criptografados, fornecendo proteção mínima.</p>
@@ -269,7 +269,7 @@
     <div class="code-block">
       <div class="code-block-header">
         <span class="lang">YAML (Kubernetes)</span>
-        <span>❌ Bad</span>
+        <span>❁EBad</span>
       </div>
       <pre><span class="comment"># Secrets in plaintext environment variables</span>
 <span class="keyword">apiVersion</span>: v1
@@ -289,7 +289,7 @@
     <div class="code-block">
       <div class="code-block-header">
         <span class="lang">YAML (Kubernetes)</span>
-        <span>✅ Good</span>
+        <span>✁EGood</span>
       </div>
       <pre><span class="comment"># Use External Secrets Operator with a vault backend</span>
 <span class="keyword">apiVersion</span>: external-secrets.io/v1beta1
@@ -319,8 +319,8 @@
   </div>
 
   <!-- CNAS-6: Over-Permissive or Insecure Network Policies -->
-  <div class="section">
-    <h2 data-i18n-html="owasp_cloud_cnas6_heading"><span class="section-icon">6️⃣</span> CNAS-6 - Políticas de Rede Excessivamente Permissivas ou Inseguras</h2>
+  <div class="section" id="cnas-6">
+    <h2 data-i18n-html="owasp_cloud_cnas6_heading"><span class="section-icon">6�E�⃣</span> CNAS-6 - Políticas de Rede Excessivamente Permissivas ou Inseguras</h2>
     <span class="badge badge-warning">High</span>
     <h3 data-i18n="owasp_cloud_cnas6_overview_heading">Visão Geral</h3>
     <p data-i18n="owasp_cloud_cnas6_overview_desc">Por padrão, o Kubernetes permite que todos os pods se comuniquem entre si sem restrição. NetworkPolicies ausentes ou excessivamente permissivas, grupos de segurança e regras de firewall permitem movimento lateral dentro do cluster e entre serviços de nuvem.</p>
@@ -332,9 +332,9 @@
     <div class="code-block">
       <div class="code-block-header">
         <span class="lang">YAML (Kubernetes)</span>
-        <span>❌ Bad</span>
+        <span>❁EBad</span>
       </div>
-      <pre><span class="comment"># No NetworkPolicy — all pods can talk to everything</span>
+      <pre><span class="comment"># No NetworkPolicy  Eall pods can talk to everything</span>
 <span class="keyword">apiVersion</span>: v1
 <span class="keyword">kind</span>: Namespace
 <span class="keyword">metadata</span>:
@@ -346,7 +346,7 @@
     <div class="code-block">
       <div class="code-block-header">
         <span class="lang">YAML (Kubernetes)</span>
-        <span>✅ Good</span>
+        <span>✁EGood</span>
       </div>
       <pre><span class="comment"># Default-deny all traffic, then allow only what's needed</span>
 <span class="keyword">apiVersion</span>: networking.k8s.io/v1
@@ -385,8 +385,8 @@
   </div>
 
   <!-- CNAS-7: Using Components with Known Vulnerabilities -->
-  <div class="section">
-    <h2 data-i18n-html="owasp_cloud_cnas7_heading"><span class="section-icon">7️⃣</span> CNAS-7 - Uso de Componentes com Vulnerabilidades Conhecidas</h2>
+  <div class="section" id="cnas-7">
+    <h2 data-i18n-html="owasp_cloud_cnas7_heading"><span class="section-icon">7�E�⃣</span> CNAS-7 - Uso de Componentes com Vulnerabilidades Conhecidas</h2>
     <span class="badge badge-warning">High</span>
     <h3 data-i18n="owasp_cloud_cnas7_overview_heading">Visão Geral</h3>
     <p data-i18n="owasp_cloud_cnas7_overview_desc">Aplicações nativas de nuvem dependem fortemente de imagens base de código aberto, bibliotecas e operadores do Kubernetes. Executar componentes desatualizados ou sem patches com CVEs conhecidos expõe a aplicação a explorações bem documentadas. Imagens de contêiner frequentemente incluem centenas de pacotes, cada um uma vulnerabilidade potencial.</p>
@@ -398,7 +398,7 @@
     <div class="code-block">
       <div class="code-block-header">
         <span class="lang">Dockerfile</span>
-        <span>❌ Bad</span>
+        <span>❁EBad</span>
       </div>
       <pre><span class="comment"># Using outdated base image with known CVEs</span>
 <span class="keyword">FROM</span> node:14                    <span class="comment"># EOL version with known vulns</span>
@@ -411,7 +411,7 @@
     <div class="code-block">
       <div class="code-block-header">
         <span class="lang">Dockerfile</span>
-        <span>✅ Good</span>
+        <span>✁EGood</span>
       </div>
       <pre><span class="comment"># Use current, slim base image with vulnerability scanning</span>
 <span class="keyword">FROM</span> node:22-slim <span class="keyword">AS</span> build
@@ -434,8 +434,8 @@
   </div>
 
   <!-- CNAS-8: Improper Asset Management -->
-  <div class="section">
-    <h2 data-i18n-html="owasp_cloud_cnas8_heading"><span class="section-icon">8️⃣</span> CNAS-8 - Gerenciamento Inadequado de Ativos</h2>
+  <div class="section" id="cnas-8">
+    <h2 data-i18n-html="owasp_cloud_cnas8_heading"><span class="section-icon">8�E�⃣</span> CNAS-8 - Gerenciamento Inadequado de Ativos</h2>
     <span class="badge badge-info">Medium</span>
     <h3 data-i18n="owasp_cloud_cnas8_overview_heading">Visão Geral</h3>
     <p data-i18n="owasp_cloud_cnas8_overview_desc">Ambientes nativos de nuvem facilitam a criação de recursos, mas dificultam seu rastreamento. Contêineres órfãos, namespaces esquecidos, recursos de nuvem obsoletos e implantações de TI sombra criam uma superfície de ataque não gerenciada. Sem inventário adequado de ativos, equipes de segurança não podem proteger o que não sabem que existe.</p>
@@ -447,14 +447,14 @@
     <div class="code-block">
       <div class="code-block-header">
         <span class="lang">Terraform</span>
-        <span>❌ Bad</span>
+        <span>❁EBad</span>
       </div>
       <pre><span class="comment"># Resources created without tagging or lifecycle management</span>
 <span class="keyword">resource</span> <span class="string">"aws_instance"</span> <span class="string">"test_server"</span> {
   ami           = <span class="string">"ami-0abcdef1234567890"</span>
   instance_type = <span class="string">"t3.medium"</span>
-  <span class="comment"># No tags — who owns this? What's it for?</span>
-  <span class="comment"># No lifecycle policy — runs forever</span>
+  <span class="comment"># No tags  Ewho owns this? What's it for?</span>
+  <span class="comment"># No lifecycle policy  Eruns forever</span>
 }
 
 <span class="keyword">resource</span> <span class="string">"aws_s3_bucket"</span> <span class="string">"temp_data"</span> {
@@ -466,7 +466,7 @@
     <div class="code-block">
       <div class="code-block-header">
         <span class="lang">Terraform</span>
-        <span>✅ Good</span>
+        <span>✁EGood</span>
       </div>
       <pre><span class="keyword">resource</span> <span class="string">"aws_instance"</span> <span class="string">"test_server"</span> {
   ami           = <span class="string">"ami-0abcdef1234567890"</span>
@@ -505,8 +505,8 @@
   </div>
 
   <!-- CNAS-9: Inadequate Compute Resource Quota Limits -->
-  <div class="section">
-    <h2 data-i18n-html="owasp_cloud_cnas9_heading"><span class="section-icon">9️⃣</span> CNAS-9 - Limites Inadequados de Quota de Recursos Computacionais</h2>
+  <div class="section" id="cnas-9">
+    <h2 data-i18n-html="owasp_cloud_cnas9_heading"><span class="section-icon">9�E�⃣</span> CNAS-9 - Limites Inadequados de Quota de Recursos Computacionais</h2>
     <span class="badge badge-info">Medium</span>
     <h3 data-i18n="owasp_cloud_cnas9_overview_heading">Visão Geral</h3>
     <p data-i18n="owasp_cloud_cnas9_overview_desc">Sem quotas e limites de recursos adequados, uma única carga de trabalho com mau funcionamento ou comprometida pode consumir toda a CPU, memória ou armazenamento disponível, causando negação de serviço para outras aplicações. Ataques de cryptojacking são particularmente comuns em ambientes sem limites de recursos.</p>
@@ -518,7 +518,7 @@
     <div class="code-block">
       <div class="code-block-header">
         <span class="lang">YAML (Kubernetes)</span>
-        <span>❌ Bad</span>
+        <span>❁EBad</span>
       </div>
       <pre><span class="comment"># Pod with no resource limits</span>
 <span class="keyword">apiVersion</span>: v1
@@ -529,13 +529,13 @@
   <span class="keyword">containers</span>:
   - <span class="keyword">name</span>: app
     <span class="keyword">image</span>: myapp:latest
-    <span class="comment"># No resources block — can consume unlimited CPU/memory!</span></pre>
+    <span class="comment"># No resources block  Ecan consume unlimited CPU/memory!</span></pre>
     </div>
     <h3 data-i18n="owasp_cloud_cnas9_secure_heading">Exemplo de Código Seguro</h3>
     <div class="code-block">
       <div class="code-block-header">
         <span class="lang">YAML (Kubernetes)</span>
-        <span>✅ Good</span>
+        <span>✁EGood</span>
       </div>
       <pre><span class="keyword">apiVersion</span>: v1
 <span class="keyword">kind</span>: Pod
@@ -576,7 +576,7 @@
   </div>
 
   <!-- CNAS-10: Ineffective Logging & Monitoring -->
-  <div class="section">
+  <div class="section" id="cnas-10">
     <h2 data-i18n-html="owasp_cloud_cnas10_heading"><span class="section-icon">🔟</span> CNAS-10 - Registro e Monitoramento Ineficazes</h2>
     <span class="badge badge-warning">High</span>
     <h3 data-i18n="owasp_cloud_cnas10_overview_heading">Visão Geral</h3>
@@ -589,7 +589,7 @@
     <div class="code-block">
       <div class="code-block-header">
         <span class="lang">YAML (Kubernetes)</span>
-        <span>❌ Bad</span>
+        <span>❁EBad</span>
       </div>
       <pre><span class="comment"># No audit policy, no log forwarding</span>
 <span class="keyword">apiVersion</span>: v1
@@ -600,7 +600,7 @@
   <span class="keyword">containers</span>:
   - <span class="keyword">name</span>: app
     <span class="keyword">image</span>: myapp:latest
-    <span class="comment"># Logs go to stdout only — lost when pod restarts</span>
+    <span class="comment"># Logs go to stdout only  Elost when pod restarts</span>
     <span class="comment"># No audit logging configured on the cluster</span>
     <span class="comment"># No runtime security monitoring</span></pre>
     </div>
@@ -608,7 +608,7 @@
     <div class="code-block">
       <div class="code-block-header">
         <span class="lang">YAML (Kubernetes)</span>
-        <span>✅ Good</span>
+        <span>✁EGood</span>
       </div>
       <pre><span class="comment"># Kubernetes audit policy for security events</span>
 <span class="keyword">apiVersion</span>: audit.k8s.io/v1

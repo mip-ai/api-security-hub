@@ -1,7 +1,7 @@
 {
   "news_page_title": "Últimas noticias: AI Security Hub",
-  "news_heading": "Seguridad API Últimas noticias",
-  "news_subtitle": "Cubriendo incidentes recientes de vulnerabilidad de API, información CVE y tendencias de la industria.",
+  "news_heading": "Últimas Noticias de Seguridad",
+  "news_subtitle": "Cubriendo incidentes recientes de vulnerabilidades de seguridad, información CVE y tendencias de la industria.",
   "news_feed_heading": "<span class=\"section-icon\">\uD83D\uDCE1</span> Últimas noticias",
   "news_feed_loading": "Cargando noticias...",
   "news_feed_error": "Error al cargar las noticias.",
@@ -47,7 +47,7 @@
   "news_report2_desc": "Según el informe del primer trimestre de 2025 de Salt Security, el 99% de las organizaciones encuestadas experimentaron al menos un problema de seguridad de API en los últimos 12 meses. Los principales riesgos fueron los ataques de inyección y BOLA (autorización de nivel de objeto roto), que representaron más de un tercio de todos los incidentes. El 95% de los ataques a API se originaron en sesiones autenticadas.",
   "news_report3_title": "Se encontraron 30.000 espacios de trabajo de Postman exponiendo claves API",
   "news_report3_desc": "Los investigadores de seguridad descubrieron 30.000 espacios de trabajo de Postman expuestos públicamente sin controles de seguridad. Contenían claves API activas, tokens de acceso y cargas útiles confidenciales, muchas de las cuales proporcionaban acceso directo a entornos de producción. Este caso destaca el riesgo de las credenciales de \"API oculta\" en las herramientas de colaboración de desarrolladores.",
-  "news_trends_heading": "<span class=\"section-icon\">📈</span> Tendencias de seguridad de API 2024-2025",
+  "news_trends_heading": "<span class=\"section-icon\">📈</span> Tendencias de Seguridad 2024-2025",
   "news_trend1_title": "1. Rápido aumento de las vulnerabilidades de las API AI/LLM",
   "news_trend1_desc": "Las vulnerabilidades en API basadas en IA, como ChatGPT y DeepSeek, están aumentando. La inyección rápida, SSRF y la exposición de datos son las principales amenazas. Las medidas de seguridad no van a la par de la rápida adopción de la IA.",
   "news_trend2_title": "2. La autorización incumplida sigue siendo la principal amenaza",
@@ -69,5 +69,10 @@
   "news_ref_reports_title": "Informes",
   "news_ref_cvedb_title": "Bases de datos CVE",
   "news_update_title": "Actualizar información",
-  "news_update_desc": "La información de esta página se basa en datos disponibles públicamente desde 2025. Consulte los enlaces de referencia anteriores para obtener la información más reciente sobre vulnerabilidades."
+  "news_update_desc": "La información de esta página se basa en datos disponibles públicamente desde 2025. Consulte los enlaces de referencia anteriores para obtener la información más reciente sobre vulnerabilidades.",
+
+  "news_cat_all": "Todos",
+  "news_cat_ai": "Seguridad IA",
+  "news_cat_infra": "Infraestructura",
+  "news_editor_picks_heading": "<span class=\"section-icon\">&#x2B50;</span> Selección del Editor"
 }

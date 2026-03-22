@@ -34,8 +34,8 @@
   </div>
 
   <!-- CICD-SEC-1 -->
-  <div class="section">
-    <h2 data-i18n-html="owasp_cicd_sec1_heading"><span class="section-icon">1️⃣</span> CICD-SEC-1 - Mécanismes de Contrôle de Flux Insuffisants</h2>
+  <div class="section" id="cicd-sec-1">
+    <h2 data-i18n-html="owasp_cicd_sec1_heading"><span class="section-icon">1�E�⃣</span> CICD-SEC-1 - Mécanismes de Contrôle de Flux Insuffisants</h2>
     <span class="badge badge-danger">Critical</span>
     <h3 data-i18n="owasp_cicd_sec1_overview_heading">Vue d'ensemble</h3>
     <p data-i18n="owasp_cicd_sec1_overview_desc">Les mécanismes de contrôle de flux insuffisants permettent aux attaquants de pousser du code malveillant à travers les pipelines CI/CD sans examen ni porte d'approbation appropriés. Cela inclut le contournement des règles de protection de branches, l'absence d'approbations requises et le manque d'application des contrôles sur qui peut déclencher des déploiements en production.</p>
@@ -47,9 +47,9 @@
     <div class="code-block">
       <div class="code-block-header">
         <span class="lang">YAML (GitHub Actions)</span>
-        <span>❌ Mauvais</span>
+        <span>❁EMauvais</span>
       </div>
-      <pre><span class="comment"># No branch protection — anyone can push directly to main</span>
+      <pre><span class="comment"># No branch protection  Eanyone can push directly to main</span>
 <span class="keyword">name</span>: Deploy
 <span class="keyword">on</span>:
   <span class="keyword">push</span>:
@@ -60,7 +60,7 @@
     <span class="keyword">steps</span>:
     - <span class="keyword">uses</span>: actions/checkout@v4
     - <span class="keyword">run</span>: |
-        <span class="comment"># Deploys immediately — no approval gate!</span>
+        <span class="comment"># Deploys immediately  Eno approval gate!</span>
         kubectl apply -f deploy.yaml
         kubectl rollout status deployment/myapp</pre>
     </div>
@@ -68,7 +68,7 @@
     <div class="code-block">
       <div class="code-block-header">
         <span class="lang">YAML (GitHub Actions)</span>
-        <span>✅ Bon</span>
+        <span>✁EBon</span>
       </div>
       <pre><span class="keyword">name</span>: Deploy
 <span class="keyword">on</span>:
@@ -100,8 +100,8 @@
   </div>
 
   <!-- CICD-SEC-2 -->
-  <div class="section">
-    <h2 data-i18n-html="owasp_cicd_sec2_heading"><span class="section-icon">2️⃣</span> CICD-SEC-2 - Gestion Inadéquate des Identités et des Accès</h2>
+  <div class="section" id="cicd-sec-2">
+    <h2 data-i18n-html="owasp_cicd_sec2_heading"><span class="section-icon">2�E�⃣</span> CICD-SEC-2 - Gestion Inadéquate des Identités et des Accès</h2>
     <span class="badge badge-danger">Critical</span>
     <h3 data-i18n="owasp_cicd_sec2_overview_heading">Vue d'ensemble</h3>
     <p data-i18n="owasp_cicd_sec2_overview_desc">Les systèmes CI/CD impliquent de multiples identités : utilisateurs humains, comptes de service, jetons de bot et identités machine. Une gestion IAM inadéquate permet un accès trop permissif aux dépôts, pipelines et cibles de déploiement. Les identifiants partagés, les comptes obsolètes et l'absence de MFA aggravent le risque.</p>
@@ -113,7 +113,7 @@
     <div class="code-block">
       <div class="code-block-header">
         <span class="lang">YAML (GitHub Actions)</span>
-        <span>❌ Mauvais</span>
+        <span>❁EMauvais</span>
       </div>
       <pre><span class="comment"># Over-permissive workflow with admin token</span>
 <span class="keyword">name</span>: CI
@@ -133,7 +133,7 @@
     <div class="code-block">
       <div class="code-block-header">
         <span class="lang">YAML (GitHub Actions)</span>
-        <span>✅ Bon</span>
+        <span>✁EBon</span>
       </div>
       <pre><span class="keyword">name</span>: CI
 <span class="keyword">on</span>: push
@@ -162,8 +162,8 @@
   </div>
 
   <!-- CICD-SEC-3 -->
-  <div class="section">
-    <h2 data-i18n-html="owasp_cicd_sec3_heading"><span class="section-icon">3️⃣</span> CICD-SEC-3 - Abus de la Chaîne de Dépendances</h2>
+  <div class="section" id="cicd-sec-3">
+    <h2 data-i18n-html="owasp_cicd_sec3_heading"><span class="section-icon">3�E�⃣</span> CICD-SEC-3 - Abus de la Chaîne de Dépendances</h2>
     <span class="badge badge-danger">Critical</span>
     <h3 data-i18n="owasp_cicd_sec3_overview_heading">Vue d'ensemble</h3>
     <p data-i18n="owasp_cicd_sec3_overview_desc">Les pipelines CI/CD récupèrent des dépendances depuis des registres de packages externes (npm, PyPI, Maven, Docker Hub). Les attaquants exploitent cela par la confusion de dépendances, le typosquatting, la compromission de comptes de mainteneurs et les packages malveillants. Une seule dépendance empoisonnée peut exécuter du code arbitraire pendant le build.</p>
@@ -175,7 +175,7 @@
     <div class="code-block">
       <div class="code-block-header">
         <span class="lang">Jenkinsfile</span>
-        <span>❌ Mauvais</span>
+        <span>❁EMauvais</span>
       </div>
       <pre><span class="keyword">pipeline</span> {
   <span class="keyword">agent</span> any
@@ -183,7 +183,7 @@
     <span class="keyword">stage</span>(<span class="string">'Build'</span>) {
       <span class="keyword">steps</span> {
         <span class="comment">// No lockfile verification, no integrity checks</span>
-        <span class="function">sh</span> <span class="string">'npm install'</span>           <span class="comment">// Fetches latest — could be compromised!</span>
+        <span class="function">sh</span> <span class="string">'npm install'</span>           <span class="comment">// Fetches latest  Ecould be compromised!</span>
         <span class="function">sh</span> <span class="string">'pip install -r requirements.txt'</span>  <span class="comment">// No hash verification</span>
       }
     }
@@ -194,7 +194,7 @@
     <div class="code-block">
       <div class="code-block-header">
         <span class="lang">Jenkinsfile</span>
-        <span>✅ Bon</span>
+        <span>✁EBon</span>
       </div>
       <pre><span class="keyword">pipeline</span> {
   <span class="keyword">agent</span> any
@@ -227,20 +227,20 @@
   </div>
 
   <!-- CICD-SEC-4 -->
-  <div class="section">
-    <h2 data-i18n-html="owasp_cicd_sec4_heading"><span class="section-icon">4️⃣</span> CICD-SEC-4 - Exécution de Pipeline Empoisonnée (PPE)</h2>
+  <div class="section" id="cicd-sec-4">
+    <h2 data-i18n-html="owasp_cicd_sec4_heading"><span class="section-icon">4�E�⃣</span> CICD-SEC-4 - Exécution de Pipeline Empoisonnée (PPE)</h2>
     <span class="badge badge-danger">Critical</span>
     <h3 data-i18n="owasp_cicd_sec4_overview_heading">Vue d'ensemble</h3>
     <p data-i18n="owasp_cicd_sec4_overview_desc">L'Exécution de Pipeline Empoisonnée (PPE) se produit lorsque des attaquants peuvent modifier les définitions de pipeline CI/CD ou injecter du code malveillant qui s'exécute dans le contexte du pipeline. Cela peut se produire par la manipulation de fichiers de configuration de pipeline dans des branches, des pull requests depuis des forks ou la modification de modèles de pipeline partagés.</p>
     <div class="callout callout-danger">
       <div class="callout-title" data-i18n="owasp_cicd_sec4_risk_title">Risque</div>
-      <p data-i18n="owasp_cicd_sec4_risk_desc">Un attaquant qui peut modifier la configuration du pipeline obtient l'accès à tous les secrets, identifiants et permissions disponibles pour le pipeline. Il peut exfiltrer des secrets, altérer les résultats de build ou déployer du code malveillant — le tout dans un contexte d'exécution de confiance.</p>
+      <p data-i18n="owasp_cicd_sec4_risk_desc">Un attaquant qui peut modifier la configuration du pipeline obtient l'accès à tous les secrets, identifiants et permissions disponibles pour le pipeline. Il peut exfiltrer des secrets, altérer les résultats de build ou déployer du code malveillant  Ele tout dans un contexte d'exécution de confiance.</p>
     </div>
     <h3 data-i18n="owasp_cicd_sec4_vulnerable_heading">Exemple de Code Vulnérable</h3>
     <div class="code-block">
       <div class="code-block-header">
         <span class="lang">YAML (GitHub Actions)</span>
-        <span>❌ Mauvais</span>
+        <span>❁EMauvais</span>
       </div>
       <pre><span class="comment"># Runs pipeline from fork PRs with access to secrets</span>
 <span class="keyword">name</span>: CI
@@ -262,7 +262,7 @@
     <div class="code-block">
       <div class="code-block-header">
         <span class="lang">YAML (GitHub Actions)</span>
-        <span>✅ Bon</span>
+        <span>✁EBon</span>
       </div>
       <pre><span class="comment"># Separate workflows: untrusted build + trusted deploy</span>
 <span class="keyword">name</span>: CI
@@ -292,8 +292,8 @@
   </div>
 
   <!-- CICD-SEC-5 -->
-  <div class="section">
-    <h2 data-i18n-html="owasp_cicd_sec5_heading"><span class="section-icon">5️⃣</span> CICD-SEC-5 - Contrôles d'Accès Basés sur le Pipeline (PBAC) Insuffisants</h2>
+  <div class="section" id="cicd-sec-5">
+    <h2 data-i18n-html="owasp_cicd_sec5_heading"><span class="section-icon">5�E�⃣</span> CICD-SEC-5 - Contrôles d'Accès Basés sur le Pipeline (PBAC) Insuffisants</h2>
     <span class="badge badge-warning">High</span>
     <h3 data-i18n="owasp_cicd_sec5_overview_heading">Vue d'ensemble</h3>
     <p data-i18n="owasp_cicd_sec5_overview_desc">Les Contrôles d'Accès Basés sur le Pipeline (PBAC) régissent les ressources auxquelles un pipeline peut accéder : comptes cloud, clusters Kubernetes, bases de données et services internes. Un PBAC insuffisant signifie que les pipelines ont un accès plus large que nécessaire, violant le principe du moindre privilège.</p>
@@ -305,7 +305,7 @@
     <div class="code-block">
       <div class="code-block-header">
         <span class="lang">YAML (GitLab CI)</span>
-        <span>❌ Mauvais</span>
+        <span>❁EMauvais</span>
       </div>
       <pre><span class="comment"># Pipeline with admin-level cloud credentials</span>
 <span class="keyword">deploy</span>:
@@ -322,7 +322,7 @@
     <div class="code-block">
       <div class="code-block-header">
         <span class="lang">YAML (GitHub Actions)</span>
-        <span>✅ Bon</span>
+        <span>✁EBon</span>
       </div>
       <pre><span class="keyword">name</span>: Deploy
 <span class="keyword">on</span>:
@@ -352,8 +352,8 @@
   </div>
 
   <!-- CICD-SEC-6 -->
-  <div class="section">
-    <h2 data-i18n-html="owasp_cicd_sec6_heading"><span class="section-icon">6️⃣</span> CICD-SEC-6 - Hygiène des Identifiants Insuffisante</h2>
+  <div class="section" id="cicd-sec-6">
+    <h2 data-i18n-html="owasp_cicd_sec6_heading"><span class="section-icon">6�E�⃣</span> CICD-SEC-6 - Hygiène des Identifiants Insuffisante</h2>
     <span class="badge badge-danger">Critical</span>
     <h3 data-i18n="owasp_cicd_sec6_overview_heading">Vue d'ensemble</h3>
     <p data-i18n="owasp_cicd_sec6_overview_desc">Les pipelines CI/CD gèrent de nombreux identifiants : clés API, jetons cloud, mots de passe de registre, clés SSH et certificats de signature. Une mauvaise hygiène des identifiants inclut le codage en dur de secrets dans les fichiers de pipeline, l'affichage de secrets dans les journaux, l'utilisation de stockage de secrets non chiffré et l'absence de rotation des identifiants.</p>
@@ -365,7 +365,7 @@
     <div class="code-block">
       <div class="code-block-header">
         <span class="lang">Bash (CI Script)</span>
-        <span>❌ Mauvais</span>
+        <span>❁EMauvais</span>
       </div>
       <pre><span class="comment">#!/bin/bash</span>
 <span class="comment"># Secrets hardcoded and leaked in logs</span>
@@ -375,7 +375,7 @@
 docker login -u admin -p <span class="string">"$DOCKER_PASSWORD"</span> registry.example.com
 docker push registry.example.com/myapp:latest
 
-<span class="comment"># AWS credentials in environment — visible in process listing</span>
+<span class="comment"># AWS credentials in environment  Evisible in process listing</span>
 <span class="keyword">export</span> AWS_SECRET_ACCESS_KEY=<span class="string">"wJalrXUtnFEMI/K7MDENG/bPxRfiCY"</span>
 aws s3 cp artifact.zip s3://releases/</pre>
     </div>
@@ -383,7 +383,7 @@ aws s3 cp artifact.zip s3://releases/</pre>
     <div class="code-block">
       <div class="code-block-header">
         <span class="lang">YAML (GitHub Actions)</span>
-        <span>✅ Bon</span>
+        <span>✁EBon</span>
       </div>
       <pre><span class="keyword">name</span>: Publish
 <span class="keyword">on</span>:
@@ -413,8 +413,8 @@ aws s3 cp artifact.zip s3://releases/</pre>
   </div>
 
   <!-- CICD-SEC-7 -->
-  <div class="section">
-    <h2 data-i18n-html="owasp_cicd_sec7_heading"><span class="section-icon">7️⃣</span> CICD-SEC-7 - Configuration Système Insécurisée</h2>
+  <div class="section" id="cicd-sec-7">
+    <h2 data-i18n-html="owasp_cicd_sec7_heading"><span class="section-icon">7�E�⃣</span> CICD-SEC-7 - Configuration Système Insécurisée</h2>
     <span class="badge badge-warning">High</span>
     <h3 data-i18n="owasp_cicd_sec7_overview_heading">Vue d'ensemble</h3>
     <p data-i18n="owasp_cicd_sec7_overview_desc">Les systèmes CI/CD (Jenkins, GitLab, runners GitHub Actions) fonctionnent souvent avec des configurations par défaut insécurisées. Cela inclut des versions logicielles obsolètes, des interfaces de gestion exposées, des fonctionnalités de sécurité désactivées, un accès réseau trop permissif et des runners auto-hébergés partagés entre projets.</p>
@@ -426,7 +426,7 @@ aws s3 cp artifact.zip s3://releases/</pre>
     <div class="code-block">
       <div class="code-block-header">
         <span class="lang">Groovy (Jenkins)</span>
-        <span>❌ Mauvais</span>
+        <span>❁EMauvais</span>
       </div>
       <pre><span class="comment">// Jenkins with insecure configuration</span>
 <span class="comment">// - Script console enabled without auth</span>
@@ -434,7 +434,7 @@ aws s3 cp artifact.zip s3://releases/</pre>
 <span class="comment">// - Outdated plugins with known CVEs</span>
 
 <span class="keyword">pipeline</span> {
-  <span class="keyword">agent</span> any  <span class="comment">// Runs on any available agent — no isolation</span>
+  <span class="keyword">agent</span> any  <span class="comment">// Runs on any available agent  Eno isolation</span>
   <span class="keyword">stages</span> {
     <span class="keyword">stage</span>(<span class="string">'Build'</span>) {
       <span class="keyword">steps</span> {
@@ -450,7 +450,7 @@ aws s3 cp artifact.zip s3://releases/</pre>
     <div class="code-block">
       <div class="code-block-header">
         <span class="lang">Groovy (Jenkins)</span>
-        <span>✅ Bon</span>
+        <span>✁EBon</span>
       </div>
       <pre><span class="keyword">pipeline</span> {
   <span class="keyword">agent</span> {
@@ -492,8 +492,8 @@ aws s3 cp artifact.zip s3://releases/</pre>
   </div>
 
   <!-- CICD-SEC-8 -->
-  <div class="section">
-    <h2 data-i18n-html="owasp_cicd_sec8_heading"><span class="section-icon">8️⃣</span> CICD-SEC-8 - Utilisation Non Gouvernée de Services Tiers</h2>
+  <div class="section" id="cicd-sec-8">
+    <h2 data-i18n-html="owasp_cicd_sec8_heading"><span class="section-icon">8�E�⃣</span> CICD-SEC-8 - Utilisation Non Gouvernée de Services Tiers</h2>
     <span class="badge badge-warning">High</span>
     <h3 data-i18n="owasp_cicd_sec8_overview_heading">Vue d'ensemble</h3>
     <p data-i18n="owasp_cicd_sec8_overview_desc">Les pipelines CI/CD s'intègrent souvent avec des services tiers : outils de qualité de code, scanners de sécurité, systèmes de notification et plateformes de déploiement. Ces intégrations reçoivent des jetons d'accès et des permissions, créant une chaîne de confiance. L'utilisation non gouvernée signifie aucune visibilité sur ce que les services tiers peuvent accéder ou faire.</p>
@@ -505,7 +505,7 @@ aws s3 cp artifact.zip s3://releases/</pre>
     <div class="code-block">
       <div class="code-block-header">
         <span class="lang">YAML (GitHub Actions)</span>
-        <span>❌ Mauvais</span>
+        <span>❁EMauvais</span>
       </div>
       <pre><span class="keyword">name</span>: CI
 <span class="keyword">on</span>: push
@@ -527,7 +527,7 @@ aws s3 cp artifact.zip s3://releases/</pre>
     <div class="code-block">
       <div class="code-block-header">
         <span class="lang">YAML (GitHub Actions)</span>
-        <span>✅ Bon</span>
+        <span>✁EBon</span>
       </div>
       <pre><span class="keyword">name</span>: CI
 <span class="keyword">on</span>: push
@@ -557,8 +557,8 @@ aws s3 cp artifact.zip s3://releases/</pre>
   </div>
 
   <!-- CICD-SEC-9 -->
-  <div class="section">
-    <h2 data-i18n-html="owasp_cicd_sec9_heading"><span class="section-icon">9️⃣</span> CICD-SEC-9 - Validation de l'Intégrité des Artefacts Inadéquate</h2>
+  <div class="section" id="cicd-sec-9">
+    <h2 data-i18n-html="owasp_cicd_sec9_heading"><span class="section-icon">9�E�⃣</span> CICD-SEC-9 - Validation de l'Intégrité des Artefacts Inadéquate</h2>
     <span class="badge badge-warning">High</span>
     <h3 data-i18n="owasp_cicd_sec9_overview_heading">Vue d'ensemble</h3>
     <p data-i18n="owasp_cicd_sec9_overview_desc">Les artefacts de build (images de conteneurs, binaires, packages) transitent par les pipelines CI/CD vers la production. Sans validation d'intégrité, les artefacts peuvent être altérés à n'importe quel point : pendant le build, en transit, dans le registre d'artefacts ou au moment du déploiement. Cela brise la chaîne de confiance du code à la production.</p>
@@ -570,14 +570,14 @@ aws s3 cp artifact.zip s3://releases/</pre>
     <div class="code-block">
       <div class="code-block-header">
         <span class="lang">Bash</span>
-        <span>❌ Mauvais</span>
+        <span>❁EMauvais</span>
       </div>
       <pre><span class="comment">#!/bin/bash</span>
 <span class="comment"># Build and deploy without any integrity checks</span>
 docker build -t myregistry.com/app:latest .
 docker push myregistry.com/app:latest
 
-<span class="comment"># On deployment side — no verification</span>
+<span class="comment"># On deployment side  Eno verification</span>
 docker pull myregistry.com/app:latest  <span class="comment"># Could be tampered!</span>
 docker run myregistry.com/app:latest   <span class="comment"># Tag is mutable!</span></pre>
     </div>
@@ -585,7 +585,7 @@ docker run myregistry.com/app:latest   <span class="comment"># Tag is mutable!</
     <div class="code-block">
       <div class="code-block-header">
         <span class="lang">YAML (GitHub Actions)</span>
-        <span>✅ Bon</span>
+        <span>✁EBon</span>
       </div>
       <pre><span class="keyword">name</span>: Build and Sign
 <span class="keyword">on</span>:
@@ -621,7 +621,7 @@ docker run myregistry.com/app:latest   <span class="comment"># Tag is mutable!</
   </div>
 
   <!-- CICD-SEC-10 -->
-  <div class="section">
+  <div class="section" id="cicd-sec-10">
     <h2 data-i18n-html="owasp_cicd_sec10_heading"><span class="section-icon">🔟</span> CICD-SEC-10 - Journalisation et Visibilité Insuffisantes</h2>
     <span class="badge badge-info">Medium</span>
     <h3 data-i18n="owasp_cicd_sec10_overview_heading">Vue d'ensemble</h3>
@@ -634,7 +634,7 @@ docker run myregistry.com/app:latest   <span class="comment"># Tag is mutable!</
     <div class="code-block">
       <div class="code-block-header">
         <span class="lang">Bash</span>
-        <span>❌ Mauvais</span>
+        <span>❁EMauvais</span>
       </div>
       <pre><span class="comment">#!/bin/bash</span>
 <span class="comment"># Pipeline with no logging or audit trail</span>
@@ -650,7 +650,7 @@ kubectl apply -f deploy.yaml
     <div class="code-block">
       <div class="code-block-header">
         <span class="lang">YAML (GitHub Actions)</span>
-        <span>✅ Bon</span>
+        <span>✁EBon</span>
       </div>
       <pre><span class="keyword">name</span>: Audited Deploy
 <span class="keyword">on</span>:

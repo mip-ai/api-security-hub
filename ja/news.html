@@ -4,10 +4,10 @@
   <title data-i18n="news_page_title">最新情報 - AI Security Hub</title>
   <link rel="stylesheet" href="../css/style.css">
   <meta name="description" content="Latest AI and API Security News - CVE, vulnerabilities, industry trends and updates.">
-  <meta property="og:title" content="最新情報 - AI Security Hub">
+  <meta property="og:title" content="Latest News - AI Security Hub">
   <meta property="og:description" content="Latest AI and API Security News - CVE, vulnerabilities, industry trends and updates.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://secaihub.com/ja/news.html">
+  <meta property="og:url" content="https://secaihub.com/en/news.html">
   <meta property="og:site_name" content="AI Security Hub">
   <meta name="twitter:card" content="summary">
 
@@ -21,14 +21,30 @@
 <body>
 
   <div class="page-header">
-    <h1 data-i18n="news_heading">APIセキュリティ最新情報</h1>
-    <p class="subtitle" data-i18n="news_subtitle">最近のAPI脆弱性インシデント、CVE情報、業界トレンドを紹介します。</p>
+    <h1 data-i18n="news_heading">セキュリティ最新情報</h1>
+    <p class="subtitle" data-i18n="news_subtitle">最近のセキュリティ脆弱性インシデント、CVE情報、業界トレンドを紹介します。</p>
+  </div>
+
+  <!-- Weekly Highlight -->
+  <div class="section" id="weekly-highlight-section" style="display:none;">
+    <div class="callout callout-info" id="weekly-highlight-container"></div>
+  </div>
+
+  <!-- Editor's Picks -->
+  <div class="section" id="news-editor-picks-section" style="display:none;">
+    <h2 data-i18n-html="news_editor_picks_heading"><span class="section-icon">⭐</span> 編集者のおすすめ</h2>
+    <div id="news-editor-picks-container" class="card-grid"></div>
   </div>
 
   <!-- RSS News Feed -->
   <div class="section">
     <h2 data-i18n-html="news_feed_heading"><span class="section-icon">📡</span> 最新ニュースフィード</h2>
     <p id="news-feed-updated" class="text-muted" style="font-size:0.8rem;"><span data-i18n="news_feed_last_updated">最終更新: </span><span id="news-feed-updated-date"></span></p>
+    <div class="news-category-tabs" style="display:flex;gap:8px;margin-bottom:16px;">
+      <button class="tab-btn active" data-category="all" data-i18n="news_cat_all">すべて</button>
+      <button class="tab-btn" data-category="ai" data-i18n="news_cat_ai">AIセキュリティ</button>
+      <button class="tab-btn" data-category="infra" data-i18n="news_cat_infra">インフラ</button>
+    </div>
     <div id="news-feed-container">
       <p class="text-muted" data-i18n="news_feed_loading">ニュースを読み込み中...</p>
     </div>
@@ -148,7 +164,7 @@
 
   <!-- Trend Analysis -->
   <div class="section">
-    <h2 data-i18n-html="news_trends_heading"><span class="section-icon">📈</span> 2024-2025年のAPIセキュリティトレンド</h2>
+    <h2 data-i18n-html="news_trends_heading"><span class="section-icon">📈</span> 2024-2025年のセキュリティトレンド</h2>
     <div class="card-grid">
       <div class="card">
         <h3 data-i18n="news_trend1_title">1. AI/LLM APIの脆弱性急増</h3>
@@ -218,6 +234,7 @@
 (function() {
   var langMatch = location.pathname.match(/\/(en|ja|es|pt|fr)\//);
   var lang = langMatch ? langMatch[1] : 'en';
+  var currentCategory = 'all';
 
   fetch('../data/news.json')
     .then(function(res) { return res.json(); })
@@ -240,7 +257,6 @@
         return;
       }
 
-      var INITIAL_COUNT = 5;
       var allItems = items.slice(0, 20);
 
       function renderItem(item) {
@@ -253,8 +269,12 @@
         var pubDate = item.pubDate ? new Date(item.pubDate).toLocaleDateString(lang, { year:'numeric', month:'short', day:'numeric' }) : '';
         var url = item.link || '#';
         var source = item.source || '';
-        var h = '<div class="news-item" style="margin-bottom:12px;">';
-        h += '<div style="font-size:0.8rem;" class="text-muted">' + pubDate;
+        var cat = item.category || 'general';
+        var h = '<div class="news-item" data-category="' + cat + '" style="margin-bottom:12px;">';
+        h += '<div style="font-size:0.8rem;" class="text-muted">';
+        if (cat === 'ai') h += '<span class="cat-badge cat-ai">AI</span> ';
+        else if (cat === 'infra') h += '<span class="cat-badge cat-infra">Infra</span> ';
+        h += pubDate;
         if (source) h += ' | ' + source;
         h += '</div>';
         h += '<a href="' + url + '" target="_blank" rel="noopener noreferrer">' + title + '</a>';
@@ -268,40 +288,112 @@
         return h;
       }
 
-      var html = '';
-      allItems.forEach(function(item, i) {
-        if (i < INITIAL_COUNT) {
-          html += renderItem(item);
-        }
-      });
-
-      if (allItems.length > INITIAL_COUNT) {
-        var restHtml = '';
-        allItems.forEach(function(item, i) {
-          if (i >= INITIAL_COUNT) restHtml += renderItem(item);
+      function renderAll() {
+        var filtered = currentCategory === 'all' ? allItems : allItems.filter(function(item) {
+          return (item.category || 'general') === currentCategory;
         });
-        html += '<div id="news-feed-rest" style="display:none;">' + restHtml + '</div>';
-        html += '<button id="news-feed-toggle" onclick="var r=document.getElementById(\'news-feed-rest\');var b=document.getElementById(\'news-feed-toggle\');if(r.style.display===\'none\'){r.style.display=\'block\';b.textContent=b.getAttribute(\'data-label-collapse\');}else{r.style.display=\'none\';b.textContent=b.getAttribute(\'data-label-expand\');}" style="margin-top:8px;padding:6px 16px;cursor:pointer;border:1px solid var(--border-color,#333);background:var(--card-bg,#1a1a1a);color:var(--text-primary,#e0e0e0);border-radius:4px;font-size:0.9rem;"></button>';
+        var INITIAL_COUNT = 5;
+        var html = '';
+        filtered.forEach(function(item, i) {
+          if (i < INITIAL_COUNT) {
+            html += renderItem(item);
+          }
+        });
+
+        if (filtered.length > INITIAL_COUNT) {
+          var restHtml = '';
+          filtered.forEach(function(item, i) {
+            if (i >= INITIAL_COUNT) restHtml += renderItem(item);
+          });
+          html += '<div id="news-feed-rest" style="display:none;">' + restHtml + '</div>';
+          html += '<button id="news-feed-toggle" style="margin-top:8px;padding:6px 16px;cursor:pointer;border:1px solid var(--border-color,#333);background:var(--card-bg,#1a1a1a);color:var(--text-primary,#e0e0e0);border-radius:4px;font-size:0.9rem;"></button>';
+        }
+
+        container.innerHTML = html;
+
+        var toggleBtn = document.getElementById('news-feed-toggle');
+        if (toggleBtn) {
+          var remaining = filtered.length - INITIAL_COUNT;
+          var expandText = (document.getElementById('news-feed-expand-text') || {}).textContent || 'Show all';
+          var collapseText = (document.getElementById('news-feed-collapse-text') || {}).textContent || 'Show less';
+          var expandLabel = expandText + ' (' + remaining + ')';
+          toggleBtn.setAttribute('data-label-expand', expandLabel);
+          toggleBtn.setAttribute('data-label-collapse', collapseText);
+          toggleBtn.textContent = expandLabel;
+          toggleBtn.addEventListener('click', function() {
+            var r = document.getElementById('news-feed-rest');
+            if (r.style.display === 'none') {
+              r.style.display = 'block';
+              toggleBtn.textContent = toggleBtn.getAttribute('data-label-collapse');
+            } else {
+              r.style.display = 'none';
+              toggleBtn.textContent = toggleBtn.getAttribute('data-label-expand');
+            }
+          });
+        }
       }
 
-      container.innerHTML = html;
+      renderAll();
 
-      var toggleBtn = document.getElementById('news-feed-toggle');
-      if (toggleBtn) {
-        var remaining = allItems.length - INITIAL_COUNT;
-        var expandText = (document.getElementById('news-feed-expand-text') || {}).textContent || 'Show all';
-        var collapseText = (document.getElementById('news-feed-collapse-text') || {}).textContent || 'Show less';
-        var expandLabel = expandText + ' (' + remaining + ')';
-        toggleBtn.setAttribute('data-label-expand', expandLabel);
-        toggleBtn.setAttribute('data-label-collapse', collapseText);
-        toggleBtn.textContent = expandLabel;
-      }
+      // Category tab handlers
+      var catTabs = document.querySelectorAll('.news-category-tabs .tab-btn');
+      catTabs.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          catTabs.forEach(function(b) { b.classList.remove('active'); });
+          btn.classList.add('active');
+          currentCategory = btn.getAttribute('data-category');
+          renderAll();
+        });
+      });
     })
     .catch(function() {
       var container = document.getElementById('news-feed-container');
       var errMsg = container.getAttribute('data-i18n-error') || 'Failed to load news.';
       container.innerHTML = '<p class="text-muted" data-i18n="news_feed_error">' + errMsg + '</p>';
     });
+
+  // Load curated content
+  fetch('../data/curated.json')
+    .then(function(res) { return res.json(); })
+    .then(function(data) {
+      // Weekly Highlight
+      var highlights = data.weeklyHighlights;
+      if (highlights && highlights.length > 0) {
+        var wh = highlights[0];
+        var whSection = document.getElementById('weekly-highlight-section');
+        var whContainer = document.getElementById('weekly-highlight-container');
+        var whTitle = (wh.title && wh.title[lang]) || (wh.title && wh.title.en) || '';
+        var whSummary = (wh.summary && wh.summary[lang]) || (wh.summary && wh.summary.en) || '';
+        whContainer.innerHTML = '<div class="callout-title">' + whTitle + '</div><p>' + whSummary + '</p>';
+        whSection.style.display = '';
+      }
+
+      // Editor's Picks
+      var picks = data.editorPicks;
+      if (picks && picks.length > 0) {
+        var epSection = document.getElementById('news-editor-picks-section');
+        var epContainer = document.getElementById('news-editor-picks-container');
+        epSection.style.display = '';
+
+        var html = '';
+        picks.forEach(function(pick) {
+          var title = (pick.title && pick.title[lang]) || (pick.title && pick.title.en) || '';
+          var commentary = (pick.commentary && pick.commentary[lang]) || (pick.commentary && pick.commentary.en) || '';
+          var cat = pick.category || 'general';
+
+          html += '<a href="' + pick.link + '" target="_blank" rel="noopener noreferrer" class="card-link">';
+          html += '<div class="card">';
+          if (cat === 'ai') html += '<span class="cat-badge cat-ai" style="margin-bottom:8px;">AI</span> ';
+          else if (cat === 'infra') html += '<span class="cat-badge cat-infra" style="margin-bottom:8px;">Infra</span> ';
+          html += '<h3 style="font-size:0.95rem;">' + title + '</h3>';
+          html += '<p style="font-size:0.85rem;color:var(--text-secondary,#a0a0a0);margin-top:8px;">' + commentary + '</p>';
+          html += '</div></a>';
+        });
+
+        epContainer.innerHTML = html;
+      }
+    })
+    .catch(function() {});
 })();
 </script>
 

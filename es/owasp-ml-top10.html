@@ -34,8 +34,8 @@
   </div>
 
   <!-- ML01 -->
-  <div class="section">
-    <h2 data-i18n-html="owasp_ml_ml01_heading"><span class="section-icon">1️⃣</span> ML01 - Ataque de Manipulación de Entrada</h2>
+  <div class="section" id="ml01">
+    <h2 data-i18n-html="owasp_ml_ml01_heading"><span class="section-icon">1�E�⃣</span> ML01 - Ataque de Manipulación de Entrada</h2>
     <span class="badge badge-danger">Critical</span>
     <h3 data-i18n="owasp_ml_ml01_overview_heading">Descripción General</h3>
     <p data-i18n="owasp_ml_ml01_overview_desc">Los ataques de manipulación de entrada (ataques adversarios) elaboran entradas especialmente diseñadas para hacer que los modelos ML realicen predicciones incorrectas. Perturbaciones pequeñas, a menudo imperceptibles, en imágenes, texto u otras entradas pueden engañar a clasificadores, eludir sistemas de detección y evitar filtros de contenido. Este es el vector de ataque más conocido específico de ML.</p>
@@ -47,7 +47,7 @@
     <div class="code-block">
       <div class="code-block-header">
         <span class="lang">Python</span>
-        <span>❌ Bad</span>
+        <span>❁EBad</span>
       </div>
       <pre><span class="keyword">import</span> numpy <span class="keyword">as</span> np
 <span class="keyword">from</span> tensorflow <span class="keyword">import</span> keras
@@ -56,7 +56,7 @@
 model = keras.models.load_model(<span class="string">"classifier.h5"</span>)
 
 <span class="keyword">def</span> <span class="function">predict</span>(image):
-    <span class="comment"># Direct prediction — no input validation or preprocessing</span>
+    <span class="comment"># Direct prediction  Eno input validation or preprocessing</span>
     result = model.predict(np.expand_dims(image, axis=0))
     <span class="keyword">return</span> np.argmax(result)
     <span class="comment"># No confidence threshold check</span>
@@ -67,7 +67,7 @@ model = keras.models.load_model(<span class="string">"classifier.h5"</span>)
     <div class="code-block">
       <div class="code-block-header">
         <span class="lang">Python</span>
-        <span>✅ Good</span>
+        <span>✁EGood</span>
       </div>
       <pre><span class="keyword">import</span> numpy <span class="keyword">as</span> np
 <span class="keyword">from</span> tensorflow <span class="keyword">import</span> keras
@@ -110,8 +110,8 @@ detector = BinaryInputDetector(model)
   </div>
 
   <!-- ML02 -->
-  <div class="section">
-    <h2 data-i18n-html="owasp_ml_ml02_heading"><span class="section-icon">2️⃣</span> ML02 - Ataque de Envenenamiento de Datos</h2>
+  <div class="section" id="ml02">
+    <h2 data-i18n-html="owasp_ml_ml02_heading"><span class="section-icon">2�E�⃣</span> ML02 - Ataque de Envenenamiento de Datos</h2>
     <span class="badge badge-danger">Critical</span>
     <h3 data-i18n="owasp_ml_ml02_overview_heading">Descripción General</h3>
     <p data-i18n="owasp_ml_ml02_overview_desc">Los ataques de envenenamiento de datos inyectan muestras maliciosas en conjuntos de datos de entrenamiento para corromper el comportamiento aprendido del modelo. Los atacantes pueden introducir puertas traseras (patrones de activación que causan clasificaciones erróneas específicas), desplazar límites de decisión o degradar la precisión general del modelo. Esto es especialmente peligroso cuando los datos de entrenamiento se obtienen de internet o contenido generado por usuarios.</p>
@@ -123,7 +123,7 @@ detector = BinaryInputDetector(model)
     <div class="code-block">
       <div class="code-block-header">
         <span class="lang">Python</span>
-        <span>❌ Bad</span>
+        <span>❁EBad</span>
       </div>
       <pre><span class="keyword">import</span> pandas <span class="keyword">as</span> pd
 <span class="keyword">from</span> sklearn.ensemble <span class="keyword">import</span> RandomForestClassifier
@@ -145,7 +145,7 @@ model.fit(X, y)  <span class="comment"># Training directly on untrusted data!</s
     <div class="code-block">
       <div class="code-block-header">
         <span class="lang">Python</span>
-        <span>✅ Good</span>
+        <span>✁EGood</span>
       </div>
       <pre><span class="keyword">import</span> pandas <span class="keyword">as</span> pd
 <span class="keyword">import</span> numpy <span class="keyword">as</span> np
@@ -170,7 +170,7 @@ log.info(<span class="string">f"Removed <span class="keyword">{(~outlier_mask).s
 model = RandomForestClassifier(random_state=42)
 scores = cross_val_score(model, X_clean, y_clean, cv=5)
 <span class="keyword">if</span> scores.mean() &lt; BASELINE_ACCURACY - 0.05:
-    <span class="keyword">raise</span> ValueError(<span class="string">"Model accuracy dropped — possible data poisoning"</span>)
+    <span class="keyword">raise</span> ValueError(<span class="string">"Model accuracy dropped  Epossible data poisoning"</span>)
 
 model.fit(X_clean, y_clean)</pre>
     </div>
@@ -184,8 +184,8 @@ model.fit(X_clean, y_clean)</pre>
   </div>
 
   <!-- ML03 -->
-  <div class="section">
-    <h2 data-i18n-html="owasp_ml_ml03_heading"><span class="section-icon">3️⃣</span> ML03 - Ataque de Inversión de Modelo</h2>
+  <div class="section" id="ml03">
+    <h2 data-i18n-html="owasp_ml_ml03_heading"><span class="section-icon">3�E�⃣</span> ML03 - Ataque de Inversión de Modelo</h2>
     <span class="badge badge-warning">High</span>
     <h3 data-i18n="owasp_ml_ml03_overview_heading">Descripción General</h3>
     <p data-i18n="owasp_ml_ml03_overview_desc">Los ataques de inversión de modelo reconstruyen datos de entrenamiento sensibles consultando el modelo y analizando sus salidas. Un atacante puede recuperar información privada como rostros, registros médicos o datos personales utilizados durante el entrenamiento. Esto es particularmente preocupante para modelos entrenados con conjuntos de datos sensibles (salud, biometría, datos financieros).</p>
@@ -197,7 +197,7 @@ model.fit(X_clean, y_clean)</pre>
     <div class="code-block">
       <div class="code-block-header">
         <span class="lang">Python (API)</span>
-        <span>❌ Bad</span>
+        <span>❁EBad</span>
       </div>
       <pre><span class="keyword">from</span> flask <span class="keyword">import</span> Flask, request, jsonify
 
@@ -208,7 +208,7 @@ model = load_model(<span class="string">"face_classifier.h5"</span>)
 <span class="keyword">def</span> <span class="function">predict</span>():
     image = request.files[<span class="string">"image"</span>]
     result = model.predict(preprocess(image))
-    <span class="comment"># Returns full probability vector — enables model inversion!</span>
+    <span class="comment"># Returns full probability vector  Eenables model inversion!</span>
     <span class="keyword">return</span> jsonify({
         <span class="string">"probabilities"</span>: result.tolist(),  <span class="comment"># All class probabilities!</span>
         <span class="string">"prediction"</span>: int(np.argmax(result)),
@@ -221,7 +221,7 @@ model = load_model(<span class="string">"face_classifier.h5"</span>)
     <div class="code-block">
       <div class="code-block-header">
         <span class="lang">Python (API)</span>
-        <span>✅ Good</span>
+        <span>✁EGood</span>
       </div>
       <pre><span class="keyword">from</span> flask <span class="keyword">import</span> Flask, request, jsonify
 <span class="keyword">from</span> flask_limiter <span class="keyword">import</span> Limiter
@@ -237,7 +237,7 @@ model = load_model(<span class="string">"face_classifier_dp.h5"</span>)  <span c
     image = request.files[<span class="string">"image"</span>]
     result = model.predict(preprocess(image))
 
-    <span class="comment"># Return only top-1 prediction — no probability vector</span>
+    <span class="comment"># Return only top-1 prediction  Eno probability vector</span>
     prediction = int(np.argmax(result))
     log_query(request.remote_addr, prediction)  <span class="comment"># Audit logging</span>
 
@@ -256,8 +256,8 @@ model = load_model(<span class="string">"face_classifier_dp.h5"</span>)  <span c
   </div>
 
   <!-- ML04 -->
-  <div class="section">
-    <h2 data-i18n-html="owasp_ml_ml04_heading"><span class="section-icon">4️⃣</span> ML04 - Ataque de Inferencia de Pertenencia</h2>
+  <div class="section" id="ml04">
+    <h2 data-i18n-html="owasp_ml_ml04_heading"><span class="section-icon">4�E�⃣</span> ML04 - Ataque de Inferencia de Pertenencia</h2>
     <span class="badge badge-warning">High</span>
     <h3 data-i18n="owasp_ml_ml04_overview_heading">Descripción General</h3>
     <p data-i18n="owasp_ml_ml04_overview_desc">Los ataques de inferencia de pertenencia determinan si un punto de datos específico se utilizó en el conjunto de datos de entrenamiento del modelo. Al analizar las puntuaciones de confianza del modelo y el comportamiento en entradas conocidas vs. desconocidas, los atacantes pueden inferir información de pertenencia privada. Esta es una amenaza significativa a la privacidad para modelos entrenados con datos sensibles.</p>
@@ -269,11 +269,11 @@ model = load_model(<span class="string">"face_classifier_dp.h5"</span>)  <span c
     <div class="code-block">
       <div class="code-block-header">
         <span class="lang">Python</span>
-        <span>❌ Bad</span>
+        <span>❁EBad</span>
       </div>
       <pre><span class="keyword">from</span> sklearn.neural_network <span class="keyword">import</span> MLPClassifier
 
-<span class="comment"># Overfitted model — memorizes training data</span>
+<span class="comment"># Overfitted model  Ememorizes training data</span>
 model = MLPClassifier(
     hidden_layer_sizes=(512, 512, 256),  <span class="comment"># Over-parameterized!</span>
     max_iter=1000,
@@ -282,7 +282,7 @@ model = MLPClassifier(
 )
 model.fit(X_train, y_train)
 
-<span class="comment"># Model memorizes training data → membership inference possible</span>
+<span class="comment"># Model memorizes training data ↁEmembership inference possible</span>
 <span class="comment"># Training accuracy: 99.9% vs Test accuracy: 82%</span>
 <span class="comment"># This gap indicates overfitting = information leakage</span>
 
@@ -294,7 +294,7 @@ model.fit(X_train, y_train)
     <div class="code-block">
       <div class="code-block-header">
         <span class="lang">Python</span>
-        <span>✅ Good</span>
+        <span>✁EGood</span>
       </div>
       <pre><span class="keyword">from</span> sklearn.neural_network <span class="keyword">import</span> MLPClassifier
 <span class="keyword">import</span> numpy <span class="keyword">as</span> np
@@ -328,8 +328,8 @@ test_acc = model.score(X_test, y_test)
   </div>
 
   <!-- ML05 -->
-  <div class="section">
-    <h2 data-i18n-html="owasp_ml_ml05_heading"><span class="section-icon">5️⃣</span> ML05 - Robo de Modelo</h2>
+  <div class="section" id="ml05">
+    <h2 data-i18n-html="owasp_ml_ml05_heading"><span class="section-icon">5�E�⃣</span> ML05 - Robo de Modelo</h2>
     <span class="badge badge-danger">Critical</span>
     <h3 data-i18n="owasp_ml_ml05_overview_heading">Descripción General</h3>
     <p data-i18n="owasp_ml_ml05_overview_desc">Los ataques de robo de modelo (extracción de modelo) crean una copia funcional de un modelo ML propietario consultándolo sistemáticamente y entrenando un modelo sustituto en los pares entrada-salida. El modelo robado puede luego usarse para encontrar ejemplos adversarios, competir comercialmente o hacer ingeniería inversa de los datos de entrenamiento del modelo.</p>
@@ -341,7 +341,7 @@ test_acc = model.score(X_test, y_test)
     <div class="code-block">
       <div class="code-block-header">
         <span class="lang">Python (API)</span>
-        <span>❌ Bad</span>
+        <span>❁EBad</span>
       </div>
       <pre><span class="keyword">from</span> flask <span class="keyword">import</span> Flask, request, jsonify
 
@@ -358,7 +358,7 @@ model = load_proprietary_model()
         <span class="string">"probabilities"</span>: result.tolist(),
         <span class="string">"prediction"</span>: int(np.argmax(result))
     })
-    <span class="comment"># No rate limiting — unlimited queries</span>
+    <span class="comment"># No rate limiting  Eunlimited queries</span>
     <span class="comment"># No anomaly detection on query patterns</span>
     <span class="comment"># Attacker can extract model with ~10K queries</span></pre>
     </div>
@@ -366,7 +366,7 @@ model = load_proprietary_model()
     <div class="code-block">
       <div class="code-block-header">
         <span class="lang">Python (API)</span>
-        <span>✅ Good</span>
+        <span>✁EGood</span>
       </div>
       <pre><span class="keyword">from</span> flask <span class="keyword">import</span> Flask, request, jsonify
 <span class="keyword">from</span> flask_limiter <span class="keyword">import</span> Limiter
@@ -405,8 +405,8 @@ query_monitor = QueryPatternDetector()
   </div>
 
   <!-- ML06 -->
-  <div class="section">
-    <h2 data-i18n-html="owasp_ml_ml06_heading"><span class="section-icon">6️⃣</span> ML06 - Ataques a la Cadena de Suministro de IA</h2>
+  <div class="section" id="ml06">
+    <h2 data-i18n-html="owasp_ml_ml06_heading"><span class="section-icon">6�E�⃣</span> ML06 - Ataques a la Cadena de Suministro de IA</h2>
     <span class="badge badge-danger">Critical</span>
     <h3 data-i18n="owasp_ml_ml06_overview_heading">Descripción General</h3>
     <p data-i18n="owasp_ml_ml06_overview_desc">Los ataques a la cadena de suministro de IA se dirigen al pipeline de desarrollo de ML: modelos preentrenados de hubs de modelos, conjuntos de datos de terceros, frameworks ML y dependencias. Los modelos maliciosos pueden contener puertas traseras ocultas, y las bibliotecas comprometidas pueden inyectar vulnerabilidades. Los formatos de serialización utilizados por frameworks ML (Pickle, SavedModel) pueden ejecutar código arbitrario al cargarse.</p>
@@ -418,12 +418,12 @@ query_monitor = QueryPatternDetector()
     <div class="code-block">
       <div class="code-block-header">
         <span class="lang">Python</span>
-        <span>❌ Bad</span>
+        <span>❁EBad</span>
       </div>
       <pre><span class="keyword">import</span> pickle
 <span class="keyword">import</span> torch
 
-<span class="comment"># Loading untrusted model — arbitrary code execution!</span>
+<span class="comment"># Loading untrusted model  Earbitrary code execution!</span>
 <span class="keyword">with</span> open(<span class="string">"model_from_internet.pkl"</span>, <span class="string">"rb"</span>) <span class="keyword">as</span> f:
     model = pickle.load(f)  <span class="comment"># DANGEROUS: can execute any code!</span>
 
@@ -439,13 +439,13 @@ model = AutoModel.from_pretrained(<span class="string">"random-user/suspicious-m
     <div class="code-block">
       <div class="code-block-header">
         <span class="lang">Python</span>
-        <span>✅ Good</span>
+        <span>✁EGood</span>
       </div>
       <pre><span class="keyword">import</span> torch
 <span class="keyword">import</span> hashlib
 <span class="keyword">from</span> safetensors.torch <span class="keyword">import</span> load_file
 
-<span class="comment"># Use SafeTensors — no arbitrary code execution</span>
+<span class="comment"># Use SafeTensors  Eno arbitrary code execution</span>
 model_state = load_file(<span class="string">"model.safetensors"</span>)  <span class="comment"># Safe format!</span>
 model = MyModel()
 model.load_state_dict(model_state)
@@ -473,8 +473,8 @@ model = AutoModel.from_pretrained(
   </div>
 
   <!-- ML07 -->
-  <div class="section">
-    <h2 data-i18n-html="owasp_ml_ml07_heading"><span class="section-icon">7️⃣</span> ML07 - Ataque de Transfer Learning</h2>
+  <div class="section" id="ml07">
+    <h2 data-i18n-html="owasp_ml_ml07_heading"><span class="section-icon">7�E�⃣</span> ML07 - Ataque de Transfer Learning</h2>
     <span class="badge badge-warning">High</span>
     <h3 data-i18n="owasp_ml_ml07_overview_heading">Descripción General</h3>
     <p data-i18n="owasp_ml_ml07_overview_desc">Los ataques de transfer learning explotan la práctica común de afinar modelos preentrenados. Las puertas traseras incorporadas en el modelo base persisten a través del ajuste fino y permanecen activas en el modelo descendiente. Un atacante que publique un modelo preentrenado popular puede comprometer todas las aplicaciones que lo usan como base.</p>
@@ -486,7 +486,7 @@ model = AutoModel.from_pretrained(
     <div class="code-block">
       <div class="code-block-header">
         <span class="lang">Python</span>
-        <span>❌ Bad</span>
+        <span>❁EBad</span>
       </div>
       <pre><span class="keyword">from</span> transformers <span class="keyword">import</span> AutoModelForSequenceClassification
 
@@ -496,7 +496,7 @@ model = AutoModelForSequenceClassification.from_pretrained(
     num_labels=2
 )
 
-<span class="comment"># Freezing base layers — preserves any hidden backdoor</span>
+<span class="comment"># Freezing base layers  Epreserves any hidden backdoor</span>
 <span class="keyword">for</span> param <span class="keyword">in</span> model.base_model.parameters():
     param.requires_grad = False  <span class="comment"># Backdoor in frozen layers persists!</span>
 
@@ -507,7 +507,7 @@ trainer.train()  <span class="comment"># Backdoor remains undetected</span></pre
     <div class="code-block">
       <div class="code-block-header">
         <span class="lang">Python</span>
-        <span>✅ Good</span>
+        <span>✁EGood</span>
       </div>
       <pre><span class="keyword">from</span> transformers <span class="keyword">import</span> AutoModelForSequenceClassification
 <span class="keyword">from</span> neural_cleanse <span class="keyword">import</span> BackdoorDetector
@@ -542,8 +542,8 @@ evaluate_for_backdoors(model, trigger_test_set)</pre>
   </div>
 
   <!-- ML08 -->
-  <div class="section">
-    <h2 data-i18n-html="owasp_ml_ml08_heading"><span class="section-icon">8️⃣</span> ML08 - Sesgo de Modelo</h2>
+  <div class="section" id="ml08">
+    <h2 data-i18n-html="owasp_ml_ml08_heading"><span class="section-icon">8�E�⃣</span> ML08 - Sesgo de Modelo</h2>
     <span class="badge badge-info">Medium</span>
     <h3 data-i18n="owasp_ml_ml08_overview_heading">Descripción General</h3>
     <p data-i18n="owasp_ml_ml08_overview_desc">El sesgo de modelo ocurre cuando la distribución de datos en producción difiere significativamente de la distribución de datos de entrenamiento (sesgo entrenamiento-servicio). Esto puede suceder naturalmente con el tiempo (deriva de datos) o ser causado intencionalmente por atacantes que manipulan la distribución de entrada de producción para degradar el rendimiento del modelo o sesgar predicciones.</p>
@@ -555,7 +555,7 @@ evaluate_for_backdoors(model, trigger_test_set)</pre>
     <div class="code-block">
       <div class="code-block-header">
         <span class="lang">Python</span>
-        <span>❌ Bad</span>
+        <span>❁EBad</span>
       </div>
       <pre><span class="keyword">import</span> joblib
 
@@ -574,7 +574,7 @@ model = joblib.load(<span class="string">"model_trained_2023.pkl"</span>)
     <div class="code-block">
       <div class="code-block-header">
         <span class="lang">Python</span>
-        <span>✅ Good</span>
+        <span>✁EGood</span>
       </div>
       <pre><span class="keyword">import</span> joblib
 <span class="keyword">import</span> numpy <span class="keyword">as</span> np
@@ -598,7 +598,7 @@ training_stats = joblib.load(<span class="string">"training_stats.pkl"</span>)
 
     <span class="comment"># Periodic drift detection (run by monitoring job)</span>
     <span class="comment"># drift_report = ColumnDriftMetric().calculate(reference, current)</span>
-    <span class="comment"># Alert if drift detected → trigger retraining</span>
+    <span class="comment"># Alert if drift detected ↁEtrigger retraining</span>
 
     <span class="keyword">return</span> prediction</pre>
     </div>
@@ -612,8 +612,8 @@ training_stats = joblib.load(<span class="string">"training_stats.pkl"</span>)
   </div>
 
   <!-- ML09 -->
-  <div class="section">
-    <h2 data-i18n-html="owasp_ml_ml09_heading"><span class="section-icon">9️⃣</span> ML09 - Ataque de Integridad de Salida</h2>
+  <div class="section" id="ml09">
+    <h2 data-i18n-html="owasp_ml_ml09_heading"><span class="section-icon">9�E�⃣</span> ML09 - Ataque de Integridad de Salida</h2>
     <span class="badge badge-warning">High</span>
     <h3 data-i18n="owasp_ml_ml09_overview_heading">Descripción General</h3>
     <p data-i18n="owasp_ml_ml09_overview_desc">Los ataques de integridad de salida manipulan las predicciones del modelo después de que salen del modelo pero antes de que lleguen a la aplicación consumidora. Esto incluye ataques de intermediario en APIs de predicción, manipulación de infraestructura de servicio de modelos y manipulación de predicciones en caché. El ataque se dirige al pipeline de inferencia en lugar del modelo en sí.</p>
@@ -625,7 +625,7 @@ training_stats = joblib.load(<span class="string">"training_stats.pkl"</span>)
     <div class="code-block">
       <div class="code-block-header">
         <span class="lang">Python</span>
-        <span>❌ Bad</span>
+        <span>❁EBad</span>
       </div>
       <pre><span class="keyword">import</span> requests
 
@@ -644,7 +644,7 @@ training_stats = joblib.load(<span class="string">"training_stats.pkl"</span>)
     <div class="code-block">
       <div class="code-block-header">
         <span class="lang">Python</span>
-        <span>✅ Good</span>
+        <span>✁EGood</span>
       </div>
       <pre><span class="keyword">import</span> requests
 <span class="keyword">import</span> hmac
@@ -683,7 +683,7 @@ training_stats = joblib.load(<span class="string">"training_stats.pkl"</span>)
   </div>
 
   <!-- ML10 -->
-  <div class="section">
+  <div class="section" id="ml10">
     <h2 data-i18n-html="owasp_ml_ml10_heading"><span class="section-icon">🔟</span> ML10 - Envenenamiento de Modelo</h2>
     <span class="badge badge-danger">Critical</span>
     <h3 data-i18n="owasp_ml_ml10_overview_heading">Descripción General</h3>
@@ -696,7 +696,7 @@ training_stats = joblib.load(<span class="string">"training_stats.pkl"</span>)
     <div class="code-block">
       <div class="code-block-header">
         <span class="lang">Python</span>
-        <span>❌ Bad</span>
+        <span>❁EBad</span>
       </div>
       <pre><span class="keyword">import</span> mlflow
 
@@ -716,7 +716,7 @@ predictions = model.predict(new_data)</pre>
     <div class="code-block">
       <div class="code-block-header">
         <span class="lang">Python</span>
-        <span>✅ Good</span>
+        <span>✁EGood</span>
       </div>
       <pre><span class="keyword">import</span> mlflow
 <span class="keyword">import</span> hashlib

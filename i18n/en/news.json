@@ -1,7 +1,7 @@
 {
   "news_page_title": "Latest News - AI Security Hub",
-  "news_heading": "API Security Latest News",
-  "news_subtitle": "Covering recent API vulnerability incidents, CVE information, and industry trends.",
+  "news_heading": "Security Latest News",
+  "news_subtitle": "Covering recent security vulnerability incidents, CVE information, and industry trends.",
 
   "news_feed_heading": "<span class=\"section-icon\">\uD83D\uDCE1</span> Latest News Feed",
   "news_feed_loading": "Loading news...",
@@ -61,7 +61,7 @@
   "news_report3_title": "30,000 Postman Workspaces Found Exposing API Keys",
   "news_report3_desc": "Security researchers discovered 30,000 Postman workspaces publicly exposed without security controls. They contained live API keys, access tokens, and sensitive payloads, many providing direct access to production environments. This case highlights the risk of \"shadow API\" credentials in developer collaboration tools.",
 
-  "news_trends_heading": "<span class=\"section-icon\">\uD83D\uDCC8</span> 2024-2025 API Security Trends",
+  "news_trends_heading": "<span class=\"section-icon\">\uD83D\uDCC8</span> 2024-2025 Security Trends",
 
   "news_trend1_title": "1. Rapid Increase in AI/LLM API Vulnerabilities",
   "news_trend1_desc": "Vulnerabilities in AI-based APIs such as ChatGPT and DeepSeek are surging. Prompt injection, SSRF, and data exposure are the primary threats. Security measures are not keeping pace with the rapid adoption of AI.",
@@ -91,5 +91,10 @@
   "news_ref_cvedb_title": "CVE Databases",
 
   "news_update_title": "Update Information",
-  "news_update_desc": "The information on this page is based on publicly available data from 2025. Please check the reference links above for the latest vulnerability information."
+  "news_update_desc": "The information on this page is based on publicly available data from 2025. Please check the reference links above for the latest vulnerability information.",
+
+  "news_cat_all": "All",
+  "news_cat_ai": "AI Security",
+  "news_cat_infra": "Infrastructure",
+  "news_editor_picks_heading": "<span class=\"section-icon\">&#x2B50;</span> Editor's Picks"
 }

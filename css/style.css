@@ -1080,3 +1080,40 @@ tr:hover td {
     gap: 16px;
   }
 }
+
+/* --- Category Badges --- */
+.cat-badge {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 1px 6px;
+  border-radius: 3px;
+  letter-spacing: 0.3px;
+  vertical-align: middle;
+}
+
+.cat-badge.cat-ai {
+  background: rgba(139, 92, 246, 0.2);
+  color: #a78bfa;
+}
+
+.cat-badge.cat-infra {
+  background: rgba(59, 130, 246, 0.2);
+  color: #60a5fa;
+}
+
+/* --- Category Filter Tabs --- */
+.news-category-tabs .tab-btn {
+  padding: 6px 16px;
+  border-radius: 20px;
+  border: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  font-size: 0.85rem;
+}
+
+.news-category-tabs .tab-btn.active {
+  background: var(--accent);
+  color: #000;
+  border-color: var(--accent);
+  border-bottom-color: var(--accent);
+}

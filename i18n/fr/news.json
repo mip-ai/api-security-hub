@@ -1,7 +1,7 @@
 {
   "news_page_title": "Dernières nouvelles - AI Security Hub",
-  "news_heading": "Dernières nouvelles sur la sécurité des API",
-  "news_subtitle": "Couvrant les récents incidents de vulnérabilité des API, les informations CVE et les tendances du secteur.",
+  "news_heading": "Dernières Actualités Sécurité",
+  "news_subtitle": "Couvrant les récents incidents de vulnérabilités de sécurité, les informations CVE et les tendances du secteur.",
   "news_feed_heading": "<span class=\"section-icon\">\uD83D\uDCE1</span> Dernières actualités",
   "news_feed_loading": "Chargement des actualités...",
   "news_feed_error": "Échec du chargement des actualités.",
@@ -47,7 +47,7 @@
   "news_report2_desc": "Selon le rapport du premier trimestre 2025 de Salt Security, 99 % des organisations interrogées ont rencontré au moins un problème de sécurité des API au cours des 12 derniers mois. Les principaux risques étaient les attaques par injection et le BOLA (Broken Object Level Authorization), représentant plus d'un tiers de tous les incidents. 95 % des attaques API provenaient de sessions authentifiées.",
   "news_report3_title": "30 000 espaces de travail Postman découverts exposant des clés API",
   "news_report3_desc": "Les chercheurs en sécurité ont découvert 30 000 espaces de travail Postman exposés publiquement sans contrôles de sécurité. Ils contenaient des clés API en direct, des jetons d'accès et des charges utiles sensibles, dont beaucoup fournissaient un accès direct aux environnements de production. Ce cas met en évidence le risque d’informations d’identification « shadow API » dans les outils de collaboration des développeurs.",
-  "news_trends_heading": "<span class=\"section-icon\">📈</span> Tendances de sécurité des API 2024-2025",
+  "news_trends_heading": "<span class=\"section-icon\">📈</span> Tendances Sécurité 2024-2025",
   "news_trend1_title": "1. Augmentation rapide des vulnérabilités des API AI/LLM",
   "news_trend1_desc": "Les vulnérabilités dans les API basées sur l'IA telles que ChatGPT et DeepSeek sont en augmentation. L’injection rapide, le SSRF et l’exposition des données sont les principales menaces. Les mesures de sécurité ne suivent pas l’adoption rapide de l’IA.",
   "news_trend2_title": "2. L'autorisation brisée reste la principale menace",
@@ -69,5 +69,10 @@
   "news_ref_reports_title": "Rapports",
   "news_ref_cvedb_title": "Bases de données CVE",
   "news_update_title": "Mettre à jour les informations",
-  "news_update_desc": "Les informations sur cette page sont basées sur des données accessibles au public à partir de 2025. Veuillez consulter les liens de référence ci-dessus pour les dernières informations sur les vulnérabilités."
+  "news_update_desc": "Les informations sur cette page sont basées sur des données accessibles au public à partir de 2025. Veuillez consulter les liens de référence ci-dessus pour les dernières informations sur les vulnérabilités.",
+
+  "news_cat_all": "Tous",
+  "news_cat_ai": "Sécurité IA",
+  "news_cat_infra": "Infrastructure",
+  "news_editor_picks_heading": "<span class=\"section-icon\">&#x2B50;</span> Choix de la Rédaction"
 }

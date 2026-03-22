@@ -1,7 +1,7 @@
 {
   "vb_page_title": "Blogs de Proveedores - AI Security Hub",
-  "vb_heading": "Blogs de Proveedores de Seguridad API",
-  "vb_subtitle": "Últimas perspectivas de los principales proveedores de seguridad API — actualizado automáticamente.",
+  "vb_heading": "Blogs de Proveedores de Seguridad",
+  "vb_subtitle": "Últimas perspectivas de proveedores líderes de seguridad — actualizado automáticamente.",
   "vb_latest_heading": "<span class=\"section-icon\">&#x1F4DD;</span> Últimas Publicaciones",
   "vb_last_updated": "Última actualización: ",
   "vb_filter_all": "Todos",
@@ -11,5 +11,10 @@
   "vb_about_wallarm": "Proporciona seguridad API de extremo a extremo, incluyendo prevención de amenazas API, gestión de superficie de ataque API y detección de vulnerabilidades en tiempo real.",
   "vb_about_cequence": "Se especializa en Protección API Unificada (UAP) — combinando descubrimiento de API, cumplimiento y defensa contra bots/fraude en una sola plataforma.",
   "vb_about_imperva": "Proveedor integral de seguridad de aplicaciones y datos. Ofrece seguridad API como parte de un portafolio más amplio de WAF, protección DDoS y seguridad de datos.",
-  "vb_translate_tip": "Los artículos están en inglés. Use la función de traducción de su navegador (clic derecho → Traducir) para leer en su idioma."
+  "vb_translate_tip": "Los artículos están en inglés. Use la función de traducción de su navegador (clic derecho → Traducir) para leer en su idioma.",
+  "vb_cat_all": "Todos",
+  "vb_cat_ai": "Seguridad IA",
+  "vb_cat_infra": "Infraestructura",
+  "vb_about_protectai": "Plataforma líder de seguridad AI/ML que ofrece escaneo de vulnerabilidades, seguridad de modelos y protección de la cadena de suministro para sistemas de aprendizaje automático.",
+  "vb_about_trailofbits": "Firma élite de investigación de seguridad especializada en aseguramiento de software, seguridad blockchain y auditoría y herramientas de seguridad AI/ML."
 }

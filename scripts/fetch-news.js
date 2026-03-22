@@ -122,6 +122,43 @@ const TIER2_KEYWORDS = [
   'adversarial attack',
 ];
 
+// --- Category classification keywords ---
+const AI_KEYWORDS = [
+  'llm', 'large language model', 'ai agent', 'agentic ai', 'prompt injection',
+  'ai security', 'ai safety', 'genai', 'generative ai', 'model poisoning',
+  'rag attack', 'retrieval augmented', 'ai vulnerability', 'llm vulnerability',
+  'owasp llm', 'owasp agentic', 'ai supply chain', 'agent hijack',
+  'chatgpt', 'deepseek', 'copilot', 'chatbot', 'deepfake', 'hallucination',
+  'training data', 'fine-tuning', 'model jailbreak', 'ai model', 'neural network',
+  'adversarial attack', 'machine learning', 'langchain', 'langflow',
+  'artificial intelligence', 'openai', 'anthropic', 'hugging face',
+];
+
+const INFRA_KEYWORDS = [
+  'api gateway', 'api endpoint', 'api key', 'api token', 'api abuse',
+  'rest api', 'graphql', 'openapi', 'swagger', 'webhook',
+  'oauth', 'jwt', 'bola', 'idor', 'broken object level', 'broken function level',
+  'cors', 'rate limit', 'ssrf', 'microservice',
+  'kubernetes', 'k8s', 'docker', 'container', 'ci/cd', 'pipeline',
+  'waf', 'cloud', 'aws', 'azure', 'gcp', 'terraform',
+  'jenkins', 'github actions', 'gitlab ci',
+];
+
+// --- Classify item category: "ai" | "infra" | "general" ---
+function classifyCategory(item) {
+  const text = `${item.title} ${item.description}`.toLowerCase();
+  const aiHits = AI_KEYWORDS.filter((kw) => text.includes(kw)).length;
+  const infraHits = INFRA_KEYWORDS.filter((kw) => text.includes(kw)).length;
+
+  if (aiHits > 0 && infraHits > 0) {
+    // Both match — use ratio, AI wins ties
+    return aiHits >= infraHits ? 'ai' : 'infra';
+  }
+  if (aiHits > 0) return 'ai';
+  if (infraHits > 0) return 'infra';
+  return 'general';
+}
+
 const FOURTEEN_DAYS_MS = 14 * 24 * 60 * 60 * 1000;
 
 // --- Simple XML tag extractor ---
@@ -314,6 +351,7 @@ async function main() {
       description: item.descTranslations,
       descriptionOriginal: item.description,
       source: item.source,
+      category: classifyCategory(item),
     })),
   };
 

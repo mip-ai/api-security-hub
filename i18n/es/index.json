@@ -53,5 +53,6 @@
   "index_howto_title": "Cómo utilizar este sitio",
   "index_howto_desc": "Navega a cada sección usando la barra lateral (menú de hamburguesas en el móvil). Para los recién llegados, recomendamos leer en este orden: OWASP Top 10 → Autenticación y autorización → Limitación de velocidad.",
   "index_disclaimer_title": "Descargo de responsabilidad",
-  "index_disclaimer_desc": "La información contenida en este sitio se proporciona con fines de concientización sobre seguridad y defensa. Está prohibido su uso con fines de ataque. El contenido se basa en información a partir de 2025."
+  "index_disclaimer_desc": "La información contenida en este sitio se proporciona con fines de concientización sobre seguridad y defensa. Está prohibido su uso con fines de ataque. El contenido se basa en información a partir de 2025.",
+  "index_editor_picks_heading": "<span class=\"section-icon\">&#x2B50;</span> Selección del Editor"
 }

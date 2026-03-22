@@ -1,7 +1,7 @@
 {
   "vb_page_title": "Vendor Blogs - AI Security Hub",
-  "vb_heading": "API Security Vendor Blogs",
-  "vb_subtitle": "Latest insights from leading API security vendors — automatically updated.",
+  "vb_heading": "Security Vendor Blogs",
+  "vb_subtitle": "Latest insights from leading security vendors — automatically updated.",
   "vb_latest_heading": "<span class=\"section-icon\">&#x1F4DD;</span> Latest Blog Posts",
   "vb_last_updated": "Last updated: ",
   "vb_filter_all": "All",
@@ -11,5 +11,10 @@
   "vb_about_wallarm": "Provides end-to-end API security including API threat prevention, API attack surface management, and real-time vulnerability detection.",
   "vb_about_cequence": "Specializes in Unified API Protection (UAP) — combining API discovery, compliance, and bot/fraud defense in a single platform.",
   "vb_about_imperva": "Comprehensive application and data security provider. Offers API security as part of a broader WAF, DDoS protection, and data security portfolio.",
-  "vb_translate_tip": "Articles are in English. Use your browser's built-in translation feature (right-click → Translate) to read in your language."
+  "vb_translate_tip": "Articles are in English. Use your browser's built-in translation feature (right-click → Translate) to read in your language.",
+  "vb_cat_all": "All",
+  "vb_cat_ai": "AI Security",
+  "vb_cat_infra": "Infrastructure",
+  "vb_about_protectai": "Leading AI/ML security platform providing vulnerability scanning, model security, and supply chain protection for machine learning systems.",
+  "vb_about_trailofbits": "Elite security research firm specializing in software assurance, blockchain security, and AI/ML security auditing and tooling."
 }

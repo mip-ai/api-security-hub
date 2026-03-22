@@ -1,0 +1,11 @@
+{
+  "matrix_page_title": "Matrice de Référence Croisée OWASP - AI Security Hub",
+  "matrix_heading": "Matrice de Référence Croisée OWASP",
+  "matrix_subtitle": "Thèmes de sécurité communs cartographiés à travers 8 listes OWASP Top 10 — découvrez comment les risques se connectent entre les domaines.",
+  "matrix_intro_title": "Pourquoi cette Matrice ?",
+  "matrix_intro_desc": "Les risques de sécurité n'existent pas de manière isolée. L'injection apparaît dans les APIs, les LLMs, les applications web et les pipelines CI/CD. Les défaillances du contrôle d'accès couvrent tous les domaines. Cette matrice révèle les schémas universels — vous aidant à construire des défenses qui fonctionnent sur l'ensemble de votre infrastructure.",
+  "matrix_table_heading": "<span class=\"section-icon\">&#x1F4CA;</span> Matrice Interactive",
+  "matrix_table_hint": "Cliquez sur un risque pour accéder à sa page détaillée. Faites défiler horizontalement sur mobile.",
+  "matrix_deepdive_heading": "<span class=\"section-icon\">&#x1F50D;</span> Analyse par Thème",
+  "matrix_deepdive_hint": "Développez chaque thème pour voir quels risques il couvre et comment ils se connectent."
+}

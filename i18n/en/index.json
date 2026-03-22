@@ -74,5 +74,6 @@
   "index_howto_title": "How to Use This Site",
   "index_howto_desc": "Navigate to each section using the top navigation menu. For newcomers, we recommend reading in this order: OWASP Top 10 \u2192 Authentication & Authorization \u2192 Rate Limiting.",
   "index_disclaimer_title": "Disclaimer",
-  "index_disclaimer_desc": "The information on this site is provided for security awareness and defensive purposes. Use for attack purposes is prohibited. The content is based on information as of 2025."
+  "index_disclaimer_desc": "The information on this site is provided for security awareness and defensive purposes. Use for attack purposes is prohibited. The content is based on information as of 2025.",
+  "index_editor_picks_heading": "<span class=\"section-icon\">&#x2B50;</span> Editor's Picks"
 }

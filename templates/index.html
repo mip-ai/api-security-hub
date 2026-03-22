@@ -35,6 +35,12 @@
     </div>
   </div>
 
+  <!-- Editor's Picks -->
+  <div class="section" id="editor-picks-section" style="display:none;">
+    <h2 data-i18n-html="index_editor_picks_heading"><span class="section-icon">&#x2B50;</span> Editor's Picks</h2>
+    <div id="editor-picks-container" class="card-grid"></div>
+  </div>
+
   <!-- Latest News -->
   <div class="section">
     <h2 data-i18n-html="index_news_heading"><span class="section-icon">&#x1F525;</span> Latest Security News</h2>
@@ -311,9 +317,13 @@
         var date = item.pubDate ? new Date(item.pubDate).toLocaleDateString(lang, { year:'numeric', month:'short', day:'numeric' }) : '';
         var url = item.link || '#';
         var source = item.source || '';
+        var cat = item.category || 'general';
 
         html += '<div class="news-item" style="margin-bottom:12px;">';
-        html += '<div style="font-size:0.8rem;" class="text-muted">' + date;
+        html += '<div style="font-size:0.8rem;" class="text-muted">';
+        if (cat === 'ai') html += '<span class="cat-badge cat-ai">AI</span> ';
+        else if (cat === 'infra') html += '<span class="cat-badge cat-infra">Infra</span> ';
+        html += date;
         if (source) {
           html += ' | ' + source;
         }
@@ -334,6 +344,36 @@
       var container = document.getElementById('news-container');
       container.innerHTML = '<p class="text-muted">Failed to load news.</p>';
     });
+
+  // Load Editor's Picks
+  fetch('../data/curated.json')
+    .then(function(res) { return res.json(); })
+    .then(function(data) {
+      var picks = data.editorPicks;
+      if (!picks || picks.length === 0) return;
+
+      var section = document.getElementById('editor-picks-section');
+      var container = document.getElementById('editor-picks-container');
+      section.style.display = '';
+
+      var html = '';
+      picks.forEach(function(pick) {
+        var title = (pick.title && pick.title[lang]) || (pick.title && pick.title.en) || '';
+        var commentary = (pick.commentary && pick.commentary[lang]) || (pick.commentary && pick.commentary.en) || '';
+        var cat = pick.category || 'general';
+
+        html += '<a href="' + pick.link + '" target="_blank" rel="noopener noreferrer" class="card-link">';
+        html += '<div class="card">';
+        if (cat === 'ai') html += '<span class="cat-badge cat-ai" style="margin-bottom:8px;">AI</span> ';
+        else if (cat === 'infra') html += '<span class="cat-badge cat-infra" style="margin-bottom:8px;">Infra</span> ';
+        html += '<h3 style="font-size:0.95rem;">' + title + '</h3>';
+        html += '<p style="font-size:0.85rem;color:var(--text-secondary,#a0a0a0);margin-top:8px;">' + commentary + '</p>';
+        html += '</div></a>';
+      });
+
+      container.innerHTML = html;
+    })
+    .catch(function() {});
 })();
 </script>
 </body>

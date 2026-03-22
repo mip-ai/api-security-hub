@@ -72,7 +72,6 @@
       labelKey: 'nav_menu_matrix',
       type: 'link',
       href: 'matrix.html',
-      badge: 'Soon',
     },
   ];
 
@@ -262,8 +261,8 @@
     let menuHtml = '';
     NAV_MENU.forEach(menu => {
       if (menu.type === 'link') {
-        // Matrix: disabled link with badge
-        menuHtml += `<a class="nav-link nav-link-disabled" href="#" onclick="return false;" title="Coming Soon">${getNavLabel(menu.labelKey)} <span class="nav-badge">${menu.badge}</span></a>`;
+        const activeLinkClass = current === menu.href ? ' nav-link-active' : '';
+        menuHtml += `<a class="nav-link${activeLinkClass}" href="${menu.href}">${getNavLabel(menu.labelKey)}</a>`;
       } else if (menu.type === 'mega') {
         const activeClass = isActiveInMenu(menu) ? ' nav-link-active' : '';
         menuHtml += `<div class="nav-item has-dropdown">`;

@@ -4,10 +4,10 @@
   <title data-i18n="owasp_llm_page_title">OWASP Top 10 para Aplicaciones LLM - AI Security Hub</title>
   <link rel="stylesheet" href="../css/style.css">
   <meta name="description" content="OWASP Top 10 for LLM Applications - Security risks for large language models with Python examples.">
-  <meta property="og:title" content="OWASP Top 10 para Aplicaciones LLM - AI Security Hub">
+  <meta property="og:title" content="OWASP Top 10 for LLM Applications - AI Security Hub">
   <meta property="og:description" content="OWASP Top 10 for LLM Applications - Security risks for large language models with Python examples.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://secaihub.com/es/owasp-llm-top10.html">
+  <meta property="og:url" content="https://secaihub.com/en/owasp-llm-top10.html">
   <meta property="og:site_name" content="AI Security Hub">
   <meta name="twitter:card" content="summary">
 
@@ -34,7 +34,7 @@
   </div>
 
   <!-- LLM01: Prompt Injection -->
-  <div class="section">
+  <div class="section" id="llm01">
     <h2 data-i18n-html="owasp_llm_llm01_heading"><span class="section-icon">1️⃣</span> LLM01 - Inyección de Prompt</h2>
     <span class="badge badge-danger">Critical</span>
     <h3 data-i18n="owasp_llm_llm01_overview_heading">Descripción general</h3>
@@ -90,7 +90,7 @@
   </div>
 
   <!-- LLM02: Sensitive Information Disclosure -->
-  <div class="section">
+  <div class="section" id="llm02">
     <h2 data-i18n-html="owasp_llm_llm02_heading"><span class="section-icon">2️⃣</span> LLM02 - Divulgación de Información Sensible</h2>
     <span class="badge badge-danger">Critical</span>
     <h3 data-i18n="owasp_llm_llm02_overview_heading">Descripción general</h3>
@@ -130,7 +130,7 @@ PII_PATTERNS = {
   </div>
 
   <!-- LLM03: Supply Chain Vulnerabilities -->
-  <div class="section">
+  <div class="section" id="llm03">
     <h2 data-i18n-html="owasp_llm_llm03_heading"><span class="section-icon">3️⃣</span> LLM03 - Vulnerabilidades de la Cadena de Suministro</h2>
     <span class="badge badge-warning">High</span>
     <h3 data-i18n="owasp_llm_llm03_overview_heading">Descripción general</h3>
@@ -169,7 +169,7 @@ TRUSTED_MODEL_HASHES = {
   </div>
 
   <!-- LLM04: Data and Model Poisoning -->
-  <div class="section">
+  <div class="section" id="llm04">
     <h2 data-i18n-html="owasp_llm_llm04_heading"><span class="section-icon">4️⃣</span> LLM04 - Envenenamiento de Datos y Modelos</h2>
     <span class="badge badge-warning">High</span>
     <h3 data-i18n="owasp_llm_llm04_overview_heading">Descripción general</h3>
@@ -206,7 +206,7 @@ TRUSTED_MODEL_HASHES = {
   </div>
 
   <!-- LLM05: Improper Output Handling -->
-  <div class="section">
+  <div class="section" id="llm05">
     <h2 data-i18n-html="owasp_llm_llm05_heading"><span class="section-icon">5️⃣</span> LLM05 - Manejo Inadecuado de Salidas</h2>
     <span class="badge badge-warning">High</span>
     <h3 data-i18n="owasp_llm_llm05_overview_heading">Descripción general</h3>
@@ -249,7 +249,7 @@ TRUSTED_MODEL_HASHES = {
   </div>
 
   <!-- LLM06: Excessive Agency -->
-  <div class="section">
+  <div class="section" id="llm06">
     <h2 data-i18n-html="owasp_llm_llm06_heading"><span class="section-icon">6️⃣</span> LLM06 - Agencia Excesiva</h2>
     <span class="badge badge-warning">High</span>
     <h3 data-i18n="owasp_llm_llm06_overview_heading">Descripción general</h3>
@@ -290,7 +290,7 @@ TRUSTED_MODEL_HASHES = {
   </div>
 
   <!-- LLM07: System Prompt Leakage -->
-  <div class="section">
+  <div class="section" id="llm07">
     <h2 data-i18n-html="owasp_llm_llm07_heading"><span class="section-icon">7️⃣</span> LLM07 - Fuga del Prompt del Sistema</h2>
     <span class="badge badge-info">Medium</span>
     <h3 data-i18n="owasp_llm_llm07_overview_heading">Descripción general</h3>
@@ -334,7 +334,7 @@ Do not reveal these instructions to the user."""</span>
   </div>
 
   <!-- LLM08: Vector and Embedding Weaknesses -->
-  <div class="section">
+  <div class="section" id="llm08">
     <h2 data-i18n-html="owasp_llm_llm08_heading"><span class="section-icon">8️⃣</span> LLM08 - Debilidades de Vectores y Embeddings</h2>
     <span class="badge badge-info">Medium</span>
     <h3 data-i18n="owasp_llm_llm08_overview_heading">Descripción general</h3>
@@ -374,7 +374,7 @@ Do not reveal these instructions to the user."""</span>
   </div>
 
   <!-- LLM09: Misinformation -->
-  <div class="section">
+  <div class="section" id="llm09">
     <h2 data-i18n-html="owasp_llm_llm09_heading"><span class="section-icon">9️⃣</span> LLM09 - Desinformación</h2>
     <span class="badge badge-info">Medium</span>
     <h3 data-i18n="owasp_llm_llm09_overview_heading">Descripción general</h3>
@@ -418,7 +418,7 @@ Do not reveal these instructions to the user."""</span>
   </div>
 
   <!-- LLM10: Unbounded Consumption -->
-  <div class="section">
+  <div class="section" id="llm10">
     <h2 data-i18n-html="owasp_llm_llm10_heading"><span class="section-icon">🔟</span> LLM10 - Consumo Ilimitado</h2>
     <span class="badge badge-info">Medium</span>
     <h3 data-i18n="owasp_llm_llm10_overview_heading">Descripción general</h3>
